@@ -45,7 +45,7 @@ bindsym $mod+c exec /usr/bin/brave --profile-directory="Codelamp"
 bindsym $mod+i exec termite -e "vim /home/contre/.config/i3/config"
 bindsym $mod+u exec termite -e "vim /home/contre/.zshrc"
 bindsym $mod+o exec termite -e "vim /home/contre/.vimrc"
-bindsym $mod+m exec telegram-desktop
+bindsym $mod+m exec telegram-desktop ; exec signal-desktop ; exec termite -e "i3-msg layout tabbed"
 bindsym $mod+Shift+m exec termite -e "mocp"
 bindsym $mod+s exec pavucontrol
 bindsym $mod+q exec tmux kill-server
@@ -150,6 +150,7 @@ bindsym $mod+Shift+7 move container to workspace $ws7; workspace $ws7
 bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
 
 assign [class="TelegramDesktop"] $ws8
+assign [class="Signal"] $ws8
 
 # Open specific applications in floating mode
 for_window [title="alsamixer"]  border pixel 1
@@ -244,31 +245,30 @@ mode "resize" {
 }
 
 # Autostart applications
-exec_always --no-startup-id /usr/lib/gnome-settings-daemon/gsd-xsettings
-exec_always --no-startup-id picom --backend glx --config ~/.config/i3/compton.conf -r 30
+#exec_always --no-startup-id /usr/lib/gnome-settings-daemon/gsd-xsettings
+exec_always --no-startup-id picom --config ~/.config/i3/compton.conf
 exec_always --no-startup-id feh --randomize --bg-fill ~/Pictures/Wallpapers/*
 exec_always --no-startup-id /usr/bin/setxkbmap -layout us,latam
 exec_always --no-startup-id /usr/bin/setxkbmap -option 'grp:win_space_toggle'
-exec_always --no-startup-id /usr/bin/xinput set-prop 12 283 1
-exec_always --no-startup-id /usr/bin/xinput set-prop 12 291 1
-exec_always --no-startup-id /usr/bin/xinput set-prop 12 287 1
+#exec_always --no-startup-id /usr/bin/xinput set-prop 12 283 1
+#exec_always --no-startup-id /usr/bin/xinput set-prop 12 291 1
+#exec_always --no-startup-id /usr/bin/xinput set-prop 12 287 1
 # Manjaro default i3 config autostartup applications
 #exec --no-startup-id pulseaudio --start
 exec --no-startup-id volumeicon
-exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+#exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 #exec --no-startup-id nitrogen --restore; sleep 1; compton -b
 #exec --no-startup-id manjaro-hello
-exec --no-startup-id nm-applet
+#exec --no-startup-id nm-applet
 exec --no-startup-id xfce4-power-manager
 exec --no-startup-id pamac-tray
-exec --no-startup-id clipit
 #exec --no-startup-id blueman-applet
 # exec_always --no-startup-id sbxkb
 #exec --no-startup-id  conky -c /usr/share/conky/conky_main
 #exec --no-startup-id start_conky_green
 exec --no-startup-id xautolock -time 30 -locker blurlock
-exec_always --no-startup-id ff-theme-util
-exec_always --no-startup-id fix_xcursor
+#exec_always --no-startup-id ff-theme-util
+#exec_always --no-startup-id fix_xcursor
 
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
 bar {
