@@ -1,0 +1,1 @@
+sudo rsync -a /home/lucas/Music /mnt/ContreEXT4 --verbose
