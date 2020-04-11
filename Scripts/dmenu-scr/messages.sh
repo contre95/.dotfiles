@@ -1,6 +1,6 @@
 #!/bin/bash
 
-choices="Telegram\nWhatsapp\nSignal\nDiscord\nSlack"
+choices="Telegram\nWhatsapp\nSignal\nDiscord\nSlack\nHangouts\nJitsi"
 var=$(echo -e $choices | dmenu -i -p "Exit menu: " -sb "#85489d") 
 
 case $var in
@@ -9,6 +9,12 @@ case $var in
 
     'Discord')
 	  exec i3-msg 'exec brave --profile-directory="Contre" --app=https://discordapp.com/app';;
+
+    'Jitsi')
+	  exec i3-msg 'exec brave --profile-directory="Contre" --app=https://meet.jit.si/ContreMeet';;
+
+    'Hangouts')
+	  exec i3-msg 'exec brave --profile-directory="Contre" --app=https://hangouts.google.com/call';;
 
     'Telegram')
 	  exec i3-msg 'exec telegram-desktop';;
