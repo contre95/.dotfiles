@@ -39,20 +39,20 @@ bindsym $mod+Shift+q kill
 bindsym $mod+g exec /usr/bin/brave --profile-directory="Contre"
 bindsym $mod+Shift+n exec /usr/bin/brave --profile-directory="Contre" --incognito
 bindsym $mod+j exec /usr/bin/brave --profile-directory="Meli"
-bindsym $mod+Shift+h exec /usr/bin/brave --profile-directory="Contre" https://hangouts.google.com/call
+bindsym $mod+Shift+h exec /usr/bin/brave --profile-directory="Contre" --app=https://hangouts.google.com/call
 #bindsym $mod+k exec /usr/bin/brave --profile-directory="Canus
 bindsym $mod+c exec /usr/bin/brave --profile-directory="Codelamp"
 bindsym $mod+i exec termite -e "vim /home/contre/.config/i3/config"
 bindsym $mod+u exec termite -e "vim /home/contre/.zshrc"
 bindsym $mod+o exec termite -e "vim /home/contre/.vimrc"
-bindsym $mod+m exec telegram-desktop ; exec signal-desktop ; exec termite -e "i3-msg layout tabbed"
 bindsym $mod+Shift+m exec termite -e "mocp"
 bindsym $mod+s exec pavucontrol
 bindsym $mod+q exec tmux kill-server
 
 
 # Start program launcher
-bindsym $mod+d exec i3-dmenu-desktop
+#bindsym $mod+d exec i3-dmenu-desktop
+bindsym $mod+d exec ~/.config/rofi/launchers/launcher.sh
 #bindsym $mod+d exec --no-startup-id rofi -show run
 #bindsym $mod+w exec "rofi -show drun -config ~/.config/rofi-themes/onedark.rasi"
 #bindsym $mod+s exec "rofi -show ssh -disable-history  -parse-known-hosts  -config ~/.config/rofi-themes/material.rasi 
@@ -101,6 +101,7 @@ bindsym $mod+w exec $scr_path/dmenu-scr/web-light.sh
 bindsym $mod+t exec $scr_path/dmenu-scr/tmux.sh
 bindsym $mod+Shift+s exec $scr_path/dmenu-scr/services.sh
 bindsym $mod+Shift+t exec $scr_path/dmenu-scr/tmux-new.sh
+bindsym $mod+m exec $scr_path/dmenu-scr/messages.sh
 bindsym $mod+Shift+c exec $scr_path/dmenu-scr/code.sh
 bindsym $mod+0 exec $scr_path/dmenu-scr/exit.sh
 bindsym $mod+Shift+w exec $scr_path/dmenu-scr/wifi.sh
@@ -151,6 +152,10 @@ bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
 
 assign [class="TelegramDesktop"] $ws8
 assign [class="Signal"] $ws8
+assign [class="Slack"] $ws8
+assign [instance="discordapp.com__app"] $ws8
+assign [instance="web.whatsapp.com"] $ws8
+
 
 # Open specific applications in floating mode
 for_window [title="alsamixer"]  border pixel 1
