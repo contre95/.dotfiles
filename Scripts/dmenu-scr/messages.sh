@@ -11,7 +11,7 @@ case $var in
 	  exec i3-msg 'exec brave --profile-directory="Contre" --app=https://discordapp.com/app';;
 
     'Jitsi')
-	  exec i3-msg 'exec brave --profile-directory="Contre" --app=https://meet.jit.si/ContreMeet';;
+        exec brave --profile-directory="Contre" --app=https://meet.jit.si/$(zenity --entry --text="Enter call name:");;
 
     'Hangouts')
 	  exec i3-msg 'exec brave --profile-directory="Contre" --app=https://hangouts.google.com/call';;
