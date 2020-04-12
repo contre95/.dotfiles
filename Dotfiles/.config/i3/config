@@ -16,7 +16,7 @@ for_window[class=".*"] border pixel 1
 hide_edge_borders both
 #bindsym $mod+u border none
 bindsym $mod+y border pixel 1
-bindsym $mod+n border normal
+bindsym $mod+n exec i3-msg rename workspace to `zenity --entry --text "Rename workspace to:"`
 
 #font xft:URWGothic-Book 11
 font xft:Syste San Fransisco Display 11
@@ -31,7 +31,6 @@ bindsym $mod+Shift+Return exec termite --class no-blur /home
 bindsym $mod+Ctrl+Return exec termite --class no-blur-floating-quick-term
 #bindsym $mod+mod1+Return exec termite
 #bindsym $mod+lock+Return exec termite
-
 # Window kill command
 bindsym $mod+Shift+q kill
 
@@ -39,7 +38,6 @@ bindsym $mod+Shift+q kill
 bindsym $mod+g exec /usr/bin/brave --profile-directory="Contre"
 bindsym $mod+Shift+n exec /usr/bin/brave --profile-directory="Contre" --incognito
 bindsym $mod+j exec /usr/bin/brave --profile-directory="Meli"
-bindsym $mod+Shift+h exec /usr/bin/brave --profile-directory="Contre" --app=https://hangouts.google.com/call
 #bindsym $mod+k exec /usr/bin/brave --profile-directory="Canus
 bindsym $mod+c exec /usr/bin/brave --profile-directory="Codelamp"
 bindsym $mod+i exec termite -e "vim /home/contre/.config/i3/config"
@@ -154,6 +152,8 @@ assign [class="TelegramDesktop"] $ws8
 assign [class="Signal"] $ws8
 assign [class="Slack"] $ws8
 assign [instance="discordapp.com__app"] $ws8
+assign [instance="hangouts.google.com__call"] $ws8
+assign [instance="meet.jit.si__ContreMeet"] $ws8
 assign [instance="web.whatsapp.com"] $ws8
 
 
