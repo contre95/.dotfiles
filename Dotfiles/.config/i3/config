@@ -155,6 +155,8 @@ assign [instance="discordapp.com__app"] $ws8
 assign [instance="hangouts.google.com__call"] $ws8
 assign [instance="meet.jit.si__ContreMeet"] $ws8
 assign [instance="web.whatsapp.com"] $ws8
+assign [instance="gmail.com"] $ws8
+
 
 
 # Open specific applications in floating mode
