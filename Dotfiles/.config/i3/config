@@ -40,9 +40,9 @@ bindsym $mod+Shift+n exec /usr/bin/brave --profile-directory="Contre" --incognit
 bindsym $mod+j exec /usr/bin/brave --profile-directory="Meli"
 #bindsym $mod+k exec /usr/bin/brave --profile-directory="Canus
 bindsym $mod+c exec /usr/bin/brave --profile-directory="Codelamp"
-bindsym $mod+i exec termite -e "vim /home/contre/.config/i3/config"
-bindsym $mod+u exec termite -e "vim /home/contre/.zshrc"
-bindsym $mod+o exec termite -e "vim /home/contre/.vimrc"
+bindsym $mod+i exec termite -e "vim /home/contre/.config/i3/config";exec i3-msg restart
+bindsym $mod+u exec termite -e "vim /home/contre/.zshrc";exec i3-msg restart
+bindsym $mod+o exec termite -e "vim /home/contre/.vimrc";exec i3-msg restart
 bindsym $mod+Shift+m exec termite -e "mocp"
 bindsym $mod+s exec pavucontrol
 bindsym $mod+q exec tmux kill-server
@@ -100,7 +100,7 @@ bindsym $mod+t exec $scr_path/dmenu-scr/tmux.sh
 bindsym $mod+Shift+s exec $scr_path/dmenu-scr/services.sh
 bindsym $mod+Shift+t exec $scr_path/dmenu-scr/tmux-new.sh
 bindsym $mod+m exec $scr_path/dmenu-scr/messages.sh
-bindsym $mod+Shift+c exec $scr_path/dmenu-scr/code.sh
+#bindsym $mod+Shift+c exec $scr_path/dmenu-scr/code.sh
 bindsym $mod+0 exec $scr_path/dmenu-scr/exit.sh
 bindsym $mod+Shift+w exec $scr_path/dmenu-scr/wifi.sh
 
@@ -153,7 +153,7 @@ assign [class="Signal"] $ws8
 assign [class="Slack"] $ws8
 assign [instance="discordapp.com__app"] $ws8
 assign [instance="hangouts.google.com__call"] $ws8
-assign [instance="meet.jit.si__ContreMeet"] $ws8
+assign [instance="meet.jit.si"] $ws8
 assign [instance="web.whatsapp.com"] $ws8
 assign [instance="gmail.com"] $ws8
 

@@ -5,11 +5,12 @@ audible_bell = false
 browser = xdg-open
 clickable_url = true
 cursor_blink = system
-cursor_shape = block
+#cursor_shape = block
+cursor_shape = ibeam
 dynamic_title = true
 filter_unmatched_urls = true
 geometry = 480x280
-font= Monospace 11
+font= JetBrains Mono 11
 icon_name = terminal
 modify_other_keys = false
 mouse_autohide = false
@@ -19,7 +20,6 @@ scrollback_lines = 15000
 size_hints = false
 urgent_on_bell = true
 highlight = #30343e
-
 [colors]
 
 # special
@@ -27,7 +27,6 @@ foreground      = #c5c8c6
 foreground_bold = #c5c8c6
 cursor          = #c5c8c6
 background      = #1d1f21
-#background = rgba(29,31,33,0.6)
 
 # black
 color0  = #282a2e
@@ -60,4 +59,3 @@ color14 = #8abeb7
 # white
 color7  = #707880
 color15 = #c5c8c6
-
