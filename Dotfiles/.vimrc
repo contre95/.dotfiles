@@ -10,7 +10,6 @@
 "  \__\::::/      \__\/      \  \:\        \  \:\        \  \::/
 "      ~~~~                   \__\/         \__\/         \__\/
 
-
 "----------------------------------------------------------------------------------------------
 "------------------------------------ Custom key bindings -------------------------------------
 "----------------------------------------------------------------------------------------------
@@ -139,12 +138,14 @@ set nu
 call plug#begin('~/.vim/plugged')
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
   Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+  Plug 'terryma/vim-multiple-cursors'
   Plug 'watzon/vim-edge-template'
   Plug 'scrooloose/nerdcommenter'
   Plug 'Valloric/YouCompleteMe'
   Plug 'itchyny/vim-gitbranch'
   Plug 'zirrostig/vim-schlepp'
   Plug 'itchyny/lightline.vim'
+  Plug 'jiangmiao/auto-pairs'
   Plug 'scrooloose/nerdtree'
   Plug 'junegunn/fzf.vim'
   Plug 'mattn/emmet-vim'
@@ -161,7 +162,20 @@ call plug#end()
 "------------------------------------ Plugins configuration -----------------------------------
 "----------------------------------------------------------------------------------------------
 
+"Multiline Cursor 
+"-------------------------------------
+let g:multi_cursor_use_default_mapping=0
+let g:multi_cursor_start_word_key      = 'g<C-n>'
+let g:multi_cursor_select_all_word_key = '<A-n>'
+let g:multi_cursor_start_key           = '<C-n>'
+let g:multi_cursor_select_all_key      = 'g<A-n>'
+let g:multi_cursor_next_key            = '<C-n>'
+let g:multi_cursor_prev_key            = '<C-p>'
+let g:multi_cursor_skip_key            = '<C-x>'
+let g:multi_cursor_quit_key            = '<Esc>'
+
 "NerdCommenter
+"-------------------------------------
 nmap <C-_> <Plug>NERDCommenterToggle <Down>
 vmap <C-_> <Plug>NERDCommenterToggle<CR>gv
 autocmd BufWinEnter * NERDTreeMirror
