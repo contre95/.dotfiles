@@ -11,7 +11,10 @@ case $var in
 	  exec i3-msg 'exec brave --profile-directory="Contre" --app=https://discordapp.com/app';;
 
     'Jitsi')
-        exec brave --profile-directory="Contre" --app=https://meet.jit.si/$(zenity --entry --text="Enter call name:");;
+        ASD="https://meet.jit.si/$(zenity --entry --text="Enter call name:")"
+        echo $ASD | xclip -sel clip
+        exec brave --profile-directory="Contre" --app=$ASD
+        ;;
 
     'Hangouts')
 	  exec i3-msg 'exec brave --profile-directory="Contre" --app=https://hangouts.google.com/call';;
