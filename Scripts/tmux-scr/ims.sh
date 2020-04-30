@@ -18,26 +18,23 @@ function codelamptmux {
     echo '                                                                                    ' 
     tmux start-server
     tmux new-session -d -s Codelamp -n Project
-    tmux new-window -t Codelamp:2 -n Database
-    tmux new-window -t Codelamp:3 -n Server
+    tmux new-window -t Codelamp:2 -n Code
+    tmux new-window -t Codelamp:3 -n Database
+    tmux new-window -t Codelamp:4 -n Server
     
-	tmux send-keys -t Codelamp:1 "cd $BASE && clear" C-m
-	tmux send-keys -t Codelamp:3 "cd $BASE &&  adonis serve --dev && clear" C-m
-    tmux split-window -v -t Codelamp:3 "cd $BASE && docker-compose up" && sleep 5
-	tmux send-keys -t Codelamp:2 "cd $BASE && mycli -P 3308 -u codelamp -pcodelamp --database clims && clear" C-m
+    tmux send-keys -t Codelamp:1 "cd $BASE && clear" C-m
+    tmux send-keys -t Codelamp:2 "cd $BASE && vim ." C-m
+	tmux send-keys -t Codelamp:4 "cd $BASE &&  adonis serve --dev && clear" C-m
+    tmux split-window -v -t Codelamp:4 "cd $BASE && docker-compose up" && sleep 5
+	tmux send-keys -t Codelamp:3 "cd $BASE && mycli -P 3308 -u codelamp -pcodelamp --database clims && clear" C-m
 
     tmux select-window -t Codelamp:1
     tmux attach-session -t Codelamp
-}
-
-function codelampwebstorm {
-    nohup /usr/bin/webstorm $PROJECT_FOLDER & 
 }
 
 function codelampbrave {
     nohup /usr/bin/brave --profile-direcory="Codelamp" http://localhost:3333 &
 }
 
-codelampwebstorm
 codelamptmux
 codelampbrave
