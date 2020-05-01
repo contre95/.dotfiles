@@ -1,11 +1,14 @@
 #!/usr/bin/zsh
-choices="Codelamp\nPass\nServer\nRaspi"
+choices="Codelamp\nNotes\nPass\nServer\nRaspi"
 var=$(echo -e $choices | dmenu -i -p "Exit menu: " -sb "#2f8a47") 
 TMUX_SCRIPTS=/home/lucas/Scripts/tmux-scr
 
 case $var in
     'Codelamp') 
     exec termite -e "zsh $TMUX_SCRIPTS/ims.sh";;
+    
+    'Notes')
+    exec termite -e "zsh $TMUX_SCRIPTS/notes.sh";;
     
     'Pass')
     exec termite -e "zsh $TMUX_SCRIPTS/pass.sh";;
