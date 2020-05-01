@@ -5,10 +5,9 @@ function passwordstore {
     tput setaf 3;
 
     tmux start-server
-    tmux new-session -d -s Notes -n Notes
-	
-	tmux send-keys -t Codelamp:1 "cd $BASE && tree" C-m
-
+    tmux new-session -d -s Notes -n Notes &&
+	tmux send-keys -t Notes:1 "cd $BASE && gst" C-m
+    tmux select-window -t Notes:1
     tmux attach-session -t Notes
 }
 

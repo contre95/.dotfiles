@@ -1,4 +1,4 @@
-PROJECT_FOLDER=/home/lucas/Code/CodeLamp/sys-codelamp-ims
+PROJECT_FOLDER=/home/lucas/Pass
 
 function passwordstore {
     BASE="$PROJECT_FOLDER"
@@ -18,7 +18,7 @@ echo '                                                             '
     tmux start-server
     tmux new-session -d -s Pass -n Pass
 	
-	tmux send-keys -t Codelamp:1 "cd $BASE && pass" C-m
+	tmux send-keys -t Pass:1 "cd $BASE && pass" C-m
 
     tmux attach-session -t Pass
 }
