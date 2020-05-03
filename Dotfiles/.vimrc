@@ -94,7 +94,12 @@ let mapleader = " "
 
 " Color Scheme
 "-------------------------------------
-colorscheme PaperColor
+"set termguicolors 
+let &t_7f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_7b = "\<Esc>[48;2;%lu;%lu;%lum"
+set background=dark
+set t_Co=256
+colorscheme monokai-phoenix
 
 "Treat end of lines like normal IDE
 "-------------------------------------
@@ -233,26 +238,11 @@ aug end
 
 " Tmux configuration, tmux will send xterm-style keys when its xterm-keys option is on
 "-------------------------------------
-if &term =~ '^screen'                                                                   
+if &term =~ '^tmux'                                                                   
     execute "set <xRight>=\e[1;*C"                                                      
     execute "set <xDown>=\e[1;*B"                                                       
     execute "set <xLeft>=\e[1;*D"                                                       
     execute "set <xUp>=\e[1;*A"                                                         
 endif                                                                                   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
