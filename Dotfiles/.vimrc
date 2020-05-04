@@ -231,6 +231,12 @@ aug roficss_ft_detection
     au BufNewFile,BufRead *.rasi set filetype=css
 aug end
 
+"Set terrform filetype 
+"-------------------------------------
+aug terraform_ft_detection
+    au!
+    au BufNewFile,BufRead *.tf set filetype=terraform
+aug end
 
 "----------------------------------------------------------------------------------------------
 "------------------------------------ Custom settings for filetype ----------------------------

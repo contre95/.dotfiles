@@ -23,7 +23,7 @@ function codelamptmux {
     tmux new-window -t Codelamp:4 -n Server
     
     tmux send-keys -t Codelamp:1 "cd $BASE && clear" C-m
-    tmux send-keys -t Codelamp:2 "cd $BASE && vim ." C-m
+    tmux send-keys -t Codelamp:2 "cd $BASE && vim" C-m
 	tmux send-keys -t Codelamp:4 "cd $BASE &&  adonis serve --dev && clear" C-m
     tmux split-window -v -t Codelamp:4 "cd $BASE && docker-compose up" && sleep 5
 	tmux send-keys -t Codelamp:3 "cd $BASE && mycli -P 3308 -u codelamp -pcodelamp --database clims && clear" C-m
