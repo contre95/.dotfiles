@@ -57,7 +57,7 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 # antigen bundle docker
 # antigen bundle docker-compose
 antigen bundle golang
-#antigen bundle python
+antigen bundle python
 #antigen bundle web-search
 antigen apply
 
