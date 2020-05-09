@@ -99,8 +99,8 @@ let &t_7f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_7b = "\<Esc>[48;2;%lu;%lu;%lum"
 set background=dark
 set t_Co=256
-colorscheme monokai-phoenix
-
+"colorscheme monokai-phoenix
+colorscheme jellybeans
 "Treat end of lines like normal IDE
 "-------------------------------------
 set virtualedit=onemore
