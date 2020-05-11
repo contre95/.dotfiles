@@ -34,12 +34,18 @@ bindsym $mod+Ctrl+Return exec termite --class no-blur-floating-quick-term
 # Window kill command
 bindsym $mod+Shift+q kill
 
+# Cam settings
+
+bindsym $mod+Shift+c exec brave --profile-directory="Contre" --app=http://192.168.0.192:8080/browserfs.html
+bindsym $mod+c exec /usr/bin/mpv /dev/video0
+
+
+
 # custom shortcuts
 bindsym $mod+g exec /usr/bin/brave --profile-directory="Contre"
 bindsym $mod+Shift+n exec /usr/bin/brave --profile-directory="Contre" --incognito
-bindsym $mod+j exec /usr/bin/brave --profile-directory="Meli"
 #bindsym $mod+k exec /usr/bin/brave --profile-directory="Canus
-bindsym $mod+c exec /usr/bin/brave --profile-directory="Codelamp"
+bindsym $mod+k exec /usr/bin/brave --profile-directory="Codelamp"
 bindsym $mod+i exec termite -e "vim /home/contre/.config/i3/config";exec i3-msg restart
 bindsym $mod+u exec termite -e "vim /home/contre/.zshrc";exec i3-msg restart
 bindsym $mod+o exec termite -e "vim /home/contre/.vimrc";exec i3-msg restart
@@ -95,6 +101,7 @@ set $firstmonitor HDMI1
 
 bindsym $mod+a exec $scr_path/dmenu-scr/set-display.sh
 bindsym $mod+p exec PASSWORD_STORE_DIR=/home/lucas/Pass $scr_path/dmenu-scr/passmenu.sh
+bindsym $mod+Shift+p exec PASSWORD_STORE_DIR=/home/lucas/Pass $scr_path/dmenu-scr/otpmenu.sh
 bindsym $mod+w exec $scr_path/dmenu-scr/web-light.sh
 bindsym $mod+t exec $scr_path/dmenu-scr/tmux.sh
 bindsym $mod+Shift+s exec $scr_path/dmenu-scr/services.sh
@@ -190,7 +197,8 @@ for_window [class="(?i)virtualbox"] floating enable border normal
 for_window [class="Xfburn"] floating enable
 for_window [class="\bfloating\b"] floating enable
 for_window [class="\bquick-term\b"] move left 580px,move up 225px, resize set 1875 580
-
+for_window [instance="192.168.0.192__browserfs.html"] floating enable, resize set 528 298, sticky enable
+for_window [class="mpv"] floating enable, sticky enable 
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
 
@@ -255,8 +263,8 @@ mode "resize" {
 #exec_always --no-startup-id /usr/lib/gnome-settings-daemon/gsd-xsettings
 exec_always --no-startup-id picom --config ~/.config/i3/compton.conf
 exec_always --no-startup-id feh --randomize --bg-fill ~/Pictures/Wallpapers/*
-exec_always --no-startup-id /usr/bin/setxkbmap -layout us,latam
-exec_always --no-startup-id /usr/bin/setxkbmap -option 'grp:win_space_toggle'
+exec_always --no-startup-id /usr/bin/setxkbmap -layout us -variant mac
+#exec_always --no-startup-id /usr/bin/setxkbmap -option 'grp:win_space_toggle'
 #exec_always --no-startup-id /usr/bin/xinput set-prop 12 283 1
 #exec_always --no-startup-id /usr/bin/xinput set-prop 12 291 1
 #exec_always --no-startup-id /usr/bin/xinput set-prop 12 287 1
@@ -276,13 +284,11 @@ exec --no-startup-id pamac-tray
 exec --no-startup-id xautolock -time 30 -locker blurlock
 #exec_always --no-startup-id ff-theme-util
 #exec_always --no-startup-id fix_xcursor
-
-# Start i3bar to display a workspace bar (plus the system information i3status if available)
+# Start i3bar to display a workspace bar (plus the system information i3statu/ if available)
 bar {
 	i3bar_command i3bar
 	status_command i3status -c ~/.config/i3/i3status
 	position bottom
-
 ## please set your primary output first. Example: 'xrandr --output eDP1 --primary'
 #	tray_output primary
 #	tray_output eDP1
