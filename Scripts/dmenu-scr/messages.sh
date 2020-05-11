@@ -1,14 +1,14 @@
 #!/bin/bash
 
 choices="Telegram\nWhatsapp\nSignal\nDiscord\nSlack\nHangouts\nJitsi\nGmail\nMessenger"
-var=$(echo -e $choices | dmenu -i -p "Exit menu: " -sb "#85489d") 
+var=$(echo -e $choices | dmenu -i -p "Exit menu: " -sb "#0384fc") 
 
 case $var in
     'Whatsapp') 
 	  exec i3-msg 'exec brave --profile-directory="Contre" --app=https://web.whatsapp.com -class "messages"';;
 
     'Discord')
-	  exec i3-msg 'exec brave --profile-directory="Contre" --app=https://discordapp.com/app';;
+	  exec i3-msg 'exec discord';;
 
     'Jitsi')
         ASD="https://meet.jit.si/$(zenity --entry --text="Enter call name:")"
