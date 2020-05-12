@@ -3,6 +3,10 @@
 ################################################################################################
 export MY_FOLDER='/home/lucas'
 export PASSWORD_STORE_DIR=$MY_FOLDER/Pass
+# You may need to manually set your language environment b4 anything else
+export LANG="en_US.UTF-8"
+export LC_ALL=en_US.UTF-8
+export TERM="tmux-256color"
 
 ################################################################################################
 # Severla programs configuration
@@ -20,6 +24,10 @@ if [ -f '/home/contre/google-cloud-sdk/path.zsh.inc' ]; then . '/home/contre/goo
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/home/contre/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/contre/google-cloud-sdk/completion.zsh.inc'; fi
+
+# The next line enables autojump
+[[ -s /home/contre/.cache/yay/autojump-git/pkg/autojump-git/etc/profile.d/autojump.sh  ]] && source /home/contre/.cache/yay/autojump-git/pkg/autojump-git/etc/profile.d/autojump.sh                           
+autoload -U compinit && compinit -u
 
 # This loads NVM (Node Version Manager) 
 #[[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh
@@ -65,10 +73,6 @@ antigen apply
 # User configuration
 ################################################################################################
 
-# You may need to manually set your language environment
-#export LANG=en_US.UTF-8
-export LC_ALL=en_US.UTF-8
-#export TERM="xterm-256color"
 
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$HOME/.composer/vendor/bin:/usr/bin:/usr/local/go/bin:/$MY_FOLDER/Scripts/meli-scr:$PATH$PATH
@@ -133,3 +137,15 @@ setopt    incappendhistory  #Immediately append to the history file, not just wh
 # Just in case the unfortunate way Mac has to "Supr" does not work on your terminal.. then here's the fix
 #bindkey "^[[3~" delete-char
 
+# Lines configured by zsh-newuser-install
+HISTFILE=~/.histfile
+HISTSIZE=1000
+SAVEHIST=1000
+bindkey -e
+# End of lines configured by zsh-newuser-install
+# The following lines were added by compinstall
+zstyle :compinstall filename '/home/contre/.zshrc'
+
+autoload -Uz compinit
+compinit
+# End of lines added by compinstall

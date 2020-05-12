@@ -18,19 +18,16 @@ hide_edge_borders both
 bindsym $mod+y border pixel 1
 bindsym $mod+n exec i3-msg rename workspace to `zenity --entry --text "Rename workspace to:"`
 
-#font xft:URWGothic-Book 11
-font xft:Syste San Fransisco Display 11
-
+#font pango:JetBrains Mono Regular
+font pango:DejaVu Sans Mono Regular
 floating_modifier $mod
 
 
-#bindsym $mod+Return exec i3-sensible-termite
-#bindsym $mod+Shift+t exec termite -e "ranger"
-bindsym $mod+Return exec termite -e "tmux new-session -A -s Tmux"
-bindsym $mod+Shift+Return exec termite --class no-blur /home
-bindsym $mod+Ctrl+Return exec termite --class no-blur-floating-quick-term
-#bindsym $mod+mod1+Return exec termite
-#bindsym $mod+lock+Return exec termite
+
+#bindsym $mod+Shift+t exec alacritty -e "ranger"
+bindsym $mod+Return exec "alacritty --command tmux -u new-session -A -s Tmux"
+bindsym $mod+Shift+Return exec alacritty
+bindsym $mod+Ctrl+Return exec "alacritty --class=floating-quick-term"
 # Window kill command
 bindsym $mod+Shift+q kill
 
@@ -46,10 +43,10 @@ bindsym $mod+g exec /usr/bin/brave --profile-directory="Contre"
 bindsym $mod+Shift+n exec /usr/bin/brave --profile-directory="Contre" --incognito
 #bindsym $mod+k exec /usr/bin/brave --profile-directory="Canus
 bindsym $mod+k exec /usr/bin/brave --profile-directory="Codelamp"
-bindsym $mod+i exec termite -e "vim /home/contre/.config/i3/config";exec i3-msg restart
-bindsym $mod+u exec termite -e "vim /home/contre/.zshrc";exec i3-msg restart
-bindsym $mod+o exec termite -e "vim /home/contre/.vimrc";exec i3-msg restart
-bindsym $mod+Shift+m exec termite -e "mocp"
+bindsym $mod+i exec "alacritty -e vim /home/contre/.config/i3/config";exec i3-msg restart
+bindsym $mod+u exec "alacritty -e vim /home/contre/.zshrc";exec i3-msg restart
+bindsym $mod+o exec "alacritty -e vim /home/contre/.vimrc";exec i3-msg restart
+bindsym $mod+Shift+m exec alacritty -e "mocp"
 bindsym $mod+s exec pavucontrol
 bindsym $mod+q exec tmux kill-server
 
@@ -158,7 +155,7 @@ bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
 assign [class="TelegramDesktop"] $ws8
 assign [class="Signal"] $ws8
 assign [class="Slack"] $ws8
-assign [instance="discordapp.com__app"] $ws8
+assign [instance="discord"] $ws8
 assign [instance="hangouts.google.com__call"] $ws8
 assign [instance="meet.jit.si"] $ws8
 assign [instance="web.whatsapp.com"] $ws8
@@ -196,7 +193,9 @@ for_window [class="Timeset-gui"] floating enable border normal
 for_window [class="(?i)virtualbox"] floating enable border normal
 for_window [class="Xfburn"] floating enable
 for_window [class="\bfloating\b"] floating enable
-for_window [class="\bquick-term\b"] move left 580px,move up 225px, resize set 1875 580
+for_window [instance="\bfloating\b"] floating enable
+for_window [instance="\bquick-term\b"] move left 500px,move up 200px, resize set 1775 580
+# Cam for streamig
 for_window [instance="192.168.0.192__browserfs.html"] floating enable, resize set 528 298, sticky enable
 for_window [class="mpv"] floating enable, sticky enable 
 # switch to workspace with urgent window automatically
@@ -295,7 +294,8 @@ bar {
 
 	bindsym button4 nop
 	bindsym button5 nop
-#   font xft:URWGothic-Book 11
+#    font pango:JetBrains Mono Regular
+    font pango:DejaVu Sans Mono Regular
 	strip_workspace_numbers yes
 
     colors {
