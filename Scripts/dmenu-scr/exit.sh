@@ -8,10 +8,10 @@ case $var in
 	  systemctl poweroff;;
 
     ' Lock')
-      "blurlock";;
+      "i3-msg exit";;
 
     ' Restart')
-      i3exit reboot;;
+      systemctl reboot;;
 
     ' Logout')
       i3exit logout;;
