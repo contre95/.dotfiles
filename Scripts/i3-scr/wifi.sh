@@ -1,7 +1,6 @@
-#!/bin/sh
-CONAME=$(echo "$1" | sed 's/ //g')
-nmcli c add type wifi con-name $CONAME ifname '$3' ssid '$1'
-nmcli con modify $CONAME wifi-sec.key-mgmt wpa-psk
-nmcli con modify $CONAME wifi-sec.psk $2 
-nmcli con up $CONAME || exit 1
-echo Connected to $CONAME
+#!/usr/bin/zsh
+nmcli connection delete "$1" 2> /dev/null
+nmcli c add type wifi con-name "$1" ifname "$3" ssid "$1"
+nmcli con modify "$1" wifi-sec.key-mgmt wpa-psk
+nmcli con modify "$1" wifi-sec.psk "$2"
+nmcli con up "$1"
