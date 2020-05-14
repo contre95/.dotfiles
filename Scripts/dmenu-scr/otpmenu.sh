@@ -13,7 +13,7 @@ password_files=( "$prefix"/**/OTP/*.gpg )
 password_files=( "${password_files[@]#"$prefix"/}" )
 password_files=( "${password_files[@]%.gpg}" )
 
-password=$(printf '%s\n' "${password_files[@]}" | dmenu -i -p "Elektu OTP: " "$@" -sb "#34495A")
+password=$(printf '%s\n' "${password_files[@]}" | dmenu -i -p "OTP :: " "$@" -sb "#34495A" -fn "JetBrainsMono Nerd Font" )
 
 [[ -n $password ]] || exit
 

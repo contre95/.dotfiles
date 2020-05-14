@@ -1,36 +1,36 @@
 #!/bin/bash
 
-choices="Telegram\nWhatsapp\nSignal\nDiscord\nSlack\nHangouts\nJitsi\nGmail\nMessenger"
-var=$(echo -e $choices | dmenu -i -p "Exit menu: " -sb "#0384fc") 
+choices=' Telegram\n Whatsapp\n Signal\nﭮ Discord\n Slack\n Hangouts\n Jitsi\n Gmail\n Messenger'
+var=$(echo -e $choices | dmenu -i -p "Exit menu: " -sb "#137aad" -fn "JetBrainsMono Nerd Font" ) 
 
 case $var in
-    'Whatsapp') 
+    ' Whatsapp') 
 	  exec i3-msg 'exec brave --profile-directory="Contre" --app=https://web.whatsapp.com -class "messages"';;
 
-    'Discord')
+    'ﭮ Discord')
 	  exec i3-msg 'exec discord';;
 
-    'Jitsi')
+    ' Jitsi')
         ASD="https://meet.jit.si/$(zenity --entry --text="Enter call name:")"
         echo $ASD | xclip -sel clip
         exec brave --profile-directory="Contre" --app=$ASD
         ;;
 
-    'Hangouts')
+    ' Hangouts')
 	  exec i3-msg 'exec brave --profile-directory="Contre" --app=https://hangouts.google.com/call';;
 
-    'Messenger')
+    ' Messenger')
 	  exec i3-msg 'exec brave --profile-directory="Contre" --app=https://messenger.com';;
     
-    'Gmail')
+    ' Gmail')
 	  exec i3-msg 'exec brave --profile-directory="Contre" --app=https://gmail.com';;
 
-    'Telegram')
+    ' Telegram')
 	  exec i3-msg 'exec telegram-desktop';;
 
-    'Signal')
+    ' Signa')
 	  exec i3-msg 'exec signal-desktop';;
       
-    'Slack')
+    ' Slack')
 	  exec i3-msg 'exec slack';;
 esac

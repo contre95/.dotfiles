@@ -1,14 +1,14 @@
 #!/usr/bin/zsh
-choices="OpenSSH\nDocker\nBluetooth"
-var=$(echo -e $choices | dmenu -i -p "Exit menu: " -sb "#1ba4e9") 
+choices=" OpenSSH\n Docker\n Bluetooth"
+var=$(echo -e $choices | dmenu -i -p "Exit menu: " -sb "#1ba4e9" -fn "JetBrainsMono Nerd Font") 
 
 case $var in
-    'OpenSSH') 
-    systemctl start sshd;; 
+    ' OpenSSH') 
+    exec systemctl start sshd;; 
     
-    'Bluetooth')
-    systemctl start bluetooth ;;
+    ' Bluetooth')
+    sudo systemctl start bluetooth ;;
       
-    'Docker')
-    systemctl start docker;;
+    ' Docker')
+    sudo ystemctl start docker;;
 esac

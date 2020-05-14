@@ -1,21 +1,21 @@
 #!/usr/bin/zsh
-choices="Codelamp\nNotes\nPass\nServer\nRaspi"
-var=$(echo -e $choices | dmenu -i -p "Exit menu: " -sb "#2f8a47") 
+choices=" Codelamp\nﴬ Notes\nﳳ Pass\n Server\n Raspi"
+var=$(echo -e $choices | dmenu -i -p "Exit menu: " -sb "#2f8a47" -fn "JetBrainsMono Nerd Font") 
 TMUX_SCRIPTS=/home/lucas/Scripts/tmux-scr
 
 case $var in
-    'Codelamp') 
+    ' Codelamp') 
     exec termite -e "zsh $TMUX_SCRIPTS/ims.sh";;
     
-    'Notes')
+    'ﴬ Notes')
     exec termite -e "zsh $TMUX_SCRIPTS/notes.sh";;
     
-    'Pass')
+    'ﳳ Pass')
     exec termite -e "zsh $TMUX_SCRIPTS/pass.sh";;
 
-    'Server')
+    ' Server')
     exec termite -e "zsh $TMUX_SCRIPTS/contre-server.sh";;
 
-    'Raspi')
+    ' Raspi')
     exec termite -e "zsh $TMUX_SCRIPTS/raspi.sh";;
 esac
