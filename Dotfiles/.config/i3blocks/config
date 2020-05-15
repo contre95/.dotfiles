@@ -99,9 +99,14 @@ command=checkupdates | wc -l
 interval=once
 label=<span color="#1793D1"> </span>
 
+[date]
+command=date '+%A %e'
+interval=60
+label=<span color="#8be9fd">  </span>
+
 # Update time every 5 seconds
 [time]
-command=date +%T
+command=date +%T 
 interval=5
 
 
