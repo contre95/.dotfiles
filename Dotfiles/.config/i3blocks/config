@@ -13,8 +13,6 @@ separator=true
 separator_block_width=25
 markup=pango
 
-
-
 [gpu-load]
 command=~/.config/i3blocks/blocks/gpu-load/gpu-load | awk 'FNR==1{ printf "%s %s\n", $1, $2}'
 separator=false
@@ -22,9 +20,10 @@ label=<span color="#5e9400"> </span>
 interval=2
 
 [gpu-temperature]
-command=~/.config/i3blocks/blocks/temperature/temperature
+#command=~/.config/i3blocks/blocks/temperature/temperature
+command=nvidia-smi -q -d temperature | grep "GPU Current Temp" | awk -F: '{print $2}'
 interval=2
-SENSOR_CHIP="k10temp-pci-00c3"
+#SENSOR_CHIP="nct6775"
 label=<span color="#5e9400"> </span>
 
 [cpu_usage]
@@ -38,7 +37,6 @@ command=~/.config/i3blocks/blocks/temperature/temperature
 interval=2
 SENSOR_CHIP="k10temp-pci-00c3"
 label=<span color="#8be9fd"> </span>
-
 
 [memory]
 command=free -h --si | awk 'FNR==2{ print $0 }' | awk '{ print $7 }'
@@ -68,12 +66,12 @@ label=<span color="#ff79c6"> </span>
 
 # Query my default IP address only on startup
 [ip-pri]
-command=hostname -i | awk '{ print $1 }'
+command=hostname -i| awk '{ print $1}'
 interval=once
 color=#91E78B
 
 # Query my default IP address only on startup
-[ip-pub]
+[wifi]
 command=iwgetid | awk -F: '{print $2}'
 interval=once
 color=#4a586e
