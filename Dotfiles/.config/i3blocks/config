@@ -65,27 +65,30 @@ label=<span color="#ff79c6"> </span>
 #color=#A4C2F4
 
 # Query my default IP address only on startup
-[ip-pri]
-command=hostname -i| awk '{ print $1}'
-interval=once
-color=#91E78B
+#[ip-pri]
+#command=hostname -i| awk '{ print $1}'
+#interval=once
+#color=#91E78B
 
 # Query my default IP address only on startup
-[wifi]
-command=iwgetid | awk -F: '{print $2}'
-interval=once
-color=#4a586e
-
+#[wifi]
+#command=iwgetid | awk -F: '{print $2}'
+#interval=once
+#color=#4a586e
+[dotfiles]
+command=cd /home/lucas && gd --raw | wc -l
+interval=1800
+label=<span color="#ff79c6"> </span>
 # Query my default IP address only on startup
-[ip-pub]
-command=curl ifconfig.io
-interval=once
-color=#91E78B
+#[ip-pub]
+#command=curl ifconfig.io
+#interval=once
+#color=#91E78B
 
 # Keyboard
-[keyboard]
-command=xset q | grep Caps | tr -s ' ' | cut -d ' ' -f 5,9,13 | sed 's/on/▣/g' | sed 's/off/▢/g'
-interval=5
+#[keyboard]
+#command=xset q | grep Caps | tr -s ' ' | cut -d ' ' -f 5,9,13 | sed 's/on/▣/g' | sed 's/off/▢/g'
+#interval=5
 
 [volume]
 command=pulseaudio-ctl full-status | awk '{ printf "%i%\n", $1  }'
