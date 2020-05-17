@@ -191,11 +191,12 @@ for_window [class="Xfburn"] floating enable
 for_window [class="\bfloating\b"] floating enable
 for_window [instance="\bfloating\b"] floating enable
 for_window [instance="\bquick-term\b"] move left 500px,move up 200px, resize set 1775 580
+
 # Cam for streamig
 for_window [instance="192.168.0.192__browserfs.html"] floating enable, resize set 528 298, sticky enable
 for_window [class="mpv"] floating enable, sticky enable, resize set width 355 ppt, move absolute position center
 
-# switch to workspace with urgent window automatically
+# Switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
 
 # reload the configuration file

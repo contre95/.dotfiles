@@ -36,8 +36,8 @@ nmap <S-Right> v<Right>
 vmap <S-Right> <Right>
 nmap <S-Down> V<Down>
 nmap <S-Left> v<Left>
-vmap <S-Left> <Left>
 vmap <S-Down> <Down>
+vmap <S-Left> <Left>
 nmap <S-Up> V<Up>
 vmap <S-Up> <Up>
 nnoremap <C-S-Right> <Esc>v
