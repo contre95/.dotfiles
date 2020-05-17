@@ -2,7 +2,6 @@ set $mod Mod4
 new_window pixel 1
 new_float normal
 
-
 # Set variables
 set $scr_path /home/lucas/Scripts
 

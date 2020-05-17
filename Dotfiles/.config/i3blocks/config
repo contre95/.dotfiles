@@ -75,10 +75,12 @@ label=<span color="#ff79c6"> </span>
 #command=iwgetid | awk -F: '{print $2}'
 #interval=once
 #color=#4a586e
-[dotfiles]
-command=cd /home/lucas && gd --raw | wc -l
-interval=1800
-label=<span color="#ff79c6"> </span>
+
+[bandwidth]
+command=~/.config/i3blocks/blocks/bandwidth2/bandwidth2
+interval=persist
+label=<span color="#5ca08e"></span>
+
 # Query my default IP address only on startup
 #[ip-pub]
 #command=curl ifconfig.io
@@ -108,7 +110,7 @@ label=<span color="#8be9fd">  </span>
 # Update time every 5 seconds
 [time]
 command=date +%T 
-interval=5
+interval=1
 
 
 
