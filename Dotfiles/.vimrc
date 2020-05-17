@@ -1,4 +1,4 @@
-"                              ___           ___           ___
+
 "     ___        ___          /__/\         /  /\         /  /\
 "    /__/\      /  /\        |  |::\       /  /::\       /  /:/
 "    \  \:\    /  /:/        |  |:|:\     /  /:/\:\     /  /:/
@@ -35,11 +35,9 @@ imap <S-Down> <Esc>V<Down>
 nmap <S-Right> v<Right>
 vmap <S-Right> <Right>
 nmap <S-Down> V<Down>
-imap <S-Down> V<Down>
 nmap <S-Left> v<Left>
 vmap <S-Left> <Left>
 vmap <S-Down> <Down>
-imap <S-Up> V<Up>
 nmap <S-Up> V<Up>
 vmap <S-Up> <Up>
 nnoremap <C-S-Right> <Esc>v
@@ -57,6 +55,12 @@ nmap <A-S-Left> gT
 "-------------------------------------
 :map <C-a> GVgg
 "nmap <C-a> ggVG
+
+
+
+" Map Ctrl-Backspace to delete the previous word in insert mode.
+"-------------------------------------
+imap <C-BS> <C-W>
 
 " Undo with Crtl+z
 "-------------------------------------
@@ -123,12 +127,14 @@ set smartindent
 set splitbelow
 set splitright
 set autoindent
+set noswapfile
+set nowrap
 set ignorecase
 set showmatch	
-set incsearch
-set tabstop=4
-set wildmenu
 set hlsearch
+"set incsearch
+set wildmenu
+set tabstop=4
 set t_Co=256
 set mouse=a
 set number
@@ -168,6 +174,15 @@ call plug#end()
 "------------------------------------ Plugins configuration -----------------------------------
 "----------------------------------------------------------------------------------------------
 
+"YouCompleteMe
+"-------------------------------------
+nnoremap <silent> <leader>g :YcmCompleter GoTo<CR>
+
+"NerdCommenter
+"-------------------------------------
+imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
+let g:user_emmet_expandabbr_key='<Tab>'
+
 "Multiline Cursor 
 "-------------------------------------
 let g:multi_cursor_use_default_mapping=0
@@ -197,8 +212,10 @@ let g:Schlepp#trimWS = 0
 
 " Fuzzy Finder (fzf)
 "-------------------------------------
+let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.6 } }
 nnoremap <silent> <Leader>s :call fzf#run({'down': '40%','sink': 'vertical botright split', 'options': ['--layout=reverse', '--info=inline', '--preview', '~/.vim/plugged/fzf.vim/bin/preview.sh {}']})<CR>
-:map <C-t> :call fzf#run({'down': '40%','sink': 'tabedit', 'options': ['--layout=reverse', '--info=inline', '--preview', '~/.vim/plugged/fzf.vim/bin/preview.sh {}']})<CR>
+":map <C-t> :call fzf#run({'down': '40%','sink': 'tabedit', 'options': ['--layout=reverse', '--info=inline', '--preview', '~/.vim/plugged/fzf.vim/bin/preview.sh {}']})<CR>
+:map <C-t> :call fzf#run({'down': '40%','sink': 'tabedit', 'options': ['--info=inline', '--preview', '~/.vim/plugged/fzf.vim/bin/preview.sh {}']})<CR>
 nnoremap <silent> <Leader>c :call fzf#run({'source': map(split(globpath(&rtp, "colors/*.vim"), "\n"),"substitute(fnamemodify(v:val, ':t'), '\\..\\{-}$', '', '')"),'sink': 'colo','options': '+m','right':    30})<CR>
 
 "NERDTree

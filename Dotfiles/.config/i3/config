@@ -34,10 +34,6 @@ bindsym $mod+Shift+q kill
 
 bindsym $mod+Shift+c exec brave --profile-directory="Contre" --app=http://192.168.0.192:8080/browserfs.html
 bindsym $mod+c exec /usr/bin/mpv /dev/video0
-
-
-
-# custom shortcuts
 bindsym $mod+g exec /usr/bin/brave --profile-directory="Contre"
 bindsym $mod+Shift+n exec /usr/bin/brave --profile-directory="Contre" --incognito
 #bindsym $mod+k exec /usr/bin/brave --profile-directory="Canus
@@ -197,7 +193,8 @@ for_window [instance="\bfloating\b"] floating enable
 for_window [instance="\bquick-term\b"] move left 500px,move up 200px, resize set 1775 580
 # Cam for streamig
 for_window [instance="192.168.0.192__browserfs.html"] floating enable, resize set 528 298, sticky enable
-for_window [class="mpv"] floating enable, sticky enable 
+for_window [class="mpv"] floating enable, sticky enable, resize set width 355 ppt, move absolute position center
+
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
 
@@ -217,31 +214,9 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 #Lock i3lock
 bindsym $mod+l exec --no-startup-id "blurlock"
 
-# Set shut down, restart and locking features
-#bindsym $mod+0 mode "$mode_system"
-#set $mode_system (l)ock, (e)xit, switch_(u)ser, (s)uspend, (h)ibernate, (r)eboot, (Shift+s)hutdown
-#mode "$mode_system" {
-#    bindsym l exec --no-startup-id "blurlock"
-#    bindsym s exec --no-startup-id i3exit suspend, mode "default"
-#    bindsym u exec --no-startup-id i3exit switch_user, mode "default"
-#    bindsym e exec --no-startup-id i3exit logout, mode "default"
-#    bindsym h exec --no-startup-id i3exit hibernate, mode "default"
-#    bindsym r exec --no-startup-id i3exit reboot, mode "default"
-#    bindsym Shift+s exec --no-startup-id i3exit shutdown, mode "default"
-#
-#    # exit system mode: "Enter" or "Escape"
-#    bindsym Return mode "default"
-#    bindsym Escape mode "default"
-#}
-
 # Resize window (you can also use the mouse for that)
 bindsym $mod+r mode "resize"
 mode "resize" {
-        # These bindings trigger as soon as you enter the resize mode
-        # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
         bindsym j resize shrink width 5 px or 5 ppt
         bindsym k resize grow height 5 px or 5 ppt
         bindsym l resize shrink height 5 px or 5 ppt
@@ -263,32 +238,16 @@ mode "resize" {
 exec_always --no-startup-id picom --config /home/contre/.config/i3/compton.conf --experimental-backends
 exec_always --no-startup-id feh --randomize --bg-fill ~/Pictures/Wallpapers/*
 exec_always --no-startup-id /usr/bin/setxkbmap -layout us -variant mac
-#exec_always --no-startup-id /usr/bin/setxkbmap -option 'grp:win_space_toggle'
-#exec_always --no-startup-id /usr/bin/xinput set-prop 12 283 1
-#exec_always --no-startup-id /usr/bin/xinput set-prop 12 291 1
-#exec_always --no-startup-id /usr/bin/xinput set-prop 12 287 1
-# Manjaro default i3 config autostartup applications
-#exec --no-startup-id pulseaudio --start
 exec --no-startup-id volumeicon
-#exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-#exec --no-startup-id nitrogen --restore; sleep 1; compton -b
-#exec --no-startup-id manjaro-hello
-#exec --no-startup-id nm-applet
 exec --no-startup-id xfce4-power-manager
 exec --no-startup-id pamac-tray
-#exec --no-startup-id blueman-applet
-# exec_always --no-startup-id sbxkb
-#exec --no-startup-id  conky -c /usr/share/conky/conky_main
-#exec --no-startup-id start_conky_green
 exec --no-startup-id xautolock -time 30 -locker blurlock
-#exec_always --no-startup-id ff-theme-util
-#exec_always --no-startup-id fix_xcursor
-# Start i3bar to display a workspace bar (plus the system information i3statu/ if available)
-
 bar {
+#  mode hide
+#  hidden_state hide
   font pango:JetBrains Mono Nerd Font 11
   status_command i3blocks -c ~/.config/i3blocks/config
-#  status_command i3status -c ~/.config/i3/i3status
+# status_command i3status -c ~/.config/i3/i3status
   strip_workspace_numbers yes
     colors {
 	    background #1A2026
