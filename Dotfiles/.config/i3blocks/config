@@ -41,17 +41,17 @@ label=<span color="#8be9fd"> </span>
 [memory]
 command=free -h --si | awk 'FNR==2{ print $0 }' | awk '{ print $7 }'
 interval=2
-label=<span color="#a9e185">﬙ </span>
+label=<span color="#ff79ca">﬙ </span>
 
-[home]
+[hdisk]
 command=df -h /home | awk 'FNR==2{print $4}'
-interval=3
+interval=60
 label=<span color="#a9e185"> </span>
 
-[root]
+[rdisk]
 command=df -h / | awk 'FNR==2{print $4}'
-interval=3
-label=<span color="#ff79c6"> </span>
+interval=60
+label=<span color="#a9e185"> </span>
 
 #[memory]
 #command=$SCRIPT_DIR/memory
