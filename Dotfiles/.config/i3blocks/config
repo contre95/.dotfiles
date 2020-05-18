@@ -82,10 +82,10 @@ interval=persist
 label=<span color="#5ca08e"></span>
 
 # Query my default IP address only on startup
-#[ip-pub]
-#command=curl ifconfig.io
-#interval=once
-#color=#91E78B
+[ip-pub]
+command=curl ifconfig.io
+interval=once
+color=#91E78B
 
 # Keyboard
 #[keyboard]

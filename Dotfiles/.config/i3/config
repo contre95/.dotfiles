@@ -35,7 +35,7 @@ bindsym $mod+Shift+c exec brave --profile-directory="Contre" --app=http://192.16
 bindsym $mod+c exec /usr/bin/mpv /dev/video0
 bindsym $mod+g exec /usr/bin/brave --profile-directory="Contre"
 bindsym $mod+Shift+n exec /usr/bin/brave --profile-directory="Contre" --incognito
-#bindsym $mod+k exec /usr/bin/brave --profile-directory="Canus
+bindsym $mod+j exec /usr/bin/brave --profile-directory="Meli"
 bindsym $mod+k exec /usr/bin/brave --profile-directory="Codelamp"
 bindsym $mod+i exec --no-startup-id /usr/bin/termite --exec="vim -V9myVim.log /home/contre/.config/i3/config"
 bindsym $mod+u exec termite -e "vim /home/contre/.zshrc"
