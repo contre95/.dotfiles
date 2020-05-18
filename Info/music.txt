@@ -748,7 +748,7 @@ Music
 │   ├── The Piano Man.mp3
 │   └── We Didn't Start The Fire.mp3
 ├── Billy Ocean
-│   ├── Caribbean Queen (No More Love on the Run).mp3
+│   ├── Caribbean Queen.mp3
 │   └── Loverboy.mp3
 ├── Bizarrap
 │   ├── CA7RIEL_ Bzrp Music Sessions, Vol.14.mp3
