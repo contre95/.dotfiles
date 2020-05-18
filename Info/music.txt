@@ -30,26 +30,22 @@ Music
 ├── 50 Cent
 │   ├── Arabic Remix.mp3
 │   ├── Candy Shop.mp3
-│   ├── desktop.ini
 │   ├── Pimp.mp3
 │   └── You Dont Know.mp3
 ├── Aaron Smith
 │   └── Dancin.mp3
 ├── Abba
 │   ├── Dancing Queen.mp3
-│   ├── desktop.ini
 │   └── Gimme Gimme Gimme.mp3
 ├── A Beacon School
 │   └── It's Late.mp3
 ├── Abel Pintos
 │   ├── Aqui Te Espero.mp3
-│   ├── desktop.ini
 │   ├── La Llave.mp3
 │   └── No Me Olvides.mp3
 ├── AC-DC
 │   ├── Back In Black.mp3
 │   ├── Big Gun.mp3
-│   ├── desktop.ini
 │   ├── Hells Bells.mp3
 │   ├── Highway To Hell.mp3
 │   ├── OneNote Table Of Contents.onetoc2
@@ -78,7 +74,6 @@ Music
 ├── AeroSmith
 │   ├── Crazy.mp3
 │   ├── Cryin'.mp3
-│   ├── desktop.ini
 │   ├── Dream On.mp3
 │   ├── Fly Away From Here.mp3
 │   ├── I Dont Wanna Miss A Thing.mp3
@@ -117,7 +112,6 @@ Music
 ├── Afro Man
 │   ├── Because I Got High.mp3
 │   ├── Crazy Rap.mp3
-│   ├── desktop.ini
 │   ├── Hush.mp3
 │   ├── Let's All Get Drunk.mp3
 │   ├── One Hit Wonder.mp3
@@ -140,7 +134,6 @@ Music
 │   └── La femme d'argent.mp3
 ├── Air Supply
 │   ├── All Out Of Love.mp3
-│   ├── desktop.ini
 │   ├── Even The Night Are Beat.mp3
 │   ├── Making Love Out Of Nothing At All.mp3
 │   └── Unchained Melody.mp3
@@ -149,7 +142,6 @@ Music
 ├── Akon
 │   ├── All Up To You.mp3
 │   ├── Boomerang.mp3
-│   ├── desktop.ini
 │   ├── Emergency Room.mp3
 │   ├── Hold My Hand.mp3
 │   ├── I Just Had Sex.mp3
@@ -165,7 +157,6 @@ Music
 ├── Alan Parson Project
 │   ├── A Dream Within A Dream.mp3
 │   ├── Days Are Numbers.mp3
-│   ├── desktop.ini
 │   ├── Don't Answer Me.mp3
 │   ├── Eyes In The Sky.mp3
 │   ├── Games People Play.mp3
@@ -183,7 +174,6 @@ Music
 │   ├── Crosscut Saw.mp3
 │   └── Killing Floor.mp3
 ├── Alboroise
-│   ├── desktop.ini
 │   ├── Herbalist.mp3
 │   └── Network - Shortcut.lnk
 ├── Al corley
@@ -193,7 +183,6 @@ Music
 ├── Alejandro Lerner
 │   ├── Amarte Asi.mp3
 │   ├── Como Vivir Despues De Ti.mp3
-│   ├── desktop.ini
 │   ├── Despues De Ti.mp3
 │   ├── Hay Algo Que Te Quiero Decir.mp3
 │   ├── No Hace Falta Que Te Diga.mp3
@@ -226,7 +215,6 @@ Music
 ├── Alphaville
 │   ├── Big In Japan 2.mp3
 │   ├── Big In Japan.mp3
-│   ├── desktop.ini
 │   ├── Forever Young.mp3
 │   ├── Sound Like A Melody.mp3
 │   ├── We Can Dance.mp3
@@ -259,7 +247,6 @@ Music
 │   ├── Crimenes Perfectos.mp3
 │   ├── Crímenes Perfectos (Vivo).mp3
 │   ├── Desconfio.mp3
-│   ├── desktop.ini
 │   ├── El Día Que Me Quieras.mp3
 │   ├── El Salmón.mp3
 │   ├── Flaca.mp3
@@ -270,6 +257,31 @@ Music
 │   └── Tuyo Siempre.mp3
 ├── An Endless Sporadic
 │   └── Impulse.mp3
+├── Angelo Badalamenti
+│   ├── Audrey.mp3
+│   ├── Audrey's Prayer.mp3
+│   ├── Barbershop.mp3
+│   ├── Blue Frank.mp3
+│   ├── Cop Beat.mp3
+│   ├── Dark Mood Woods _ The Red Room.mp3
+│   ├── Drug Deal Blues.mp3
+│   ├── Half Heart.mp3
+│   ├── Harold's Theme.mp3
+│   ├── Hayward Boogie.mp3
+│   ├── High School Swing.mp3
+│   ├── Hook Rug Dance.mp3
+│   ├── I'm Hurt Bad.mp3
+│   ├── Josie And Truman.mp3
+│   ├── Just You.mp3
+│   ├── Laura's Dark Boogie.mp3
+│   ├── Love Theme Farewell.mp3
+│   ├── Love Theme Intro.mp3
+│   ├── New Shoes.mp3
+│   ├── Night Bells.mp3
+│   ├── Packards' Vibration.mp3
+│   ├── Shelly.mp3
+│   ├── Untitled Track #1.mp3
+│   └── Untitled Track #2.mp3
 ├── Angus and Julia Ston
 │   └── Passionfruit.mp3
 ├── Anita Ward
@@ -287,7 +299,6 @@ Music
 ├── Arax
 │   ├── Baleni.mp3
 │   ├── Chinar Es.mp3
-│   ├── desktop.ini
 │   ├── Dzmer.mp3
 │   ├── Erzeroumi Shoror.mp3
 │   ├── Es Gisher.mp3
@@ -380,7 +391,6 @@ Music
 ├── Asher Roth
 │   ├── Bad Day.mp3
 │   ├── Be By Myself.mp3
-│   ├── desktop.ini
 │   ├── G.r.i.n.d..mp3
 │   ├── I Love College (Explicit).mp3
 │   ├── I Love College.mp3
@@ -402,7 +412,6 @@ Music
 ├── Audacity of huge
 │   └── Simian Mobile Disco.mp3
 ├── Audio Slave
-│   ├── desktop.ini
 │   └── Like A Stone.mp3
 ├── Avicii
 │   ├── Hey Brother Chill Remix.mp3
@@ -477,7 +486,6 @@ Music
 │   ├── Amo.mp3
 │   ├── Celebra La Vida.mp3
 │   ├── Como Decirte Que Te Quiero.mp3
-│   ├── desktop.ini
 │   ├── Que Estas Buscando.mp3
 │   ├── Tdo Vuelve.mp3
 │   ├── Te Voy A Amar.mp3
@@ -486,7 +494,6 @@ Music
 │   └── Harlem Shake.mp3
 ├── Babasónicos
 │   ├── Deshoras.mp3
-│   ├── desktop.ini
 │   ├── El Loco.mp3
 │   ├── Irresponsables.mp3
 │   ├── Los Calientes.mp3
@@ -579,7 +586,6 @@ Music
 ├── B.B. King
 │   ├── Baby I Love You (With Bonnie Raitt).mp3
 │   ├── Bb King - Lucille.mp3
-│   ├── desktop.ini
 │   ├── Nobody Loves Me But My Mother.mp3
 │   └── The Thrill Is Gone.mp3
 ├── Beatles
@@ -592,7 +598,6 @@ Music
 │   ├── Blackbird (Remastered).mp3
 │   ├── Come Together.mp3
 │   ├── Come Together (Remastered).mp3
-│   ├── desktop.ini
 │   ├── Don't Let Me Down.mp3
 │   ├── Drive My Car (Remastered).mp3
 │   ├── Eleanor Rigby (Remastered).mp3
@@ -634,7 +639,6 @@ Music
 │   ├── Siempre Me Quedara.mp3
 │   └── Tu Silencio.mp3
 ├── Beck
-│   ├── desktop.ini
 │   └── Loser.mp3
 ├── Bedroom
 │   └── In My Head.mp3
@@ -693,7 +697,6 @@ Music
 ├── Berlin
 │   └── Take My Breath Away.mp3
 ├── Bersuit Vergarabat
-│   ├── desktop.ini
 │   ├── El Baile De La Gambeta.mp3
 │   ├── La Soledad.mp3
 │   ├── Madre Hay Una Sola.mp3
@@ -728,7 +731,6 @@ Music
 │   └── He Ain't Heavy.mp3
 ├── Billy Idol
 │   ├── Dancing With My Self.mp3
-│   ├── desktop.ini
 │   ├── Eyes Without A Face.mp3
 │   ├── Hot In The City.mp3
 │   ├── Rebel Yell.mp3
@@ -745,6 +747,9 @@ Music
 │   ├── The Lion Sleeps Tonight.mp3
 │   ├── The Piano Man.mp3
 │   └── We Didn't Start The Fire.mp3
+├── Billy Ocean
+│   ├── Caribbean Queen (No More Love on the Run).mp3
+│   └── Loverboy.mp3
 ├── Bizarrap
 │   ├── CA7RIEL_ Bzrp Music Sessions, Vol.14.mp3
 │   ├── DANI_ Bzrp Music Sessions, Vol. 24.mp3
@@ -754,7 +759,6 @@ Music
 │   └── Trueno_ Bzrp Music Sessions, Vol. 16.mp3
 ├── Black eye pease
 │   ├── Boom Boom Pow.mp3
-│   ├── desktop.ini
 │   ├── Don't Lie.mp3
 │   ├── Dont Stop The Party.mp3
 │   ├── Feel It.mp3
@@ -777,13 +781,11 @@ Music
 ├── Black Tables
 │   └── Other Lives.mp3
 ├── Blind Melon
-│   ├── desktop.ini
 │   └── No Rain.mp3
 ├── Blink 182
 │   ├── Adam's Song.mp3
 │   ├── All The Small Thing.mp3
 │   ├── Always.mp3
-│   ├── desktop.ini
 │   ├── First Date.mp3
 │   ├── I Miss You.mp3
 │   └── Walking On Broken Glass.mp3
@@ -792,7 +794,6 @@ Music
 │   └── For the damaged..mp3
 ├── Blondie
 │   ├── Call Me.mp3
-│   ├── desktop.ini
 │   ├── Dreaming.mp3
 │   ├── Heart Of Glass.mp3
 │   ├── Maria.mp3
@@ -800,7 +801,6 @@ Music
 │   ├── Rapture.mp3
 │   └── The Tide Is High.mp3
 ├── Blues Brothers
-│   ├── desktop.ini
 │   ├── Everybody Needs Somebody To Love.mp3
 │   ├── Ghost Rider In The Sky.mp3
 │   ├── Gimme Some Lovin.mp3
@@ -808,7 +808,6 @@ Music
 │   ├── Peter Gunn Theme.mp3
 │   └── Sweet Home Chicago.mp3
 ├── Blur
-│   ├── desktop.ini
 │   └── Song2.mp3
 ├── Bobby Caldwell
 │   └── What You Won't Do for Love.mp3
@@ -816,7 +815,6 @@ Music
 │   ├── Alalala Long.mp3
 │   ├── Buffalo Soldier.mp3
 │   ├── Could You Be Loved.mp3
-│   ├── desktop.ini
 │   ├── Dont Worry Be Happy.mp3
 │   ├── Every Breath You Take.mp3
 │   ├── Iron Lion Zion.mp3
@@ -832,7 +830,6 @@ Music
 │   ├── Red Red Wine.mp3
 │   └── War No More Trouble.mp3
 ├── Bob Seger
-│   ├── desktop.ini
 │   └── Old Time Rock And Roll.mp3
 ├── Bob Sinclar
 │   ├── Love Generation.mp3
@@ -845,11 +842,9 @@ Music
 │   ├── El Alma y El Cuerpo.mp3
 │   └── Somos Dos.mp3
 ├── Boney M
-│   ├── desktop.ini
 │   └── My Cherie Amor.mp3
 ├── Bon Jovi
 │   ├── Always.mp3
-│   ├── desktop.ini
 │   ├── I'll Be There For You.mp3
 │   ├── It's My Life.mp3
 │   ├── Livin On A Prayer.mp3
@@ -863,7 +858,6 @@ Music
 │   ├── Decisions.mp3
 │   └── Unicorn Zombie Apocalypse.mp3
 ├── Bossa Nova
-│   ├── desktop.ini
 │   └── Fool To Cry.mp3
 ├── Boulevard
 │   └── Points Of View.mp3
@@ -883,7 +877,6 @@ Music
 ├── Brian may
 │   └── To Much Love Will Kill You.mp3
 ├── Britney spears
-│   ├── desktop.ini
 │   ├── Hit Me Baby One More Time.mp3
 │   ├── Hold It Against Me.mp3
 │   ├── I Love Rock And Roll.mp3
@@ -893,12 +886,10 @@ Music
 ├── Bronski Beat
 │   └── Small Town Boy.mp3
 ├── Bruce Hornsby
-│   ├── desktop.ini
 │   └── The Way It Is.mp3
 ├── Bruno Mars
 │   ├── 24K Magic.mp3
 │   ├── Billionaire.mp3
-│   ├── desktop.ini
 │   ├── Granade.mp3
 │   ├── It Will Rain.mp3
 │   ├── Just The Way You Are.mp3
@@ -1082,7 +1073,6 @@ Music
 │   ├── Cacho Castaña.mp3
 │   ├── Cafe La Humedad.mp3
 │   ├── Cara De Tramposo.mp3
-│   ├── desktop.ini
 │   ├── El Matador.mp3
 │   ├── Garganta Con Arena.mp3
 │   ├── La Gata Varela.mp3
@@ -1103,7 +1093,6 @@ Music
 ├── Calle 13
 │   ├── Adentro.mp3
 │   ├── Atrevete-Te.mp3
-│   ├── desktop.ini
 │   ├── El Baile De Los Pobres.mp3
 │   ├── Electro Movimiento .mp3
 │   ├── Fiesta De Locos.mp3
@@ -1116,7 +1105,6 @@ Music
 ├── Callejeros
 │   ├── 9 De Julio.mp3
 │   ├── Creo.mp3
-│   ├── desktop.ini
 │   ├── Si Me Cansé.mp3
 │   └── Una Nueva Noche Fria.mp3
 ├── Calvin Harris
@@ -1137,12 +1125,10 @@ Music
 │   ├── Le Tour De France En Diligence.mp3
 │   └── Suis-Moi.mp3
 ├── Camouflage
-│   ├── desktop.ini
 │   ├── Love Is A Shield.mp3
 │   └── The Great Commandment.mp3
 ├── Canned Heat
 │   ├── Boogie Music.mp3
-│   ├── desktop.ini
 │   ├── Going Up The Country.mp3
 │   ├── John Lee Hooker Boogie.mp3
 │   ├── Oh Baby.mp3
@@ -1165,6 +1151,8 @@ Music
 │   └── Tenebrae Factae Sunt.mp3
 ├── Carly Rae Jepsen
 │   └── Call Me Maybe.mp3
+├── Carly Simon
+│   └── Coming Around Again.mp3
 ├── Carmen Sarahi
 │   └── Libre Soy (Latin America Spanish).mp3
 ├── Carpenters
@@ -1172,9 +1160,7 @@ Music
 ├── Carrilio
 │   └── Samba De Janeiro.mp3
 ├── Cartoons
-│   └── desktop.ini
 ├── Cassius
-│   ├── desktop.ini
 │   └── Toop Toop.mp3
 ├── CASTIELO
 │   └── Party Up.mp3
@@ -1185,7 +1171,6 @@ Music
 │   └── Wild World.mp3
 ├── Catupecu Machu
 │   ├── A Veces Vuelvo.mp3
-│   ├── desktop.ini
 │   ├── Magia Veneno..mp3
 │   └── Seguir Viviendo Sin Tu Amor.mp3
 ├── Cee-Lo Green
@@ -1249,7 +1234,6 @@ Music
 ├── Chayanne
 │   ├── Choka Choka.flac
 │   ├── Choka Choka.mp3
-│   ├── desktop.ini
 │   ├── Lo Dejaria Todo.mp3
 │   ├── Mira Lo Que Has Hecho.mp3
 │   ├── Provocame.mp3
@@ -1272,7 +1256,6 @@ Music
 │   ├── Gold.lrc
 │   └── Gold.mp3
 ├── Chic
-│   ├── desktop.ini
 │   └── Good Times.mp3
 ├── Chicago
 │   ├── Glory Of Love.mp3
@@ -1301,12 +1284,10 @@ Music
 ├── Chris Isaak
 │   └── Wicked Game.mp3
 ├── Chris Medina
-│   ├── desktop.ini
 │   └── What Are Words.mp3
 ├── Chris rea
 │   └── On The Beach.mp3
 ├── Christian Castro
-│   ├── desktop.ini
 │   └── Mi Querido Amor [my Cherie Amour].mp3
 ├── Christina Aguilera
 │   ├── Lady Marmalade.mp3
@@ -1345,8 +1326,7 @@ Music
 │   ├── Time After Time.mp3
 │   └── Trrue Colours.mp3
 ├── Cirque du Soleil
-│   ├── Alegria.mp3
-│   └── desktop.ini
+│   └── Alegria.mp3
 ├── Clasical
 │   ├── Antonio Vivaldi - The Four Seasons.mp3
 │   ├── Bach- Toccata And Fugue In D Minor.mp3
@@ -1378,7 +1358,6 @@ Music
 │   ├── A Sky Full Of Stars.mp3
 │   ├── Bitter Sweet Symphony.mp3
 │   ├── Clocks.mp3
-│   ├── desktop.ini
 │   ├── Don´t Panic.mp3
 │   ├── Every Tear Drop Is A Waterfall.mp3
 │   ├── Fix You.mp3
@@ -1433,7 +1412,6 @@ Music
 │   └── Paseo Sideral.mp3
 ├── Coti
 │   ├── Antes Que Ver El Sol.mp3
-│   ├── desktop.ini
 │   ├── Dónde Están Corazón.mp3
 │   └── Nada Fue Un Error.mp3
 ├── Counting crows
@@ -1450,7 +1428,6 @@ Music
 │   │   ├── Could You Be Loved.mp3
 │   │   ├── Crazy Little Thing Called Love.mp3
 │   │   ├── Dani California.mp3
-│   │   ├── desktop.ini
 │   │   ├── Dododo, Dadada.mp3
 │   │   ├── Don't Cry.mp3
 │   │   ├── Don't Stop 'til You Get Enough.mp3
@@ -1500,7 +1477,6 @@ Music
 │   │   ├── Welcome To The Jungle.mp3
 │   │   ├── West End Girls.mp3
 │   │   └── You're My Best Friend.mp3
-│   ├── desktop.ini
 │   └── Dubstep Covers
 │       ├── Drinking From The Bottle Remix.mp3
 │       ├── Du.mp3
@@ -1522,13 +1498,11 @@ Music
 │   ├── Last Christmas.mp3
 │   └── Popcorn.mp3
 ├── Cream
-│   ├── desktop.ini
 │   ├── Sunshine Of Your Love.mp3
 │   └── White Room.mp3
 ├── Creedence Clearwater Revival
 │   ├── Bad Moon Rising.mp3
 │   ├── Cottonfields.mp3
-│   ├── desktop.ini
 │   ├── Fortunate Son.mp3
 │   ├── Green River.mp3
 │   ├── Have You Ever Seen The Rain.mp3
@@ -1562,7 +1536,6 @@ Music
 │   ├── Traum.mp3
 │   └── Whatever.mp3
 ├── Crowded House
-│   ├── desktop.ini
 │   └── Hey Now, Hey Now.mp3
 ├── Cuarteto de nos
 │   ├── Al Cielo No.mp3
@@ -1573,7 +1546,6 @@ Music
 │   ├── Cristo Te Odia.mp3
 │   ├── Cuando Sea Grande.mp3
 │   ├── Cucos S R L.mp3
-│   ├── desktop.ini
 │   ├── El Balcon De Paul.mp3
 │   ├── El Hijo De Hernandez.mp3
 │   ├── El Lado Soleado De La Calle.mp3
@@ -1608,7 +1580,6 @@ Music
 │   ├── Karma Chamaleon.mp3
 │   └── Miss Me Blind.mp3
 ├── Cutting Crew
-│   ├── desktop.ini
 │   └── Died In Your Arms.mp3
 ├── Daddy Yankee
 │   ├── Adictiva.mp3
@@ -1664,7 +1635,6 @@ Music
 │   └── No Importa La Distancia.mp3
 ├── David Bowie
 │   ├── Changes.mp3
-│   ├── desktop.ini
 │   ├── Heroes.mp3
 │   ├── Let's Dance.mp3
 │   └── Thursday's Child.mp3
@@ -1678,7 +1648,6 @@ Music
 │   ├── Baby When The Light.mp3
 │   ├── Club Can't Handle Me.mp3
 │   ├── Dangerous.mp3
-│   ├── desktop.ini
 │   ├── Hey Mama.mp3
 │   ├── Higher.mp3
 │   ├── I Can Only Imagine.mp3
@@ -1732,13 +1701,10 @@ Music
 │   └── Only In My Dreams.mp3
 ├── Deep Pourple
 │   ├── Burn.mp3
-│   ├── desktop.ini
 │   ├── Highway Star.mp3
 │   └── Smoke On The Water.mp3
 ├── Deep Purple
-│   └── desktop.ini
 ├── Def Leppard
-│   ├── desktop.ini
 │   ├── Hysteria.mp3
 │   ├── Love Bites.mp3
 │   ├── Photograph.mp3
@@ -1761,7 +1727,6 @@ Music
 │   └── Yee.mp3
 ├── Depeche mode
 │   ├── Amadeus.mp3
-│   ├── desktop.ini
 │   ├── Enjoy The Silence.mp3
 │   ├── Free.mp3
 │   ├── Higher Love.mp3
@@ -1777,7 +1742,6 @@ Music
 │   └── Blank.mp3
 ├── Desireless
 │   └── Voyage Voyage.mp3
-├── desktop.ini
 ├── Dev
 │   ├── Bass Down Low.mp3
 │   ├── Booty Bounce.mp3
@@ -1791,11 +1755,9 @@ Music
 │   ├── So Happy Together.mp3
 │   └── Titanic Techno Remix.mp3
 ├── Diana King
-│   ├── desktop.ini
 │   ├── Forever And Ever.mp3
 │   └── I Say A Little Prayer For You.mp3
 ├── Dido
-│   ├── desktop.ini
 │   ├── Here With Me (Radio Edit).mp3
 │   ├── Honestly Okay.mp3
 │   ├── Stoned.mp3
@@ -1815,7 +1777,6 @@ Music
 ├── Diego Torres
 │   ├── Bendito.mp3
 │   ├── Cantar Hasta Morir.mp3
-│   ├── desktop.ini
 │   ├── Esto Es Lo Que Soy.mp3
 │   ├── Guapa.mp3
 │   ├── Hasta Cuando.mp3
@@ -1840,7 +1801,6 @@ Music
 │   ├── Boy Oh Boy (Original Mix).mp3
 │   └── Express Yourself.mp3
 ├── Dire strait
-│   ├── desktop.ini
 │   ├── Money For Nothing.mp3
 │   ├── OneNote Table Of Contents.onetoc2
 │   ├── Sultans Of Swing.mp3
@@ -2244,8 +2204,7 @@ Music
 │   │       │   ├── 01. A - Robot Rock.mp3
 │   │       │   ├── 02. B1 - Robot Rock (Maximum Overdrive Remix).mp3
 │   │       │   ├── 03. B2 - Robot Rock (Soulwax Remix).mp3
-│   │       │   ├── 04. B3 - Rockapella.mp3
-│   │       │   └── desktop.ini
+│   │       │   └── 04. B3 - Rockapella.mp3
 │   │       ├── 2005 - Technologic (CDS) - (320 kbps)
 │   │       │   ├── 01. Technologic.mp3
 │   │       │   ├── 02. Technologic (Vitalic Remix).mp3
@@ -2270,10 +2229,9 @@ Music
 │   │       │   └── 02. Get Lucky (Radio Edit).mp3
 │   │       ├── 2013 - Get Lucky (Daft Punk Remix) (DS) - (320 kbps)
 │   │       │   └── 01. Get Lucky (Daft Punk Remix).mp3
-│   │       ├── 2013 - Instant Crush (CDS Promo) - (320 kbps)
-│   │       │   ├── 01. Instant Crush (Radio Edit).mp3
-│   │       │   └── 02. Instant Crush (Album Version).mp3
-│   │       └── desktop.ini
+│   │       └── 2013 - Instant Crush (CDS Promo) - (320 kbps)
+│   │           ├── 01. Instant Crush (Radio Edit).mp3
+│   │           └── 02. Instant Crush (Album Version).mp3
 │   ├── Luis Alberto Spinetta
 │   │   ├── 1969 - Almendra
 │   │   │   ├── 01 - Almendra - Tema de Pototo.mp3
@@ -2295,10 +2253,8 @@ Music
 │   │   │   ├── 17 - Almendra - Mestizo.mp3
 │   │   │   ├── 18 - Almendra - Toma el tren hacia el sur.mp3
 │   │   │   ├── 19 - Almendra - Jingle.mp3
-│   │   │   ├── 20 - Almendra - Rutas argentinas.mp3
-│   │   │   └── desktop.ini
+│   │   │   └── 20 - Almendra - Rutas argentinas.mp3
 │   │   ├── 1970 - Almendra II
-│   │   │   ├── desktop.ini
 │   │   │   ├── Disco 1
 │   │   │   │   ├── 01 - Almendra - Toma el tren hacia el sur.mp3
 │   │   │   │   ├── 02 - Almendra - Jingle.mp3
@@ -2309,8 +2265,7 @@ Music
 │   │   │   │   ├── 07 - Almendra - Aire de amor.mp3
 │   │   │   │   ├── 08 - Almendra - Mestizo.mp3
 │   │   │   │   ├── 09 - Almendra - Agnus dei.mp3
-│   │   │   │   ├── 10 - Almendra - Para ir.mp3
-│   │   │   │   └── desktop.ini
+│   │   │   │   └── 10 - Almendra - Para ir.mp3
 │   │   │   └── Disco 2
 │   │   │       ├── 01 - Almendra - Parvas.mp3
 │   │   │       ├── 02 - Almendra - Cometa azul.mp3
@@ -2384,15 +2339,13 @@ Music
 │   │   │   ├── 09 - Elementales leches.mp3
 │   │   │   ├── 10 - Estado de coma.mp3
 │   │   │   ├── 11 - Oso del sueño.mp3
-│   │   │   ├── 12 - Viejos ratones del tiempo.mp3
-│   │   │   └── desktop.ini
+│   │   │   └── 12 - Viejos ratones del tiempo.mp3
 │   │   ├── 1975 - Durazno Sangrando
 │   │   │   ├── 01. Encadenado al Anima.mp3
 │   │   │   ├── 02. Durazno Sangrando.mp3
 │   │   │   ├── 03. Pleamar de Aguilas.mp3
 │   │   │   ├── 04. En una Lejana Playa del Animus.mp3
-│   │   │   ├── 05. Dios de Adolescencia.mp3
-│   │   │   └── desktop.ini
+│   │   │   └── 05. Dios de Adolescencia.mp3
 │   │   ├── 1976 - El Jardin De Los Presentes
 │   │   │   ├── 01 El anillo del capitan Beto.mp3
 │   │   │   ├── 02 Los libros de la buena memoria.mp3
@@ -2401,8 +2354,7 @@ Music
 │   │   │   ├── 05 Ruido de magia.mp3
 │   │   │   ├── 06 Doscientos años.mp3
 │   │   │   ├── 07 Niño condenado.mp3
-│   │   │   ├── 08 Las golondrinas de Plaza de Mayo.mp3
-│   │   │   └── desktop.ini
+│   │   │   └── 08 Las golondrinas de Plaza de Mayo.mp3
 │   │   ├── 1976 - Lo mejor de Pescado Rabioso
 │   │   │   ├── 01 - Post crucifixion.mp3
 │   │   │   ├── 02 - Nena boba.mp3
@@ -2414,8 +2366,7 @@ Music
 │   │   │   ├── 08 - Cementerio club.mp3
 │   │   │   ├── 09 - Credulidad.mp3
 │   │   │   ├── 10 - Hola dulce viento (Mañana o pasado).mp3
-│   │   │   ├── 11 - Rock de la selva madre (Madre selva).mp3
-│   │   │   └── desktop.ini
+│   │   │   └── 11 - Rock de la selva madre (Madre selva).mp3
 │   │   ├── 1977 - A 18' del sol
 │   │   │   ├── 01 - Viento del azur.mp3
 │   │   │   ├── 02 - Telgopor.mp3
@@ -2455,8 +2406,7 @@ Music
 │   │   │   ├── 10 - Hilando Fino.mp3
 │   │   │   ├── 11 - Muchacha (Ojos De Papel).mp3
 │   │   │   ├── 12 - Hermano Perro.mp3
-│   │   │   ├── 13 - Rutas Argentinas.mp3
-│   │   │   └── desktop.ini
+│   │   │   └── 13 - Rutas Argentinas.mp3
 │   │   ├── 1980 - Only love can sustain
 │   │   │   ├── 01 - ¿A quién culpar.mp3
 │   │   │   ├── 02 - Sólo el amor puede sostener.mp3
@@ -2493,8 +2443,7 @@ Music
 │   │   │       ├── 06 - Contra todos los males de este mundo.mp3
 │   │   │       ├── 07 - Un viento celeste.mp3
 │   │   │       ├── 09 - Influjo estelar.mp3
-│   │   │       ├── 10 - Nunca me oíste en tiempo.mp3
-│   │   │       └── desktop.ini
+│   │   │       └── 10 - Nunca me oíste en tiempo.mp3
 │   │   ├── 1983 - Bajo Belgrano
 │   │   │   └── 1983 - Bajo Belgrano
 │   │   │       ├── 01 - Canción de Bajo Belgrano.mp3
@@ -2671,7 +2620,6 @@ Music
 │   │   │   ├── 10 Cine de Atras.mp3
 │   │   │   ├── 11 La verdad de las Grullas.mp3
 │   │   │   ├── 12 Bahia Final (Remake).mp3
-│   │   │   ├── desktop.ini
 │   │   │   └── Leer!.txt
 │   │   ├── 2002 - Obras En Vivo
 │   │   │   ├── 01 No Te Busques Ya En El Umbral.mp3
@@ -2735,15 +2683,14 @@ Music
 │   │   │   ├── 11 Despierta En La Brisa.mp3
 │   │   │   ├── 12 Para Soñar.mp3
 │   │   │   └── Leer!.txt
-│   │   ├── 2020 - Ya no mires atras
-│   │   │   ├── Agua de Río.mp3
-│   │   │   ├── Diadema.mp3
-│   │   │   ├── Luces y Sombras.mp3
-│   │   │   ├── Merecer.mp3
-│   │   │   ├── Nueva Luna, Mundo Arjo.mp3
-│   │   │   ├── Veinte Ciudades.mp3
-│   │   │   └── Ya No Mires Atrás.mp3
-│   │   └── desktop.ini
+│   │   └── 2020 - Ya no mires atras
+│   │       ├── Agua de Río.mp3
+│   │       ├── Diadema.mp3
+│   │       ├── Luces y Sombras.mp3
+│   │       ├── Merecer.mp3
+│   │       ├── Nueva Luna, Mundo Arjo.mp3
+│   │       ├── Veinte Ciudades.mp3
+│   │       └── Ya No Mires Atrás.mp3
 │   └── Pink Floyd
 │       ├── Pink Floyd - A Momentary Lapse of Reason
 │       │   ├── A New Machine, Pt. 1.mp3
@@ -3108,7 +3055,6 @@ Music
 │   ├── Flying Spaghetti Monster.mp3
 │   └── Tetris.mp3
 ├── Dolly Parton
-│   ├── desktop.ini
 │   └── Walking On Sunshine.mp3
 ├── Dolores O'Riordan
 │   └── Linger.mp3
@@ -3135,7 +3081,6 @@ Music
 ├── Drake
 │   └── Passionfruit.mp3
 ├── Dr. Dre
-│   ├── desktop.ini
 │   ├── Still D.r.e. (feat. Snoop Dogg).mp3
 │   └── The Next Episode.mp3
 ├── Driver
@@ -3151,7 +3096,6 @@ Music
 │   ├── Come Undone.mp3
 │   ├── Girls On Film.mp3
 │   ├── Hungry Like The Wolf.mp3
-│   ├── Hungry Like The Wolf (Us Album Remix).mp3
 │   ├── Ordinary World.mp3
 │   ├── Relax, Don't Do It.mp3
 │   ├── Rio.mp3
@@ -3159,16 +3103,13 @@ Music
 ├── Dusty springfield
 │   └── Something In Your Eyes.mp3
 ├── Eagles
-│   ├── desktop.ini
 │   └── Hotel California.mp3
 ├── Earth Wind And Fire
 │   ├── Boogie Wonderland.mp3
-│   ├── desktop.ini
 │   └── September.mp3
 ├── Echosmith
 │   └── Cool Kids.mp3
 ├── Eddie Vedder
-│   ├── desktop.ini
 │   ├── End Of The Road.mp3
 │   ├── Far Behind.mp3
 │   ├── Guaranteed.mp3
@@ -3399,7 +3340,6 @@ Music
 │   └── Violencia.mp3
 ├── ELO
 │   ├── Can't Get It Out Of My Head.mp3
-│   ├── desktop.ini
 │   ├── Last Train To London.mp3
 │   └── Shine A Little Love.mp3
 ├── Elton John
@@ -3421,7 +3361,6 @@ Music
 │   ├── All Shook Up.mp3
 │   ├── Burning Love.mp3
 │   ├── Can't Help Falling In Love.mp3
-│   ├── desktop.ini
 │   ├── Heartbreak Hotel.mp3
 │   ├── Hound Dog.mp3
 │   ├── Houndog.mp3
@@ -3436,7 +3375,6 @@ Music
 │   ├── Ass Like That.mp3
 │   ├── Beautiful.mp3
 │   ├── Crack A Bottle.mp3
-│   ├── desktop.ini
 │   ├── Eminem.mp3
 │   ├── Eminem vs Ac Dc - Remix..mp3
 │   ├── Headlights.mp3
@@ -3483,7 +3421,6 @@ Music
 │   └── Tu Cárcel.mp3
 ├── Enrique iglesias
 │   ├── Bailando.mp3
-│   ├── desktop.ini
 │   ├── Duele El Corazon.mp3
 │   ├── El Perdon.mp3
 │   ├── Hero (Esp).mp3
@@ -3492,7 +3429,6 @@ Music
 │   ├── Naked.mp3
 │   └── Tonight (I'm Fkin' You).mp3
 ├── Enya
-│   ├── desktop.ini
 │   ├── Only Time.mp3
 │   └── Orinoco Flow.mp3
 ├── Epic Raps
@@ -3508,7 +3444,6 @@ Music
 │   └── Hungry Eyes.mp3
 ├── Eric Clapton
 │   ├── Cocaine.mp3
-│   ├── desktop.ini
 │   ├── Layla.mp3
 │   ├── Taers In Heaven.mp3
 │   └── Wonderful Tonight.mp3
@@ -3529,7 +3464,6 @@ Music
 ├── Eros Ramazzotti
 │   └── En Mi Corazon Viviras.mp3
 ├── Escuela de rock
-│   ├── desktop.ini
 │   └── Zach's Song.mp3
 ├── Estelares
 │   ├── Aire.mp3
@@ -3542,7 +3476,6 @@ Music
 │   ├── Bossanova.mp3
 │   ├── Cacho A Cacho.mp3
 │   ├── Como Camaron.mp3
-│   ├── desktop.ini
 │   ├── El De En Medio De Los Chichos.mp3
 │   ├── Estopa.mp3
 │   ├── La Raja De Tu Falda.mp3
@@ -3562,7 +3495,6 @@ Music
 │   ├── Life Is Life Ana Mar.mp3
 │   └── The Final Countdown.mp3
 ├── Eurythmics
-│   ├── desktop.ini
 │   ├── Here Comes The Rain Again.mp3
 │   ├── Sweet Dreams.mp3
 │   ├── There Must Be An Angel.mp3
@@ -3570,7 +3502,6 @@ Music
 ├── Evanescence
 │   ├── Anything For You.mp3
 │   ├── Bring Me To Life.mp3
-│   ├── desktop.ini
 │   ├── My Heart Is Broken.mp3
 │   ├── My Immortal.mp3
 │   ├── The Change.mp3
@@ -3579,7 +3510,6 @@ Music
 │   └── Friend.mp3
 ├── Example
 │   ├── Changed The Way You Kiss Me.mp3
-│   ├── desktop.ini
 │   ├── Kickstarts.mp3
 │   ├── Last Ones Standing (Doctor P Remix).mp3
 │   ├── Last Ones Standing.mp3
@@ -3619,7 +3549,6 @@ Music
 ├── Family Of The Year
 │   └── Hero.mp3
 ├── Far East Movement
-│   ├── desktop.ini
 │   ├── Like A G6.mp3
 │   ├── Live My Life.mp3
 │   └── Live My Life Remix.mp3
@@ -3660,7 +3589,6 @@ Music
 │   ├── Cable A Tierra.mp3
 │   ├── Crimenes Perfectos.mp3
 │   ├── Dar Es Dar.mp3
-│   ├── desktop.ini
 │   ├── El Amor Después Del Amor.mp3
 │   ├── Mariposa Tecnicolor.mp3
 │   ├── Recuerdos.mp3
@@ -3673,7 +3601,6 @@ Music
 │   └── What A Feeling.mp3
 ├── Fleetwood mac
 │   ├── Black Magic Woman.mp3
-│   ├── desktop.ini
 │   ├── Don't Stop (Remastered).mp3
 │   ├── Dreams.mp3
 │   ├── Dreams (Remastered).mp3
@@ -3724,7 +3651,6 @@ Music
 ├── FMK
 │   └── Parte de Mi.mp3
 ├── Foo Fighters
-│   ├── desktop.ini
 │   ├── Fontova
 │   │   ├── A Persar De Todo Bien.mp3
 │   │   ├── Los Hermanos Pinzones.mp3
@@ -3736,7 +3662,6 @@ Music
 │   └── Yellow Lemon Tree.mp3
 ├── Foreigner
 │   ├── Cold As Ice.mp3
-│   ├── desktop.ini
 │   ├── I Want To Know What Love Is.mp3
 │   ├── Say You Will.mp3
 │   └── Waiting For A Girl Like You.mp3
@@ -3767,7 +3692,6 @@ Music
 ├── Frank Sinatra
 │   ├── Blue Moon.mp3
 │   ├── Come Fly With Me.mp3
-│   ├── desktop.ini
 │   ├── Fly Me To The Moon (In Other Words).mp3
 │   ├── I'm Gonna Live Till I Die.mp3
 │   ├── I've Got My Love To Keep Me Warm.mp3
@@ -4087,7 +4011,6 @@ Music
 │   └── Rock And Roll Part 2.mp3
 ├── Gary Moore
 │   ├── All Your Love.mp3
-│   ├── desktop.ini
 │   ├── Midnight Blues.mp3
 │   ├── Parisienne Walkways.mp3
 │   └── Still Got The Blues.mp3
@@ -4104,7 +4027,6 @@ Music
 │   ├── Budapest.mp3
 │   └── Listen to the Man.mp3
 ├── George Harrison
-│   ├── desktop.ini
 │   ├── I Ve Got My Mind Set On You.mp3
 │   ├── My Sweet Lord.mp3
 │   └── While My Guitar Gently Weeps.mp3
@@ -4277,7 +4199,6 @@ Music
 │   ├── Goldberg Variations, BWV 988  XXX. Variation 29 -1981.mp3
 │   └── Goldberg Variations, BWV 988_ XXX. Variation 29 -1981.mp3
 ├── Glenn Miller
-│   ├── desktop.ini
 │   ├── In The Mood.mp3
 │   └── Moonlight Serenade.mp3
 ├── Global DJ
@@ -4292,11 +4213,9 @@ Music
 │   └── Casin.mp3
 ├── Gnarls Barkley
 │   ├── Crazy.mp3
-│   ├── Crazy Slow Version.mp3
-│   └── desktop.ini
+│   └── Crazy Slow Version.mp3
 ├── Goldfingers
-│   ├── 99 Red Balloons.mp3
-│   └── desktop.ini
+│   └── 99 Red Balloons.mp3
 ├── Gorillaz
 │   ├── 01 Intro  I Switched My Robot Off.mp3
 │   ├── 01 Intro_ I Switched My Robot Off.mp3
@@ -4359,7 +4278,6 @@ Music
 │   ├── DARE.mp3
 │   ├── DARE (Soulwax Remix).mp3
 │   ├── Demon Days.mp3
-│   ├── desktop.ini
 │   ├── Detroit.mp3
 │   ├── Dirty Harry.mp3
 │   ├── Dirty Harry (Schtung Chinese New Year Remix).mp3
@@ -4542,11 +4460,9 @@ Music
 │   ├── Basket Case.mp3
 │   ├── Boulebard Of Broken Dreams.mp3
 │   ├── Boulevard Of Broken Songs.mp3
-│   ├── desktop.ini
 │   ├── Give Me Novacaine.mp3
 │   ├── Holyday.mp3
 │   ├── Jesus Of Suburbia.mp3
-│   ├── OneNote Table Of Contents.onetoc2
 │   ├── She's A Rebel.mp3
 │   ├── Time Of Your Life.mp3
 │   ├── Wake Me Up When September Ends.mp3
@@ -4557,7 +4473,6 @@ Music
 │   └── Reyes De La Noche.mp3
 ├── Guns n' Roses
 │   ├── Civil War.mp3
-│   ├── desktop.ini
 │   ├── Dont Cry.mp3
 │   ├── Knocking On Heaven's Door.mp3
 │   ├── Live And Let Die.mp3
@@ -4569,7 +4484,6 @@ Music
 │   ├── Sweet Child Of Mine.mp3
 │   └── Welcome To The Jungle.mp3
 ├── Gunther
-│   ├── desktop.ini
 │   └── Ding Dong Song.mp3
 ├── Gustav Holst
 │   ├── Jupiter.mp3
@@ -4600,14 +4514,12 @@ Music
 │   ├── Stereo Hearts.mp3
 │   └── The Fighter.mp3
 ├── Gyptian
-│   ├── desktop.ini
 │   └── Hold You.mp3
 ├── Haddaway
 │   └── What Is Love.mp3
 ├── Haley Reinhart
 │   └── Can't Help Falling In Love With You.mp3
 ├── Hall & Oates
-│   ├── desktop.ini
 │   ├── Everytime You Go Away.mp3
 │   ├── I Can't Go For That.mp3
 │   ├── I'll Be Around.mp3
@@ -4618,7 +4530,6 @@ Music
 │   └── Private Eyes.mp3
 ├── Hammer
 │   ├── Can't Touch This.mp3
-│   ├── desktop.ini
 │   └── I Like Big Buts.mp3
 ├── Hans Zimmer
 │   ├── Alex On The Spot.mp3
@@ -4737,14 +4648,12 @@ Music
 ├── House of Pain
 │   └── Jump Arround.mp3
 ├── Howlin' Wolf
-│   ├── desktop.ini
 │   ├── Highway 49.mp3
 │   ├── Smokestack Lightnin'.mp3
 │   └── Spoonful.mp3
 ├── Hozier
 │   └── Take Me To Church.mp3
 ├── Huey lewis and the news
-│   ├── desktop.ini
 │   ├── Johnny Be Good.mp3
 │   ├── OneNote Table Of Contents.onetoc2
 │   ├── Stuck With You.mp3
@@ -4791,7 +4700,6 @@ Music
 │   └── Waltz 2.mp3
 ├── Intoxicados
 │   ├── Casi Sin Pensar.mp3
-│   ├── desktop.ini
 │   ├── Está Saliendo El Sol.mp3
 │   ├── Fuego.mp3
 │   ├── Fuiste Lo Mejor.mp3
@@ -4800,7 +4708,6 @@ Music
 ├── INXS
 │   ├── Beatiful Girl.mp3
 │   ├── By My Side.mp3
-│   ├── desktop.ini
 │   ├── Disappear.mp3
 │   ├── Mystify.mp3
 │   ├── Never Tear Us Apart.mp3
@@ -4818,7 +4725,6 @@ Music
 │   ├── Better Together.mp3
 │   ├── Breakdown.mp3
 │   ├── Constellations.mp3
-│   ├── desktop.ini
 │   ├── Do You Remember.mp3
 │   ├── Good People.flac
 │   ├── Good People.mp3
@@ -4945,7 +4851,6 @@ Music
 │   ├── Canned Heat.mp3
 │   ├── Cosmic Girl (Album Version).mp3
 │   ├── Cosmic Girl.mp3
-│   ├── desktop.ini
 │   ├── Love Foolosophy.mp3
 │   ├── Space Cowboy.mp3
 │   ├── Virtual Insanity.mp3
@@ -4953,7 +4858,6 @@ Music
 ├── Jarabe de palo
 │   ├── Agua.mp3
 │   ├── Depende.mp3
-│   ├── desktop.ini
 │   ├── De Vuelta Y Vuelta.mp3
 │   ├── La Flaca.mp3
 │   ├── La Quiero A Morir.mp3
@@ -4978,7 +4882,6 @@ Music
 │   ├── No Es Justo.mp3
 │   └── Safari.mp3
 ├── Jeff Beck
-│   ├── desktop.ini
 │   └── People Get Ready.mp3
 ├── Jennifer Jason Leigh
 │   └── Jim Jones At Botany Bay.mp3
@@ -5008,7 +4911,6 @@ Music
 ├── Jim Diamon
 │   └── I Should Have Known Bette.mp3
 ├── Jimmy cliff
-│   ├── desktop.ini
 │   ├── I Can See Clearly Now.mp3
 │   ├── Reagge Night.mp3
 │   ├── Rebel In Me.mp3
@@ -5096,7 +4998,6 @@ Music
 ├── John Lee Hooker
 │   ├── Boom Boom.mp3
 │   ├── Chill Out (Things Gonna Change).mp3
-│   ├── desktop.ini
 │   └── Shake It Baby.mp3
 ├── John Newman
 │   └── Love Me Again.mp3
@@ -5146,7 +5047,6 @@ Music
 │   └── Descontrolado.mp3
 ├── Juanes
 │   ├── A Dios Le Pido.mp3
-│   ├── desktop.ini
 │   ├── Es Por Ti.mp3
 │   ├── Fotografia.mp3
 │   ├── Gotas De Agua Dulce.mp3
@@ -5159,6 +5059,10 @@ Music
 │   └── Time For Letting Go.mp3
 ├── Juice Newton
 │   └── Angel Of The Morning.mp3
+├── Julee Cruise
+│   ├── Falling.mp3
+│   ├── Rockin' Back Inside My Heart.mp3
+│   └── The World Spins.mp3
 ├── Julian Lamadrid
 │   ├── Cuervo.mp3
 │   ├── Marimba.mp3
@@ -5207,7 +5111,6 @@ Music
 │   └── Dust In The Wind.mp3
 ├── Kanye West
 │   ├── Cant Tell Me Nothing.mp3
-│   ├── desktop.ini
 │   ├── Gold Digger Ft Jamie Foxx.mp3
 │   ├── Homecoming Ft Chris Martin.mp3
 │   └── Stronger.mp3
@@ -5266,7 +5169,6 @@ Music
 ├── Keha
 │   └── Tik Tok.mp3
 ├── Kenny G
-│   ├── desktop.ini
 │   ├── Unchained Melody.mp3
 │   └── When A Man Loves A Woman.mp3
 ├── Kesha
@@ -5295,7 +5197,6 @@ Music
 │   ├── Supersoaker.mp3
 │   └── Use Somebody.mp3
 ├── Kiss
-│   ├── desktop.ini
 │   ├── I Was Made For Loving You.mp3
 │   ├── Lick It Up.mp3
 │   ├── OneNote Table Of Contents.onetoc2
@@ -5336,7 +5237,6 @@ Music
 ├── Lady Gaga
 │   ├── Applause.mp3
 │   ├── Born This Way.mp3
-│   ├── desktop.ini
 │   ├── Judas.mp3
 │   ├── Just Dance.mp3
 │   ├── Marry The Night.mp3
@@ -5379,7 +5279,6 @@ Music
 │   ├── Calipso.mp3
 │   ├── Cerveza.mp3
 │   ├── Clasica Y Moderna.mp3
-│   ├── desktop.ini
 │   ├── El Sensei.mp3
 │   ├── Loco Por Volverla A Ver.mp3
 │   ├── Lo Mas Lindo.mp3
@@ -5394,7 +5293,6 @@ Music
 ├── La Vela Puerca
 │   ├── Burbujas.mp3
 │   ├── De Atar.mp3
-│   ├── desktop.ini
 │   ├── El Viejo.mp3
 │   ├── Llenos De Magia.mp3
 │   ├── Por La Ciudad.mp3
@@ -5409,7 +5307,6 @@ Music
 │   └── Just Like You.mp3
 ├── Led Zeppelin
 │   ├── All My Love.mp3
-│   ├── desktop.ini
 │   ├── Rock And Roll.mp3
 │   ├── Since I've Been Loving You.mp3
 │   ├── Stairway To Heaven.mp3
@@ -5458,7 +5355,6 @@ Music
 │   └── Hello.mp3
 ├── Leona Lewis
 │   ├── Bleeding Love.mp3
-│   ├── desktop.ini
 │   └── Sorry Seems To Be The Hardest Word.mp3
 ├── Leonard Bernstein
 │   └── La Traviata _ Act 1 _ Libiamo ne'lieti calici.mp3
@@ -5476,7 +5372,6 @@ Music
 │   ├── Solo Le Pido A Dios.mp3
 │   └── Tema De Los Mosquitos.mp3
 ├── León Gieco
-│   ├── desktop.ini
 │   ├── El Ángel De La Bicicleta.mp3
 │   ├── El Fantasma De Canterville.mp3
 │   ├── El Pais De La Libertad.mp3
@@ -5498,7 +5393,6 @@ Music
 │   ├── Carta Mal Leída.mp3
 │   ├── Centro De Atención Al Suicida.mp3
 │   ├── Consejos Para Padres.mp3
-│   ├── desktop.ini
 │   ├── Dilema De Amor (Cumbia Epistemológica).mp3
 │   ├── El Explicado.mp3
 │   ├── El Regreso Del Indio, Unen Canto Con Humor.mp3
@@ -5558,7 +5452,6 @@ Music
 │   ├──  Sex for Breakfast.mp3
 │   └── Sex for Breakfast.mp3
 ├── Lilly Allen
-│   ├── desktop.ini
 │   ├── Smile.mp3
 │   └── Somewhere Only We Know (Keane Cover).mp3
 ├── Lil Nas X
@@ -5571,8 +5464,7 @@ Music
 ├── Limahl
 │   └── Never Ending Story.mp3
 ├── Limp Bizkit
-│   ├── Behind Blue Eyes.mp3
-│   └── desktop.ini
+│   └── Behind Blue Eyes.mp3
 ├── L'Imperatrice
 │   ├── 1998.mp3
 │   ├── Agitations tropicales.mp3
@@ -5623,7 +5515,6 @@ Music
 │   └── Trouble.mp3
 ├── Linkin Park
 │   ├── A Place For My Head.mp3
-│   ├── desktop.ini
 │   ├── In The End.mp3
 │   ├── Linkin Park - Numb.mp3
 │   ├── OneNote Table Of Contents.onetoc2
@@ -5649,10 +5540,8 @@ Music
 ├── Lo Air
 │   └── Day And Night.mp3
 ├── Loco Mia
-│   ├── desktop.ini
 │   └── Locomia.mp3
 ├── Lorde
-│   ├── desktop.ini
 │   ├── Everybody Wants To Rule The World.mp3
 │   ├── Everybody Wants To Rule The World Remix.mp3
 │   ├── Hard Feelings_Loveless.mp3
@@ -5680,7 +5569,6 @@ Music
 │   └── Vos Sabes.mp3
 ├── Los Enanitos Verdes
 │   ├── Amigos.mp3
-│   ├── desktop.ini
 │   ├── Luz De Día.mp3
 │   └── Tu Carcel.mp3
 ├── Los Fabulosos Cadillacs
@@ -5712,7 +5600,6 @@ Music
 │   ├── Civilizacion.mp3
 │   ├── Como Ali.mp3
 │   ├── Desde Lejos No Se Ve.mp3
-│   ├── desktop.ini
 │   ├── El Farolito.mp3
 │   ├── Marado.mp3
 │   ├── Me Gustas Mucho.mp3
@@ -5727,7 +5614,6 @@ Music
 ├── Los Tipitos
 │   ├── Brujerias.mp3
 │   ├── Campanas En La Noche.mp3
-│   ├── desktop.ini
 │   ├── Flor Negra.mp3
 │   ├── Mil Horas -T.mp3
 │   ├── Siguiendo La Luna.mp3
@@ -5867,7 +5753,6 @@ Music
 │   ├── Si No Te Hubieras Ido.mp3
 │   └── Vivir Sin Aire.mp3
 ├── Man at work
-│   ├── desktop.ini
 │   └── Land Downunder.mp3
 ├── Manu Chao
 │   ├── Bongo Bong.mp3
@@ -5926,7 +5811,6 @@ Music
 ├── Maroon 5
 │   ├── Animals.mp3
 │   ├── Cold (Hot Shade & Mike Perry Remix).mp3
-│   ├── desktop.ini
 │   ├── Don't Wanna Know.mp3
 │   ├── Makes Me Wonder.mp3
 │   ├── Maps.mp3
@@ -5982,7 +5866,6 @@ Music
 ├── Maurice Williams & the Zodiacs
 │   └── Stay.mp3
 ├── Maxine Nightingale
-│   ├── desktop.ini
 │   └── Right Back Where We Started From.mp3
 ├── Maxi priest
 │   └── Close To You.mp3
@@ -6003,7 +5886,6 @@ Music
 ├── MEM
 │   └── Ecco.mp3
 ├── Men at work
-│   ├── desktop.ini
 │   ├── Down Under.mp3
 │   ├── OneNote Table Of Contents.onetoc2
 │   ├── The Safety Dance.mp3
@@ -6014,13 +5896,11 @@ Music
 ├── Mercedes Sosa
 │   ├── Cuando Ya Me Empiece A Quedar Solo.mp3
 │   ├── Deja La Vida Volar.mp3
-│   ├── desktop.ini
 │   ├── Inconciente Colectivo.mp3
 │   ├── Misa Criolla.mp3
 │   ├── Promesas Sobre El Bidet.mp3
 │   └── Zamba Para Olvidarte.mp3
 ├── Metallica
-│   ├── desktop.ini
 │   ├── Fade To Black.mp3
 │   ├── Master Of Puppets.mp3
 │   ├── Metallica - Enter Sandman.mp3
@@ -6030,7 +5910,6 @@ Music
 │   ├── Stairway To Heaven.mp3
 │   └── The Day That Never Comes High Quality Full Version.mp3
 ├── MGMT
-│   ├── desktop.ini
 │   ├── Electric Feel.mp3
 │   ├── Kids (Album Version).mp3
 │   ├── Kids.mp3
@@ -6097,8 +5976,7 @@ Music
 │   └── Ai Se Eu Te Pego (Assim Você Me Mata).mp3
 ├── Midnight Oil
 │   ├── Beds Are Burning.mp3
-│   ├── Blue Sky Mine.mp3
-│   └── desktop.ini
+│   └── Blue Sky Mine.mp3
 ├── Mika
 │   └── Relax, Take It Easy.mp3
 ├── Mike Perry
@@ -6118,7 +5996,6 @@ Music
 ├── Miley Cyrus
 │   ├── 23.mp3
 │   ├── Decisions.mp3
-│   ├── desktop.ini
 │   ├── Every Rose Has Its Thorn.mp3
 │   ├── Girls Just Wanna Have Fun.mp3
 │   ├── On My Own.mp3
@@ -6135,7 +6012,6 @@ Music
 │   └── Down By The River Flicflac Remix.mp3
 ├── Miranda
 │   ├── Cada Vez Que Decimos Adios.mp3
-│   ├── desktop.ini
 │   ├── Horoscopo.mp3
 │   ├── Otra Vez.mp3
 │   ├── Romance Juvenil.mp3
@@ -6150,7 +6026,6 @@ Music
 │   ├── Drum.mp3
 │   └── Final Song.mp3
 ├── Moby
-│   ├── desktop.ini
 │   ├── Lift Me Up.mp3
 │   ├── Natural Blues.mp3
 │   ├── Porcelain.mp3
@@ -6171,7 +6046,6 @@ Music
 │   ├── Puto.mp3
 │   └── Yofo.mp3
 ├── Morrisey
-│   ├── desktop.ini
 │   ├── Every Day Is Like Sunday.mp3
 │   ├── Please, Please, Please, Let Me Get What I Want.mp3
 │   ├── Suedehead.mp3
@@ -6315,7 +6189,6 @@ Music
 │   │   ├── Ciclo Sin Fin.mp3
 │   │   ├── Circle Of Life (Elton John).mp3
 │   │   ├── Circle Of Life.mp3
-│   │   ├── desktop.ini
 │   │   ├── El Rey De La Roca.mp3
 │   │   ├── Esta Noche Es Para Amar.mp3
 │   │   ├── Esta Tierra.mp3
@@ -6397,7 +6270,6 @@ Music
 │   └── Mannish Boy.mp3
 ├── Muse
 │   ├── Assassin.mp3
-│   ├── desktop.ini
 │   ├── Hysteria.mp3
 │   ├── Knights Of Cydonia.mp3
 │   ├── Madness.mp3
@@ -6426,8 +6298,7 @@ Music
 ├── Neutre
 │   └── Cinema.mp3
 ├── New Order
-│   ├── Bizarre Love Triangle.mp3
-│   └── desktop.ini
+│   └── Bizarre Love Triangle.mp3
 ├── New Radicals
 │   ├── Someday We'll Know.mp3
 │   └── You Get What You Give.mp3
@@ -6436,13 +6307,11 @@ Music
 ├── Nick caroline
 │   └── Sweat Dreams.mp3
 ├── Nickelback
-│   ├── desktop.ini
 │   ├── How You Remind Me.mp3
 │   └── Rock Star.mp3
 ├── Nicki Bluhm
 │   └── I Can't Go For That (Cover).mp3
 ├── Nicki Minaj
-│   ├── desktop.ini
 │   ├── Moment 4 Life.mp3
 │   ├── Pound The Alarm.mp3
 │   ├── Starship.mp3
@@ -6468,7 +6337,6 @@ Music
 │   ├── Te Bote.mp3
 │   └── Te Bote (Remix).mp3
 ├── Nirvana
-│   ├── desktop.ini
 │   ├── Dumb.mp3
 │   ├── Heart Shaped Box.mp3
 │   ├── Im Bloom.mp3
@@ -6485,7 +6353,6 @@ Music
 │   └── The Death Of You And Me With.mp3
 ├── NOFX
 │   ├── Bob.mp3
-│   ├── desktop.ini
 │   ├── Dinosaurs Will Die.mp3
 │   ├── Don't Call Me White.mp3
 │   ├── Linoleum.mp3
@@ -6558,10 +6425,8 @@ Music
 ├── Opening
 │   └── Digimon 01 - Latino.wav
 ├── Opus
-│   ├── desktop.ini
 │   └── Live Is Life.mp3
 ├── Orchestral Manoeuvres in the Dark
-│   ├── desktop.ini
 │   └── Secret.mp3
 ├── Oriana
 │   └── Stay Or Run.mp3
@@ -6570,7 +6435,6 @@ Music
 ├── Other Lives
 │   └── Black Tables.mp3
 ├── OutKast
-│   ├── desktop.ini
 │   └── Hey Ya!.mp3
 ├── Owl City
 │   ├── Fireflies.mp3
@@ -6596,18 +6460,15 @@ Music
 │   ├── Un Bellaqueo.mp3
 │   └── Vaina Loca.mp3
 ├── Ozzy Osbourne
-│   ├── Crazy Train.mp3
-│   └── desktop.ini
+│   └── Crazy Train.mp3
 ├── Pa'ella Virgen
 │   └── Bajo Del Mar.mp3
 ├── Paloma Mami
 │   └── Not Steady.mp3
 ├── Papa Roach
-│   ├── desktop.ini
 │   └── Last Resort.mp3
 ├── Pappo
 │   ├── Desconfío.mp3
-│   ├── desktop.ini
 │   ├── Juntos A La Par.mp3
 │   ├── Mi Vieja.mp3
 │   └── Ruta 66.mp3
@@ -6733,7 +6594,6 @@ Music
 │   ├── Against All Odds.mp3
 │   ├── Another Day In The Paradise.mp3
 │   ├── Carpet Crawlers.mp3
-│   ├── desktop.ini
 │   ├── Don't Lose My Number.mp3
 │   ├── Dos Mundos.mp3
 │   ├── Drum Duet.mp3
@@ -6774,7 +6634,6 @@ Music
 │   └── 6 - Philip Glass - Closing.mp3
 ├── Pigeon John
 │   ├── Before We're Gone.mp3
-│   ├── desktop.ini
 │   ├── Hey You.mp3
 │   ├── Life Goes On.mp3
 │   ├── So Gangster.mp3
@@ -6793,7 +6652,6 @@ Music
 │   └── Puntos Suspensivos.mp3
 ├── Pitbull
 │   ├── Bon Bon.mp3
-│   ├── desktop.ini
 │   ├── DJ Got Us Falling In Love.mp3
 │   ├── Feel This Moment.mp3
 │   ├── Give Me Everything.mp3
@@ -6879,11 +6737,9 @@ Music
 │   ├── Life In Grey (Khamsin Remix).mp3
 │   └── Life In Grey.mp3
 ├── Poision
-│   ├── desktop.ini
 │   └── Every Rose Has Its Thorn.mp3
 ├── Poncho
 │   ├── Are You Ready For Poncho  .mp3
-│   ├── desktop.ini
 │   ├── D.i.s.c.o.mp3
 │   ├── Kansas.mp3
 │   ├── Lend Me The Light.mp3
@@ -6892,7 +6748,6 @@ Music
 ├── Porchetto
 │   └── Bailando En Las Veredas.mp3
 ├── Porta
-│   ├── desktop.ini
 │   ├── Dragon Ball Rap.mp3
 │   ├── En Boca De Tantos.mp3
 │   ├── Espejismos.mp3
@@ -6939,7 +6794,6 @@ Music
 │   └── Kiss.mp3
 ├── Prince royce
 │   ├── Darte Un Beso.mp3
-│   ├── desktop.ini
 │   └── Stand By Me.mp3
 ├── Princess Chelsea
 │   ├── Cigarette Duet.mp3
@@ -6957,7 +6811,6 @@ Music
 │   ├── Bicycle Race.mp3
 │   ├── Bohemian Rapsody.mp3
 │   ├── Crazy Little Thing Called Love.mp3
-│   ├── desktop.ini
 │   ├── Don't Stop Me Now.mp3
 │   ├── Friends To Be Friens.mp3
 │   ├── I Want To Break Free.mp3
@@ -6971,7 +6824,6 @@ Music
 │   └── You're My Best Friend.mp3
 ├── Queens Of The Stone Age
 │   ├── 3's And 7's.mp3
-│   ├── desktop.ini
 │   ├── Make It Wit Chu (Album Version).mp3
 │   ├── No One Knows.mp3
 │   └── With The Flow.mp3
@@ -7016,7 +6868,6 @@ Music
 │   ├── Cant Stop.mp3
 │   ├── Dani California.mp3
 │   ├── Dany California.mp3
-│   ├── desktop.ini
 │   ├── How Long.mp3
 │   ├── Road Trippin.mp3
 │   ├── Scar Tissue.mp3
@@ -7036,14 +6887,12 @@ Music
 │   ├── Samson.mp3
 │   └── Us.mp3
 ├── Reik
-│   ├── desktop.ini
 │   ├── Me Niego.mp3
 │   ├── Te Fuiste De Aquí .mp3
 │   └── Yo Quisiera Ser.mp3
 ├── R.E.M
 │   └── Try Not To Breathe.mp3
 ├── REM
-│   ├── desktop.ini
 │   ├── Everybody Hurts.mp3
 │   ├── Imitation Of Life.mp3
 │   ├── Losing My Religion.mp3
@@ -7054,6 +6903,20 @@ Music
 │   ├── Can't Fight This Feeling.mp3
 │   ├── In My Dreams.mp3
 │   └── Keep On Loving You.mp3
+├── Ricardo Arjona
+│   ├── Acompañame A Estar Solo.mp3
+│   ├── Como Duele.mp3
+│   ├── Dime Que No.mp3
+│   ├── El Problema.mp3
+│   ├── El Taxista.mp3
+│   ├── No Basta.mp3
+│   ├── Realmente No Estoy Tan Sola.mp3
+│   ├── Sin Ti Sin Mi.mp3
+│   ├── Suavecito.mp3
+│   ├── Tan Enamorados.mp3
+│   ├── Te Conozco.mp3
+│   ├── Tocando Fondo.mp3
+│   └── Tu Reputación.mp3
 ├── Ricardo Montaner
 │   ├── La Clave Del Amor.mp3
 │   ├── Me Va A Extrañar.mp3
@@ -7078,14 +6941,12 @@ Music
 ├── Richard Strauss
 │   └── Also sprach Zarathustra, Op. 30.mp3
 ├── Rick Astley
-│   ├── desktop.ini
 │   ├── Never Gonna Give You Up.mp3
 │   └── Together Forever.mp3
 ├── Ricky Martin
 │   ├── A Medio Vivir.mp3
 │   ├── Asignatura Pendiente.mp3
 │   ├── Come With Me.mp3
-│   ├── desktop.ini
 │   ├── Frio (Ft. Wisin Y Yandel).mp3
 │   ├── Frio.mp3
 │   ├── Fuego Contra Fuego.mp3
@@ -7105,7 +6966,6 @@ Music
 │   ├── Volveras.mp3
 │   └── Vuelve.mp3
 ├── Ric Ocasek
-│   ├── desktop.ini
 │   └── Feeling's Got To Stay.mp3
 ├── Rihanna
 │   ├── Crazy Little Thing Called Love (feat. J-Status).mp3
@@ -7143,7 +7003,6 @@ Music
 │   ├── Supreme.mp3
 │   └── Tripping.mp3
 ├── Roberta Flack
-│   ├── desktop.ini
 │   └── Killing Me Softly With His Song.mp3
 ├── Robin beck
 │   └── First Time.mp3
@@ -7179,7 +7038,6 @@ Music
 │   ├── Amor Clasificado.mp3
 │   ├── Como Le Digo A Mi Amor.mp3
 │   ├── Como Olvidarla.mp3
-│   ├── desktop.ini
 │   ├── Fue Lo Mejor Del Amor.mp3
 │   ├── La Mano Dios.mp3
 │   ├── Multimillonaria.mp3
@@ -7205,7 +7063,6 @@ Music
 │   └── Con Altura.mp3
 ├── Rosana
 │   ├── A Fuego Lento.mp3
-│   ├── desktop.ini
 │   ├── En Las Calles De Madrid.mp3
 │   ├── Llegaremos A Tiempo.mp3
 │   └── Si Tu No Estás.mp3
@@ -7215,7 +7072,6 @@ Music
 │   ├── My Love.mp3
 │   └── Tell You Why.mp3
 ├── Roxette
-│   ├── desktop.ini
 │   ├── Fading Like A Flower.mp3
 │   ├── Joyride.mp3
 │   ├── Listen To Your Heart.mp3
@@ -7266,7 +7122,6 @@ Music
 ├── Scatman
 │   └── Scatman (Ski Ba Bop Ba Dop Bop).mp3
 ├── Scatman John
-│   ├── desktop.ini
 │   ├── Everybody Jam!.mp3
 │   ├── Scatman's World.mp3
 │   └── Sing Now!.mp3
@@ -7283,12 +7138,9 @@ Music
 ├── Scott Joplin
 │   └── The Entertainer.mp3
 ├── Scotty
-│   ├── desktop.ini
 │   ├── Lustra
-│   │   ├── desktop.ini
 │   │   └── Scotty Doesn't Know.mp3
 │   └── Sum 41
-│       ├── desktop.ini
 │       └── Scotty Doesn't Know.mp3
 ├── Seafret
 │   ├── Atlantis.mp3
@@ -7317,7 +7169,6 @@ Music
 ├── Selena Gomez
 │   ├── A Year Without Rain .mp3
 │   ├── Bang Bang Bang.mp3
-│   ├── desktop.ini
 │   ├── Everything Is Not What It Seems.mp3
 │   ├── Good For You.mp3
 │   ├── Hands To Myself.mp3
@@ -7341,7 +7192,6 @@ Music
 ├── Serú Girán
 │   ├── Canción De Alicia En El País De Las Maravillas.mp3
 │   ├── Desarma Y Sangra.mp3
-│   ├── desktop.ini
 │   ├── Eiti Leda.mp3
 │   ├── Encuentro Con El Diablo.mp3
 │   ├── Inconsciente Colectivo.mp3
@@ -7361,7 +7211,6 @@ Music
 ├── Shakira
 │   ├── Can't Remember To Forget You.mp3
 │   ├── Chantaje.mp3
-│   ├── desktop.ini
 │   ├── Gitana.mp3
 │   ├── Hips Dont Lie.mp3
 │   ├── La Bicicleta.mp3
@@ -7402,7 +7251,6 @@ Music
 │   ├── The Sound Of Silence 1966.mp3
 │   └── The Sound Of Silence.mp3
 ├── Simple Plan
-│   ├── desktop.ini
 │   ├── Perfect.mp3
 │   ├── Summer Paradise.mp3
 │   ├── Take My Hand.mp3
@@ -7410,7 +7258,6 @@ Music
 │   └── When I'm Gone.mp3
 ├── Simply Red
 │   ├── Come Get Me Angel.mp3
-│   ├── desktop.ini
 │   ├── Holding Back The Years.mp3
 │   ├── If You Dont Know Me By Now.mp3
 │   ├── Lady In Red.mp3
@@ -7448,7 +7295,6 @@ Music
 │   └── Before I Forget.mp3
 ├── Smash mouth
 │   ├── All Star.mp3
-│   ├── desktop.ini
 │   ├── OneNote Table Of Contents.onetoc2
 │   └── Why Can't We Be Friends.mp3
 ├── Snoop Dogg
@@ -7460,7 +7306,6 @@ Music
 ├── Soda Stereo
 │   ├── Cuando Pase El Temblor.mp3
 │   ├── De Musica Ligera.mp3
-│   ├── desktop.ini
 │   ├── En La Ciudad De La Furia.mp3
 │   ├── No Seas Tan Cruel.mp3
 │   ├── Persiana Americana.mp3
@@ -7490,7 +7335,6 @@ Music
 ├── Sondre Lerche
 │   ├── After All.mp3
 │   ├── Dan And Marie Melody.mp3
-│   ├── desktop.ini
 │   ├── Don't Be Shallow.mp3
 │   ├── I Know I Know.mp3
 │   ├── I'll Be Ok.mp3
@@ -7544,7 +7388,6 @@ Music
 │   ├── Four To The Floor.mp3
 │   └── Four To The Floor (Remix).mp3
 ├── Starship
-│   ├── desktop.ini
 │   ├── Nothing's Gonna Stop Us Now.mp3
 │   ├── Sara.mp3
 │   └── We Built This City.mp3
@@ -7588,7 +7431,6 @@ Music
 │   └── Talk To Me.mp3
 ├── Stevie Ray Vaughan
 │   ├── Crossfire.mp3
-│   ├── desktop.ini
 │   ├── Hug, Kiss And Squeeze.mp3
 │   ├── Little Wing.mp3
 │   ├── Pride 'n' Joy.mp3
@@ -7597,7 +7439,6 @@ Music
 │   ├── Tin Pan Alley.mp3
 │   └── Voodoo Child.mp3
 ├── Stevie Wonder
-│   ├── desktop.ini
 │   ├── Don't You Worry 'Bout a Thing.mp3
 │   ├── Everybody Needs Somebody (I Need You).mp3
 │   ├── For Once In My Life.mp3
@@ -7625,14 +7466,12 @@ Music
 │   ├── Fourth of July.mp3
 │   └── Mystery of Love.mp3
 ├── Sugarhill Gang
-│   ├── desktop.ini
 │   └── Rapper's Delight.mp3
 ├── Sugar Pills
 │   ├── Ask Juliette For Answers.mp3
 │   ├── Le Crack d'Arabella.mp3
 │   └── Melancholia.mp3
 ├── Sugar Ray
-│   ├── desktop.ini
 │   ├── Every Morning.mp3
 │   └── Into Yesterday.mp3
 ├── Sui Generis
@@ -7647,7 +7486,6 @@ Music
 │   ├── Cuando Comenzamos A Nacer.mp3
 │   ├── Cuando Ya Me Empiece A Quedar Solo.mp3
 │   ├── Cuando Ya Me Empiece A Quedar Solo.wav
-│   ├── desktop.ini
 │   ├── Dime Quien Me Lo Robo.mp3
 │   ├── El Dia Que Apagaron La Luz.mp3
 │   ├── El Fantasma De Canterville.mp3
@@ -7672,7 +7510,6 @@ Music
 │   ├── Toma Dos Blues.mp3
 │   └── Tribulaciones, Lamentos Y Ocaso.mp3
 ├── Sum 41
-│   ├── desktop.ini
 │   ├── Fat Lip.mp3
 │   ├── In Too Deep.mp3
 │   ├── Pieces.mp3
@@ -7680,13 +7517,11 @@ Music
 │   └── Still Waiting.mp3
 ├── Sumo
 │   ├── 1989.mp3
-│   ├── desktop.ini
 │   └── Rubia Tarada.mp3
 ├── Supermans Feinde
 │   └── Chasin' You.mp3
 ├── Supertramp
 │   ├── Breakfast In America.mp3
-│   ├── desktop.ini
 │   ├── Dreamer.mp3
 │   ├── OneNote Table Of Contents.onetoc2
 │   └── The Logical Song.mp3
@@ -7765,12 +7600,10 @@ Music
 │   └── Day By Day.mp3
 ├── The Allman Brothers Band
 │   ├── Blue Sky.mp3
-│   ├── desktop.ini
 │   ├── Jessica.mp3
 │   ├── Ramblin' Man.mp3
 │   └── Whippin' Post.mp3
 ├── The Animals
-│   ├── desktop.ini
 │   ├── Don´t Let Me Be Misunderstood.mp3
 │   ├── House Of The Rising Sun.mp3
 │   ├── It's My Life.mp3
@@ -7786,7 +7619,6 @@ Music
 ├── The Byrds
 │   └── I'll Feel A Whole Lot Better.mp3
 ├── The Cars
-│   ├── desktop.ini
 │   └── Magic.mp3
 ├── The Chainsmokers
 │   ├── Closer.mp3
@@ -7809,11 +7641,9 @@ Music
 ├── The church
 │   └── Under The Milky Way.mp3
 ├── The Cloud Room
-│   ├── desktop.ini
 │   └── Hey Now Now.mp3
 ├── The Cranberries
 │   ├── Animal Instinct.mp3
-│   ├── desktop.ini
 │   ├── Do You Have To Let It Linger.mp3
 │   ├── Dreams.mp3
 │   ├── Just My Imagination.mp3
@@ -7836,7 +7666,6 @@ Music
 │   └── playlist.m3u
 ├── The Doors
 │   ├── Break On Through To The Other Side.mp3
-│   ├── desktop.ini
 │   ├── Light My Fire.mp3
 │   ├── Love Me Two Times.mp3
 │   ├── People Are Strange.mp3
@@ -7866,7 +7695,6 @@ Music
 │   └── Dont You Want Me Baby.mp3
 ├── The Killers
 │   ├── Bones.mp3
-│   ├── desktop.ini
 │   ├── Human.mp3
 │   ├── Mr. Brightside.mp3
 │   ├── Read My Mind.mp3
@@ -7904,7 +7732,6 @@ Music
 ├── The Notorious BIG
 │   └── Old Thing Back (Matoma Remix).mp3
 ├── The Offspring
-│   ├── desktop.ini
 │   ├── Hit That.mp3
 │   ├── I Want You Bad.mp3
 │   ├── Pretty Fly.mp3
@@ -7912,7 +7739,6 @@ Music
 │   └── You're Gonna Go Far, Kid.mp3
 ├── The Outfield
 │   ├── All The Love In The World.mp3
-│   ├── desktop.ini
 │   ├── When You Talk To Me.mp3
 │   └── Your Love.mp3
 ├── The Pirates of Penzance
@@ -7941,7 +7767,6 @@ Music
 │   ├── I'll Stand By You.mp3
 │   └── Kid.mp3
 ├── The Ramones
-│   ├── desktop.ini
 │   ├── Have You Ever Seen The Rain.mp3
 │   ├── Hey Ho Lets Go.mp3
 │   ├── I Wanna Be Sedated.mp3
@@ -7955,7 +7780,6 @@ Music
 │   ├── Angie (Remastered).mp3
 │   ├── Beast Of Burden (Remastered).mp3
 │   ├── Brown Sugar (Remastered).mp3
-│   ├── desktop.ini
 │   ├── I Can't Quit You Baby.mp3
 │   ├── Just Your Fool.mp3
 │   ├── Like A Rolling Stone.mp3
@@ -7981,7 +7805,6 @@ Music
 │   └── Tonight, Tonight.mp3
 ├── The Strokes
 │   ├── Ask Me Anything.mp3
-│   ├── desktop.ini
 │   ├── Is This It.mp3
 │   ├── Last Night.mp3
 │   ├── Reptilia.mp3
@@ -7995,13 +7818,11 @@ Music
 │   ├── That's Not My Name.mp3
 │   └── That's Not My Name (Tom Neville's Nameless Vocal Mix).mp3
 ├── The Trammps
-│   ├── desktop.ini
 │   └── Disco Inferno.mp3
 ├── The Turtles
 │   └── So Happy Together.mp3
 ├── The Verve
-│   ├── Bitter Sweet Symphony.mp3
-│   └── desktop.ini
+│   └── Bitter Sweet Symphony.mp3
 ├── The Virgins
 │   └── Rich Girls.mp3
 ├── The Wanted
@@ -8026,7 +7847,6 @@ Music
 │   ├── Let My Love Open The Door.mp3
 │   └── Run Run Run.mp3
 ├── The Wollflowers
-│   ├── desktop.ini
 │   └── Josephine.mp3
 ├── The Wonders
 │   └── That Thing You Do.mp3
@@ -8067,7 +7887,6 @@ Music
 │   ├── Am I A Fool In Love.mp3
 │   ├── Baby, Get It On.mp3
 │   ├── Come Together.mp3
-│   ├── desktop.ini
 │   ├── Gonna Have Fun.mp3
 │   ├── I'm Yours (Use Me Any Way You Wanna).mp3
 │   ├── Private Dancer.mp3
@@ -8121,7 +7940,6 @@ Music
 │   └── Un-Break My Heart.mp3
 ├── Toto
 │   ├── Africa.MP3
-│   ├── desktop.ini
 │   ├── Hold The Line.MP3
 │   └── OneNote Table Of Contents.onetoc2
 ├── Tove lo
@@ -8134,7 +7952,6 @@ Music
 │   ├── Baby Can I Hold You.mp3
 │   └── Fast Car.mp3
 ├── Train
-│   ├── desktop.ini
 │   ├── Drive By.mp3
 │   └── Hey, Soul Sister.mp3
 ├── Travis
@@ -8145,7 +7962,6 @@ Music
 ├── Tujamo
 │   └── Cream.mp3
 ├── Turf
-│   ├── desktop.ini
 │   ├── Kurt Cobain).mp3
 │   ├── Loco Un Poco.mp3
 │   ├── Magia Blanca.mp3
@@ -8188,7 +8004,6 @@ Music
 ├── U2
 │   ├── Beautiful Day.mp3
 │   ├── City Of Blinding Lights.mp3
-│   ├── desktop.ini
 │   ├── Electrical Storm.mp3
 │   ├── Elevation.mp3
 │   ├── Every Breaking Wave.mp3
@@ -8214,7 +8029,6 @@ Music
 │   └── With Or Without You.mp3
 ├── UB40
 │   ├── Baby I Love Your Way.mp3
-│   ├── desktop.ini
 │   ├── Don't Break My Heart.mp3
 │   ├── Every Breath You Take.mp3
 │   ├── Here I Am.mp3
@@ -8230,7 +8044,6 @@ Music
 ├── Upgrade
 │   └── Baileys.mp3
 ├── Usher
-│   ├── desktop.ini
 │   ├── DJ Got Us Falling In Love.mp3
 │   ├── More.mp3
 │   ├── Scream.mp3
@@ -8244,7 +8057,6 @@ Music
 │   ├── Chariots Of Fire.mp3
 │   └── Rosetta.mp3
 ├── Van Halen
-│   ├── desktop.ini
 │   ├── Jump.mp3
 │   ├── OneNote Table Of Contents.onetoc2
 │   ├── Panama.mp3
@@ -8285,7 +8097,6 @@ Music
 ├── Vicentico
 │   ├── Algo Con Tigo.mp3
 │   ├── Cuando Te Ví.mp3
-│   ├── desktop.ini
 │   ├── El Arbol De La Plaza.mp3
 │   ├── El Matador.mp3
 │   ├── Gitana.mp3
@@ -8322,7 +8133,6 @@ Music
 │   ├── Dance Hall Days.mp3
 │   └── Everybody Have Fun Tonight.mp3
 ├── Warren G
-│   ├── desktop.ini
 │   └── What's Love Got To Do With It.mp3
 ├── Watsky
 │   ├── 4am Monday.mp3
@@ -8340,7 +8150,6 @@ Music
 │   ├── Wounded Healer (Deer Tick Sample).mp3
 │   └── Wounded Healer.mp3
 ├── Wawa and More
-│   ├── desktop.ini
 │   └── Happy Children.mp3
 ├── Wax
 │   ├── Pictures Of You.mp3
@@ -8365,7 +8174,6 @@ Music
 │   ├── Hungarian Dance No.5 In G Minor, WoO 1 No. 5.mp3
 │   └── Tannhäuser _ Overture.mp3
 ├── Willie Nelson
-│   ├── desktop.ini
 │   └── Hallelujah.mp3
 ├── Will Smith
 │   └── Miami.mp3
@@ -8376,7 +8184,6 @@ Music
 │   └── Escapate Conmigo.flac
 ├── Wiz Khalifa
 │   ├── Black And Yellow.mp3
-│   ├── desktop.ini
 │   ├── No Sleep.mp3
 │   ├── On My Level.mp3
 │   ├── Roll Up.mp3
@@ -8487,4 +8294,4 @@ Music
     ├── Lowrider.mp3
     └── Sharp Dressed Man.mp3
 
-1350 directories, 7137 files
+1355 directories, 6939 files
