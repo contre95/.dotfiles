@@ -28,7 +28,7 @@ case $var in
     ' Telegram')
 	  exec i3-msg 'exec telegram-desktop';;
 
-    ' Signa')
+    ' Signal')
 	  exec i3-msg 'exec signal-desktop';;
       
     ' Slack')
