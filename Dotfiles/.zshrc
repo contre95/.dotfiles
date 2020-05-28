@@ -136,16 +136,3 @@ setopt    incappendhistory  #Immediately append to the history file, not just wh
 ##############################################################################
 # Just in case the unfortunate way Mac has to "Supr" does not work on your terminal.. then here's the fix
 #bindkey "^[[3~" delete-char
-
-# Lines configured by zsh-newuser-install
-HISTFILE=~/.histfile
-HISTSIZE=1000
-SAVEHIST=1000
-bindkey -e
-# End of lines configured by zsh-newuser-install
-# The following lines were added by compinstall
-zstyle :compinstall filename '/home/contre/.zshrc'
-
-autoload -Uz compinit
-compinit
-# End of lines added by compinstall

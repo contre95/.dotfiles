@@ -8,7 +8,7 @@ function passwordstore {
     tmux new-session -d -s Notes -n Notes &&
 	tmux send-keys -t Notes:1 "cd $BASE && gst" C-m
     tmux select-window -t Notes:1
-    tmux attach-session -t Notes
+    tmux -u attach-session -t Notes
 }
 
 passwordstore

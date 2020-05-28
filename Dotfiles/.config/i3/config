@@ -4,7 +4,7 @@ new_float normal
 
 # Set variables
 set $scr_path /home/lucas/Scripts
-
+bindsym $mod+b exec pkill -9 i3bar && pkill -9 volumeicon
 #hide_edge_borders none
 
 #for_window [class="^.*"] border none
@@ -22,7 +22,6 @@ font pango:JetBrains Mono Regular 11
 floating_modifier $mod
 
 
-
 bindsym $mod+Return exec termite -e "tmux -u new-session -A -s Tmux"
 bindsym $mod+Shift+Return exec termite
 bindsym $mod+Ctrl+Return exec termite --class="floating-quick-term"
@@ -32,7 +31,7 @@ bindsym $mod+Shift+q kill
 # Cam settings
 
 bindsym $mod+Shift+c exec brave --profile-directory="Contre" --app=http://192.168.0.192:8080/browserfs.html
-bindsym $mod+c exec /usr/bin/mpv /dev/video0
+bindsym $mod+c exec gphoto2 --stdout --capture-movie | ffmpeg -i - -vcodec rawvideo -pix_fmt yuv420p -threads 0 -f v4l2 /dev/video0
 bindsym $mod+g exec /usr/bin/brave --profile-directory="Contre"
 bindsym $mod+Shift+n exec /usr/bin/brave --profile-directory="Contre" --incognito
 bindsym $mod+j exec /usr/bin/brave --profile-directory="Meli"
@@ -71,7 +70,6 @@ bindsym $mod+Shift+Right move right
 
 # Workspace back and forth (with/without active container)
 workspace_auto_back_and_forth yes
-bindsym $mod+b workspace back_and_forth
 bindsym $mod+Shift+b move container to workspace back_and_forth; workspace back_and_forth
 
 # Split orientation
@@ -237,10 +235,8 @@ mode "resize" {
 #exec_always --no-startup-id /usr/lib/gnome-settings-daemon/gsd-xsettings
 exec_always --no-startup-id picom --config /home/contre/.config/i3/compton.conf --experimental-backends
 exec_always --no-startup-id feh --randomize --bg-fill ~/Pictures/Wallpapers/*
-exec_always --no-startup-id /usr/bin/setxkbmap -layout us -variant mac
-exec --no-startup-id volumeicon
-exec --no-startup-id xfce4-power-manager
-exec --no-startup-id pamac-tray
+exec --no-startup-id /usr/bin/setxkbmap -layout us -variant mac
+exec volumeicon
 exec --no-startup-id xautolock -time 30 -locker blurlock
 bar {
 #  mode hide
@@ -320,8 +316,11 @@ mode "$mode_gaps_outer" {
 
 # Sound Settings 
 # Pulse Audio controls
-#bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
-#bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 1 -3% #increase sound volume
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 1 +3% #increase sound volume
+bindsym XF86AudioNext exec --no-startup-id pactl set-sink-volume 0 +3% #increase sound volume
+bindsym XF86AudioPrev exec --no-startup-id pactl set-sink-volume 0 -3% #increase sound volume
+bindsym XF86AudioMute exec amixer sset 'Master' toggle
 #`bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
 
 # Sreen brightness controls
