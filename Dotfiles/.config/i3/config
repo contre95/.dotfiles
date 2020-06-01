@@ -55,6 +55,7 @@ bindsym $mod+d exec ~/.config/rofi/launchers/launcher.sh
 bindsym --release $mod+x exec --no-startup-id import ~/Pictures/Screenshots/screenshot-`/bin/date +%Y%m%d-%H:%M:%S`.png
 # Screenshot to clipboard
 bindsym --release $mod+Shift+x exec maim -s --format=png /dev/stdout | xclip -selection clipboard -t image/png -i
+bindsym --release $mod+Shift+w exec zsh -c "zbarimg --raw -q <(maim -s --format=png /dev/stdout) | xclip -sel clip"
 
 # Move focus
 bindsym $mod+Left focus left
@@ -98,7 +99,7 @@ bindsym $mod+Shift+t exec $scr_path/dmenu-scr/tmux-new.sh
 bindsym $mod+m exec $scr_path/dmenu-scr/messages.sh
 #bindsym $mod+Shift+c exec $scr_path/dmenu-scr/code.sh
 bindsym $mod+0 exec $scr_path/dmenu-scr/exit.sh
-bindsym $mod+Shift+w exec $scr_path/dmenu-scr/wifi.sh
+#bindsym $mod+Shift+w exec $scr_path/dmenu-scr/wifi.sh
 
 # navigate workspaces next / previous
 bindsym $mod+Ctrl+Right workspace next
