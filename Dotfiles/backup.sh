@@ -1,5 +1,7 @@
 # i3 
 cp ~/.config/i3/config $MY_FOLDER/Dotfiles/.config/i3/config
+cp ~/.config/i3/compton.conf $MY_FOLDER/Dotfiles/.config/i3/compton.conf
+
 cp ~/.config/i3blocks/config $MY_FOLDER/Dotfiles/.config/i3blocks/config
 
 # Termite

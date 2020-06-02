@@ -236,6 +236,7 @@ mode "resize" {
 #exec_always --no-startup-id /usr/lib/gnome-settings-daemon/gsd-xsettings
 exec_always --no-startup-id picom --config /home/contre/.config/i3/compton.conf --experimental-backends
 exec_always --no-startup-id feh --randomize --bg-fill ~/Pictures/Wallpapers/*
+exec_always --no-startup-id nvidia-settings -a "[gpu:0]/GPUFanControlState=1" -a "[fan:0]/GPUTargetFanSpeed=50" -a "[fan:1]/GPUTargetFanSpeed=50"
 exec --no-startup-id /usr/bin/setxkbmap -layout us -variant mac
 exec volumeicon
 exec --no-startup-id xautolock -time 30 -locker blurlock
