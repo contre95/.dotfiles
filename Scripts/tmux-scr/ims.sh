@@ -29,12 +29,8 @@ function codelamptmux {
 	tmux send-keys -t Codelamp:3 "cd $BASE && mycli -P 3308 -u codelamp -pcodelamp --database clims && clear" C-m
 
     tmux select-window -t Codelamp:1
-    tmux attach-session -t Codelamp
-}
+    tmux -u attach-session -t Codelamp
 
-function codelampbrave {
-    nohup /usr/bin/brave --profile-direcory="Codelamp" http://localhost:3333 &
 }
 
 codelamptmux
-codelampbrave
