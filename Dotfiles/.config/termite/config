@@ -1,26 +1,25 @@
 [options]
 
-allow_bold = true
-audible_bell = false
-browser = xdg-open
-clickable_url = true
-cursor_blink = system
-#cursor_shape = block
-cursor_shape = ibeam
-dynamic_title = true
-filter_unmatched_urls = true
-geometry = 480x280
-#font= JetBrains Mono 11
+font= JetBrains Mono 11
 font= JetBrainsMonoMedium Nerd Font 11
-icon_name = terminal
-modify_other_keys = false
-mouse_autohide = false
-scroll_on_output = true
-#scroll_on_keystroke = true
-scrollback_lines = 15000
-size_hints = false
-urgent_on_bell = true
-highlight = #30343e
+cursor_shape = ibeam
+#allow_bold = true
+#audible_bell = false
+browser = xdg-open
+#clickable_url = true
+#cursor_blink = system
+#dynamic_title = true
+#filter_unmatched_urls = true
+#geometry = 480x280
+#icon_name = terminal
+#modify_other_keys = false
+#mouse_autohide = false
+#scroll_on_output = true
+##scroll_on_keystroke = true
+#scrollback_lines = 1000
+#size_hints = false
+#urgent_on_bell = true
+#highlight = #30343e
 
 [colors]
 # special

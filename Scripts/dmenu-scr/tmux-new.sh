@@ -5,7 +5,7 @@ TMUX_SCRIPTS=/home/lucas/Scripts/tmux-scr
 
 case $var in
     ' Codelamp') 
-    exec termite -e "zsh $TMUX_SCRIPTS/ims.sh";;
+    exec termite -e "$TMUX_SCRIPTS/ims.sh";;
     
     'ﴬ Notes')
     exec termite -e "zsh $TMUX_SCRIPTS/notes.sh";;

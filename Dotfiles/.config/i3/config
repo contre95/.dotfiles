@@ -4,7 +4,6 @@ new_float normal
 
 # Set variables
 set $scr_path /home/lucas/Scripts
-bindsym $mod+b exec pkill -9 i3bar && pkill -9 volumeicon
 #hide_edge_borders none
 
 #for_window [class="^.*"] border none
@@ -23,12 +22,13 @@ floating_modifier $mod
 
 
 bindsym $mod+Return exec termite -e "tmux -u new-session -A -s Tmux"
+#bindsym $mod+Return exec xterm
 bindsym $mod+Shift+Return exec termite
 bindsym $mod+Ctrl+Return exec termite --class="floating-quick-term"
 # Window kill command
 bindsym $mod+Shift+q kill
 
-# Cam settings
+
 
 bindsym $mod+Shift+c exec brave --profile-directory="Contre" --app=http://192.168.0.192:8080/browserfs.html
 bindsym $mod+c exec gphoto2 --stdout --capture-movie | ffmpeg -i - -vcodec rawvideo -pix_fmt yuv420p -threads 0 -f v4l2 /dev/video0
@@ -233,13 +233,11 @@ mode "resize" {
 }
 
 # Autostart applications
-#exec_always --no-startup-id /usr/lib/gnome-settings-daemon/gsd-xsettings
 exec_always --no-startup-id picom --config /home/contre/.config/i3/compton.conf --experimental-backends
 exec_always --no-startup-id feh --randomize --bg-fill ~/Pictures/Wallpapers/*
 exec_always --no-startup-id nvidia-settings -a "[gpu:0]/GPUFanControlState=1" -a "[fan:0]/GPUTargetFanSpeed=50" -a "[fan:1]/GPUTargetFanSpeed=50"
 exec --no-startup-id /usr/bin/setxkbmap -layout us -variant mac
 exec volumeicon
-exec --no-startup-id xautolock -time 30 -locker blurlock
 bar {
 #  mode hide
 #  hidden_state hide

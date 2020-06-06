@@ -79,9 +79,9 @@ export PATH=$HOME/bin:/usr/local/bin:$HOME/.composer/vendor/bin:/usr/bin:/usr/lo
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
-   export EDITOR='vim'
+   export EDITOR='nvim'
 else
-   export EDITOR='vim'
+   export EDITOR='nvim'
 fi
 
 # Uncomment this when using termite or any other minimalistic Terminal
@@ -110,6 +110,7 @@ export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
 ################################################################################################
 
 alias mf="cd $MY_FOLDER"
+alias vim="nvim"
 alias xf="mpg123 --quiet $MY_FOLDER/Library/xfiles.mp3"
 alias qn="mpg123 --quiet $MY_FOLDER/Library/quienteconoce.mp3"
 alias mi="mpg123 --quiet $MY_FOLDER/Library/monster_inc.mp3"
