@@ -36,7 +36,7 @@ bindsym $mod+g exec /usr/bin/brave --profile-directory="Contre"
 bindsym $mod+Shift+n exec /usr/bin/brave --profile-directory="Contre" --incognito
 bindsym $mod+j exec /usr/bin/brave --profile-directory="Meli"
 bindsym $mod+k exec /usr/bin/brave --profile-directory="Codelamp"
-bindsym $mod+i exec --no-startup-id /usr/bin/termite --exec="vim -V9myVim.log /home/contre/.config/i3/config"
+bindsym $mod+i exec --no-startup-id /usr/bin/termite --exec="vim /home/contre/.config/i3/config"
 bindsym $mod+u exec termite -e "vim /home/contre/.zshrc"
 bindsym $mod+o exec termite -e "vim /home/contre/.vimrc"
 bindsym $mod+Shift+m exec termite -e "mocp"
