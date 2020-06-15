@@ -3,6 +3,7 @@
 font= JetBrains Mono 11
 font= JetBrainsMonoMedium Nerd Font 11
 cursor_shape = ibeam
+#cursor_shape = block
 #allow_bold = true
 #audible_bell = false
 browser = xdg-open
@@ -26,7 +27,7 @@ browser = xdg-open
 foreground      = #c5c8c6
 foreground_bold = #c5c8c6
 cursor          = #c5c8c6
-background      = rgba(63,63,63,0.01)
+background      = rgba(0,0,0,0.5)
 
 
 # black

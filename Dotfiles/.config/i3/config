@@ -33,6 +33,7 @@ bindsym $mod+Shift+q kill
 bindsym $mod+Shift+c exec brave --profile-directory="Contre" --app=http://192.168.0.192:8080/browserfs.html
 bindsym $mod+c exec gphoto2 --stdout --capture-movie | ffmpeg -i - -vcodec rawvideo -pix_fmt yuv420p -threads 0 -f v4l2 /dev/video0
 bindsym $mod+g exec /usr/bin/brave --profile-directory="Contre"
+bindsym $mod+h exec /usr/bin/brave --profile-directory="Canus"
 bindsym $mod+Shift+n exec /usr/bin/brave --profile-directory="Contre" --incognito
 bindsym $mod+j exec /usr/bin/brave --profile-directory="Meli"
 bindsym $mod+k exec /usr/bin/brave --profile-directory="Codelamp"
@@ -74,8 +75,8 @@ workspace_auto_back_and_forth yes
 bindsym $mod+Shift+b move container to workspace back_and_forth; workspace back_and_forth
 
 # Split orientation
-bindsym $mod+h split h;exec notify-send 'tile horizontally'
-bindsym $mod+v split v;exec notify-send 'tile vertically'
+bindsym $mod+Shift+h split h;
+bindsym $mod+v split v;
 #bindsym $mod+q split toggle
 
 

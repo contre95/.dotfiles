@@ -15,9 +15,9 @@ export TERM="tmux-256color"
 eval $(thefuck --alias)
 
 #Node Version Manager
-#export NVM_DIR="${XDG_CONFIG_HOME/:-$HOME/.}nvm"
-#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-#source ~/.nvm/nvm.sh
+export NVM_DIR="${XDG_CONFIG_HOME/:-$HOME/.}nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+source ~/.nvm/nvm.sh
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/home/contre/google-cloud-sdk/path.zsh.inc' ]; then . '/home/contre/google-cloud-sdk/path.zsh.inc'; fi
@@ -28,9 +28,6 @@ if [ -f '/home/contre/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/cont
 # The next line enables autojump
 [[ -s /home/contre/.cache/yay/autojump-git/pkg/autojump-git/etc/profile.d/autojump.sh  ]] && source /home/contre/.cache/yay/autojump-git/pkg/autojump-git/etc/profile.d/autojump.sh                           
 autoload -U compinit && compinit -u
-
-# This loads NVM (Node Version Manager) 
-#[[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh
 
 # Fuzzy Finder (aka FZF)
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

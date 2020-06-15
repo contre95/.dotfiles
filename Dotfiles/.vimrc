@@ -1,4 +1,5 @@
-
+"                              
+"                              ___           ___           ___
 "     ___        ___          /__/\         /  /\         /  /\
 "    /__/\      /  /\        |  |::\       /  /::\       /  /:/
 "    \  \:\    /  /:/        |  |:|:\     /  /:/\:\     /  /:/
@@ -22,6 +23,9 @@ noremap <C-Up> <Esc>:m-2<CR>
 nnoremap <C-Down> :m+<CR>
 nnoremap <C-Up> :m-2<CR>
 
+" Scroll like normal ide with Shift + Arrows
+map <A-Down> <C-E><C-E>
+map <A-Up> <C-Y><C-Y>
 
 "Copy current line with Ctrl+d
 "-------------------------------------
@@ -48,6 +52,8 @@ nnoremap <C-S-Left> <Esc>v
 nnoremap <C-S-Down> <Esc>v
 nnoremap <C-S-Up> <Esc>v
 
+nnoremap <C-Right> w
+nnoremap <C-Left> b
 "Switch tabs with Crtl+Shift+arrows
 "-------------------------------------
 :map <C-w> :close <Enter> :NERDTreeClose <Enter>
@@ -63,7 +69,11 @@ nmap <A-S-Left> gT
 
 " Map Ctrl-Backspace to delete the previous word in insert mode.
 "-------------------------------------
-imap <C-BS> <C-W>
+" (Neveer could get thisone workings)
+"imap <C-BS> <Esc>caw
+"imap <C-BS> <C-W>
+"noremap! <C-BS> <C-w>
+"noremap! <C-h> <C-w>
 
 " Undo with Crtl+z
 "-------------------------------------
@@ -128,6 +138,8 @@ set laststatus=2
 set shiftwidth=4
 set smartindent
 set splitbelow
+set cursorline
+set cursorcolumn
 set splitright
 set autoindent
 set noswapfile
@@ -135,7 +147,7 @@ set nowrap
 set ignorecase
 set showmatch	
 set hlsearch
-"set incsearch
+set incsearch
 set wildmenu
 set tabstop=4
 set t_Co=256
@@ -156,6 +168,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'terryma/vim-multiple-cursors'
   Plug 'watzon/vim-edge-template'
   Plug 'scrooloose/nerdcommenter'
+  Plug 'watzon/vim-edge-template'
   Plug 'Valloric/YouCompleteMe'
   Plug 'itchyny/vim-gitbranch'
   Plug 'zirrostig/vim-schlepp'
