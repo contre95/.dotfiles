@@ -1,17 +1,19 @@
 #!/bin/sh
 
 
-SCR_PATH="/home/lucas/Scripts"
 
-choices="Cronometer\nMercadolibre\nGoogle\nMercadopago\nGalicia Home Banking\nDuolingo"
+SCR_PATH="/home/lucas/Scripts"
+choices="Galicia Contre\nMercadopago Contre\nGalicia Codelamp\nMercadopago Codelamp"
 
 chosen=$(echo -e "$choices" | dmenu -i -p "Select Layout: " -sb "#FF5733")
 
 case "$chosen" in
-	"Cronometer") surf cronometer.com ;;
-	"Mercadolibre") surf mercadolibre.com.ar;;
-	"Google") surf google.com;;
-	"Mercadopago") surf mercadopago.com.ar;;
-	"Galicia Home Banking") surf https://onlinebanking.bancogalicia.com.ar/login ;;
-	"Duolingo") surf https://www.duolingo.com/learn ;;
+	"Galicia Contre")
+        exec i3-msg 'exec brave --profile-directory="Contre" --app=https://onlinebanking.bancogalicia.com.ar/login';;
+	"Galicia Codelamp")
+        exec i3-msg 'exec brave --profile-directory="Codelamp" --app=https://onlinebanking.bancogalicia.com.ar/login';;
+	"Mercadopago Contre")
+        exec i3-msg 'exec brave --profile-directory="Contre" --app=https://www.mercadopago.com.ar/home';;
+	"Mercadopago Codelamp")
+        exec i3-msg 'exec brave --profile-directory="Codelamp" --app=https://www.mercadopago.com.ar/home';;
 esac

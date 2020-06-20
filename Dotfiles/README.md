@@ -1,7 +1,10 @@
 A note on the `setxkbmap_us_mac` file:
-That's meant to go here : `/usr/share/X11/xkb/symbols/us`
-and it's a modified version of the original so to have accent marks and symbols like "~" like dead keys in MacOs.
+It's a modified version of the original us Keymap file to have accent marks and symbols like "~" with dead keys in MacOs.
+Changing the "Option" key on Mac keyboard for the "Right Alt" on regular keyboards
+`Right Alt+e + [aeiouAEIOU] = áéíóúÁÉÍÓÚ`
+`Right Alt+n + [n] = ñ`
 
-`Left Alt+e + [aeiouAEIOU] = áéíóúÁÉÍÓÚ`
-`Left Alt+n + [n] = ñ`
-
+```
+mv ./setxkbmap_us_mac /usr/share/X11/xkb/symbols/us
+setxkbmap -layout us -variant mac
+```
