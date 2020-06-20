@@ -54,9 +54,11 @@ bindsym $mod+d exec ~/.config/rofi/launchers/launcher.sh
 
 # Screenshot
 bindsym --release $mod+x exec --no-startup-id import ~/Pictures/Screenshots/screenshot-`/bin/date +%Y%m%d-%H:%M:%S`.png
-# Screenshot to clipboard
+
+# Clipboard
 bindsym --release $mod+Shift+x exec maim -s --format=png /dev/stdout | xclip -selection clipboard -t image/png -i
 bindsym --release $mod+Shift+w exec zsh -c "zbarimg --raw -q <(maim -s --format=png /dev/stdout) | xclip -sel clip"
+bindsym $mod+Ctrl+v exec --no-startup-id clipmenu
 
 # Move focus
 bindsym $mod+Left focus left
@@ -103,7 +105,7 @@ bindsym $mod+0 exec $scr_path/dmenu-scr/exit.sh
 #bindsym $mod+Shift+w exec $scr_path/dmenu-scr/wifi.sh
 
 # navigate workspaces next / previous
-bindsym $mod+Ctrl+Right workspace next
+bindsym $mo+Ctrl+Right workspace next
 bindsym $mod+Ctrl+Left workspace prev
 
 # workspaces
@@ -239,6 +241,7 @@ exec_always --no-startup-id feh --randomize --bg-fill ~/Pictures/Wallpapers/*
 exec_always --no-startup-id nvidia-settings -a "[gpu:0]/GPUFanControlState=1" -a "[fan:0]/GPUTargetFanSpeed=50" -a "[fan:1]/GPUTargetFanSpeed=50"
 exec --no-startup-id /usr/bin/setxkbmap -layout us -variant mac
 exec volumeicon
+exec clipmenud
 bar {
 #  mode hide
 #  hidden_state hide
