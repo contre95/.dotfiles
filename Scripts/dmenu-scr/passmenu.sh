@@ -18,9 +18,8 @@ password=$(printf '%s\n' "${password_files[@]}" | dmenu -i -p "Pass  : " "$@"
 [[ -n $password ]] || exit
 
 if [[ $typeit -eq 0 ]]; then
-	pass show -c "$password" 2>/dev/null
+	clipctl disable && pass show -c "$password" 2>/dev/null ; clipctl enable
 else
-	pass show "$password" | { IFS= read -r pass; printf %s "$pass"; } |
-		xdotool type --clearmodifiers --file -
+	clipctl disable && pass show "$password" | { IFS= read -r pass; printf %s "$pass"; } | xdotool type --clearmodifiers --file -; clipctl enable
 fi
 
