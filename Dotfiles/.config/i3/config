@@ -58,8 +58,7 @@ bindsym --release $mod+x exec --no-startup-id import ~/Pictures/Screenshots/scre
 # Clipboard
 bindsym --release $mod+Shift+x exec maim -s --format=png /dev/stdout | xclip -selection clipboard -t image/png -i
 bindsym --release $mod+Shift+w exec zsh -c "zbarimg --raw -q <(maim -s --format=png /dev/stdout) | xclip -sel clip"
-bindsym $mod+Ctrl+v exec --no-startup-id clipmenu
-
+bindsym $mod+Ctrl+v exec --no-startup-id clipmenu -sb "#57C1A0" -fn "JetBrainsMono Nerd Font"
 # Move focus
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
