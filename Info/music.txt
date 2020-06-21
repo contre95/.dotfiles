@@ -746,6 +746,7 @@ Music
 │   ├── OneNote Table Of Contents.onetoc2
 │   ├── The Lion Sleeps Tonight.mp3
 │   ├── The Piano Man.mp3
+│   ├── Vienna.mp3
 │   └── We Didn't Start The Fire.mp3
 ├── Billy Ocean
 │   ├── Caribbean Queen.mp3
@@ -1206,6 +1207,7 @@ Music
 │   ├── Fanky.mp3
 │   ├── Hablando A Tu Corazon.mp3
 │   ├── Inconciente Colectivo.mp3
+│   ├── Influencia.mp3
 │   ├── La maquina de ser feliz.mp3
 │   ├── La Máquina de Ser Feliz.mp3
 │   ├── Lluvia.mp3
@@ -1229,8 +1231,6 @@ Music
 │   ├── Tu Vicio.mp3
 │   ├── Yendo De La Cama Al Living.mp3
 │   └── Yo No Quiero Volverme Tan Loco.mp3
-├── Charly García
-│   └── Influencia.mp3
 ├── Chayanne
 │   ├── Choka Choka.flac
 │   ├── Choka Choka.mp3
@@ -8294,4 +8294,4 @@ Music
     ├── Lowrider.mp3
     └── Sharp Dressed Man.mp3
 
-1355 directories, 6939 files
+1354 directories, 6940 files
