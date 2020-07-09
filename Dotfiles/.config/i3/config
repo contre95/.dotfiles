@@ -95,7 +95,7 @@ bindsym $mod+a exec $scr_path/dmenu-scr/set-display.sh
 bindsym $mod+p exec PASSWORD_STORE_DIR=/home/lucas/Pass $scr_path/dmenu-scr/passmenu.sh
 bindsym $mod+Shift+p exec PASSWORD_STORE_DIR=/home/lucas/Pass $scr_path/dmenu-scr/otpmenu.sh
 bindsym $mod+w exec $scr_path/dmenu-scr/web-light.sh
-bindsym $mod+t exec $scr_path/dmenu-scr/tmux.sh
+bindsym $mod+t exec termite -e ranger
 bindsym $mod+Shift+s exec $scr_path/dmenu-scr/services.sh
 bindsym $mod+Shift+t exec $scr_path/dmenu-scr/tmux-new.sh
 bindsym $mod+m exec $scr_path/dmenu-scr/messages.sh
@@ -236,7 +236,8 @@ mode "resize" {
 
 # Autostart applications
 exec_always --no-startup-id picom --config /home/contre/.config/i3/compton.conf --experimental-backends
-exec_always --no-startup-id feh --randomize --bg-fill ~/Pictures/Wallpapers/*
+#exec_always --no-startup-id feh --randomize --bg-fill ~/Pictures/Wallpapers/*
+exec --no-startup-id nitrogen --restore
 exec_always --no-startup-id nvidia-settings -a "[gpu:0]/GPUFanControlState=1" -a "[fan:0]/GPUTargetFanSpeed=50" -a "[fan:1]/GPUTargetFanSpeed=50"
 exec --no-startup-id /usr/bin/setxkbmap -layout us -variant mac
 exec volumeicon
@@ -319,10 +320,10 @@ mode "$mode_gaps_outer" {
 
 # Sound Settings 
 # Pulse Audio controls
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 1 -3% #increase sound volume
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 1 +3% #increase sound volume
-bindsym XF86AudioNext exec --no-startup-id pactl set-sink-volume 0 +3% #increase sound volume
-bindsym XF86AudioPrev exec --no-startup-id pactl set-sink-volume 0 -3% #increase sound volume
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -3% #increase sound volume
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +3% #increase sound volume
+bindsym XF86AudioNext exec --no-startup-id pactl set-sink-volume 1 +3% #increase sound volume
+bindsym XF86AudioPrev exec --no-startup-id pactl set-sink-volume 1 -3% #increase sound volume
 bindsym XF86AudioMute exec amixer sset 'Master' toggle
 #`bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
 

@@ -15,7 +15,6 @@
 "------------------------------------ Custom key bindings -------------------------------------
 "----------------------------------------------------------------------------------------------
 
-
 "Move lines with Ctrl+arrow
 "-------------------------------------
 inoremap <C-Down> <Esc>:m+<CR>
@@ -165,12 +164,19 @@ set nu
 
 call plug#begin('~/.vim/plugged')
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-  Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+  Plug 'prettier/vim-prettier', { 'do': 'yarn install'}
+  Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+  Plug 'mattn/vim-goimports'
+  Plug 'watzon/vim-edge-template'
   Plug 'terryma/vim-multiple-cursors'
   Plug 'watzon/vim-edge-template'
   Plug 'scrooloose/nerdcommenter'
+  Plug 'scrooloose/nerdtree'
+  Plug 'ryanoasis/vim-devicons'
+  Plug 'Xuyuanp/nerdtree-git-plugin'
+  Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
   Plug 'watzon/vim-edge-template'
-  Plug 'Valloric/YouCompleteMe'
+  "Plug 'Valloric/YouCompleteMe'
   Plug 'itchyny/vim-gitbranch'
   Plug 'zirrostig/vim-schlepp'
   Plug 'itchyny/lightline.vim'
@@ -178,6 +184,8 @@ call plug#begin('~/.vim/plugged')
   Plug 'scrooloose/nerdtree'
   Plug 'junegunn/fzf.vim'
   Plug 'mattn/emmet-vim'
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
   "Plug 'yuki-ycino/fzf-preview.vim'
   "Plug 'ryanoasis/vim-devicons'
   "Plug 'airblade/vim-gitgutter'
@@ -197,8 +205,7 @@ nnoremap <silent> <leader>g :YcmCompleter GoTo<CR>
 
 "NerdCommenter
 "-------------------------------------
-imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
-let g:user_emmet_expandabbr_key='<Tab>'
+let g:user_emmet_install_global = 0
 
 "Multiline Cursor 
 "-------------------------------------
@@ -211,6 +218,23 @@ let g:multi_cursor_next_key            = '<C-n>'
 let g:multi_cursor_prev_key            = '<C-p>'
 let g:multi_cursor_skip_key            = '<C-x>'
 let g:multi_cursor_quit_key            = '<Esc>'
+
+" Coc
+"-------------------------------------
+let g:coc_global_extensions = [
+  \ 'coc-snippets',
+  \ 'coc-pairs',
+  \ 'coc-tsserver',
+  \ 'coc-eslint',
+  \ 'coc-prettier',
+  \ 'coc-json',
+  \ ]
+inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>"
+inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
+
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 "NerdCommenter
 "-------------------------------------
@@ -239,6 +263,9 @@ nnoremap <silent> <Leader>c :call fzf#run({'source': map(split(globpath(&rtp, "c
 "-------------------------------------
 nnoremap <leader>f :NERDTreeToggle<Enter>
 let NERDTreeMapOpenInTab='<ENTER>'
+"autocmd vimenter * NERDTree
+let NERDTreeShowHidden=1
+let g:NERDTreeGitStatusWithFlags = 1
 
 "Lightline
 "-------------------------------------
@@ -247,6 +274,10 @@ let g:lightline = {'colorscheme': 'powerline','active': {'left': [ [ 'mode', 'pa
 "Prettier
 "-------------------------------------
 nmap <C-l> <Plug>(Prettier)
+packloadall
+"let g:prettier#quickfix_enabled = 0
+"let g:prettier#autoformat = 0
+"autocmd BufWritePre,TextChanged,InsertLeave *.js,*.jsx,*.mjs,*.ts,*.g,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
 
 "----------------------------------------------------------------------------------------------
 "------------------------------------ Custom settings for filetype ----------------------------
@@ -286,4 +317,7 @@ if &term =~ '^tmux'
     execute "set <xUp>=\e[1;*A"                                                         
 endif                                                                                   
 
+" Tmux configuration, tmux will send xterm-style keys when its xterm-keys option is on
+"-------------------------------------
+let g:go_highlight_types = 1
 
