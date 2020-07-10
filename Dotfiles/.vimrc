@@ -51,8 +51,12 @@ nnoremap <C-S-Left> <Esc>v
 nnoremap <C-S-Down> <Esc>v
 nnoremap <C-S-Up> <Esc>v
 
-nnoremap <C-Right> w
+
+" Move through words wit Crtl
+""-------------------------------------
+nnoremap <C-Right> e<Right>
 nnoremap <C-Left> b
+
 "Switch tabs with Crtl+Shift+arrows
 "-------------------------------------
 :map <C-w> :close <Enter> :NERDTreeClose <Enter>
@@ -76,7 +80,12 @@ nmap <A-S-Left> gT
 
 " Undo with Crtl+z
 "-------------------------------------
+:map <C-C-z> :redo
+
+" Undo with Crtl+z
+"-------------------------------------
 :map <C-z> u
+
 
 "Find with Ctrl+f
 "-------------------------------------
@@ -121,7 +130,7 @@ colorscheme jellybeans
 
 "Treat end of lines like normal IDE
 "-------------------------------------
-set virtualedit=onemore
+set virtualedit=all
 set sel=exclusive
 
 "Common settings
@@ -140,8 +149,8 @@ set smartindent
 set splitbelow
 set cursorline
 set cursorcolumn
-set splitright
 set autoindent
+set splitright
 set noswapfile
 set nowrap
 set ignorecase
@@ -205,7 +214,9 @@ nnoremap <silent> <leader>g :YcmCompleter GoTo<CR>
 
 "NerdCommenter
 "-------------------------------------
-let g:user_emmet_install_global = 0
+"let g:user_emmet_install_global = 0
+let g:user_emmet_leader_key=','
+
 
 "Multiline Cursor 
 "-------------------------------------
@@ -263,6 +274,7 @@ nnoremap <silent> <Leader>c :call fzf#run({'source': map(split(globpath(&rtp, "c
 "-------------------------------------
 nnoremap <leader>f :NERDTreeToggle<Enter>
 let NERDTreeMapOpenInTab='<ENTER>'
+"let g:NERDTreeQuitOnOpen = 1
 "autocmd vimenter * NERDTree
 let NERDTreeShowHidden=1
 let g:NERDTreeGitStatusWithFlags = 1
@@ -305,8 +317,15 @@ aug terraform_ft_detection
 aug end
 
 "----------------------------------------------------------------------------------------------
-"------------------------------------ Custom settings for filetype ----------------------------
+"------------------------------------ Custom settings ----------------------------
 "----------------------------------------------------------------------------------------------
+
+" Ctrl + S is a common command to terminals to stop updating, it was a way to slow the output so you could read it on terminals that didn't have a scrollback buffer.
+" (If Ctrl+S freezes your terminal, type Ctrl+Q to get it going again [https://vim.fandom.com/wiki/Map_Ctrl-S_to_save_current_or_new_files])
+"-------------------------------------
+noremap <silent> <C-S>          :update<CR>
+vnoremap <silent> <C-S>         <C-C>:update<CR>
+inoremap <silent> <C-S>         <C-O>:update<CR>
 
 " Tmux configuration, tmux will send xterm-style keys when its xterm-keys option is on
 "-------------------------------------
