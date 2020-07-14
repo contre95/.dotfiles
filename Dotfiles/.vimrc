@@ -1,4 +1,3 @@
-"                              
 "                              ___           ___           ___
 "     ___        ___          /__/\         /  /\         /  /\
 "    /__/\      /  /\        |  |::\       /  /::\       /  /:/
@@ -31,7 +30,8 @@ map <S-A-Up> <C-Y><C-Y>
 nmap <C-d> mzyyp`z
 "Copy current line to clipboard
 "-------------------------------------
-vmap <S-C-C> "+y
+vmap <C-C> "+y
+vmap <C-X> "+x
 
 "Shift selection
 "-------------------------------------
@@ -120,12 +120,11 @@ let mapleader = " "
 
 " Color Scheme
 "-------------------------------------
-"set termguicolors 
-let &t_7f = "\<Esc>[38;2;%lu;%lu;%lum"
-let &t_7b = "\<Esc>[48;2;%lu;%lu;%lum"
 set background=dark
-set t_Co=256
+"set t_Co=256
 "colorscheme monokai-phoenix
+"set guifont=JetBrainsMono\ 30
+set background=dark
 colorscheme jellybeans
 
 "Treat end of lines like normal IDE
@@ -175,26 +174,28 @@ call plug#begin('~/.vim/plugged')
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
   Plug 'prettier/vim-prettier', { 'do': 'yarn install'}
   Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-  Plug 'mattn/vim-goimports'
+  Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+  Plug 'Xuyuanp/nerdtree-git-plugin'
   Plug 'watzon/vim-edge-template'
-  Plug 'terryma/vim-multiple-cursors'
   Plug 'watzon/vim-edge-template'
   Plug 'scrooloose/nerdcommenter'
-  Plug 'scrooloose/nerdtree'
-  Plug 'ryanoasis/vim-devicons'
-  Plug 'Xuyuanp/nerdtree-git-plugin'
-  Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
   Plug 'watzon/vim-edge-template'
-  "Plug 'Valloric/YouCompleteMe'
-  Plug 'itchyny/vim-gitbranch'
+  Plug 'ryanoasis/vim-devicons'
+  Plug 'hashivim/vim-terraform'
   Plug 'zirrostig/vim-schlepp'
+  Plug 'itchyny/vim-gitbranch'
   Plug 'itchyny/lightline.vim'
   Plug 'jiangmiao/auto-pairs'
   Plug 'scrooloose/nerdtree'
+  Plug 'scrooloose/nerdtree'
+  Plug 'mattn/vim-goimports'
   Plug 'junegunn/fzf.vim'
   Plug 'mattn/emmet-vim'
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+  "Plug 'chuling/equinusocio-material.vim'
+  "Plug 'Valloric/YouCompleteMe'
+  "Plug 'terryma/vim-multiple-cursors'
   "Plug 'yuki-ycino/fzf-preview.vim'
   "Plug 'ryanoasis/vim-devicons'
   "Plug 'airblade/vim-gitgutter'
@@ -215,7 +216,7 @@ nnoremap <silent> <leader>g :YcmCompleter GoTo<CR>
 "NerdCommenter
 "-------------------------------------
 "let g:user_emmet_install_global = 0
-let g:user_emmet_leader_key=','
+autocmd FileType html,edge,css EmmetInstall
 
 
 "Multiline Cursor 
@@ -264,20 +265,29 @@ let g:Schlepp#trimWS = 0
 
 " Fuzzy Finder (fzf)
 "-------------------------------------
-let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.6 } }
-nnoremap <silent> <Leader>s :call fzf#run({'down': '40%','sink': 'vertical botright split', 'options': ['--layout=reverse', '--info=inline', '--preview', '~/.vim/plugged/fzf.vim/bin/preview.sh {}']})<CR>
+"inoremap <expr> <c-x><c-k> fzf#vim#complete#word({'window': { 'width': 0.2, 'height': 0.9, 'xoffset': 1 }})
+nnoremap <silent> <Leader>s :call fzf#run({'window': { 'width': 0.9, 'height': 0.6 }, 'down': '40%','sink': 'vertical botright split', 'options': ['--layout=reverse', '--info=inline', '--preview', '~/.vim/plugged/fzf.vim/bin/preview.sh {}']})<CR>
 ":map <C-t> :call fzf#run({'down': '40%','sink': 'tabedit', 'options': ['--layout=reverse', '--info=inline', '--preview', '~/.vim/plugged/fzf.vim/bin/preview.sh {}']})<CR>
-:map <C-t> :call fzf#run({'down': '40%','sink': 'tabedit', 'options': ['--info=inline', '--preview', '~/.vim/plugged/fzf.vim/bin/preview.sh {}']})<CR>
+:map <C-t> :call fzf#run({'window': { 'width': 0.9, 'height': 0.6 },'down': '40%','sink': 'tabedit', 'options': ['--info=inline', '--preview', '~/.vim/plugged/fzf.vim/bin/preview.sh {}']})<CR>
 nnoremap <silent> <Leader>c :call fzf#run({'source': map(split(globpath(&rtp, "colors/*.vim"), "\n"),"substitute(fnamemodify(v:val, ':t'), '\\..\\{-}$', '', '')"),'sink': 'colo','options': '+m','right':    30})<CR>
 
 "NERDTree
 "-------------------------------------
 nnoremap <leader>f :NERDTreeToggle<Enter>
 let NERDTreeMapOpenInTab='<ENTER>'
+"let g:NERDTreeWinSize=10
 "let g:NERDTreeQuitOnOpen = 1
 "autocmd vimenter * NERDTree
 let NERDTreeShowHidden=1
 let g:NERDTreeGitStatusWithFlags = 1
+
+"Equinusocio Material
+"-------------------------------------
+"colorscheme equinusocio_material
+"let g:equinusocio_material_bracket_improved = 1
+"let g:equinusocio_material_less = 50
+"let g:equinusocio_material_style = 'pure'
+"let g:equinusocio_material_hide_vertsplit = 1
 
 "Lightline
 "-------------------------------------
@@ -285,8 +295,8 @@ let g:lightline = {'colorscheme': 'powerline','active': {'left': [ [ 'mode', 'pa
 
 "Prettier
 "-------------------------------------
-nmap <C-l> <Plug>(Prettier)
 packloadall
+nmap <C-l> <Plug>(Prettier)
 "let g:prettier#quickfix_enabled = 0
 "let g:prettier#autoformat = 0
 "autocmd BufWritePre,TextChanged,InsertLeave *.js,*.jsx,*.mjs,*.ts,*.g,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
@@ -339,4 +349,8 @@ endif
 " Tmux configuration, tmux will send xterm-style keys when its xterm-keys option is on
 "-------------------------------------
 let g:go_highlight_types = 1
-
+if exists('+termguicolors')
+  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+  set termguicolors
+endif

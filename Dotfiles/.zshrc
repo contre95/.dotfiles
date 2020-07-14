@@ -3,50 +3,36 @@
 ################################################################################################
 export MY_FOLDER='/home/lucas'
 export PASSWORD_STORE_DIR=$MY_FOLDER/Pass
-# You may need to manually set your language environment b4 anything else
 export LANG="en_US.UTF-8"
 export LC_ALL=en_US.UTF-8
 export TERM="tmux-256color"
 
 ################################################################################################
-# Severla programs configuration
-################################################################################################
-# The fuck (terminal typo fixer)
-eval $(thefuck --alias)
-
-#Node Version Manager
-export NVM_DIR="${XDG_CONFIG_HOME/:-$HOME/.}nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-source ~/.nvm/nvm.sh
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/home/contre/google-cloud-sdk/path.zsh.inc' ]; then . '/home/contre/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/home/contre/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/contre/google-cloud-sdk/completion.zsh.inc'; fi
-
-# The next line enables autojump
-[[ -s /home/contre/.cache/yay/autojump-git/pkg/autojump-git/etc/profile.d/autojump.sh  ]] && source /home/contre/.cache/yay/autojump-git/pkg/autojump-git/etc/profile.d/autojump.sh                           
-autoload -U compinit && compinit -u
-
-# Fuzzy Finder (aka FZF)
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-
-################################################################################################
 # Oh-my-zsh
 ################################################################################################
-
 # Path to your oh-my-zsh installation.
 #export ZSH="/home/contre/.oh-my-zsh"
 #source $ZSH/oh-my-zsh.sh
 #ZSH_THEME="robbyrussell"
 
+################################################################################################
+# Several programs configuration
+################################################################################################
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/contre/google-cloud-sdk/path.zsh.inc' ]; then . '/home/contre/google-cloud-sdk/path.zsh.inc'; fi
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/contre/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/contre/google-cloud-sdk/completion.zsh.inc'; fi
+# Fuzzy Finder (aka FZF)
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# The fuck (terminal typo fixer)
+eval $(thefuck --alias)
+# The next line enables autojump
+[[ -s /home/contre/.cache/yay/autojump-git/pkg/autojump-git/etc/profile.d/autojump.sh  ]] && source /home/contre/.cache/yay/autojump-git/pkg/autojump-git/etc/profile.d/autojump.sh                           
+autoload -U compinit && compinit -u
 
 ################################################################################################
 # Antigen
 ################################################################################################
-
 source ~/.zsh/antigen.zsh
 source ~/.zsh/.theme
 antigen use oh-my-zsh
@@ -66,11 +52,10 @@ antigen bundle python
 #antigen bundle web-search
 antigen apply
 
+
 ################################################################################################
 # User configuration
 ################################################################################################
-
-
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$HOME/.composer/vendor/bin:/usr/bin:/usr/local/go/bin:/$MY_FOLDER/Scripts/meli-scr:$PATH$PATH
 
@@ -90,10 +75,12 @@ fi
 ################################################################################################
 #if [ "$TMUX" = "" ]; then tmux; fi
 
+
 ################################################################################################
 # SSH Configuration 
 ################################################################################################
 export SSH_KEY_PATH="~/.ssh/rsa_id"
+
 
 ################################################################################################
 # SSH Configuration with GPG
@@ -102,10 +89,10 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
 #gpgconf --launch gpg-agent
 
+
 ################################################################################################
 # Alias 
 ################################################################################################
-
 alias mf="cd $MY_FOLDER"
 alias xf="mpg123 --quiet $MY_FOLDER/Library/xfiles.mp3"
 alias qn="mpg123 --quiet $MY_FOLDER/Library/quienteconoce.mp3"
@@ -116,6 +103,7 @@ alias bf="mpg123 --quiet $MY_FOLDER/Library/back2thefuture.mp3"
 alias ed="mpg123 --quiet $MY_FOLDER/Library/circus.mp3"
 alias dm="mpg123 --quiet $MY_FOLDER/Library/deployersmal.mp3"
 alias copy='xclip -sel clip'
+
 
 ##############################################################################
 # History Configuration
@@ -133,3 +121,30 @@ setopt    incappendhistory  #Immediately append to the history file, not just wh
 ##############################################################################
 # Just in case the unfortunate way Mac has to "Supr" does not work on your terminal.. then here's the fix
 #bindkey "^[[3~" delete-char
+
+################################################################################################
+# Languae environments setup
+################################################################################################
+#Node version manager (nvm)
+export NVM_DIR="${XDG_CONFIG_HOME/:-$HOME/.}nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+source ~/.nvm/nvm.sh
+# Python version manager (Pyenv)
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
