@@ -120,12 +120,11 @@ let mapleader = " "
 
 " Color Scheme
 "-------------------------------------
-set background=dark
-"set t_Co=256
+set t_Co=256
 "colorscheme monokai-phoenix
 "set guifont=JetBrainsMono\ 30
-set background=dark
 colorscheme jellybeans
+syntax on
 
 "Treat end of lines like normal IDE
 "-------------------------------------
@@ -139,6 +138,7 @@ set expandtab ts=4 sw=4 ai
 filetype plugin indent on
 set background=dark
 set encoding=utf-8
+set undodir=~/.vim/undodir
 set relativenumber
 set tabpagemax=15 
 set softtabstop=2
@@ -158,6 +158,7 @@ set hlsearch
 set incsearch
 set wildmenu
 set tabstop=4
+
 set t_Co=256
 set mouse=a
 set number
@@ -172,14 +173,15 @@ set nu
 
 call plug#begin('~/.vim/plugged')
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-  Plug 'prettier/vim-prettier', { 'do': 'yarn install'}
+  "Plug 'prettier/vim-prettier', { 'do': 'yarn install'}
+  Plug 'prettier/vim-prettier', {
+  \ 'do': 'yarn install',
+  \ 'for': ['python'] }
   Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
   Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
   Plug 'Xuyuanp/nerdtree-git-plugin'
   Plug 'watzon/vim-edge-template'
-  Plug 'watzon/vim-edge-template'
   Plug 'scrooloose/nerdcommenter'
-  Plug 'watzon/vim-edge-template'
   Plug 'ryanoasis/vim-devicons'
   Plug 'hashivim/vim-terraform'
   Plug 'zirrostig/vim-schlepp'
@@ -187,7 +189,8 @@ call plug#begin('~/.vim/plugged')
   Plug 'itchyny/lightline.vim'
   Plug 'jiangmiao/auto-pairs'
   Plug 'scrooloose/nerdtree'
-  Plug 'scrooloose/nerdtree'
+  Plug 'unblevable/quick-scope'
+  Plug 'justinmk/vim-sneak'
   Plug 'mattn/vim-goimports'
   Plug 'junegunn/fzf.vim'
   Plug 'mattn/emmet-vim'
@@ -209,9 +212,13 @@ call plug#end()
 "------------------------------------ Plugins configuration -----------------------------------
 "----------------------------------------------------------------------------------------------
 
+"Sneak 
+"-------------------------------------
+let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
+
 "YouCompleteMe
 "-------------------------------------
-nnoremap <silent> <leader>g :YcmCompleter GoTo<CR>
+"nnoremap <silent> <leader>g :YcmCompleter GoTo<CR>
 
 "NerdCommenter
 "-------------------------------------
@@ -233,6 +240,11 @@ let g:multi_cursor_quit_key            = '<Esc>'
 
 " Coc
 "-------------------------------------
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
 let g:coc_global_extensions = [
   \ 'coc-snippets',
   \ 'coc-pairs',
@@ -295,8 +307,10 @@ let g:lightline = {'colorscheme': 'powerline','active': {'left': [ [ 'mode', 'pa
 
 "Prettier
 "-------------------------------------
-packloadall
-nmap <C-l> <Plug>(Prettier)
+command! -nargs=0 Prettier :CocCommand prettier.formatFile
+
+"packloadall
+"nmap <C-l> <Plug>(Prettier)
 "let g:prettier#quickfix_enabled = 0
 "let g:prettier#autoformat = 0
 "autocmd BufWritePre,TextChanged,InsertLeave *.js,*.jsx,*.mjs,*.ts,*.g,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync

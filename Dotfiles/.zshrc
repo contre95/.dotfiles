@@ -131,20 +131,6 @@ export NVM_DIR="${XDG_CONFIG_HOME/:-$HOME/.}nvm"
 source ~/.nvm/nvm.sh
 # Python version manager (Pyenv)
 eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#eval "$(pyenv virtualenv-init -)"
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
