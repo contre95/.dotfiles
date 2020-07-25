@@ -140,9 +140,9 @@ set background=dark
 set encoding=utf-8
 set undodir=~/.vim/undodir
 set relativenumber
-set tabpagemax=15 
-set softtabstop=2
-set laststatus=2
+set tabpagemax=4 
+set softtabstop=4
+set laststatus=4
 set shiftwidth=4
 set smartindent
 set splitbelow

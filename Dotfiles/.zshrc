@@ -1,7 +1,7 @@
 ################################################################################################
 # Contre env Variables
 ################################################################################################
-export MY_FOLDER='/home/lucas'
+export MY_FOLDER="/home/canus"
 export PASSWORD_STORE_DIR=$MY_FOLDER/Pass
 export LANG="en_US.UTF-8"
 export LC_ALL=en_US.UTF-8
