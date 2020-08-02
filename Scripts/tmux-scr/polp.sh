@@ -44,7 +44,7 @@ function polptmux {
     tmux send-keys -t Polp:2 "cd $BASE && vim" C-m
 	tmux send-keys -t Polp:4 "cd $BASE && flask run" C-m
     tmux split-window -v -t Polp:4 "cd $BASE && docker-compose up -d mysql" && sleep 5
-	tmux send-keys -t Polp:3 "cd $BASE && mycli -P 3308 -u codelamp -pcodelamp --database clims && clear" C-m
+	tmux send-keys -t Polp:3 "cd $BASE && mycli -P 3308 -u polpuser -ppolpsecret --database clims && clear" C-m
 
     tmux select-window -t Polp:1
     tmux -u attach-session -t Polp
