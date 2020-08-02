@@ -1,4 +1,5 @@
-PROJECT_FOLDER=/home/lucas/Code/CodeLamp/sys-codelamp-ims
+source ~/.zshrc
+PROJECT_FOLDER=$MY_FOLDER/Code/CodeLamp/sys-codelamp-ims
 
 function codelamptmux {
     BASE="$PROJECT_FOLDER"

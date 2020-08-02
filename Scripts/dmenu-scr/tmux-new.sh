@@ -1,11 +1,14 @@
 #!/usr/bin/zsh
-choices=" Codelamp\nﴬ Notes\nﳳ Pass\n Server\n Raspi\n Music"
+choices="ﰁ Polp\n Codelamp\nﴬ Notes\nﳳ Pass\n Server\n Raspi\n Music"
 var=$(echo -e $choices | dmenu -i -p "Exit menu: " -sb "#2f8a47" -fn "JetBrainsMono Nerd Font") 
-TMUX_SCRIPTS=/home/lucas/Scripts/tmux-scr
+TMUX_SCRIPTS=/home/canus/Scripts/tmux-scr
 
 case $var in
+    'ﰁ Polp') 
+    exec termite -e "zsh $TMUX_SCRIPTS/polp.sh";;
+    
     ' Codelamp') 
-    exec termite -e "$TMUX_SCRIPTS/ims.sh";;
+    exec termite -e "zsh $TMUX_SCRIPTS/ims.sh";;
     
     'ﴬ Notes')
     exec termite -e "zsh $TMUX_SCRIPTS/notes.sh";;

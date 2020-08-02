@@ -1,7 +1,6 @@
-#!/bin/sh
-
-
-SCR_PATH="/home/lucas/Scripts"
+#!/bin/zsh
+source ~/.zshrc
+SCR_PATH=$MY_FOLDER/Scripts
 
 choices="Single\nDual Up Inverted\nDual Up\nManual"
 

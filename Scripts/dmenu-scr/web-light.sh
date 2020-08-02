@@ -1,8 +1,6 @@
-#!/bin/sh
-
-
-
-SCR_PATH="/home/lucas/Scripts"
+#!/bin/zsh
+source ~/.zshrc
+SCR_PATH=$MY_FOLDER/Scripts
 choices="Galicia Contre\nMercadopago Contre\nGalicia Codelamp\nMercadopago Codelamp"
 
 chosen=$(echo -e "$choices" | dmenu -i -p "Select Layout: " -sb "#FF5733")

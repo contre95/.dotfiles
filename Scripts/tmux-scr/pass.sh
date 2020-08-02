@@ -1,4 +1,5 @@
-PROJECT_FOLDER=/home/lucas/Pass
+source ~/.zshrc
+PROJECT_FOLDER=$MY_FOLDER/Pass
 
 function passwordstore {
     BASE="$PROJECT_FOLDER"
