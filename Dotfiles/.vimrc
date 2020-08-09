@@ -21,6 +21,10 @@ noremap <C-Up> <Esc>:m-2<CR>
 nnoremap <C-Down> :m+<CR>
 nnoremap <C-Up> :m-2<CR>
 
+" Prevents movis cursor con Esc
+inoremap <silent> <Esc> <C-O>:stopinsert<CR>
+
+
 " Scroll like normal ide with Shift + Arrows
 map <S-A-Down> <C-E><C-E>
 map <S-A-Up> <C-Y><C-Y>
@@ -98,7 +102,7 @@ nmap <A-S-Left> gT
 "Switch buffers with Crtl+Atl+arrows
 "-------------------------------------
 nnoremap <silent> <C-A-Right> <C-w>l
-nnoremap <silent> <C-A-Left> <C-w>h
+nnoremap <silent> <C-A-Left> <C-w>h 
 nnoremap <silent> <C-A-Down> <C-w>j
 nnoremap <silent> <C-A-Up> <C-w>k
 
@@ -142,7 +146,7 @@ set undodir=~/.vim/undodir
 set relativenumber
 set tabpagemax=4 
 set softtabstop=4
-set laststatus=4
+set laststatus=2
 set shiftwidth=4
 set smartindent
 set splitbelow
@@ -154,11 +158,11 @@ set noswapfile
 set nowrap
 set ignorecase
 set showmatch	
+set smarttab
 set hlsearch
 set incsearch
 set wildmenu
 set tabstop=4
-
 set t_Co=256
 set mouse=a
 set number
@@ -362,9 +366,9 @@ endif
 
 " Tmux configuration, tmux will send xterm-style keys when its xterm-keys option is on
 "-------------------------------------
-let g:go_highlight_types = 1
-if exists('+termguicolors')
-  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-  set termguicolors
-endif
+"let g:go_highlight_types = 1
+"if exists('+termguicolors')
+  "let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  "let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+  "set termguicolors
+"endif

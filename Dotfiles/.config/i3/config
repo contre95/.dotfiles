@@ -92,7 +92,8 @@ bindsym $mod+f fullscreen toggle
 bindsym $mod+Shift+f floating toggle
 
 # Monitors configurations
-set $firstmonitor HDMI1
+set $firstmonitor HDMI-0
+set $secondmonitor DP-5
 
 bindsym $mod+a exec $scr_path/dmenu-scr/set-display.sh
 bindsym $mod+p exec PASSWORD_STORE_DIR=$my_folder/Pass $scr_path/dmenu-scr/passmenu.sh
