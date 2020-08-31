@@ -10,8 +10,6 @@ case $var in
     ' Codelamp') 
     exec termite -e "zsh $TMUX_SCRIPTS/ims.sh";;
     
-    'ﴬ Notes')
-    exec termite -e "zsh $TMUX_SCRIPTS/notes.sh";;
     
     ' Music')
     exec termite -e "zsh $TMUX_SCRIPTS/music.sh";;
