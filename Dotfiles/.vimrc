@@ -13,7 +13,8 @@
 "----------------------------------------------------------------------------------------------
 "------------------------------------ Custom key bindings -------------------------------------
 "----------------------------------------------------------------------------------------------
-
+let g:file_template_default = {}
+let g:file_template_default['R'] = 'skeleton'
 "Move lines with Ctrl+arrow
 "-------------------------------------
 inoremap <C-Down> <Esc>:m+<CR>
@@ -21,8 +22,8 @@ noremap <C-Up> <Esc>:m-2<CR>
 nnoremap <C-Down> :m+<CR>
 nnoremap <C-Up> :m-2<CR>
 
-" Prevents movis cursor con Esc
-inoremap <silent> <Esc> <C-O>:stopinsert<CR>
+ "Prevents movis cursor con Esc
+"inoremap <silent> <Esc> <C-O>:stopinsert<CR>
 
 
 " Scroll like normal ide with Shift + Arrows
@@ -124,7 +125,7 @@ let mapleader = " "
 
 " Color Scheme
 "-------------------------------------
-set t_Co=256
+"set t_Co=256
 "colorscheme monokai-phoenix
 "set guifont=JetBrainsMono\ 30
 colorscheme jellybeans
@@ -152,20 +153,19 @@ set smartindent
 set splitbelow
 set cursorline
 set cursorcolumn
-
 set pastetoggle=<F9>
 set autoindent
 set splitright
 set noswapfile
+set nocompatible
 set nowrap
 set ignorecase
 set showmatch	
-set smarttab
+"set smarttab
 set hlsearch
 set incsearch
 set wildmenu
 set tabstop=4
-set t_Co=256
 set mouse=a
 set number
 set bs=2
@@ -183,7 +183,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install',
   \ 'for': ['python'] }
-  Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+  "Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
   Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
   Plug 'Xuyuanp/nerdtree-git-plugin'
   Plug 'watzon/vim-edge-template'
@@ -197,7 +197,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'scrooloose/nerdtree'
   Plug 'unblevable/quick-scope'
   Plug 'justinmk/vim-sneak'
-  Plug 'mattn/vim-goimports'
+  "Plug 'mattn/vim-goimports'
   Plug 'junegunn/fzf.vim'
   Plug 'mattn/emmet-vim'
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -284,9 +284,12 @@ let g:Schlepp#trimWS = 0
 " Fuzzy Finder (fzf)
 "-------------------------------------
 "inoremap <expr> <c-x><c-k> fzf#vim#complete#word({'window': { 'width': 0.2, 'height': 0.9, 'xoffset': 1 }})
-nnoremap <silent> <Leader>s :call fzf#run({'window': { 'width': 0.9, 'height': 0.6 }, 'down': '40%','sink': 'vertical botright split', 'options': ['--layout=reverse', '--info=inline', '--preview', '~/.vim/plugged/fzf.vim/bin/preview.sh {}']})<CR>
 ":map <C-t> :call fzf#run({'down': '40%','sink': 'tabedit', 'options': ['--layout=reverse', '--info=inline', '--preview', '~/.vim/plugged/fzf.vim/bin/preview.sh {}']})<CR>
 :map <C-t> :call fzf#run({'window': { 'width': 0.9, 'height': 0.6 },'down': '40%','sink': 'tabedit', 'options': ['--info=inline', '--preview', '~/.vim/plugged/fzf.vim/bin/preview.sh {}']})<CR>
+nnoremap <silent> <Leader>t  :call fzf#run({'window': { 'width': 0.9, 'height': 0.6 },'down': '40%','sink': 'tabedit', 'options': ['--info=inline', '--preview', '~/.vim/plugged/fzf.vim/bin/preview.sh {}']})<CR>
+nnoremap <silent> <Leader>s :call fzf#run({'window': { 'width': 0.9, 'height': 0.6 }, 'down': '40%','sink': 'vertical botright split', 'options': ['--layout=reverse', '--info=inline', '--preview', '~/.vim/plugged/fzf.vim/bin/preview.sh {}']})<CR>
+nnoremap <silent> <Leader>v :call fzf#run({'window': { 'width': 0.9, 'height':0.6 }, 'down': '40%','sink': 'botright split', 'options': ['--layout=reverse', '--info=inline', '--preview', '~/.vim/plugged/fzf.vim/bin/preview.sh {}']})<CR>
+nnoremap <silent> <Leader>o  :call fzf#run({'window': { 'width': 0.9, 'height': 0.6 },'down': '40%','sink': 'open', 'options': ['--info=inline', '--preview', '~/.vim/plugged/fzf.vim/bin/preview.sh {}']})<CR> 
 nnoremap <silent> <Leader>c :call fzf#run({'source': map(split(globpath(&rtp, "colors/*.vim"), "\n"),"substitute(fnamemodify(v:val, ':t'), '\\..\\{-}$', '', '')"),'sink': 'colo','options': '+m','right':    30})<CR>
 
 "NERDTree
@@ -368,9 +371,9 @@ endif
 
 " Tmux configuration, tmux will send xterm-style keys when its xterm-keys option is on
 "-------------------------------------
-let g:go_highlight_types = 1
-if exists('+termguicolors')
-  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-  set termguicolors
-endif
+"let g:go_highlight_types = 1
+"if exists('+termguicolors')
+  "let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  "let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+  "set termguicolors
+"endif
