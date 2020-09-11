@@ -685,6 +685,8 @@ Music
 │   └── I Want The World To Stop.mp3
 ├── Bender
 │   └── Cocaine Model.mp3
+├── BENEE
+│   └── Supalonely.mp3
 ├── Benjamin Walker
 │   └── Benjamin Walker - Tu valor
 │       └── Tu valor.mp3
@@ -3061,6 +3063,8 @@ Music
 │   ├── Big Boss.mp3
 │   ├── Flying Spaghetti Monster.mp3
 │   └── Tetris.mp3
+├── Doja Cat
+│   └── Say So.mp3
 ├── Dolly Parton
 │   └── Walking On Sunshine.mp3
 ├── Dolores O'Riordan
@@ -5619,6 +5623,7 @@ Music
 │   ├── Como Ali.mp3
 │   ├── Desde Lejos No Se Ve.mp3
 │   ├── El Farolito.mp3
+│   ├── Fijate.mp3
 │   ├── Marado.mp3
 │   ├── Me Gustas Mucho.mp3
 │   ├── Muy Despacito.mp3
@@ -6797,6 +6802,8 @@ Music
 │   ├── Too Young.mp3
 │   ├── White Iverson.mp3
 │   └── Wow..mp3
+├── Powfu
+│   └── death bed (coffee for your head).mp3
 ├── Prefab Sprout
 │   └── Cars And Girls.mp3
 ├── Prezioso
@@ -8324,4 +8331,4 @@ Music
     ├── Lowrider.mp3
     └── Sharp Dressed Man.mp3
 
-1360 directories, 6964 files
+1363 directories, 6968 files
