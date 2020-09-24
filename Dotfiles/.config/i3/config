@@ -1,8 +1,7 @@
 set $mod Mod4
 new_window pixel 1
 new_float normal
-# Set variables
-
+#Set variables
 set $scr_path /home/canus/Scripts
 set $my_folder /home/canus
 #hide_edge_borders none
@@ -93,8 +92,10 @@ bindsym $mod+f fullscreen toggle
 bindsym $mod+Shift+f floating toggle
 
 # Monitors configurations
-set $firstmonitor HDMI-0
-set $secondmonitor DP-5
+exec xrandr --output DP-0 --off --output DP-1 --off --output HDMI-0 --mode 2560x1080 --pos 0x483 --rotate normal --output DP-2 --off --output DP-3 --off --output DP-4 --off --output DP-5 --mode 1920x1080 --pos 2560x0 --rotate right
+exec nitrogen --restore
+#set $firstmonitor HDMI-0
+#set $secondmonitor DP-5
 
 bindsym $mod+a exec $scr_path/dmenu-scr/set-display.sh
 bindsym $mod+p exec PASSWORD_STORE_DIR=$my_folder/Pass $scr_path/dmenu-scr/passmenu.sh
@@ -121,7 +122,9 @@ set $ws4 4
 set $ws5 5
 set $ws6 6
 set $ws7 7
-set $ws8 "Messages"
+set $ws8 8
+set $ws9 9
+set $wsMsg Msg
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -132,6 +135,7 @@ bindsym $mod+5 workspace $ws5
 bindsym $mod+6 workspace $ws6
 bindsym $mod+7 workspace $ws7
 bindsym $mod+8 workspace $ws8
+bindsym $mod+9 workspace $ws9
 
 # Move focused container to workspace
 bindsym $mod+Ctrl+1 move container to workspace $ws1
@@ -142,6 +146,7 @@ bindsym $mod+Ctrl+5 move container to workspace $ws5
 bindsym $mod+Ctrl+6 move container to workspace $ws6
 bindsym $mod+Ctrl+7 move container to workspace $ws7
 bindsym $mod+Ctrl+8 move container to workspace $ws8
+bindsym $mod+Ctrl+9 move container to workspace $ws9
 
 # Move to workspace with focused container
 bindsym $mod+Shift+1 move container to workspace $ws1; workspace $ws1
@@ -152,16 +157,17 @@ bindsym $mod+Shift+5 move container to workspace $ws5; workspace $ws5
 bindsym $mod+Shift+6 move container to workspace $ws6; workspace $ws6
 bindsym $mod+Shift+7 move container to workspace $ws7; workspace $ws7
 bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
+bindsym $mod+Shift+9 move container to workspace $ws9; workspace $ws9
 
-assign [class="TelegramDesktop"] $ws8
-assign [class="Signal"] $ws8
-assign [class="Slack"] $ws8
-assign [instance="discord"] $ws8
-assign [instance="messenger.com"] $ws8
-assign [instance="hangouts.google.com__call"] $ws8
-assign [instance="meet.jit.si"] $ws8
-assign [instance="web.whatsapp.com"] $ws8
-assign [instance="gmail.com"] $ws8
+assign [class="TelegramDesktop"] $wsMsg
+assign [class="Signal"] $wsMsg
+assign [class="Slack"] $wsMsg
+assign [instance="discord"] $wsMsg
+assign [instance="messenger.com"] $wsMsg
+assign [instance="hangouts.google.com__call"] $wsMsg
+assign [instance="meet.jit.si"] $wsMsg
+assign [instance="web.whatsapp.com"] $wsMsg
+assign [instance="gmail.com"] $wsMsg
 
 
 
@@ -243,11 +249,12 @@ mode "resize" {
 # Autostart applications
 exec_always --no-startup-id picom --config /home/contre/.config/i3/compton.conf --experimental-backends
 #exec_always --no-startup-id feh --randomize --bg-fill ~/Pictures/Wallpapers/*
-exec --no-startup-id nitrogen --restore
 exec_always --no-startup-id nvidia-settings -a "[gpu:0]/GPUFanControlState=1" -a "[fan:0]/GPUTargetFanSpeed=50" -a "[fan:1]/GPUTargetFanSpeed=50"
 exec --no-startup-id /usr/bin/setxkbmap -layout us -variant mac
 exec volumeicon
 exec clipmenud
+
+
 bar {
 #  mode hide
 #  hidden_state hide
