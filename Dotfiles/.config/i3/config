@@ -138,15 +138,15 @@ bindsym $mod+8 workspace $ws8
 bindsym $mod+9 workspace $ws9
 
 # Move focused container to workspace
-bindsym $mod+Ctrl+1 move container to workspace $ws1
-bindsym $mod+Ctrl+2 move container to workspace $ws2
-bindsym $mod+Ctrl+3 move container to workspace $ws3
-bindsym $mod+Ctrl+4 move container to workspace $ws4
-bindsym $mod+Ctrl+5 move container to workspace $ws5
-bindsym $mod+Ctrl+6 move container to workspace $ws6
-bindsym $mod+Ctrl+7 move container to workspace $ws7
-bindsym $mod+Ctrl+8 move container to workspace $ws8
-bindsym $mod+Ctrl+9 move container to workspace $ws9
+#bindsym $mod+Ctrl+1 move container to workspace $ws1
+#bindsym $mod+Ctrl+2 move container to workspace $ws2
+#bindsym $mod+Ctrl+3 move container to workspace $ws3
+#bindsym $mod+Ctrl+4 move container to workspace $ws4
+#bindsym $mod+Ctrl+5 move container to workspace $ws5
+#bindsym $mod+Ctrl+6 move container to workspace $ws6
+#bindsym $mod+Ctrl+7 move container to workspace $ws7
+#bindsym $mod+Ctrl+8 move container to workspace $ws8
+#bindsym $mod+Ctrl+9 move container to workspace $ws9
 
 # Move to workspace with focused container
 bindsym $mod+Shift+1 move container to workspace $ws1; workspace $ws1
@@ -292,6 +292,7 @@ gaps inner 10
 gaps outer -4
 
 smart_gaps on
+set $thick 16
 
 # Press $mod+Shift+g to enter the gap mode. Choose o or i for modifying outer/inner gaps. Press one of + / - (in-/decrement for current workspace) or 0 (remove gaps for current workspace). If you also press Shift with these keys, the change will be global for all workspaces.
 set $mode_gaps Gaps: (o) outer, (i) inner

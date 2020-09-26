@@ -88,7 +88,9 @@ endif
 " - g:jellybeans_use_gui_italics    (default = 1)
 " - g:jellybeans_use_term_italics   (default = 0)
 
-let s:background_color = "0C0C0C"
+let s:background_color = "1B1D1E"
+"let s:background_color = "17191A"
+"let s:background_color = "0C0C0C"
 "let s:background_color = "212121"
 
 if exists("g:jellybeans_overrides")
