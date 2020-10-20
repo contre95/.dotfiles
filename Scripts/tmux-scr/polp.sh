@@ -1,5 +1,5 @@
 source ~/.zshrc
-PROJECT_FOLDER=$MY_FOLDER/Code/MeliCode/polp/polp-fiction
+PROJECT_FOLDER=$MY_FOLDER/Code/MeliCode/polp-fiction
 
 function polptmux {
     BASE="$PROJECT_FOLDER"
