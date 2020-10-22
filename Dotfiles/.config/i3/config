@@ -92,7 +92,9 @@ bindsym $mod+f fullscreen toggle
 bindsym $mod+Shift+f floating toggle
 
 # Monitors configurations
+#exec xrandr --output DP-0 --off --output DP-1 --off --output HDMI-0 --primary --mode 2560x1080 --pos 0x420 --rotate normal --output DP-2 --off --output DP-3 --off --output DP-4 --off --output DP-5 --mode 1920x1080 --pos 2560x0 --rotate right
 exec xrandr --output DP-0 --off --output DP-1 --off --output HDMI-0 --mode 2560x1080 --pos 0x483 --rotate normal --output DP-2 --off --output DP-3 --off --output DP-4 --off --output DP-5 --mode 1920x1080 --pos 2560x0 --rotate right
+
 exec nitrogen --restore
 #set $firstmonitor HDMI-0
 #set $secondmonitor DP-5
@@ -100,6 +102,7 @@ exec nitrogen --restore
 bindsym $mod+a exec $scr_path/dmenu-scr/set-display.sh
 bindsym $mod+p exec PASSWORD_STORE_DIR=$my_folder/Pass $scr_path/dmenu-scr/passmenu.sh
 bindsym $mod+Shift+p exec PASSWORD_STORE_DIR=$my_folder/Pass $scr_path/dmenu-scr/otpmenu.sh
+bindsym $mod+Ctrl+p exec scrcpy
 bindsym $mod+w exec $scr_path/dmenu-scr/web-light.sh
 #bindsym $mod+t exec termite -e ranger
 bindsym $mod+Shift+s exec $scr_path/dmenu-scr/services.sh
@@ -292,7 +295,6 @@ gaps inner 10
 gaps outer -4
 
 smart_gaps on
-set $thick 16
 
 # Press $mod+Shift+g to enter the gap mode. Choose o or i for modifying outer/inner gaps. Press one of + / - (in-/decrement for current workspace) or 0 (remove gaps for current workspace). If you also press Shift with these keys, the change will be global for all workspaces.
 set $mode_gaps Gaps: (o) outer, (i) inner

@@ -783,6 +783,9 @@ Music
 │   ├── Rock Your Body.mp3
 │   ├── Time Of My Life.mp3
 │   └── Where Is The Love.mp3
+├── Black Pumas
+│   ├── Colors.lrc
+│   └── Colors.mp3
 ├── Black Sabbath
 │   ├── Iron Man.mp3
 │   └── Paranoid.mp3
@@ -1728,6 +1731,8 @@ Music
 │   ├── Listen To Your Heart.mp3
 │   ├── So Happy Together.mp3
 │   └── Titanic Techno Remix.mp3
+├── Diana Gordon
+│   └── Hot Grits.mp3
 ├── Diana King
 │   ├── Forever And Ever.mp3
 │   └── I Say A Little Prayer For You.mp3
@@ -5198,6 +5203,8 @@ Music
 ├── Kid Cudi
 │   ├── Pursuit Of Happiness.mp3
 │   └── Pursuit Of Happiness (Steve Aoki).mp3
+├── Kid Francescoli
+│   └── Moon (And It Went Like).mp3
 ├── Kiesza
 │   └── Hideaway.mp3
 ├── Kill Paris
@@ -6581,6 +6588,9 @@ Music
 ├── Peter Frampton
 │   ├── Baby I Like Your Way.mp3
 │   └── Show Me The Way.mp3
+├── Peter Gabriel
+│   ├── Sledgehammer.lrc
+│   └── Sledgehammer.mp3
 ├── Peter Green
 │   ├── Albatross.mp3
 │   ├── Dust My Broom.mp3
@@ -7415,6 +7425,9 @@ Music
 ├── Sprax
 │   ├── Robot Show.mp3
 │   └── The Odyssey.mp3
+├── Stardust
+│   ├── Music Sounds Better With You (Radio Edit).lrc
+│   └── Music Sounds Better With You (Radio Edit).mp3
 ├── Starsailor
 │   ├── Four To The Floor.mp3
 │   └── Four To The Floor (Remix).mp3
@@ -8319,4 +8332,4 @@ Music
     ├── Lowrider.mp3
     └── Sharp Dressed Man.mp3
 
-1364 directories, 6955 files
+1369 directories, 6963 files

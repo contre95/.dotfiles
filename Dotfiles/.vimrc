@@ -191,6 +191,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'ryanoasis/vim-devicons'
   Plug 'hashivim/vim-terraform'
   Plug 'zirrostig/vim-schlepp'
+  Plug 'dbmrq/vim-ditto'
   Plug 'itchyny/vim-gitbranch'
   Plug 'itchyny/lightline.vim'
   Plug 'jiangmiao/auto-pairs'
@@ -270,7 +271,6 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 "-------------------------------------
 nmap <C-_> <Plug>NERDCommenterToggle <Down>
 vmap <C-_> <Plug>NERDCommenterToggle<CR>gv
-autocmd BufWinEnter * NERDTreeMirror
 
 "Schleep indention
 "-------------------------------------
