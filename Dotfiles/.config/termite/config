@@ -1,7 +1,6 @@
 [options]
 
-font= JetBrains Mono 11
-font= JetBrainsMonoMedium Nerd Font 11
+font= JetBrainsMono Nerd Font 11
 cursor_shape = ibeam
 #cursor_shape = block
 #allow_bold = true
