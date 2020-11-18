@@ -183,8 +183,8 @@ call plug#begin('~/.vim/plugged')
   Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install',
   \ 'for': ['python'] }
-  "Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-  Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+  Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+  "Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
   Plug 'Xuyuanp/nerdtree-git-plugin'
   Plug 'watzon/vim-edge-template'
   Plug 'scrooloose/nerdcommenter'
@@ -198,7 +198,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'scrooloose/nerdtree'
   Plug 'unblevable/quick-scope'
   Plug 'justinmk/vim-sneak'
-  "Plug 'mattn/vim-goimports'
   Plug 'junegunn/fzf.vim'
   Plug 'mattn/emmet-vim'
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -235,19 +234,25 @@ autocmd FileType html,edge,css EmmetInstall
 
 "Multiline Cursor 
 "-------------------------------------
-let g:multi_cursor_use_default_mapping=0
-let g:multi_cursor_start_word_key      = 'g<C-n>'
-let g:multi_cursor_select_all_word_key = '<A-n>'
-let g:multi_cursor_start_key           = '<C-n>'
-let g:multi_cursor_select_all_key      = 'g<A-n>'
-let g:multi_cursor_next_key            = '<C-n>'
-let g:multi_cursor_prev_key            = '<C-p>'
-let g:multi_cursor_skip_key            = '<C-x>'
-let g:multi_cursor_quit_key            = '<Esc>'
+"let g:multi_cursor_use_default_mapping=0
+"let g:multi_cursor_start_word_key      = 'g<C-n>'
+"let g:multi_cursor_select_all_word_key = '<A-n>'
+"let g:multi_cursor_start_key           = '<C-n>'
+"let g:multi_cursor_select_all_key      = 'g<A-n>'
+"let g:multi_cursor_next_key            = '<C-n>'
+"let g:multi_cursor_prev_key            = '<C-p>'
+"let g:multi_cursor_skip_key            = '<C-x>'
+"let g:multi_cursor_quit_key            = '<Esc>'
 
+" vim-go
+"-------------------------------------
+"let g:go_metalinter_autosave = 1
+"let g:go_metalinter_autosave_enabled = ['vet', 'golint', 'errcheck', 'deadcode', 'structcheck', 'dupl', 'interfacer', 'goconst']
+"let g:go_metalinter_enabled = ['vet', 'golint', 'errcheck', 'deadcode', 'structcheck', 'dupl', 'interfacer', 'goconst']
+"let g:go_metalinter_deadline = '20s'
 " Coc
 "-------------------------------------
-nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gd <PPlug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
@@ -266,6 +271,9 @@ autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
 
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+
+command! -nargs=0 OR :call CocAction('runCommand', 'editor.action.organizeImport') " use `:OR` for organize import of current buffer
+autocmd BufWritePre *.go :OR
 
 "NerdCommenter
 "-------------------------------------
@@ -296,9 +304,6 @@ nnoremap <silent> <Leader>c :call fzf#run({'source': map(split(globpath(&rtp, "c
 "-------------------------------------
 nnoremap <leader>f :NERDTreeToggle<Enter>
 let NERDTreeMapOpenInTab='<ENTER>'
-"let g:NERDTreeWinSize=10
-"let g:NERDTreeQuitOnOpen = 1
-"autocmd vimenter * NERDTree
 let NERDTreeShowHidden=1
 let g:NERDTreeGitStatusWithFlags = 1
 
