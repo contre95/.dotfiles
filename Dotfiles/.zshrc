@@ -94,6 +94,7 @@ export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
 # Alias 
 ################################################################################################
 alias mf="cd $MY_FOLDER"
+alias vim="nvim"
 alias xf="mpg123 --quiet $MY_FOLDER/Library/xfiles.mp3"
 alias qn="mpg123 --quiet $MY_FOLDER/Library/quienteconoce.mp3"
 alias mi="mpg123 --quiet $MY_FOLDER/Library/monster_inc.mp3"

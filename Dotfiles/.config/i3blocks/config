@@ -6,37 +6,25 @@
 command=./$name $instance
 colors=true
 interval=5
-full_text=〉
+full_text=
 align=center
 color=#666666
 separator=true
 separator_block_width=25
 markup=pango
 
-[gpu-load]
-command=~/.config/i3blocks/blocks/gpu-load/gpu-load | awk 'FNR==1{ printf "%s %s\n", $1, $2}'
-separator=false
-label=<span color="#5e9400"> </span>
-interval=2
 
-[gpu-temperature]
-#command=~/.config/i3blocks/blocks/temperature/temperature
-command=nvidia-smi -q -d temperature | grep "GPU Current Temp" | awk -F: '{print $2}'
-interval=2
-#SENSOR_CHIP="nct6775"
-label=<span color="#5e9400"> </span>
 
 [cpu_usage]
-command=~/.config/i3blocks/blocks/cpu_usage/cpu_usage
+command=~/.config/i3blocks/blocks/cpu_usage
 separator=false
 interval=2
 label=<span color="#8be9fd"> </span>
 
-[cpu-temperature]
-command=~/.config/i3blocks/blocks/temperature/temperature
-interval=2
-SENSOR_CHIP="k10temp-pci-00c3"
-label=<span color="#8be9fd"> </span>
+[battery]
+command=~/.config/i3blocks/blocks/battery | awk -F% '{print $1 "%"}'
+interval=10
+label=<span color="#ffffff"> </span>
 
 [memory]
 command=free -h --si | awk 'FNR==2{ print $0 }' | awk '{ print $7 }'
