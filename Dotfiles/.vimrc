@@ -184,21 +184,20 @@ call plug#begin('~/.vim/plugged')
   \ 'do': 'yarn install',
   \ 'for': ['python'] }
   "Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-  Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+  "Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
   Plug 'Xuyuanp/nerdtree-git-plugin'
-  Plug 'watzon/vim-edge-template'
+  "Plug 'watzon/vim-edge-template'
   Plug 'scrooloose/nerdcommenter'
   Plug 'ryanoasis/vim-devicons'
   Plug 'hashivim/vim-terraform'
   Plug 'zirrostig/vim-schlepp'
-  Plug 'dbmrq/vim-ditto'
+  "Plug 'dbmrq/vim-ditto'
   Plug 'itchyny/vim-gitbranch'
   Plug 'itchyny/lightline.vim'
   Plug 'jiangmiao/auto-pairs'
   Plug 'scrooloose/nerdtree'
   Plug 'unblevable/quick-scope'
-  Plug 'justinmk/vim-sneak'
-  "Plug 'mattn/vim-goimports'
+  "Plug 'justinmk/vim-sneak'
   Plug 'junegunn/fzf.vim'
   Plug 'mattn/emmet-vim'
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -235,15 +234,22 @@ autocmd FileType html,edge,css EmmetInstall
 
 "Multiline Cursor 
 "-------------------------------------
-let g:multi_cursor_use_default_mapping=0
-let g:multi_cursor_start_word_key      = 'g<C-n>'
-let g:multi_cursor_select_all_word_key = '<A-n>'
-let g:multi_cursor_start_key           = '<C-n>'
-let g:multi_cursor_select_all_key      = 'g<A-n>'
-let g:multi_cursor_next_key            = '<C-n>'
-let g:multi_cursor_prev_key            = '<C-p>'
-let g:multi_cursor_skip_key            = '<C-x>'
-let g:multi_cursor_quit_key            = '<Esc>'
+"let g:multi_cursor_use_default_mapping=0
+"let g:multi_cursor_start_word_key      = 'g<C-n>'
+"let g:multi_cursor_select_all_word_key = '<A-n>'
+"let g:multi_cursor_start_key           = '<C-n>'
+"let g:multi_cursor_select_all_key      = 'g<A-n>'
+"let g:multi_cursor_next_key            = '<C-n>'
+"let g:multi_cursor_prev_key            = '<C-p>'
+"let g:multi_cursor_skip_key            = '<C-x>'
+"let g:multi_cursor_quit_key            = '<Esc>'
+
+" vim-go
+"-------------------------------------
+"let g:go_metalinter_autosave = 1
+"let g:go_metalinter_autosave_enabled = ['vet', 'golint', 'errcheck', 'deadcode', 'structcheck', 'dupl', 'interfacer', 'goconst']
+"let g:go_metalinter_enabled = ['vet', 'golint', 'errcheck', 'deadcode', 'structcheck', 'dupl', 'interfacer', 'goconst']
+"let g:go_metalinter_deadline = '20s'
 
 " Coc
 "-------------------------------------
@@ -267,11 +273,14 @@ autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
+command! -nargs=0 OR :call CocAction('runCommand', 'editor.action.organizeImport') " use `:OR` for organize import of current buffer
+autocmd BufWritePre *.go :OR
+
 "NerdCommenter
 "-------------------------------------
 nmap <C-_> <Plug>NERDCommenterToggle <Down>
 vmap <C-_> <Plug>NERDCommenterToggle<CR>gv
-
+autocmd BufWinEnter * NERDTreeMirror
 "Schleep indention
 "-------------------------------------
 vmap <C-Down> <Plug>SchleppIndentDown
@@ -286,10 +295,10 @@ let g:Schlepp#trimWS = 0
 "inoremap <expr> <c-x><c-k> fzf#vim#complete#word({'window': { 'width': 0.2, 'height': 0.9, 'xoffset': 1 }})
 ":map <C-t> :call fzf#run({'down': '40%','sink': 'tabedit', 'options': ['--layout=reverse', '--info=inline', '--preview', '~/.vim/plugged/fzf.vim/bin/preview.sh {}']})<CR>
 :map <C-t> :call fzf#run({'window': { 'width': 0.9, 'height': 0.6 },'down': '40%','sink': 'tabedit', 'options': ['--info=inline', '--preview', '~/.vim/plugged/fzf.vim/bin/preview.sh {}']})<CR>
-nnoremap <silent> <Leader>t  :call fzf#run({'window': { 'width': 0.9, 'height': 0.6 },'down': '40%','sink': 'tabedit', 'options': ['--info=inline', '--preview', '~/.vim/plugged/fzf.vim/bin/preview.sh {}']})<CR>
+nnoremap <silent> <Leader>t :call fzf#run({'window': { 'width': 0.9, 'height': 0.6 },'down': '40%','sink': 'tabedit', 'options': ['--info=inline', '--preview', '~/.vim/plugged/fzf.vim/bin/preview.sh {}']})<CR>
 nnoremap <silent> <Leader>s :call fzf#run({'window': { 'width': 0.9, 'height': 0.6 }, 'down': '40%','sink': 'vertical botright split', 'options': ['--layout=reverse', '--info=inline', '--preview', '~/.vim/plugged/fzf.vim/bin/preview.sh {}']})<CR>
 nnoremap <silent> <Leader>v :call fzf#run({'window': { 'width': 0.9, 'height':0.6 }, 'down': '40%','sink': 'botright split', 'options': ['--layout=reverse', '--info=inline', '--preview', '~/.vim/plugged/fzf.vim/bin/preview.sh {}']})<CR>
-nnoremap <silent> <Leader>o  :call fzf#run({'window': { 'width': 0.9, 'height': 0.6 },'down': '40%','sink': 'open', 'options': ['--info=inline', '--preview', '~/.vim/plugged/fzf.vim/bin/preview.sh {}']})<CR> 
+nnoremap <silent> <Leader>o :call fzf#run({'window': { 'width': 0.9, 'height': 0.6 },'down': '40%','sink': 'e', 'options': ['--info=inline', '--preview', '~/.vim/plugged/fzf.vim/bin/preview.sh {}']})<CR> 
 nnoremap <silent> <Leader>c :call fzf#run({'source': map(split(globpath(&rtp, "colors/*.vim"), "\n"),"substitute(fnamemodify(v:val, ':t'), '\\..\\{-}$', '', '')"),'sink': 'colo','options': '+m','right':    30})<CR>
 
 "NERDTree
@@ -297,7 +306,7 @@ nnoremap <silent> <Leader>c :call fzf#run({'source': map(split(globpath(&rtp, "c
 nnoremap <leader>f :NERDTreeToggle<Enter>
 let NERDTreeMapOpenInTab='<ENTER>'
 "let g:NERDTreeWinSize=10
-"let g:NERDTreeQuitOnOpen = 1
+let g:NERDTreeQuitOnOpen = 1
 "autocmd vimenter * NERDTree
 let NERDTreeShowHidden=1
 let g:NERDTreeGitStatusWithFlags = 1

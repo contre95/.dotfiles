@@ -31,7 +31,7 @@ bindsym $mod+Shift+q kill
 
 
 bindsym $mod+Shift+c exec brave --profile-directory="Contre" --app=http://192.168.0.192:8080/browserfs.html
-bindsym $mod+t exec brave --profile-directory="Contre" --app=https://todoist.com/app/#upcoming
+bindsym $mod+t exec brave  --profile-directory="Contre" --app=https://translate.google.com
 #bindsym $mod+c exec gphoto2 --stdout --capture-movie | ffmpeg -i - -vcodec rawvideo -pix_fmt yuv420p -threads 0 -f v4l2 /dev/video0
 bindsym $mod+c exec --no-startup-id  gcolor2
 bindsym $mod+g exec /usr/bin/brave --profile-directory="Contre"
@@ -39,9 +39,9 @@ bindsym $mod+h exec /usr/bin/brave --profile-directory="Meli"
 bindsym $mod+Shift+n exec /usr/bin/brave --profile-directory="Contre" --incognito
 bindsym $mod+j exec /usr/bin/brave --profile-directory="Canus"
 bindsym $mod+k exec /usr/bin/brave --profile-directory="Codelamp"
-bindsym $mod+i exec --no-startup-id /usr/bin/termite --exec="vim /home/contre/.config/i3/config"
-bindsym $mod+u exec termite -e "vim /home/contre/.zshrc"
-bindsym $mod+o exec termite -e "vim /home/contre/.vimrc"
+bindsym $mod+i exec --no-startup-id /usr/bin/termite --exec="nvim /home/contre/.config/i3/config"
+bindsym $mod+u exec termite -e "nvim /home/contre/.zshrc"
+bindsym $mod+o exec termite -e "nvim /home/contre/.vimrc"
 bindsym $mod+s exec pavucontrol
 bindsym $mod+q exec tmux kill-server
 
@@ -92,17 +92,17 @@ bindsym $mod+f fullscreen toggle
 bindsym $mod+Shift+f floating toggle
 
 # Monitors configurations
-#exec xrandr --output DP-0 --off --output DP-1 --off --output HDMI-0 --primary --mode 2560x1080 --pos 0x420 --rotate normal --output DP-2 --off --output DP-3 --off --output DP-4 --off --output DP-5 --mode 1920x1080 --pos 2560x0 --rotate right
-exec xrandr --output DP-0 --off --output DP-1 --off --output HDMI-0 --mode 2560x1080 --pos 0x483 --rotate normal --output DP-2 --off --output DP-3 --off --output DP-4 --off --output DP-5 --mode 1920x1080 --pos 2560x0 --rotate right
+exec xrandr --output DP-0 --off --output DP-1 --off --output HDMI-0 --mode 2560x1080 --pos 0x840 --rotate normal --output DP-2 --off --output DP-3 --off --output DP-4 --off --output DP-5 --mode 1920x1080 --pos 2560x0 --rotate right
 
-exec nitrogen --restore
+#exec_always --no-startup-id picom --config /home/contre/.config/i3/compton.conf --experimental-backends
+exec sleep 1 && nitrogen --restore
 #set $firstmonitor HDMI-0
 #set $secondmonitor DP-5
 
 bindsym $mod+a exec $scr_path/dmenu-scr/set-display.sh
 bindsym $mod+p exec PASSWORD_STORE_DIR=$my_folder/Pass $scr_path/dmenu-scr/passmenu.sh
 bindsym $mod+Shift+p exec PASSWORD_STORE_DIR=$my_folder/Pass $scr_path/dmenu-scr/otpmenu.sh
-bindsym $mod+Ctrl+p exec scrcpy
+bindsym $mod+Ctrl+p exec  PASSWORD_STORE_DIR=$my_folder/Pass passmenu --type -i -p "Pass  : " "$@" -sb "#34495E" -fn "JetBrainsMono Nerd Font"
 bindsym $mod+w exec $scr_path/dmenu-scr/web-light.sh
 #bindsym $mod+t exec termite -e ranger
 bindsym $mod+Shift+s exec $scr_path/dmenu-scr/services.sh
@@ -178,6 +178,7 @@ assign [instance="gmail.com"] $wsMsg
 for_window [title="alsamixer"]  border pixel 1
 for_window [class="Calamares"] floating enable border normal
 for_window [class="Clipgrab"] floating enable
+for_window [class="matplotlib"] floating enable
 for_window [title="File Transfer*"] floating enable
 for_window [class="Galculator"] floating enable border pixel 1
 for_window [class="GParted"] floating enable border normal
@@ -221,7 +222,6 @@ for_window [urgent=latest] focus
 bindsym $mod+e layout toggle tabbed splith
 
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-#bindsym $mod+Shift+r exec pkill -9 picom && i3-msg restart
 bindsym $mod+Shift+r restart
 
 # exit i3 (logs you out of your X session)
@@ -250,7 +250,6 @@ mode "resize" {
 }
 
 # Autostart applications
-exec_always --no-startup-id picom --config /home/contre/.config/i3/compton.conf --experimental-backends
 #exec_always --no-startup-id feh --randomize --bg-fill ~/Pictures/Wallpapers/*
 exec_always --no-startup-id nvidia-settings -a "[gpu:0]/GPUFanControlState=1" -a "[fan:0]/GPUTargetFanSpeed=50" -a "[fan:1]/GPUTargetFanSpeed=50"
 exec --no-startup-id /usr/bin/setxkbmap -layout us -variant mac

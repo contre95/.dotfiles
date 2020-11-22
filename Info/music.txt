@@ -6776,6 +6776,12 @@ Music
 │   └── Life In Grey.mp3
 ├── Poision
 │   └── Every Rose Has Its Thorn.mp3
+├── Polo & Pan
+│   ├── Canopée.lrc
+│   ├── Canopée.mp3
+│   ├── Dorothy.lrc
+│   ├── Dorothy.mp3
+│   └── Nanã.mp3
 ├── Poncho
 │   ├── Are You Ready For Poncho  .mp3
 │   ├── D.i.s.c.o.mp3
@@ -8332,4 +8338,4 @@ Music
     ├── Lowrider.mp3
     └── Sharp Dressed Man.mp3
 
-1369 directories, 6963 files
+1370 directories, 6968 files
