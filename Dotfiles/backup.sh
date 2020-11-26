@@ -23,4 +23,4 @@ cp ~/.vimrc $MY_FOLDER/Dotfiles/.vimrc
 
 # ZSh
 cp ~/.zshrc $MY_FOLDER/Dotfiles/.zshrc
-cp -r ~/.zsh $MY_FOLDER/Dotfiles/.zsh
+cp -r ~/.zsh $MY_FOLDER/Dotfiles

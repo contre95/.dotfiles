@@ -157,9 +157,11 @@ set smartindent
 set splitbelow
 set cursorline
 set autoindent
+"set spell
 set splitright
 set noswapfile
 set ignorecase
+set spelllang=en,es
 set showmatch	
 "set smarttab
 set tabstop=4
@@ -305,7 +307,7 @@ nnoremap <silent> <Leader>c :call fzf#run({'source': map(split(globpath(&rtp, "c
 "NERDTree
 "-------------------------------------
 nnoremap <leader>f :NERDTreeToggle<Enter>
-let NERDTreeMapOpenInTab='<ENTER>'
+"let NERDTreeMapOpenInTab='<ENTER>'
 "let g:NERDTreeWinSize=10
 let g:NERDTreeQuitOnOpen = 1
 "autocmd vimenter * NERDTree
@@ -362,6 +364,15 @@ aug end
 "----------------------------------------------------------------------------------------------
 "------------------------------------ Custom settings ----------------------------
 "----------------------------------------------------------------------------------------------
+
+" Spell-check Markdown files and Git Commit Messages
+"-------------------------------------
+autocmd FileType markdown setlocal spell
+autocmd FileType gitcommit setlocal spell
+" Enable dictionary auto-completion in Markdown files and Git Commit Messages
+"-------------------------------------
+autocmd FileType markdown setlocal complete+=kspell
+autocmd FileType gitcommit setlocal complete+=kspell
 
 " Ctrl + S is a common command to terminals to stop updating, it was a way to slow the output so you could read it on terminals that didn't have a scrollback buffer.
 " (If Ctrl+S freezes your terminal, type Ctrl+Q to get it going again [https://vim.fandom.com/wiki/Map_Ctrl-S_to_save_current_or_new_files])
