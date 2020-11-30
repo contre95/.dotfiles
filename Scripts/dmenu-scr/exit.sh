@@ -8,7 +8,7 @@ case $var in
 	  systemctl poweroff;;
 
     ' Lock')
-      "i3-msg exit";;
+        /usr/bin/i3lock -c '#000000';;
 
     ' Restart')
       systemctl reboot;;
