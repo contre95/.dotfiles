@@ -127,7 +127,7 @@ let mapleader = " "
 "-------------------------------------
 "set t_Co=256
 "colorscheme monokai-phoenix
-"set guifont=JetBrainsMono\ 30
+set guifont=JetBrainsMono\ 30
 colorscheme jellybeans
 syntax on
 
@@ -140,33 +140,36 @@ set sel=exclusive
 "-------------------------------------
 hi Normal guibg=NONE ctermbg=NONE
 set expandtab ts=4 sw=4 ai
+set undodir=~/.vim/undodir
 filetype plugin indent on
+set guicursor=n-v-ve-i-c-ci:ver25
+set pastetoggle=<F9>
 set background=dark
 set encoding=utf-8
-set undodir=~/.vim/undodir
 set relativenumber
-set tabpagemax=4 
 set softtabstop=4
+set tabpagemax=4 
 set laststatus=2
 set shiftwidth=4
+set cursorcolumn
+set nocompatible
 set smartindent
 set splitbelow
 set cursorline
-set cursorcolumn
-set pastetoggle=<F9>
 set autoindent
+"set spell
 set splitright
 set noswapfile
-set nocompatible
-set nowrap
 set ignorecase
+set spelllang=en,es
 set showmatch	
 "set smarttab
-set hlsearch
-set incsearch
-set wildmenu
 set tabstop=4
+set incsearch
+set hlsearch
+set wildmenu
 set mouse=a
+set nowrap
 set number
 set bs=2
 set nu
@@ -304,7 +307,7 @@ nnoremap <silent> <Leader>c :call fzf#run({'source': map(split(globpath(&rtp, "c
 "NERDTree
 "-------------------------------------
 nnoremap <leader>f :NERDTreeToggle<Enter>
-let NERDTreeMapOpenInTab='<ENTER>'
+"let NERDTreeMapOpenInTab='<ENTER>'
 "let g:NERDTreeWinSize=10
 let g:NERDTreeQuitOnOpen = 1
 "autocmd vimenter * NERDTree
@@ -361,6 +364,15 @@ aug end
 "----------------------------------------------------------------------------------------------
 "------------------------------------ Custom settings ----------------------------
 "----------------------------------------------------------------------------------------------
+
+" Spell-check Markdown files and Git Commit Messages
+"-------------------------------------
+autocmd FileType markdown setlocal spell
+autocmd FileType gitcommit setlocal spell
+" Enable dictionary auto-completion in Markdown files and Git Commit Messages
+"-------------------------------------
+autocmd FileType markdown setlocal complete+=kspell
+autocmd FileType gitcommit setlocal complete+=kspell
 
 " Ctrl + S is a common command to terminals to stop updating, it was a way to slow the output so you could read it on terminals that didn't have a scrollback buffer.
 " (If Ctrl+S freezes your terminal, type Ctrl+Q to get it going again [https://vim.fandom.com/wiki/Map_Ctrl-S_to_save_current_or_new_files])
