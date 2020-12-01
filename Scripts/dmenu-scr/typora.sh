@@ -6,8 +6,8 @@ TMUX_SCRIPTS=/home/canus/Scripts/tmux-scr
 
 case $var in
     'ﴬ Contre')
-    exec typora $MY_FOLDER/Notes/ContreNotes;;
-
+    exec /usr/lib/marktext/marktext $MY_FOLDER/Notes/ContreNotes;;
     'ﴬ Meli')
-    exec typora $MY_FOLDER/Notes/MeliNotes;;
+    exec /usr/lib/marktext/marktext $MY_FOLDER/Notes/MeliNotes;;
+
 esac
