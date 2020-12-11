@@ -58,7 +58,6 @@ antigen apply
 ################################################################################################
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$HOME/.composer/vendor/bin:/usr/bin:/usr/local/go/bin:/$MY_FOLDER/Scripts/meli-scr:$PATH$PATH
-
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
    export EDITOR='vim'
@@ -95,6 +94,7 @@ export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
 ################################################################################################
 alias mf="cd $MY_FOLDER"
 alias xf="mpg123 --quiet $MY_FOLDER/Library/xfiles.mp3"
+alias ct="mpg123 --quiet $MY_FOLDER/Library/ct.mp3"
 alias qn="mpg123 --quiet $MY_FOLDER/Library/quienteconoce.mp3"
 alias mi="mpg123 --quiet $MY_FOLDER/Library/monster_inc.mp3"
 alias al="mpg123 --quiet $MY_FOLDER/Library/olx.mp3"
@@ -137,3 +137,4 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 alias mon2cam="deno run --unstable -A -r -q https://raw.githubusercontent.com/ShayBox/Mon2Cam/master/src/mod.ts"
 alias mon2cam="deno run --unstable -A -r -q https://raw.githubusercontent.com/ShayBox/Mon2Cam/master/src/mod.ts"
 alias vim="nvim"
+alias mt="/usr/lib/marktext/marktext"

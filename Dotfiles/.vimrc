@@ -186,7 +186,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install',
   \ 'for': ['python'] }
-  "Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+  Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
   "Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
   Plug 'Xuyuanp/nerdtree-git-plugin'
   "Plug 'watzon/vim-edge-template'

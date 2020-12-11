@@ -32,6 +32,7 @@ bindsym $mod+Shift+q kill
 
 bindsym $mod+Shift+c exec brave --profile-directory="Contre" --app=http://192.168.0.192:8080/browserfs.html
 bindsym $mod+t exec brave  --profile-directory="Contre" --app=https://translate.google.com
+bindsym $mod+Ctrl+g exec brave  --profile-directory="Contre" --app=https://connect.garmin.com/modern/
 #bindsym $mod+c exec gphoto2 --stdout --capture-movie | ffmpeg -i - -vcodec rawvideo -pix_fmt yuv420p -threads 0 -f v4l2 /dev/video0
 bindsym $mod+c exec --no-startup-id  gcolor2
 bindsym $mod+g exec /usr/bin/brave --profile-directory="Contre"
