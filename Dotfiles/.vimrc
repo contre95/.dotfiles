@@ -78,10 +78,11 @@ nmap <A-S-Left> gT
 " Map Ctrl-Backspace to delete the previous word in insert mode.
 "-------------------------------------
 " (Neveer could get thisone workings)
-"imap <C-BS> <Esc>caw
-"imap <C-BS> <C-W>
-"noremap! <C-BS> <C-w>
 "noremap! <C-h> <C-w>
+"noremap! <C-h> <C-w>
+"imap <C-BS> <C-W>
+imap <C-D> X<Esc>lbce
+
 
 " Undo with Crtl+z
 "-------------------------------------
@@ -125,10 +126,10 @@ let mapleader = " "
 
 " Color Scheme
 "-------------------------------------
-"set t_Co=256
 "colorscheme monokai-phoenix
 set guifont=JetBrainsMono\ 30
 colorscheme jellybeans
+set t_Co=256
 syntax on
 
 "Treat end of lines like normal IDE
@@ -300,7 +301,7 @@ let g:Schlepp#trimWS = 0
 :map <C-t> :call fzf#run({'window': { 'width': 0.9, 'height': 0.6 },'down': '40%','sink': 'tabedit', 'options': ['--info=inline', '--preview', '~/.vim/plugged/fzf.vim/bin/preview.sh {}']})<CR>
 nnoremap <silent> <Leader>t :call fzf#run({'window': { 'width': 0.9, 'height': 0.6 },'down': '40%','sink': 'tabedit', 'options': ['--info=inline', '--preview', '~/.vim/plugged/fzf.vim/bin/preview.sh {}']})<CR>
 nnoremap <silent> <Leader>s :call fzf#run({'window': { 'width': 0.9, 'height': 0.6 }, 'down': '40%','sink': 'vertical botright split', 'options': ['--layout=reverse', '--info=inline', '--preview', '~/.vim/plugged/fzf.vim/bin/preview.sh {}']})<CR>
-nnoremap <silent> <Leader>v :call fzf#run({'window': { 'width': 0.9, 'height':0.6 }, 'down': '40%','sink': 'botright split', 'options': ['--layout=reverse', '--info=inline', '--preview', '~/.vim/plugged/fzf.vim/bin/preview.sh {}']})<CR>
+nnoremap <silent> <Leader>v :call fzf#run({'window': { 'width': 0.9, 'height':0.6 }, 'down': '40%','sink': 'split', 'options': ['--layout=reverse', '--info=inline', '--preview', '~/.vim/plugged/fzf.vim/bin/preview.sh {}']})<CR>
 nnoremap <silent> <Leader>o :call fzf#run({'window': { 'width': 0.9, 'height': 0.6 },'down': '40%','sink': 'e', 'options': ['--info=inline', '--preview', '~/.vim/plugged/fzf.vim/bin/preview.sh {}']})<CR> 
 nnoremap <silent> <Leader>c :call fzf#run({'source': map(split(globpath(&rtp, "colors/*.vim"), "\n"),"substitute(fnamemodify(v:val, ':t'), '\\..\\{-}$', '', '')"),'sink': 'colo','options': '+m','right':    30})<CR>
 
@@ -392,9 +393,9 @@ endif
 
 " Tmux configuration, tmux will send xterm-style keys when its xterm-keys option is on
 "-------------------------------------
-"let g:go_highlight_types = 1
-"if exists('+termguicolors')
-  "let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-  "let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-  "set termguicolors
-"endif
+let g:go_highlight_types = 1
+if exists('+termguicolors')
+  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+  set termguicolors
+endif
