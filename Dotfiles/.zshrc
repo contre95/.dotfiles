@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 ################################################################################################
 # Contre env Variables
 ################################################################################################
@@ -13,7 +20,6 @@ export TERM="tmux-256color"
 # Path to your oh-my-zsh installation.
 #export ZSH="/home/contre/.oh-my-zsh"
 #source $ZSH/oh-my-zsh.sh
-#ZSH_THEME="robbyrussell"
 
 ################################################################################################
 # Several programs configuration
@@ -39,7 +45,8 @@ antigen use oh-my-zsh
 antigen bundle git
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle autojump
-antigen theme bhilburn/powerlevel9k powerlevel9k
+#antigen theme bhilburn/powerlevel9k powerlevel9k
+antigen theme romkatv/powerlevel10k
 antigen bundle common-aliases
 antigen bundle zsh-users/zsh-syntax-highlighting
 #antigen bundle gretzky/auto-color-ls
@@ -138,3 +145,6 @@ alias mon2cam="deno run --unstable -A -r -q https://raw.githubusercontent.com/Sh
 alias mon2cam="deno run --unstable -A -r -q https://raw.githubusercontent.com/ShayBox/Mon2Cam/master/src/mod.ts"
 alias vim="nvim"
 alias mt="/usr/lib/marktext/marktext"
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+#[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

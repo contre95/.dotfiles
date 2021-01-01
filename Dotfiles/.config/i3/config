@@ -96,7 +96,7 @@ bindsym $mod+Shift+f floating toggle
 # Monitors configurations
 exec xrandr --output DP-0 --off --output DP-1 --off --output HDMI-0 --mode 2560x1080 --pos 0x840 --rotate normal --output DP-2 --off --output DP-3 --off --output DP-4 --off --output DP-5 --mode 1920x1080 --pos 2560x0 --rotate right
 
-#exec_always --no-startup-id picom --config /home/contre/.config/i3/compton.conf --experimental-backends
+exec_always --no-startup-id picom --config /home/contre/.config/i3/compton.conf 
 exec sleep 1 && nitrogen --restore
 #set $firstmonitor HDMI-0
 #set $secondmonitor DP-5

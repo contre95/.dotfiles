@@ -1,12 +1,13 @@
-.window-frame, .window-frame:backdrop {
- box-shadow: 0 0 0 black;
- border-style: none;
- margin: 0;
- border-radius: 0;
+.window-frame,
+.window-frame:backdrop {
+  box-shadow: 0 0 0 black;
+  border-style: none;
+  margin: 0;
+  border-radius: 0;
 }
 
 .titlebar {
- border-radius: 0;
+  border-radius: 0;
 }
 
 .window-frame.csd.popup {
@@ -17,6 +18,10 @@
   background-image: none;
   background-color: #ededed;
   box-shadow: none;
+}
+VteTerminal,
+vte-terminal {
+  padding: 20px 10px 5px 10px;
 }
 /* You may want to use this if you don't like the double title.
 GtkLabel.title {

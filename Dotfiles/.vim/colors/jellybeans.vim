@@ -88,7 +88,7 @@ endif
 " - g:jellybeans_use_gui_italics    (default = 1)
 " - g:jellybeans_use_term_italics   (default = 0)
 
-let s:background_color = "1B1D1E"
+let s:background_color = "181818"
 
 if exists("g:jellybeans_overrides")
   let s:overrides = g:jellybeans_overrides

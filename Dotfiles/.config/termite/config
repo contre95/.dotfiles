@@ -27,7 +27,7 @@ browser = xdg-open
 foreground      = #c5c8c6
 foreground_bold = #c5c8c6
 cursor          = #c5c8c6
-background      = rgba(27,29,30,1)
+background      = rgba(24,24,24,1)
 
 
 # black
