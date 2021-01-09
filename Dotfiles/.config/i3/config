@@ -10,7 +10,7 @@ set $my_folder /home/canus
 #for_window [class="^.*"] float enable
 
 # borders
-for_window[class=".*"] border pixel 1
+for_window[class=".*"] border pixel 2
 hide_edge_borders both
 #bindsym $mod+u border none
 bindsym $mod+y border pixel 1
@@ -32,6 +32,9 @@ bindsym $mod+Shift+q kill
 
 bindsym $mod+Shift+c exec brave --profile-directory="Contre" --app=http://192.168.0.192:8080/browserfs.html
 bindsym $mod+t exec brave --profile-directory="Contre" --app=https://todoist.com/app/#upcoming
+bindsym $mod+Ctrl+q exec qutebrowser
+bindsym $mod+t exec brave  --profile-directory="Contre" --app=https://translate.google.com
+bindsym $mod+Ctrl+g exec brave  --profile-directory="Contre" --app=https://connect.garmin.com/modern/
 #bindsym $mod+c exec gphoto2 --stdout --capture-movie | ffmpeg -i - -vcodec rawvideo -pix_fmt yuv420p -threads 0 -f v4l2 /dev/video0
 bindsym $mod+c exec --no-startup-id  gcolor2
 bindsym $mod+g exec /usr/bin/brave --profile-directory="Contre"
@@ -92,8 +95,11 @@ bindsym $mod+f fullscreen toggle
 bindsym $mod+Shift+f floating toggle
 
 # Monitors configurations
-exec xrandr --output DP-0 --off --output DP-1 --off --output HDMI-0 --mode 2560x1080 --pos 0x483 --rotate normal --output DP-2 --off --output DP-3 --off --output DP-4 --off --output DP-5 --mode 1920x1080 --pos 2560x0 --rotate right
+#exec xrandr --output DP-0 --off --output DP-1 --off --output HDMI-0 --mode 2560x1080 --pos 0x483 --rotate normal --output DP-2 --off --output DP-3 --off --output DP-4 --off --output DP-5 --mode 1920x1080 --pos 2560x0 --rotate right
 exec nitrogen --restore
+exec xrandr --output DP-0 --off --output DP-1 --off --output HDMI-0 --mode 2560x1080 --pos 0x840 --rotate normal --output DP-2 --off --output DP-3 --off --output DP-4 --off --output DP-5 --mode 1920x1080 --pos 2560x0 --rotate right
+
+exec_always --no-startup-id picom --config /home/contre/.config/i3/compton.conf 
 #set $firstmonitor HDMI-0
 #set $secondmonitor DP-5
 
@@ -263,7 +269,7 @@ bar {
 # status_command i3status -c ~/.config/i3/i3status
   strip_workspace_numbers yes
     colors {
-	    background #1A2026
+	    background #181818
         statusline #B7B7B7
 		separator  #666666
 
@@ -278,7 +284,7 @@ bar {
 
 
 # class                 border  backgr. text    indicator child_border
-client.focused          #4c7899 #285577 #ffffff #2e9ef4   #285577
+client.focused          #404040 #285577 #ffffff #2e9ef4   #404040 
 client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
 client.unfocused        #333333 #222222 #888888 #292d2e   #222222
 client.urgent           #2f343a #900000 #ffffff #900000   #900000

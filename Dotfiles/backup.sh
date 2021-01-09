@@ -19,6 +19,8 @@ cp -r ~/.config/ranger $MY_FOLDER/Dotfiles/.config
 # Vim 
 cp -r ~/.vim/colors $MY_FOLDER/Dotfiles/.vim
 cp -r ~/.vim/syntax $MY_FOLDER/Dotfiles/.vim
+cp -r ~/.vim/spell $MY_FOLDER/Dotfiles/.vim
+cp -r ~/.config/gtk-3.0/gtk.css $MY_FOLDER/Dotfiles/.config/gtk-3.0/gtk.css
 cp ~/.vimrc $MY_FOLDER/Dotfiles/.vimrc
 
 # ZSh
