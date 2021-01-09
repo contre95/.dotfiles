@@ -31,7 +31,6 @@ bindsym $mod+Shift+q kill
 
 
 bindsym $mod+Shift+c exec brave --profile-directory="Contre" --app=http://192.168.0.192:8080/browserfs.html
-bindsym $mod+t exec brave --profile-directory="Contre" --app=https://todoist.com/app/#upcoming
 bindsym $mod+Ctrl+q exec qutebrowser
 bindsym $mod+t exec brave  --profile-directory="Contre" --app=https://translate.google.com
 bindsym $mod+Ctrl+g exec brave  --profile-directory="Contre" --app=https://connect.garmin.com/modern/
