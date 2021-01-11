@@ -57,6 +57,8 @@ bindsym $mod+d exec ~/.config/rofi/launchers/launcher.sh
 
 # Screenshot
 bindsym --release $mod+x exec --no-startup-id import ~/Pictures/Screenshots/screenshot-`/bin/date +%Y%m%d-%H:%M:%S`.png
+bindsym --release $mod+Ctrl+x exec --no-startup-id $scr_path/i3-scr/screen-snip.sh
+
 
 # VNC
 bindsym $mod+Shift+v exec vncviewer `zenity --entry --text Connecto to host:"`
@@ -96,7 +98,7 @@ bindsym $mod+Shift+f floating toggle
 # Monitors configurations
 exec xrandr --output DP-0 --off --output DP-1 --off --output HDMI-0 --mode 2560x1080 --pos 0x840 --rotate normal --output DP-2 --off --output DP-3 --off --output DP-4 --off --output DP-5 --mode 1920x1080 --pos 2560x0 --rotate right
 
-exec_always --no-startup-id picom --config /home/contre/.config/i3/compton.conf 
+#exec_always --no-startup-id picom --config /home/contre/.config/i3/compton.conf 
 exec sleep 1 && nitrogen --restore
 #set $firstmonitor HDMI-0
 #set $secondmonitor DP-5
@@ -177,6 +179,8 @@ assign [instance="gmail.com"] $wsMsg
 
 
 # Open specific applications in floating mode
+for_window [class="^custom-float-no-border$"] floating enable
+for_window [class="^custom-float-no-border$"] border pixel 0
 for_window [title="alsamixer"]  border pixel 1
 for_window [class="Calamares"] floating enable border normal
 for_window [class="Clipgrab"] floating enable
