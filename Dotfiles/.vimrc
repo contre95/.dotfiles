@@ -124,6 +124,10 @@ noremap $ $<Right>
 "-------------------------------------
 let mapleader = " "                                                                     
 
+" Go Lint
+"-------------------------------------
+set rtp+=$GOPATH/src/golang.org/x/lint/misc/vim
+
 " Color Scheme
 "-------------------------------------
 "colorscheme monokai-phoenix
@@ -145,6 +149,7 @@ set undodir=~/.vim/undodir
 filetype plugin indent on
 set guicursor=n-v-ve-i-c-ci:ver25
 set pastetoggle=<F9>
+set noshowmode
 set background=dark
 set encoding=utf-8
 set relativenumber
@@ -184,7 +189,7 @@ set nu
 call plug#begin('~/.vim/plugged')
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
   "Plug 'prettier/vim-prettier', { 'do': 'yarn install'}
-  Plug 'prettier/vim-prettier', {
+  "Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install',
   \ 'for': ['python'] }
   Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
@@ -194,17 +199,17 @@ call plug#begin('~/.vim/plugged')
   Plug 'scrooloose/nerdcommenter'
   Plug 'ryanoasis/vim-devicons'
   Plug 'hashivim/vim-terraform'
+  Plug 'unblevable/quick-scope'
   Plug 'zirrostig/vim-schlepp'
-  "Plug 'dbmrq/vim-ditto'
-  Plug 'itchyny/vim-gitbranch'
   Plug 'itchyny/lightline.vim'
+  Plug 'itchyny/vim-gitbranch'
   Plug 'jiangmiao/auto-pairs'
   Plug 'scrooloose/nerdtree'
-  Plug 'unblevable/quick-scope'
   "Plug 'justinmk/vim-sneak'
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'junegunn/fzf.vim'
   Plug 'mattn/emmet-vim'
-  Plug 'neoclide/coc.nvim', {'branch': 'release'}
+  "Plug 'dbmrq/vim-ditto'
 
   "Plug 'chuling/equinusocio-material.vim'
   "Plug 'Valloric/YouCompleteMe'
@@ -250,6 +255,8 @@ autocmd FileType html,edge,css EmmetInstall
 
 " vim-go
 "-------------------------------------
+let g:go_def_mode='gopls'
+let g:go_info_mode='gopls'
 "let g:go_metalinter_autosave = 1
 "let g:go_metalinter_autosave_enabled = ['vet', 'golint', 'errcheck', 'deadcode', 'structcheck', 'dupl', 'interfacer', 'goconst']
 "let g:go_metalinter_enabled = ['vet', 'golint', 'errcheck', 'deadcode', 'structcheck', 'dupl', 'interfacer', 'goconst']
@@ -277,14 +284,14 @@ autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
-command! -nargs=0 OR :call CocAction('runCommand', 'editor.action.organizeImport') " use `:OR` for organize import of current buffer
-autocmd BufWritePre *.go :OR
+"command! -nargs=0 OR :call CocAction('runCommand', 'editor.action.organizeImport') " use `:OR` for organize import of current buffer
+"autocmd BufWritePre *.go :OR
 
 "NerdCommenter
 "-------------------------------------
 nmap <C-_> <Plug>NERDCommenterToggle <Down>
 vmap <C-_> <Plug>NERDCommenterToggle<CR>gv
-autocmd BufWinEnter * NERDTreeMirror
+"autocmd BufWinEnter * NERDTreeMirror
 "Schleep indention
 "-------------------------------------
 vmap <C-Down> <Plug>SchleppIndentDown
