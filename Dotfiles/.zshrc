@@ -100,7 +100,6 @@ export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
 # Alias 
 ################################################################################################
 alias mf="cd $MY_FOLDER"
-alias vim="nvim"
 alias xf="mpg123 --quiet $MY_FOLDER/Library/xfiles.mp3"
 alias ct="mpg123 --quiet $MY_FOLDER/Library/ct.mp3"
 alias qn="mpg123 --quiet $MY_FOLDER/Library/quienteconoce.mp3"
@@ -134,10 +133,9 @@ setopt    incappendhistory  #Immediately append to the history file, not just wh
 # Languae environments setup
 ################################################################################################
 #Node version manager (nvm)
-export NVM_DIR="$HOME/.nvm"
-  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-  [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
+export NVM_DIR="${XDG_CONFIG_HOME/:-$HOME/.}nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+source ~/.nvm/nvm.sh
 # Python version manager (Pyenv)
 eval "$(pyenv init -)"
 #eval "$(pyenv virtualenv-init -)"
