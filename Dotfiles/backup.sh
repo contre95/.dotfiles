@@ -15,6 +15,7 @@ cp ~/.config/gtk-3.0/settings.ini $MY_FOLDER/Dotfiles/.config/gtk-3.0/settings.i
 
 # Ranger
 cp -r ~/.config/ranger $MY_FOLDER/Dotfiles/.config
+cp -r ~/.config/nvim $MY_FOLDER/Dotfiles/.config
 
 # Vim 
 cp -r ~/.vim/colors $MY_FOLDER/Dotfiles/.vim
