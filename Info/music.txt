@@ -4728,6 +4728,7 @@ Music
 │   ├── Wagner_ Tannhäuser_ Overture.mp3
 │   ├── William Tell Overture.mp3
 │   └── ハンガリー舞曲集 _ Hungarian Dance No.5 in G minor.mp3
+├── hola_im_new
 ├── Hollow Coves
 │   ├── Heatwave.mp3
 │   ├── Home.mp3
@@ -6888,6 +6889,20 @@ Music
 │   ├── Lend Me The Light.mp3
 │   ├── Please Me.mp3
 │   └── Pleas.mp3
+├── Poolside
+│   ├── And The Sea.mp3
+│   ├── Drifting.mp3
+│   ├── Everything Goes.mp3
+│   ├── Feel Alright.mp3
+│   ├── Heat.mp3
+│   ├── Hot In The Shade.mp3
+│   ├── Lost At Last.mp3
+│   ├── Scenic Drive.mp3
+│   ├── Strange Overtones.mp3
+│   ├── Summer Friends.mp3
+│   ├── Tropical Heartache.mp3
+│   ├── We Can Work It Out.mp3
+│   └── Which Way To Paradise.mp3
 ├── Porchetto
 │   └── Bailando En Las Veredas.mp3
 ├── Porta
@@ -8453,4 +8468,4 @@ Music
     ├── Lowrider.mp3
     └── Sharp Dressed Man.mp3
 
-1384 directories, 7069 files
+1385 directories, 7083 files
