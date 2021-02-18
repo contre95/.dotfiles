@@ -144,6 +144,7 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 alias mon2cam="deno run --unstable -A -r -q https://raw.githubusercontent.com/ShayBox/Mon2Cam/master/src/mod.ts"
 alias mon2cam="deno run --unstable -A -r -q https://raw.githubusercontent.com/ShayBox/Mon2Cam/master/src/mod.ts"
 alias vim="nvim"
+alias tf="terraform"
 alias mt="/usr/lib/marktext/marktext"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
