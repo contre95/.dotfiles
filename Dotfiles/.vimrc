@@ -1,4 +1,4 @@
-"                              ___           ___           ___
+
 "     ___        ___          /__/\         /  /\         /  /\
 "    /__/\      /  /\        |  |::\       /  /::\       /  /:/
 "    \  \:\    /  /:/        |  |:|:\     /  /:/\:\     /  /:/
@@ -38,6 +38,8 @@ nmap <C-d> mzyyp`z
 vmap <C-C> "+y
 vmap <C-X> "+x
 
+
+"nmap <silent> <leader>m 
 "Shift selection
 "-------------------------------------
 imap <S-Right> <Esc>V<Right>
@@ -80,7 +82,7 @@ nmap <A-S-Left> gT
 " (Neveer could get thisone workings)
 "noremap! <C-h> <C-w>
 "noremap! <C-h> <C-w>
-"imap <C-BS> <C-W>
+"imap aC-BS> <C-W>
 imap <C-D> X<Esc>lbce
 
 
@@ -205,6 +207,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'itchyny/vim-gitbranch'
   Plug 'jiangmiao/auto-pairs'
   Plug 'scrooloose/nerdtree'
+  Plug 'shime/vim-livedown'
   "Plug 'justinmk/vim-sneak'
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'junegunn/fzf.vim'
@@ -316,6 +319,12 @@ nnoremap <silent> <Leader>s :call fzf#run({'window': { 'width': 0.9, 'height': 0
 nnoremap <silent> <Leader>v :call fzf#run({'window': { 'width': 0.9, 'height':0.6 }, 'down': '40%','sink': 'split', 'options': ['--layout=reverse', '--info=inline', '--preview', '~/.vim/plugged/fzf.vim/bin/preview.sh {}']})<CR>
 nnoremap <silent> <Leader>o :call fzf#run({'window': { 'width': 0.9, 'height': 0.6 },'down': '40%','sink': 'e', 'options': ['--info=inline', '--preview', '~/.vim/plugged/fzf.vim/bin/preview.sh {}']})<CR> 
 nnoremap <silent> <Leader>c :call fzf#run({'source': map(split(globpath(&rtp, "colors/*.vim"), "\n"),"substitute(fnamemodify(v:val, ':t'), '\\..\\{-}$', '', '')"),'sink': 'colo','options': '+m','right':    30})<CR>
+
+"Livedown 
+"let g:livedown_autorun = 1
+"nnoremap <silent> <leader>m :execute 'silent !livedown start % --port 4242 --open --browser "brave --profile-directory="Contre" --app=http://localhost:4242" &'<CR>
+nnoremap <silent> <Leader>m :call jobstart(printf('livedown start %s --port 4242 --open --browser "brave --profile-directory="Contre" --app=http://localhost:4242"',@%),{'detach':1})<CR>
+"let g:livedown_open = 1
 
 "NERDTree
 "-------------------------------------
