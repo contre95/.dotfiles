@@ -120,17 +120,33 @@ bindsym $mod+0 exec $scr_path/dmenu-scr/exit.sh
 bindsym $mod+Ctrl+Right workspace next
 bindsym $mod+Ctrl+Left workspace prev
 
+
+# Monitors (Desktop only)
+set $mon_one HDMI-0
+set $mon_two DP-5
+
+
 # workspaces
-set $ws1 1
-set $ws2 2
+set $ws1 '1:Contre'
+set $ws2 '2:Work'
 set $ws3 3
 set $ws4 4
 set $ws5 5
 set $ws6 6
 set $ws7 7
 set $ws8 8
-set $ws9 9
-set $wsMsg Msg
+set $wsMsg '9:Msg'
+
+workspace $ws1 output $mon_one
+workspace $ws2 output $mon_one
+workspace $ws3 output $mon_one
+workspace $ws4 output $mon_one
+workspace $ws5 output $mon_one
+workspace $ws6 output $mon_two
+workspace $ws7 output $mon_two
+workspace $ws8 output $mon_two
+workspace $wsMsg output $mon_two
+
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -141,7 +157,7 @@ bindsym $mod+5 workspace $ws5
 bindsym $mod+6 workspace $ws6
 bindsym $mod+7 workspace $ws7
 bindsym $mod+8 workspace $ws8
-bindsym $mod+9 workspace $ws9
+bindsym $mod+9 workspace $wsMsg
 
 # Move focused container to workspace
 #bindsym $mod+Ctrl+1 move container to workspace $ws1
@@ -152,7 +168,7 @@ bindsym $mod+9 workspace $ws9
 #bindsym $mod+Ctrl+6 move container to workspace $ws6
 #bindsym $mod+Ctrl+7 move container to workspace $ws7
 #bindsym $mod+Ctrl+8 move container to workspace $ws8
-#bindsym $mod+Ctrl+9 move container to workspace $ws9
+#bindsym $mod+Ctrl+9 move container to workspace $wsMsg
 
 # Move to workspace with focused container
 bindsym $mod+Shift+1 move container to workspace $ws1; workspace $ws1
@@ -163,7 +179,7 @@ bindsym $mod+Shift+5 move container to workspace $ws5; workspace $ws5
 bindsym $mod+Shift+6 move container to workspace $ws6; workspace $ws6
 bindsym $mod+Shift+7 move container to workspace $ws7; workspace $ws7
 bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
-bindsym $mod+Shift+9 move container to workspace $ws9; workspace $ws9
+bindsym $mod+Shift+9 move container to workspace $wsMsg; workspace $wsMsg
 
 assign [class="TelegramDesktop"] $wsMsg
 assign [class="Signal"] $wsMsg
@@ -229,9 +245,6 @@ bindsym $mod+e layout toggle tabbed splith
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 
-# exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
-
 #Lock i3lock
 bindsym $mod+l exec --no-startup-id "blurlock"
 
@@ -266,8 +279,31 @@ bar {
 #  mode hide
 #  hidden_state hide
   font pango:JetBrains Mono Nerd Font 11
-  status_command i3blocks -c ~/.config/i3blocks/config
+  status_command i3blocks -c ~/.config/i3blocks/config_mon_1
+  tray_output $mon_one
+  output $mon_one
 # status_command i3status -c ~/.config/i3/i3status
+  strip_workspace_numbers yes
+    colors {
+	    background #181818
+        statusline #B7B7B7
+		separator  #666666
+
+		focused_workspace  #4A586E #4A586E #FFFFFF
+		active_workspace   #303030 #303030 #FFFFFF
+		inactive_workspace #2F3538 #303030 #888888
+		urgent_workspace   #4287f5 #4287f5 #000000
+		binding_mode       #2F343A #900000 #FFFFFF
+    }
+}
+
+bar {
+#  mode hide
+#  hidden_state hide
+  font pango:JetBrains Mono Nerd Font 11
+  status_command i3blocks -c ~/.config/i3blocks/config_mon_2
+  output $mon_two
+  tray_output $mon_one
   strip_workspace_numbers yes
     colors {
 	    background #181818

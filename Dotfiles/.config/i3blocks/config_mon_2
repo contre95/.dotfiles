@@ -1,0 +1,67 @@
+#[click]
+#full_text=Click me!
+#command=echo "Got clicked with button $button"
+#color=#F79494
+
+command=./$name $instance
+colors=true
+interval=5
+full_text=〉
+align=center
+color=#666666
+separator=true
+separator_block_width=25
+markup=pango
+
+
+# Query my default IP address only on startup
+[wifi]
+command=iwgetid | awk -F: '{print $2}'
+interval=once
+color=#4a586e
+
+# Query my default IP address only on startup
+[ip-pub]
+command=curl ifconfig.io
+interval=once
+color=#91E78B
+
+# Keyboard
+#[keyboard]
+#command=xset q | grep Caps | tr -s ' ' | cut -d ' ' -f 5,9,13 | sed 's/on/▣/g' | sed 's/off/▢/g'
+#interval=5
+
+[volume]
+command=pulseaudio-ctl full-status | awk '{ printf "%i%\n", $1  }'
+interval=2
+label=<span color="#ff79c6"> </span>
+
+
+[date]
+command=date '+%A %e'
+interval=60
+label=<span color="#8be9fd">  </span>
+
+# Update time every 5 seconds
+[time]
+command=date '+%T ' 
+interval=1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
