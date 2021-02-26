@@ -127,15 +127,15 @@ set $mon_two DP-5
 
 
 # workspaces
-set $ws1 '1:Contre'
-set $ws2 '2:Work'
+set $ws1 1:1:Contre
+set $ws2 2:2:Work
 set $ws3 3
 set $ws4 4
 set $ws5 5
 set $ws6 6
 set $ws7 7
 set $ws8 8
-set $wsMsg '9:Msg'
+set $wsMsg 9:9:Msg
 
 workspace $ws1 output $mon_one
 workspace $ws2 output $mon_one
