@@ -1,0 +1,96 @@
+#[click]
+#full_text=Click me!
+#command=echo "Got clicked with button $button"
+#color=#F79494
+
+command=./$name $instance
+colors=true
+interval=5
+full_text=〉
+align=center
+color=#666666
+separator=true
+separator_block_width=25
+markup=pango
+
+[gpu-load]
+command=~/.config/i3blocks/blocks/gpu-load/gpu-load | awk 'FNR==1{ printf "%s %s\n", $1, $2}'
+separator=false
+label=<span color="#5e9400"> </span>
+interval=2
+
+[gpu-temperature]
+#command=~/.config/i3blocks/blocks/temperature/temperature
+command=nvidia-smi -q -d temperature | grep "GPU Current Temp" | awk -F: '{print $2}'
+interval=2
+#SENSOR_CHIP="nct6775"
+label=<span color="#5e9400"> </span>
+
+[cpu_usage]
+command=~/.config/i3blocks/blocks/cpu_usage/cpu_usage
+separator=false
+interval=2
+label=<span color="#8be9fd"> </span>
+
+[cpu-temperature]
+command=~/.config/i3blocks/blocks/temperature/temperature
+interval=2
+SENSOR_CHIP="k10temp-pci-00c3"
+label=<span color="#8be9fd"> </span>
+
+[memory]
+command=free -h --si | awk 'FNR==2{ print $0 }' | awk '{ print $7 }'
+interval=2
+label=<span color="#ff79ca">﬙ </span>
+
+[hdisk]
+command=df -h /home | awk 'FNR==2{print $4}'
+interval=60
+label=<span color="#a9e185"> </span>
+
+[rdisk]
+command=df -h / | awk 'FNR==2{print $4}'
+interval=60
+label=<span color="#a9e185"> </span>
+
+#[memory]
+#command=$SCRIPT_DIR/memory
+#label=MEM
+#interval=30
+
+# Guess the weather hourly
+#[weather]
+#command=curl -Ss 'https://wttr.in?0&T&Q' | cut -c 16- | head -2 | xargs echo
+#interval=3600
+#color=#A4C2F4
+
+# Query my default IP address only on startup
+#[ip-pri]
+#command=hostname -i| awk '{ print $1}'
+#interval=once
+#color=#91E78B
+
+# Query my default IP address only on startup
+#[wifi]
+#command=iwgetid | awk -F: '{print $2}'
+#interval=once
+#color=#4a586e
+
+[bandwidth]
+command=~/.config/i3blocks/blocks/bandwidth2/bandwidth2
+interval=persist
+label=<span color="#5ca08e"></span>
+
+# Keyboard
+#[keyboard]
+#command=xset q | grep Caps | tr -s ' ' | cut -d ' ' -f 5,9,13 | sed 's/on/▣/g' | sed 's/off/▢/g'
+#interval=5
+[arch-update]
+command=checkupdates | wc -l
+interval=once
+label=<span color="#1793D1"> </span>
+
+[volume]
+command=pulseaudio-ctl full-status | awk '{ printf "%i% \n", $1}' 
+interval=2
+label=<span color="#ff79c6"> </span>

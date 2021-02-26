@@ -221,6 +221,12 @@ call plug#begin('~/.vim/plugged')
   "Plug 'ajmwagar/vim-deus'
   "Plug 'junegunn/goyo.vim'
   "Plug 'sirVer/ultisnips'
+Plug 'tpope/vim-dispatch'             "| Optional
+Plug 'tpope/vim-projectionist'        "|
+Plug 'noahfrederick/vim-composer'     "|
+Plug 'noahfrederick/vim-laravel'
+Plug 'posva/vim-vue'
+
 call plug#end()
 
 "----------------------------------------------------------------------------------------------
