@@ -5766,6 +5766,9 @@ Music
 ├── Loverdose
 │   ├── Alkapone.mp3
 │   └── Tabula Rasa.mp3
+├── LP
+│   ├── Lost on You.lrc
+│   └── Lost on You.mp3
 ├── Luciano Pereyra
 │   └── Un Mundo Ideal.mp3
 ├── Lucy in Disguise
@@ -6604,6 +6607,10 @@ Music
 │   ├── Juntos A La Par.mp3
 │   ├── Mi Vieja.mp3
 │   └── Ruta 66.mp3
+├── Parcels
+│   ├── Elude - from Hansa Studios, Berlin.mp3
+│   ├── IknowhowIfeel.mp3
+│   └── Redline - from Hansa Studios, Berlin.mp3
 ├── Passenger
 │   ├── All The Little Lights.mp3
 │   ├── Circles.mp3
@@ -8468,4 +8475,4 @@ Music
     ├── Lowrider.mp3
     └── Sharp Dressed Man.mp3
 
-1385 directories, 7083 files
+1387 directories, 7088 files
