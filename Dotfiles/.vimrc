@@ -133,8 +133,13 @@ set rtp+=$GOPATH/src/golang.org/x/lint/misc/vim
 " Color Scheme
 "-------------------------------------
 "colorscheme monokai-phoenix
+let g:jellybeans_overrides = {
+\    'MatchParen': { 'guifg': 'ffffff', 'guibg': '556779' },
+\}
 set guifont=JetBrainsMono\ 30
+let g:jellybeans_use_lowcolor_black = 1
 colorscheme jellybeans
+"colorscheme edge
 set t_Co=256
 syntax on
 
@@ -169,7 +174,7 @@ set autoindent
 set splitright
 set noswapfile
 set ignorecase
-set spelllang=en,es
+set spelllang=lat,es,en
 set showmatch	
 "set smarttab
 set tabstop=4
@@ -335,6 +340,7 @@ let g:NERDTreeQuitOnOpen = 1
 "autocmd vimenter * NERDTree
 let NERDTreeShowHidden=1
 let g:NERDTreeGitStatusWithFlags = 1
+
 
 "Equinusocio Material
 "-------------------------------------
