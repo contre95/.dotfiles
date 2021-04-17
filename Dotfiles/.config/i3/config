@@ -109,7 +109,7 @@ bindsym $mod+Ctrl+p exec  PASSWORD_STORE_DIR=$my_folder/Pass passmenu --type -i 
 bindsym $mod+w exec $scr_path/dmenu-scr/web-light.sh
 #bindsym $mod+t exec termite -e ranger
 bindsym $mod+Shift+s exec $scr_path/dmenu-scr/services.sh
-bindsym $mod+Shift+t exec $scr_path/dmenu-scr/typora.sh
+bindsym $mod+Shift+t exec $scr_path/dmenu-scr/mpv.sh
 bindsym $mod+Shift+m exec $scr_path/dmenu-scr/tmux-new.sh
 bindsym $mod+m exec $scr_path/dmenu-scr/messages.sh
 #bindsym $mod+Shift+c exec $scr_path/dmenu-scr/code.sh
