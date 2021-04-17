@@ -64,7 +64,7 @@ antigen apply
 # User configuration
 ################################################################################################
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$HOME/.composer/vendor/bin:/usr/bin:/usr/local/go/bin:/$MY_FOLDER/Scripts/meli-scr:/home/contre/go/bin/:$PATH
+export PATH=/$HOME/.local/bin:$HOME/bin:/usr/local/bin:$HOME/.composer/vendor/bin:/usr/bin:/usr/local/go/bin:/$MY_FOLDER/Scripts/meli-scr:/home/contre/go/bin/:/home/contre/.local/lib/python3.9/site-packages:$PATH
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
    export EDITOR='vim'
