@@ -327,7 +327,9 @@ nnoremap <silent> <Leader>c :call fzf#run({'source': map(split(globpath(&rtp, "c
 
 "Livedown 
 "let g:livedown_autorun = 1
-"nnoremap <silent> <leader>m :execute 'silent !livedown start % --port 4242 --open --browser "brave --profile-directory="Contre" --app=http://localhost:4242" &'<CR>
+" Open with brave
+nnoremap <silent> <Leader>m :call jobstart(printf('livedown start %s --port 4242 --open --browser "brave --profile-directory="Contre" --app=http://localhost:4242"',@%),{'detach':1})<CR>
+" Open with Zathura
 nnoremap <silent> <Leader>m :call jobstart(printf('livedown start %s --port 4242 --open --browser "brave --profile-directory="Contre" --app=http://localhost:4242"',@%),{'detach':1})<CR>
 "let g:livedown_open = 1
 
