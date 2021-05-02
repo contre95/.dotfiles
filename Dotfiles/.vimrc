@@ -1,4 +1,4 @@
-
+"                              ___           ___           ___
 "     ___        ___          /__/\         /  /\         /  /\
 "    /__/\      /  /\        |  |::\       /  /::\       /  /:/
 "    \  \:\    /  /:/        |  |:|:\     /  /:/\:\     /  /:/
@@ -13,8 +13,8 @@
 "----------------------------------------------------------------------------------------------
 "------------------------------------ Custom key bindings -------------------------------------
 "----------------------------------------------------------------------------------------------
-let g:file_template_default = {}
-let g:file_template_default['R'] = 'skeleton'
+"let g:file_template_default = {}
+"let g:file_template_default['R'] = 'skeleton'
 "Move lines with Ctrl+arrow
 "-------------------------------------
 inoremap <C-Down> <Esc>:m+<CR>
@@ -132,16 +132,14 @@ set rtp+=$GOPATH/src/golang.org/x/lint/misc/vim
 
 " Color Scheme
 "-------------------------------------
-"colorscheme monokai-phoenix
 let g:jellybeans_overrides = {
 \    'MatchParen': { 'guifg': 'ffffff', 'guibg': '556779' },
 \}
 set guifont=JetBrainsMono\ 30
 let g:jellybeans_use_lowcolor_black = 1
+let g:material_theme_style = 'darker'
+let g:material_terminal_italics = 1
 colorscheme jellybeans
-"colorscheme edge
-set t_Co=256
-syntax on
 
 "Treat end of lines like normal IDE
 "-------------------------------------
@@ -174,7 +172,7 @@ set autoindent
 set splitright
 set noswapfile
 set ignorecase
-set spelllang=lat,es,en
+set spelllang=en
 set showmatch	
 "set smarttab
 set tabstop=4
@@ -271,6 +269,22 @@ autocmd FileType html,edge,css EmmetInstall
 "-------------------------------------
 let g:go_def_mode='gopls'
 let g:go_info_mode='gopls'
+
+let g:go_highlight_types = 1
+let g:go_highlight_fields = 0
+let g:go_highlight_format_strings = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_function_calls = 1
+let g:go_highlight_function_parameters = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_generate_tags = 1
+let g:go_highlight_space_tab_error = 1
+let g:go_highlight_array_whitespace_error = 1
+let g:go_highlight_trailing_whitespace_error = 0
+let g:go_highlight_extra_types = 1
 "let g:go_metalinter_autosave = 1
 "let g:go_metalinter_autosave_enabled = ['vet', 'golint', 'errcheck', 'deadcode', 'structcheck', 'dupl', 'interfacer', 'goconst']
 "let g:go_metalinter_enabled = ['vet', 'golint', 'errcheck', 'deadcode', 'structcheck', 'dupl', 'interfacer', 'goconst']

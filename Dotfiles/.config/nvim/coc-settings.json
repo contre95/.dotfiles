@@ -1,5 +1,7 @@
 {
-    "languageserver":{
+  "go.goplsArgs": ["-remote=auto", "-logfile", "/tmp/gopls.log"],
+  "go.goplsPath": "/home/contre/go/bin/gopls",
+  "languageserver": {
     "golang": {
       "command": "gopls",
       "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
@@ -9,14 +11,11 @@
       }
     },
     "terraform": {
-			"command": "terraform-ls",
-			"args": ["serve"],
-			"filetypes": [
-				"terraform",
-				"tf"
-			],
-			"initializationOptions": {},
-			"settings": {}
-		}
+      "command": "terraform-ls",
+      "args": ["serve"],
+      "filetypes": ["terraform", "tf"],
+      "initializationOptions": {},
+      "settings": {}
+    }
   }
 }
