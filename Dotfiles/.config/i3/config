@@ -24,13 +24,15 @@ floating_modifier $mod
 bindsym $mod+Return exec termite -e "tmux -u new-session -A -s Tmux"
 #bindsym $mod+Return exec xterm
 bindsym $mod+Shift+Return exec termite
-bindsym $mod+Ctrl+Return exec termite --class="floating-quick-term"
+bindsym $mod+Ctrl+Return exec termite -e "tmux -u new-session -A -s Tmux" --class="floating-quick-term"
 # Window kill command
 bindsym $mod+Shift+q kill
 
 
 
-bindsym $mod+Shift+c exec brave --profile-directory="Contre" --app=http://192.168.0.192:8080/browserfs.html
+#bindsym $mod+Shift+c exec brave --profile-directory="Contre" --app=http://192.168.0.192:8080/browserfs.html
+bindsym $mod+Shift+c exec mpv /dev/video1
+
 bindsym $mod+Ctrl+q exec qutebrowser
 bindsym $mod+t exec brave  --profile-directory="Contre" --app=https://translate.google.com
 bindsym $mod+Ctrl+g exec brave  --profile-directory="Contre" --app=https://connect.garmin.com/modern/
@@ -44,6 +46,7 @@ bindsym $mod+k exec /usr/bin/brave --profile-directory="Codelamp"
 bindsym $mod+i exec --no-startup-id /usr/bin/termite --exec="nvim /home/contre/.config/i3/config"
 bindsym $mod+u exec termite -e "nvim /home/contre/.zshrc"
 bindsym $mod+o exec termite -e "nvim /home/contre/.vimrc"
+bindsym $mod+Ctrl+o exec $scr_path/dmenu-scr/audio.sh
 bindsym $mod+s exec pavucontrol
 bindsym $mod+q exec tmux kill-server
 
@@ -95,7 +98,9 @@ bindsym $mod+f fullscreen toggle
 bindsym $mod+Shift+f floating toggle
 
 # Monitors configurations
-exec xrandr --output DP-0 --off --output DP-1 --off --output HDMI-0 --mode 2560x1080 --pos 0x840 --rotate normal --output DP-2 --off --output DP-3 --off --output DP-4 --off --output DP-5 --mode 1920x1080 --pos 2560x0 --rotate right
+#exec xrandr --output DP-0 --off --output DP-1 --off --output HDMI-0 --mode 2560x1080 --pos 0x840 --rotate normal --output DP-2 --off --output DP-3 --off --output DP-4 --off --output DP-5 --mode 1920x1080 --pos 2560x0 --rotate right
+exec xrandr --output DP-0 --off --output DP-1 --off --output HDMI-0 --mode 2560x1080 --pos 0x483 --rotate normal --output DP-2 --off --output DP-3 --off --output DP-4 --off --output DP-5 --mode 1920x1080 --pos 2560x483 --rotate normal
+
 
 #exec_always --no-startup-id picom --config /home/contre/.config/i3/compton.conf 
 exec sleep 1 && nitrogen --restore
@@ -111,6 +116,7 @@ bindsym $mod+w exec $scr_path/dmenu-scr/web-light.sh
 bindsym $mod+Shift+s exec $scr_path/dmenu-scr/services.sh
 bindsym $mod+Shift+t exec $scr_path/dmenu-scr/mpv.sh
 bindsym $mod+Shift+m exec $scr_path/dmenu-scr/tmux-new.sh
+bindsym $mod+Ctrl+m exec pulseaudio-ctl mute-input
 bindsym $mod+m exec $scr_path/dmenu-scr/messages.sh
 #bindsym $mod+Shift+c exec $scr_path/dmenu-scr/code.sh
 bindsym $mod+0 exec $scr_path/dmenu-scr/exit.sh
@@ -190,10 +196,12 @@ assign [instance="hangouts.google.com__call"] $wsMsg
 assign [instance="meet.jit.si"] $wsMsg
 assign [instance="web.whatsapp.com"] $wsMsg
 assign [instance="gmail.com"] $wsMsg
+assign [class="mpv" instance="gl"] $ws8
 
 
 
 # Open specific applications in floating mode
+#for_window [class="mpv" instance="gl"] floating disable sticky
 for_window [class="^custom-float-no-border$"] floating enable
 for_window [class="^custom-float-no-border$"] border pixel 0
 for_window [title="alsamixer"]  border pixel 1
@@ -215,7 +223,7 @@ for_window [class="Oblogout"] fullscreen enable
 for_window [class="octopi"] floating enable
 for_window [title="About Pale Moon"] floating enable
 for_window [class="Pamac-manager"] floating enable
-for_window [class="Pavucontrol"] floating enable resize set 1775 580
+for_window [class="Pavucontrol"] floating enable resize set 1000 580
 for_window [class="qt5ct"] floating enable sticky enable border normal
 for_window [class="Qtconfig-qt4"] floating enable sticky enable border normal
 for_window [class="Simple-scan"] floating enable border normal
@@ -231,7 +239,7 @@ for_window [instance="\bquick-term\b"] move left 500px,move up 200px, resize set
 
 # Cam for streamig
 for_window [instance="192.168.0.192__browserfs.html"] floating enable, resize set 528 298, sticky enable
-for_window [class="mpv"] floating enable, sticky enable, resize set width 355 ppt, move absolute position center
+for_window [instance="192.168.0.192__browserfs.html"] floating enable, sticky enable, resize set width 355 ppt, move absolute position center
 
 # Switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
