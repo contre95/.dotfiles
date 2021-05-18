@@ -47,6 +47,7 @@ bindsym $mod+i exec --no-startup-id /usr/bin/termite --exec="nvim /home/contre/.
 bindsym $mod+u exec termite -e "nvim /home/contre/.zshrc"
 bindsym $mod+o exec termite -e "nvim /home/contre/.vimrc"
 bindsym $mod+Ctrl+o exec $scr_path/dmenu-scr/audio.sh
+bindsym $mod+Shift+o exec pactl set-default-sink  $(pactl list short sinks | grep -v RUNNING |awk  -F" " '{ print $1}')
 bindsym $mod+s exec pavucontrol
 bindsym $mod+q exec tmux kill-server
 
