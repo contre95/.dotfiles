@@ -137,9 +137,11 @@ let g:jellybeans_overrides = {
 \}
 set guifont=JetBrainsMono\ 30
 let g:jellybeans_use_lowcolor_black = 1
-let g:material_theme_style = 'darker'
-let g:material_terminal_italics = 1
 colorscheme jellybeans
+"set termguicolors
+"let g:tokyonight_style = 'night' " available: night, storm
+"let g:tokyonight_enable_italic = 1
+"colorscheme tokyonight
 
 "Treat end of lines like normal IDE
 "-------------------------------------
@@ -168,7 +170,7 @@ set smartindent
 set splitbelow
 set cursorline
 set autoindent
-"set spell
+set nospell
 set splitright
 set noswapfile
 set ignorecase
@@ -201,6 +203,7 @@ call plug#begin('~/.vim/plugged')
   "Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
   Plug 'Xuyuanp/nerdtree-git-plugin'
   "Plug 'watzon/vim-edge-template'
+  Plug 'vim-python/python-syntax'
   Plug 'scrooloose/nerdcommenter'
   Plug 'ryanoasis/vim-devicons'
   Plug 'hashivim/vim-terraform'
@@ -264,6 +267,9 @@ autocmd FileType html,edge,css EmmetInstall
 "let g:multi_cursor_prev_key            = '<C-p>'
 "let g:multi_cursor_skip_key            = '<C-x>'
 "let g:multi_cursor_quit_key            = '<Esc>'
+
+" python-syntax
+let g:python_highlight_all = 1
 
 " vim-go
 "-------------------------------------
