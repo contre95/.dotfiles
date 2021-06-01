@@ -137,7 +137,6 @@ export NVM_DIR="${XDG_CONFIG_HOME/:-$HOME/.}nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 source ~/.nvm/nvm.sh
 # Python version manager (Pyenv)
-eval "$(pyenv init -)"
 #eval "$(pyenv virtualenv-init -)"
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
@@ -146,6 +145,7 @@ alias mon2cam="deno run --unstable -A -r -q https://raw.githubusercontent.com/Sh
 alias vim="nvim"
 alias tf="terraform"
 alias mt="/usr/lib/marktext/marktext"
+eval "$(pyenv init --path)"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 #[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
