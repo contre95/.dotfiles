@@ -1,7 +1,9 @@
 " Common settings
 "-------------------------------------
+
 hi Normal guibg=NONE ctermbg=NONE
 set expandtab ts=4 sw=4 ai
+
 set undodir=~/.vim/undodir
 filetype plugin indent on
 set guicursor=n-v-ve-i-c-ci:ver25
@@ -35,6 +37,10 @@ set nowrap
 set number
 set bs=2
 set nu
+hi LineNr guibg=bg
+set foldcolumn=2
+hi foldcolumn guibg=bg
+hi VertSplit guibg=bg guifg=bg
 
 " Treat end of lines like normal IDE
 "-------------------------------------

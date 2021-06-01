@@ -4,6 +4,7 @@ ts_config.setup {
     ensure_installed = {
         "javascript",
         "html",
+        "go",
         "css",
         "bash",
         "lua",

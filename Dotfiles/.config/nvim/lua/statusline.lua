@@ -9,7 +9,7 @@ local colors = {
     green = "#82ad63",
     red = "#d47d85",
     lightbg = "#2e323a",
-    blue = "#7797b7",
+    blue = "#527696",
     yellow = "#e0c080",
     grey = "#6f737b"
 }
@@ -17,11 +17,11 @@ local colors = {
 gls.left[2] = {
     statusIcon = {
         provider = function()
-            return "   "
+            return "   "
         end,
-        highlight = {colors.bg, colors.blue},
-        separator = "  ",
-        separator_highlight = {colors.blue, colors.lightbg}
+        highlight = {colors.bg, colors.yellow},
+        separator = "   ",
+        separator_highlight = {colors.yellow, colors.lightbg}
     }
 }
 

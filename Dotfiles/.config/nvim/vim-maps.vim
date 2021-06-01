@@ -38,8 +38,12 @@ nnoremap <C-Right> e<Right>
 nnoremap <C-Left> b
 
 "Switch tabs with Crtl+Shift+arrows
-nmap <A-S-Right> gt
-nmap <A-S-Left> gT
+nmap <C-A-S-Right> gt
+nmap <C-A-S-Left> gT
+"
+"Switch Buffers with Crtl+Shift+arrows
+nmap <C-A-S-Up> :bn<Enter>
+nmap <C-A-S-Down> :bp<Enter>
 
 " Delete the word in front of the cursor
 imap <C-D> X<Esc>lbce

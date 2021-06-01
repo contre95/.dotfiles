@@ -5,7 +5,8 @@ local use = packer.use
 return require("packer").startup(
     function()
         use "wbthomason/packer.nvim"
---        use "siduck76/nvim-base16.lua"
+        use "siduck76/nvim-base16.lua"
+        use "nvim-treesitter/nvim-treesitter"
         use "akinsho/nvim-bufferline.lua"
         use "glepnir/galaxyline.nvim"
         use "alvan/vim-closetag"
@@ -13,7 +14,8 @@ return require("packer").startup(
         use "kyazdani42/nvim-web-devicons"
         use "ryanoasis/vim-devicons"
         use "karb94/neoscroll.nvim"
-	use {"lukas-reineke/indent-blankline.nvim", branch = "lua"}
+        use {"nvim-telescope/telescope.nvim", requires={"nvim-lua/plenary.nvim","nvim-lua/popup.nvim" }}
+        use "nvim-telescope/telescope-media-files.nvim"
 
 	-- Old 
 	use 'junegunn/fzf'--, { 'dir': '~/.fzf', 'do': './install --all', 'do': 'yarn install', 'for': ['python'] }
@@ -24,16 +26,11 @@ return require("packer").startup(
 	use 'zirrostig/vim-schlepp'
 	use 'itchyny/vim-gitbranch'
 	use 'jiangmiao/auto-pairs'
-	use 'ferrine/md-img-paste.vim'
+    use 'ekickx/clipboard-image.nvim'
 	use 'shime/vim-livedown'
 	use 'neoclide/coc.nvim'--, {'branch': 'release'}
 	use 'junegunn/fzf.vim'
 	use 'mattn/emmet-vim'
 
-    end,
-    {
-        display = {
-            border = { "┌", "─", "┐", "│", "┘", "─", "└", "│" }
-        }
-    }
+    end
 )
