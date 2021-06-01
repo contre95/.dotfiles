@@ -1,4 +1,10 @@
 {
+  "codeLens.enable": true,
+  "diagnostic.errorSign": "✘",
+  "diagnostic.warningSign": "",
+  "diagnostic.infoSign": "",
+  "git.realtimeGutters": true,
+  "suggest.noselect": true,
   "languageserver": {
     "terraform": {
       "command": "terraform-ls",

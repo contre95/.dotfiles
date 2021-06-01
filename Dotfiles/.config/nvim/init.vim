@@ -16,10 +16,12 @@
 let mapleader = " "                                                                     
 
 " -- Color Scheme
+set termguicolors
 colorscheme jellybeans
 
 " -- Plugins
-lua require('plugins')
+lua require "plugins"
+lua require "treesitter-nvim"
 lua require "top-bufferline"
 lua require "statusline"
 
@@ -30,3 +32,4 @@ so /home/contre/.config/nvim/vim-maps.vim
 so /home/contre/.config/nvim/plugins-settings.vim
 so /home/contre/.config/nvim/files-type-settings.vim
 so /home/contre/.config/nvim/misc.vim
+

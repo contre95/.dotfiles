@@ -442,7 +442,7 @@ if s:termBlack != "Black"
     let s:matchParenTermBg = ""
 else
     let s:matchParenTermFg = ""
-    let s:matchParenTermBg = s:termBlack
+    "let s:matchParenTermBg = s:termBlack
 endif
 call s:X("MatchParen",s:matchParenGuiFg,s:matchParenGuiBg,"bold",
 \                     s:matchParenTermFg,s:matchParenTermBg)
@@ -464,13 +464,13 @@ call s:X("Comment","888888","","italic","Grey","")
 call s:X("Todo","c7c7c7","","bold","White",s:termBlack)
 
 call s:X("StatusLine","000000","dddddd","italic","","White")
-call s:X("StatusLineNC","ffffff","403c41","italic","White","Black")
-call s:X("VertSplit","777777","403c41","",s:termBlack,s:termBlack)
+call s:X("StatusLineNC","ffffff","262626","italic","White","Black")
+call s:X("VertSplit","403c41",s:background_color,"",s:termBlack,s:termBlack)
 call s:X("WildMenu","f0a0c0","302028","","Magenta","")
 
 call s:X("Folded","a0a8b0","384048","italic",s:termBlack,"")
 call s:X("FoldColumn","535D66","1f1f1f","","",s:termBlack)
-call s:X("SignColumn","777777","333333","","",s:termBlack)
+call s:X("SignColumn","777777",s:background_color,"","",s:termBlack)
 call s:X("ColorColumn","","000000","","",s:termBlack)
 
 call s:X("Title","70b950","","bold","Green","")

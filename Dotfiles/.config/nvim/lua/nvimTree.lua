@@ -43,18 +43,6 @@ local get_lua_cb = function(cb_name)
     return string.format(":lua require'nvim-tree'.on_keypress('%s')<CR>", cb_name)
 end
 
--- Mappings for nvimtree
-
-vim.api.nvim_set_keymap(
-    "n",
-    "<C-n>",
-    ":NvimTreeToggle<CR>",
-    {
-        noremap = true,
-        silent = true
-    }
-)
-
 g.nvim_tree_bindings = {
     ["<CR>"] = get_lua_cb("edit"),
     ["o"] = get_lua_cb("edit"),
