@@ -138,6 +138,7 @@ let g:jellybeans_overrides = {
 set guifont=JetBrainsMono\ 30
 let g:jellybeans_use_lowcolor_black = 1
 colorscheme jellybeans
+"colorscheme OceanicNext
 "set termguicolors
 "let g:tokyonight_style = 'night' " available: night, storm
 "let g:tokyonight_enable_italic = 1
@@ -188,56 +189,9 @@ set bs=2
 set nu
 
 "----------------------------------------------------------------------------------------------
-"------------------------------------ Plug plugins --------------------------------------------
+"------------------------------------  Lua plugins --------------------------------------------
 "----------------------------------------------------------------------------------------------
-
-" To install Plugged on Unix-based systems please run the following command: curl -fLo ~/.vim/autoload/Plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-
-call plug#begin('~/.vim/plugged')
-  Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-  "Plug 'prettier/vim-prettier', { 'do': 'yarn install'}
-  "Plug 'prettier/vim-prettier', {
-  \ 'do': 'yarn install',
-  \ 'for': ['python'] }
-  Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-  "Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-  Plug 'Xuyuanp/nerdtree-git-plugin'
-  "Plug 'watzon/vim-edge-template'
-  Plug 'vim-python/python-syntax'
-  Plug 'scrooloose/nerdcommenter'
-  Plug 'ryanoasis/vim-devicons'
-  Plug 'hashivim/vim-terraform'
-  Plug 'unblevable/quick-scope'
-  Plug 'zirrostig/vim-schlepp'
-  Plug 'itchyny/lightline.vim'
-  Plug 'itchyny/vim-gitbranch'
-  Plug 'jiangmiao/auto-pairs'
-  Plug 'scrooloose/nerdtree'
-  Plug 'shime/vim-livedown'
-  "Plug 'justinmk/vim-sneak'
-  Plug 'neoclide/coc.nvim', {'branch': 'release'}
-  Plug 'junegunn/fzf.vim'
-  Plug 'mattn/emmet-vim'
-  "Plug 'dbmrq/vim-ditto'
-
-  "Plug 'chuling/equinusocio-material.vim'
-  "Plug 'Valloric/YouCompleteMe'
-  "Plug 'terryma/vim-multiple-cursors'
-  "Plug 'yuki-ycino/fzf-preview.vim'
-  "Plug 'ryanoasis/vim-devicons'
-  "Plug 'airblade/vim-gitgutter'
-  "Plug 'honza/vim-snippets'
-  "Plug 'ajmwagar/vim-deus'
-  "Plug 'junegunn/goyo.vim'
-  "Plug 'sirVer/ultisnips'
-Plug 'tpope/vim-dispatch'             "| Optional
-Plug 'tpope/vim-projectionist'        "|
-Plug 'noahfrederick/vim-composer'     "|
-Plug 'noahfrederick/vim-laravel'
-Plug 'posva/vim-vue'
-
-call plug#end()
-
+lua require('plugins')
 "----------------------------------------------------------------------------------------------
 "------------------------------------ Plugins configuration -----------------------------------
 "----------------------------------------------------------------------------------------------
@@ -276,6 +230,7 @@ let g:python_highlight_all = 1
 let g:go_def_mode='gopls'
 let g:go_info_mode='gopls'
 
+let g:go_metalinter_command='golangci-lint'
 let g:go_highlight_types = 1
 let g:go_highlight_fields = 0
 let g:go_highlight_format_strings = 1
@@ -326,6 +281,14 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 nmap <C-_> <Plug>NERDCommenterToggle <Down>
 vmap <C-_> <Plug>NERDCommenterToggle<CR>gv
 "autocmd BufWinEnter * NERDTreeMirror
+
+"Marckdown-img-paste
+"-------------------------------------
+autocmd FileType markdown nmap <buffer><silent> <leader>p :call mdip#MarkdownClipboardImage()<CR>
+" there are some defaults for image directory and image name, you can change them
+" let g:mdip_imgdir = 'img'
+" let g:mdip_imgname = 'image'
+
 "Schleep indention
 "-------------------------------------
 vmap <C-Down> <Plug>SchleppIndentDown
@@ -379,6 +342,12 @@ let g:lightline = {'colorscheme': 'powerline','active': {'left': [ [ 'mode', 'pa
 "Prettier
 "-------------------------------------
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
+
+" Vim-Vue
+" ------------------------------------
+let g:vim_vue_plugin_load_full_syntax = 1
+
+
 
 "packloadall
 "nmap <C-l> <Plug>(Prettier)
@@ -448,3 +417,5 @@ if exists('+termguicolors')
   let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
   set termguicolors
 endif
+
+
