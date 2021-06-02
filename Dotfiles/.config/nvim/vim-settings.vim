@@ -23,6 +23,7 @@ set splitbelow
 set cursorline
 set autoindent
 set nospell
+set smarttab
 set splitright
 set noswapfile
 set ignorecase
@@ -46,3 +47,4 @@ hi VertSplit guibg=bg guifg=bg
 "-------------------------------------
 set virtualedit=all
 set sel=exclusive
+

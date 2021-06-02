@@ -2,18 +2,33 @@
 "------------------------------------ Plugins configuration -----------------------------------
 "----------------------------------------------------------------------------------------------
 
+
+" Coc
+"-------------------------------------
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>"
+inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+let b:coc_pairs_disabled = ['<']
+
+" CloseTag
+"-------------------------------------
+let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.vue'
+
+" Indent Blank Line
+"-------------------------------------
+let g:indentLine_char = '│'
+let g:indent_blankline_use_treesitter = v:true
+let g:indent_blankline_filetype = ['vim', 'python', 'sh']
+
 "Sneak 
 "-------------------------------------
 let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
-
-"YouCompleteMe
-"-------------------------------------
-"nnoremap <silent> <leader>g :YcmCompleter GoTo<CR>
-
-"NerdCommenter
-"-------------------------------------
-"let g:user_emmet_install_global = 0
-autocmd FileType html,edge,css EmmetInstall
 
 " Python-syntax
 let g:python_highlight_all = 1
@@ -38,17 +53,6 @@ let g:go_highlight_array_whitespace_error = 1
 let g:go_highlight_trailing_whitespace_error = 0
 let g:go_highlight_extra_types = 1
 
-" Coc
-"-------------------------------------
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
-inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>"
-inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
-autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
-inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 "NerdCommenter
 "-------------------------------------
@@ -71,15 +75,19 @@ let g:Schlepp#allowSquishingLines = 1
 let g:Schlepp#allowSquishingBlock = 1
 let g:Schlepp#trimWS = 0
 
+ " Telescope
+"-------------------------------------
+nnoremap <silent> <Leader>o :Telescope find_files <CR>
+
 " Fuzzy Finder (fzf)
 "-------------------------------------
 "inoremap <expr> <c-x><c-k> fzf#vim#complete#word({'window': { 'width': 0.2, 'height': 0.9, 'xoffset': 1 }})
-:map <silent><C-t> :bw :call fzf#run({'window': { 'width': 0.9, 'height': 0.6 },'down': '40%','sink': 'tabedit', 'options': ['--info=inline', '--preview', '~/.vim/plugged/fzf.vim/bin/preview.sh {}']})<CR> 
-nnoremap <silent> <Leader>t :call fzf#run({'window': { 'width': 0.9, 'height': 0.6 },'down': '40%','sink': 'tabedit', 'options': ['--info=inline', '--preview', '~/.vim/plugged/fzf.vim/bin/preview.sh {}']})<CR>
-nnoremap <silent> <Leader>s :call fzf#run({'window': { 'width': 0.9, 'height': 0.6 }, 'down': '40%','sink': 'vertical botright split', 'options': ['--layout=reverse', '--info=inline', '--preview', '~/.vim/plugged/fzf.vim/bin/preview.sh {}']})<CR>
-nnoremap <silent> <Leader>v :call fzf#run({'window': { 'width': 0.9, 'height':0.6 }, 'down': '40%','sink': 'split', 'options': ['--layout=reverse', '--info=inline', '--preview', '~/.vim/plugged/fzf.vim/bin/preview.sh {}']})<CR>
-nnoremap <silent> <Leader>o :call fzf#run({'window': { 'width': 0.9, 'height': 0.6 },'down': '40%','sink': 'e', 'options': ['--info=inline', '--preview', '~/.vim/plugged/fzf.vim/bin/preview.sh {}']})<CR>
-nnoremap <silent> <Leader>c :call fzf#run({'source': map(split(globpath(&rtp, "colors/*.vim"), "\n"),"substitute(fnamemodify(v:val, ':t'), '\\..\\{-}$', '', '')"),'sink': 'colo','options': '+m','right':    30})<CR>
+":map <silent><C-t> :bw :call fzf#run({'window': { 'width': 0.9, 'height': 0.6 },'down': '40%','sink': 'tabedit', 'options': ['--info=inline', '--preview', '~/.vim/plugged/fzf.vim/bin/preview.sh {}']})<CR> 
+"nnoremap <silent> <Leader>t :call fzf#run({'window': { 'width': 0.9, 'height': 0.6 },'down': '40%','sink': 'tabedit', 'options': ['--info=inline', '--preview', '~/.vim/plugged/fzf.vim/bin/preview.sh {}']})<CR>
+"nnoremap <silent> <Leader>s :call fzf#run({'window': { 'width': 0.9, 'height': 0.6 }, 'down': '40%','sink': 'vertical botright split', 'options': ['--layout=reverse', '--info=inline', '--preview', '~/.vim/plugged/fzf.vim/bin/preview.sh {}']})<CR>
+"nnoremap <silent> <Leader>v :call fzf#run({'window': { 'width': 0.9, 'height':0.6 }, 'down': '40%','sink': 'split', 'options': ['--layout=reverse', '--info=inline', '--preview', '~/.vim/plugged/fzf.vim/bin/preview.sh {}']})<CR>
+"nnoremap <silent> <Leader>o :call fzf#run({'window': { 'width': 0.9, 'height': 0.6 },'down': '40%','sink': 'e', 'options': ['--info=inline', '--preview', '~/.vim/plugged/fzf.vim/bin/preview.sh {}']})<CR>
+"nnoremap <silent> <Leader>c :call fzf#run({'source': map(split(globpath(&rtp, "colors/*.vim"), "\n"),"substitute(fnamemodify(v:val, ':t'), '\\..\\{-}$', '', '')"),'sink': 'colo','options': '+m','right':    30})<CR>
 
 function DeleteHiddenBuffers()
     let tpbl=[]
@@ -103,7 +111,7 @@ nnoremap <leader>f :tabdo NvimTreeToggle<Enter>
 let g:nvim_tree_highlight_opened_files = 1
 let g:nvim_tree_width_allow_resize  = 1
 let g:nvim_tree_add_trailing = 1
+"let nvim_tree_disable_keybindings=1
 let g:nvim_tree_auto_close = 1
-"let g:nvim_tree_tab_open = 1
 let g:nvim_tree_ignore = [ '.git', 'node_modules', '.cache' ]
                                                      

@@ -21,15 +21,16 @@ colorscheme jellybeans
 
 " -- Plugins
 lua require "plugins"
-lua require "treesitter-nvim"
-lua require "top-bufferline"
+lua require "nvimTree"
 lua require "statusline"
+lua require "top-bufferline"
+lua require "treesitter-nvim"
 
 " -- Vim Imports 
 let conf_path = '~/.config/nvim/'
-so /home/contre/.config/nvim/vim-settings.vim
+so /home/contre/.config/nvim/misc.vim
 so /home/contre/.config/nvim/vim-maps.vim
+so /home/contre/.config/nvim/vim-settings.vim
 so /home/contre/.config/nvim/plugins-settings.vim
 so /home/contre/.config/nvim/files-type-settings.vim
-so /home/contre/.config/nvim/misc.vim
 
