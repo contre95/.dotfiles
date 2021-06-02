@@ -1,14 +1,15 @@
 [options]
 
-font= JetBrains Mono 11
-font= JetBrainsMonoMedium Nerd Font 11
+font= JetBrainsMono Nerd Font 11.7
+#font= Fira Code Nerd Font 12
+#font= Hack Nerd Font 12
 cursor_shape = ibeam
 #cursor_shape = block
-#allow_bold = true
+allow_bold = true
 #audible_bell = false
 browser = xdg-open
-#clickable_url = true
-#cursor_blink = system
+clickable_url = true
+cursor_blink = system
 #dynamic_title = true
 #filter_unmatched_urls = true
 #geometry = 480x280
