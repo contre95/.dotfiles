@@ -12,8 +12,8 @@ return require("packer").startup(
         use "kyazdani42/nvim-tree.lua"
         use "kyazdani42/nvim-web-devicons"
         use "ryanoasis/vim-devicons"
-        use {"nvim-telescope/telescope.nvim", requires={"nvim-lua/plenary.nvim","nvim-lua/popup.nvim" }}
-        use "nvim-telescope/telescope-media-files.nvim"
+        --use {"nvim-telescope/telescope.nvim", requires={"nvim-lua/plenary.nvim","nvim-lua/popup.nvim" }}
+        --use "nvim-telescope/telescope-media-files.nvim"
         use "alvan/vim-closetag"
         --use {'lewis6991/gitsigns.nvim', requires = {'nvim-lua/plenary.nvim' }}
         --use {"lukas-reineke/indent-blankline.nvim", branch = "lua"}
@@ -32,8 +32,8 @@ return require("packer").startup(
 	use 'scrooloose/nerdcommenter'
     use 'itchyny/vim-gitbranch'
 	--use 'jiangmiao/auto-pairs'
-	use 'shime/vim-livedown'
-	--use 'junegunn/fzf'--, { 'dir': '~/.fzf', 'do': './install --all', 'do': 'yarn install', 'for': ['python'] }
+	--use 'shime/vim-livedown'
+    use 'junegunn/fzf'
 
     end,
         {
