@@ -38,10 +38,14 @@ set nowrap
 set number
 set bs=2
 set nu
-hi LineNr guibg=bg
 set foldcolumn=2
+
+" Highlights 
+"-------------------------------------
+hi LineNr guibg=bg
 hi foldcolumn guibg=bg
 hi VertSplit guibg=bg guifg=bg
+hi StatusLineNC gui=underline guibg=NONE guifg=#2d2d2d
 
 " Treat end of lines like normal IDE
 "-------------------------------------

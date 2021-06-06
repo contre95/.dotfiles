@@ -23,7 +23,7 @@ return require("packer").startup(
     -- -- Language Specific
     use 'fatih/vim-go'
     use 'hashivim/vim-terraform'
-    
+
     -- -- Other
 	use 'neoclide/coc.nvim'--, {'branch': 'release'}
     use 'ekickx/clipboard-image.nvim'
