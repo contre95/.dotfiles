@@ -113,9 +113,7 @@ nnoremap <silent> <Leader>m :call jobstart(printf('livedown start %s --port 4242
 "-------------------------------------
 nnoremap <leader>f :tabdo NvimTreeToggle<Enter>
 let g:nvim_tree_highlight_opened_files = 1
-let g:nvim_tree_width_allow_resize  = 1
 let g:nvim_tree_add_trailing = 1
 "let nvim_tree_disable_keybindings=1
-let g:nvim_tree_auto_close = 1
-let g:nvim_tree_ignore = [ '.git', 'node_modules', '.cache' ]
+"let g:nvim_tree_auto_close = 1
                                                      

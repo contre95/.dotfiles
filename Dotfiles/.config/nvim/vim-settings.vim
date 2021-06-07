@@ -27,6 +27,7 @@ set smarttab
 set splitright
 set noswapfile
 set ignorecase
+set syntax=on
 set spelllang=en
 set showmatch	
 set tabstop=4
@@ -38,10 +39,10 @@ set nowrap
 set number
 set bs=2
 set nu
-set foldcolumn=2
 
 " Highlights 
 "-------------------------------------
+syntax enable
 hi LineNr guibg=bg
 hi foldcolumn guibg=bg
 hi VertSplit guibg=bg guifg=bg

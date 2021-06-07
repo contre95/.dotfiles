@@ -15,6 +15,7 @@ return require("packer").startup(
         --use {"nvim-telescope/telescope.nvim", requires={"nvim-lua/plenary.nvim","nvim-lua/popup.nvim" }}
         --use "nvim-telescope/telescope-media-files.nvim"
         use "alvan/vim-closetag"
+
         --use {'lewis6991/gitsigns.nvim', requires = {'nvim-lua/plenary.nvim' }}
         --use {"lukas-reineke/indent-blankline.nvim", branch = "lua"}
 
@@ -30,7 +31,7 @@ return require("packer").startup(
     use 'unblevable/quick-scope'
     use 'zirrostig/vim-schlepp'
 	use 'scrooloose/nerdcommenter'
-    use 'itchyny/vim-gitbranch'
+    --use 'itchyny/vim-gitbranch'
 	--use 'jiangmiao/auto-pairs'
 	--use 'shime/vim-livedown'
     use 'junegunn/fzf'

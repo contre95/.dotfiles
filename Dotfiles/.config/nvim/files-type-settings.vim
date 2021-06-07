@@ -2,6 +2,13 @@
 "------------------------------------ Custom settings for filetype ----------------------------
 "----------------------------------------------------------------------------------------------
 
+" Spell-check Markdown files and Git Commit Messages
+"-------------------------------------
+autocmd FileType markdown setlocal spell
+autocmd FileType markdown setlocal complete+=kspell
+autocmd FileType gitcommit setlocal spell
+autocmd FileType gitcommit setlocal complete+=kspell
+
 "Set i3config filetype 
 "-------------------------------------
 aug i3config_ft_detection
