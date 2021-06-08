@@ -16,6 +16,8 @@ set softtabstop=4
 set tabpagemax=4 
 set laststatus=2
 set shiftwidth=4
+set path+=**
+set wildmenu
 set cursorcolumn
 set nocompatible
 set smartindent
@@ -33,7 +35,6 @@ set showmatch
 set tabstop=4
 set incsearch
 set hlsearch
-set wildmenu
 set mouse=a
 set nowrap
 set number
