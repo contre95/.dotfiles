@@ -1,7 +1,8 @@
 " Common settings
 "-------------------------------------
+autocmd WinEnter,FocusGained * :setlocal number relativenumber
+autocmd WinLeave,FocusLost   * :setlocal number norelativenumber
 
-hi Normal guibg=NONE ctermbg=NONE
 set expandtab ts=4 sw=4 ai
 
 set undodir=~/.vim/undodir
@@ -40,14 +41,6 @@ set nowrap
 set number
 set bs=2
 set nu
-
-" Highlights 
-"-------------------------------------
-syntax enable
-hi LineNr guibg=bg
-hi foldcolumn guibg=bg
-hi VertSplit guibg=bg guifg=bg
-hi StatusLineNC gui=underline guibg=NONE guifg=#2d2d2d
 
 " Treat end of lines like normal IDE
 "-------------------------------------

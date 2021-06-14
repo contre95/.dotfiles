@@ -14,10 +14,12 @@ autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 let b:coc_pairs_disabled = ['<']
+command! -nargs=0 Prettier :CocCommand prettier.formatFile
+
 
 " Buffline
 "-------------------------------------
-au BufEnter * call DeleteHiddenBuffers() " Deletes all hidden buffer so they are not displayed by bufferline
+autocmd BufEnter * call DeleteHiddenBuffers() " Deletes all hidden buffer so they are not displayed by bufferline
 
 function DeleteHiddenBuffers()
     let tpbl=[]
@@ -42,8 +44,8 @@ let g:indent_blankline_filetype = ['vim', 'python', 'sh']
 "-------------------------------------
 let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
 
-" Python-syntax
-let g:python_highlight_all = 1
+ "Python-syntax
+"let g:python_highlight_all = 1
 
 " Vim-Go
 "-------------------------------------
@@ -113,6 +115,7 @@ nnoremap <silent> <Leader>m :call jobstart(printf('livedown start %s --port 4242
 "-------------------------------------
 nnoremap <leader>f :tabdo NvimTreeToggle<Enter>
 let g:nvim_tree_highlight_opened_files = 1
+let g:nvim_tree_width = 35
 let g:nvim_tree_add_trailing = 1
 "let nvim_tree_disable_keybindings=1
 "let g:nvim_tree_auto_close = 1

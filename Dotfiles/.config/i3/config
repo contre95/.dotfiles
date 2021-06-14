@@ -45,7 +45,7 @@ bindsym $mod+j exec /usr/bin/brave --profile-directory="Canus"
 bindsym $mod+k exec /usr/bin/brave --profile-directory="Codelamp"
 bindsym $mod+i exec --no-startup-id /usr/bin/termite --exec="nvim /home/contre/.config/i3/config"
 bindsym $mod+u exec termite -e "nvim /home/contre/.zshrc"
-bindsym $mod+o exec termite -e "nvim /home/contre/.vimrc"
+bindsym $mod+o exec termite -e "nvim /home/contre/.config/nvim/init.lua"
 bindsym $mod+Ctrl+o exec $scr_path/dmenu-scr/audio.sh
 bindsym $mod+Shift+o exec pactl set-default-sink  $(pactl list short sinks | grep -v RUNNING |awk  -F" " '{ print $1}')
 bindsym $mod+s exec pavucontrol
@@ -103,7 +103,7 @@ bindsym $mod+Shift+f floating toggle
 exec xrandr --output DP-0 --off --output DP-1 --off --output HDMI-0 --mode 2560x1080 --pos 0x483 --rotate normal --output DP-2 --off --output DP-3 --off --output DP-4 --off --output DP-5 --mode 1920x1080 --pos 2560x483 --rotate normal
 
 
-#exec_always --no-startup-id picom --config /home/contre/.config/i3/compton.conf 
+exec_always --no-startup-id picom --config /home/contre/.config/i3/compton.conf 
 exec sleep 1 && nitrogen --restore
 #set $firstmonitor HDMI-0
 #set $secondmonitor DP-5
@@ -298,7 +298,7 @@ bar {
         statusline #B7B7B7
 		separator  #666666
 
-		focused_workspace  #4A586E #4A586E #FFFFFF
+		focused_workspace  #75A798 #75A798 #FFFFFF
 		active_workspace   #303030 #303030 #FFFFFF
 		inactive_workspace #2F3538 #303030 #888888
 		urgent_workspace   #4287f5 #4287f5 #000000
