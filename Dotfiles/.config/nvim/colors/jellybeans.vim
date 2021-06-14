@@ -60,6 +60,7 @@
 " NECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 " THE SOFTWARE.
 
+
 set background=dark
 
 hi clear
@@ -87,6 +88,7 @@ endif
 " - g:jellybeans_use_lowcolor_black (default = 0)
 " - g:jellybeans_use_gui_italics    (default = 1)
 " - g:jellybeans_use_term_italics   (default = 0)
+"
 
 let s:background_color = "181818"
 
@@ -731,3 +733,4 @@ delf s:grey_color
 delf s:grey_level
 delf s:grey_number
 " }}}
+
