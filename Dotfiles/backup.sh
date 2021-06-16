@@ -16,7 +16,7 @@ cp ~/.config/zathura/zathurarc $MY_FOLDER/Dotfiles/.config/zathura/zathurarc
 cp ~/.tmux.conf $MY_FOLDER/Dotfiles/.tmux.conf
 
 # GTK3
-cp ~/.config/gtk-3.0/settings.ini $MY_FOLDER/Dotfiles/.config/gtk-3.0/settings.ini
+cp -r ~/.config/gtk-3.0 $MY_FOLDER/Dotfiles/.config/gtk-3.0
 
 # Ranger
 cp -r ~/.config/ranger $MY_FOLDER/Dotfiles/.config
