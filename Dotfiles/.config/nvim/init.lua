@@ -9,7 +9,6 @@
 --       \  \:\__|:|     /__/:/    \  \:\        \  \:\        \  \:\/:/
 --        \__\::::/      \__\/      \  \:\        \  \:\        \  \::/
 --            ~~~~                   \__\/         \__\/         \__\/
-
 -- Leader key
 vim.api.nvim_set_var('mapleader', " ") -- Alternative: vim.g.mapleader = " "
 
@@ -25,10 +24,10 @@ require("top-bufferline")
 require("treesitter-nvim")
 
 -- Vim Imports 
-vim.cmd("so /home/contre/.config/nvim/misc.vim")
+vim.cmd("so /home/contre/.config/nvim/vim-misc.vim")
 vim.cmd("so /home/contre/.config/nvim/vim-maps.vim")
-vim.cmd("so /home/contre/.config/nvim/files-type-settings.vim")
-vim.cmd("so /home/contre/.config/nvim/plugins-settings.vim")
+vim.cmd("so /home/contre/.config/nvim/vim-file-types.vim")
+vim.cmd("so /home/contre/.config/nvim/vim-plugins.vim")
 vim.cmd("so /home/contre/.config/nvim/vim-settings.vim")
 vim.cmd("so /home/contre/.config/nvim/vim-highlights.vim")
 vim.cmd("so /home/contre/.config/nvim/vim-commands.vim")

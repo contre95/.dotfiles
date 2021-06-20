@@ -7,6 +7,7 @@ return require("packer").startup(
         use "wbthomason/packer.nvim"
 --        use "siduck76/nvim-base16.lua"
         use "nvim-treesitter/nvim-treesitter"
+        --use "JuliaEditorSupport/julia-vim"
 
         use "akinsho/nvim-bufferline.lua"
         use "glepnir/galaxyline.nvim"
