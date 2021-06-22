@@ -10,6 +10,7 @@ return require("packer").startup(
         --use "JuliaEditorSupport/julia-vim"
 
         use "akinsho/nvim-bufferline.lua"
+        --use "romgrk/barbar.nvim"
         use "glepnir/galaxyline.nvim"
 --       use {"metalelf0/jellybeans-nvim", requires={ 'rktjmp/lush.nvim'}}
         use "kyazdani42/nvim-tree.lua"

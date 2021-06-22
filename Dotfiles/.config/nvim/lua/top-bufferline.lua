@@ -6,22 +6,22 @@ local activeBuffer_fg = "#c8ccd4"
 require "bufferline".setup {
     options = {
         offsets = {{filetype = "NvimTree", text = "Explorer"}},
-        buffer_close_icon = "",
+        buffer_close_icon = " ",
         indicator_icon = '▎',
+        numbers= "none",
         modified_icon = " ",
         close_icon = " ",
-        left_trunc_marker = "",
-        right_trunc_marker = "",
         max_name_length = 14,
         max_prefix_length = 13,
-        tab_size = 20,
+        tab_size = 18,
+        diagnostics = false,
         show_tab_indicators =  true,
         enforce_regular_tabs = true,
-        show_close_icon = true,
+        show_close_icon =false,
         --view = "multiwindow",
         show_buffer_close_icons = true,
-        sort_by =  "extension",
-        separator_style =  "slant",
+        sort_by =  "directory",
+        separator_style =   { 'any', 'any' },
         mappings = "true"
     },
     -- bar colors!!
@@ -32,7 +32,7 @@ require "bufferline".setup {
         },
         background = {
             guifg = bar_fg,
-            guibg = "#262625"
+            guibg = "#252931"
         },
         -- buffer
         buffer_selected = {
@@ -51,7 +51,7 @@ require "bufferline".setup {
         },
         tab_selected = {
             guifg = "#30343c",
-            guibg = "#9298a0"
+            guibg = "#80ABAB"
         },
         tab_close = {
             guifg = "#f9929b",
@@ -68,7 +68,7 @@ require "bufferline".setup {
         },
         separator_visible = {
             guifg = "#363636",
-            guibg = "#363636"
+            guibg = "#252931"
         },
         indicator_selected = {
             guifg = "#363636",
@@ -86,10 +86,6 @@ require "bufferline".setup {
         }
     }
 }
-
-local opt = {silent = true}
-local map = vim.api.nvim_set_keymap
-vim.g.mapleader = " "
 
 -- MAPPINGS
 --map("n", "<C-t>", [[<Cmd>tabnew<CR>]], opt) -- new tab

@@ -113,10 +113,29 @@ nnoremap <silent> <Leader>m :call jobstart(printf('livedown start %s --port 4242
 
 " NvimTree
 "-------------------------------------
-nnoremap <leader>f :tabdo NvimTreeToggle<Enter>
+nnoremap <leader>f :NvimTreeToggle<Enter>
 let g:nvim_tree_highlight_opened_files = 1
 let g:nvim_tree_width = 35
 let g:nvim_tree_add_trailing = 1
+let g:nvim_tree_auto_close = 1
 "let nvim_tree_disable_keybindings=1
-"let g:nvim_tree_auto_close = 1
                                                      
+
+" BarBar 
+"-------------------------------------
+" NOTE: If barbar's option dict isn't created yet, create it
+let bufferline = get(g:, 'bufferline', {})
+
+" Enable/disable animations
+let bufferline.animation = v:false
+let bufferline.closable = v:true
+let bufferline.icon_separator_active = '▎'
+let bufferline.icon_separator_inactive = '▎'
+let bufferline.icon_close_tab = ''
+let bufferline.icon_close_tab_modified = '●'
+let bufferline.maximum_padding = 1
+let bufferline.maximum_length = 15
+let bufferline.semantic_letters = v:false
+let bufferline.no_name_title = " New File"
+
+

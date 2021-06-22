@@ -68,3 +68,6 @@ nnoremap <silent> <C-A-Up> <C-w>k
 nnoremap <End> <End><Right>
 noremap $ $<Right>
 
+" Formatting
+nnoremap <leader><leader> migggqG`izz
+

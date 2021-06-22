@@ -127,17 +127,15 @@ bindsym $mod+0 exec $scr_path/dmenu-scr/exit.sh
 bindsym $mod+Ctrl+Right workspace next
 bindsym $mod+Ctrl+Left workspace prev
 
-
 # Monitors (Desktop only)
 set $mon_one HDMI-0
 set $mon_two DP-5
 
-
 # workspaces
-set $ws1 1:1:Contre
-set $ws2 2:2:Work
-set $ws3 3:3:Canus
-set $ws4 4:4:Codelamp
+set $ws1 1
+set $ws2 2
+set $ws3 3
+set $ws4 4
 set $ws5 5
 set $ws6 6
 set $ws7 7
@@ -153,7 +151,6 @@ workspace $ws6 output $mon_two
 workspace $ws7 output $mon_two
 workspace $ws8 output $mon_two
 workspace $wsMsg output $mon_two
-
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
