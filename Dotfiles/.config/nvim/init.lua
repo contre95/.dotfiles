@@ -16,18 +16,20 @@ vim.api.nvim_set_var('mapleader', " ") -- Alternative: vim.g.mapleader = " "
 vim.api.nvim_set_option('termguicolors',true)
 vim.cmd('colorscheme jellybeans')
 
--- Plugins
-require("plugins")
-require("nvimTree")
-require("statusline")
-require("top-bufferline")
-require("treesitter-nvim")
-
 -- Vim Imports 
 vim.cmd("so /home/contre/.config/nvim/vim-misc.vim")
 vim.cmd("so /home/contre/.config/nvim/vim-maps.vim")
-vim.cmd("so /home/contre/.config/nvim/vim-file-types.vim")
-vim.cmd("so /home/contre/.config/nvim/vim-plugins.vim")
 vim.cmd("so /home/contre/.config/nvim/vim-settings.vim")
-vim.cmd("so /home/contre/.config/nvim/vim-highlights.vim")
+vim.cmd("so /home/contre/.config/nvim/vim-plugins.vim")
 vim.cmd("so /home/contre/.config/nvim/vim-commands.vim")
+vim.cmd("so /home/contre/.config/nvim/vim-highlights.vim")
+vim.cmd("so /home/contre/.config/nvim/vim-file-types.vim")
+
+-- Plugins
+require("plugins")
+require("nvimTree")
+require("treesitter-nvim")
+require("statusline")
+require("top-bufferline")
+
+

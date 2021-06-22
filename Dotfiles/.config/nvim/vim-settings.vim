@@ -3,41 +3,40 @@
 autocmd WinEnter,FocusGained * :setlocal number relativenumber
 autocmd WinLeave,FocusLost   * :setlocal number norelativenumber
 
-set expandtab ts=4 sw=4 ai
-
-set undodir=~/.vim/undodir
 filetype plugin indent on
 set guicursor=n-v-ve-i-c-ci:ver25
+set expandtab ts=4 sw=4 ai
+set undodir=~/.vim/undodir
 set pastetoggle=<F9>
-set noshowmode
+set fillchars=eob:\ , " Removes the ~ for non writtens lineas 
 set background=dark
 set encoding=utf-8
 set relativenumber
 set softtabstop=4
 set tabpagemax=4 
+set wrapmargin=2
 set laststatus=2
 set shiftwidth=4
-set path+=**
-set wildmenu
+set spelllang=en
 set cursorcolumn
-set nocompatible
 set smartindent
+set splitright
 set splitbelow
 set cursorline
 set autoindent
-set nospell
-set smarttab
-set splitright
 set noswapfile
+set noshowmode
 set ignorecase
 set syntax=on
-set spelllang=en
 set showmatch	
 set tabstop=4
 set incsearch
+set smarttab
 set hlsearch
+set wildmenu
+set path+=**
 set mouse=a
-set nowrap
+set nospell
 set number
 set bs=2
 set nu
