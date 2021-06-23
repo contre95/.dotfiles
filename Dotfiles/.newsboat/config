@@ -1,10 +1,36 @@
 browser "brave %u"
 
-color listnormal color208 color234
-color listnormal_unread color244 color234 
-color listfocus   color15 color0 blink
+color listnormal_unread color208 color234
+color listnormal color244 color234 
+color listfocus_unread   color15 color0 blink
 color info  red default bold
-color listfocus_unread color166 color0 bold
+color listfocus color166 color0 bold
 color info color38 color235
 color background color15 color0
 color article color15 color0
+
+highlight feedlist "[║│]" yellow default bold
+highlight feedlist "╠═.*" yellow default bold
+
+highlight feedlist "\\(Youtube\\) .*" red
+highlight feedlist "\\(Twitter\\) .*" blue
+highlight feedlist "\\(User\\) .*" blue
+highlight feedlist "\\(Reddit\\) .*" green
+highlight feedlist "\\(Podcast\\) .*" magenta
+highlight feedlist "\\(Blog\\) .*" cyan
+#highlight feedlist "\\(Reddit\\) .*" color166 
+
+
+feedlist-format "%?T?║%4i %n %8u (%T) %t &╠══%t?"
+#feedlist-format "%?T?║%4i %n %8u (%T) %t &╠%=═0%t?"
+#feedlist-format "%?T?║%4i %n %8u (%T) %t &%==11first%=x16SECOND%=~13third?"
+
+browser brave
+macro w set browser "w3m %u"; open-in-browser ; set browser "brave %u"
+macro m set browser "mpv %u"; open-in-browser ; set browser "brave %u"
+
+
+macro t pipe-to openreddit.sh
+macro y pipe-to newsboat-youtube.sh
+macro p pipe-to newsboat-podcast.sh
+
