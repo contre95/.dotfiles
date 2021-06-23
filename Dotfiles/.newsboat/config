@@ -9,14 +9,15 @@ color info color38 color235
 color background color15 color0
 color article color15 color0
 
-highlight feedlist "[║│]" yellow default bold
-highlight feedlist "╠═.*" yellow default bold
+highlight feedlist "[║│]" default default bold
+highlight feedlist "╠═.*" default default bold
 
 highlight feedlist "\\(Youtube\\) .*" red
 highlight feedlist "\\(Twitter\\) .*" blue
 highlight feedlist "\\(User\\) .*" blue
-highlight feedlist "\\(Reddit\\) .*" green
+highlight feedlist "\\(Reddit\\) .*" yellow 
 highlight feedlist "\\(Podcast\\) .*" magenta
+highlight feedlist "\\(Goodreads\\) .*" green
 highlight feedlist "\\(Blog\\) .*" cyan
 #highlight feedlist "\\(Reddit\\) .*" color166 
 
