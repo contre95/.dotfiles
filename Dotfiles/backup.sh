@@ -1,4 +1,4 @@
-# i3 
+g i3 
 cp ~/.config/i3/config $MY_FOLDER/Dotfiles/.config/i3/config
 cp ~/.config/i3/compton.conf $MY_FOLDER/Dotfiles/.config/i3/compton.conf
 
