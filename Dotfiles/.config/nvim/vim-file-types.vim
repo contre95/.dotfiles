@@ -33,9 +33,10 @@ aug end
 autocmd FileType markdown setlocal spell
 autocmd FileType markdown setlocal complete+=kspell
 autocmd FileType markdown setlocal textwidth=80
+autocmd FileType markdown setlocal colorcolumn=-2 
 let g:markdown_fenced_languages = ['julia', 'css', 'python', 'javascript', 'js=javascript', 'json=javascript', 'ruby', 'sass', 'html', 'go']
 
-autocmd BufNewFile,BufReadPre,FileReadPre *.yaml,*.yml :setlocal expandtab tabstop=2 shiftwidth=2
+autocmd BufNewFile,BufReadPre,FileReadPre *.yaml,*.yml :setlocal expandtab tabstop=2 shiftwidth=2 
 
 autocmd FileType gitcommit setlocal spell
 autocmd FileType gitcommit setlocal complete+=kspell

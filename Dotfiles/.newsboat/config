@@ -1,0 +1,10 @@
+browser "brave %u"
+
+color listnormal color208 color234
+color listnormal_unread color244 color234 
+color listfocus   color15 color0 blink
+color info  red default bold
+color listfocus_unread color166 color0 bold
+color info color38 color235
+color background color15 color0
+color article color15 color0
