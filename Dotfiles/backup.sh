@@ -29,6 +29,9 @@ cp -r ~/.config/nvim $MY_FOLDER/Dotfiles/.config
 #cp -r ~/.config/gtk-3.0/gtk.css $MY_FOLDER/Dotfiles/.config/gtk-3.0/gtk.css
 #cp ~/.vimrc $MY_FOLDER/Dotfiles/.vimrc
 
-# ZSh
+# Zsh
 cp ~/.zshrc $MY_FOLDER/Dotfiles/.zshrc
 cp -r ~/.zsh $MY_FOLDER/Dotfiles
+
+# Newsboat
+cp -r ~/.newsboat/config $MY_FOLDER/Dotfiles/.newsboat/config
