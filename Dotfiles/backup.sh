@@ -34,3 +34,6 @@ cp -r ~/.zsh $MY_FOLDER/Dotfiles
 
 # Newsboat
 cp -r ~/.newsboat/config $MY_FOLDER/Dotfiles/.newsboat/config
+
+# Dunst
+cp -r ~/.config/dunst $MY_FOLDER/Dotfiles/.config
