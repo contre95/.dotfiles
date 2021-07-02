@@ -16,11 +16,10 @@ highlight feedlist "\\(Youtube\\) .*" red
 highlight feedlist "\\(Twitter\\) .*" blue
 highlight feedlist "\\(User\\) .*" blue
 highlight feedlist "\\(Reddit\\) .*" yellow 
-highlight feedlist "\\(Podcast\\) .*" magenta
+highlight feedlist "\\(News\\) .*" magenta
 highlight feedlist "\\(Letterboxd\\) .*" color244
 highlight feedlist "\\(Goodreads\\) .*" green
 highlight feedlist "\\(Blog\\) .*" cyan
-#highlight feedlist "\\(Reddit\\) .*" yellow
 
 
 feedlist-format "%?T?║%4i %n %8u (%T) %t &╠══%t?"

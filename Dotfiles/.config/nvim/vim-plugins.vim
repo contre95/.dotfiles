@@ -2,6 +2,9 @@
 "------------------------------------ Plugins configuration -----------------------------------
 "----------------------------------------------------------------------------------------------
 
+" Goyo or similar
+nmap <silent> <leader>g :Goyo<CR>
+
 " Coc
 "-------------------------------------
 nmap <silent> gd <Plug>(coc-definition)
@@ -137,5 +140,4 @@ let bufferline.maximum_padding = 1
 let bufferline.maximum_length = 15
 let bufferline.semantic_letters = v:false
 let bufferline.no_name_title = " New File"
-
 
