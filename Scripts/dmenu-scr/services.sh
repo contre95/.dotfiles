@@ -16,7 +16,7 @@ case $var in
     /usr/bin/droidcam-cli -v 192.168.0.192 4747 &;; 
     
     ' Deemix')
-    /usr/bin/docker run -d --name Deemix \
+    /usr/bin/docker run -d --rm --name Deemix \
               -v /home/canus/Music/:/downloads \
               -v /home/contre/.config/deemix-server:/config \
               -e PUID=1000 \
