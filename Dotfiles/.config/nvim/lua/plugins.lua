@@ -8,6 +8,8 @@ return require("packer").startup(
 --        use "siduck76/nvim-base16.lua"
         use "nvim-treesitter/nvim-treesitter"
         --use "JuliaEditorSupport/julia-vim"
+        ---- If you are using Packer
+
         --use "Pocco81/TrueZen.nvim"
         use 'junegunn/goyo.vim'
         use "akinsho/nvim-bufferline.lua"

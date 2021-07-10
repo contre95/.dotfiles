@@ -4,9 +4,7 @@ function music{
     tmux start-server
 
     tmux new-session -d -s Music -n Music &&
-	tmux send-keys -t Music:1 'clyrics -m' C-m &&
 
-    tmux split-window -h -t Music:1
     tmux send-keys -t Music:1 'mocp' C-m &&
     tmux resize-pane -L 120
     
@@ -16,7 +14,8 @@ function music{
 
 
     tmux select-window -t Music:1
-    tmux -u attach-session -t Music
+    tmux select-pane -t 0
+    tmux -u attach-session -t Music:1
 }
 
 music

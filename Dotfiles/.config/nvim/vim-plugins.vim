@@ -117,10 +117,10 @@ nnoremap <silent> <Leader>m :call jobstart(printf('livedown start %s --port 4242
 " NvimTree
 "-------------------------------------
 nnoremap <leader>f :NvimTreeToggle<Enter>
-let g:nvim_tree_highlight_opened_files = 1
-let g:nvim_tree_width = 35
-let g:nvim_tree_add_trailing = 1
-let g:nvim_tree_auto_close = 1
+let g:nvim_tree_highlight_opened_files=1
+let g:nvim_tree_add_trailing=1
+let g:nvim_tree_auto_close=1
+let g:nvim_tree_width=45
 "let nvim_tree_disable_keybindings=1
                                                      
 
