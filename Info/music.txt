@@ -1,28 +1,12 @@
 Music
 ├── 10CC
 │   └── I'm not in love.mp3
-├── 10 - Hans Zimmer - I'm Going Home.mp3
-├── 11 - Hans Zimmer - Message from Home.mp3
-├── 12 - Hans Zimmer - A Place Among the Stars.mp3
-├── 13 - Hans Zimmer - S.T.A.Y.mp3
-├── 14 - Hans Zimmer - Dust.mp3
-├── 15 - Hans Zimmer - First Step.mp3
-├── 16 - Hans Zimmer - The Wormhole.mp3
-├── 17 - Hans Zimmer - Flying Drone.mp3
-├── 18 - Hans Zimmer - Detach.mp3
-├── 19 - Hans Zimmer - Atmospheric Entry.mp3
 ├── 1 - Bizarrap - Nathy Peluso_ Bzrp Music Sessions, Vol. 36.lrc
-├── 1 - Bizarrap - Nathy Peluso_ Bzrp Music Sessions, Vol. 36.mp3
-├── 1 - Hans Zimmer - Cornfield Chase.mp3
-├── 20 - Hans Zimmer - Where We're Going.mp3
-├── 21 - Hans Zimmer - What Happens Now_.mp3
 ├── 2 +2
 │   └── Do You Really.mp3
 ├── 2 - Bad Bunny - Dakiti.lrc
-├── 2 - Bad Bunny - Dakiti.mp3
 ├── 2 Chainz
 │   └── We Own It.mp3
-├── 2 - Hans Zimmer - Day One.mp3
 ├── 2Pac
 │   ├── California Love.mp3
 │   ├── Changes.mp3
@@ -43,12 +27,8 @@ Music
 │   ├── Tangananica.mp3
 │   ├── Yo Nunca Vi Televisión.mp3
 │   └── Yo Opino.mp3
-├── 3 - Hans Zimmer - Mountains.mp3
 ├── 3 - Karol G - BICHOTA.lrc
-├── 3 - Karol G - BICHOTA.mp3
 ├── 4 - Aliço - Si Me Tomo Una Cerveza.lrc
-├── 4 - Aliço - Si Me Tomo Una Cerveza.mp3
-├── 4 - Hans Zimmer - Stay.mp3
 ├── 4 Non Blondes
 │   └── What's Up.mp3
 ├── 50 Cent
@@ -56,13 +36,7 @@ Music
 │   ├── Candy Shop.mp3
 │   ├── Pimp.mp3
 │   └── You Dont Know.mp3
-├── 5 - Hans Zimmer - Dreaming of the Crash.mp3
 ├── 5 - Maluma - Hawái.lrc
-├── 5 - Maluma - Hawái.mp3
-├── 6 - Hans Zimmer - Running Out.mp3
-├── 7 - Hans Zimmer - No Time for Caution.mp3
-├── 8 - Hans Zimmer - Coward.mp3
-├── 9 - Hans Zimmer - Afraid of Time.mp3
 ├── Aaron Smith
 │   └── Dancin.mp3
 ├── Abba
@@ -242,6 +216,7 @@ Music
 ├── Alicia keys
 │   └── Empire State Of Mind.mp3
 ├── Aliço
+│   ├── Aliço - Si Me Tomo Una Cerveza.mp3
 │   ├── Si Me Tomo Una Cerveza.lrc
 │   └── Si Me Tomo Una Cerveza.mp3
 ├── Almendra
@@ -544,6 +519,7 @@ Music
 ├── Backstreet Boys
 │   └── As Long As You Love Me.mp3
 ├── Bad Bunny
+│   ├── Bad Bunny - DÁKITI.mp3
 │   ├── Callaita.mp3
 │   ├── MIA (feat. Drake).mp3
 │   └── Sensualidad.mp3
@@ -800,10 +776,13 @@ Music
 │   ├── DANI_ Bzrp Freestyle Sessions, Vol. 7.mp3
 │   ├── DANI_ Bzrp Music Sessions, Vol. 24.lrc
 │   ├── DANI_ Bzrp Music Sessions, Vol. 24.mp3
+│   ├── L-Gante_ Bzrp Music Sessions, Vol.38.lrc
+│   ├── L-Gante_ Bzrp Music Sessions, Vol.38.mp3
 │   ├── Louta_ Bzrp Music Sessions, Vol. 20.mp3
 │   ├── Nathy Peluso_ Bzrp Music Sessions, Vol. 36.lrc
-│   ├── Nathy Peluso_ Bzrp Music Sessions, Vol. 36.mp3
+│   ├── Nathy Peluso Bzrp Music Sessions, Vol. 36.mp3
 │   ├── Nicki Nicole_ Bzrp Music Sessions, Vol. 13.mp3
+│   ├── Nicky Jam Bzrp Music Sessions, Vol. 41.mp3
 │   ├── Trueno_ Bzrp Freestyle Sessions, Vol. 6.mp3
 │   └── Trueno_ Bzrp Music Sessions, Vol. 16.mp3
 ├── Black eye pease
@@ -1644,6 +1623,8 @@ Music
 ├── Dani
 │   ├── A Mi Lado.lrc
 │   └── A Mi Lado.mp3
+├── Daniel Norgren
+│   └── Howling Around My Happy Home.mp3
 ├── Daniel Toro
 │   └── Zamba para Olvidarte.mp3
 ├── Dannii minogue
@@ -3782,6 +3763,8 @@ Music
 │   └── Bizarre Love Triangle.mp3
 ├── Fun
 │   └── We Are Young.mp3
+├── Funky Destination
+│   └── The Inside Man.mp3
 ├── Funky Panda
 │   ├── Beatophone.mp3
 │   ├── Delight.mp3
@@ -4603,6 +4586,27 @@ Music
 │   ├── Can't Touch This.mp3
 │   └── I Like Big Buts.mp3
 ├── Hans Zimmer
+│   ├── 10 - Hans Zimmer - I'm Going Home.mp3
+│   ├── 11 - Hans Zimmer - Message from Home.mp3
+│   ├── 12 - Hans Zimmer - A Place Among the Stars.mp3
+│   ├── 13 - Hans Zimmer - S.T.A.Y.mp3
+│   ├── 14 - Hans Zimmer - Dust.mp3
+│   ├── 15 - Hans Zimmer - First Step.mp3
+│   ├── 16 - Hans Zimmer - The Wormhole.mp3
+│   ├── 17 - Hans Zimmer - Flying Drone.mp3
+│   ├── 18 - Hans Zimmer - Detach.mp3
+│   ├── 19 - Hans Zimmer - Atmospheric Entry.mp3
+│   ├── 1 - Hans Zimmer - Cornfield Chase.mp3
+│   ├── 20 - Hans Zimmer - Where We're Going.mp3
+│   ├── 21 - Hans Zimmer - What Happens Now_.mp3
+│   ├── 2 - Hans Zimmer - Day One.mp3
+│   ├── 3 - Hans Zimmer - Mountains.mp3
+│   ├── 4 - Hans Zimmer - Stay.mp3
+│   ├── 5 - Hans Zimmer - Dreaming of the Crash.mp3
+│   ├── 6 - Hans Zimmer - Running Out.mp3
+│   ├── 7 - Hans Zimmer - No Time for Caution.mp3
+│   ├── 8 - Hans Zimmer - Coward.mp3
+│   ├── 9 - Hans Zimmer - Afraid of Time.mp3
 │   ├── Afraid of Time.mp3
 │   ├── Alex On The Spot.mp3
 │   ├── Amongst The Coins.mp3
@@ -4681,6 +4685,8 @@ Music
 │   ├── Alone.mp3
 │   ├── Barracuda.mp3
 │   └── Where Are You Now.mp3
+├── Heartless Bastards
+│   └── Only For You.mp3
 ├── Helios
 │   ├── Beautiful.mp3
 │   ├── Convivium.mp3
@@ -5228,7 +5234,9 @@ Music
 │   └── Dr. Seuss.mp3
 ├── Karol G
 │   ├── BICHOTA.lrc
-│   └── BICHOTA.mp3
+│   ├── BICHOTA.mp3
+│   └── KAROL G - BICHOTA.mp3
+├── KAROL G
 ├── Karsh kale
 │   └── Island.mp3
 ├── Kate Ryan
@@ -5560,6 +5568,9 @@ Music
 │   └── Ya El Sol Asomaba En El Poniente.mp3
 ├── Level 42
 │   └── Lesson Of Love.mp3
+├── L-Gante
+│   ├── Malianteo 420.lrc
+│   └── Malianteo 420.mp3
 ├── Liam Gallagher
 │   └── For What It's Worth.mp3
 ├── Liam Payne
@@ -5752,6 +5763,8 @@ Music
 ├── Louis Armstrong
 │   ├── La vie en rose (Single Version).mp3
 │   └── What A Wonderful World.mp3
+├── Lou Reed
+│   └── Walk On the Wild Side.mp3
 ├── LOUTA
 │   ├── ABRIR TU CORAZON.mp3
 │   ├── Alto Uach.mp3
@@ -5875,6 +5888,7 @@ Music
 │   ├── Desde Esa Noche Ft. Maluma.mp3
 │   ├── GPS.mp3
 │   ├── La Bicicleta.mp3
+│   ├── Maluma - Hawái.mp3
 │   └── Sin Contrato.mp3
 ├── Mana
 │   ├── Bendita Tu Luz.mp3
@@ -6420,6 +6434,10 @@ Music
 │   └── Teenager.mp3
 ├── My darkest days
 │   └── Casual Sex.mp3
+├── Nancy Sinatra
+│   ├── Bang Bang (My Baby Shot Me Down).mp3
+│   ├── Summer Wine.mp3
+│   └── These Boots Are Made for Walkin'.mp3
 ├── Nando Estevane
 ├── Natalia Oreiro
 ├── Naughty Boy
@@ -6616,6 +6634,9 @@ Music
 │   ├── Juntos A La Par.mp3
 │   ├── Mi Vieja.mp3
 │   └── Ruta 66.mp3
+├── Papu DJ
+│   ├── L-Gante Rkt.lrc
+│   └── L-Gante Rkt.mp3
 ├── Parcels
 │   ├── Elude - from Hansa Studios, Berlin.mp3
 │   ├── IknowhowIfeel.mp3
@@ -7799,6 +7820,8 @@ Music
 │   └── Wouldn't It Be Nice.mp3
 ├── The Bolshoi
 │   └── Sunday Morning.mp3
+├── The Butlers
+│   └── No Good Nina.mp3
 ├── The Byrds
 │   └── I'll Feel A Whole Lot Better.mp3
 ├── The Cars
@@ -8484,4 +8507,4 @@ Music
     ├── Lowrider.mp3
     └── Sharp Dressed Man.mp3
 
-1389 directories, 7095 files
+1398 directories, 7109 files
