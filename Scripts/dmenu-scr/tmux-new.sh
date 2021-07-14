@@ -1,5 +1,5 @@
 #!/usr/bin/zsh
-choices=" RSS\n Codelamp\nﳳ Pass\n Server\n Raspi\n Music\n Mac"
+choices=" RSS\n Codelamp\nﳳ Pass\n Server\n Raspi\n Music\n Mac\n Android"
 var=$(echo -e $choices | dmenu -i -p "Exit menu: " -sb "#2f8a47" -fn "JetBrainsMono Nerd Font") 
 TMUX_SCRIPTS=/home/canus/Scripts/tmux-scr
 
@@ -21,6 +21,9 @@ case $var in
 
     ' Raspi')
     exec termite -e "zsh $TMUX_SCRIPTS/raspi.sh";;
+
+    ' Android')
+    exec termite -e "zsh $TMUX_SCRIPTS/termux.sh";;
     
     ' Mac')
     exec termite -e "zsh $TMUX_SCRIPTS/mac.sh";;
