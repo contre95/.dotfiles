@@ -37,6 +37,16 @@ return require("packer").startup(
         use 'zirrostig/vim-schlepp'
         use 'scrooloose/nerdcommenter'
         use 'junegunn/fzf'
+        use {
+              "folke/twilight.nvim",
+              config = function()
+                require("twilight").setup {
+                  -- your configuration comes here
+                  -- or leave it empty to use the default settings
+                  -- refer to the configuration section below
+                }
+  end
+}
     end,
         {
         display = {
