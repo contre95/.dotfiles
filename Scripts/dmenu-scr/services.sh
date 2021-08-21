@@ -16,7 +16,7 @@ case $var in
     /usr/bin/droidcam-cli -v 192.168.0.192 4747 &;; 
     
     ' Deemix')
-    /usr/bin/podman run -d --cap-add CAP_NET_RAW --name Deemix --rm\
+    /usr/bin/podman run -d --user contre --cap-add CAP_NET_RAW --name Deemix --rm\
               -v /home/canus/Music/:/downloads \
               -v /home/contre/.config/deemix-server:/config \
               -e PUID=1000 \
