@@ -22,7 +22,6 @@ require "bufferline".setup {
         show_buffer_close_icons = true,
         sort_by =  "directory",
         separator_style =   { 'any', 'any' },
-        mappings = "true"
     },
     -- bar colors!!
     highlights = {
