@@ -8,11 +8,10 @@ shell:
     - -c
     - "tmux attach || tmux"
 
+tabspaces: 4
 font:
-  # The normal (roman) font face to use.
   normal:
     family: JetBrainsMono Nerd Font Mono
-    # Style can be specified to pick a specific face.
     style: Regular
   size: 14.0
 
@@ -21,3 +20,9 @@ window:
     x: 6
     y: 6
 
+scrolling:
+  history: 10000  
+  multiplier: 3    
+  auto_scroll: false 
+
+background_opacity: 0.8
