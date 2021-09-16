@@ -12,7 +12,7 @@ let g:markdown_fenced_languages = ['julia', 'css', 'python', 'javascript', 'js=j
 
 "Set terrform Yaml
 "-------------------------------------
-autocmd BufNewFile,BufReadPre,FileReadPre *.yaml,*.yml :setlocal expandtab tabstop=2 shiftwidth=2 
+autocmd BufNewFile,BufReadPre,FileReadPre *.yaml, *.yml, *.sls :setlocal expandtab tabstop=2 shiftwidth=2 
 
 "Set terrform GitCommits
 "-------------------------------------
