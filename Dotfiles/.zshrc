@@ -52,8 +52,8 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 #antigen bundle gretzky/auto-color-ls
 # antigen bundle StackExchange/blackbox
 # antigen bundle command-not-found
-antigen bundle docker
-antigen bundle docker-compose
+# antigen bundle docker
+# antigen bundle docker-compose
 antigen bundle golang
 antigen bundle python
 #antigen bundle web-search
@@ -65,7 +65,6 @@ antigen apply
 ################################################################################################
 # If you come from bash you might have to change your $PATH.
 export PATH=/$HOME/.local/bin:$HOME/bin:/usr/local/bin:$HOME/.composer/vendor/bin:/usr/bin:/usr/local/go/bin:/$MY_FOLDER/Scripts/meli-scr:/home/contre/go/bin/:/home/contre/.local/lib/python3.9/site-packages:$PATH
-
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
    export EDITOR='vim'
@@ -142,6 +141,7 @@ source ~/.nvm/nvm.sh
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 export BROWSER="brave"
+export EDITOR="nvim"
 alias mon2cam="deno run --unstable -A -r -q https://raw.githubusercontent.com/ShayBox/Mon2Cam/master/src/mod.ts"
 alias mon2cam="deno run --unstable -A -r -q https://raw.githubusercontent.com/ShayBox/Mon2Cam/master/src/mod.ts"
 alias vim="nvim"
