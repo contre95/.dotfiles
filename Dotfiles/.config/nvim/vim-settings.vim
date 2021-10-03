@@ -18,11 +18,11 @@ set wrapmargin=2
 set laststatus=2
 set shiftwidth=4
 set spelllang=en
-set cursorcolumn
+"set cursorcolumn
 set smartindent
 set splitright
 set splitbelow
-set cursorline
+"set cursorline
 set autoindent
 set noswapfile
 set noshowmode

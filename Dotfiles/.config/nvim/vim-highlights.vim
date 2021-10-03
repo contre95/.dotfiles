@@ -9,6 +9,21 @@ hi NvimTreeRootFolder gui=NONE guifg=#80ABAB
 hi NvimTreeExecFile gui=NONE guifg=#6CF7A2
 
 
+" Background colors for active vs inactive windows
+hi ActiveWindow guibg=bg
+hi InactiveWindow guibg=#141414
+
+" Call method on window enter
+augroup WindowManagement
+  autocmd!
+  autocmd WinEnter * call Handle_Win_Enter()
+augroup END
+
+" Change highlight group of active/inactive windows
+function! Handle_Win_Enter()
+  setlocal winhighlight=Normal:ActiveWindow,NormalNC:InactiveWindow
+endfunction
+
 "let fg_target = 'red'
 
 "let fg_current  = s:fg(['Normal'], '#efefef')
