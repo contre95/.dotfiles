@@ -27,9 +27,7 @@ vim.cmd("so /home/contre/.config/nvim/vim-file-types.vim")
 
 -- Plugins
 require("plugins")
-require("nvimTree")
 require("treesitter-nvim")
 require("statusline")
-require("top-bufferline")
-
-
+require("bufferline")
+require("nvim-tree-config")

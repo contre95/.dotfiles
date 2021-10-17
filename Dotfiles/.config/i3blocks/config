@@ -47,9 +47,9 @@ label=<span color="#a9e185"> </span>
 #color=#4a586e
 
 [bandwidth]
-command=~/.config/i3blocks/blocks/bandwidth
+command=~/.config/i3blocks/blocks/battery
 interval=persist
-label=<span color="#5ca08e"></span>
+label=<span color="#5ca08e"> </span>
 
 # Query my default IP address only on startup
 [ip-pub]
