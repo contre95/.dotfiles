@@ -7,7 +7,6 @@ return require("packer").startup(
         use "wbthomason/packer.nvim"
         use "nvim-treesitter/nvim-treesitter"
         use 'junegunn/goyo.vim'
-        use "akinsho/nvim-bufferline.lua"
         use "glepnir/galaxyline.nvim"
         use {
             'kyazdani42/nvim-tree.lua',
@@ -15,10 +14,10 @@ return require("packer").startup(
             --config = function() require'nvim-tree'.setup {} end
         }
 
-        --use "ryanoasis/vim-devicons"
+        use "akinsho/nvim-bufferline.lua"
         use "alvan/vim-closetag"
-        use  'rust-lang/rust.vim'
-        use  'neovim/nvim-lspconfig' 
+        -- use  'rust-lang/rust.vim'
+        -- use  'neovim/nvim-lspconfig' 
         
         -- -- Language Specific
         use 'fatih/vim-go'
@@ -38,8 +37,8 @@ return require("packer").startup(
                   -- or leave it empty to use the default settings
                   -- refer to the configuration section below
                 }
-  end
-}
+            end
+          }
     end,
         {
         display = {
