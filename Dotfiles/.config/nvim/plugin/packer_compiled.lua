@@ -134,10 +134,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/contre/.local/share/nvim/site/pack/packer/start/vim-closetag"
   },
-  ["vim-devicons"] = {
-    loaded = true,
-    path = "/home/contre/.local/share/nvim/site/pack/packer/start/vim-devicons"
-  },
   ["vim-go"] = {
     loaded = true,
     path = "/home/contre/.local/share/nvim/site/pack/packer/start/vim-go"
