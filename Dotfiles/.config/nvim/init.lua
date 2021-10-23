@@ -17,13 +17,13 @@ vim.api.nvim_set_option('termguicolors',true)
 vim.cmd('colorscheme jellybeans')
 
 -- Vim Imports 
-vim.cmd("so /home/contre/.config/nvim/vim-misc.vim")
-vim.cmd("so /home/contre/.config/nvim/vim-maps.vim")
-vim.cmd("so /home/contre/.config/nvim/vim-settings.vim")
-vim.cmd("so /home/contre/.config/nvim/vim-plugins.vim")
-vim.cmd("so /home/contre/.config/nvim/vim-commands.vim")
-vim.cmd("so /home/contre/.config/nvim/vim-highlights.vim")
-vim.cmd("so /home/contre/.config/nvim/vim-file-types.vim")
+vim.cmd("so ~/.config/nvim/vim-misc.vim")
+vim.cmd("so ~/.config/nvim/vim-maps.vim")
+vim.cmd("so ~/.config/nvim/vim-settings.vim")
+vim.cmd("so ~/.config/nvim/vim-plugins.vim")
+vim.cmd("so ~/.config/nvim/vim-commands.vim")
+vim.cmd("so ~/.config/nvim/vim-highlights.vim")
+vim.cmd("so ~/.config/nvim/vim-file-types.vim")
 
 -- Plugins
 require("plugins")
