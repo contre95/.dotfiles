@@ -24,14 +24,14 @@ floating_modifier $mod
 bindsym $mod+Return exec termite -e "tmux -u new-session -A -s Tmux"
 #bindsym $mod+Return exec xterm
 bindsym $mod+Shift+Return exec termite
-bindsym $mod+Ctrl+Return exec termite -e "tmux -u new-session -A -s Tmux" --class="floating-quick-term"
+bindsym $mod+Ctrl+Return exec termite -e "tmux -u new-session -A -s Floating" --class="floating-quick-term"
 # Window kill command
 bindsym $mod+Shift+q kill
 
 
 
 #bindsym $mod+Shift+c exec brave --profile-directory="Contre" --app=http://192.168.0.192:8080/browserfs.html
-bindsym $mod+Shift+c exec mpv /dev/video1
+bindsym $mod+Shift+c exec mpv /dev/video0
 
 bindsym $mod+Ctrl+q exec qutebrowser
 bindsym $mod+t exec brave  --profile-directory="Contre" --app=https://translate.google.com
@@ -289,21 +289,43 @@ bar {
 #  hidden_state hide
   font pango:JetBrains Mono Nerd Font 11
   status_command i3blocks -c ~/.config/i3blocks/config
+  #tray_output $mon_one
+  #output $mon_one
 # status_command i3status -c ~/.config/i3/i3status
   strip_workspace_numbers yes
     colors {
-        background #181818
+	    background #181818
         statusline #B7B7B7
-        separator  #666666
-        focused_workspace  #4A586E #4A586E #FFFFFF
-        active_workspace   #303030 #303030 #FFFFFF
-        inactive_workspace #2F3538 #303030 #888888
-        urgent_workspace   #4287f5 #4287f5 #000000
-        binding_mode       #2F343A #900000 #FFFFFF
+		separator  #666666
+
+		focused_workspace  #75A798 #75A798 #FFFFFF
+		active_workspace   #303030 #303030 #FFFFFF
+		inactive_workspace #2F3538 #303030 #888888
+		urgent_workspace   #4287f5 #4287f5 #000000
+		binding_mode       #2F343A #900000 #FFFFFF
     }
 }
 
-
+#bar {
+##  mode hide
+##  hidden_state hide
+#  font pango:JetBrains Mono Nerd Font 11
+#  status_command i3blocks -c ~/.config/i3blocks/config_mon_1
+#  output $mon_two
+#  tray_output $mon_one
+#  strip_workspace_numbers yes
+#    colors {
+#	    background #181818
+#        statusline #B7B7B7
+#		separator  #666666
+#
+#		focused_workspace  #4A586E #4A586E #FFFFFF
+#		active_workspace   #303030 #303030 #FFFFFF
+#		inactive_workspace #2F3538 #303030 #888888
+#		urgent_workspace   #4287f5 #4287f5 #000000
+#		binding_mode       #2F343A #900000 #FFFFFF
+#    }
+#}
 
 
 

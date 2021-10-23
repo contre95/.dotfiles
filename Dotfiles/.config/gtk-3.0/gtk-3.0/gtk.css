@@ -21,9 +21,6 @@
 }
 VteTerminal,
 vte-terminal {
-  padding: 20px 10px 5px 10px;
+  padding: 15px 10px 5px 10px;
 }
-/* You may want to use this if you don't like the double title.
-GtkLabel.title {
-    opacity: 0;
-}*/
+
