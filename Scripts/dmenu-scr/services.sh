@@ -16,15 +16,12 @@ case $var in
     /usr/bin/droidcam-cli -v 192.168.0.192 4747 &;; 
     
     ' Deemix')
-    /usr/bin/podman run -d --cap-add CAP_NET_RAW \
-              -v /home/canus/Music/:/downloads \
+        /usr/bin/podman run -d --cap-add CAP_NET_RAW \
+              --name DeTest \
+              -v /home/canus/Music/:/deemix-gui/server/music \
               -v /home/contre/.config/deemix-server:/config \
-              -e PUID=1000 \
-              -e PGID=1000 \
-              -e ARL=1234567 \
-              -e UMASK_SET=022 \
-              -e DEEZUI=false \
               -p 6595:6595 \
-              registry.gitlab.com/bockiii/deemix-docker;;
+              -it registry.gitlab.com/bockiii/deemix-docker bash
+
 
 esac
