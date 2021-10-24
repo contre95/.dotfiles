@@ -13,6 +13,10 @@ return require("packer").startup(
             requires = 'kyazdani42/nvim-web-devicons'
             --config = function() require'nvim-tree'.setup {} end
         }
+        use {
+        	"luukvbaal/stabilize.nvim",
+        	config = function() require("stabilize").setup() end
+        }
 
         use "akinsho/nvim-bufferline.lua"
         use "alvan/vim-closetag"
