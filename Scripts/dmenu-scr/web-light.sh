@@ -1,11 +1,13 @@
 #!/bin/zsh
 source ~/.zshrc
 SCR_PATH=$MY_FOLDER/Scripts
-choices="Galicia Contre\nMercadopago Contre\nGalicia Codelamp\nMercadopago Codelamp"
+choices="N26\nGalicia Contre\nMercadopago Contre\nGalicia Codelamp\nMercadopago Codelamp"
 
 chosen=$(echo -e "$choices" | dmenu -i -p "Select Layout: " -sb "#FF5733")
 
 case "$chosen" in
+	"N26")
+        exec i3-msg 'exec brave --profile-directory="Contre" --app=https://app.n26.com/login';;
 	"Galicia Contre")
         exec i3-msg 'exec brave --profile-directory="Contre" --app=https://onlinebanking.bancogalicia.com.ar/login';;
 	"Galicia Codelamp")
