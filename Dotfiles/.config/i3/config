@@ -21,10 +21,10 @@ font pango:JetBrains Mono Regular 11
 floating_modifier $mod
 
 
-bindsym $mod+Return exec termite -e "tmux -u new-session -A -s Tmux"
+bindsym $mod+Return exec alacritty -e /bin/zsh -c "tmux -u new-session -A -s Main"
 #bindsym $mod+Return exec xterm
-bindsym $mod+Shift+Return exec termite
-bindsym $mod+Ctrl+Return exec termite -e "tmux -u new-session -A -s Floating" --class="floating-quick-term"
+bindsym $mod+Shift+Return exec alacritty 
+bindsym $mod+Ctrl+Return exec alacritty --option background_opacity=0.7 -e /bin/zsh -c "tmux -u new-session -A -s Floating" 
 # Window kill command
 bindsym $mod+Shift+q kill
 
@@ -34,7 +34,7 @@ bindsym $mod+Shift+q kill
 bindsym $mod+Shift+c exec mpv /dev/video0
 
 bindsym $mod+Ctrl+q exec qutebrowser
-bindsym $mod+t exec brave  --profile-directory="Contre" --app=https://translate.google.com
+bindsym $mod+t exec brave --profile-directory="Contre" --app=https://translate.google.com
 bindsym $mod+Ctrl+g exec brave  --profile-directory="Contre" --app=https://connect.garmin.com/modern/
 #bindsym $mod+c exec gphoto2 --stdout --capture-movie | ffmpeg -i - -vcodec rawvideo -pix_fmt yuv420p -threads 0 -f v4l2 /dev/video0
 bindsym $mod+c exec --no-startup-id  gcolor2
@@ -43,9 +43,9 @@ bindsym $mod+h exec /usr/bin/brave --profile-directory="Meli"
 bindsym $mod+Shift+n exec /usr/bin/brave --profile-directory="Contre" --incognito
 bindsym $mod+j exec /usr/bin/brave --profile-directory="Canus"
 bindsym $mod+k exec /usr/bin/brave --profile-directory="Codelamp"
-bindsym $mod+i exec --no-startup-id /usr/bin/termite --exec="nvim /home/contre/.config/i3/config"
-bindsym $mod+u exec termite -e "nvim /home/contre/.zshrc"
-bindsym $mod+o exec termite -e "nvim /home/contre/.config/nvim/init.lua"
+bindsym $mod+i exec alacritty -e /bin/zsh -c "nvim /home/contre/.config/i3/config"
+bindsym $mod+u exec alacritty -e /bin/zsh -c "nvim /home/contre/.zshrc"
+bindsym $mod+o exec alacritty -e /bin/zsh -c "nvim /home/contre/.config/nvim/init.lua"
 bindsym $mod+Ctrl+o exec $scr_path/dmenu-scr/audio.sh
 bindsym $mod+b exec $scr_path/dmenu-scr/bluetooth.sh
 bindsym $mod+Shift+o exec pactl set-default-sink  $(pactl list short sinks | grep -v RUNNING |awk  -F" " '{ print $1}' | head -n 1)
@@ -201,6 +201,7 @@ assign [class="mpv" instance="gl"] $ws8
 
 # Open specific applications in floating mode
 #for_window [class="mpv" instance="gl"] floating disable sticky
+for_window [title="Google Translate"] floating enable, move absolute position center
 for_window [class="^custom-float-no-border$"] floating enable
 for_window [class="^custom-float-no-border$"] border pixel 0
 for_window [title="alsamixer"]  border pixel 1
@@ -233,8 +234,10 @@ for_window [class="Timeset-gui"] floating enable border normal
 for_window [class="(?i)virtualbox"] floating enable border normal
 for_window [class="Xfburn"] floating enable
 for_window [class="\bfloating\b"] floating enable
+for_window [title="Floating:1:zsh - \"archdesk\""] floating enable, move absolute position center
+#for_window [title="Google Translate"] 
 for_window [instance="\bfloating\b"] floating enable
-for_window [instance="\bquick-term\b"] move left 500px,move up 200px, resize set 1775 580
+#for_window [instance="\bquick-term\b"] move left 500px,move up 200px, resize set 1775 580
 
 # Cam for streamig
 for_window [instance="192.168.0.192__browserfs.html"] floating enable, resize set 528 298, sticky enable
