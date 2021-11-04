@@ -4,6 +4,7 @@ local use = packer.use
 -- using { } for using different branch , loading plugin with certain commands etc
 return require("packer").startup(
     function()
+        use 'marko-cerovac/material.nvim'
         use "wbthomason/packer.nvim"
         use "nvim-treesitter/nvim-treesitter"
         use 'junegunn/goyo.vim'

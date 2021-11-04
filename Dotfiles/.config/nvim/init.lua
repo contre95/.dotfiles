@@ -14,7 +14,10 @@ vim.api.nvim_set_var('mapleader', " ") -- Alternative: vim.g.mapleader = " "
 
 -- Color Scheme
 vim.api.nvim_set_option('termguicolors',true)
-vim.cmd('colorscheme jellybeans')
+vim.cmd('colorscheme material')
+vim.g.material_style = "darker"
+
+
 
 -- Vim Imports 
 vim.cmd("so ~/.config/nvim/vim-misc.vim")
@@ -22,13 +25,14 @@ vim.cmd("so ~/.config/nvim/vim-maps.vim")
 vim.cmd("so ~/.config/nvim/vim-settings.vim")
 vim.cmd("so ~/.config/nvim/vim-plugins.vim")
 vim.cmd("so ~/.config/nvim/vim-commands.vim")
-vim.cmd("so ~/.config/nvim/vim-highlights.vim")
+--vim.cmd("so ~/.config/nvim/vim-highlights.vim")
 vim.cmd("so ~/.config/nvim/vim-file-types.vim")
 
 -- Plugins
 require("plugins")
 require("treesitter-config")
 require("nvim-tree-config")
+require("colorscheme-config")
 require("bufferline-config")
 require("statusline-config")
 require("stablize-config")
