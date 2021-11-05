@@ -10,8 +10,8 @@ hi NvimTreeExecFile gui=NONE guifg=#6CF7A2
 
 
 " Background colors for active vs inactive windows
-hi ActiveWindow guibg=bg
-hi InactiveWindow guibg=#141414
+hi ActiveWindow guibg=#1c1c1c
+"hi InactiveWindow guibg=bg
 
 " Call method on window enter
 augroup WindowManagement

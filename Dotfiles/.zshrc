@@ -52,8 +52,8 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 #antigen bundle gretzky/auto-color-ls
 # antigen bundle StackExchange/blackbox
 # antigen bundle command-not-found
-# antigen bundle docker
-# antigen bundle docker-compose
+antigen bundle docker
+antigen bundle docker-compose
 antigen bundle golang
 antigen bundle python
 #antigen bundle web-search
@@ -64,7 +64,8 @@ antigen apply
 # User configuration
 ################################################################################################
 # If you come from bash you might have to change your $PATH.
-export PATH=/$HOME/.local/bin:$HOME/bin:/usr/local/bin:$HOME/.composer/vendor/bin:/usr/bin:/usr/local/go/bin:/$MY_FOLDER/Scripts/meli-scr:/home/contre/go/bin/:/home/contre/.local/lib/python3.9/site-packages:$PATH
+export PATH=/$HOME/.local/bin:$HOME/bin:/usr/local/bin:$HOME/.composer/vendor/bin:/usr/bin:/usr/local/go/bin:/$MY_FOLDER/Scripts/bin-scr:/home/contre/go/bin/:/home/contre/.local/lib/python3.9/site-packages:$PATH
+
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
    export EDITOR='vim'
@@ -101,6 +102,8 @@ export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
 ################################################################################################
 alias mf="cd $MY_FOLDER"
 alias xf="mpg123 --quiet $MY_FOLDER/Library/xfiles.mp3"
+alias docker="sudo docker"
+alias docker-compose="sudo docker-compose"
 alias ct="mpg123 --quiet $MY_FOLDER/Library/ct.mp3"
 alias qn="mpg123 --quiet $MY_FOLDER/Library/quienteconoce.mp3"
 alias mi="mpg123 --quiet $MY_FOLDER/Library/monster_inc.mp3"
@@ -141,7 +144,6 @@ source ~/.nvm/nvm.sh
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 export BROWSER="brave"
-export EDITOR="nvim"
 alias mon2cam="deno run --unstable -A -r -q https://raw.githubusercontent.com/ShayBox/Mon2Cam/master/src/mod.ts"
 alias mon2cam="deno run --unstable -A -r -q https://raw.githubusercontent.com/ShayBox/Mon2Cam/master/src/mod.ts"
 alias vim="nvim"

@@ -4,6 +4,7 @@ local use = packer.use
 -- using { } for using different branch , loading plugin with certain commands etc
 return require("packer").startup(
     function()
+        use 'marko-cerovac/material.nvim'
         use "wbthomason/packer.nvim"
         use "nvim-treesitter/nvim-treesitter"
         use 'junegunn/goyo.vim'
@@ -12,6 +13,10 @@ return require("packer").startup(
             'kyazdani42/nvim-tree.lua',
             requires = 'kyazdani42/nvim-web-devicons'
             --config = function() require'nvim-tree'.setup {} end
+        }
+        use {
+        	"luukvbaal/stabilize.nvim",
+        	config = function() require("stabilize").setup() end
         }
 
         use "akinsho/nvim-bufferline.lua"
