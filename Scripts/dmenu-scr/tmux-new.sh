@@ -5,26 +5,26 @@ TMUX_SCRIPTS=/home/canus/Scripts/tmux-scr
 
 case $var in
     ' RSS') 
-    exec termite -e "zsh $TMUX_SCRIPTS/rss.sh";;
+    exec alacritty -e "$TMUX_SCRIPTS/rss.sh";;
     
     ' Codelamp') 
-    exec termite -e "zsh $TMUX_SCRIPTS/ims.sh";;
+    exec alacritty -e "$TMUX_SCRIPTS/ims.sh";;
     
     ' Music')
-    exec termite -e "zsh $TMUX_SCRIPTS/music.sh";;
+    exec alacritty -e "$TMUX_SCRIPTS/music.sh";;
 
     'ﳳ Pass')
-    exec termite -e "zsh $TMUX_SCRIPTS/pass.sh";;
+    exec alacritty -e "$TMUX_SCRIPTS/pass.sh";;
 
     ' Server')
-    exec termite -e "zsh $TMUX_SCRIPTS/contre-server.sh";;
+    exec alacritty -e "$TMUX_SCRIPTS/contre-server.sh";;
 
     ' Raspi')
-    exec termite -e "zsh $TMUX_SCRIPTS/raspi.sh";;
+    exec alacritty -e "$TMUX_SCRIPTS/raspi.sh";;
 
     ' Android')
-    exec termite -e "zsh $TMUX_SCRIPTS/termux.sh";;
+    exec alacritty -e "$TMUX_SCRIPTS/termux.sh";;
     
     ' Mac')
-    exec termite -e "zsh $TMUX_SCRIPTS/mac.sh";;
+    exec alacritty -e "$TMUX_SCRIPTS/mac.sh";;
 esac
