@@ -2,6 +2,9 @@
 "------------------------------------ Plugins configuration -----------------------------------
 "----------------------------------------------------------------------------------------------
 
+" Material Colorscheme
+nmap <silent> <leader>n :lua require('material.functions').toggle_style()<CR>
+
 " Goyo or similar
 nmap <silent> <leader>g :Goyo<CR>
 
