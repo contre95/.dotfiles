@@ -44,8 +44,7 @@ aug end
 "-------------------------------------
 fun! s:DetectLogstash()
     if getline(1) =~ '^[ \t]*input {'
-        set syntax=logstash
-        set nowrap
+        set ft=logstash
     endif
 endfun
 autocmd BufNewFile,BufRead *.conf call s:DetectLogstash()
