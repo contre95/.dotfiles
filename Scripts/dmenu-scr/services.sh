@@ -13,7 +13,7 @@ case $var in
     systemctl start docker;;
 
     ' Droidcam')
-    /usr/bin/droidcam-cli -v 192.168.0.192 4747 &;; 
+    /usr/bin/droidcam-cli -v 192.168.1.192 4747 &;; 
     
     ' Deemix')
         /usr/bin/podman run -d --cap-add CAP_NET_RAW \

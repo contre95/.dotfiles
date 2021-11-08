@@ -9,5 +9,5 @@ scrot -a "$x","$y","$w","$h" -o "$dest"
 nohup feh -x "$dest" >/dev/null 2>&1 &
 sleep 0.1
 wid=$(xdotool getwindowfocus)
-xdotool set_window --class "custom-float-no-border" "$wid"
+xdotool set_window --class "custom-float-border" "$wid"
 xdotool windowmove "$wid" "$x" "$y"

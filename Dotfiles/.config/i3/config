@@ -202,8 +202,8 @@ assign [class="mpv" instance="gl"] $ws8
 # Open specific applications in floating mode
 #for_window [class="mpv" instance="gl"] floating disable sticky
 for_window [title="Google Translate"] floating enable, move absolute position center
-for_window [class="^custom-float-no-border$"] floating enable
-for_window [class="^custom-float-no-border$"] border pixel 0
+for_window [class="^custom-float-border$"] floating enable
+for_window [class="^custom-float-border$"] border pixel 2 #FFFFFF
 for_window [title="alsamixer"]  border pixel 1
 for_window [class="Calamares"] floating enable border normal
 for_window [class="Clipgrab"] floating enable
