@@ -28,7 +28,8 @@ require('material').setup({
     },
 
       custom_highlights = {
-    -- Common
+          
+    ---- Common
     Identifier = { fg = colors.cyan },
     Todo = { fg = colors.yellow, style = 'bold' },
     DiffAdd = { bg = '#45493e', fg = colors.none },
@@ -53,6 +54,12 @@ require('material').setup({
     gitcommitSelectedType = { fg = colors.green },
     gitcommitSummary = { fg = colors.blue },
     gitcommitDiscardedType = { fg = colors.red },
+
+    -- i3
+    i3ConfigCommand = {fg = colors.blue},
+    i3String = {fg = colors.green},
+    i3ExecCommand = {fg = colors.green},
+    
 
     -- NvimTree
     NvimTreeIndentMarker = { fg = colors.selection },
@@ -226,5 +233,14 @@ require('material').setup({
     mkdLink = { fg = colors.green },
     mkdListItem = { fg = colors.cyan },
     mkdURL = { fg = colors.pink, style = 'underline' },
+
+    -- Go
+    goFunction = { fg =colors.red},
+    goImportString = { fg =colors.red},
+    goString = { fg =colors.red},
+    goStringGroup = { fg =colors.red},
+    goSpecialString = { fg =colors.red},
+    goFunctionReturn = { fg =colors.red},
+
   }
 })
