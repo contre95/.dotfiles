@@ -1,4 +1,4 @@
-function music{
+function music {
     tput setaf 3;
 
     tmux start-server

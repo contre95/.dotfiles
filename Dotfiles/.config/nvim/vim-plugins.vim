@@ -51,27 +51,27 @@ let g:indent_blankline_filetype = ['vim', 'python', 'sh']
 let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
 
  "Python-syntax
-"let g:python_highlight_all = 1
+let g:python_highlight_all = 1
 
 " Vim-Go
 "-------------------------------------
-let g:go_def_mode='gopls'
-let g:go_info_mode='gopls'
-let g:go_highlight_types = 1
-let g:go_highlight_fields = 0
-let g:go_highlight_format_strings = 1
-let g:go_highlight_functions = 1
-let g:go_highlight_function_calls = 1
-let g:go_highlight_function_parameters = 1
-let g:go_highlight_methods = 1
-let g:go_highlight_operators = 1
-let g:go_highlight_build_constraints = 1
-let g:go_highlight_structs = 1
-let g:go_highlight_generate_tags = 1
-let g:go_highlight_space_tab_error = 1
-let g:go_highlight_array_whitespace_error = 1
-let g:go_highlight_trailing_whitespace_error = 0
-let g:go_highlight_extra_types = 1
+"let g:go_def_mode='gopls'
+"let g:go_info_mode='gopls'
+"let g:go_highlight_types = 1
+"let g:go_highlight_fields = 0
+"let g:go_highlight_format_strings = 1
+"let g:go_highlight_functions = 1
+"let g:go_highlight_function_calls = 1
+"let g:go_highlight_function_parameters = 1
+"let g:go_highlight_methods = 1
+"let g:go_highlight_operators = 1
+"let g:go_highlight_build_constraints = 1
+"let g:go_highlight_structs = 1
+"let g:go_highlight_generate_tags = 1
+"let g:go_highlight_space_tab_error = 1
+"let g:go_highlight_array_whitespace_error = 1
+"let g:go_highlight_trailing_whitespace_error = 0
+"let g:go_highlight_extra_types = 1
 
 
 "NerdCommenter

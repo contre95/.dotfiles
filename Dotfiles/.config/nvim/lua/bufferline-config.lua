@@ -26,26 +26,11 @@ require "bufferline".setup {
         enforce_regular_tabs = true,
         show_close_icon =false,
         --view = "multiwindow",
-        show_buffer_close_icons = true,
+        show_buffer_close_icons = rue,
         sort_by =  "directory",
-        separator_style =   { '   ', '   '},
+        separator_style =   { '---', '---'},
     },
-    -- bar colors!!
-    highlights = {
-        background = {
-            guibg = "#1B1B1B"
-        },
-        tab_selected = {
-            guifg = "#FFFFF0"
-        },
-        separator = {
-            guifg = "#363636"
-        },
-        separator_visible = {
-            guifg = "#363636",
-            guibg = "#252931"
-        },
-    }
+    custom_highlights = {}
 }
 
 -- MAPPINGS
