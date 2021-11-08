@@ -20,7 +20,6 @@ font pango:JetBrains Mono Regular 11
 #font pango:DejaVu Sans Mono Regular
 floating_modifier $mod
 
-
 bindsym $mod+Return exec alacritty -e /bin/zsh -c "tmux -u new-session -A -s Main"
 #bindsym $mod+Return exec xterm
 bindsym $mod+Shift+Return exec alacritty 
@@ -129,8 +128,10 @@ bindsym $mod+Ctrl+Right workspace next
 bindsym $mod+Ctrl+Left workspace prev
 
 # Monitors (Desktop only)
-set $mon_one HDMI-0
-set $mon_two DP-5
+set $mon_one DP-4
+set $mon_one_width_divided_by_two 960
+set $mon_two DP-0
+set $mon_two_width_divided_by_two 960
 
 # workspaces
 set $ws1 1
@@ -201,7 +202,7 @@ assign [class="mpv" instance="gl"] $ws8
 
 # Open specific applications in floating mode
 #for_window [class="mpv" instance="gl"] floating disable sticky
-for_window [title="Google Translate"] floating enable, move absolute position center
+for_window [title="Google Translate"] floating enable, move position center, resize set 800 600
 for_window [class="^custom-float-border$"] floating enable
 for_window [class="^custom-float-border$"] border pixel 2 #FFFFFF
 for_window [title="alsamixer"]  border pixel 1
@@ -234,7 +235,7 @@ for_window [class="Timeset-gui"] floating enable border normal
 for_window [class="(?i)virtualbox"] floating enable border normal
 for_window [class="Xfburn"] floating enable
 for_window [class="\bfloating\b"] floating enable
-for_window [title="Floating:1:zsh - \"archdesk\""] floating enable, move absolute position center
+for_window [title="Floating:1:zsh - \"archdesk\""] floating enable, move position center
 #for_window [title="Google Translate"] 
 for_window [instance="\bfloating\b"] floating enable
 #for_window [instance="\bquick-term\b"] move left 500px,move up 200px, resize set 1775 580
@@ -291,9 +292,9 @@ bar {
 #  mode hide
 #  hidden_state hide
   font pango:JetBrains Mono Nerd Font 11
-  status_command i3blocks -c ~/.config/i3blocks/config
-  #tray_output $mon_one
-  #output $mon_one
+  status_command i3blocks -c ~/.config/i3blocks/config_mon_2
+  tray_output $mon_one
+  output $mon_one
 # status_command i3status -c ~/.config/i3/i3status
   strip_workspace_numbers yes
     colors {
@@ -309,26 +310,27 @@ bar {
     }
 }
 
-#bar {
-##  mode hide
-##  hidden_state hide
-#  font pango:JetBrains Mono Nerd Font 11
-#  status_command i3blocks -c ~/.config/i3blocks/config_mon_1
-#  output $mon_two
-#  tray_output $mon_one
-#  strip_workspace_numbers yes
-#    colors {
-#	    background #181818
-#        statusline #B7B7B7
-#		separator  #666666
-#
-#		focused_workspace  #4A586E #4A586E #FFFFFF
-#		active_workspace   #303030 #303030 #FFFFFF
-#		inactive_workspace #2F3538 #303030 #888888
-#		urgent_workspace   #4287f5 #4287f5 #000000
-#		binding_mode       #2F343A #900000 #FFFFFF
-#    }
-#}
+bar {
+#  mode hide
+#  hidden_state hide
+  font pango:JetBrains Mono Nerd Font 11
+  status_command i3blocks -c ~/.config/i3blocks/config_mon_1
+  output $mon_two
+  tray_output $mon_two
+  strip_workspace_numbers yes
+    colors {
+	    background #181818
+        statusline #B7B7B7
+		separator  #666666
+
+        #focused_workspace  #4A586E #4A586E #FFFFFF
+		focused_workspace  #75A798 #75A798 #FFFFFF
+		active_workspace   #303030 #303030 #FFFFFF
+		inactive_workspace #2F3538 #303030 #888888
+		urgent_workspace   #4287f5 #4287f5 #000000
+		binding_mode       #2F343A #900000 #FFFFFF
+    }
+}
 
 
 
