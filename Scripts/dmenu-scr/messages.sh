@@ -5,32 +5,32 @@ var=$(echo -e $choices | dmenu -i -p "Exit menu: " -sb "#137aad" -fn "JetBrainsM
 
 case $var in
     ' Whatsapp') 
-	  exec i3-msg 'exec brave --profile-directory="Contre" --app=https://web.whatsapp.com -class "messages"';;
+	  exec 'brave --profile-directory="Contre" --app=https://web.whatsapp.com -class "messages"';;
 
     'ﭮ Discord')
-	  exec i3-msg 'exec discord';;
+	  exec 'discord';;
 
     ' Jitsi')
-        ASD="https://meet.jit.si/$(zenity --entry --text="Enter call name:")"
-        echo $ASD | xclip -sel clip
-        exec brave --profile-directory="Contre" --app=$ASD
+        URL="https://meet.jit.si/$(zenity --entry --text="Enter call name:")"
+        echo $URL | xclip -sel clip
+        exec brave --profile-directory="Contre" --app=$URL
         ;;
 
     ' Hangouts')
-	  exec i3-msg 'exec brave --profile-directory="Contre" --app=https://hangouts.google.com/call';;
+	  exec 'brave --profile-directory="Contre" --app=https://hangouts.google.com/call';;
 
     ' Messenger')
-	  exec i3-msg 'exec brave --profile-directory="Contre" --app=https://messenger.com';;
+	  exec 'brave --profile-directory="Contre" --app=https://messenger.com';;
     
     ' Gmail')
-	  exec i3-msg 'exec brave --profile-directory="Contre" --app=https://gmail.com';;
+	  exec 'brave --profile-directory="Contre" --app=https://gmail.com';;
 
     ' Telegram')
-	  exec i3-msg 'exec telegram-desktop';;
+	  exec 'telegram-desktop';;
 
     ' Signal')
-	  exec i3-msg 'exec signal-desktop';;
+	  exec 'signal-desktop';;
       
     ' Slack')
-	  exec i3-msg 'exec slack';;
+	  exec 'slack';;
 esac
