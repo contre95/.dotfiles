@@ -18,3 +18,5 @@ if &term =~ '^tmux'
     execute "set <xUp>=\e[1;*A"                                                         
 endif                                                                                   
 
+autocmd VimEnter * :silent exec "!kill -s SIGWINCH $PPID"
+
