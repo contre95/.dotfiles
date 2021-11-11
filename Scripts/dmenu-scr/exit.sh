@@ -8,13 +8,13 @@ case $var in
 	  systemctl poweroff;;
 
     ' Lock')
-      "i3-msg exit";;
+      dm-tool lock ;;
 
     ' Restart')
       systemctl reboot;;
 
     ' Logout')
-      i3exit logout;;
+      exec dm-too lock && pkill -9 bspwm;;
       
     ' Suspend')
       systemctl hibernate;;
