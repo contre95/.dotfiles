@@ -45,7 +45,6 @@ aug end
 fun! s:DetectLogstash()
     if getline(1) =~ '^[ \t]*input {'
         set ft=logstash
-        set nowrap
     endif
 endfun
 autocmd BufNewFile,BufRead *.conf call s:DetectLogstash()
@@ -55,4 +54,13 @@ autocmd BufNewFile,BufRead *.conf call s:DetectLogstash()
 aug terraform_ft_detection
     au!
     au BufNewFile,BufRead *.tf set filetype=terraform
+aug end
+
+"Set SXHKD filetype
+"-------------------------------------
+
+aug sxhkd_ft_detection
+    au!
+    autocmd BufNewFile,BufRead sxhkdrc,*.sxhkdrc set ft=sxhkdrc
+    "set syntax=sxhkdrc
 aug end

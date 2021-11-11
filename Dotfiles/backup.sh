@@ -35,6 +35,13 @@ cp -r ~/.zsh $MY_FOLDER/Dotfiles
 # Newsboat
 cp -r ~/.newsboat/config $MY_FOLDER/Dotfiles/.newsboat/config
 
+# BSPWM
+cp -r ~/.config/bspwm $MY_FOLDER/Dotfiles/.config
+# Lemonbar
+cp -r ~/.config/lemonbar $MY_FOLDER/Dotfiles/.config
+# SXHKD
+cp -r ~/.config/sxhkd $MY_FOLDER/Dotfiles/.config
+
 # Dunst
 cp -r ~/.config/dunst $MY_FOLDER/Dotfiles/.config
 
