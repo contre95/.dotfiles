@@ -21,8 +21,11 @@ super + h
 
 # BSPWM hotkeys
 # -------------------------------------
-super + {_,shift + }{1-9}
-    bspc {desktop -f,node -d} '^{1-9}'
+super + {1-9}
+    bspc {desktop -f} '^{1-9}'
+
+super + shift + {1-9}
+    desk='^{1-9}' ; bspc node -d $desk; bspc desktop -f $desk
 
 # close focused window
 super + shift + q 
@@ -63,7 +66,7 @@ super + m
     $SCR_PATH/dmenu-scr/messages.sh
 super + shift + x
     maim -s --format=png /dev/stdout | xclip -selection clipboard -t image/png -i
-super + shift + v
+super + ctrl + v
     clipmenu -sb "#57C1A0" -fn "JetBrainsMono Nerd Font"
 super + shift + p
     PASSWORD_STORE_DIR=$MY_FOLDER/Pass $SCR_PATH/dmenu-scr/otpmenu.sh

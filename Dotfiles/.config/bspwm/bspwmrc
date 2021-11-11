@@ -1,13 +1,4 @@
 #! /bin/sh
-#  ____ _____ 
-# |  _ \_   _|  Derek Taylor (DistroTube)
-# | | | || |  	http://www.youtube.com/c/DistroTube
-# | |_| || |  	http://www.gitlab.com/dwt1/ 
-# |____/ |_|  	
-#        
-# A customized bspwmrc for the bspwm window manager.
-# https://github.com/baskerville/sxhkd
-# https://github.com/baskerville/bspwm
 
 export MY_FOLDER=/home/canus
 export SCR_PATH=$MY_FOLDER/Scripts
@@ -16,6 +7,7 @@ sxhkd &
 picom &
 nitrogen --restore &
 clipmenud &
+bluetoothctl power on &
 setxkbmap -layout us -variant mac &
 #nvidia-settings -a "[gpu:0]/GPUFanControlState=1" -a "[fan:0]/GPUTargetFanSpeed=50" -a "[fan:1]/GPUTargetFanSpeed=50"
 
