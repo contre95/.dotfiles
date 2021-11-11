@@ -1,0 +1,87 @@
+
+## make sxhkd reload its configuration files:
+super + shift + r
+    pkill -USR1 -x sxhkd &
+
+# Terminal emulator
+# -------------------------------------
+super + Return
+	alacritty -e /bin/zsh -c "tmux -u new-session -A -s Main" 
+super + shift + Return
+    alacritty
+super + ctrl +Return
+    alacritty --option background_opacity=0.7 -e /bin/zsh -c "tmux -u new-session -A -s Floating" 
+
+# Browser
+# -------------------------------------
+super + g
+    /usr/bin/brave --profile-directory="Contre"
+super + h
+    /usr/bin/brave --profile-directory="Meli"
+
+# BSPWM hotkeys
+# -------------------------------------
+super + {_,shift + }{1-9}
+    bspc {desktop -f,node -d} '^{1-9}'
+
+# close focused window
+super + shift + q 
+	bspc node -c
+# focus the node in the given direction
+super + {_,shift + }{Left,Down,Up,Right}
+	bspc node -{f,s} {west,south,north,east}
+# set/toggle windows state
+super + {t,shift + t,shift+f,f}
+    bspc node -t {\~tiled,\~pseudo_tiled,\~floating,\~fullscreen}
+# expand a window by moving one of its side outward
+super + r + {Left,Down,Up,Right}
+	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
+
+# GUI Programs
+super + s 
+    pavucontrol
+
+# DMenu Scripts
+# -------------------------------------
+super + x
+    import ~/Pictures/Screenshots/screenshot-`/bin/date +%Y%m%d-%H:%M:%S`.png
+super + a
+    $SCR_PATH/dmenu-scr/set-display.sh
+super + b
+    $SCR_PATH/dmenu-scr/bluetooth.sh 
+super + w
+    $SCR_PATH/dmenu-scr/web-light.sh
+super + d
+    $SCR_PATH/dmenu-scr/dotfiles.sh 
+super + p
+    PASSWORD_STORE_DIR=$MY_FOLDER/Pass $SCR_PATH/dmenu-scr/passmenu.sh 
+super + 0
+    $SCR_PATH/dmenu-scr/exit.sh
+super + q
+    tmux kill-server
+super + m
+    $SCR_PATH/dmenu-scr/messages.sh
+super + shift + x
+    maim -s --format=png /dev/stdout | xclip -selection clipboard -t image/png -i
+super + shift + v
+    clipmenu -sb "#57C1A0" -fn "JetBrainsMono Nerd Font"
+super + shift + p
+    PASSWORD_STORE_DIR=$MY_FOLDER/Pass $SCR_PATH/dmenu-scr/otpmenu.sh
+super + shift + w
+    zbarimg --raw -q <(maim -s --format=png /dev/stdout) | xclip -sel clip
+super + shift + a
+    $SCR_PATH/dmenu-scr/services.sh 
+super + shift + t
+    $SCR_PATH/dmenu-scr/mpv.sh      
+super + shift + z
+    $SCR_PATH/dmenu-scr/pdf.sh      
+super + shift + m
+    $SCR_PATH/dmenu-scr/tmux-new.sh 
+super + ctrl + m
+    pulseaudio-ctl mute-input
+super + ctrl + x
+    $SCR_PATH/i3-scr/screen-snip.sh
+super + ctrl + p
+    PASSWORD_STORE_DIR=$MY_FOLDER/Pass passmenu --type -i -p "Pass  : " "$@" -sb "#34495E" -fn "JetBrainsMono Nerd Font"
+super + ctrl + o
+    $SCR_PATH/dmenu-scr/audio.sh
