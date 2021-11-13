@@ -14,7 +14,7 @@ set encoding=utf-8
 set relativenumber
 set softtabstop=4
 set tabpagemax=4 
-set wrapmargin=2
+"set wrapmargin=2
 set laststatus=2
 set shiftwidth=4
 set spelllang=en
@@ -39,7 +39,6 @@ set mouse=a
 set nospell
 set number
 set bs=2
-set nu
 
 " Treat end of lines like normal IDE
 "-------------------------------------
