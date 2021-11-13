@@ -14,7 +14,7 @@ case $var in
       systemctl reboot;;
 
     ' Logout')
-      exec dm-too lock && pkill -9 bspwm;;
+      dm-tool lock & pkill -9 bspwm;;
       
     ' Suspend')
       systemctl hibernate;;
