@@ -60,6 +60,7 @@ class Tags(Module):
             elif on_monitor and k in 'OoFfUu':
                 desktops[v] = k
 
+        print(desktops)
         return desktops
 
     def output(self):
