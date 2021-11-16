@@ -93,7 +93,7 @@ class Tags(lemonbar_manager.Module):
         self._formats = {
             'O': ('%{B#333}', '%{-u}%{B-}'),          # Focused, Occupied
             'F': ('%{B#333}%{F#000}', '%{F-}%{B-}'),  # Focused, Free
-            'U': ('%{B#CF6A4C}', '%{B-}'),            # Focused, Urgent
+            'U': ('%{F#CF6A4C}', '%{F-}'),            # Focused, Urgent
 
             'o': ('', ''),                  # Unfocused, Occupied
             'f': ('%{F#333}', '%{F-}'),     # Unfocused, Free
