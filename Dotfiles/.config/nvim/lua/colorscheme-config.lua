@@ -242,11 +242,5 @@ require('material').setup({
     goSpecialString = { fg =colors.red},
     goFunctionReturn = { fg =colors.red},
 
- -- Terraform
-    terraDataTypeBI = { fg = colors.cyan },
-    terraSection = { fg = colors.yellow },
-    terraResource = { fg = colors.purple },
-    terraResourceTypeBI = { fg = "#f7ffbe" },
-    terraData = { fg = colors.yellow },   
   }
 })
