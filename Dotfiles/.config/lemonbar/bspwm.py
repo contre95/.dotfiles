@@ -1,4 +1,4 @@
-from collections import OrderedDict
+
 import subprocess as sp
 
 from lemonbar_manager import Module
@@ -33,7 +33,7 @@ class Tags(Module):
 
             'o': ('', ''),                      # Unfocused, Occupied
             'f': ('%{F#333}', '%{F-}'),     # Unfocused, Free
-            'u': ('%{B#CF6A4C}', '%{B-}'),  # Unfocused, Urgent
+            'u': ('%{B#CF6A4C}', '%{F-}'),  # Unfocused, Urgent
         }
 
     def _parse_event(self, event):

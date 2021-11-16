@@ -97,7 +97,7 @@ class Tags(lemonbar_manager.Module):
 
             'o': ('', ''),                  # Unfocused, Occupied
             'f': ('%{F#333}', '%{F-}'),     # Unfocused, Free
-            'u': ('%{B#CF6A4C}', '%{B-}'),  # Unfocused, Urgent
+            'u': ('%{F#FFFFFF}', '%{F-}'),  # Unfocused, Urgent
         }
 
     def _parse_event(self, event):

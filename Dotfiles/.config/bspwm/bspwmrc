@@ -13,12 +13,13 @@ setxkbmap -layout us -variant mac &
 
 #### MONITORS ####
 bspc monitor DP-2 -d 1 2 3 4 5 
-bspc monitor DP-4 -d 6 7 8 9  ﭮ 
+bspc monitor DP-4 -d 6 7 8 9  ﭮ 
 
-#### MONITORS ####
-bspc monitor DP-2 -d 1 2 3 4 5 
-bspc monitor DP-4 -d 6 7 8 9  ﭮ 
-
+#### BSPWM rules ####
+bspc rule -a TelegramDesktop desktop=''
+bspc rule -a discord desktop='ﭮ'
+bspc rule -a 'meet.jit.si' desktop=''
+bspc rule -a mocp desktop=''
 #### BSPWM configuration ####
 bspc config border_width                  2
 bspc config window_gap                    10
