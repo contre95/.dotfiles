@@ -38,6 +38,7 @@ def get_monitor_info(monitor_name):
             if root[child] is not None:
                 parse_clients_subtree(root[child], clients)
 
+        print(clients)
         return clients
 
     tree = json.loads(sp.run(['bspc', 'wm', '-d'], capture_output=True).stdout)
@@ -70,7 +71,7 @@ def get_monitor_info(monitor_name):
 
 
 class Tags(lemonbar_manager.Module):
-    def __init__(self, monitor):
+    def __init__(self, monitor, include):
         """A BSPWM desktop indicator.
 
         Parameters:
@@ -86,6 +87,7 @@ class Tags(lemonbar_manager.Module):
         ]
 
         self._monitor = monitor
+        self._include = include
 
         # The format strings use to display the stauts of the desktops
         self._formats = {
@@ -120,8 +122,8 @@ class Tags(lemonbar_manager.Module):
             if k in 'Mm':
                 on_monitor = v == self._monitor
             elif on_monitor and k in 'OoFfUu':
-                desktops[v] = k
-
+                if v in self._include:
+                    desktops[v] = k
         return desktops
 
     def output(self):
@@ -135,7 +137,11 @@ class Tags(lemonbar_manager.Module):
             output.append('{P}{desktop}{P}'.format(P=PADDING, desktop=desktop))
             output.append(self._formats[state][1])
             output.append('%{A}')
-
+        
+        # if self._sliced:         
+            # self._sliced[0]*=5
+            # self._sliced[1]*=5
+            # return ''.join(output[self._sliced[0]:self._sliced[1]])
         return ''.join(output)
 
     def handle_event(self, event):

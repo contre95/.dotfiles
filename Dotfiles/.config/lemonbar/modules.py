@@ -15,7 +15,10 @@ class Command(lemonbar_manager.Module):
         self._label = label
 
     def output(self):
-        return self._label + ' %{F#FFFFF0}' + str(sp.check_output(self._command).decode("utf-8").strip()) + '%{F-}'
+        try:
+            return self._label + ' %{F#FFFFF0}' + str(sp.check_output(self._command).decode("utf-8").strip()) + '%{F-}'
+        except Exception:
+            return self._label + ' %{F#FFFFF0}' + "Not Connected" + '%{F-}'
 
 
 class Const(lemonbar_manager.Module):
