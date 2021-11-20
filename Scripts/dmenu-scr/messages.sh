@@ -5,7 +5,7 @@ var=$(echo -e $choices | dmenu -i -p "Exit menu: " -sb "#137aad" -fn "JetBrainsM
 
 case $var in
     ' Whatsapp') 
-	  exec 'brave --profile-directory="Contre" --app=https://web.whatsapp.com -class "messages"';;
+	  brave --profile-directory="Contre" --app=https://web.whatsapp.com;;
 
     'ﭮ Discord')
 	  exec 'discord';;
@@ -17,13 +17,13 @@ case $var in
         ;;
 
     ' Hangouts')
-	  exec 'brave --profile-directory="Contre" --app=https://hangouts.google.com/call';;
+	  brave --profile-directory="Contre" --app=https://hangouts.google.com/call;;
 
     ' Messenger')
-	  exec 'brave --profile-directory="Contre" --app=https://messenger.com';;
+	  brave --profile-directory="Contre" --app=https://messenger.com;;
     
     ' Gmail')
-	  exec 'brave --profile-directory="Contre" --app=https://gmail.com';;
+	 brave --profile-directory="Contre" --app=https://gmail.com;;
 
     ' Telegram')
 	  exec 'telegram-desktop';;
