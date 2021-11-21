@@ -17,11 +17,10 @@ case $var in
     
     ' Deemix')
         /usr/bin/podman run -d --cap-add CAP_NET_RAW \
+              --rm \
               --name DeTest \
               -v /home/canus/Music/:/deemix-gui/server/music \
               -v /home/contre/.config/deemix-server:/config \
               -p 6595:6595 \
               -it registry.gitlab.com/bockiii/deemix-docker bash
-
-
 esac
