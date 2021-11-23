@@ -9,11 +9,13 @@
 --       \  \:\__|:|     /__/:/    \  \:\        \  \:\        \  \:\/:/
 --        \__\::::/      \__\/      \  \:\        \  \:\        \  \::/
 --            ~~~~                   \__\/         \__\/         \__\/
+
+
 -- Leader key
 vim.api.nvim_set_var('mapleader', " ") -- Alternative: vim.g.mapleader = " "
 
 -- Color Scheme
-vim.api.nvim_set_option('termguicolors',true)
+vim.o.termguicolors = true
 vim.cmd('colorscheme material')
 vim.g.material_style = "deep ocean"
 

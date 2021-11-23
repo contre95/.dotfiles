@@ -10,11 +10,9 @@ autocmd FileType markdown setlocal textwidth=80
 autocmd FileType markdown setlocal colorcolumn=-2 
 let g:markdown_fenced_languages = ['julia', 'css', 'python', 'javascript', 'js=javascript', 'json=javascript', 'ruby', 'sass', 'html', 'go']
 
-"Set Yaml
+"Set terrform Yaml
 "-------------------------------------
-autocmd BufNewFile,BufReadPre,FileReadPre *.sls setlocal filetype=yaml
-autocmd FileType yaml setlocal expandtab tabstop=2 shiftwidth=2
-
+autocmd BufNewFile,BufReadPre,FileReadPre *.yaml, *.yml, *.sls :setlocal expandtab tabstop=2 shiftwidth=2 
 
 "Set terrform GitCommits
 "-------------------------------------

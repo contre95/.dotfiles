@@ -5,6 +5,8 @@ local use = packer.use
 return require("packer").startup(
     function()
         use 'marko-cerovac/material.nvim'
+        --use "rafamadriz/neon"
+        --use "Shatur/neovim-ayu"
         --use 'EdenEast/nightfox.nvim'
         --use 'folke/tokyonight.nvim'
 

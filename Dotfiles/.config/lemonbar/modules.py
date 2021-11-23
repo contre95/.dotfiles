@@ -4,7 +4,7 @@ import lemonbar_manager
 
 
 class Command(lemonbar_manager.Module):
-    def __init__(self, command, label=""):
+    def __init__(self, command, label="", errMsg="Err"):
         """A constant value.
 
         Parameters:
@@ -13,12 +13,14 @@ class Command(lemonbar_manager.Module):
         super().__init__()
         self._command = command
         self._label = label
+        self._errMsg = errMsg
 
     def output(self):
         try:
             return self._label + ' %{F#FFFFF0}' + str(sp.check_output(self._command).decode("utf-8").strip()) + '%{F-}'
-        except Exception:
-            return self._label + ' %{F#FFFFF0}' + "Not Connected" + '%{F-}'
+        except Exception as e:
+            print(e)
+            return self._label + ' %{F#FFFFF0}' + self._errMsg + '%{F-}'
 
 
 class Const(lemonbar_manager.Module):
