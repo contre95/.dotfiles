@@ -21,7 +21,6 @@ inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 let b:coc_pairs_disabled = ['<']
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
-let g:coc_global_extensions = ["coc-json", "coc-git","coc-pyright","coc-go","coc-yaml","coc-snippets","coc-html","coc-emmet","coc-vetur","coc-prettier"]
 
 
 " Buffline

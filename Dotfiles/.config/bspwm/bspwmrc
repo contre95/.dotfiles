@@ -13,7 +13,7 @@ setxkbmap -layout us -variant mac &
 
 #### MONITORS ####
 bspc monitor DP-2 -d 1 2 3 4 5 
-bspc monitor DP-4 -d 6 7 8 9  ﭮ  
+bspc monitor DP-4 -d 6 7 8 9 ﭮ    
 
 #### BSPWM rules ####
 bspc rule -a TelegramDesktop desktop=''
