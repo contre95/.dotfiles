@@ -7,13 +7,13 @@ chosen=$(echo -e "$choices" | dmenu -i -p "Select Layout: " -sb "#FF5733")
 
 case "$chosen" in
 	"N26")
-        exec i3-msg 'exec brave --profile-directory="Contre" --app=https://app.n26.com/login';;
+        exec brave --profile-directory="Contre" --app=https://app.n26.com/login;;
 	"Galicia Contre")
-        exec i3-msg 'exec brave --profile-directory="Contre" --app=https://onlinebanking.bancogalicia.com.ar/login';;
+        exec brave --profile-directory="Contre" --app=https://onlinebanking.bancogalicia.com.ar/login;;
 	"Galicia Codelamp")
-        exec i3-msg 'exec brave --profile-directory="Codelamp" --app=https://onlinebanking.bancogalicia.com.ar/login';;
+        exec brave --profile-directory="Codelamp" --app=https://onlinebanking.bancogalicia.com.ar/login;;
 	"Mercadopago Contre")
-        exec i3-msg 'exec brave --profile-directory="Contre" --app=https://www.mercadopago.com.ar/home';;
+        exec brave --profile-directory="Contre" --app=https://www.mercadopago.com.ar/home;;
 	"Mercadopago Codelamp")
-        exec i3-msg 'exec brave --profile-directory="Codelamp" --app=https://www.mercadopago.com.ar/home';;
+        exec brave --profile-directory="Codelamp" --app=https://www.mercadopago.com.ar/home;;
 esac
