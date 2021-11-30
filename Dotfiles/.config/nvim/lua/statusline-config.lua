@@ -1,6 +1,6 @@
 require('lualine').setup { options = {
     -- ... your lualine config
-    theme = 'neon'
+    theme = 'material-nvim'
     -- ... your lualine config
   } }
 

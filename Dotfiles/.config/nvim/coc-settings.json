@@ -3,6 +3,7 @@
   "diagnostic.errorSign": "✘",
   "diagnostic.warningSign": "",
   "diagnostic.infoSign": "",
+  "typescript.referencesCodeLens.enable": false,
   "git.realtimeGutters": true,
   "suggest.noselect": true,
   "languageserver": {
