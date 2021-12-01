@@ -19,6 +19,20 @@ autocmd FileType yaml setlocal expandtab tabstop=2 shiftwidth=2
 autocmd FileType gitcommit setlocal spell
 autocmd FileType gitcommit setlocal complete+=kspell
 
+"Set Dockerfile filetype
+"-------------------------------------
+aug docker_ft_detection
+  au!
+  au BufRead,BufNewFile Dockerfile.* :set filetype=dockerfile
+aug end
+
+"Set Salt
+"-------------------------------------
+aug salt_ft_detection
+  au!
+  au BufRead,BufNewFile *.sls :set filetype=yaml
+aug end
+
 "Set Julia filetype 
 "-------------------------------------
 aug julia_ft_detection
