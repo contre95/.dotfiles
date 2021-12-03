@@ -5,17 +5,18 @@ autocmd WinLeave,FocusLost   * :setlocal number norelativenumber
 
 filetype plugin indent on
 set guicursor=n-v-ve-i-c-ci:ver25
-set expandtab ts=4 sw=4 ai
+set expandtab ts=2 sw=2 ai
 set undodir=~/.vim/undodir
+set inccommand=nosplit
 set pastetoggle=<F9>
 set fillchars=eob:\ , " Removes the ~ for non writtens lineas 
 set background=dark
 set encoding=utf-8
 set relativenumber
-set softtabstop=4
-set tabpagemax=4 
+set softtabstop=2
+set tabpagemax=2
 set laststatus=2
-set shiftwidth=4
+set shiftwidth=2
 set spelllang=en
 "set cursorcolumn
 set smartindent
