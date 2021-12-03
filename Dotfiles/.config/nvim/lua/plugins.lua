@@ -20,10 +20,15 @@ return require("packer").startup(
             --"luukvbaal/stabilize.nvim",
             --config = function() require("stabilize").setup() end
         --}
+        use "jose-elias-alvarez/null-ls.nvim"
+        use "jose-elias-alvarez/nvim-lsp-ts-utils"
         use {
             'lewis6991/gitsigns.nvim',
-            requires = { 'nvim-lua/plenary.nvim' },
-        }
+            requires = {'nvim-lua/plenary.nvim'},
+            config = function()
+              require('gitsigns').setup()
+            end
+          }
         use "akinsho/nvim-bufferline.lua"
         use "alvan/vim-closetag"
         
@@ -38,9 +43,11 @@ return require("packer").startup(
         use 'hrsh7th/cmp-buffer'
         use 'hrsh7th/cmp-path'
         use 'hrsh7th/cmp-cmdline'
+        use 'hrsh7th/cmp-vsnip'
+        use 'hrsh7th/vim-vsnip-integ'
+        use "rafamadriz/friendly-snippets"
+        use 'hrsh7th/vim-vsnip'
         use 'hrsh7th/cmp-nvim-lsp'
-        use 'L3MON4D3/LuaSnip'
-        use 'saadparwaiz1/cmp_luasnip'
         use 'onsails/lspkind-nvim'
         -- use {'neoclide/coc.nvim', branch = 'release'}
         --
