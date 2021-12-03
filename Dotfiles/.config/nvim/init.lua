@@ -1,4 +1,4 @@
---                                    ___           ___           ___
+--                                   ___           ___           ___
 --           ___        ___          /__/\         /  /\         /  /\
 --          /__/\      /  /\        |  |::\       /  /::\       /  /:/
 --          \  \:\    /  /:/        |  |:|:\     /  /:/\:\     /  /:/
@@ -21,12 +21,14 @@ vim.g.material_style = "deep ocean"
 
 -- Plugins
 require("plugins")
+require("colorscheme-config")
 require("treesitter-config")
 require("nvim-tree-config")
-require("colorscheme-config")
+require("language-server")
+require("completion")
+require("snippets")
 require("bufferline-config")
 require("statusline-config")
-require("stablize-config")
 
 -- Vim Imports 
 vim.cmd("so ~/.config/nvim/vim-misc.vim")
@@ -36,4 +38,3 @@ vim.cmd("so ~/.config/nvim/vim-plugins.vim")
 vim.cmd("so ~/.config/nvim/vim-commands.vim")
 --vim.cmd("so ~/.config/nvim/vim-highlights.vim")
 vim.cmd("so ~/.config/nvim/vim-file-types.vim")
-

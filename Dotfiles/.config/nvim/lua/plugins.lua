@@ -5,14 +5,9 @@ local use = packer.use
 return require("packer").startup(
     function()
         use 'marko-cerovac/material.nvim'
-        --use "rafamadriz/neon"
-        --use "Shatur/neovim-ayu"
-        --use 'EdenEast/nightfox.nvim'
-        --use 'folke/tokyonight.nvim'
 
         use "wbthomason/packer.nvim"
         use "nvim-treesitter/nvim-treesitter"
-        use 'junegunn/goyo.vim'
         use {
             'nvim-lualine/lualine.nvim',
             requires = {'kyazdani42/nvim-web-devicons', opt = true}
@@ -20,49 +15,40 @@ return require("packer").startup(
         use {
             'kyazdani42/nvim-tree.lua',
             requires = 'kyazdani42/nvim-web-devicons'
-            --config = function() require'nvim-tree'.setup {} end
         }
-        use {
-        	"luukvbaal/stabilize.nvim",
-        	config = function() require("stabilize").setup() end
-        }
-
+        --use {
+            --"luukvbaal/stabilize.nvim",
+            --config = function() require("stabilize").setup() end
+        --}
         use {
             'lewis6991/gitsigns.nvim',
-            requires = {
-              'nvim-lua/plenary.nvim'
-            },
-            -- tag = 'release' -- To use the latest release
+            requires = { 'nvim-lua/plenary.nvim' },
         }
         use "akinsho/nvim-bufferline.lua"
         use "alvan/vim-closetag"
-        -- use  'rust-lang/rust.vim'
-        -- use  'neovim/nvim-lspconfig' 
         
+        --
         -- -- Language Specific
         use 'fatih/vim-go'
         use 'hashivim/vim-terraform'
+
+        -- Auto-Completion and LSP
+        use 'neovim/nvim-lspconfig' 
+        use 'hrsh7th/nvim-cmp'
+        use 'hrsh7th/cmp-buffer'
+        use 'hrsh7th/cmp-path'
+        use 'hrsh7th/cmp-cmdline'
+        use 'hrsh7th/cmp-nvim-lsp'
+        use 'L3MON4D3/LuaSnip'
+        use 'saadparwaiz1/cmp_luasnip'
+        use 'onsails/lspkind-nvim'
+        -- use {'neoclide/coc.nvim', branch = 'release'}
+        --
         -- -- Other
-        use {'neoclide/coc.nvim', branch = 'release'}
         use 'ekickx/clipboard-image.nvim'
         use 'unblevable/quick-scope'
         use 'zirrostig/vim-schlepp'
         use 'scrooloose/nerdcommenter'
         use 'junegunn/fzf'
-        use {
-              "folke/twilight.nvim",
-              config = function()
-                require("twilight").setup {
-                  -- your configuration comes here
-                  -- or leave it empty to use the default settings
-                  -- refer to the configuration section below
-                }
-            end
-          }
-    end,
-        {
-        display = {
-            border = {"┌", "─", "┐", "│", "┘", "─", "└", "│"}
-        }
-    }
+    end
 )

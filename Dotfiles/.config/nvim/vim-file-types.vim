@@ -2,7 +2,7 @@
 "------------------------------------ Custom settings for filetype ----------------------------
 "----------------------------------------------------------------------------------------------
 
-"Set terrform Markdown
+"Set Markdown
 "-------------------------------------
 autocmd FileType markdown setlocal spell
 autocmd FileType markdown setlocal complete+=kspell
@@ -63,11 +63,12 @@ fun! s:DetectLogstash()
 endfun
 autocmd BufNewFile,BufRead *.conf call s:DetectLogstash()
 
-"Set terrform filetype 
+"Set Terraform nfiletype 
 "-------------------------------------
 aug terraform_ft_detection
     au!
     au BufNewFile,BufRead *.tf set filetype=terraform
+    au BufWritePre *.tf lua vim.lsp.buf.formatting_sync()
 aug end
 
 "Set SXHKD filetype

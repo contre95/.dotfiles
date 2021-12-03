@@ -5,22 +5,19 @@
 " Material Colorscheme
 nmap <silent> <leader>n :lua require('material.functions').toggle_style()<CR>
 
-" Goyo or similar
-nmap <silent> <leader>g :Goyo<CR>
-
 " Coc
 "-------------------------------------
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
-inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>"
-inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
-autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
+"nmap <silent> gd <Plug>(coc-definition)
+"nmap <silent> gy <Plug>(coc-type-definition)
+"nmap <silent> gi <Plug>(coc-implementation)
+"nmap <silent> gr <Plug>(coc-references)
+"inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>"
+"inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+"autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-let b:coc_pairs_disabled = ['<']
-command! -nargs=0 Prettier :CocCommand prettier.formatFile
+"let b:coc_pairs_disabled = ['<']
+"command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
 
 " Buffline
@@ -34,7 +31,6 @@ function DeleteHiddenBuffers()
         silent execute 'bwipeout' buf
     endfor
 endfunction
-
 
 " CloseTag
 "-------------------------------------
@@ -94,10 +90,6 @@ vmap <C-d> <Plug>SchleppDup
 let g:Schlepp#allowSquishingLines = 1
 let g:Schlepp#allowSquishingBlock = 1
 let g:Schlepp#trimWS = 0
-
- " Telescope
-"-------------------------------------
-"nnoremap <silent> <Leader>o :Telescope find_files <CR>
 
 " Fuzzy Finder (fzf)
 "-------------------------------------
