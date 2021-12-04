@@ -5,32 +5,17 @@
 " Material Colorscheme
 nmap <silent> <leader>n :lua require('material.functions').toggle_style()<CR>
 
-" Coc
-"-------------------------------------
-"nmap <silent> gd <Plug>(coc-definition)
-"nmap <silent> gy <Plug>(coc-type-definition)
-"nmap <silent> gi <Plug>(coc-implementation)
-"nmap <silent> gr <Plug>(coc-references)
-"inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>"
-"inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
-"autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
-inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-"let b:coc_pairs_disabled = ['<']
-"command! -nargs=0 Prettier :CocCommand prettier.formatFile
-
-
 " Buffline
 "-------------------------------------
-autocmd BufEnter * call DeleteHiddenBuffers() " Deletes all hidden buffer so they are not displayed by bufferline
+"autocmd BufEnter * call DeleteHiddenBuffers() " Deletes all hidden buffer so they are not displayed by bufferline
 
-function DeleteHiddenBuffers()
-    let tpbl=[]
-    call map(range(1, tabpagenr('$')), 'extend(tpbl, tabpagebuflist(v:val))')
-    for buf in filter(range(1, bufnr('$')), 'bufexists(v:val) && index(tpbl, v:val)==-1')
-        silent execute 'bwipeout' buf
-    endfor
-endfunction
+"function DeleteHiddenBuffers()
+    "let tpbl=[]
+    "call map(range(1, tabpagenr('$')), 'extend(tpbl, tabpagebuflist(v:val))')
+    "for buf in filter(range(1, bufnr('$')), 'bufexists(v:val) && index(tpbl, v:val)==-1')
+        "silent execute 'bwipeout' buf
+    "endfor
+"endfunction
 
 " CloseTag
 "-------------------------------------
@@ -91,15 +76,23 @@ let g:Schlepp#allowSquishingLines = 1
 let g:Schlepp#allowSquishingBlock = 1
 let g:Schlepp#trimWS = 0
 
+" Telescope 
+"-------------------------------------
+nnoremap <leader>o <cmd>Telescope find_files<cr>
+nnoremap <leader>g <cmd>Telescope live_grep<cr>
+nnoremap <leader>b <cmd>Telescope buffers<cr>
+nnoremap <leader>h <cmd>Telescope help_tags<cr>
+
 " Fuzzy Finder (fzf)
 "-------------------------------------
-inoremap <expr> <c-x><c-k> fzf#vim#complete#word({'window': { 'width': 0.2, 'height': 0.9, 'xoffset': 1 }})
-:map <silent><C-t> :bw :call fzf#run({'window': { 'width': 0.9, 'height': 0.6 },'down': '40%','sink': 'tabedit', 'options': ['--info=inline', '--preview', '~/.config/nvim/fzf/fzf-preview.sh {}']})<CR> 
-nnoremap <silent> <Leader>t :call fzf#run({'window': { 'width': 0.9, 'height': 0.6 },'down': '40%','sink': 'tabedit', 'options': ['--info=inline', '--preview', '~/.config/nvim/fzf/fzf-preview.sh {}']})<CR>
-nnoremap <silent> <Leader>s :call fzf#run({'window': { 'width': 0.9, 'height': 0.6 }, 'down': '40%','sink': 'vertical botright split', 'options': ['--layout=reverse', '--info=inline', '--preview', '~/.config/nvim/fzf/fzf-preview.sh {}']})<CR>
-nnoremap <silent> <Leader>v :call fzf#run({'window': { 'width': 0.9, 'height':0.6 }, 'down': '40%','sink': 'split', 'options': ['--layout=reverse', '--info=inline', '--preview', '~/.config/nvim/fzf/fzf-preview.sh {}']})<CR>
-nnoremap <silent> <Leader>o :call fzf#run({'window': { 'width': 0.9, 'height': 0.6 },'down': '40%','sink': 'e', 'options': ['--info=inline', '--preview', '~/.config/nvim/fzf/fzf-preview.sh {}']})<CR>
-nnoremap <silent> <Leader>c :call fzf#run({'source': map(split(globpath(&rtp, "colors/*.vim"), "\n"),"substitute(fnamemodify(v:val, ':t'), '\\..\\{-}$', '', '')"),'sink': 'colo','options': '+m','right':    30})<CR>
+"nnoremap <silent> <Leader>o :call fzf#run({'window': { 'width': 0.8, 'height': 0.7 },'down': '50%','sink': 'e', 'options': ['--info=inline', '--preview', 'bat --color=always {}']})<CR>
+"nnoremap <silent> <Leader>o :call fzf#run({'window': { 'width': 0.8, 'height': 0.7 },'down': '50%','options': ['--info=inline', '--preview', 'bat --color=always {}']})<CR>
+"inoremap <expr> <c-x><c-k> fzf#vim#complete#word({'window': { 'width': 0.2, 'height': 0.9, 'xoffset': s1 }})
+":map <silent><C-t> :bw :call fzf#run({'window': { 'width': 0.9, 'height': 0.6 },'down': '40%','sink': 'tabedit', 'options': ['--info=inline', '--preview', '~/.config/nvim/fzf/fzf-preview.sh {}']})<CR> 
+"nnoremap <silent> <Leader>t :call fzf#run({'window': { 'width': 0.9, 'height': 0.6 },'down': '40%','sink': 'tabedit', 'options': ['--info=inline', '--preview', '~/.config/nvim/ff/fzf-preview.sh {}']})<CR>
+"nnoremap <silent> <Leader>s :call fzf#run({'window': { 'width': 0.9, 'height': 0.6 }, 'down': '40%','sink': 'vertical botright split', 'options': ['--layout=reverse', '--info=inline', '--preview', '~/.config/nvim/fzf/fzf-preview.sh {}']})<CR>
+"nnoremap <silent> <Leader>v :call fzf#run({'window': { 'width': 0.9, 'height':0.6 }, 'down': '40%','sink': 'split', 'options': ['--layout=reverse', '--info=inline', '--preview', '~/.config/nvim/fzf/fzf-preview.sh {}']})<CR>
+"nnoremap <silent> <Leader>c :call fzf#run({'source': map(split(globpath(&rtp, "colors/*.vim"), "\n"),"substitute(fnamemodify(v:val, ':t'), '\\..\\{-}$', '', '')"),'sink': 'colo','options': '+m','right':    30})<CR>
 
 " Livedown 
 "let g:livedown_autorun = 1
@@ -112,6 +105,7 @@ nnoremap <silent> <Leader>m :call jobstart(printf('livedown start %s --port 4242
 " NvimTree
 "-------------------------------------
 nnoremap <leader>f :NvimTreeToggle<Enter>
+let g:nvim_tree_respect_buf_cwd = 1
 
 " BarBar 
 "-------------------------------------
