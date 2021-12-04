@@ -12,26 +12,12 @@ let g:markdown_fenced_languages = ['julia', 'css', 'python', 'javascript', 'js=j
 
 "Set Yaml
 "-------------------------------------
-autocmd FileType yaml setlocal expandtab tabstop=2 shiftwidth=2 
+autocmd BufNewFile,BufReadPre,FileReadPre *.yaml, *.yml, *.sls :setlocal expandtab tabstop=2 shiftwidth=2 
 
 "Set GitCommits
 "-------------------------------------
 autocmd FileType gitcommit setlocal spell
 autocmd FileType gitcommit setlocal complete+=kspell
-
-"Set Dockerfile filetype
-"-------------------------------------
-aug docker_ft_detection
-  au!
-  au BufRead,BufNewFile Dockerfile.* :set filetype=dockerfile
-aug end
-
-"Set Salt
-"-------------------------------------
-aug salt_ft_detection
-  au!
-  au BufRead,BufNewFile *.sls :set filetype=yaml
-aug end
 
 "Set Julia filetype 
 "-------------------------------------
