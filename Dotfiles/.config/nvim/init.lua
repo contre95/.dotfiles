@@ -38,3 +38,4 @@ vim.cmd("so ~/.config/nvim/vim-plugins.vim")
 vim.cmd("so ~/.config/nvim/vim-commands.vim")
 --vim.cmd("so ~/.config/nvim/vim-highlights.vim")
 vim.cmd("so ~/.config/nvim/vim-file-types.vim")
+
