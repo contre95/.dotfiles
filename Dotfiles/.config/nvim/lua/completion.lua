@@ -51,11 +51,6 @@ cmp.setup({
         vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
       end,
     },
-    --snippet = {
-      --expand = function(args)
-        --require("vsnip").lsp_expand(args.body)
-      --end,
-    --},
 
    formatting = {         
     --format = lspkind.cmp_format({with_text = false, maxwidth = 50})
@@ -81,15 +76,6 @@ cmp.setup({
   },
 })
 
-  -- Use buffer source for `/` (if you enabled `native_menu`, this won't work anymore).
-  --cmp.setup.cmdline('/', {
-      --cmp.config.sources({
-    --{ name = "nvim_lsp_document_symbol" },
-      --}, {
-         --{ name = "buffer"},
-     --})
-  --})
-
  -- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
  cmp.setup.cmdline(":", {
   sources = cmp.config.sources({
@@ -105,9 +91,3 @@ cmp.setup({
   }),
 })
 
-  -- Setup lspconfig.
-  local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
-  -- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
-  --require('lspconfig')['<YOUR_LSP_SERVER>'].setup {
-    --capabilities = capabilities
-  --}

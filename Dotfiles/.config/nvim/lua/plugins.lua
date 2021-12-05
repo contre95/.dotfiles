@@ -16,8 +16,6 @@ return require("packer").startup(function()
     -- "luukvbaal/stabilize.nvim",
     -- config = function() require("stabilize").setup() end
     -- }
-    use "jose-elias-alvarez/null-ls.nvim"
-    use "jose-elias-alvarez/nvim-lsp-ts-utils"
     use {
         'lewis6991/gitsigns.nvim',
         requires = {'nvim-lua/plenary.nvim'},
@@ -32,6 +30,7 @@ return require("packer").startup(function()
     use 'hashivim/vim-terraform'
 
     -- Auto-Completion and LSP
+    --use "jose-elias-alvarez/nvim-lsp-ts-utils"
     use 'neovim/nvim-lspconfig'
     use 'hrsh7th/nvim-cmp'
     use 'hrsh7th/cmp-buffer'

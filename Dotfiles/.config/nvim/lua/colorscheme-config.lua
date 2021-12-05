@@ -82,7 +82,7 @@ require('material').setup({
     cssSelectorOp2 = { fg = colors.cyan },
     cssAttr = { fg = colors.orange },
 
-    -- JavaScript
+    ------ JavaScript
     javaScriptBraces = { fg = colors.fg },
     javaScriptNull = { fg = colors.orange },
     javaScriptIdentifier = { fg = colors.purple },
@@ -144,23 +144,9 @@ require('material').setup({
     jsUndefined = { fg = colors.cyan },
     jsVariableDef = { fg = colors.red },
 
-    -- TypeScript
-    typescriptVariable = { fg = colors.purple },
-    typescriptImport = { fg = colors.cyan },
-    typescriptExport = { fg = colors.cyan },
-    typescriptMember = { fg = '#8f93a2' },
-    typescriptPredefinedType = { fg = '#b2ccd6' },
-    typescriptAliasDeclaration = { fg = colors.yellow },
-    typescriptTypeReference = { fg = colors.yellow },
-    typescriptObjectLiteral = { fg = colors.blue },
-    typescriptObjectLabel = { fg = '#9ea1ae' },
-    typescriptDestructureVariable = { fg = colors.red },
-    typescriptDestructureLabel = { fg = '#8f93a2' },
-    typescriptBraces = { fg = colors.cyan },
-    typescriptCastKeyword = { fg = colors.cyan },
-    typescriptParens = { fg = colors.text },
-    typescriptVariableDeclaration = { fg = colors.red },
-    typescriptInterfaceName = { fg = colors.yellow },
+    ---- TypeScript
+   typescriptVariableDeclaration = { fg = colors.blue},
+   typescriptInterfaceName = { fg = colors.yellow },
 
     -- JSX
     jsxTag = { fg = colors.cyan },

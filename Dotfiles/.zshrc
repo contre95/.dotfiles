@@ -14,12 +14,6 @@ export LANG="en_US.UTF-8"
 export LC_ALL=en_US.UTF-8
 export TERM="tmux-256color"
 
-################################################################################################
-# Oh-my-zsh
-################################################################################################
-# Path to your oh-my-zsh installation.
-#export ZSH="/home/contre/.oh-my-zsh"
-#source $ZSH/oh-my-zsh.sh
 
 ################################################################################################
 # Several programs configuration
@@ -64,7 +58,7 @@ antigen apply
 # User configuration
 ################################################################################################
 # If you come from bash you might have to change your $PATH.
-export PATH=/$HOME/.local/bin:$HOME/bin:/usr/local/bin:$HOME/.composer/vendor/bin:/usr/bin:/usr/local/go/bin:/$MY_FOLDER/Scripts/bin-scr:/home/contre/go/bin/:/home/contre/.local/lib/python3.9/site-packages:$PATH
+export PATH=$HOME/.cargo/bin:/$HOME/.local/bin:$HOME/bin:/usr/local/bin:$HOME/.composer/vendor/bin:/usr/bin:/usr/local/go/bin:/$MY_FOLDER/Scripts/bin-scr:$HOME/go/bin/:/home/contre/.local/lib/python3.9/site-packages:$PATH
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then

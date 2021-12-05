@@ -9,33 +9,30 @@
 --       \  \:\__|:|     /__/:/    \  \:\        \  \:\        \  \:\/:/
 --        \__\::::/      \__\/      \  \:\        \  \:\        \  \::/
 --            ~~~~                   \__\/         \__\/         \__\/
-
-
 -- Leader key
-vim.api.nvim_set_var('mapleader', " ") -- Alternative: vim.g.mapleader = " "
+vim.api.nvim_set_var("mapleader", " ") -- Alternative: vim.g.mapleader = " "
 
 -- Color Scheme
 vim.o.termguicolors = true
-vim.cmd('colorscheme material')
+vim.cmd("colorscheme material")
 vim.g.material_style = "deep ocean"
 
 -- Plugins
-require("plugins")
 require("colorscheme-config")
-require("treesitter-config")
-require("nvim-tree-config")
-require("language-server")
+require("plugins")
 require("completion")
 require("snippets")
+require("lsp")
+require("treesitter-config")
+require("nvim-tree-config")
 require("bufferline-config")
 require("statusline-config")
 
--- Vim Imports 
+-- Vim Imports
 vim.cmd("so ~/.config/nvim/vim-misc.vim")
 vim.cmd("so ~/.config/nvim/vim-maps.vim")
 vim.cmd("so ~/.config/nvim/vim-settings.vim")
 vim.cmd("so ~/.config/nvim/vim-plugins.vim")
 vim.cmd("so ~/.config/nvim/vim-commands.vim")
---vim.cmd("so ~/.config/nvim/vim-highlights.vim")
+-- vim.cmd("so ~/.config/nvim/vim-highlights.vim")
 vim.cmd("so ~/.config/nvim/vim-file-types.vim")
-
