@@ -43,6 +43,6 @@ set bs=2
 
 " Treat end of lines like normal IDE
 "-------------------------------------
-set virtualedit=all
-set sel=exclusive
+"set virtualedit=all
+"set sel=exclusive
 

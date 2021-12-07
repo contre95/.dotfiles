@@ -25,6 +25,8 @@ require("snippets")
 require("lsp")
 require("treesitter-config")
 require("nvim-tree-config")
+require('git-config')
+require('blankline-config')
 require("bufferline-config")
 require("statusline-config")
 
