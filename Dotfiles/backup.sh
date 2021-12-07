@@ -45,4 +45,4 @@ cp -r ~/.config/sxhkd $MY_FOLDER/Dotfiles/.config
 # Dunst
 cp -r ~/.config/dunst $MY_FOLDER/Dotfiles/.config
 
-notify-send " Dotfiles Synched" "Please push changes "
+notify-send "Dotfiles Synched" "Please push changes" -i /usr/share/icons/Paper/16x16@2x/apps/git.png

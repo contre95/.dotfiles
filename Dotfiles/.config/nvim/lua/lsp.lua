@@ -13,6 +13,12 @@ local eslint = {
 	lintSource = "eslint",
 }
 
+-- Terraform fmt 
+local terraform = {
+  formatCommand = "terraform fmt -",
+  formatStdin = true,
+}
+
 -- General prettier -- npm i -g prettier
 local prettier = {
 	formatCommand = "prettier --stdin-filepath ${INPUT}",
@@ -27,11 +33,36 @@ local luafmt = {
 
 -- Shell Prettier
 local shfmt = { formatCommand = "shfmt ${-i:tabWidth}" }
+
+-- Rust Formatter
+local rustfmt = {
+	formatCommand = "rustfmt",
+	formatStdin = true,
+}
+
 -- LSP Configuration
 -----------------------------
 
 -- Json
 lspconfig.jsonls.setup({ capabilities = capabilities })
+
+-- Rust
+lspconfig.rust_analyzer.setup({
+	capabilities = capabilities,
+	settings = {
+		["rust-analyzer"] = {
+			cargo = {
+				loadOutDirsFromCheck = true,
+			},
+			procMacro = {
+				enable = true,
+			},
+		},
+	},
+})
+--lspconfig.rls.setup({
+	--capabilities = capabilities,
+--})
 
 -- Python
 lspconfig.pyright.setup({ capabilities = capabilities })
@@ -70,12 +101,12 @@ local languages = {
 	markdown = { prettier },
 	terraform = { terraform },
 	sh = { shfmt },
-	-- rust = {rustfmt}
+	--rust = { rustfmt },
 	-- python = {autopep}
 }
 
 lspconfig.efm.setup({
-	root_dir = lspconfig.util.root_pattern(".git", "/home/contre"),
+	root_dir = lspconfig.util.root_pattern(".git", "/home/canus/Scripts", "/home/contre"),
 	filetypes = vim.tbl_keys(languages),
 	cmd = {
 		"/home/contre/go/bin/efm-langserver",
@@ -88,8 +119,11 @@ lspconfig.efm.setup({
 	filetypes = {
 		"css",
 		"html",
+		"rust",
 		"javascript",
-		"javascriptreact",
+		"bash",
+		"sh",
+		"zsh",
 		"json",
 		"lua",
 		"markdown",

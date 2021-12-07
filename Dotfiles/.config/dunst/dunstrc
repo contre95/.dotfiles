@@ -1,10 +1,11 @@
- [global]
+[global]
 monitor = 0
 follow = mouse
 corner_radius = 3
-geometry = "380x50-24+44"
+vertical_alignment = bottom
 indicate_hidden = yes
 shrink = no
+offset= 20x20
 separator_height = 4
 separator_color = auto
 padding = 10
@@ -15,8 +16,7 @@ sort = no
 idle_threshold = 120
 font = JetBrainsMono Nerd Font 11
 line_height = 4
-frame_color = "#75A798"
-arkup = full
+frame_color = "#81A2BE"
 format = %s\n%b
 alignment = left
 show_age_threshold = 60
@@ -26,20 +26,12 @@ stack_duplicates = yes
 hide_duplicate_count = no
 show_indicators = false
 icon_position = left
-icon_path = /usr/share/icons/Papirus-Dark-Dark/22x22/status/:/usr/share/icons/Papirus-Dark/22x22/devices/:/usr/share/icons/Papirus-Dark/22x22/categories/:/usr/share/icons/Papirus-Dark/22x22/apps/:/usr/share/icons/Papirus-Dark/22x22/actions/
-max_icon_size = 48
 sticky_history = yes
 history_length = 20
 browser = x-www-browser -new-tab
 always_run_script = true
 title = Dunst
 class = Dunst
-
-[shortcuts]
-close = ctrl+shift+space
-close_all = ctrl+shift+space
-history = ctrl+shift+comma
-context = ctrl+shift+period
 
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
