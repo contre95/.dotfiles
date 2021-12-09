@@ -31,8 +31,13 @@ local luafmt = {
 	formatStdin = true,
 }
 
--- Shell Prettier
-local shfmt = { formatCommand = "shfmt ${-i:tabWidth}" }
+-- Shell Formatter / Checker 
+local shell =  {
+   formatCommand = "shfmt ${-i:tabWidth}",
+  lintCommand = "shellcheck -f gcc -x -",
+  lintStdin = true,
+  lintFormats = {"%f:%l:%c: %trror: %m", "%f:%l:%c: %tarning: %m", "%f:%l:%c: %tote: %m"}
+}
 
 -- Rust Formatter
 local rustfmt = {
@@ -60,9 +65,6 @@ lspconfig.rust_analyzer.setup({
 		},
 	},
 })
---lspconfig.rls.setup({
-	--capabilities = capabilities,
---})
 
 -- Python
 lspconfig.pyright.setup({ capabilities = capabilities })
@@ -100,7 +102,7 @@ local languages = {
 	css = { prettier },
 	markdown = { prettier },
 	terraform = { terraform },
-	sh = { shfmt },
+	sh = { shell },
 	--rust = { rustfmt },
 	-- python = {autopep}
 }
@@ -109,9 +111,9 @@ lspconfig.efm.setup({
 	root_dir = lspconfig.util.root_pattern(".git", "/home/canus/Scripts", "/home/contre"),
 	filetypes = vim.tbl_keys(languages),
 	cmd = {
-		"/home/contre/go/bin/efm-langserver",
+		"efm-langserver",
 		"-logfile",
-		"/home/contre/.config/efm-langserver/efm.log",
+		"/home/contre/.cache/nvim/lsp.log",
 		"-loglevel",
 		"5",
 	},
@@ -123,6 +125,7 @@ lspconfig.efm.setup({
 		"javascript",
 		"bash",
 		"sh",
+		"yaml",
 		"zsh",
 		"json",
 		"lua",
@@ -132,7 +135,7 @@ lspconfig.efm.setup({
 	settings = {
 		languages = languages,
 		log_level = 1,
-		log_file = "/home/contre/.config/efm-langserver/efm.log",
+		log_file = "/home/contre/.cache/nvim/lsp.log",
 	},
 
 	-- on_attach = on_attach
