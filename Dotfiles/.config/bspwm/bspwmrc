@@ -12,7 +12,7 @@ setxkbmap -layout us -variant mac &
 #nvidia-settings -a "[gpu:0]/GPUFanControlState=1" -a "[fan:0]/GPUTargetFanSpeed=50" -a "[fan:1]/GPUTargetFanSpeed=50"
 
 #### MONITORS ####
-bspc monitor DP-2 -d 1 2 3 4 5 
+bspc monitor DP-2 -d 1 2 3 4 5
 bspc monitor DP-4 -d 6 7 8 9 ﭮ    
 
 #### BSPWM rules ####
@@ -21,35 +21,37 @@ bspc rule -a discord desktop='ﭮ'
 bspc rule -a 'meet.jit.si' desktop=''
 bspc rule -a mocp desktop=''
 #### BSPWM configuration ####
-bspc config border_width                  2
-bspc config window_gap                    10
-bspc config -m DP-4 top_padding           0
-bspc config -m DP-2 top_padding           0
-bspc config bottom_padding                0
-bspc config left_padding                  0
-bspc config right_padding                 0
-bspc config pointer_motion_interval       40
-bspc config single_monocle                false
-bspc config click_to_focus                true
-bspc config split_ratio                   0.50
-bspc config borderless_monocle            true
-bspc config gapless_monocle               true
-bspc config focus_by_distance             true
-bspc config focus_follows_pointer         true
-bspc config history_aware_focus           true
-bspc config remove_disabled_monitors      true
-bspc config merge_overlapping_monitors    true
+
+bspc config border_width 0
+$SCR_PATH/bspwm-scr/borders.sh &
+bspc config window_gap 10
+bspc config -m DP-4 top_padding 0
+bspc config -m DP-2 top_padding 0
+bspc config bottom_padding 0
+bspc config left_padding 0
+bspc config right_padding 0
+bspc config pointer_motion_interval 40
+bspc config single_monocle false
+bspc config click_to_focus true
+bspc config split_ratio 0.50
+bspc config borderless_monocle true
+bspc config gapless_monocle true
+bspc config focus_by_distance true
+bspc config focus_follows_pointer true
+bspc config history_aware_focus true
+bspc config remove_disabled_monitors true
+bspc config merge_overlapping_monitors true
 bspc config pointer_modifier mod4
 bspc config pointer_action1 move
 bspc config pointer_action2 resize_side
 bspc config pointer_action3 resize_corner
 
 #### BSPWM coloring ####
-bspc config normal_border_color		      "#4c566a"
-bspc config active_border_color	          "#1e1e1e"
-bspc config focused_border_color	      "#5e81ac"
-bspc config presel_feedback_color	      "#5e81ac"
-bspc config urgent_border_color 	      "#dd2727"
+bspc config normal_border_color "#4c566a"
+bspc config active_border_color "#1e1e1e"
+bspc config focused_border_color "#5e81ac"
+bspc config presel_feedback_color "#5e81ac"
+bspc config urgent_border_color "#dd2727"
 
 ### Lemonbar bar (be sure to load bspwm monitors first)
 pkill -x lemonbar
@@ -63,4 +65,3 @@ bspc subscribe node_state | while read _ _ _ _ state flag; do
 		fi
 	fi
 done &
-

@@ -103,6 +103,7 @@ local languages = {
 	markdown = { prettier },
 	terraform = { terraform },
 	sh = { shell },
+	zsh = { shell },
 	--rust = { rustfmt },
 	-- python = {autopep}
 }
@@ -111,7 +112,7 @@ lspconfig.efm.setup({
 	root_dir = lspconfig.util.root_pattern(".git", "/home/canus/Scripts", "/home/contre"),
 	filetypes = vim.tbl_keys(languages),
 	cmd = {
-		"efm-langserver",
+		"/home/contre/go/bin/efm-langserver",
 		"-logfile",
 		"/home/contre/.cache/nvim/lsp.log",
 		"-loglevel",
