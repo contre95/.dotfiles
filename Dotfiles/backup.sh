@@ -32,9 +32,9 @@ cp -r ~/.config/nvim $MY_FOLDER/Dotfiles/.config
 cp ~/.zshrc $MY_FOLDER/Dotfiles/.zshrc
 cp -r ~/.zsh $MY_FOLDER/Dotfiles
 
-# Newsboat
-cp -r ~/.newsboat/config $MY_FOLDER/Dotfiles/.newsboat/config
 
+# Alacritty
+cp -r ~/.config/alacritty $MY_FOLDER/Dotfiles/.config
 # BSPWM
 cp -r ~/.config/bspwm $MY_FOLDER/Dotfiles/.config
 # Rofi
