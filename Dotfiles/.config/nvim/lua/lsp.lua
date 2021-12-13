@@ -13,6 +13,12 @@ local eslint = {
 	lintSource = "eslint",
 }
 
+-- Terraform fmt 
+local terraform = {
+  formatCommand = "terraform fmt -",
+  formatStdin = true,
+}
+
 -- General prettier -- npm i -g prettier
 local prettier = {
 	formatCommand = "prettier --stdin-filepath ${INPUT}",
@@ -67,7 +73,6 @@ lspconfig.pyright.setup({ capabilities = capabilities })
 lspconfig.gopls.setup({ capabilities = capabilities })
 
 -- Terraform
-lspconfig.tflint.setup({
 lspconfig.terraformls.setup({
 	capabilities = capabilities,
 	on_attach = function(client)
@@ -96,6 +101,7 @@ local languages = {
 	scss = { prettier },
 	css = { prettier },
 	markdown = { prettier },
+	terraform = { terraform },
 	sh = { shell },
 	zsh = { shell },
 	--rust = { rustfmt },
