@@ -14,10 +14,10 @@ local eslint = {
 }
 
 -- Terraform fmt 
-local terraform = {
-  formatCommand = "terraform fmt -",
-  formatStdin = true,
-}
+--local terraform = {
+--  formatCommand = "terraform fmt -",
+--  formatStdin = true,
+--}
 
 -- General prettier -- npm i -g prettier
 local prettier = {
@@ -73,14 +73,14 @@ lspconfig.pyright.setup({ capabilities = capabilities })
 lspconfig.gopls.setup({ capabilities = capabilities })
 
 -- Terraform
+lspconfig.tflint.setuo({})
 lspconfig.terraformls.setup({
 	capabilities = capabilities,
 	on_attach = function(client)
-		client.resolved_capabilities.document_formatting = false
-		on_attach(client)
+		client.resolved_capabilities.document_formatting = true
 	end,
 	cmd = { "terraform-ls", "serve" },
-	filetypes = { "tf" },
+	filetypes = { "tf", "terraform" },
 })
 
 -- SQL  -- go install github.com/lighttiger2505/sqls@latest
