@@ -13,12 +13,6 @@ local eslint = {
 	lintSource = "eslint",
 }
 
--- Terraform fmt 
---local terraform = {
---  formatCommand = "terraform fmt -",
---  formatStdin = true,
---}
-
 -- General prettier -- npm i -g prettier
 local prettier = {
 	formatCommand = "prettier --stdin-filepath ${INPUT}",
@@ -73,14 +67,15 @@ lspconfig.pyright.setup({ capabilities = capabilities })
 lspconfig.gopls.setup({ capabilities = capabilities })
 
 -- Terraform
-lspconfig.tflint.setuo({})
+lspconfig.tflint.setup({
 lspconfig.terraformls.setup({
 	capabilities = capabilities,
 	on_attach = function(client)
-		client.resolved_capabilities.document_formatting = true
+		client.resolved_capabilities.document_formatting = false
+		on_attach(client)
 	end,
 	cmd = { "terraform-ls", "serve" },
-	filetypes = { "tf", "terraform" },
+	filetypes = { "tf" },
 })
 
 -- SQL  -- go install github.com/lighttiger2505/sqls@latest
@@ -101,7 +96,6 @@ local languages = {
 	scss = { prettier },
 	css = { prettier },
 	markdown = { prettier },
-	terraform = { terraform },
 	sh = { shell },
 	zsh = { shell },
 	--rust = { rustfmt },

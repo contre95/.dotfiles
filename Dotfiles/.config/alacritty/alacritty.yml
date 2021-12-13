@@ -11,20 +11,18 @@ shell:
 tabspaces: 4
 font:
   normal:
-    family: JetBrainsMono Nerd Font Mono
-  size: 14.0
+    family: JetBrainsMono Nerd Font
+  size: 12.0
 
 window:
   padding:
-    x: 6
-    y: 6
+    x: 7
+    y: 7
 
 scrolling:
-  history: 10000  
-  multiplier: 3    
-  auto_scroll: false 
-
-background_opacity: 0.8
+  history: 10000
+  multiplier: 3
+  auto_scroll: false
 
 cursor:
   style:
@@ -33,3 +31,7 @@ cursor:
   blink_interval: 500
   unfocused_hollow: true
   thickness: 0.15
+
+colors:
+  primary:
+    background: "#1a1a1a"
