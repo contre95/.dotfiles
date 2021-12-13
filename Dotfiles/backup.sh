@@ -37,6 +37,8 @@ cp -r ~/.newsboat/config $MY_FOLDER/Dotfiles/.newsboat/config
 
 # BSPWM
 cp -r ~/.config/bspwm $MY_FOLDER/Dotfiles/.config
+# Rofi
+cp -r ~/.config/rofi $MY_FOLDER/Dotfiles/.config
 # Lemonbar
 cp -r ~/.config/lemonbar $MY_FOLDER/Dotfiles/.config
 # SXHKD

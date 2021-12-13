@@ -108,9 +108,9 @@ setopt incappendhistory #Immediately append to the history file, not just when a
 # Languae environments setup
 ################################################################################################
 #Node version manager (nvm)
-export NVM_DIR="${XDG_CONFIG_HOME/:-$HOME/.}nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-source ~/.nvm/nvm.sh
+#export NVM_DIR="${XDG_CONFIG_HOME/:-$HOME/.}nvm"
+#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+#source ~/.nvm/nvm.sh
 # Python version manager (Pyenv)
 export BROWSER="brave"
 alias vim="nvim"

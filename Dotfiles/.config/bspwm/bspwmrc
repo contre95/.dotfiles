@@ -22,8 +22,8 @@ bspc rule -a 'meet.jit.si' desktop=''
 bspc rule -a mocp desktop=''
 #### BSPWM configuration ####
 
-bspc config border_width 0
-$SCR_PATH/bspwm-scr/borders.sh &
+bspc config border_width 1
+#$SCR_PATH/bspwm-scr/borders.sh &
 bspc config window_gap 10
 bspc config -m DP-4 top_padding 0
 bspc config -m DP-2 top_padding 0

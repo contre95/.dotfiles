@@ -73,7 +73,7 @@ super + b
 super + w
     $SCR_PATH/dmenu-scr/web-light.sh
 super +  d
-    ~/.config/rofi/launchers/launcher.sh
+    rofi -no-lazy-grab -show drun -modi drun -theme ~/.config/rofi/style.rasi
 super + shift + d
     $SCR_PATH/dmenu-scr/dotfiles.sh 
 super + p
