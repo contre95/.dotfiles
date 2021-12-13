@@ -30,7 +30,7 @@ require('blankline-config')
 require("bufferline-config")
 require("statusline-config")
 
--- Vim Imports
+---- Vim Imports
 vim.cmd("so ~/.config/nvim/vim-misc.vim")
 vim.cmd("so ~/.config/nvim/vim-maps.vim")
 vim.cmd("so ~/.config/nvim/vim-settings.vim")
