@@ -1,0 +1,32 @@
+MusicDir = /home/canus/Music
+StartInMusicDir = yes
+ShowStreamErrors = yes
+
+#Repeat = no
+#Shuffle = no
+#AutoNext = yes
+
+FormatString = "%(n:%n :)%(a:%a - :)%(t:%t:)%(A: \(%A\):)"
+
+XTerms += xterm-256colour:xterm-256color
+
+XTermTheme = transparent-background
+
+
+# Should MOC try to autoload the default lyrics file for an audio?  (The
+# default lyrics file is a text file with the same file name as the audio
+# file name with any trailing "extension" removed.)
+AutoLoadLyrics = yes
+
+# Use MIME to identify audio files.  This can make for slower loading
+# of playlists but is more accurate than using "extensions".
+UseMimeMagic = no
+
+FileNamesIconv = no
+
+SavePlaylist = yes
+
+# Example:    OnSongChange = "/home/jack/.moc/myscript %a %r"
+
+OnSongChange = notify-send "Dotfiles Synched" "Please push changes" -i /usr/share/icons/Paper/16x16@2x/apps/git.png
+
