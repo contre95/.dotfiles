@@ -1,0 +1,4 @@
+#!/usr/bin/sh
+
+read notification
+notify-send "Error" "$notification" "$@" -i $MY_FOLDER/Library/icons/error.png
