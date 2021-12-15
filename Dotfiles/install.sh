@@ -21,6 +21,9 @@ dotfiles=(
 )
 
 for d in "${dotfiles[@]}"; do
-	stow "$d" && notify-send "$d" "Succesfully updates" -i /usr/share/icons/Paper/16x16@2x/apps/git.png
-
+	if stow "$d"; then
+		notify-send "Dotfiles updated" ":)" -i "$MY_FOLDER"/Library/icons/archlinux.png
+	else
+		notify-send "Dotfiles Error" "$d" -i "$MY_FOLDER"/Library/icons/error.png
+	fi
 done
