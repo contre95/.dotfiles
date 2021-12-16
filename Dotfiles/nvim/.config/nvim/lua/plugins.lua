@@ -1,3 +1,11 @@
+-- Install Packer 
+local install_path =vim.fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
+
+if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
+    vim.fn.system({ "git", "clone", "--depth", "1", "https://github.com/wbthomason/packer.nvim", install_path })
+    vim.api.nvim_command("packadd packer.nvim")
+end
+-- Use Packer 
 local packer = require("packer")
 local use = packer.use
 
@@ -12,10 +20,6 @@ return require("packer").startup(function()
 		requires = { "kyazdani42/nvim-web-devicons", opt = true },
 	})
 	use({ "kyazdani42/nvim-tree.lua", requires = "kyazdani42/nvim-web-devicons" })
-	-- use {
-	-- "luukvbaal/stabilize.nvim",
-	-- config = function() require("stabilize").setup() end
-	-- }
     use "lukas-reineke/indent-blankline.nvim"
 	use({
 		"lewis6991/gitsigns.nvim",
@@ -43,8 +47,8 @@ return require("packer").startup(function()
 	use("hrsh7th/cmp-cmdline")
 	use("hrsh7th/cmp-vsnip")
 	use("hrsh7th/vim-vsnip-integ")
-	use("rafamadriz/friendly-snippets")
 	use("hrsh7th/vim-vsnip")
+	use("rafamadriz/friendly-snippets")
 	use("hrsh7th/cmp-nvim-lsp")
 	use("nvim-lua/lsp-status.nvim")
 	use("onsails/lspkind-nvim")

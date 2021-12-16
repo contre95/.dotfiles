@@ -78,7 +78,17 @@ lspconfig.terraformls.setup({
 })
 
 -- SQL  -- go install github.com/lighttiger2505/sqls@latest
-lspconfig.sqls.setup({ capabilities = capabilities })
+ lspconfig.sqls.setup({
+            --cmd = { "/path/to/sqls", "-config", "$HOME/.config/sqls/config.yml" },
+ capabilities = capabilities, 
+            on_attach = function(client)
+                client.resolved_capabilities.execute_command = true
+                -- client.commands = require("sqls").commands -- Neovim 0.6+ only
+
+                require("sqls").setup({})
+            end,
+            picker = "telescope",
+        })
 
 -- Typescript
 lspconfig.tsserver.setup({ capabilities = capabilities })

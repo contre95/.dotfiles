@@ -1,40 +1,45 @@
---                                    ___           ___           ___
---           ___        ___          /__/\         /  /\         /  /\
---          /__/\      /  /\        |  |::\       /  /::\       /  /:/
---          \  \:\    /  /:/        |  |:|:\     /  /:/\:\     /  /:/
---           \  \:\  /__/::\      __|__|:|\:\   /  /:/~/:/    /  /:/  ___
---       ___  \__\:\ \__\/\:\__  /__/::::| \:\ /__/:/ /:/___ /__/:/  /  /\
---      /__/\ |  |:|    \  \:\/\ \  \:\~~\__\/ \  \:\/:::::/ \  \:\ /  /:/
---      \  \:\|  |:|     \__\::/  \  \:\        \  \::/~~~~   \  \:\  /:/
---       \  \:\__|:|     /__/:/    \  \:\        \  \:\        \  \:\/:/
---        \__\::::/      \__\/      \  \:\        \  \:\        \  \::/
---            ~~~~                   \__\/         \__\/         \__\/
--- Leader key
-vim.api.nvim_set_var("mapleader", " ") -- Alternative: vim.g.mapleader = " "
+--[[
+      ___                                    ___     
+     /__/\          ___        ___          /__/\    
+     \  \:\        /__/\      /  /\        |  |::\   
+      \  \:\       \  \:\    /  /:/        |  |:|:\  
+  _____\__\:\       \  \:\  /__/::\      __|__|:|\:\ 
+ /__/::::::::\  ___  \__\:\ \__\/\:\__  /__/::::| \:\
+ \  \:\~~\~~\/ /__/\ |  |:|    \  \:\/\ \  \:\~~\__\/
+  \  \:\  ~~~  \  \:\|  |:|     \__\::/  \  \:\      
+   \  \:\       \  \:\__|:|     /__/:/    \  \:\     
+    \  \:\       \__\::::/      \__\/      \  \:\    
+     \__\/           ~~~~                   \__\/    
+--]]
 
--- Color Scheme
-vim.o.termguicolors = true
-vim.cmd("colorscheme material")
-vim.g.material_style = "deep ocean"
+
 
 -- Plugins
-require("colorscheme-config")
-require("plugins")
-require("completion")
-require("snippets")
-require("lsp")
-require("treesitter-config")
-require("nvim-tree-config")
-require('git-config')
+require("plugins") -- Plugins installed with packer
+require("lsp") -- lspconfig
+require("finder") -- telescope
+require("snippets") -- vsnip
+require("completion")  -- nvim-cmp
+require('git-config') -- gitSigns
+require("statusline") -- lualine
+require("nvim-tree-config") 
 require('blankline-config')
+require("treesitter-config")
 require("bufferline-config")
-require("statusline-config")
+require("colorscheme-config")
+
+
+-- Leader key
+vim.g.mapleader = " "
+
+-- Color Scheme
+vim.cmd("colorscheme material")
+vim.g.material_style = "deep ocean"
 
 ---- Vim Imports
 vim.cmd("so ~/.config/nvim/vim-misc.vim")
 vim.cmd("so ~/.config/nvim/vim-maps.vim")
-vim.cmd("so ~/.config/nvim/vim-settings.vim")
 vim.cmd("so ~/.config/nvim/vim-plugins.vim")
+vim.cmd("so ~/.config/nvim/vim-settings.vim")
 vim.cmd("so ~/.config/nvim/vim-commands.vim")
--- vim.cmd("so ~/.config/nvim/vim-highlights.vim")
 vim.cmd("so ~/.config/nvim/vim-file-types.vim")
