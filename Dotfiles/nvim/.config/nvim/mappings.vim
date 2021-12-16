@@ -32,7 +32,6 @@ nmap <C-d> mzyyp`z
 vmap <C-C> "+y
 vmap <C-X> "+x
 
-
 " Move through words wit Crtl
 nnoremap <C-Right> e<Right>
 nnoremap <C-Left> b
@@ -40,16 +39,39 @@ nnoremap <C-Left> b
 "Switch tabs with Crtl+Shift+arrows
 nmap <C-A-S-Right> gt
 nmap <C-A-S-Left> gT
-"
-"Switch Buffers with Crtl+Shift+arrows
-"nmap <C-A-S-Up> :bn<Enter>
-"nmap <C-A-S-Down> :bp<Enter>
+ 
+" Open livedown with brave (npm install -g livedown)
+nnoremap <silent> <Leader>m :call jobstart(printf('livedown start %s --port 4242 --open --browser "brave --profile-directory="Contre" --app=http://localhost:4242"',@%),{'detach':1})<CR>
+
+" Material Colorscheme
+nmap <silent> <leader>n :lua require('material.functions').toggle_style()<CR>
+
+"NerdCommenter (scrooloose/nerdcommenter)
+"-------------------------------------
+nmap <C-_> <Plug>NERDCommenterToggle <Down>
+vmap <C-_> <Plug>NERDCommenterToggle<CR>gv
+
+"Schleep indention
+"-------------------------------------
+vmap <C-Down> <Plug>SchleppIndentDown
+vmap <C-Up> <Plug>SchleppIndentUp
+vmap <C-d> <Plug>SchleppDup
+
+" NvimTree (kyazdani42/nvim-tree.lua)
+"-------------------------------------
+nnoremap <leader>f :NvimTreeToggle<Enter>
+
+" Telescope (nvim-telescope/telescope.nvim)
+nnoremap <leader>o <cmd>Telescope find_files<cr>
+nnoremap <leader>g <cmd>Telescope live_grep<cr>
+nnoremap <leader>b <cmd>Telescope buffers<cr>
+nnoremap <leader>h <cmd>Telescope help_tags<cr>
 
 " Delete the word in front of the cursor
 imap <C-D> X<Esc>lbce
 
 " Undo with Crtl+z / Redo with Crtl+Shif+z
-:map <C-C-z> :redo
+:map <C-S-z> :redo
 :map <C-z> u
 
 "Find with Ctrl+f
@@ -67,7 +89,3 @@ nnoremap <silent> <C-A-Up> <C-w>k
 " Lets you move to the end of the line (virtualedit=onemore needed)
 nnoremap <End> <End><Right>
 noremap $ $<Right>
-
-" Formatting
-nnoremap <leader><leader> migggqG`izz
-

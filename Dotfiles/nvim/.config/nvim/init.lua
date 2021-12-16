@@ -24,10 +24,12 @@ require('git-config') -- gitSigns
 require("statusline") -- lualine
 require("nvim-tree-config") 
 require('blankline-config')
+require('md-fenced-config')
 require("treesitter-config")
+require("quick-scope-config")
 require("bufferline-config")
+require("schlepp-config")
 require("colorscheme-config")
-
 
 -- Leader key
 vim.g.mapleader = " "
@@ -37,9 +39,9 @@ vim.cmd("colorscheme material")
 vim.g.material_style = "deep ocean"
 
 ---- Vim Imports
-vim.cmd("so ~/.config/nvim/vim-misc.vim")
-vim.cmd("so ~/.config/nvim/vim-maps.vim")
-vim.cmd("so ~/.config/nvim/vim-plugins.vim")
-vim.cmd("so ~/.config/nvim/vim-settings.vim")
-vim.cmd("so ~/.config/nvim/vim-commands.vim")
-vim.cmd("so ~/.config/nvim/vim-file-types.vim")
+vim.cmd("so ~/.config/nvim/misc.vim")
+vim.cmd("so ~/.config/nvim/mappings.vim")
+vim.cmd("so ~/.config/nvim/plugins.vim")
+vim.cmd("so ~/.config/nvim/settings.vim")
+vim.cmd("so ~/.config/nvim/commands.vim")
+vim.cmd("so ~/.config/nvim/filetypes.vim")
