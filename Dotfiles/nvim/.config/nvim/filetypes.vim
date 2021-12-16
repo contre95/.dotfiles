@@ -1,5 +1,5 @@
 "---------------------------------------------------------------------------------------------
-"------------------------------------ Custom settings for filetype ----------------------------
+"------------------------------------ Custom settings for different filetypes ----------------------------
 "----------------------------------------------------------------------------------------------
 
 "Set Markdown
@@ -8,7 +8,6 @@ autocmd FileType markdown setlocal spell
 autocmd FileType markdown setlocal complete+=kspell
 autocmd FileType markdown setlocal textwidth=80
 autocmd FileType markdown setlocal colorcolumn=-2 
-let g:markdown_fenced_languages = ['julia', 'css', 'python', 'javascript', 'js=javascript', 'json=javascript', 'ruby', 'sass', 'html', 'go']
 
 "Set Yaml
 "-------------------------------------
