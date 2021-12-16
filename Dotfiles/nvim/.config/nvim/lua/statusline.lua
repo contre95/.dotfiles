@@ -5,6 +5,5 @@ require('lualine').setup {
         lualine_b = {'branch'}
     },
     lualine_c = {require('lsp-status').status}
-
 }
 
