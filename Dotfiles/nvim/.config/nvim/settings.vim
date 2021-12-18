@@ -1,8 +1,5 @@
 " Common settings
 "-------------------------------------
-autocmd WinEnter,FocusGained * :setlocal number relativenumber
-autocmd WinLeave,FocusLost   * :setlocal number norelativenumber
-
 filetype plugin indent on
 set guicursor=n-v-ve-i-c-ci:ver25
 set expandtab ts=2 sw=2 ai

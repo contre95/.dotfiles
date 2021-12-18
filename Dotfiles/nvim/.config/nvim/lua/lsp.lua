@@ -42,15 +42,9 @@ lspconfig.jsonls.setup({ capabilities = capabilities })
 -- Rust
 lspconfig.rust_analyzer.setup({
 	capabilities = capabilities,
+
 	settings = {
-		rust = {
-			unstable_features = true,
-			all_features = true,
-			build_on_save = false,
-		},
-
 		["rust-analyzer"] = {
-
 			cargo = {
 				loadOutDirsFromCheck = true,
 			},
