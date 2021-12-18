@@ -25,18 +25,12 @@ local luafmt = {
 	formatStdin = true,
 }
 
--- Shell Formatter / Checker 
-local shell =  {
-   formatCommand = "shfmt ${-i:tabWidth}",
-  lintCommand = "shellcheck -f gcc -x -",
-  lintStdin = true,
-  lintFormats = {"%f:%l:%c: %trror: %m", "%f:%l:%c: %tarning: %m", "%f:%l:%c: %tote: %m"}
-}
-
--- Rust Formatter
-local rustfmt = {
-	formatCommand = "rustfmt",
-	formatStdin = true,
+-- Shell Formatter / Checker
+local shell = {
+	formatCommand = "shfmt ${-i:tabWidth}",
+	lintCommand = "shellcheck -f gcc -x -",
+	lintStdin = true,
+	lintFormats = { "%f:%l:%c: %trror: %m", "%f:%l:%c: %tarning: %m", "%f:%l:%c: %tote: %m" },
 }
 
 -- LSP Configuration
@@ -49,7 +43,14 @@ lspconfig.jsonls.setup({ capabilities = capabilities })
 lspconfig.rust_analyzer.setup({
 	capabilities = capabilities,
 	settings = {
+		rust = {
+			unstable_features = true,
+			all_features = true,
+			build_on_save = false,
+		},
+
 		["rust-analyzer"] = {
+
 			cargo = {
 				loadOutDirsFromCheck = true,
 			},
@@ -78,17 +79,17 @@ lspconfig.terraformls.setup({
 })
 
 -- SQL  -- go install github.com/lighttiger2505/sqls@latest
- lspconfig.sqls.setup({
-            --cmd = { "/path/to/sqls", "-config", "$HOME/.config/sqls/config.yml" },
- capabilities = capabilities, 
-            on_attach = function(client)
-                client.resolved_capabilities.execute_command = true
-                -- client.commands = require("sqls").commands -- Neovim 0.6+ only
+lspconfig.sqls.setup({
+	--cmd = { "/path/to/sqls", "-config", "$HOME/.config/sqls/config.yml" },
+	capabilities = capabilities,
+	on_attach = function(client)
+		client.resolved_capabilities.execute_command = true
+		-- client.commands = require("sqls").commands -- Neovim 0.6+ only
 
-                require("sqls").setup({})
-            end,
-            picker = "telescope",
-        })
+		require("sqls").setup({})
+	end,
+	picker = "telescope",
+})
 
 -- Typescript
 lspconfig.tsserver.setup({ capabilities = capabilities })
@@ -126,7 +127,6 @@ lspconfig.efm.setup({
 	filetypes = {
 		"css",
 		"html",
-		"rust",
 		"javascript",
 		"bash",
 		"sh",
