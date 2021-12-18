@@ -62,7 +62,7 @@ vmap <C-d> <Plug>SchleppDup
 nnoremap <leader>f :NvimTreeToggle<Enter>
 
 " Telescope (nvim-telescope/telescope.nvim)
-nnoremap <leader>o <cmd>Telescope find_files<cr>
+nnoremap <leader>o <cmd>Telescope find_files find_command=rg,--ignore,--hidden,--files prompt_prefix=🔍<cr>
 nnoremap <leader>g <cmd>Telescope live_grep<cr>
 nnoremap <leader>b <cmd>Telescope buffers<cr>
 nnoremap <leader>h <cmd>Telescope help_tags<cr>

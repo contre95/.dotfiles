@@ -19,7 +19,6 @@ bspc monitor DP-4 -d 6 7 8 9 ﭮ    
 bspc rule -a TelegramDesktop desktop=''
 bspc rule -a discord desktop='ﭮ'
 bspc rule -a 'meet.jit.si' desktop=''
-bspc rule -a mocp desktop=''
 #### BSPWM configuration ####
 
 bspc config border_width 1

@@ -10,7 +10,7 @@ FormatString = "%(n:%n :)%(a:%a - :)%(t:%t:)%(A: \(%A\):)"
 
 XTerms += xterm-256colour:xterm-256color
 
-XTermTheme = transparent-background
+Theme = darkdot_theme
 
 
 # Should MOC try to autoload the default lyrics file for an audio?  (The
