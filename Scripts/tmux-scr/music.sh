@@ -5,7 +5,7 @@ function music {
 
     tmux new-session -d -s Music -n Music &&
 
-    tmux send-keys -t Music:1 'mocp' C-m &&
+    tmux send-keys -t Music:1 'mocp --config ~/.config/moc/config' C-m &&
     tmux resize-pane -L 120
     
     tmux split-window -v -l 10 -t Music:1
