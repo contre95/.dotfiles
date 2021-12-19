@@ -70,6 +70,8 @@ super + b
     $SCR_PATH/dmenu-scr/bluetooth.sh 
 super + w
     $SCR_PATH/dmenu-scr/web-light.sh
+super + shift + i
+    $SCR_PATH/dmenu-scr/social.sh
 super +  d
     rofi -no-lazy-grab -show drun -modi drun -theme ~/.config/rofi/style.rasi
 super + shift + d
