@@ -5,11 +5,6 @@
 " Set Rust 
 "-------------------------------------
 "autocmd InsertLeave,BufEnter,BufWinEnter,TabEnter,BufWritePost *.rs :lua require'lsp_extensions'.inlay_hints{ prefix = ' » ', highlight = "NonText", enabled = {"TypeHint", "ChainingHint", "ParameterHint"} }
-aug rust_ft_detection
-  au!
-  au InsertLeave,InsertEnter *.rs lua require'lsp_extensions'.inlay_hints{ prefix = '» ', highlight =  "Comment", enabled = {"TypeHint", "ChainingHint", "ParameterHint"} }
-aug end
-
 
 "Set Markdown
 "-------------------------------------

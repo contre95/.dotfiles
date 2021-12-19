@@ -11,12 +11,11 @@
 
 " Tmux configuration, tmux will send xterm-style keys when its xterm-keys option is on
 "-------------------------------------
-if &term =~ '^tmux'                                                                   
-    execute "set <xRight>=\e[1;*C"                                                      
-    execute "set <xDown>=\e[1;*B"                                                       
-    execute "set <xLeft>=\e[1;*D"                                                       
-    execute "set <xUp>=\e[1;*A"                                                         
-endif                                                                                   
+"if &term =~ '^tmux'                                                                   
+    "execute "set <xRight>=\e[1;*C"                                                      
+    "execute "set <xDown>=\e[1;*B"                                                       
+    "execute "set <xLeft>=\e[1;*D"                                                       
+    "execute "set <xUp>=\e[1;*A"                                                         
+"endif                                                                                   
 
-autocmd VimEnter * :silent exec "!kill -s SIGWINCH $PPID"
 
