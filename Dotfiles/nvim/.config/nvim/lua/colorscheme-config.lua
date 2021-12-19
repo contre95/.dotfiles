@@ -216,6 +216,8 @@ require('material').setup( {
         mkdListItem = {fg = colors.cyan},
         mkdURL = {fg = colors.pink, style = 'underline'},
 
+        LspDiagnosticsError = {fg = "#FFF000"},
+        LspDiagnosticsVirtualTextError= {fg = "#FFF000"},
         -- Go
         goFunction = {fg = colors.red},
         goImportString = {fg = colors.red},
