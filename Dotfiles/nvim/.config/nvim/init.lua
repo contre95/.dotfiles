@@ -30,7 +30,7 @@ require("quick-scope-config")
 require("bufferline-config")
 require("schlepp-config")
 require("colorscheme-config")
-
+require("rust-tools")
 -- Leader key
 vim.g.mapleader = " "
 
@@ -41,7 +41,6 @@ vim.g.material_style = "deep ocean"
 ---- Vim Imports
 vim.cmd("so ~/.config/nvim/misc.vim")
 vim.cmd("so ~/.config/nvim/mappings.vim")
-vim.cmd("so ~/.config/nvim/plugins.vim")
 vim.cmd("so ~/.config/nvim/settings.vim")
 vim.cmd("so ~/.config/nvim/commands.vim")
 vim.cmd("so ~/.config/nvim/filetypes.vim")
