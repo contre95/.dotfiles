@@ -10,7 +10,6 @@ command! -nargs=0 Rename lua vim.lsp.buf.rename()
 command! -nargs=0 SignatureHelp lua vim.lsp.buf.signature_help()
 command! -nargs=0 LspLog lua vim.cmd('sp'..vim.lsp.get_log_path())
 "autocmd CursorMoved,InsertLeave,BufEnter,BufWinEnter,TabEnter,BufWritePost *.rs lua require'lsp_extensions'.inlay_hints{ prefix = '>', highlight = "Comment", enabled = {"TypeHint", "ChainingHint", "ParameterHint"} }
-
 " Misc
 command! -nargs=0 Trans call LetMeSee()
 function LetMeSee()
@@ -20,5 +19,3 @@ endfunction
 
 " I sincerely don't remember what this is for
 autocmd VimEnter * :silent exec "!kill -s SIGWINCH $PPID"
-
-
