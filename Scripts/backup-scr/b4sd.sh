@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 # Update newsboatd
 git_bkp() {
 	pushd "$1" || exit 1
@@ -15,9 +14,5 @@ git_bkp() {
 	exit 1
 }
 
-if ! git_bkp /home/canus; then
-	notify-send "Error" "Could not back up newsboat :(" -i "$MY_FOLDER"/Library/icons/error.png
-fi
-if ! git_bkp ~/.newsboat/; then
-  notify-send "Error" "Could not back up newsboat :(" -i "$MY_FOLDER"/Library/icons/error.png
-fi
+git_bkp /home/canus && notify-send "Error" "Could not back up newsboat :(" -i "$MY_FOLDER"/Library/icons/error.png
+git_bkp ~/.newsboat/ && notify-send "Error" "Could not back up newsboat :(" -i "$MY_FOLDER"/Library/icons/error.png
