@@ -2,6 +2,7 @@
 
 # Update newsboatd
 git_bkp() {
+    notify-send "Backing up $1"
 	pushd "$1" || exit 1
 	git add . &&
 		if git commit -m "Update $(date +"%d-%m-%y")"; then
