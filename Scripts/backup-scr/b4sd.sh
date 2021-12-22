@@ -14,9 +14,9 @@ git_bkp() {
 	exit 1
 }
 
-#if ! git_bkp ~/.newsboat/; then
-	#notify-send "Error" "Could not back up newsboat :(" -i "$MY_FOLDER"/Library/icons/error.png
-#fi
 if ! git_bkp /home/canus; then
 	notify-send "Error" "Could not back up newsboat :(" -i "$MY_FOLDER"/Library/icons/error.png
+fi
+if ! git_bkp ~/.newsboat/; then
+  notify-send "Error" "Could not back up newsboat :(" -i "$MY_FOLDER"/Library/icons/error.png
 fi
