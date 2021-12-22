@@ -1,3 +1,0 @@
-[submodule "Dotfiles/newsboat/.newsboat"]
-	path = Dotfiles/newsboat/.newsboat
-	url = git@github.com:contre95/rss.git
