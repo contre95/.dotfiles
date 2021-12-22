@@ -3,7 +3,6 @@
 dotfiles=(
 	alacritty
 	bspwm
-	newsboat
 	dunst
 	fzf
 	gtk
