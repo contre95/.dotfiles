@@ -13,6 +13,6 @@ git_bkp() {
 	popd
 }
 
-git_bkp /home/canus 
+git_bkp /home/canus &&
 git_bkp ~/.newsboat 
 #git_bkp /.newsboat 2&> xargs -I {} "notify-send "Error" "{}" -i "$MY_FOLDER"/Library/icons/error.png"
