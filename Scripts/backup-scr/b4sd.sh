@@ -1,5 +1,6 @@
 #!/bin/bash
 
+echo "anduvio" > ~/sd.log
 git_bkp() {
 	pushd "$1" || exit 1
 	notify-send "$1" "updating.." -i "$MY_FOLDER"/Library/icons/git.png
