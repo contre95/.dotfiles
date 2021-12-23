@@ -1,6 +1,7 @@
 #!/bin/bash
 
-ssh-add -L >~/sd.log
+export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+
 git_bkp() {
 	pushd "$1" || exit 1
 	notify-send "$1" "updating.." -i "$MY_FOLDER"/Library/icons/git.png
