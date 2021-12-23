@@ -1,5 +1,4 @@
 #!/bin/bash
-sleep 3
 git_bkp() {
 	pushd "$1" || exit 1
     git add . &&
@@ -16,3 +15,4 @@ git_bkp() {
 
 git_bkp /home/canus && notify-send "Error" "Could not back up newsboat :(" -i "$MY_FOLDER"/Library/icons/error.png ;
 git_bkp ~/.newsboat/ && notify-send "Error" "Could not back up newsboat :(" -i "$MY_FOLDER"/Library/icons/error.png
+sleep 3
