@@ -1,5 +1,5 @@
 #!/bin/zsh
-choices="sxhkd\nbspwm\nvimrc\nlemonbar"
+choices="sxhkd\nbspwm\nvimrc\nlemonbar\nBACKUP"
 var=$(echo -e $choices | dmenu -i -p "Audio Output" -sb "#40444B" -fn "JetBrainsMono Nerd Font") 
 TMUX_SCRIPTS=/home/canus/Scripts/tmux-scr
 
