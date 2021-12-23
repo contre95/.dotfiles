@@ -139,7 +139,6 @@ lspconfig.efm.setup({
 		"zsh",
 		"lua",
 		"markdown",
-		"python",
 	},
 	settings = {
 		languages = languages,
