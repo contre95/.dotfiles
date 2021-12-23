@@ -11,9 +11,9 @@ git_bkp() {
 		notify-send "Nothing to backup" "$1" -i "$MY_FOLDER"/Library/icons/info.png
 		exit 0
 	fi
-	popd
+	popd || exit 1
 }
 
 git_bkp /home/canus &&
-	git_bkp ~/.newsboat
+	git_bkp /home/contre/.newsboat
 #git_bkp /.newsboat 2&> xargs -I {} "notify-send "Error" "{}" -i "$MY_FOLDER"/Library/icons/error.png"
