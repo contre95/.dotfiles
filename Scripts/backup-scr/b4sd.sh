@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 echo "anduvio" >~/sd.log
 git_bkp() {
