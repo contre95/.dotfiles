@@ -11,7 +11,8 @@ git_bkp() {
 			notify-send "Nothing to backup" "$1" -i "$MY_FOLDER"/Library/icons/git.png
 			exit 0
 		fi
-        #return 1
+      popd
+      #return 1
 }
 
 git_bkp /home/canus && notify-send "Error" "Could not back up newsboat :(" -i "$MY_FOLDER"/Library/icons/error.png ;
