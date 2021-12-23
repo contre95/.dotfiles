@@ -9,7 +9,6 @@ git_bkp() {
 			notify-send "$1 updated" ":)" -i "$MY_FOLDER"/Library/icons/success.png
 	else
 		notify-send "Nothing to backup" "$1" -i "$MY_FOLDER"/Library/icons/info.png
-		exit 0
 	fi
 	popd || exit 1
 }
