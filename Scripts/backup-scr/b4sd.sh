@@ -5,7 +5,7 @@ git_bkp() {
 	notify-send "$1" "updating.." -i "$MY_FOLDER"/Library/icons/git.png
 	if git add . && git commit -m "Update $(date +'%d-%m-%y')"; then
       sleep 1 &&
-		git push &&
+		git push 2> notify-error &&
 			notify-send "$1 updated" ":)" -i "$MY_FOLDER"/Library/icons/success.png
 	else
 		notify-send "Nothing to backup" "$1" 
