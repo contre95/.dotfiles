@@ -8,7 +8,7 @@ git_bkp() {
 		git push 2> ~/tmp.log > ~/tmp.log &&
 			notify-send "$1 updated" ":)" -i "$MY_FOLDER"/Library/icons/success.png
 	else
-		notify-send "Nothing to backup" "$1" 
+		notify-send "Nothing to backup" "$1" -i "$MY_FOLDER"/Library/icons/info.png
 		exit 0
 	fi
 	popd
