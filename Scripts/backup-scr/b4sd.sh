@@ -4,6 +4,7 @@ git_bkp() {
 	pushd "$1" || exit 1
 	notify-send "$1" "updating.." -i "$MY_FOLDER"/Library/icons/git.png
 	if git add . && git commit -m "Update $(date +'%d-%m-%y')"; then
+      sleep 1 &&
 		git push &&
 			notify-send "$1 updated" ":)" -i "$MY_FOLDER"/Library/icons/git.png
 	else
