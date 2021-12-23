@@ -1,5 +1,5 @@
 #!/bin/bash
-
+sleep 3
 git_bkp() {
 	pushd "$1" || exit 1
     git add . &&
