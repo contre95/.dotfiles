@@ -5,7 +5,7 @@ var=$(echo -e "$choices" | dmenu -i -p "Exit menu: " -sb "#FF3855" -fn "JetBrain
 
 case $var in
     ' Shutdown') 
-      systemctl poweroff;;
+      /home/canus/Scripts/backup-scr/b4sd.sh && notify-send "chau";;
 
     ' Lock')
       dm-tool lock ;;

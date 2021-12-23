@@ -1,12 +1,15 @@
 #!/bin/bash
 
-echo "anduvio" > ~/sd.log
+echo "anduvio" >~/sd.log
 git_bkp() {
 	pushd "$1" || exit 1
 	notify-send "$1" "updating.." -i "$MY_FOLDER"/Library/icons/git.png
 	if git add . && git commit -m "Update $(date +'%d-%m-%y')"; then
-		git push &&
+		if git push; then
 			notify-send "$1 updated" ":)" -i "$MY_FOLDER"/Library/icons/success.png
+		else
+			notify-send "could not push" -i "$MY_FOLDER"/Library/icons/error.png
+		fi
 	else
 		notify-send "Nothing to backup" "$1" -i "$MY_FOLDER"/Library/icons/info.png
 	fi
