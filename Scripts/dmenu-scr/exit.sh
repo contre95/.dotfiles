@@ -5,7 +5,7 @@ var=$(echo -e "$choices" | dmenu -i -p "Exit menu: " -sb "#FF3855" -fn "JetBrain
 
 case $var in
     ' Shutdown') 
-      "$MY_FOLDER"/Scripts/backup-scr/b4sd.sh && notify-send "Shutting down";sleep 5 && notify-send poweroffXX;;
+      "$MY_FOLDER"/Scripts/backup-scr/b4sd.sh > /home/contre/tmp.log || notify-send "Shutting down";;
 
     ' Lock')
       dm-tool lock ;;
