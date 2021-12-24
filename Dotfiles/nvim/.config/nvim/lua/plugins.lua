@@ -18,18 +18,17 @@ local packer = require("packer")
 local use = packer.use
 
 return require("packer").startup(function()
-	use("marko-cerovac/material.nvim")
 	use("wbthomason/packer.nvim")
+	use("marko-cerovac/material.nvim")
+	use({ "mangeshrex/uwu.vim" })
 	use("nvim-treesitter/nvim-treesitter")
 	use({
 		"nvim-lualine/lualine.nvim",
 		requires = { "kyazdani42/nvim-web-devicons", opt = true },
 	})
 	use({ "kyazdani42/nvim-tree.lua", requires = "kyazdani42/nvim-web-devicons" })
-	use("lukas-reineke/indent-blankline.nvim")
 	use({ "lewis6991/gitsigns.nvim", requires = { "nvim-lua/plenary.nvim" } })
 	use("akinsho/nvim-bufferline.lua")
-	--use("fatih/vim-go")
 	use("tpope/vim-markdown")
 	use("hashivim/vim-terraform")
 	use("neovim/nvim-lspconfig")

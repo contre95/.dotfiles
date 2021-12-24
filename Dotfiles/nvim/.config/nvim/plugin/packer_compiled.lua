@@ -69,6 +69,16 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["calvera-dark.nvim"] = {
+    loaded = true,
+    path = "/home/contre/.local/share/nvim/site/pack/packer/start/calvera-dark.nvim",
+    url = "https://github.com/yashguptaz/calvera-dark.nvim"
+  },
+  catppuccin = {
+    loaded = true,
+    path = "/home/contre/.local/share/nvim/site/pack/packer/start/catppuccin",
+    url = "https://github.com/catppuccin/nvim"
+  },
   ["clipboard-image.nvim"] = {
     loaded = true,
     path = "/home/contre/.local/share/nvim/site/pack/packer/start/clipboard-image.nvim",
@@ -118,6 +128,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/contre/.local/share/nvim/site/pack/packer/start/lsp-status.nvim",
     url = "https://github.com/nvim-lua/lsp-status.nvim"
+  },
+  ["lsp_extensions.nvim"] = {
+    loaded = true,
+    path = "/home/contre/.local/share/nvim/site/pack/packer/start/lsp_extensions.nvim",
+    url = "https://github.com/nvim-lua/lsp_extensions.nvim"
   },
   ["lspkind-nvim"] = {
     loaded = true,
@@ -184,11 +199,6 @@ _G.packer_plugins = {
     path = "/home/contre/.local/share/nvim/site/pack/packer/start/quick-scope",
     url = "https://github.com/unblevable/quick-scope"
   },
-  ["rust-tools.nvim"] = {
-    loaded = true,
-    path = "/home/contre/.local/share/nvim/site/pack/packer/start/rust-tools.nvim",
-    url = "https://github.com/simrat39/rust-tools.nvim"
-  },
   ["telescope-fzf-native.nvim"] = {
     loaded = true,
     path = "/home/contre/.local/share/nvim/site/pack/packer/start/telescope-fzf-native.nvim",
@@ -198,11 +208,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/contre/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
-  },
-  ["vim-go"] = {
-    loaded = true,
-    path = "/home/contre/.local/share/nvim/site/pack/packer/start/vim-go",
-    url = "https://github.com/fatih/vim-go"
   },
   ["vim-markdown"] = {
     loaded = true,

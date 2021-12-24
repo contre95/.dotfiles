@@ -21,7 +21,6 @@ require("completion") -- nvim-cmp
 require("git-config") -- gitSigns
 require("statusline") -- lualine
 require("nvim-tree-config")
-require("blankline-config")
 require("md-fenced-config")
 require("treesitter-config")
 require("quick-scope-config")
@@ -33,7 +32,7 @@ require("colorscheme-config")
 vim.g.mapleader = " "
 
 -- Color Scheme
-vim.cmd("colorscheme material")
+vim.cmd('colorscheme material')
 vim.g.material_style = "deep ocean"
 
 ---- Vim Imports
