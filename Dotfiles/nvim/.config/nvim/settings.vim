@@ -42,7 +42,7 @@ set bs=2
 
 " Treat end of lines like normal IDE
 "-------------------------------------
-set virtualedit=onemore
 set sel=exclusive
-"set virtualedit=all
+"set virtualedit=onemore
+set virtualedit=all
 
