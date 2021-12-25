@@ -9,7 +9,7 @@ git_bkp() {
 		if git push 2> ~/err.log; then
 			notify-send "$1 updated" ":)" -i "$MY_FOLDER"/Library/icons/success.png
 		else
-			notify-send "could not push" -i "$MY_FOLDER"/Library/icons/error.png
+			notify-send "Could not push" "$1" -i "$MY_FOLDER"/Library/icons/error.png
 		fi
 	else
 		notify-send "Nothing to backup" "$1" -i "$MY_FOLDER"/Library/icons/info.png
