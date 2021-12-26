@@ -15,6 +15,22 @@ nnoremap <C-S-Left> <Esc>v
 nnoremap <C-S-Down> <Esc>v
 nnoremap <C-S-Up> <Esc>v
 
+imap <S-Right> <Esc>V<Right>
+imap <S-Left> <Esc>V<Left>
+imap <S-Down> <Esc>V<Down>
+nmap <S-Right> v<Right>
+vmap <S-Right> <Right>
+nmap <S-Down> V<Down>
+nmap <S-Left> v<Left>
+vmap <S-Down> <Down>
+vmap <S-Left> <Left>
+nmap <S-Up> V<Up>
+vmap <S-Up> <Up>
+nnoremap <C-S-Right> <Esc>v
+nnoremap <C-S-Left> <Esc>v
+nnoremap <C-S-Down> <Esc>v
+nnoremap <C-S-Up> <Esc>v
+
 " Move lines with Ctrl+arrow
 inoremap <C-Down> <Esc>:m+<CR>
 noremap <C-Up> <Esc>:m-2<CR>
