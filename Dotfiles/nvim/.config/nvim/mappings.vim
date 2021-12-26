@@ -1,19 +1,19 @@
 "Shift selection
-imap <S-Right> <Esc>V<Right>
-imap <S-Left> <Esc>V<Left>
-imap <S-Down> <Esc>V<Down>
-nmap <S-Right> v<Right>
-vmap <S-Right> <Right>
-nmap <S-Down> V<Down>
-nmap <S-Left> v<Left>
-vmap <S-Down> <Down>
-vmap <S-Left> <Left>
-nmap <S-Up> V<Up>
-vmap <S-Up> <Up>
-nnoremap <C-S-Right> <Esc>v
-nnoremap <C-S-Left> <Esc>v
-nnoremap <C-S-Down> <Esc>v
-nnoremap <C-S-Up> <Esc>v
+imap <S>l <Esc>V<Right>
+imap <S>h <Esc>V<Left>
+imap <S>j <Esc>V<Down>
+nmap <S>l v<Right>
+vmap <S>l <Right>
+nmap <S>j V<Down>
+nmap <S>h v<Left>
+vmap <S>j <Down>
+vmap <S>l <Left>
+nmap <S>k V<Up>
+vmap <S>k <Up>
+nnoremap <C-S>l <Esc>v
+nnoremap <C-S>h <Esc>v
+nnoremap <C-S>j <Esc>v
+nnoremap <C-S>k <Esc>v
 
 imap <S-Right> <Esc>V<Right>
 imap <S-Left> <Esc>V<Left>
