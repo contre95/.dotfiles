@@ -3,8 +3,8 @@
 
 if [[ $(amixer -c 3 | grep "Playback \[off]") ]]; then # 1 becaouse for some reason there's an empty something in the array (don't wanna bother)
 	amixer -c 3 set Mic unmute &&
-	notify-send "Mic Monitor" "muted" -i "$MY_FOLDER"/Library/icons/monitoff.png
+	notify-send "Mic Monitor" "ON" -i "$MY_FOLDER"/Library/icons/moniton.png
 else
 	amixer -c 3 set Mic mute &&
-	notify-send "Mic Monitor" "unmute" -i "$MY_FOLDER"/Library/icons/moniton.png
+	notify-send "Mic Monitor" "OFF" -i "$MY_FOLDER"/Library/icons/monitoff.png
 fi
