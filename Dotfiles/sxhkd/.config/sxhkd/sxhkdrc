@@ -100,6 +100,8 @@ super + shift + z
     $SCR_PATH/dmenu-scr/pdf.sh      
 super + shift + m
     $SCR_PATH/dmenu-scr/tmux-new.sh 
+super + alt + m
+    $SCR_PATH/audio-scr/mic-loopback.sh
 super + ctrl + m
     pulseaudio-ctl mute-input
 super + ctrl + x
