@@ -102,6 +102,8 @@ super + shift + m
     $SCR_PATH/dmenu-scr/tmux-new.sh 
 super + alt + m
     $SCR_PATH/audio-scr/mic-loopback.sh
+super + alt + shift + m
+    $SCR_PATH/audio-scr/mic-monitor.sh
 super + ctrl + m
     pulseaudio-ctl mute-input
 super + ctrl + x
