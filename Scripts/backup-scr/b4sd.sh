@@ -18,6 +18,7 @@ git_bkp() {
 	popd || exit 1
 }
 
+pass git pull
 pass git push
 git_bkp /home/canus
 git_bkp /home/contre/.newsboat
