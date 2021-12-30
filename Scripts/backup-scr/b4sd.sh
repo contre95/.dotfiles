@@ -4,7 +4,7 @@ export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
 
 git_bkp() {
 	pushd "$1" || exit 1
-    git pull
+    git pull &&
 	notify-send "$1" "updating.." -i "$MY_FOLDER"/Library/icons/git.png
 	if git add . && git commit -m "Update $(date +'%d-%m-%y')"; then
 		if git push 2> ~/err.log; then
