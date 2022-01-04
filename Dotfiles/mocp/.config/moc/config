@@ -2,6 +2,8 @@ MusicDir = /home/canus/Music
 StartInMusicDir = yes
 ShowStreamErrors = yes
 
+AlsaDevice		= default
+
 #Repeat = no
 #Shuffle = no
 #AutoNext = yes
@@ -28,5 +30,5 @@ SavePlaylist = yes
 
 # Example:    OnSongChange = "/home/jack/.moc/myscript %a %r"
 
-OnSongChange = notify-send "Dotfiles Synched" "Please push changes" -i /usr/share/icons/Paper/16x16@2x/apps/git.png
+OnSongChange = "notify-send 'Song changed' 'Please push changes' -i /usr/share/icons/Paper/16x16@2x/apps/git.png"
 
