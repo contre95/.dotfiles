@@ -22,7 +22,7 @@ modules = (
     modules.Const('%{c}'),
     modules.Command(command=["iwgetid","-r"], label="", errMsg="Not Connected"),
     modules.Const(' | '),
-    modules.Command(command=["/usr/bin/curl","ifconfig.io"], label="", errMsg="0.0.0.0"),
+    modules.Command(command=["/usr/bin/curl","--connect-timeout","3","ifconfig.io"], label="", errMsg="0.0.0.0"),
     modules.Const('%{r}'),
     bspwm_modules.Tags('DP-2', include={"1","2","3","4","5"}),
     modules.Const(PADDING),
