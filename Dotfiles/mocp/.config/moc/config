@@ -1,4 +1,4 @@
-MusicDir = /home/canus/Music
+MusicDir = /home/canus/Music/Playlists
 StartInMusicDir = yes
 ShowStreamErrors = yes
 
@@ -8,7 +8,7 @@ AlsaDevice		= default
 #Shuffle = no
 #AutoNext = yes
 
-FormatString = "%(n:%n :)%(a:%a - :)%(t:%t:)%(A: \(%A\):)"
+FormatString = "%a | %t"
 
 XTerms += xterm-256colour:xterm-256color
 
@@ -27,6 +27,7 @@ UseMimeMagic = no
 FileNamesIconv = no
 
 SavePlaylist = yes
+PlaylistFullPaths = no
 
 # Example:    OnSongChange = "/home/jack/.moc/myscript %a %r"
 

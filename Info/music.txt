@@ -200,6 +200,8 @@ Music
 │   ├── Cool.mp3
 │   ├── Heroes.mp3
 │   └── Years.mp3
+├── Alexandra & Matrix band
+│   └── Izvini mama.mp3
 ├── Alexandra Stan
 │   ├── Get Back.mp3
 │   ├── Lollipop.mp3
@@ -484,7 +486,6 @@ Music
 │   ├── Girlfriend (The Submarines' Time Warp '66 Mix - Portugese).mp3
 │   ├──  Girlfriend (The Submarines' Time Warp '66 Mix - Spanish).mp3
 │   ├── Girlfriend (The Submarines' Time Warp '66 Mix - Spanish).mp3
-│   ├── playlist.m3u
 │   ├──  Wish You Were Here (Acoustic Version).mp3
 │   ├── Wish You Were Here (Acoustic Version).mp3
 │   ├──  Wish You Were Here.mp3
@@ -519,10 +520,11 @@ Music
 ├── Backstreet Boys
 │   └── As Long As You Love Me.mp3
 ├── Bad Bunny
-│   ├── Bad Bunny - DÁKITI.mp3
 │   ├── Callaita.mp3
+│   ├── Dakiti.mp3
 │   ├── MIA (feat. Drake).mp3
-│   └── Sensualidad.mp3
+│   ├── Sensualidad.mp3
+│   └── Yonaguni.mp3
 ├── Bad English
 │   └── When I See You Smile.mp3
 ├── Bag Raiders
@@ -957,9 +959,14 @@ Music
 │   └── Sweet Home Chicago.mp3
 ├── Ca7riel
 │   ├── A Mí No.mp3
+│   ├── BAD BITCH.mp3
 │   ├── Cono hielo.mp3
+│   ├── KEYHOLE.mp3
 │   ├── McFly.mp3
-│   └── OUKE.mp3
+│   ├── MUY BIEN.mp3
+│   ├── OUKE.mp3
+│   ├── SHIPEA2.mp3
+│   └── SOUVENIR.mp3
 ├── Cachengue
 │   ├── Abusadora.mp3
 │   ├── Ahora Es.mp3
@@ -1172,6 +1179,8 @@ Music
 │   └── Love Will Keep Us Together.mp3
 ├── Caravan Palace
 │   └── Lone Digger.mp3
+├── Cardellino
+│   └── TOSCANA.mp3
 ├── Carlos Baute
 │   ├── Colgando En Tus Manos.mp3
 │   └── Quien Te Quiere Como Yo.mp3
@@ -1396,7 +1405,6 @@ Music
 │   ├── Magic.mp3
 │   ├── OneNote Table Of Contents.onetoc2
 │   ├── Paradise.mp3
-│   ├── playlist.m3u
 │   ├──  Something Just Like This (Tokyo Remix).mp3
 │   ├── Something Just Like This (Tokyo Remix).mp3
 │   ├── Speed Of Sound.mp3
@@ -1806,6 +1814,11 @@ Music
 │   ├── Que No Me Pierda.mp3
 │   ├── Sé Que Ya No Volverás.mp3
 │   └── Tratar De Estar Mejor.mp3
+├── Dillom
+│   ├── A$AP.mp3
+│   ├── DUDADE.mp3
+│   ├── OPA.mp3
+│   └── Sauce.mp3
 ├── Dimitri Vegas
 │   └── Mammoth.mp3
 ├── DIOLI
@@ -4894,7 +4907,6 @@ Music
 │   ├── Never Had A Dream Come True.mp3
 │   ├──  One More Chance.mp3
 │   ├── One More Chance.mp3
-│   ├── playlist.m3u
 │   ├──  Reflections.mp3
 │   ├── Reflections.mp3
 │   ├──  Saturday Night At The Movies.mp3
@@ -5117,6 +5129,8 @@ Music
 │   └── Perfect Strangers.mp3
 ├── Jonathan Bree
 │   └── You're so Cool.mp3
+├── Jon Lajoie
+│   └── Everyday Normal Guy 2.mp3
 ├── Jorge Cafrune
 │   ├── Cuando Llegue el Alba.mp3
 │   ├── El Orejano.mp3
@@ -5570,7 +5584,9 @@ Music
 │   └── Lesson Of Love.mp3
 ├── L-Gante
 │   ├── Malianteo 420.lrc
-│   └── Malianteo 420.mp3
+│   ├── Malianteo 420.mp3
+│   ├── Malianteo 420 (Volumen 2).mp3
+│   └── Tinty Nasty.mp3
 ├── Liam Gallagher
 │   └── For What It's Worth.mp3
 ├── Liam Payne
@@ -5583,7 +5599,6 @@ Music
 ├── Lifehouse
 │   └── Everything.mp3
 ├── Life of Dillon
-│   ├── playlist.m3u
 │   ├── Sex for Breakfast.flac
 │   ├──  Sex for Breakfast.mp3
 │   └── Sex for Breakfast.mp3
@@ -5670,6 +5685,7 @@ Music
 ├── Lit Killah
 │   ├── Amor Ciego.mp3
 │   ├── Apaga el celular.mp3
+│   ├── My Bag.mp3
 │   └── Si Te Vas.mp3
 ├── LMFAO
 │   ├── Champagne Shower.mp3
@@ -6671,6 +6687,10 @@ Music
 ├── Paul Lewis
 │   └── Sonata No. 14 in C-Sharp Minor, Op. 27 No. 2 - _Moonlight Sonata__ I. Adagio sostenuto.mp3
 ├── Paulo Londra
+│   ├── Adan y Eva.mp3
+│   ├── Chica Paranormal.mp3
+│   ├── No Puedo.mp3
+│   ├── Por Eso Vine.mp3
 │   └── Tal Vez.mp3
 ├── Paul Young
 │   └── Everytime You Go Away.mp3
@@ -6844,9 +6864,72 @@ Music
 │   └── Turn Around (Part 2).mp3
 ├── Plain White T's
 │   └── Hey There Delilah.mp3
+├── Plasmatics
+│   ├── 10 - Country Fairs.mp3
+│   ├── 10 - Plasma Jam [Live Milan].mp3
+│   ├── 10 - Propagators.mp3
+│   ├── 10 - The Damned.mp3
+│   ├── 11 - A Pig Is A Pig.mp3
+│   ├── 11 - Pig Is A Pig.mp3
+│   ├── 11 - The Damned.mp3
+│   ├── 11 - The White's Bedroom _ Fire Escape.mp3
+│   ├── 12 - 12 Noon.mp3
+│   ├── 12 - Finale.mp3
+│   ├── 13 - Finale.mp3
+│   ├── 1 - Fuck That Booty.mp3
+│   ├── 1 - Incantation.mp3
+│   ├── 1 - Overture.mp3
+│   ├── 1 - Put Your Love In Me.mp3
+│   ├── 1 - The Doom Song.mp3
+│   ├── 2 - Bump And Grind.mp3
+│   ├── 2 - Masterplan.mp3
+│   ├── 2 - Stop.mp3
+│   ├── 2 - You're A Zombie.mp3
+│   ├── 3 - Brain Dead.mp3
+│   ├── 3 - Headbanger.mp3
+│   ├── 3 - Rock N Roll.mp3
+│   ├── 3 - Sex Junkie.mp3
+│   ├── 3 - The White's Apartment _ The Full-Meal Diner.mp3
+│   ├── 4 - Black Leather Monster.mp3
+│   ├── 4 - Just Like On TV.mp3
+│   ├── 4 - Masterplan.mp3
+│   ├── 4 - Summer Nite.mp3
+│   ├── 4 - The Day Of The Humans Is Gone.mp3
+│   ├── 5 - Jailbait.mp3
+│   ├── 5 - Just Like On TV.mp3
+│   ├── 5 - Nothing.mp3
+│   ├── 5 - The Central Research Laboratory _ Valerie And Bruce On The Phone.mp3
+│   ├── 5 - Uniformed Guards.mp3
+│   ├── 6 - Destroyers.mp3
+│   ├── 6 - Fast Food Service.mp3
+│   ├── 6 - No Class.mp3
+│   ├── 6 - Party.mp3
+│   ├── 6 - Propagators.mp3
+│   ├── 7 - Hitman [Live Milan].mp3
+│   ├── 7 - I Love Sex.mp3
+│   ├── 7 - Mistress Of Passion.mp3
+│   ├── 7 - The White's Apartment _ Bruce's Bedroom.mp3
+│   ├── 7 - Uniformed Guards.mp3
+│   ├── 8 - Brain Dead.mp3
+│   ├── 8 - Dream Lover.mp3
+│   ├── 8 - Lightning Breaks.mp3
+│   ├── 8 - Living Dead.mp3
+│   ├── 8 - Opus In Cm7.mp3
+│   ├── 9 - Lies.mp3
+│   ├── 9 - Path Of Glory.mp3
+│   ├── 9 - Sex Junkie.mp3
+│   ├── 9 - The Humpty Song.mp3
+│   ├── 9 - The White's Apartment _ Bruce's Bedroom (part 2).mp3
+│   ├── Just Like On TV.mp3
+│   ├── Mistress Of Passion.mp3
+│   ├── No Class.mp3
+│   ├── Path Of Glory.mp3
+│   └── The Damned.mp3
 ├── Playing For Change
 │   ├── Stand By Me.mp3
 │   └── War No More Trouble.mp3
+├── Playlists
+│   └── gayy.m3u
 ├── P.Lion
 │   └── Happy Children.mp3
 ├── Pocahontas
@@ -6963,6 +7046,8 @@ Music
 │   ├── Hollywood's Bleeding.mp3
 │   ├── I Fall Apart.mp3
 │   ├── I'm Gonna Be.mp3
+│   ├── Motley Crew.mp3
+│   ├── One Right Now.mp3
 │   ├── Otherside.mp3
 │   ├── Paranoid.mp3
 │   ├── Patient.mp3
@@ -7258,6 +7343,8 @@ Music
 │   └── ¿Y Si Hacemos Un Muneco_.mp3
 ├── Rosalía
 │   └── Con Altura.mp3
+├── ROSALÍA
+│   └── LA FAMA.mp3
 ├── Rosana
 │   ├── A Fuego Lento.mp3
 │   ├── En Las Calles De Madrid.mp3
@@ -7830,7 +7917,6 @@ Music
 │   ├── Closer.mp3
 │   ├── Don't Let Me Down.mp3
 │   ├── Inside Out.mp3
-│   ├── playlist.m3u
 │   ├── Roses.mp3
 │   ├── Selfie.mp3
 │   ├── Sick Boy.flac
@@ -7868,8 +7954,7 @@ Music
 │   ├── Despair_ Hangover & Ecstasy.mp3
 │   ├──  Miracles (Back in Time) [Live at l’Olympia_ Paris].mp3
 │   ├── Miracles (Back in Time) [Live at l’Olympia_ Paris].mp3
-│   ├── Miracles (Back in Time).mp3
-│   └── playlist.m3u
+│   └── Miracles (Back in Time).mp3
 ├── The Doors
 │   ├── Break On Through To The Other Side.mp3
 │   ├── Light My Fire.mp3
@@ -8108,7 +8193,8 @@ Music
 │   ├── We Don't Need Another Hero.mp3
 │   └── What's Love Got To Do With It.mp3
 ├── TINI
-│   └── 22.mp3
+│   ├── 22.mp3
+│   └── Bar.mp3
 ├── TJR
 │   └── Ode To Oi.mp3
 ├── Tobu
@@ -8292,6 +8378,8 @@ Music
 │   ├── Tanuki.mp3
 │   ├── Telepath.mp3
 │   └── Yeasayer.mp3
+├── Varios artistas
+│   └── Camara Lenta.mp3
 ├── Velcro
 │   └── Oxigeno.mp3
 ├── Venga boys
@@ -8322,6 +8410,7 @@ Music
 │   ├── Summer.mp3
 │   ├── Winter..mp3
 │   └── Winter.mp3
+├── Volumen X
 ├── Vulfpeck
 │   ├── 1612.mp3
 │   ├── Baby I Don’t Know Oh Oh (feat. Charles Jones).mp3
@@ -8404,16 +8493,28 @@ Music
 │   ├── ALGO DEL VACÍO.mp3
 │   ├── ALMA DINAMITA.mp3
 │   ├── ANDRÓMEDA.mp3
+│   ├── BUITRES.mp3
+│   ├── CAMBIANDO LA PIEL.mp3
 │   ├── CANGURO.mp3
+│   ├── CONTANDO OVEJAS.mp3
+│   ├── CULPA.mp3
 │   ├── FRESCO.mp3
+│   ├── GATO NEGRO.mp3
+│   ├── INTRODUCCIÓN AL ÉXTASIS.mp3
+│   ├── LLENO DE ZAFIROS.mp3
 │   ├── LUZ DELITO.mp3
 │   ├── MELÓN VINO.mp3
+│   ├── MIRÁ MAMÁ.mp3
+│   ├── MUGRE.mp3
+│   ├── NIÑO GORDO FLACO.mp3
 │   ├── NO VA A BAJAR.mp3
 │   ├── OJERAS NEGRAS.mp3
 │   ├── OKUPA.mp3
 │   ├── PANTANO.mp3
+│   ├── PARED DE CRISTAL.mp3
 │   ├── Protocolo (feat. Banzai FC).mp3
 │   ├── PURPURA.mp3
+│   ├── QUE SE MEJOREN.mp3
 │   └── TERRAZA.mp3
 ├── Xavier Dunn
 │   └── Fuckin' Problems.mp3
@@ -8507,4 +8608,4 @@ Music
     ├── Lowrider.mp3
     └── Sharp Dressed Man.mp3
 
-1398 directories, 7109 files
+1407 directories, 7201 files
