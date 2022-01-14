@@ -1,22 +1,23 @@
 #!/bin/bash
 
 dotfiles=(
+	pulseaudio
 	alacritty
+    keyboard
+    lemonbar
+	pcmanfm
+	zathura
+	ranger
 	bspwm
 	dunst
-	fzf
-	gtk
-	keyboard
-	lemonbar
+	sxhkd
+    rofi
+    tmux
+    cava
 	mocp
 	nvim
-	pcmanfm
-	pulseaudio
-	ranger
-	rofi
-	sxhkd
-	tmux
-	zathura
+	fzf
+	gtk
 	zsh
 )
 
