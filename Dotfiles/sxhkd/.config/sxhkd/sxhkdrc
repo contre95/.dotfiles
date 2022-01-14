@@ -105,7 +105,7 @@ super + alt + m
 super + alt + shift + m
     $SCR_PATH/audio-scr/mic-monitor.sh
 super + ctrl + m
-    pulseaudio-ctl mute-input
+    $SCR_PATH/audio-scr/mic-mute.sh
 super + ctrl + x
     $SCR_PATH/i3-scr/screen-snip.sh
 super + ctrl + p

@@ -1,4 +1,5 @@
 #!/usr/bin/zsh
+
 choices=" RSS\n Codelamp\nﳳ Pass\n Server\n Raspi\n Music\n Mac\n Android"
 var=$(echo -e $choices | dmenu -i -p "Exit menu: " -sb "#2f8a47" -fn "JetBrainsMono Nerd Font") 
 TMUX_SCRIPTS=/home/canus/Scripts/tmux-scr
@@ -11,7 +12,7 @@ case $var in
     exec alacritty -e "$TMUX_SCRIPTS/ims.sh";;
     
     ' Music')
-    exec alacritty -e "$TMUX_SCRIPTS/music.sh";;
+    exec alacritty -o font.offset.y=-1 -o font.offset.x=-1  -e "$TMUX_SCRIPTS/music.sh";;
 
     'ﳳ Pass')
     exec alacritty -e "$TMUX_SCRIPTS/pass.sh";;
