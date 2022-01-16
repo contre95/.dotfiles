@@ -38,8 +38,8 @@ nnoremap <C-Down> :m+<CR>
 nnoremap <C-Up> :m-2<CR>
 
 " Scroll like normal ide with Shift + Arrows
-map <S-A-Down> <C-E><C-E>
-map <S-A-Up> <C-Y><C-Y>
+map <A-Down> <C-E><C-E>
+map <A-Up> <C-Y><C-Y>
 
 "Copy current line with Ctrl+d
 nmap <C-d> mzyyp`z
