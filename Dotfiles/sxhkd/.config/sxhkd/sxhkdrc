@@ -41,23 +41,23 @@ super + shift + ctrl + {6,7,8,9,0}
 super + shift + {1-9}
     desk='^{1-9}' ; bspc node -d $desk; bspc desktop -f $desk
 # Iterate windows through desktops
-super + ctrl + shift + {Right,Left}
+super + ctrl + shift + {l,j}
     bspc node -d {next,prev} -f
 # Iterate through desktops
-super + ctrl + {Right,Left}
+super + ctrl + {l,j}
     bspc desktop -f {next,prev}
 
 # close focused window
 super + shift + q 
 	bspc node -c
 # focus the node in the given direction
-super + {_,shift + }{Left,Down,Up,Right}
+super + {_,shift + }{j,k,i,l}
 	bspc node -{f,s} {west,south,north,east}
 # set/toggle windows state
 super + {u,shift + u,shift+f,f}
     bspc node -t {\~tiled,\~pseudo_tiled,\~floating,\~fullscreen}
 # expand a window by moving one of its side outward
-super + r + {Left,Down,Up,Right}
+super + r + {j,k,i,l}
 	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
 
 # DMenu Scripts

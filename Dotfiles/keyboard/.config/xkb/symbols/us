@@ -19,7 +19,6 @@ xkb_symbols "basic" {
 
     key <AD01> {	[	  q,	Q 		]	};
     key <AD02> {	[	  w,	W		]	};
-    key <AD03> {	[	  e,	E		]	};
     key <AD04> {	[	  r,	R		]	};
     key <AD05> {	[	  t,	T		]	};
     key <AD06> {	[	  y,	Y		]	};
@@ -54,6 +53,7 @@ xkb_symbols "basic" {
     key <AB10> {	[     slash,	question	]	};
 
     key <BKSL> {	[ backslash,         bar	]	};
+
 };
 
 partial alphanumeric_keys
@@ -731,6 +731,13 @@ xkb_symbols "mac" {
     key <AB08> { [     comma,       less, lessthanequal,      dead_macron ] };
     key <AB09> { [    period,    greater, greaterthanequal,    dead_breve ] };
     key <AB10> { [     slash,   question,      division,     questiondown ] };
+
+    key <AC07> { [ j, J, Left, Left ] }; 
+    key <AC08> { [ k, K, Down, Down ] };
+    key <AD08> { [ i, I, Up, Up ] }; 
+    key <AC09> { [ l, L, Right, Right ] };
+
+    key <CAPS> { [ ISO_Level3_Shift ] };
 
     include "level3(ralt_switch)"
 
