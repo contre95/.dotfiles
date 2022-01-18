@@ -12,7 +12,7 @@ tabspaces: 4
 font:
   normal:
     family: JetBrainsMono Nerd Font
-  size: 11.0
+  size: 8.0
 
 window:
   padding:
