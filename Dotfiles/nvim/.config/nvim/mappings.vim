@@ -1,20 +1,3 @@
-"Shift selection
-imap <S>l <Esc>V<Right>
-imap <S>h <Esc>V<Left>
-imap <S>j <Esc>V<Down>
-nmap <S>l v<Right>
-vmap <S>l <Right>
-nmap <S>j V<Down>
-nmap <S>h v<Left>
-vmap <S>j <Down>
-vmap <S>l <Left>
-nmap <S>k V<Up>
-vmap <S>k <Up>
-nnoremap <C-S>l <Esc>v
-nnoremap <C-S>h <Esc>v
-nnoremap <C-S>j <Esc>v
-nnoremap <C-S>k <Esc>v
-
 imap <S-Right> <Esc>V<Right>
 imap <S-Left> <Esc>V<Left>
 imap <S-Down> <Esc>V<Down>
@@ -28,8 +11,6 @@ nmap <S-Up> V<Up>
 vmap <S-Up> <Up>
 nnoremap <C-S-Right> <Esc>v
 nnoremap <C-S-Left> <Esc>v
-nnoremap <C-S-Down> <Esc>v
-nnoremap <C-S-Up> <Esc>v
 
 " Move lines with Ctrl+arrow
 inoremap <C-Down> <Esc>:m+<CR>
@@ -37,25 +18,27 @@ noremap <C-Up> <Esc>:m-2<CR>
 nnoremap <C-Down> :m+<CR>
 nnoremap <C-Up> :m-2<CR>
 
-" Scroll like normal ide with Shift + Arrows
-map <A-Down> <C-E><C-E>
-map <A-Up> <C-Y><C-Y>
+" Scroll Alt + Shift + Arrows
+map <A-i> <C-E><C-E>
 
 "Copy current line with Ctrl+d
+map <A-k> <C-Y><C-Y>
 nmap <C-d> mzyyp`z
 
 "Copy current line to clipboard
-vmap <C-C> "+y
 vmap <C-X> "+x
+vmap <C-C> "+y
 
 " Move through words wit Crtl
 nnoremap <C-Right> e<Right>
 nnoremap <C-Left> b
 
 "Switch tabs with Crtl+Shift+arrows
+nmap <C-l> gt
+nmap <C-j> gT
 nmap <C-A-S-Right> gt
 nmap <C-A-S-Left> gT
- 
+
 " Open livedown with brave (npm install -g livedown)
 nnoremap <silent> <Leader>m :call jobstart(printf('livedown start %s --port 4242 --open --browser "brave --profile-directory="Contre" --app=http://localhost:4242"',@%),{'detach':1})<CR>
 
