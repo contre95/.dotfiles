@@ -19,10 +19,10 @@ nnoremap <C-Down> :m+<CR>
 nnoremap <C-Up> :m-2<CR>
 
 " Scroll Alt + Shift + Arrows
-map <A-i> <C-E><C-E>
+map <A-k> <C-E><C-E>
+map <A-i> <C-Y><C-Y>
 
 "Copy current line with Ctrl+d
-map <A-k> <C-Y><C-Y>
 nmap <C-d> mzyyp`z
 
 "Copy current line to clipboard
@@ -36,8 +36,8 @@ nnoremap <C-Left> b
 "Switch tabs with Crtl+Shift+arrows
 nmap <C-l> gt
 nmap <C-j> gT
-nmap <C-A-S-Right> gt
-nmap <C-A-S-Left> gT
+"nmap <C-A-S-Right> gt
+"nmap <C-A-S-Left> gT
 
 " Open livedown with brave (npm install -g livedown)
 nnoremap <silent> <Leader>m :call jobstart(printf('livedown start %s --port 4242 --open --browser "brave --profile-directory="Contre" --app=http://localhost:4242"',@%),{'detach':1})<CR>
