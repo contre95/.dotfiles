@@ -1,9 +1,9 @@
 #!/bin/zsh
 source ~/.zshrc
 SCR_PATH=$MY_FOLDER/Scripts
-choices="Any\nN26\nGalicia Contre\nMercadopago Contre\nGalicia Codelamp\nMercadopago Codelamp\nYoutube\nTwitter\nDeemix"
+choices="Any\nN26\nGalicia Contre\nMercadopago Contre\nGalicia Codelamp\nLichess\nMercadopago Codelamp\nYoutube\nTwitter\nDeemix"
 
-chosen=$(echo -e "$choices" | dmenu -i -p "Select Layout: " -sb "#FF5733")
+chosen=$(echo -e "$choices" | dmenu -i -p "Select Layout: " -sb "#8F7DAB")
 
 case "$chosen" in
 	"N26")
@@ -12,6 +12,8 @@ case "$chosen" in
         exec brave --profile-directory="Contre" --app=http://localhost:6595;;
 	"Youtube")
         exec brave --profile-directory="Contre" --app=https://youtube.com;;
+	"Lichess")
+        exec brave --profile-directory="Contre" --app=https://lichess.org;;
 	"Twitter")
         exec brave --profile-directory="Contre" --app=https://twitter.com;;
 	"Any")
