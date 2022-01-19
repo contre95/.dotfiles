@@ -63,7 +63,9 @@ super + r + {j,k,i,l}
 # DMenu Scripts
 # -------------------------------------
 super + x
-    import ~/Pictures/Screenshots/screenshot-`/bin/date +%Y%m%d-%H:%M:%S`.png
+    $SCR_PATH/dmenu-scr/x.sh
+super + shift + x
+    $SCR_PATH/x-scr/screeshot-clip.sh
 super + a
     $SCR_PATH/dmenu-scr/set-display.sh
 super + b
@@ -84,8 +86,6 @@ super + q
     tmux kill-server
 super + m
     $SCR_PATH/dmenu-scr/messages.sh
-super + shift + x
-    maim -s --format=png /dev/stdout | xclip -selection clipboard -t image/png -i
 super + ctrl + v
     clipmenu -sb "#57C1A0" -fn "JetBrainsMono Nerd Font"
 super + shift + p
