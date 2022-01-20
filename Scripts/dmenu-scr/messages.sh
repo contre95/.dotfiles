@@ -1,7 +1,7 @@
 #!/bin/bash
 
-choices=' Telegram\n Whatsapp\n Signal\nﭮ Discord\n Slack\n Hangouts\n Jitsi\n Gmail\n Messenger'
-var=$(echo -e $choices | dmenu -i -p "Exit menu: " -sb "#137aad" -fn "JetBrainsMono Nerd Font" ) 
+choices=' Telegram\n Whatsapp\n Meet\n Signal\nﭮ Discord\n Slack\n Hangouts\n Jitsi\n Gmail\n Messenger'
+var=$(echo -e "$choices" | dmenu -i -p "Exit menu: " -sb "#137aad" -fn "JetBrainsMono Nerd Font" ) 
 
 case $var in
     ' Whatsapp') 
@@ -12,8 +12,8 @@ case $var in
 
     ' Jitsi')
         URL="https://meet.jit.si/$(zenity --entry --text="Enter call name:")"
-        echo $URL | xclip -sel clip
-        exec brave --profile-directory="Contre" --app=$URL
+        echo "$URL" | xclip -sel clip
+        exec brave --profile-directory="Contre" --app="$URL"
         ;;
 
     ' Hangouts')
@@ -21,6 +21,9 @@ case $var in
 
     ' Messenger')
 	  brave --profile-directory="Contre" --app=https://messenger.com;;
+
+    ' Meet')
+	  brave --profile-directory="Contre" --app=https://meet.new ;;
     
     ' Gmail')
 	 brave --profile-directory="Contre" --app=https://gmail.com;;
