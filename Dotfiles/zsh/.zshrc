@@ -76,6 +76,7 @@ alias mf="cd $MY_FOLDER"
 alias xf="mpg123 --quiet $MY_FOLDER/Library/sounds/xfiles.mp3"
 alias docker="sudo docker"
 alias docker-compose="sudo docker-compose"
+alias k="kubectl"
 alias ct="mpg123 --quiet $MY_FOLDER/Library/sounds/ct.mp3"
 alias qn="mpg123 --quiet $MY_FOLDER/Library/sounds/quienteconoce.mp3"
 alias mi="mpg123 --quiet $MY_FOLDER/Library/sounds/monster_inc.mp3"
@@ -118,3 +119,4 @@ eval "$(pyenv init --path)"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 #[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+[[ /usr/bin/kubectl ]] && source <(kubectl completion zsh)

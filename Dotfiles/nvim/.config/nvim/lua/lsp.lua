@@ -37,6 +37,13 @@ local prettier = {
 	formatStdin = true,
 }
 
+-- Yaml linter -- cargo install stylua
+local yamllint = {
+	lintCommand = "yamllint --strict --format parsable ${INPUT}",
+    formatCommand = "prettier --parser yaml ${INPUT}",
+	lintStdin = true,
+}
+
 -- Lua linter -- cargo install stylua
 local luafmt = {
 	formatCommand = "stylua -s --stdin-filepath ${INPUT} -",
@@ -108,7 +115,7 @@ lspconfig.tsserver.setup({ capabilities = capabilities })
 local languages = {
 	typescript = { prettier, eslint },
 	javascript = { prettier, eslint },
-	yaml = { prettier },
+	yaml = { yamllint },
 	lua = { luafmt },
 	html = { prettier },
 	scss = { prettier },
@@ -134,8 +141,9 @@ lspconfig.efm.setup({
 		"html",
 		"javascript",
 		"bash",
-		"sh",
 		"yaml",
+		"yml",
+		"sh",
 		"zsh",
 		"lua",
 		"markdown",
