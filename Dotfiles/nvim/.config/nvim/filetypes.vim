@@ -8,7 +8,7 @@ autocmd InsertLeave,BufEnter,BufWinEnter,TabEnter,BufWritePost *.rs :lua require
 
 "Set Go
 autocmd BufWritePre *.go lua vim.lsp.buf.code_action({ source = { organizeImports = true } })
-autocmd BufWritePost * lua vim.lsp.buf.formatting()
+autocmd BufWritePost *.go lua vim.lsp.buf.formatting()
 "Set Markdown
 "-------------------------------------
 autocmd FileType markdown setlocal spell
