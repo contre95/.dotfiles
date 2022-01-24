@@ -21,29 +21,29 @@ bspc rule -a discord desktop='ﭮ'
 bspc rule -a 'meet.jit.si' desktop=''
 #### BSPWM configuration ####
 
-bspc config border_width 1
-#$SCR_PATH/bspwm-scr/borders.sh &
 bspc config window_gap 10
-bspc config -m DP-4 top_padding 0
-bspc config -m DP-2 top_padding 0
-bspc config bottom_padding 0
+bspc config border_width 1
 bspc config left_padding 0
 bspc config right_padding 0
-bspc config pointer_motion_interval 40
-bspc config single_monocle false
-bspc config click_to_focus true
+bspc config bottom_padding 0
 bspc config split_ratio 0.50
-bspc config borderless_monocle true
+bspc config click_to_focus true
 bspc config gapless_monocle true
-bspc config focus_by_distance true
-bspc config focus_follows_pointer true
-bspc config history_aware_focus true
-bspc config remove_disabled_monitors true
-bspc config merge_overlapping_monitors true
-bspc config pointer_modifier mod4
 bspc config pointer_action1 move
+bspc config single_monocle false
+#$SCR_PATH/bspwm-scr/borders.sh &
+bspc config -m DP-2 top_padding 0
+bspc config -m DP-4 top_padding 0
+bspc config pointer_modifier mod4
+bspc config focus_by_distance true
+bspc config borderless_monocle true
+bspc config history_aware_focus true
+bspc config focus_follows_pointer true
+bspc config pointer_motion_interval 40
 bspc config pointer_action2 resize_side
 bspc config pointer_action3 resize_corner
+bspc config remove_disabled_monitors true
+bspc config merge_overlapping_monitors true
 
 #### BSPWM coloring ####
 bspc config normal_border_color "#4c566a"
