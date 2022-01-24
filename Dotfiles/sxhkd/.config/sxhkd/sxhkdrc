@@ -25,7 +25,7 @@ super + shift + s
 super + g
     /usr/bin/brave --profile-directory="Contre"
 super + h
-    /usr/bin/brave --profile-directory="Meli"
+    /usr/bin/brave --profile-directory="Canus"
 
 # BSPWM hotkeys
 # -------------------------------------
