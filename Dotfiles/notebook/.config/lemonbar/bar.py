@@ -21,7 +21,7 @@ modules = (
     modules.Const(' | '),
     clock_modules.Clock(),
     modules.Const(' | '),
-    modules.Command(command=["/usr/bin/curl","ifconfig.io"], label="", errMsg="0.0.0.0"),
+    modules.Command(command=["/usr/bin/curl","--connect-timeout","3","ifconfig.io"], label="", errMsg="0.0.0.0"),
     modules.Const('%{r}'),
     bspwm_modules.Tags('eDP-1', include={"","ﭮ","","",""}),
     modules.Const(PADDING),
