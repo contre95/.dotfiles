@@ -39,7 +39,7 @@ local prettier = {
 
 -- Yaml linter -- cargo install stylua
 local yamllint = {
-	lintCommand = "yamllint --strict --format parsable ${INPUT}",
+	lintCommand = "yamllint --format parsable ${INPUT}",
     formatCommand = "prettier --parser yaml ${INPUT}",
 	lintStdin = true,
 }
