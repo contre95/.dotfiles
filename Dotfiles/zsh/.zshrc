@@ -29,8 +29,8 @@ antigen bundle autojump
 antigen theme romkatv/powerlevel10k
 antigen bundle common-aliases
 antigen bundle zsh-users/zsh-syntax-highlighting
-antigen bundle docker
-antigen bundle docker-compose
+#antigen bundle docker
+#antigen bundle docker-compose
 antigen bundle golang
 antigen bundle python
 antigen apply
@@ -74,9 +74,10 @@ export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
 ################################################################################################
 alias mf="cd $MY_FOLDER"
 alias xf="mpg123 --quiet $MY_FOLDER/Library/sounds/xfiles.mp3"
-alias docker="sudo docker"
-alias docker-compose="sudo docker-compose"
+#alias docker="sudo docker"
+#alias docker-compose="sudo docker-compose"
 alias k="kubectl"
+alias p="podman --remote"
 alias kx="kubectx"
 alias ks="kubens"
 alias ct="mpg123 --quiet $MY_FOLDER/Library/sounds/ct.mp3"
