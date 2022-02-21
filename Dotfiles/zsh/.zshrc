@@ -123,3 +123,4 @@ eval "$(pyenv init --path)"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 #[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 [[ /usr/bin/kubectl ]] && source <(kubectl completion zsh)
+export TERM=xterm-256color
