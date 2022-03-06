@@ -1,5 +1,5 @@
 #!/bin/zsh
-choices="sxhkd\nbspwm\nvimrc\nlemonbar\nBACKUP"
+choices="sxhkd\nbspwm\nvimrc\nlemonbar\nzsh\ntmux"
 var=$(echo -e $choices | dmenu -i -p "Audio Output" -sb "#40444B" -fn "JetBrainsMono Nerd Font") 
 TMUX_SCRIPTS=/home/canus/Scripts/tmux-scr
 
@@ -12,6 +12,10 @@ case $var in
     choice="$HOME/.config/sxhkd/sxhkdrc";;
     'lemonbar')
     choice="$HOME/.config/lemonbar/bar.py";;
+    'zsh')
+    choice="$HOME/.zshrc";;
+    'tmux')
+    choice="$HOME/.tmux.conf";;
 esac
 
 #if [[ ! "$choice" -eq "" ]];then
