@@ -7,7 +7,7 @@ super + shift + r
 super + Return
 	alacritty -e /bin/zsh -c "tmux -u new-session -A -s Main" 
 super + ctrl + Return
-    alacritty --option background_opacity=0.7 -e /bin/zsh -c "tmux -u new-session -A -s Transparent" 
+    alacritty --option window.opacity=0.7 -e /bin/zsh -c "tmux -u new-session -A -s Transparent" 
 
 # Audio
 # -------------------------------------
