@@ -7,7 +7,7 @@ git_bkp() {
     git pull &&
 	notify-send "$1" "updating.." -i "$MY_FOLDER"/Library/icons/git.png
 	if git add . && git commit -m "Update $(date +'%d-%m-%y')"; then
-		if git push 2> ~/err.log; then
+		if git push 2> /dev/null; then
 			notify-send "$1 updated" ":)" -i "$MY_FOLDER"/Library/icons/success.png
 		else
 			notify-send "Could not push" "$1" -i "$MY_FOLDER"/Library/icons/error.png
