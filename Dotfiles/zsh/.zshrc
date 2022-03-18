@@ -23,16 +23,16 @@ autoload -U compinit && compinit -u
 source ~/.zsh/antigen.zsh
 source ~/.zsh/.theme
 antigen use oh-my-zsh
-antigen bundle git
-antigen bundle zsh-users/zsh-autosuggestions
-antigen bundle autojump
 antigen theme romkatv/powerlevel10k
-antigen bundle common-aliases
-antigen bundle zsh-users/zsh-syntax-highlighting
-#antigen bundle docker
-#antigen bundle docker-compose
+antigen bundle git
 antigen bundle golang
-antigen bundle python
+antigen bundle zsh-users/zsh-autosuggestions
+antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle autojump
+#antigen bundle python
+#antigen bundle common-aliases
+##antigen bundle docker
+##antigen bundle docker-compose
 antigen apply
 
 ################################################################################################
