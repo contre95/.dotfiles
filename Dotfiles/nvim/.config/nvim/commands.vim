@@ -23,7 +23,7 @@ endfunction
 " awk '{ print length, $0 }' | sort -n | cut -d" " -f2-
 
 " I sincerely don't remember what this is for
-autocmd VimEnter * :silent exec "!kill -s SIGWINCH $PPID"
+"autocmd VimEnter * :silent exec "!kill -s SIGWINCH $PPID"
 
 
 " Share code

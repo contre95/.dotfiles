@@ -29,10 +29,10 @@ require("schlepp-config")
 require("colorscheme-config")
 
 -- Leader key
+vim.cmd 'colorscheme material'
 vim.g.mapleader = " "
 
 -- Color Scheme
-vim.cmd('colorscheme material')
 vim.g.material_style = "deep ocean"
 
 ---- Vim Imports
