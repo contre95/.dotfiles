@@ -79,6 +79,10 @@ imap <C-D> X<Esc>lbce
 "Find and Replace with Ctrl+r
 :map <C-r> :%s/
 
+" Encode/decode selected text in base64
+:vnoremap <leader>64 c<c-r>=system('base64 -w 0', @")<cr><esc>
+:vnoremap <leader>46 c<c-r>=system('base64 --decode', @")<cr><esc>
+
 "Switch buffers with Crtl+Atl+arrows
 nnoremap <silent> <C-A-Right> <C-w>l
 nnoremap <silent> <C-A-Left> <C-w>h 

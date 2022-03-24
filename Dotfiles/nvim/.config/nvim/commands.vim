@@ -25,8 +25,7 @@ endfunction
 " I sincerely don't remember what this is for
 "autocmd VimEnter * :silent exec "!kill -s SIGWINCH $PPID"
 
-
-" Share code
+" Share codae
 " Only Linux. For Mac, see: https://gist.github.com/shmup/db671132f0f9882187b28a677fa8df72 
 command! -range=% SP <line1>,<line2>w !curl -F 'sprunge=<-' http://sprunge.us | tr -d '\n' | xclip -i -selection clipboard
 command! -range=% CL <line1>,<line2>w !curl -F 'clbin=<-' https://clbin.com | tr -d '\n' | xclip -i -selection clipboard
