@@ -1,30 +1,61 @@
 ---
+## Colors
+colors:
+  primary:
+    background: "#121212"
+    foreground: "#bfc9db"
+  bright:
+    black: "#646a73"
+    red: "#cf6679"
+    green: "#a5d6a7"
+    yellow: "#ffecb3"
+    blue: "#90caf9"
+    magenta: "#bb86fc"
+    cyan: "#03dac6"
+    white: "#858893"
+  normal:
+    black: "#646a73"
+    red: "#cf6679"
+    green: "#a5d6a7"
+    yellow: "#fff59d"
+    blue: "#90caf9"
+    magenta: "#bb86fc"
+    cyan: "#03dac6"
+    white: "#ffffff"
+
+## env vars
 env:
   TERM: xterm-256color
 
-shell:
-  program: /bin/zsh
-  args:
-    - -l
-    - -c
-    - "tmux attach || tmux"
-
-tabspaces: 4
-font:
-  normal:
-    family: JetBrainsMono Nerd Font
-  size: 12.0
-
+## window settings
 window:
+  opacity: 1.0
   padding:
     x: 7
     y: 7
 
+# Class (window name)
+class:
+  instance: Alacritty
+  general: Alacritty
+
+# Scrolling
 scrolling:
   history: 10000
   multiplier: 3
-  auto_scroll: false
 
+# Visual
+visual_bell:
+  animation: EaseOutExpo
+  duration: 0.5
+  color: "#e4c9af"
+
+# Selection?
+selection:
+  semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
+  save_to_clipboard: true
+
+# Cursos
 cursor:
   style:
     shape: Beam
@@ -33,6 +64,49 @@ cursor:
   unfocused_hollow: true
   thickness: 0.15
 
-colors:
-  primary:
-    background: "#121212"
+# def Shell
+shell:
+program: /bin/zsh
+args:
+  - -l
+  - -c
+  - "tmux attach || tmux"
+
+## Font stuff
+tabspaces: 4
+font:
+  normal:
+    family: JetBrainsMono Nerd Font
+    style: Regular
+
+  bold:
+    family: JetBrainsMono Nerd Font
+    style: Bold
+
+  italic:
+    family: JetBrainsMono Nerd Font
+    style: Italic
+
+  bold_italic:
+    family: JetBrainsMono Nerd Font
+    style: Bold Italic
+
+  size: 12.0
+
+  offset:
+    x: 0
+    y: 0
+
+  glyph_offset:
+    x: 0
+    y: 0
+
+# Mouse
+mouse:
+  double_click: { threshold: 300 }
+  triple_click: { threshold: 300 }
+  hide_when_typing: true
+
+# Global Config
+live_config_reload: true
+draw_bold_text_with_bright_colors: true
