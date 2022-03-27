@@ -1,5 +1,5 @@
 #!/bin/zsh
-choices="sxhkd\nbspwm\nvimrc\nlemonbar\nzsh\ntmux"
+choices="sxhkd\nbspwm\nvimrc\nlemonbar\nzsh\ntmux\nalacritty"
 var=$(echo -e $choices | dmenu -i -p "Audio Output" -sb "#40444B" -fn "JetBrainsMono Nerd Font") 
 TMUX_SCRIPTS=/home/canus/Scripts/tmux-scr
 
@@ -12,6 +12,8 @@ case $var in
     choice="$HOME/.config/sxhkd/sxhkdrc";;
     'lemonbar')
     choice="$HOME/.config/lemonbar/bar.py";;
+    'alacritty')
+    choice="$HOME/.config/alacritty/alacritty.yml";;
     'zsh')
     choice="$HOME/.zshrc";;
     'tmux')
