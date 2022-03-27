@@ -19,6 +19,7 @@ dotfiles=(
 	fzf
 	gtk
 	zsh
+    mpd
 )
 
 for d in "${dotfiles[@]}"; do
