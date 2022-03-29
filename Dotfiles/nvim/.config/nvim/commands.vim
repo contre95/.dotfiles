@@ -22,8 +22,8 @@ endfunction
 "" Useless order
 " awk '{ print length, $0 }' | sort -n | cut -d" " -f2-
 
-" I sincerely don't remember what this is for
-"autocmd VimEnter * :silent exec "!kill -s SIGWINCH $PPID"
+" This is for vim buffer to not ocupy the total amount of the window
+autocmd VimEnter * :silent exec "!kill -s SIGWINCH $PPID"
 
 " Share codae
 " Only Linux. For Mac, see: https://gist.github.com/shmup/db671132f0f9882187b28a677fa8df72 
