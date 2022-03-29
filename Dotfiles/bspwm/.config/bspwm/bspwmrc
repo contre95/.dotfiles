@@ -20,6 +20,8 @@ bspc rule -a TelegramDesktop desktop=''
 bspc rule -a discord desktop='ﭮ'
 bspc rule -a Music desktop=''
 bspc rule -a 'meet.jit.si' desktop=''
+bspc rule -a Pavucontrol:pavucontrol state=floating center=true rectangle=1200x600+0+0
+
 #### BSPWM configuration ####
 
 bspc config window_gap 10
