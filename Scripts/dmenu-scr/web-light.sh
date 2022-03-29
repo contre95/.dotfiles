@@ -1,7 +1,7 @@
 #!/bin/zsh
 source ~/.zshrc
 SCR_PATH=$MY_FOLDER/Scripts
-choices="Any\nN26\nGalicia Contre\nMercadopago Contre\nGalicia Codelamp\nLichess\nMercadopago Codelamp\nYoutube\nTwitter\nDeemix"
+choices="Any\nN26\nGalicia Contre\nMercadopago Contre\nGalicia Codelamp\nLichess\nInstagram\nMercadopago Codelamp\nYoutube\nTwitter\nDeemix"
 
 chosen=$(echo -e "$choices" | dmenu -i -p "Select Layout: " -sb "#8F7DAB")
 
@@ -24,6 +24,8 @@ case "$chosen" in
         exec brave --profile-directory="Codelamp" --app=https://onlinebanking.bancogalicia.com.ar/login;;
 	"Mercadopago Contre")
         exec brave --profile-directory="Contre" --app=https://www.mercadopago.com.ar/home;;
+	"Instagram")
+        exec brave --profile-directory="Contre" --app=https://www.instagram.com;;
 	"Mercadopago Codelamp")
         exec brave --profile-directory="Codelamp" --app=https://www.mercadopago.com.ar/home;;
 esac
