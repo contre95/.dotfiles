@@ -10,9 +10,9 @@ ts_config.setup {
         "lua",
         "json",
         "python"
+    },
+    highlight = {
+        enable = true,
+--        use_languagetree = true
     }
-    --highlight = {
-        --enable = true,
-        --use_languagetree = true
-    --}
 }
