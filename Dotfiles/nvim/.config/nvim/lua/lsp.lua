@@ -125,13 +125,18 @@ local languages = {
 	zsh = { shell },
 }
 
+if vim.fn.has('macunix') then
+  efm_path = "/Users/lucascontreras/go/bin/efm-langserver"
+else
+  efm_path = "/home/contre/go/bin/efm-langserver"
+end
+
 lspconfig.efm.setup({
 	root_dir = lspconfig.util.root_pattern(".git", "/home/canus/Scripts", "/home/contre"),
 	filetypes = vim.tbl_keys(languages),
 	cmd = {
-		"/home/contre/go/bin/efm-langserver",
-		"-logfile",
-		"/home/contre/.cache/nvim/lsp.log",
+        efm_path,
+		"-logfile ~/.cache/nvim/lsp.log",
 		"-loglevel",
 		"5",
 	},
