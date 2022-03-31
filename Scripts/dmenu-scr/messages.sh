@@ -5,7 +5,7 @@ var=$(echo -e "$choices" | dmenu -i -p "Exit menu: " -sb "#137aad" -fn "JetBrain
 
 case $var in
     ' Whatsapp') 
-	  brave --profile-directory="Contre" --app=https://web.whatsapp.com;;
+	  brave --class=Whatsapp --profile-directory="Contre" --app=https://web.whatsapp.com;;
 
     'ﭮ Discord')
 	  exec 'discord';;
