@@ -101,7 +101,7 @@ lspconfig.terraformls.setup({
 
 -- SQL  -- go install github.com/lighttiger2505/sqls@latest
 lspconfig.sqls.setup({
-	-- cmd = { "/path/to/sqls", "-config", "$HOME/.config/sqls/config.yml" },
+    --cmd = { "/path/to/sqls", "-config", vim.loop.os_homedir()..".config/sqls/config.yml" },
 	capabilities = capabilities,
 	picker = "telescope",
 })
@@ -126,7 +126,7 @@ local languages = {
 }
 
 lspconfig.efm.setup({
-	root_dir = lspconfig.util.root_pattern(".git", "/home/canus/Scripts", "/home/contre"),
+	root_dir = lspconfig.util.root_pattern(".git", "/home/canus/Scripts", vim.loop.os_homedir()),
 	filetypes = vim.tbl_keys(languages),
 	cmd = {
          vim.loop.os_homedir() .. "/go/bin/efm-langserver",
