@@ -11,8 +11,6 @@ export LC_ALL=en_US.UTF-8
 ################################################################################################
 # Fuzzy Finder (aka FZF)
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-# The fuck (terminal typo fixer)
-eval $(thefuck --alias)
 # The next line enables autojump
 [[ -s $HOME/.cache/yay/autojump-git/pkg/autojump-git/etc/profile.d/autojump.sh ]] && source $HOME/.cache/yay/autojump-git/pkg/autojump-git/etc/profile.d/autojump.sh
 autoload -U compinit && compinit -u
@@ -56,11 +54,6 @@ if [[ -n $SSH_CONNECTION ]]; then
 else
 	export EDITOR='nvim'
 fi
-
-################################################################################################
-# SSH Configuration
-################################################################################################
-export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 ################################################################################################
 # SSH Configuration with GPG
@@ -122,5 +115,4 @@ eval "$(pyenv init --path)"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 #[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-[[ /usr/bin/kubectl ]] && source <(kubectl completion zsh)
 export TERM=xterm-256color
