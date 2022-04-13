@@ -1,7 +1,16 @@
 ################################################################################################
+# My folder
+################################################################################################
+if [[ `uname` == "Darwin" ]]; then
+  export MY_FOLDER="/Users/contre"
+else
+  export MY_FOLDER="/home/canus"
+fi
+
+################################################################################################
 # Env Variables
 ################################################################################################
-export MY_FOLDER="/home/canus"
+
 export PASSWORD_STORE_DIR=$MY_FOLDER/Pass
 export LANG="en_US.UTF-8"
 export LC_ALL=en_US.UTF-8
@@ -60,7 +69,7 @@ fi
 ################################################################################################
 #echo [KEYGRIP] >> ~/.gnupg/sshcontrol
 export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
-#gpgconf --launch gpg-agent
+gpgconf --launch gpg-agent
 
 ################################################################################################
 # Alias
@@ -103,10 +112,6 @@ setopt incappendhistory #Immediately append to the history file, not just when a
 ################################################################################################
 # Languae environments setup
 ################################################################################################
-#Node version manager (nvm)
-#export NVM_DIR="${XDG_CONFIG_HOME/:-$HOME/.}nvm"
-#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-#source ~/.nvm/nvm.sh
 # Python version manager (Pyenv)
 export BROWSER="brave"
 alias vim="nvim"
@@ -115,4 +120,3 @@ eval "$(pyenv init --path)"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 #[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-export TERM=xterm-256color
