@@ -377,6 +377,8 @@
 ├── Ariana Grande
 │   ├── 7 rings.mp3
 │   ├── Break Free.mp3
+│   ├── Daydreamin'.lrc
+│   ├── Daydreamin'.mp3
 │   ├── Focus.mp3
 │   ├── Love Me Harder.mp3
 │   ├── One Last Time.mp3
@@ -3173,6 +3175,7 @@
 ├── D.O.N.S
 │   ├── Drop The Gun.mp3
 │   └── Pump Up The Jam.mp3
+├── Doris
 ├── DR
 │   └── Around My Drean.mp3
 ├── Dragonforce
@@ -5545,6 +5548,23 @@
 │   └── El Chino.mp3
 ├── La Maquina De Hacer Pajaros
 │   └── No Te Dejes Desanimar.mp3
+├── La Maquina De Hacer Pájaros
+│   ├── 1 - Obertura 777 (Instrumental).mp3
+│   ├── 2 - Marilyn, La Cenicienta Y Las Mujeres.mp3
+│   ├── 3 - No Te Dejes Desanimar.mp3
+│   ├── 4 - Que Se Puede Hacer Salvo Ver Peliculas.mp3
+│   ├── 5 - Hipercandombe.mp3
+│   ├── 6 - Vendedor De Las Chicas De Plastico.mp3
+│   ├── 7 - Ruta Perdedora.mp3
+│   ├── 8 - En Las Calles De Costa Rica.mp3
+│   ├── Ah Te Vi Entre Las Luces.mp3
+│   ├── Boletos, Pases Y Abonos.mp3
+│   ├── Bubulina.mp3
+│   ├── Como Mata el Viento Norte.lrc
+│   ├── Como Mata el Viento Norte.mp3
+│   ├── No Puedo Verme Mas.mp3
+│   ├── Por Probar El Vino Y El Agua Salada.mp3
+│   └── Rock And Roll.mp3
 ├── Lana Del Rey
 │   ├── Because Of You.mp3
 │   ├── Blue Jeans.mp3
@@ -5573,6 +5593,8 @@
 │   ├── Lo Mas Lindo.mp3
 │   └── Princesa.mp3
 ├── Las Pelotas
+│   ├── Personalmente.lrc
+│   ├── Personalmente.mp3
 │   ├── Sera.mp3
 │   └── Siento Luego Existo.mp3
 ├── Laura Branigan
@@ -6130,6 +6152,9 @@
 ├── Maribou State
 │   ├── Midas (Glenn Astro’s Nonsense Dub).mp3
 │   └── Midas.mp3
+├── Mariya Takeuchi
+│   ├── Plastic Love.lrc
+│   └── Plastic Love.mp3
 ├── Marka Akme
 │   └── Linda.mp3
 ├── Mark Hinton Stewart
@@ -6654,6 +6679,7 @@
 │   └── These Boots Are Made for Walkin'.mp3
 ├── Nando Estevane
 ├── Natalia Oreiro
+│   └── Me Muero de Amor.mp3
 ├── Naughty Boy
 │   └── La La La.mp3
 ├── Nazareth
@@ -6926,6 +6952,7 @@
 │   └── Sonata No. 14 in C-Sharp Minor, Op. 27 No. 2 - _Moonlight Sonata__ I. Adagio sostenuto.mp3
 ├── Paulo Londra
 │   ├── Adan y Eva.mp3
+│   ├── Chance.mp3
 │   ├── Chica Paranormal.mp3
 │   ├── No Puedo.mp3
 │   ├── Plan A.mp3
@@ -7712,6 +7739,33 @@
 │   ├── Hold My Hand.mp3
 │   ├── Running Out Of Time.mp3
 │   └── Temperature.mp3
+├── Seatbelts
+│   ├── Ask DNA.mp3
+│   ├── Bad Dog No Biscuits.mp3
+│   ├── Car 24.mp3
+│   ├── Cat Blues.mp3
+│   ├── Cosmos.mp3
+│   ├── Digging My Potato.mp3
+│   ├── Diggin'.mp3
+│   ├── Don't Bother None (TV Edit).mp3
+│   ├── Felt Tip Pen.mp3
+│   ├── Gotta Knock a Little Harder.mp3
+│   ├── Memory.mp3
+│   ├── Papa Plastic.mp3
+│   ├── Piano Black.mp3
+│   ├── Pot City.mp3
+│   ├── Pushing the Sky.mp3
+│   ├── Rain.lrc
+│   ├── Rain.mp3
+│   ├── Rush.mp3
+│   ├── Space Lion.mp3
+│   ├── Spokey Dokey.mp3
+│   ├── Tank!.lrc
+│   ├── Tank!.mp3
+│   ├── The Egg and I.mp3
+│   ├── Too Good Too Bad.mp3
+│   ├── Waltz for Zizi.mp3
+│   └── What Planet Is This_!.mp3
 ├── Sebastian Yatra
 │   ├── Por Perro.mp3
 │   ├── Traicionera.mp3
@@ -8098,6 +8152,8 @@
 │   ├── Dreamer.mp3
 │   ├── OneNote Table Of Contents.onetoc2
 │   └── The Logical Song.mp3
+├── Surfistas Del Sistema
+│   └── La magia esta en tu piel.mp3
 ├── Suzanne Vega
 │   └── Luka.mp3
 ├── Swedish House Mafia
@@ -8678,14 +8734,22 @@
 ├── Varios artistas
 │   └── Camara Lenta.mp3
 ├── Various Artists
+│   ├── Call Me Call Me.mp3
+│   ├── Don't Bother None.mp3
+│   ├── ELM.mp3
 │   ├── En La Cama O En El Suelo.mp3
 │   ├── Lamento Boliviano.mp3
+│   ├── Live in Baghdad.mp3
 │   ├── Lunes Por La Madrugada.mp3
 │   ├── Mil Horas.mp3
+│   ├── Mushroom Hunting.mp3
 │   ├── Profundidad.mp3
+│   ├── See You Space Cowboys Not Final Mountain Root.mp3
 │   ├── Sin Gamulán.mp3
 │   ├── Tan Enamorados.mp3
-│   └── Tristeza De La Ciudad.mp3
+│   ├── The Real Folk Blues.mp3
+│   ├── Tristeza De La Ciudad.mp3
+│   └── Want It All Back.mp3
 ├── Velcro
 │   └── Oxigeno.mp3
 ├── Venga boys
@@ -8805,6 +8869,7 @@
 │   ├── ALGO DEL VACÍO.mp3
 │   ├── ALMA DINAMITA.mp3
 │   ├── ANDRÓMEDA.mp3
+│   ├── ARRANCARMELO.mp3
 │   ├── BUITRES.mp3
 │   ├── CAMBIANDO LA PIEL.mp3
 │   ├── CANGURO.mp3
@@ -8923,4 +8988,4 @@
     ├── Tush.lrc
     └── Tush.mp3
 
-1464 directories, 7459 files
+1469 directories, 7519 files

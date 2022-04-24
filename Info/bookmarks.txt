@@ -1,0 +1,3 @@
+Google    - https://google.com
+Drive     - http://drive.google.com
+Photos    - http://photos.google.com
