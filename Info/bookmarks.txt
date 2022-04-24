@@ -1,3 +1,10 @@
 Google    - https://google.com
 Drive     - http://drive.google.com
+Reddit    - https://www.reddit.com
 Photos    - http://photos.google.com
+Youtube   - http://youtube.com
+Gmail     - http://gmail.com
+Outlook   - https://outlook.live.com
+1337x     - https://www.1377x.to/
+Instagram - https://www.instagram.com
+
