@@ -27,7 +27,7 @@ super + shift + s
 super + g
     /usr/bin/brave --profile-directory="Contre"
 super + shift + b
-    /usr/bin/brave $($MY_FOLDER/Scripts/dmenu-scr/picker.sh $MY_FOLDER/Info/bookmarks.txt)
+    /usr/bin/brave --profile-directory="Contre" $($MY_FOLDER/Scripts/dmenu-scr/picker.sh $MY_FOLDER/Info/bookmarks.txt)
 #super + h
 #    /usr/bin/brave --profile-directory="Canus"
 
