@@ -9,6 +9,7 @@ nitrogen --restore &
 clipmenud &
 bluetoothctl power on &
 setxkbmap -layout us -variant mac &
+/home/canus/Scripts/backup-scr/b4sd.sh 
 #nvidia-settings -a "[gpu:0]/GPUFanControlState=1" -a "[fan:0]/GPUTargetFanSpeed=50" -a "[fan:1]/GPUTargetFanSpeed=50"
 
 #### MONITORS ####
