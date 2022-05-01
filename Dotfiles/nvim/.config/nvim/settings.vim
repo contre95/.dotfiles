@@ -13,7 +13,7 @@ set encoding=utf-8
 set relativenumber
 set softtabstop=2
 set tabpagemax=2
-set laststatus=2
+set laststatus=3
 set shiftwidth=2
 set spelllang=en
 "set cursorcolumn
