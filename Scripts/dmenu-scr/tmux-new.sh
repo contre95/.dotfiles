@@ -12,7 +12,7 @@ case $var in
     #exec alacritty -e "$TMUX_SCRIPTS/ims.sh";;
     
     ' Music')
-    exec alacritty -o font.offset.y=-1 -o font.offset.x=-1 --class music,Music -e "$TMUX_SCRIPTS/music.sh";;
+    exec alacritty -o font.offset.y=-1 -o font.offset.x=-1 --option window.opacity=0.7 --class music,Music -e "$TMUX_SCRIPTS/music.sh";;
 
     'ﳳ Pass')
     exec alacritty -e "$TMUX_SCRIPTS/pass.sh";;
