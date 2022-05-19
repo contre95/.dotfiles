@@ -437,6 +437,8 @@
 │   ├── Resistire.mp3
 │   ├── Soy Rebelde.mp3
 │   └── Yo Te Amo.mp3
+├── Attaque 77
+│   └── Western.mp3
 ├── Audacity of huge
 │   └── Simian Mobile Disco.mp3
 ├── Audio Slave
@@ -519,6 +521,8 @@
 │   └── Tu Amor Por Siempre.mp3
 ├── Baauer
 │   └── Harlem Shake.mp3
+├── Babasonicos
+│   └── Carismático.mp3
 ├── Babasónicos
 │   ├── Deshoras.mp3
 │   ├── El Loco.mp3
@@ -1753,6 +1757,8 @@
 │   ├── Foolish Beat.mp3
 │   ├── Lost In Your Eyes.mp3
 │   └── Only In My Dreams.mp3
+├── Decisive Koala
+│   └── Celestial.mp3
 ├── Deep Pourple
 │   ├── Burn.mp3
 │   ├── Highway Star.mp3
@@ -3485,6 +3491,8 @@
 │   ├── Suspicious Minds.mp3
 │   ├── Unchained Melody.mp3
 │   └── You Were Always On My Mind.mp3
+├── Emil Rottmayer
+│   └── Mega (Bonus Track).mp3
 ├── Eminem
 │   ├── 8 Mile.mp3
 │   ├── Ass Like That.mp3
@@ -3713,6 +3721,16 @@
 │   ├── International Love.mp3
 │   ├── Luz Y Compania.mp3
 │   └── Te Robaste Mi Corazon.mp3
+├── Fideos con Tuco
+│   ├── 1 - Pesto.mp3
+│   ├── 2 - Farinata.mp3
+│   ├── 3 - Bolognesa.mp3
+│   ├── 4 - Caruso.mp3
+│   ├── 5 - Folklore.mp3
+│   ├── 6 - Barro.mp3
+│   ├── 7 - Siete.mp3
+│   ├── 8 - Bechamel, Pt. 1.mp3
+│   └── 9 - Parisien.mp3
 ├── Finatticz
 │   └── Don't Drop That Thun Thun.mp3
 ├── Finley Quaye
@@ -5496,12 +5514,17 @@
 ├── Knife Party
 │   ├── Bonfire.mp3
 │   └── Internet Friends.mp3
+├── Kódigo
+│   └── Diririri.mp3
 ├── Kokoroko
 │   └── Abusey Junction.mp3
 ├── Kool and The gang
 │   ├── Fresh.mp3
 │   ├── Get Down On It.mp3
 │   └── Ladies Night.mp3
+├── Krosia
+│   ├── Dive.mp3
+│   └── Mimosa.mp3
 ├── Kungs vs Cookin’ on 3 Burners
 │   └── This Girl.mp3
 ├── Kygo
@@ -7625,6 +7648,8 @@
 │   ├── My Cherie Amour .mp3
 │   ├── Some Guys Have All The Luck.mp3
 │   └── When A Man Loves A Woman.mp3
+├── Rogue VHS
+│   └── Golden Age.mp3
 ├── Roman Fluge
 │   └── Gets Notch.mp3
 ├── Rombai
@@ -8361,6 +8386,8 @@
 │   └── Love's A Game.mp3
 ├── The Masks
 │   └── Say Goodbye.mp3
+├── The Midnight
+│   └── Memories.mp3
 ├── The Mother Hips
 │   └── Time We Had.mp3
 ├── The Neighbourhood
@@ -8620,6 +8647,7 @@
 │   ├── Kurt Cobain).mp3
 │   ├── Loco Un Poco.mp3
 │   ├── Magia Blanca.mp3
+│   ├── No Se Llama Amor.mp3
 │   ├── Pasos Al Costado.mp3
 │   └── Yo Soy Así.mp3
 ├── Twenty one pilots
@@ -8694,6 +8722,8 @@
 │   ├── Sunshine Reggae.mp3
 │   └── The Way You Do The The Things.mp3
 ├── Ulises Bueno
+├── Unfound
+│   └── Home.mp3
 ├── Unknown Mortal Orchestra
 │   └── Hunnybee.mp3
 ├── Upgrade
@@ -8781,6 +8811,9 @@
 │   ├── Winter..mp3
 │   └── Winter.mp3
 ├── Volumen X
+├── Voyage
+│   ├── Allude.mp3
+│   └── Enter.mp3
 ├── Vulfpeck
 │   ├── 1612.mp3
 │   ├── Baby I Don’t Know Oh Oh (feat. Charles Jones).mp3
@@ -8988,4 +9021,4 @@
     ├── Tush.lrc
     └── Tush.mp3
 
-1469 directories, 7519 files
+1480 directories, 7541 files
