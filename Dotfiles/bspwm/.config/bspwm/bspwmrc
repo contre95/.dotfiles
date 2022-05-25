@@ -9,7 +9,7 @@ nitrogen --restore &
 clipmenud &
 bluetoothctl power on &
 setxkbmap -layout us -variant mac &
-#nvidia-settings -a "[gpu:0]/GPUFanControlState=1" -a "[fan:0]/GPUTargetFanSpeed=50" -a "[fan:1]/GPUTargetFanSpeed=50"
+nvidia-settings -a "[gpu:0]/GPUFanControlState=1" -a "[fan:0]/GPUTargetFanSpeed=10" -a "[fan:1]/GPUTargetFanSpeed=10"
 
 #### MONITORS ####
 bspc monitor DP-2 -d 1 2 3 4 5
