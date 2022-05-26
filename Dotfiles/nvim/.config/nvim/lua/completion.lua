@@ -11,7 +11,8 @@ end
 local cmp = require'cmp'
 local lspkind = require('lspkind')
 cmp.setup({
-
+    
+  -- Mapping
     mapping = {
       ['<CR>'] = cmp.mapping.confirm({
         behavior = cmp.ConfirmBehavior.Replace,
@@ -38,12 +39,18 @@ cmp.setup({
             end
       end, { "i", "s" }),
     },
+    -- Windows
+     window = {
+       completion = cmp.config.window.bordered(),
+       documentation = cmp.config.window.bordered(),
+    },
 
+    -- Sources
     sources =  cmp.config.sources({
-      { name = 'nvim_lsp' },
-      { name = 'vsnip' },
       { name = 'path' },
-      { name = 'buffer', keyword_length = 3, }
+      { name = 'vsnip' },
+      { name = 'nvim_lsp' },
+      { name = 'buffer', keyword_length = 3, },
     }),
 
     snippet = {
@@ -74,17 +81,17 @@ cmp.setup({
 })
 
  -- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
- cmp.setup.cmdline(":", {
-  sources = cmp.config.sources({
-    {
-      name = "path",
-    },
-  }, {
-    {
-      name = "cmdline",
-      max_item_count = 20,
-      keyword_length = 3,
-    },
-  }),
-})
+ --cmp.setup.cmdline(":", {
+  --sources = cmp.config.sources({
+    --{
+      --name = "path",
+    --},
+  --}, {
+    --{
+      --name = "cmdline",
+      --max_item_count = 20,
+      --keyword_length = 3,
+    --},
+  --}),
+--})
 

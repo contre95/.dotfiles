@@ -47,8 +47,8 @@ nmap <silent> <leader>n :lua require('material.functions').toggle_style()<CR>
 
 "NerdCommenter (scrooloose/nerdcommenter)
 "-------------------------------------
-nmap <C-_> <Plug>NERDCommenterToggle <Down>
-vmap <C-_> <Plug>NERDCommenterToggle<CR>gv
+nmap <C-]> <Plug>NERDCommenterToggle <Down>
+vmap <C-]> <Plug>NERDCommenterToggle<CR>gv
 
 "Schleep indention
 "-------------------------------------
