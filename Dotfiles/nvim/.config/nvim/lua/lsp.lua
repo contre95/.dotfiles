@@ -4,20 +4,25 @@ lsp_status.register_progress()
 local capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities())
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 
-vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
-	virtual_text = {
-		prefix = " ",
-		spacing = 0,
-	},
-	signs = true,
-	--update_in_insert = true,
-})
--- Diagnosticis Signs
+-- LSP settings (for overriding per client)
 local signs = { Error = "❌", Warn = " ", Hint = " ", Info = " " }
 for type, icon in pairs(signs) do
 	local hl = "DiagnosticSign" .. type
 	vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
 end
+
+
+-- Diagnosticis Signs
+vim.diagnostic.config({
+  virtual_text = {
+    prefix = " ",
+    spacing = 0,
+    },
+  signs = true,
+  underline = true,
+  update_in_insert = false,
+  severity_sort = false,
+})
 
 -- Linters and Prettiers
 -----------------------------
@@ -83,7 +88,7 @@ lspconfig.rust_analyzer.setup({
 })
 
 -- Python
-lspconfig.pyright.setup({ capabilities = capabilities })
+lspconfig.pyright.setup({ capabilities = capabilities, handlers = handlers})
 
 -- Golang
 lspconfig.gopls.setup({ capabilities = capabilities })
@@ -103,7 +108,6 @@ lspconfig.terraformls.setup({
 lspconfig.sqls.setup({
     --cmd = { "/path/to/sqls", "-config", vim.loop.os_homedir()..".config/sqls/config.yml" },
 	capabilities = capabilities,
-	picker = "telescope",
 })
 
 -- Typescript
