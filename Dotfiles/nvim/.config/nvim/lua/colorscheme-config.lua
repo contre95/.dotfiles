@@ -43,7 +43,8 @@ require("material").setup({
 
     custom_highlights = {
 
-       NormalFloat = { bg = colors.selection , fg = colors.white}, 
+       --NormalFloat = { bg = '#1f252e', fg = colors.white}, 
+       FloatBorder  = { bg = colors.none, fg = colors.white}, 
 
        --- Common
        --Identifier = { fg = colors.cyan },
