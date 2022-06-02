@@ -45,6 +45,7 @@ require("material").setup({
 
        --NormalFloat = { bg = '#1f252e', fg = colors.white}, 
        FloatBorder  = { bg = colors.none, fg = colors.white}, 
+       Visual = { bg = "#6a798a", fg = colors.white}, 
 
        --- Common
        --Identifier = { fg = colors.cyan },
