@@ -24,7 +24,10 @@ super + shift + s
 
 # Browser
 # -------------------------------------
+
 super + g
+    /usr/bin/librewolf
+super + shift + g
     /usr/bin/brave --profile-directory="Contre"
 super + shift + b
     /usr/bin/brave --profile-directory="Contre" $($MY_FOLDER/Scripts/dmenu-scr/picker.sh $MY_FOLDER/Info/bookmarks.txt)
