@@ -113,7 +113,7 @@ setopt incappendhistory #Immediately append to the history file, not just when a
 # Languae environments setup
 ################################################################################################
 # Python version manager (Pyenv)
-export BROWSER="brave"
+export BROWSER="librewolf"
 alias vim="nvim"
 alias tf="terraform"
 eval "$(pyenv init --path)"
