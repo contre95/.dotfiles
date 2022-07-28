@@ -23,9 +23,6 @@ function LetMeSee()
     highlight Normal guibg=NONE
 endfunction
 
-" This is for vim buffer to not ocupy the total amount of the window
-autocmd VimEnter * :silent exec "!kill -s SIGWINCH $PPID"
-
 " Share codae
 " Only Linux. For Mac, see: https://gist.github.com/shmup/db671132f0f9882187b28a677fa8df72 
 command! -range=% SP <line1>,<line2>w !curl -F 'sprunge=<-' http://sprunge.us | tr -d '\n' | xclip -i -selection clipboard
