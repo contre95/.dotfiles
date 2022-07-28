@@ -96,6 +96,14 @@ local shell = {
 -- Json
 lspconfig.jsonls.setup({ capabilities = capabilities })
 
+-- Lua 
+
+require'lspconfig'.sumneko_lua.setup {
+    settings = {
+        -- Settings go here!
+    }
+}
+
 -- Rust
 require("lsp_extensions").inlay_hints()
 lspconfig.rust_analyzer.setup({
