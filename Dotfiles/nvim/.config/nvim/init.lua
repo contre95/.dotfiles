@@ -39,6 +39,6 @@ vim.g.material_style = "deep ocean"
 vim.cmd("so ~/.config/nvim/settings.vim")
 vim.cmd("so ~/.config/nvim/mappings.vim")
 vim.cmd("so ~/.config/nvim/commands.vim")
-vim.cmd("so ~/.config/nvim/filetypes.vim")
+vim.cmd("so ~/.config/nvim/autocomands.vim")
 vim.cmd("so ~/.config/nvim/misc.vim")
 
