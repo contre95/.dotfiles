@@ -48,9 +48,8 @@ vim.diagnostic.config({
   severity_sort = false,
 })
 
--- Linters and Prettiers
+-- Linters, Prettiers and Checkers for EFM
 -----------------------------
-
 -- ES Linter -- npm i -g eslint_d
 local eslint = {
   lintCommand = "eslint_d -f visualstudio --stdin --stdin-filename ${INPUT}",
@@ -130,7 +129,11 @@ lspconfig.pyright.setup({ capabilities = capabilities, handlers = handlers })
 lspconfig.gopls.setup({ capabilities = capabilities })
 
 -- Terraform
-lspconfig.tflint.setup({})
+
+lspconfig.tflint.setup({
+  flags = { debounce_text_changes = 150 },
+})
+
 lspconfig.terraformls.setup({
   capabilities = capabilities,
   on_attach = function(client)

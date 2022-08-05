@@ -1,4 +1,4 @@
-" Lsp
+"  ------------ Lsp
 command! -nargs=0 Def lua vim.lsp.buf.definition()
 command! -nargs=0 Fmt lua vim.lsp.buf.formatting()
 command! -nargs=0 Imp lua vim.lsp.buf.implementation()
@@ -9,11 +9,19 @@ command! -nargs=0 CodeAction lua vim.lsp.buf.code_action()
 command! -nargs=0 Rename lua vim.lsp.buf.rename()
 command! -nargs=0 SignatureHelp lua vim.lsp.buf.signature_help()
 command! -nargs=0 LspLog lua vim.cmd('sp'..vim.lsp.get_log_path())
+
+
+"  ------------ Language specific
+
+" Tfsc check
+command! -nargs=0 Tfsec vsplit term:// tfsec %:p:h
+
+" Rust comments hints
 "autocmd CursorMoved,InsertLeave,BufEnter,BufWinEnter,TabEnter,BufWritePost *.rs lua require'lsp_extensions'.inlay_hints{ prefix = '>', highlight = "Comment", enabled = {"TypeHint", "ChainingHint", "ParameterHint"} }
 
-" Misc
+"  ------------ Misc
 
-"" Length order
+"" Order lines by lenght
 command! -range SortLen <line1>,<line2> !awk '{ print length(), $0 | "sort -n | cut -d\\  -f2-" }'
 
 "" Transparent
