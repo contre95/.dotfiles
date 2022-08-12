@@ -68,7 +68,7 @@ local prettier = {
 -- Yaml linter -- brew install yamllint
 local yamllint = {
   lintCommand = "yamllint --format parsable ${INPUT}",
-  formatCommand = "prettier --parser yaml ${INPUT}",
+  formatCommand = "prettier --parser yaml --no-bracket-spacing ${INPUT}",
   lintStdin = true,
 }
 
