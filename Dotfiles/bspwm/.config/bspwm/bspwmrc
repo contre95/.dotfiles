@@ -5,7 +5,8 @@ export SCR_PATH=$MY_FOLDER/Scripts
 #### AUTOSTART ####
 sxhkd &
 picom &
-nitrogen --restore &
+#nitrogen --restore &
+/usr/bin/feh --randomize --bg-fill "/home/contre/Pictures/Wallpapers/random/3" &
 clipmenud &
 bluetoothctl power on &
 setxkbmap -layout us -variant mac &

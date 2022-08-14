@@ -1,6 +1,8 @@
 ## make sxhkd reload its configuration files:
 super + shift + r
-    pkill -USR1 -x sxhkd && pkill -x lemonbar && python3 "$HOME/.config/lemonbar/bar.py" &
+    pkill -USR1 -x sxhkd && \
+    pkill -x lemonbar && \
+    python3 "$HOME/.config/lemonbar/bar.py" &
 
 # Terminal emulator
 # -------------------------------------
@@ -8,6 +10,10 @@ super + Return
 	alacritty -e /bin/zsh -c "tmux -u new-session -A -s Main" 
 super + ctrl + Return
     alacritty --option window.opacity=0.7 -e /bin/zsh -c "tmux -u new-session -A -s Transparent" 
+
+# Change wallpaper
+super + shift + w
+    /usr/bin/feh --randomize --bg-fill /home/contre/Pictures/Wallpapers/random/3 &
 
 # Audio
 # -------------------------------------
