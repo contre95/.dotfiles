@@ -82,7 +82,8 @@ super + w
 super + shift + i
     $SCR_PATH/dmenu-scr/social.sh
 super +  d
-    rofi -no-lazy-grab -show drun -modi drun -theme ~/.config/rofi/style.rasi
+    rofi -show drun -theme ~/.config/rofi/style-7.rasi
+    #/home/contre/.config/rofi/launchers/type-6/launcher.sh
 super + shift + d
     $SCR_PATH/dmenu-scr/dotfiles.sh 
 super + p
