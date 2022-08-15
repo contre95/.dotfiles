@@ -2,7 +2,7 @@
 # Alcritty colors
 colors:
   primary:
-    background: "#191919"
+    background: "#151515"
     foreground: "#bfc9db"
   cursor:
     text: CellForeground
