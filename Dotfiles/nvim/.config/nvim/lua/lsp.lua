@@ -12,6 +12,11 @@ for type, icon in pairs(signs) do
 end
 
 
+-- General attachment callback funtion
+
+local on_attach = function(client)
+end
+
 -- Diagnosticis Signs
 local border = {
   { "╭", "FloatBorder" },
@@ -109,8 +114,8 @@ require 'lspconfig'.sumneko_lua.setup {
 }
 
 -- Rust
-require("lsp_extensions").inlay_hints()
 lspconfig.rust_analyzer.setup({
+  on_attach = on_attach,
   capabilities = capabilities,
   filetypes = { "rs", "rust" },
   settings = {
@@ -118,8 +123,22 @@ lspconfig.rust_analyzer.setup({
       checkOnSave = {
         command = "clippy",
       },
-    },
-  },
+      imports = {
+        granularity = {
+          group = "module",
+        },
+        prefix = "self",
+      },
+      cargo = {
+        buildScripts = {
+          enable = true,
+        },
+      },
+      procMacro = {
+        enable = true
+      },
+    }
+  }
 })
 
 -- Python
