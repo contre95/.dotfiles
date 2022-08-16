@@ -20,6 +20,8 @@ local use = packer.use
 return require("packer").startup(function()
 	use("wbthomason/packer.nvim")
 	use("marko-cerovac/material.nvim")
+	use("rktjmp/lush.nvim")
+	use("metalelf0/jellybeans-nvim")
 	use("nvim-treesitter/nvim-treesitter")
 	use({
 		"nvim-lualine/lualine.nvim",
