@@ -13,7 +13,7 @@ super + ctrl + Return
 
 # Change wallpaper
 super + shift + w
-    /usr/bin/feh --randomize --bg-fill /home/contre/Pictures/Wallpapers/random/3 &
+    /usr/bin/feh --randomize --bg-fill /home/contre/Pictures/Wallpapers/3840x1200/ &
 
 # Audio
 # -------------------------------------
