@@ -5,15 +5,15 @@ export SCR_PATH=$MY_FOLDER/Scripts
 #### AUTOSTART ####
 sxhkd &
 picom &
-#nitrogen --restore &
-/usr/bin/feh --randomize --bg-fill "/home/contre/Pictures/Wallpapers/random/3" &
+nitrogen --restore &
+#/usr/bin/feh --randomize --bg-fill "/home/contre/Pictures/Wallpapers/random/3" &
 clipmenud &
 bluetoothctl power on &
 setxkbmap -layout us -variant mac &
 nvidia-settings -a "[gpu:0]/GPUFanControlState=1" -a "[fan:0]/GPUTargetFanSpeed=10" -a "[fan:1]/GPUTargetFanSpeed=10"
 
 #### MONITORS ####
-bspc monitor DP-2 -d 1 2 3 4 5
+bspc monitor HDMI-0 -d 1 2 3 4 5
 bspc monitor DP-4 -d 6 7 8 9 ﭮ    
 
 #### BSPWM rules ####
@@ -38,7 +38,7 @@ bspc config gapless_monocle true
 bspc config pointer_action1 move
 bspc config single_monocle false
 #$SCR_PATH/bspwm-scr/borders.sh &
-bspc config -m DP-2 top_padding 0
+bspc config -m HDMI-0 top_padding 0
 bspc config -m DP-4 top_padding 0
 bspc config pointer_modifier mod4
 bspc config focus_by_distance true
