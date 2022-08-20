@@ -22,7 +22,7 @@ case "$chosen" in
 	exec brave --profile-directory="Contre" --app=https://twitter.com
 	;;
 "Any")
-	exec brave --profile-directory="Contre" --app=https://$(zenity --entry --text="Website  :")
+	exec brave --app=https://$(zenity --entry --text="Website  :")
 	;;
 "Galicia Contre")
 	exec brave --profile-directory="Contre" --app=https://onlinebanking.bancogalicia.com.ar/login
