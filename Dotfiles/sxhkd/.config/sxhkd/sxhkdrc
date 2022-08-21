@@ -78,7 +78,7 @@ super + r + {j,k,i,l}
 super + x
     $SCR_PATH/dmenu-scr/x.sh
 super + shift + x
-    $SCR_PATH/x-scr/screeshot-clip.sh
+    $SCR_PATH/x-scr/screenshot-clip.sh
 super + a
     $SCR_PATH/dmenu-scr/set-display.sh
 super + b
@@ -120,8 +120,6 @@ super + alt + shift + m
     $SCR_PATH/audio-scr/mic-monitor.sh
 super + ctrl + m
     $SCR_PATH/audio-scr/mic-mute.sh
-super + ctrl + x
-    $SCR_PATH/i3-scr/screen-snip.sh
 super + ctrl + p
     PASSWORD_STORE_DIR=$MY_FOLDER/Pass passmenu --type -i -p "Pass  : " "$@" -sb "#34495E" -fn "JetBrainsMono Nerd Font"
 super + ctrl + o
