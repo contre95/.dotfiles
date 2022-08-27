@@ -43,22 +43,22 @@ require("material").setup({
     custom_highlights = {
 
        --NormalFloat = { bg = '#1f252e', fg = colors.white}, 
-       FloatBorder  = { bg = colors.none, fg = colors.white}, 
-       Visual = { bg = "#6a798a", fg = colors.white}, 
+       FloatBorder  = { bg = colors.none, fg = colors.white},
+       Visual = { bg = "#6a798a", fg = colors.white},
 
        --- Common
-       Identifier = { fg = colors.cyan },
-       Directory = { fg = colors.white},
-       Todo = { fg = colors.yellow, },
-       DiffAdd = { bg = "#45493e", fg = colors.none },
-       DiffChange = { bg = "#384851", fg = colors.none },
-       DiffDelete = { bg = colors.none, fg = colors.selection },
-       DiffText = { bg = "#5b7881", fg = colors.none },
-       MatchParen = { fg = colors.comments, bg = colors.cyan },
-       Search = { fg = colors.white, bg = colors.comments },
-       IncSearch = { fg = colors.white, bg = colors.comments },
-       StatusLine = { fg = colors.comments, bg = colors.bg },
-       StatusLineNC = { fg = colors.selection, bg = colors.bg },
+       --Identifier = { fg = colors.cyan },
+       --Directory = { fg = colors.white},
+       Todo = { bg  = colors.yellow, fg = colors.paleblue},
+       --DiffAdd = { bg = "#45493e", fg = colors.none },
+       --DiffChange = { bg = "#384851", fg = colors.none },
+       --DiffDelete = { bg = colors.none, fg = colors.selection },
+       --DiffText = { bg = "#5b7881", fg = colors.none },
+       --MatchParen = { fg = colors.comments, bg = colors.cyan },
+       --Search = { fg = colors.white, bg = colors.comments },
+       --IncSearch = { fg = colors.white, bg = colors.comments },
+       --StatusLine = { fg = colors.comments, bg = colors.bg },
+       --StatusLineNC = { fg = colors.selection, bg = colors.bg },
 
        -- LSP
        LspReferenceText = { fg = colors.none, bg = "#1F2233" },
@@ -117,13 +117,5 @@ require("material").setup({
        mkdListItem = { fg = colors.cyan },
        mkdURL = { fg = colors.pink, },
 
-
-       ---- Go
-       --goFunction = { fg = colors.red },
-       --goImportString = { fg = colors.red },
-       --goString = { fg = colors.red },
-       --goStringGroup = { fg = colors.red },
-       --goSpecialString = { fg = colors.red },
-       --goFunctionReturn = { fg = colors.red },
     },
 })
