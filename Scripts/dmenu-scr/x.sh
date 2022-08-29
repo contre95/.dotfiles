@@ -4,13 +4,13 @@ var=$(echo -e "$choices" | dmenu -i -p "Audio Output" -sb "#6D6D6D" -fn "JetBrai
 
 case $var in
     'Screenshot')
-      "$SCR_PATH"/x-scr/screeshot.sh ;;
+      "$SCR_PATH"/x-scr/screenshot.sh ;;
     
     'Window class') 
       xprop| grep WM_CLASS | xclip -sel clip && notify-send "Window class" "copied to clipboard" -i "$MY_FOLDER"/Library/icons/clipboard.png ;;
 
     'Screeshot Clipboard') 
-      "$SCR_PATH"/x-scr/screeshot-clip.sh ;;
+      "$SCR_PATH"/x-scr/screenshot-clip.sh ;;
 
     'Window xprop')
       xprop | xclip -sel clip && notify-send "Window info" "copied to clipboard" -i "$MY_FOLDER"/Library/icons/clipboard.png ;;
