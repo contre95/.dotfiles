@@ -6,13 +6,15 @@ export SCR_PATH=$MY_FOLDER/Scripts
 sxhkd &
 picom &
 nitrogen --restore &
+#/usr/bin/feh --randomize --bg-fill "/home/contre/Pictures/Wallpapers/random/3" &
 clipmenud &
+~/.screenlayout/widescreen.sh &
 bluetoothctl power on &
 setxkbmap -layout us -variant mac &
 nvidia-settings -a "[gpu:0]/GPUFanControlState=1" -a "[fan:0]/GPUTargetFanSpeed=10" -a "[fan:1]/GPUTargetFanSpeed=10"
 
 #### MONITORS ####
-bspc monitor DP-2 -d 1 2 3 4 5
+bspc monitor HDMI-0 -d 1 2 3 4 5
 bspc monitor DP-4 -d 6 7 8 9 ﭮ    
 
 #### BSPWM rules ####
@@ -21,8 +23,9 @@ bspc rule -a TelegramDesktop desktop=''
 bspc rule -a discord desktop='ﭮ'
 bspc rule -a Music desktop=''
 bspc rule -a Pavucontrol:pavucontrol state=floating center=true rectangle=1200x600+0+0
+bspc rule -a Alacrity:Alacrity center=true rectangle=1200x600+0+0
 bspc rule -a burp-StartBurp:burp-StartBurp state=floating
-bspc rule -a "*:*:Picture-in-Picture" state=floating rectangle=600x400+0+0
+bspc rule -a "*:*:Picture-in-Picture" state=floating rectangle=600x400+0+0 center=true
 
 #### BSPWM configuration ####
 
@@ -30,14 +33,14 @@ bspc config window_gap 10
 bspc config border_width 1
 bspc config left_padding 0
 bspc config right_padding 0
-bspc config bottom_padding 0
+bspc config bottom_padding 20
 bspc config split_ratio 0.50
 bspc config click_to_focus true
 bspc config gapless_monocle true
 bspc config pointer_action1 move
 bspc config single_monocle false
 #$SCR_PATH/bspwm-scr/borders.sh &
-bspc config -m DP-2 top_padding 0
+bspc config -m HDMI-0 top_padding 0
 bspc config -m DP-4 top_padding 0
 bspc config pointer_modifier mod4
 bspc config focus_by_distance true
