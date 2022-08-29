@@ -1,13 +1,15 @@
 require("nvim-tree").setup({
-    disable_netrw = true,
+    update_cwd = false,
+    open_on_tab = false,
+    disable_netrw = false,
+    hijack_netrw= true,
+    hijack_cursor = true,
     open_on_setup = false,
     ignore_ft_on_setup = {},
-    open_on_tab = false,
-    hijack_cursor = false,
-    update_cwd = false,
+    hijack_directories = true,
     actions = {
       open_file = {
-        quit_on_open = false,
+        quit_on_open =false,
         window_picker = {
           enable = false,
         },

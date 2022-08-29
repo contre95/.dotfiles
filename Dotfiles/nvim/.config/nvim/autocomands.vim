@@ -1,7 +1,6 @@
 "---------------------------------------------------------------------------------------------
 "------------------------------------ Custom Autocommands ----------------------------
 "----------------------------------------------------------------------------------------------
-"autocmd BufEnter * ++nested if winnr('$') == 1 && bufname() == 'NvimTree_' . tabpagenr() | quit | endif
 
 " This is for vim buffer to not ocupy the total amount of the window
 autocmd VimEnter * :silent exec "!kill -s SIGWINCH $PPID"
