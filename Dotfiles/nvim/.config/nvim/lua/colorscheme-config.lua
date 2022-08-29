@@ -30,6 +30,7 @@ require("material").setup({
         lighter = false, -- Enable higher contrast text for lighter style
         darker = true, -- Enable higher contrast text for darker style
     },
+
     disable = {
         colored_cursor = false, -- Disable the colored cursor
         borders = false, -- Disable borders between verticaly split windows
@@ -117,5 +118,5 @@ require("material").setup({
        mkdListItem = { fg = colors.cyan },
        mkdURL = { fg = colors.pink, },
 
-    },
+    }
 })
