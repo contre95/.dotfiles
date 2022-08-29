@@ -34,8 +34,8 @@ nnoremap <C-Right> e<Right>
 nnoremap <C-Left> b
 
 "Switch tabs with Crtl+Shift+arrows
-nmap <C-l> gt
-nmap <C-j> gT
+nmap <A-Tab> gt
+nmap <A-C-Tab> gT
 "nmap <C-A-S-Right> gt
 "nmap <C-A-S-Left> gT
 
@@ -58,7 +58,8 @@ vmap <C-d> <Plug>SchleppDup
 
 " NvimTree (kyazdani42/nvim-tree.lua)
 "-------------------------------------
-nnoremap <leader>f :NvimTreeToggle<Enter>
+"nnoremap <leader>f :NvimTreeToggle<Enter>
+nnoremap <silent> <leader>f :lua require"nvim-tree".toggle(false, true)<Enter>
 
 " Telescope (nvim-telescope/telescope.nvim)
 nnoremap <leader>o <cmd>Telescope find_files find_command=rg,--ignore,--hidden,--files prompt_prefix=🔍<cr>
