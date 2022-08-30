@@ -36,10 +36,10 @@ antigen bundle golang
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle autojump
-#antigen bundle python
-#antigen bundle common-aliases
-##antigen bundle docker
-##antigen bundle docker-compose
+antigen bundle python
+antigen bundle common-aliases
+#antigen bundle docker
+#antigen bundle docker-compose
 antigen apply
 
 ################################################################################################
@@ -107,7 +107,7 @@ setopt incappendhistory #Immediately append to the history file, not just when a
 # MacBook Pro configuration
 ##############################################################################
 # Just in case the unfortunate way Mac has to "Supr" does not work on your terminal.. then here's the fix
-#bindkey "^[[3~" delete-char
+bindkey "^[[3~" delete-char
 
 ################################################################################################
 # Languae environments setup

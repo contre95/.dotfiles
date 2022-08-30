@@ -3,7 +3,7 @@
 "----------------------------------------------------------------------------------------------
 
 " This is for vim buffer to not ocupy the total amount of the window
-autocmd VimEnter * :silent exec "!kill -s SIGWINCH $PPID"
+"autocmd VimEnter * :silent exec "!kill -s SIGWINCH $PPID"
 
 " Set Rust 
 "-------------------------------------

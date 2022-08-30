@@ -11,7 +11,6 @@ end
 local cmp = require'cmp'
 local lspkind = require('lspkind')
 cmp.setup({
-    
   -- Mapping
     mapping = {
       ['<CR>'] = cmp.mapping.confirm({
