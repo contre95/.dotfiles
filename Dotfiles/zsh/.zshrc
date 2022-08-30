@@ -75,22 +75,18 @@ gpgconf --launch gpg-agent
 # Alias
 ################################################################################################
 alias mf="cd $MY_FOLDER"
-alias xf="mpg123 --quiet $MY_FOLDER/Library/sounds/xfiles.mp3"
-#alias docker="sudo docker"
-#alias docker-compose="sudo docker-compose"
-alias k="kubectl"
 alias p="podman --remote"
-alias kx="kubectx"
-alias ks="kubens"
-alias ct="mpg123 --quiet $MY_FOLDER/Library/sounds/ct.mp3"
-alias qn="mpg123 --quiet $MY_FOLDER/Library/sounds/quienteconoce.mp3"
-alias mi="mpg123 --quiet $MY_FOLDER/Library/sounds/monster_inc.mp3"
-alias al="mpg123 --quiet $MY_FOLDER/Library/sounds/olx.mp3"
-alias fcd="mpg123 --quiet $MY_FOLDER/Library/sounds/final_countdown.mp3"
-alias bf="mpg123 --quiet $MY_FOLDER/Library/sounds/back2thefuture.mp3"
-alias ed="mpg123 --quiet $MY_FOLDER/Library/sounds/circus.mp3"
-alias dm="mpg123 --quiet $MY_FOLDER/Library/sounds/deployersmal.mp3"
 alias copy='xclip -sel clip'
+alias cdr='cd $(git rev-parse --show-toplevel)'
+alias ct="mpg123 --quiet $MY_FOLDER/Library/sounds/ct.mp3"
+alias al="mpg123 --quiet $MY_FOLDER/Library/sounds/olx.mp3"
+alias ed="mpg123 --quiet $MY_FOLDER/Library/sounds/circus.mp3"
+alias xf="mpg123 --quiet $MY_FOLDER/Library/sounds/xfiles.mp3"
+alias mi="mpg123 --quiet $MY_FOLDER/Library/sounds/monster_inc.mp3"
+alias dm="mpg123 --quiet $MY_FOLDER/Library/sounds/deployersmal.mp3"
+alias qn="mpg123 --quiet $MY_FOLDER/Library/sounds/quienteconoce.mp3"
+alias bf="mpg123 --quiet $MY_FOLDER/Library/sounds/back2thefuture.mp3"
+alias fcd="mpg123 --quiet $MY_FOLDER/Library/sounds/final_countdown.mp3"
 
 ##############################################################################
 # History Configuration
