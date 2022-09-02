@@ -39,8 +39,10 @@ nmap <A-C-Tab> gT
 "nmap <C-A-S-Right> gt
 "nmap <C-A-S-Left> gT
 
+" run current file
+nnoremap <silent> <leader>r :source %<CR>
 " Open livedown with brave (npm install -g livedown)
-nnoremap <silent> <Leader>m :call jobstart(printf('livedown start %s --port 4242 --open --browser "brave --profile-directory="Contre" --app=http://localhost:4242"',@%),{'detach':1})<CR>
+nnoremap <silent> <leader>m :call jobstart(printf('livedown start %s --port 4242 --open --browser "brave --profile-directory="Contre" --app=http://localhost:4242"',@%),{'detach':1})<CR>
 
 " Material Colorscheme
 nmap <silent> <leader>n :lua require('material.functions').toggle_style()<CR>
