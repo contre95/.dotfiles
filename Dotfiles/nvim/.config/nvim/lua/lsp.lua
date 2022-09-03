@@ -77,12 +77,6 @@ local yamllint = {
   lintStdin = true,
 }
 
--- Lua linter -- cargo install stylua
---local luafmt = {
---formatCommand = "stylua -s --stdin-filepath ${INPUT} -",
---formatStdin = true,
---}
-
 -- Shell Formatter / Checker
 local shell = {
   formatCommand = "shfmt ${-i:tabWidth}",
