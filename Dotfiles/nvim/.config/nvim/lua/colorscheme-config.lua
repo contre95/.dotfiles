@@ -50,7 +50,7 @@ require("material").setup({
        --- Common
        --Identifier = { fg = colors.cyan },
        --Directory = { fg = colors.white},
-       Todo = { bg  = colors.yellow, fg = colors.paleblue},
+       Todo = { fg = colors.yellow},
        --DiffAdd = { bg = "#45493e", fg = colors.none },
        --DiffChange = { bg = "#384851", fg = colors.none },
        --DiffDelete = { bg = colors.none, fg = colors.selection },
