@@ -10,7 +10,6 @@ command! -nargs=0 Rename lua vim.lsp.buf.rename()
 command! -nargs=0 SignatureHelp lua vim.lsp.buf.signature_help()
 command! -nargs=0 LspLog lua vim.cmd('sp'..vim.lsp.get_log_path())
 
-
 "  ------------ Language specific
 
 " Tfsc check
