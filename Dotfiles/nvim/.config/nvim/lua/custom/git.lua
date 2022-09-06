@@ -7,10 +7,12 @@ vim.api.nvim_create_user_command('GitAdd', function ()
    vim.fn.jobstart({"git", "commit", "-m", msg})
 end, {})
 
+-- Git Push
 vim.api.nvim_create_user_command('GitPush', function ()
    vim.fn.jobstart({"git", "push"})
 end, {})
 
+-- Git Pull
 vim.api.nvim_create_user_command('GitPull', function ()
    vim.fn.jobstart({"git", "pull"})
 end, {})
