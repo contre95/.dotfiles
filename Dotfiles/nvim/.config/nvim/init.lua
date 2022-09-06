@@ -17,6 +17,7 @@
 require("lsp")
 require("plugins")
 require("schlepp-config")
+require("custom.git")
 require("gitsigns-config")
 require("nvim-cmp-config")
 require("md-fenced-config")
