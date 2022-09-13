@@ -11,6 +11,9 @@ super + Return
 super + ctrl + Return
     alacritty --option window.opacity=0.7 -e /bin/zsh -c "tmux -u new-session -A -s Transparent" 
 
+super + shift + Return
+    alacritty --option window.opacity=0.7 
+
 # Change wallpaper
 super + shift + w
     /usr/bin/feh --randomize --bg-fill /home/contre/Pictures/Wallpapers/3840x1200/ &
