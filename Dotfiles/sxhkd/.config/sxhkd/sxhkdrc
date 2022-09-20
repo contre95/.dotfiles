@@ -14,10 +14,6 @@ super + ctrl + Return
 super + shift + Return
     alacritty --option window.opacity=0.7 
 
-# Change wallpaper
-super + shift + w
-    /usr/bin/feh --randomize --bg-fill /home/contre/Pictures/Wallpapers/3840x1200/ &
-
 # Audio
 # -------------------------------------
 
@@ -95,7 +91,7 @@ super +  d
     #/home/contre/.config/rofi/launchers/type-6/launcher.sh
 super + shift + d
     $SCR_PATH/dmenu-scr/dotfiles.sh 
-super + p
+super + ctrl + p
     PASSWORD_STORE_DIR=$MY_FOLDER/Pass $SCR_PATH/dmenu-scr/passmenu.sh 
 super + 0
     $SCR_PATH/dmenu-scr/exit.sh
