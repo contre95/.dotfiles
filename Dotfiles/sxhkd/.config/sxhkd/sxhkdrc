@@ -20,7 +20,7 @@ super + shift + Return
 XF86AudioPlay
   pacmd suspend {1, 0}
 XF86Audio{LowerVolume,RaiseVolume}
-    pactl set-sink-volume @DEFAULT_SINK@ {+,-}5%
+    pactl set-sink-volume @DEFAULT_SINK@ {-,+}5%
 super + s 
     pavucontrol
 super + shift + s
