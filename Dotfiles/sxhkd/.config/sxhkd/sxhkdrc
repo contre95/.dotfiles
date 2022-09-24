@@ -119,7 +119,7 @@ super + alt + shift + m
     $SCR_PATH/audio-scr/mic-monitor.sh
 super + ctrl + m
     $SCR_PATH/audio-scr/mic-mute.sh
-super + ctrl + p
+super + shift + ctrl + p
     PASSWORD_STORE_DIR=$MY_FOLDER/Pass passmenu --type -i -p "Pass  : " "$@" -sb "#34495E" -fn "JetBrainsMono Nerd Font"
 super + ctrl + o
     $SCR_PATH/dmenu-scr/audio.sh
