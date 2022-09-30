@@ -58,6 +58,9 @@ super + ctrl + shift + {l,j}
 # Iterate through desktops
 super + ctrl + {l,j}
     bspc desktop -f {next,prev}
+# Iterate through desktops like Mac for no reason
+super + ctrl + {Left, Right}
+    bspc desktop -f {prev,next}
 
 # close focused window
 super + shift + q 
