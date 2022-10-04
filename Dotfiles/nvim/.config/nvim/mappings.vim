@@ -99,5 +99,11 @@ noremap $ $<Right>
 
 "" Fix spelling with first option  
 nnoremap <leader>j 1z=
+
 "" Toggle spelling
 nnoremap <leader>s :set invspell<CR>
+
+"" Git reset hunk
+noremap gr :Gitsigns reset_hunk<CR>
+noremap gp :Gitsigns preview_hunk<CR>
+noremap gb :Gitsigns blame_line<CR>
