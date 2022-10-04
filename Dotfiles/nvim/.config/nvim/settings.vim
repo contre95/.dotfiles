@@ -36,7 +36,7 @@ set hlsearch
 set wildmenu
 set path+=**
 set mouse=a
-set spell
+set nospell
 set nowrap
 set number
 set bs=2

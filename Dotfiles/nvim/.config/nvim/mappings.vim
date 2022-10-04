@@ -1,3 +1,4 @@
+" Select with Shift as a normal human being
 imap <S-Right> <Esc>V<Right>
 imap <S-Left> <Esc>V<Left>
 imap <S-Down> <Esc>V<Down>
@@ -95,3 +96,8 @@ nnoremap <silent> <C-A-Up> <C-w>k
 " Lets you move to the end of the line (virtualedit=onemore needed)
 nnoremap <End> <End><Right>
 noremap $ $<Right>
+
+"" Fix spelling with first option  
+nnoremap <leader>j 1z=
+"" Toggle spelling
+nnoremap <leader>s :set invspell<CR>
