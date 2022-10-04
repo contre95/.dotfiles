@@ -21,7 +21,7 @@ return require("packer").startup(function()
 	use("wbthomason/packer.nvim")
 	use("sunjon/shade.nvim")
 	use("marko-cerovac/material.nvim")
-	use("nvim-treesitter/nvim-treesitter")
+    use { 'kartikp10/noctis.nvim', requires = { 'rktjmp/lush.nvim' } }
     use({
         "nvim-lualine/lualine.nvim",
         requires = { "kyazdani42/nvim-web-devicons", opt = true },
@@ -29,6 +29,7 @@ return require("packer").startup(function()
 	use({ "kyazdani42/nvim-tree.lua", requires = "kyazdani42/nvim-web-devicons" })
 	use({ "lewis6991/gitsigns.nvim", requires = { "nvim-lua/plenary.nvim" } })
 	use("akinsho/nvim-bufferline.lua")
+	use("nvim-treesitter/nvim-treesitter")
 	use("tpope/vim-markdown")
 	use("hashivim/vim-terraform")
 	use("neovim/nvim-lspconfig")
