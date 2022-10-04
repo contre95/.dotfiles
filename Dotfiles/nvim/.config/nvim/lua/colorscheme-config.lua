@@ -12,7 +12,7 @@ require("material").setup({
         popup_menu = true, -- Enable lighter background for the popup menu
     },
 
-    --borders = true, -- Enable borders between verticaly split windows
+    --borders = true, -- Enable borders between vertically split windows
 
     popup_menu = "light", -- Popup menu style ( can be: 'dark', 'light', 'colorful' or 'stealth' )
 
@@ -33,8 +33,8 @@ require("material").setup({
 
     disable = {
         colored_cursor = false, -- Disable the colored cursor
-        borders = false, -- Disable borders between verticaly split windows
-        background = false, -- Prevent the theme from setting the background (NeoVim then uses your teminal background)
+        borders = false, -- Disable borders between vertically split windows
+        background = false, -- Prevent the theme from setting the background (NeoVim then uses your terminal background)
         term_colors = false, -- Prevent the theme from setting terminal colors
         eob_lines =  true -- Hide the end-of-buffer lines
     },
@@ -51,6 +51,7 @@ require("material").setup({
        --Identifier = { fg = colors.cyan },
        --Directory = { fg = colors.white},
        Todo = { fg = colors.yellow},
+       SpellBad = { fg = "#A46767", bg = "#533D3D"},
        --DiffAdd = { bg = "#45493e", fg = colors.none },
        --DiffChange = { bg = "#384851", fg = colors.none },
        --DiffDelete = { bg = colors.none, fg = colors.selection },

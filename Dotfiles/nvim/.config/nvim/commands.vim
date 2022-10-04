@@ -12,7 +12,7 @@ command! -nargs=0 LspLog lua vim.cmd('sp'..vim.lsp.get_log_path())
 
 "  ------------ Language specific
 
-" Tfsc check
+" TfSec check
 command! -nargs=0 Tfsec vsplit term:// tfsec %:p:h
 
 " Rust comments hints
@@ -20,7 +20,7 @@ command! -nargs=0 Tfsec vsplit term:// tfsec %:p:h
 
 "  ------------ Misc
 
-"" Order lines by lenght
+"" Order lines by length
 command! -range SortLen <line1>,<line2> !awk '{ print length(), $0 | "sort -n | cut -d\\  -f2-" }'
 
 "" Transparent
@@ -30,7 +30,7 @@ function LetMeSee()
     highlight Normal guibg=NONE
 endfunction
 
-" Share codae
+" Share code
 " Only Linux. For Mac, see: https://gist.github.com/shmup/db671132f0f9882187b28a677fa8df72 
 command! -range=% SP <line1>,<line2>w !curl -F 'sprunge=<-' http://sprunge.us | tr -d '\n' | xclip -i -selection clipboard
 command! -range=% CL <line1>,<line2>w !curl -F 'clbin=<-' https://clbin.com | tr -d '\n' | xclip -i -selection clipboard
