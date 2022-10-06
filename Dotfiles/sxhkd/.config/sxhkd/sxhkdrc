@@ -79,7 +79,7 @@ super + r + {j,k,i,l}
 # -------------------------------------
 super + x
     $SCR_PATH/dmenu-scr/x.sh
-super + shift + x
+super + ctrl + x
     $SCR_PATH/x-scr/screenshot-clip.sh
 super + a
     $SCR_PATH/dmenu-scr/set-display.sh
