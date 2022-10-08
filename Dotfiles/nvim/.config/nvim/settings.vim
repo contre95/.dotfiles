@@ -7,7 +7,7 @@ set undodir=~/.vim/undodir
 set inccommand=nosplit
 set pastetoggle=<F9>
 set fillchars=eob:\ , " Removes the ~ for non writtens lineas 
-set background=dark
+"set background=dark
 set signcolumn=yes
 set encoding=utf-8
 set relativenumber

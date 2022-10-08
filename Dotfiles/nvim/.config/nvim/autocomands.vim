@@ -15,6 +15,7 @@ autocmd BufEnter,BufWinEnter,TabEnter,BufWritePost *.rs :lua require'lsp_extensi
 
 "Set Go
 autocmd BufWritePost *.go lua vim.lsp.buf.formatting()
+
 "Set Markdown
 "-------------------------------------
 autocmd FileType markdown setlocal spell
@@ -31,25 +32,33 @@ autocmd FileType yaml setlocal expandtab tabstop=2 shiftwidth=2
 autocmd FileType gitcommit setlocal spell
 autocmd FileType gitcommit setlocal complete+=kspell
 
+
+"Set JSON FileType
+"-------------------------------------
+"aug json_ft_detection
+  "au!
+  "au BufRead,BufNewFile *.json set filetype=json syntax=json
+"aug end
+
 "Set Dockerfile filetype
 "-------------------------------------
 aug docker_ft_detection
   au!
-  au BufRead,BufNewFile Dockerfile.* :set filetype=dockerfile
+  au BufRead,BufNewFile Dockerfile.* set filetype=dockerfile
 aug end
 
 "Set Salt
 "-------------------------------------
 aug salt_ft_detection
   au!
-  au BufRead,BufNewFile *.sls :set filetype=yaml
+  au BufRead,BufNewFile *.sls set filetype=yaml
 aug end
 
 "Set Julia filetype 
 "-------------------------------------
 aug julia_ft_detection
   au!
-  au BufRead,BufNewFile *.jl :set filetype=julia
+  au BufRead,BufNewFile *.jl set filetype=julia
 aug end
 
 "Set i3config filetype 
@@ -66,7 +75,7 @@ aug roficss_ft_detection
     au BufNewFile,BufRead *.rasi set filetype=css
 aug end
 
-"Set logstash filetype 
+"Set Logstash filetype 
 "-------------------------------------
 fun! s:DetectLogstash()
     if getline(1) =~ '^[ \t]*input {'
@@ -85,7 +94,6 @@ aug end
 
 "Set SXHKD filetype
 "-------------------------------------
-
 aug sxhkd_ft_detection
     au!
     autocmd BufNewFile,BufRead sxhkdrc,*.sxhkdrc set ft=sxhkdrc

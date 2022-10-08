@@ -12,7 +12,6 @@
      \__\/           ~~~~                   \__\/    
 --]]
 
-
 -- Plugins
 require("lsp")
 require("plugins")
@@ -26,15 +25,11 @@ require("telescope-config")
 require("bufferline-config")
 require("statusline-config")
 require("treesitter-config")
-require("colorscheme-config")
 require("quick-scope-config")
+require("colorscheme-config")
 
 -- Leader key
 vim.g.mapleader = " "
-
--- Color Scheme
-vim.cmd 'colorscheme material'
-vim.g.material_style = "deep ocean"
 
 ---- Vim Imports
 vim.cmd("so ~/.config/nvim/misc.vim")
