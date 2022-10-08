@@ -92,7 +92,7 @@ local shell = {
 -- Languages Configuration
 -----------------------------
 
--- Json
+ --Json
 lspconfig.jsonls.setup({ capabilities = capabilities })
 
 -- Lua

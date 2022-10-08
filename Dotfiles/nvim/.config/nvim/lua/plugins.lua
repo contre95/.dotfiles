@@ -19,9 +19,9 @@ local use = packer.use
 
 return require("packer").startup(function()
   use("wbthomason/packer.nvim")
-  use("sunjon/shade.nvim")
-  use("marko-cerovac/material.nvim")
-  use { 'kartikp10/noctis.nvim', requires = { 'rktjmp/lush.nvim' } }
+  --use("sunjon/shade.nvim")
+  --use("marko-cerovac/material.nvim")
+  use("kvrohit/rasmus.nvim")
   use({
     "nvim-lualine/lualine.nvim",
     requires = { "kyazdani42/nvim-web-devicons", opt = true },
