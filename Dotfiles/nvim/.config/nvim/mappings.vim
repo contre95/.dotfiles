@@ -46,7 +46,8 @@ nnoremap <silent> <leader>r :source %<CR>
 nnoremap <silent> <leader>m :call jobstart(printf('livedown start %s --port 4242 --open --browser "brave --profile-directory="Contre" --app=http://localhost:4242"',@%),{'detach':1})<CR>
 
 " Material Colorscheme
-nmap <silent> <leader>n :lua require('material.functions').toggle_style()<CR>
+" Keeping this just in case I change my mind later
+" nmap <silent> <leader>n :lua require('material.functions').toggle_style()<CR>
 
 "NerdCommenter (scrooloose/nerdcommenter)
 "-------------------------------------
