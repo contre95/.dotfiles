@@ -13,10 +13,10 @@ vim.cmd 'colorscheme rasmus'
 --https://github.com/kvrohit/rasmus.nvim/blob/main/lua/rasmus/init.lua
 
 local cusotm_highlights = {
-  'highlight jsonNumber guifg=' .. c.yellow,
-  'highlight jsonNull guifg=' .. c.bright_black,
-  'highlight jsonString guifg=' .. c.green,
-  'highlight jsonKeyword guifg=' .. c.blue,
+  --'highlight jsonNumber guifg=' .. c.yellow,
+  --'highlight jsonNull guifg=' .. c.bright_black,
+  --'highlight jsonString guifg=' .. c.green,
+  --'highlight jsonKeyword guifg=' .. c.blue,
 }
 
 for _, hicmd in ipairs(cusotm_highlights) do
