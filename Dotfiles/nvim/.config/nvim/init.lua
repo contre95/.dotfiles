@@ -37,6 +37,5 @@ vim.g.mapleader = " "
 ---- Vim Imports
 vim.cmd("so ~/.config/nvim/misc.vim")
 vim.cmd("so ~/.config/nvim/mappings.vim")
---vim.cmd("so ~/.config/nvim/settings.vim")
 vim.cmd("so ~/.config/nvim/commands.vim")
 vim.cmd("so ~/.config/nvim/autocomands.vim")
