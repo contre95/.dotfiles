@@ -1,6 +1,6 @@
 "  ------------ Lsp
 command! -nargs=0 Def lua vim.lsp.buf.definition()
-command! -nargs=0 Fmt lua vim.lsp.buf.formatting()
+command! -nargs=0 Fmt lua vim.lsp.buf.format({async=true})
 command! -nargs=0 Imp lua vim.lsp.buf.implementation()
 command! -nargs=0 Ref lua vim.lsp.buf.references()
 command! -nargs=0 Info lua vim.lsp.buf.hover()
