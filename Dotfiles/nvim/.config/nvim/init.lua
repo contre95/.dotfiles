@@ -12,21 +12,24 @@
      \__\/           ~~~~                   \__\/    
 --]]
 
+-- Lua setings
+require("commands")
+require("settings")
+
 -- Plugins
-require("lsp")
 require("plugins")
-require("custom.git")
-require("schlepp-config")
-require("gitsigns-config")
-require("nvim-cmp-config")
-require("md-fenced-config")
-require("nvim-tree-config")
-require("telescope-config")
-require("bufferline-config")
-require("statusline-config")
-require("treesitter-config")
-require("quick-scope-config")
-require("colorscheme-config")
+require("plugins/lsp")
+require("plugins/schlepp-config")
+require("plugins/gitsigns-config")
+require("plugins/nvim-cmp-config")
+require("plugins/md-fenced-config")
+require("plugins/nvim-tree-config")
+require("plugins/telescope-config")
+require("plugins/bufferline-config")
+require("plugins/statusline-config")
+require("plugins/treesitter-config")
+require("plugins/quick-scope-config")
+require("plugins/colorscheme-config")
 
 -- Leader key
 vim.g.mapleader = " "
@@ -34,6 +37,6 @@ vim.g.mapleader = " "
 ---- Vim Imports
 vim.cmd("so ~/.config/nvim/misc.vim")
 vim.cmd("so ~/.config/nvim/mappings.vim")
-vim.cmd("so ~/.config/nvim/settings.vim")
+--vim.cmd("so ~/.config/nvim/settings.vim")
 vim.cmd("so ~/.config/nvim/commands.vim")
 vim.cmd("so ~/.config/nvim/autocomands.vim")
