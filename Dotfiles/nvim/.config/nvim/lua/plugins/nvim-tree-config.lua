@@ -10,7 +10,7 @@ require("nvim-tree").setup({
       open_file = {
         quit_on_open =false,
         window_picker = {
-          enable = false,
+          enable = true,
         },
       }
     },
