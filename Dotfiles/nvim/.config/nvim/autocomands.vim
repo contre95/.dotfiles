@@ -27,6 +27,10 @@ autocmd FileType markdown setlocal colorcolumn=-2
 "-------------------------------------
 autocmd FileType yaml setlocal expandtab tabstop=2 shiftwidth=2 
 
+"Set GraphQL
+"-------------------------------------
+autocmd BufRead,BufNewFile *.graphql,*.graphqls,*.gql setfiletype graphql
+
 "Set GitCommits
 "-------------------------------------
 autocmd FileType gitcommit setlocal spell
