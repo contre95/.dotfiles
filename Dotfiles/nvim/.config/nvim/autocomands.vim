@@ -20,8 +20,8 @@ autocmd BufWritePost *.go lua vim.lsp.buf.formatting()
 "-------------------------------------
 autocmd FileType markdown setlocal spell
 autocmd FileType markdown setlocal complete+=kspell
-autocmd FileType markdown setlocal textwidth=80
-autocmd FileType markdown setlocal colorcolumn=-2 
+" autocmd FileType markdown setlocal textwidth=80
+" autocmd FileType markdown setlocal colorcolumn=-2 
 
 "Set Yaml
 "-------------------------------------
