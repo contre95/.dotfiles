@@ -21,6 +21,8 @@ modules = (
     modules.Const(' | '),
     clock_modules.Clock(),
     modules.Const(' | '),
+    modules.Command(command=["/usr/bin/cat","/sys/class/power_supply/BAT0/capacity"], label="%", errMsg="0.0.0.0"),
+    modules.Const(' | '),
     modules.Command(command=["/usr/bin/curl","--connect-timeout","3","ifconfig.io"], label="", errMsg="0.0.0.0"),
     modules.Const('%{r}'),
     bspwm_modules.Tags('eDP-1', include={"","ﭮ","","",""}),
