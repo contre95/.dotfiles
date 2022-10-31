@@ -19,6 +19,7 @@ require("settings")
 -- Plugins
 require("plugins")
 require("plugins/lsp")
+require("plugins/true-zen")
 require("plugins/schlepp-config")
 require("plugins/gitsigns-config")
 require("plugins/nvim-cmp-config")
@@ -28,8 +29,8 @@ require("plugins/telescope-config")
 require("plugins/bufferline-config")
 require("plugins/statusline-config")
 require("plugins/treesitter-config")
-require("plugins/quick-scope-config")
 require("plugins/colorscheme-config")
+require("plugins/quick-scope-config")
 
 -- Leader key
 vim.g.mapleader = " "
