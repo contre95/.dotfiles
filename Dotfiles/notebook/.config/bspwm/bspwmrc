@@ -4,8 +4,8 @@ export MY_FOLDER=/home/canus
 export SCR_PATH=$MY_FOLDER/Scripts
 #### AUTOSTART ####
 sxhkd &
-picom &
-nitrogen --restore &
+# nitrogen --restore &
+feh --bg-fill --randomize ~/Pictures/Wallpapers/current/*
 clipmenud &
 bluetoothctl power on &
 setxkbmap -layout us -variant mac &
