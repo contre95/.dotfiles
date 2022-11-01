@@ -2,8 +2,11 @@
 super + shift + r
     pkill -USR1 -x sxhkd && \
     pkill -x lemonbar && \
-    feh --bg-fill --randomize ~/Pictures/Wallpapers/current/* && \
     python3 "$HOME/.config/lemonbar/bar.py" &
+
+# Change background
+super + r
+    feh --bg-fill --randomize ~/Pictures/Wallpapers/current/* 
 
 # Terminal emulator
 # -------------------------------------
