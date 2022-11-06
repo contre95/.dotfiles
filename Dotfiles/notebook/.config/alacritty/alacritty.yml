@@ -3,10 +3,10 @@ env:
 
 shell:
   program: /bin/zsh
-  args:
-    - -l
-    - -c
-    - "tmux attach || tmux"
+  #args:
+    #- -l
+    #- -c
+    #- "tmux attach || tmux"
 
 tabspaces: 4
 font:

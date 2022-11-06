@@ -20,6 +20,7 @@ bspc rule -a TelegramDesktop desktop=''
 bspc rule -a discord desktop='ﭮ'
 bspc rule -a 'meet.jit.si' desktop=''
 bspc rule -a mocp desktop=''
+bspc rule -a \* -o state=floating layer=above rectangle=1260x400+300+10
 #### BSPWM configuration ####
 bspc config border_width                  1
 bspc config window_gap                    5
