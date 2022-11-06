@@ -11,7 +11,7 @@ super + r
 # Terminal emulator
 # -------------------------------------
 super + t
-		{alacritty, bspc rule -a \* -o state=floating layer=above rectangle=1260x400+300+10}
+		{alacritty --class 'Dropdown'}
 super + Return
 	alacritty -e /bin/zsh -c "tmux -u new-session -A -s Main" 
 #super + ctrl + Return
