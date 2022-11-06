@@ -11,7 +11,7 @@ super + r
 # Terminal emulator
 # -------------------------------------
 super + t
-		{alacritty --class 'Dropdown'}
+		{alacritty --class 'Dropdown' -e /bin/zsh -c "tmux -u new-session -A -s Dropdown" }
 super + Return
 	alacritty -e /bin/zsh -c "tmux -u new-session -A -s Main" 
 #super + ctrl + Return
