@@ -10,6 +10,9 @@ super + r
 
 # Terminal emulator
 # -------------------------------------
+super + shift + Return
+		{kitty, bspc rule -a \* -o state=floating sticky=on layer=above rectangle=720x360+600+26 && kitty}
+
 super + Return
 	alacritty -e /bin/zsh -c "tmux -u new-session -A -s Main" 
 super + ctrl + Return
