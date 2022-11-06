@@ -10,14 +10,12 @@ super + r
 
 # Terminal emulator
 # -------------------------------------
-super + shift + Return
-		{kitty, bspc rule -a \* -o state=floating sticky=on layer=above rectangle=720x360+600+26 && kitty}
-
+super + t
+		{alacritty, bspc rule -a \* -o state=floating layer=above rectangle=1260x400+300+10}
 super + Return
 	alacritty -e /bin/zsh -c "tmux -u new-session -A -s Main" 
-super + ctrl + Return
-    alacritty --option window.opacity=0.7 -e /bin/zsh -c "tmux -u new-session -A -s Transparent" 
-
+#super + ctrl + Return
+    #alacritty --option window.opacity=0.7 -e /bin/zsh -c "tmux -u new-session -A -s Transparent" 
 super + shift + Return
     alacritty --option window.opacity=0.7 
 
