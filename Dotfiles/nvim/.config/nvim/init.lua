@@ -19,6 +19,7 @@ require("settings")
 -- Plugins
 require("plugins")
 require("plugins/lsp")
+require("plugins/dap")
 require("plugins/true-zen")
 require("plugins/schlepp-config")
 require("plugins/gitsigns-config")

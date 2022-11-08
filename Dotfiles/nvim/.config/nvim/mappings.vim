@@ -108,3 +108,8 @@ nnoremap <leader>s :set invspell<CR>
 noremap gr :Gitsigns reset_hunk<CR>
 noremap gp :Gitsigns preview_hunk<CR>
 noremap gb :Gitsigns blame_line<CR>
+
+"" Dap 
+nmap <leader>db :DapToggleBreakpoint<CR>
+nmap <leader>do :DapOpen<CR>
+nmap <leader>dc :DapClose<CR>

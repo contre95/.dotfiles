@@ -14,7 +14,7 @@ autocmd FileType help wincmd L
 autocmd BufEnter,BufWinEnter,TabEnter,BufWritePost *.rs :lua require'lsp_extensions'.inlay_hints{ prefix = ' » ', highlight = "NonText", enabled = {"TypeHint", "ChainingHint", "ParameterHint"} }
 
 "Set Go
-autocmd BufWritePost *.go lua vim.lsp.buf.formatting()
+autocmd BufWritePost *.go lua vim.lsp.buf.format({async = true})
 
 "Set Markdown
 "-------------------------------------
