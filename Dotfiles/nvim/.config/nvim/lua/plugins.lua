@@ -32,6 +32,7 @@ return require("packer").startup(function()
   use("nvim-treesitter/nvim-treesitter")
   use("tpope/vim-markdown")
   use("hashivim/vim-terraform")
+  use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap", "leoluz/nvim-dap-go"} }
   use({ "Pocco81/true-zen.nvim" })
   use("neovim/nvim-lspconfig")
   use("hrsh7th/nvim-cmp")
