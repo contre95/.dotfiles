@@ -28,6 +28,7 @@ bspc rule -a Music desktop=''
 bspc rule -a Pavucontrol:pavucontrol state=floating center=true rectangle=1000x600+0+0
 bspc rule -a Alacrity:Alacrity center=true rectangle=1200x600+0+0
 bspc rule -a burp-StartBurp:burp-StartBurp state=floating
+bspc rule -a Dropdown state=floating layer=above rectangle=1260x400+300+10
 bspc rule -a "*:*:Picture-in-Picture" state=floating rectangle=600x400+0+0 center=true
 
 #### BSPWM configuration ####
