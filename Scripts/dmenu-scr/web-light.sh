@@ -2,7 +2,7 @@
 source ~/.zshrc
 SCR_PATH=$MY_FOLDER/Scripts
 
-choices="Any\nKeybr\nBurp\nN26\nGalicia Contre\nMercadopago Contre\nGalicia Codelamp\nLichess\nInstagram\nMercadopago Codelamp\nYoutube\nTwitter\nDeemix"
+choices="Any\nKeybr\nBurp\nN26\nGalicia Contre\nGarmin\nMercadopago Contre\nGalicia Codelamp\nLichess\nInstagram\nMercadopago Codelamp\nYoutube\nTwitter\nDeemix"
 chosen=$(echo -e "$choices" | dmenu -i -p "Select Layout: " -sb "#8F7DAB")
 
 case "$chosen" in
@@ -32,6 +32,9 @@ case "$chosen" in
 	;;
 "Galicia Codelamp")
 	exec brave --profile-directory="Codelamp" --app=https://onlinebanking.bancogalicia.com.ar/login
+	;;
+"Garmin")
+	exec brave --profile-directory="Contre" --app=https://connect.garmin.com/modern/
 	;;
 "Mercadopago Contre")
 	exec brave --profile-directory="Contre" --app=https://www.mercadopago.com.ar/home
