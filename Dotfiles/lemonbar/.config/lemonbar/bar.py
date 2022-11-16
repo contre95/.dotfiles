@@ -30,7 +30,7 @@ modules = (
     modules.Const(PADDING),
     bspwm_modules.Tags('DP-4', include={"6","7","8","9"}),
     modules.Const('%{c}'),
-    bspwm_modules.Tags('DP-4', include={"","ﭮ","","",""}),
+    bspwm_modules.Tags('DP-4', include={"","ﭮ","","",""}),
     modules.Const('%{r}'),
     modules.Const(PADDING),
     disk_modules.DiskUsage('/dev/sda1',icon=""),
