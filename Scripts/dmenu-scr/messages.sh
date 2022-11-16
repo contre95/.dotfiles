@@ -26,7 +26,7 @@ case $var in
 	  brave --profile-directory="Contre" --app=https://meet.new ;;
     
     ' Gmail')
-	 brave --profile-directory="Contre" --app=https://gmail.com;;
+	 brave --class=Gmail --profile-directory="Contre" --app=https://gmail.com;;
 
     ' Telegram')
 	  exec 'telegram-desktop';;
