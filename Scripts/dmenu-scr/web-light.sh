@@ -2,7 +2,7 @@
 source ~/.zshrc
 SCR_PATH=$MY_FOLDER/Scripts
 
-choices="Any\nKeybr\nBurp\nN26\nGalicia Contre\nGarmin\nMercadopago Contre\nGalicia Codelamp\nLichess\nInstagram\nMercadopago Codelamp\nYoutube\nTwitter\nDeemix"
+choices="Any\nKeybr\nBurp\nCronometer\nNew Bookmark\nN26\nGalicia Contre\nGarmin\nMercadopago Contre\nGalicia Codelamp\nLichess\nInstagram\nMercadopago Codelamp\nYoutube\nTwitter\nDeemix"
 chosen=$(echo -e "$choices" | dmenu -i -p "Select Layout: " -sb "#8F7DAB")
 
 case "$chosen" in
@@ -11,6 +11,9 @@ case "$chosen" in
 	;;
 "Keybr")
 	exec brave --profile-directory="Contre" --app=https://www.keybr.com/
+	;;
+"Cronometer")
+	exec brave --profile-directory="Contre" --app=https://cronometer.com/
 	;;
 "Deemix")
 	exec brave --profile-directory="Contre" --app=http://localhost:6595
@@ -26,6 +29,9 @@ case "$chosen" in
 	;;
 "Any")
 	exec brave --app=http://"$(zenity --entry --text='Website  :')"
+	;;
+"New Bookmark")
+   echo "$(zenity --entry --text='Bookmark:')"     - http://"$(zenity --entry --text='Website  :')" >> $MY_FOLDER/Info/bookmarks.txt 
 	;;
 "Galicia Contre")
 	exec brave --profile-directory="Contre" --app=https://onlinebanking.bancogalicia.com.ar/login
