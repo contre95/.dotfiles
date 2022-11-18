@@ -32,6 +32,10 @@
 │   ├── Candy Shop.mp3
 │   ├── Pimp.mp3
 │   └── You Dont Know.mp3
+├── Aaron Montalvo
+│   └── Mi Corazón Encantado.mp3
+├── Aaron Silva
+│   └── Mi Corazón Encantado.mp3
 ├── Aaron Smith
 │   └── Dancin.mp3
 ├── Abba
@@ -55,6 +59,8 @@
 │   └── You Shook Me All Night Long.mp3
 ├── Ace of Base -
 │   └── All That She Wants.mp3
+├── Acid Pauli
+│   └── Abbebe.mp3
 ├── ACRAZE
 │   ├── Do It To It.lrc
 │   └── Do It To It.mp3
@@ -74,6 +80,9 @@
 │   └── Someone Like You.mp3
 ├── Adieu Aru
 │   └── Notre-Dame.mp3
+├── Adrian Barba
+│   ├── Ángeles Fuimos.mp3
+│   └── El Poder Nuestro Es.mp3
 ├── Adrian Gurvitz
 │   └── Classic.mp3
 ├── Aerosmith
@@ -230,6 +239,10 @@
 │   ├── Aliço - Si Me Tomo Una Cerveza.mp3
 │   ├── Si Me Tomo Una Cerveza.lrc
 │   └── Si Me Tomo Una Cerveza.mp3
+├── Alison Moyet
+│   └── Weak in the Presence of Beauty.mp3
+├── Al Kerbey
+│   └── Hard Feelings.mp3
 ├── A. L. Lloyd
 │   └── Jim Jones at Botany Bay.mp3
 ├── Almendra
@@ -258,6 +271,8 @@
 ├── Amber Run
 │   ├── Heaven.mp3
 │   └── I Found.mp3
+├── Amelia Davis
+│   └── Minuet in D Minor.mp3
 ├── Amna
 │   └── Tell My Why.mp3
 ├── Ana Torroja
@@ -319,6 +334,9 @@
 │   └── Walking On Broken Glass.mp3
 ├── Anuel Aa
 │   └── China.mp3
+├── Anuel AA
+│   ├── Secreto.lrc
+│   └── Secreto.mp3
 ├── Anything box
 │   ├── Asdfgh.mp3
 │   └── Living In Oblivion.mp3
@@ -542,6 +560,8 @@
 │   ├── Callaita.mp3
 │   ├── Dakiti.mp3
 │   ├── MIA (feat. Drake).mp3
+│   ├── Moscow Mule.lrc
+│   ├── Moscow Mule.mp3
 │   ├── Sensualidad.mp3
 │   └── Yonaguni.mp3
 ├── Bad English
@@ -711,7 +731,9 @@
 ├── Beirut
 │   └── No No No.mp3
 ├── Belinda Carlisle
-│   └── Heaven Is A Place On Earth.mp3
+│   ├── Heaven Is A Place On Earth.mp3
+│   ├── I Get Weak.lrc
+│   └── I Get Weak.mp3
 ├── Belle and Sebastian
 │   ├── Another Sunny Day.mp3
 │   ├── Get Me Away from Here_ I'm Dying.mp3
@@ -729,6 +751,9 @@
 │   ├── Illusion.mp3
 │   ├── Insomnia.mp3
 │   └── Satisfaction.mp3
+├── Beret
+│   ├── Beso robado.lrc
+│   └── Beso robado.mp3
 ├── Berlin
 │   └── Take My Breath Away.mp3
 ├── Berliner Philharmoniker
@@ -773,6 +798,8 @@
 │   └── bad guy (with Justin Bieber).mp3
 ├── Bill madley
 │   └── He Ain't Heavy.mp3
+├── Bill Monroe & The Bluegrass Boys
+│   └── The Long Black Veil.mp3
 ├── Billy Idol
 │   ├── Dancing With My Self.mp3
 │   ├── Eyes Without A Face.mp3
@@ -808,10 +835,15 @@
 │   ├── Nathy Peluso Bzrp Music Sessions, Vol. 36.mp3
 │   ├── Nicki Nicole_ Bzrp Music Sessions, Vol. 13.mp3
 │   ├── Nicky Jam Bzrp Music Sessions, Vol. 41.mp3
+│   ├── Paulo Londra_ Bzrp Music Sessions, Vol. 23.lrc
+│   ├── Paulo Londra_ Bzrp Music Sessions, Vol. 23.mp3
+│   ├── Quevedo_ Bzrp Music Sessions, Vol. 52.lrc
+│   ├── Quevedo_ Bzrp Music Sessions, Vol. 52.mp3
 │   ├── Tiago PZK_ Bzrp Music Sessions, Vol. 48.lrc
 │   ├── Tiago PZK_ Bzrp Music Sessions, Vol. 48.mp3
 │   ├── Trueno_ Bzrp Freestyle Sessions, Vol. 6.mp3
-│   └── Trueno_ Bzrp Music Sessions, Vol. 16.mp3
+│   ├── Trueno_ Bzrp Music Sessions, Vol. 16.mp3
+│   └── Villano Antillano_ Bzrp Music Sessions, Vol. 51.mp3
 ├── Black eye pease
 │   ├── Boom Boom Pow.mp3
 │   ├── Don't Lie.mp3
@@ -869,7 +901,19 @@
 │   ├── Peter Gunn Theme.mp3
 │   └── Sweet Home Chicago.mp3
 ├── Blur
-│   └── Song2.mp3
+│   ├── Ghost Ship.lrc
+│   ├── Ghost Ship.mp3
+│   ├── Girls & Boys.lrc
+│   ├── Girls & Boys.mp3
+│   ├── Ice Cream Man.lrc
+│   ├── Ice Cream Man.mp3
+│   ├── Mirrorball.lrc
+│   ├── Mirrorball.mp3
+│   ├── Ong Ong.lrc
+│   ├── Ong Ong.mp3
+│   ├── Song2.mp3
+│   ├── Thought I Was a Spaceman.lrc
+│   └── Thought I Was a Spaceman.mp3
 ├── Bobby Caldwell
 │   └── What You Won't Do for Love.mp3
 ├── Bob Dylan
@@ -921,6 +965,8 @@
 ├── Borgore
 │   ├── Decisions.mp3
 │   └── Unicorn Zombie Apocalypse.mp3
+├── Boris Esteban Bernal
+│   └── Mi Mañana (Acústico) [Digimon Tamers Ending Latino].mp3
 ├── Bossa Nova
 │   └── Fool To Cry.mp3
 ├── Boulevard
@@ -938,6 +984,8 @@
 │   └── Lonely Town.mp3
 ├── Breakbot
 │   └── Baby I'm Yours (feat. Irfane).mp3
+├── Brian Eno
+│   └── St Elmo's Fire.mp3
 ├── Brian may
 │   └── To Much Love Will Kill You.mp3
 ├── Brigitte Engerer
@@ -1237,6 +1285,10 @@
 │   └── Toop Toop.mp3
 ├── CASTIELO
 │   └── Party Up.mp3
+├── Catherine Vergnes
+│   ├── Adicta.mp3
+│   ├── Jinete Campero.mp3
+│   └── Vamo Vamo.mp3
 ├── Cat stevens
 │   ├── Father And Son.mp3
 │   ├── Love Is In The Air.mp3
@@ -1246,6 +1298,9 @@
 │   ├── A Veces Vuelvo.mp3
 │   ├── Magia Veneno..mp3
 │   └── Seguir Viviendo Sin Tu Amor.mp3
+├── Cecilia Bartoli
+│   ├── Nina, o sia la Pazza per Amore _ Paisiello_ Nina, o sia la Pazza per Amore - Il mio ben quando verrà.lrc
+│   └── Nina, o sia la Pazza per Amore _ Paisiello_ Nina, o sia la Pazza per Amore - Il mio ben quando verrà.mp3
 ├── Cee-Lo Green
 │   └── Fuck You.mp3
 ├── Celeste Carballo
@@ -1257,6 +1312,11 @@
 │   └── The Power Of Love.mp3
 ├── Central line
 │   └── Walking Into Sunshine.mp3
+├── Cetu Javu
+│   ├── Adonde.mp3
+│   ├── Have In Mind.mp3
+│   ├── Por Qué.mp3
+│   └── Situations.mp3
 ├── Chaos Chaos
 │   ├── Bad Memories.mp3
 │   └── Do You Feel It.mp3
@@ -1413,8 +1473,12 @@
 │   └── Sergei Rachmaninoff - Ii. Adagio Sostenut.mp3
 ├── Claude Debussy
 │   └── Claire De Lune.mp3
+├── Claudia Bramnfsette
+│   └── Yo Te Atrapo, Tu Me Atrapas.mp3
 ├── Clean Bandit
 │   └── Symphony.mp3
+├── Climie Fisher
+│   └── Love Changes (Everything).mp3
 ├── CNCO
 │   └── Reggaeton Lento.mp3
 ├── Cock Robin
@@ -1643,6 +1707,18 @@
 ├── Dalex
 │   ├── Cuaderno.mp3
 │   └── Pa Mí (Remix).mp3
+├── Dance With the Dead
+│   ├── 10 - A New Fear.mp3
+│   ├── 1 - March of the Dead.mp3
+│   ├── 2 - Firebird.mp3
+│   ├── 3 - Hex.mp3
+│   ├── 4 - Sledge.mp3
+│   ├── 5 - Kiss of the Creature.mp3
+│   ├── 6 - Wyrm of Doom.mp3
+│   ├── 7 - Start the Thaw.mp3
+│   ├── 8 - I'm Your Passenger.mp3
+│   ├── 9 - Nebula.mp3
+│   └── There's a Storm Coming.mp3
 ├── Dan Gibson
 │   ├── Adoro Te Devote.mp3
 │   ├── Arctic Chill.mp3
@@ -1753,6 +1829,9 @@
 │   └── The Veldt.mp3
 ├── Dead or Alive
 │   └── You Spin Me Round.mp3
+├── Dead Or Alive
+│   ├── You Spin Me Round (Like a Record) (Rip It Up Version).lrc
+│   └── You Spin Me Round (Like a Record) (Rip It Up Version).mp3
 ├── Debbie Gibson
 │   ├── Foolish Beat.mp3
 │   ├── Lost In Your Eyes.mp3
@@ -1779,6 +1858,8 @@
 │   └── Take The Stairs.mp3
 ├── Demi Lovato
 │   └── Heart Attack.mp3
+├── Dennis Russell Davies
+│   └── Akhnaten _ Act II, Scene 2_ Akhnaten and Nefertiti.mp3
 ├── Deorro
 │   ├── Bailar.mp3
 │   ├── Burn Out.mp3
@@ -3155,6 +3236,8 @@
 │   └── Good Times (feat. Triciq).mp3
 ├── DMA's
 │   └── Believe (Triple J Like A Version).mp3
+├── Dmitri Hvorostovsky
+│   └── Rigoletto, Act III_ V'ho ingannato... Colpevole fui.mp3
 ├── Doctor p
 │   ├── Big Boss.mp3
 │   ├── Flying Spaghetti Monster.mp3
@@ -3176,11 +3259,26 @@
 │   ├── Love To Love You Baby.mp3
 │   ├── She Works Hard For The Money.mp3
 │   └── This Time I Know It's For Real.mp3
+├── Donnell Pitman
+│   └── Burning Up.mp3
 ├── Donny Osmond
 │   └── I'll Make a Man Out of You.mp3
 ├── D.O.N.S
 │   ├── Drop The Gun.mp3
 │   └── Pump Up The Jam.mp3
+├── Dope Lemon
+│   ├── 10 - Best Girl.mp3
+│   ├── 1 - Marinade.mp3
+│   ├── 2 - Uptown Folks.mp3
+│   ├── 3 - Fuck Things Up.mp3
+│   ├── 4 - Coyote.mp3
+│   ├── 5 - How Many Times.mp3
+│   ├── 6 - Stonecutters.mp3
+│   ├── 7 - Honey Bones.mp3
+│   ├── 8 - The Way You Do.mp3
+│   └── 9 - Won't Let You Go.mp3
+├── Dorian Zero
+│   └── In Transit to Bermuda.mp3
 ├── Doris
 ├── DR
 │   └── Around My Drean.mp3
@@ -3304,7 +3402,23 @@
 │   ├── My Console.mp3
 │   └── Put Your Hands Up In The Air.mp3
 ├── El Cuarteto de Nos
+│   ├── 1 - Flan.lrc
+│   ├── 1 - Flan.mp3
 │   ├── 21 De Septiembre.mp3
+│   ├── 2 - Rorschach.lrc
+│   ├── 2 - Rorschach.mp3
+│   ├── 3 - Frankenstein Posmo.lrc
+│   ├── 3 - Frankenstein Posmo.mp3
+│   ├── 4 - Maldito Show.lrc
+│   ├── 4 - Maldito Show.mp3
+│   ├── 5 - Chivo Expiatorio.lrc
+│   ├── 5 - Chivo Expiatorio.mp3
+│   ├── 6 - Fiesta en lo del Dr. Hermes.lrc
+│   ├── 6 - Fiesta en lo del Dr. Hermes.mp3
+│   ├── 7 - Cinturón Gris.lrc
+│   ├── 7 - Cinturón Gris.mp3
+│   ├── 8 - La Ciudad Sin Alma.lrc
+│   ├── 8 - La Ciudad Sin Alma.mp3
 │   ├── Al Cielo No.mp3
 │   ├── Algo Mejor Que Hacer.mp3
 │   ├── Apocalipsis Zombi.mp3
@@ -3375,6 +3489,11 @@
 │   ├── Natación.mp3
 │   ├── Parque Acuático.mp3
 │   └── Planeta Numir.mp3
+├── Ella Fitzgerald
+│   ├── Dream a Little Dream of Me.lrc
+│   ├── Dream a Little Dream of Me.mp3
+│   ├── Dream A Little Dream Of Me (Single Version).lrc
+│   └── Dream A Little Dream Of Me (Single Version).mp3
 ├── Ellie Goulding
 │   └── Burn.mp3
 ├── Elliott Smith
@@ -3647,7 +3766,9 @@
 │   ├── Last Ones Standing.mp3
 │   └── Perfect Replacement.mp3
 ├── Extreme
-│   └── More Than Words.mp3
+│   ├── More Than Words.mp3
+│   ├── Play With Me.lrc
+│   └── Play With Me.mp3
 ├── Exurb1a
 │   ├── Aquarius (Regina Spektor Cover).mp3
 │   ├── A Song About Rockets.mp3
@@ -3733,6 +3854,9 @@
 │   └── 9 - Parisien.mp3
 ├── Finatticz
 │   └── Don't Drop That Thun Thun.mp3
+├── Fine Young Cannibals
+│   ├── She Drives Me Crazy (Remastered).lrc
+│   └── She Drives Me Crazy (Remastered).mp3
 ├── Finley Quaye
 │   └── Dice.mp3
 ├── Fito Páez
@@ -3905,6 +4029,8 @@
 │   └── Technodrome.mp3
 ├── Future
 │   └── Mask Off.mp3
+├── Gabriela Vega
+│   └── Over Soul.mp3
 ├── Galantis
 │   ├── Runaway (U & I).mp3
 │   └── You (Original Mix).mp3
@@ -4551,6 +4677,11 @@
 │   ├── Welcome To The World Of The Plastic Beach.mp3
 │   ├── White Flag.mp3
 │   └── White Light.mp3
+├── Gothic Storm
+│   ├── Killer Klown.mp3
+│   └── Quantum Deviations.mp3
+├── Gothic Storm Music
+│   └── Night Of The Stabs.mp3
 ├── Gotye
 │   └── Somebody That I Used To Know.mp3
 ├── Gowan
@@ -4847,6 +4978,8 @@
 │   ├── All I Wanna Do Is Make Love To You.mp3
 │   ├── Alone.mp3
 │   ├── Barracuda.mp3
+│   ├── These Dreams.lrc
+│   ├── These Dreams.mp3
 │   └── Where Are You Now.mp3
 ├── Heartless Bastards
 │   └── Only For You.mp3
@@ -4859,6 +4992,8 @@
 │   └── The Obeisant Vine Original.mp3
 ├── Herbert von Karajan
 │   └── An der schönen blauen Donau, Op.314.mp3
+├── Hipbone Slim
+│   └── Legless.mp3
 ├── Hiperborea
 │   ├── Act II Tableau 3_ Variation 2_ Dance of the Sugar-Plum Fairy.mp3
 │   ├── Also sprach Zarathustra, Op.30, TrV 176 _ Prelude (Sonnenaufgang).mp3
@@ -4930,6 +5065,8 @@
 │   └── The Power Of Love.mp3
 ├── Humman Lee
 │   └── Don't You Want Me.mp3
+├── Huw Lloyd-Langton
+│   └── Got Your Number.mp3
 ├── Icehouse
 │   └── No Promises.mp3
 ├── ID
@@ -5099,6 +5236,8 @@
 │   └── You've Changed.mp3
 ├── Jackson Browne
 │   └── Stay.mp3
+├── Jack Strachey
+│   └── Bond Street Bounce.mp3
 ├── Jack U
 │   ├── Take U There.mp3
 │   └── To U.mp3
@@ -5111,6 +5250,8 @@
 │   ├── Isn't She Lovely.mp3
 │   ├── Saviour.mp3
 │   └── You And I.mp3
+├── Jade
+│   └── Olvida la Amargura (Ranma 1_2).mp3
 ├── Jake Chudnow
 │   ├── 145 (Poodles).mp3
 │   ├── Banana.mp3
@@ -5168,6 +5309,8 @@
 │   └── Piano Sonata No. 14 in C sharp minor, Op. 27, No. 2, _Moonlight__ I. Adagio sostenuto.mp3
 ├── Jeremy Olander
 │   └── Billinghurst (Original Mix).mp3
+├── Jerry Burnham
+│   └── California Baby.mp3
 ├── Jerry Goldsmith
 │   ├── Attack At The Wall.mp3
 │   ├── Blossoms.mp3
@@ -5191,6 +5334,8 @@
 │   └── Chain Hang Low.mp3
 ├── Jim Diamon
 │   └── I Should Have Known Bette.mp3
+├── Jim Diamond
+│   └── I Should Have Known Better (Rerecorded).mp3
 ├── Jimmy cliff
 │   ├── I Can See Clearly Now.mp3
 │   ├── Reagge Night.mp3
@@ -5216,6 +5361,8 @@
 │   ├── Thoughts.mp3
 │   ├── Undersea.mp3
 │   └── Wander.mp3
+├── Joan Baez
+│   └── Long Black Veil.mp3
 ├── Joan Osborne
 │   └── What If God Was One Of Us.mp3
 ├── Joe Cocker
@@ -5283,9 +5430,17 @@
 ├── John Newman
 │   └── Love Me Again.mp3
 ├── Johnny Cash
-│   └── Hurt.mp3
+│   ├── Hurt.mp3
+│   └── Long Black Veil.mp3
+├── Johnny Hates Jazz
+│   ├── Shattered Dreams (Remastered).lrc
+│   ├── Shattered Dreams (Remastered).mp3
+│   └── Turn Back The Clock (2008 Digital Remaster).mp3
 ├── Johnny Jewel
 │   └── Tell Me (Feat. Saoirse Ronan).mp3
+├── John Waite
+│   ├── Missing You.lrc
+│   └── Missing You.mp3
 ├── Jonas Blue
 │   ├── Fast Car.mp3
 │   └── Perfect Strangers.mp3
@@ -5334,9 +5489,13 @@
 │   ├── Mille Regretz.mp3
 │   └── Missa Pange Lingua.mp3
 ├── Journey
-│   └── Dont Stop Believing.mp3
+│   ├── Dont Stop Believing.mp3
+│   └── Separate Ways (Worlds Apart) (Bryce Miller_Alloy Tracks Remix).mp3
 ├── Jovenes Pordioseros
 │   └── Descontrolado.mp3
+├── Joyner Lucas
+│   ├── Stranger Things.lrc
+│   └── Stranger Things.mp3
 ├── Juanes
 │   ├── A Dios Le Pido.mp3
 │   ├── Es Por Ti.mp3
@@ -5417,6 +5576,9 @@
 ├── KAROL G
 ├── Karsh kale
 │   └── Island.mp3
+├── Kate Bush
+│   ├── Running Up That Hill (A Deal With God).lrc
+│   └── Running Up That Hill (A Deal With God).mp3
 ├── Kate Ryan
 │   └── Ella Elle La.mp3
 ├── Kate Voegele
@@ -5502,6 +5664,8 @@
 │   ├── Supersoaker.mp3
 │   └── Use Somebody.mp3
 ├── Kiss
+│   ├── Detroit Rock City.lrc
+│   ├── Detroit Rock City.mp3
 │   ├── I Was Made For Loving You.mp3
 │   ├── Lick It Up.mp3
 │   ├── OneNote Table Of Contents.onetoc2
@@ -5522,6 +5686,8 @@
 │   ├── Fresh.mp3
 │   ├── Get Down On It.mp3
 │   └── Ladies Night.mp3
+├── Kronol
+│   └── KRONOLOGIA.mp3
 ├── Krosia
 │   ├── Dive.mp3
 │   └── Mimosa.mp3
@@ -5538,6 +5704,8 @@
 │   ├── Stargazing.mp3
 │   ├── Stay.mp3
 │   └── Stole The Show.mp3
+├── Kyle Dixon & Michael Stein
+│   └── Stranger Things.mp3
 ├── Kylie Minogue
 │   └── Can't Get You Out Of My Head.mp3
 ├── Labi Siffre
@@ -5658,6 +5826,9 @@
 │   ├── Moanin'.mp3
 │   ├── The Sidewinder.mp3
 │   └── You Go To My Head.mp3
+├── Lefty Frizzell
+│   ├── Long Black Veil (Album Version).lrc
+│   └── Long Black Veil (Album Version).mp3
 ├── Lemaitre
 │   └── Closer.mp3
 ├── Lenny Kravitz
@@ -5704,6 +5875,9 @@
 ├── Leonardo San Juan
 │   ├── A Suffering World Beneath The Flowers.mp3
 │   └── Gloria.mp3
+├── Leonel Garcia
+│   ├── Te Vi Venir (Acústico).lrc
+│   └── Te Vi Venir (Acústico).mp3
 ├── Leon Gieco
 │   ├── El Ángel De La Bicicleta.mp3
 │   ├── El Fantasma De Canterville.mp3
@@ -5893,8 +6067,12 @@
 │   └── Day And Night.mp3
 ├── Loco Mia
 │   └── Locomia.mp3
+├── London Philharmonic Orchestra
+│   └── Claire de Lune.mp3
 ├── London Symphony Orchestra
 │   └── Symphony No. 3 in A Minor, Op. 56, MWV N 18 _Scottish_ _ 4. Allegro vivacissimo - Allegro maestoso assai.mp3
+├── L'Orchestre National du Bolchoï
+│   └── Ivan Soussanine_ Acte I_ Cavatine et rondo d'Antonida.mp3
 ├── Lorde
 │   ├── Everybody Wants To Rule The World.mp3
 │   ├── Everybody Wants To Rule The World Remix.mp3
@@ -6101,6 +6279,12 @@
 │   ├── Get Free.mp3
 │   ├── Light It Up.mp3
 │   └── Light It Up Remix.mp3
+├── Makeup And Vanity Set
+│   ├── Father Son.mp3
+│   ├── Into Hell.mp3
+│   ├── Sentinels.mp3
+│   ├── The Man Appears.mp3
+│   └── The Wanderer.mp3
 ├── Maluma
 │   ├── 11 PM.mp3
 │   ├── Corazon.flac
@@ -6211,6 +6395,8 @@
 │   ├── The Lecture's Finished.mp3
 │   ├── The Students & John.mp3
 │   └── Where's John'.mp3
+├── Mark Isham
+│   └── The Hitcher - End Credits.mp3
 ├── Mark Knopfler
 │   └── Philadelphia.mp3
 ├── Maroon 5
@@ -6256,6 +6442,8 @@
 │   ├── Madan.mp3
 │   ├── Ready 2 Go.mp3
 │   └── The Night Out.mp3
+├── Martin Turnovsky
+│   └── III. Finale_ Allegro assai vivace.mp3
 ├── Marty balin
 │   └── Hearts.mp3
 ├── Marvin Gaye
@@ -6379,6 +6567,8 @@
 │   └── Maniac.mp3
 ├── Michael W Smith
 │   └── I Will Be Here For You.mp3
+├── Michel Rubini
+│   └── Marion Face.mp3
 ├── Michel telo
 │   └── Ai Se Eu Te Pego (Assim Você Me Mata).mp3
 ├── Midnight Oil
@@ -6465,6 +6655,17 @@
 │   └── Every Body Is Like Sunday.mp3
 ├── Morten Gunnar Larsen
 │   └── The Entertainer.mp3
+├── Mort Garson
+│   ├── 10 - Music to Soothe the Savage Snake Plant.mp3
+│   ├── 1 - Plantasia.mp3
+│   ├── 2 - Symphony for a Spider Plant.mp3
+│   ├── 3 - Baby's Tears Blues.mp3
+│   ├── 4 - Ode to an African Violet.mp3
+│   ├── 5 - Concerto for Philodendron & Pothos.mp3
+│   ├── 6 - Rhapsody in Green.mp3
+│   ├── 7 - Swingin' Spathiphyllums.mp3
+│   ├── 8 - You Don't Have to Walk a Begonia.mp3
+│   └── 9 - A Mellow Mood for Maidenhair.mp3
 ├── Motivos Olvidables
 │   ├── Alucinando.mp3
 │   ├── Asi.mp3
@@ -6691,6 +6892,9 @@
 │   ├── Starlight.mp3
 │   ├── Stockholm Syndrome.mp3
 │   └── Uprising.mp3
+├── Musical Youth
+│   ├── Pass The Dutchie.lrc
+│   └── Pass The Dutchie.mp3
 ├── My chemical romance
 │   ├── Na Na Na.mp3
 │   └── Teenager.mp3
@@ -6713,6 +6917,8 @@
 │   └── Seven Seconds Away.mp3
 ├── Nero
 │   └── Satisfy.mp3
+├── Netinho
+│   └── Total (Total).mp3
 ├── Neutre
 │   └── Cinema.mp3
 ├── New Order
@@ -6744,6 +6950,10 @@
 │   └── Tolouse.mp3
 ├── Nico and Vinz
 │   └── Am I Wrong.mp3
+├── Nicola Cruz
+│   └── Colibria.mp3
+├── Nicolas Bedos
+│   └── L'Armée Rouge est la plus forte.mp3
 ├── Nigel Kennedy
 │   ├── Vivaldi_ The Four Seasons, Violin Concerto in G Minor, Op. 8 No. 2, RV 315 _Summer__ III. Presto.mp3
 │   └── Vivaldi_ Violin Concerto in G Minor, RV 315 _L'estate_ (No. 2 from _Il cimento dell'armonia e dell'inventione_, Op. 8)_ III. Prest.mp3
@@ -6804,6 +7014,17 @@
 ├── Nsync
 │   ├── Bye Bye Bye.mp3
 │   └── Pop Singl.mp3
+├── Nu Genea
+│   ├── 1 - Bar Mediterraneo.mp3
+│   ├── 2 - Tienaté.lrc
+│   ├── 2 - Tienaté.mp3
+│   ├── 3 - Gelbi.mp3
+│   ├── 4 - Marechià.lrc
+│   ├── 4 - Marechià.mp3
+│   ├── 5 - Straniero.mp3
+│   ├── 6 - Vesuvio.mp3
+│   ├── 7 - Rire.mp3
+│   └── 8 - La Crisi.mp3
 ├── Oasis
 │   ├── Comercial 2011 Coca Cola Whatever Oasis.mp3
 │   ├── Don't Look Back In Anger.mp3
@@ -6840,6 +7061,16 @@
 │   ├── Gecko (Overdrive).mp3
 │   ├── Koala.mp3
 │   └── Melody (Original Mix).mp3
+├── Omar Rodríguez-López
+│   ├── Colmillo Castrado.mp3
+│   ├── Las Flores Con Limón.mp3
+│   ├── Locomocion Capilar.mp3
+│   ├── Lorentz.mp3
+│   ├── Los Tentáculos De La Libélula.mp3
+│   ├── Miel Del Ojo.mp3
+│   ├── Poincaré.mp3
+│   ├── Un Buitre Amable Me Pico.mp3
+│   └── Vasco Da Gama.mp3
 ├── OMFG
 │   ├── Hello.mp3
 │   └── I Love You.mp3
@@ -6941,9 +7172,26 @@
 │   ├── L-Gante Rkt.lrc
 │   └── L-Gante Rkt.mp3
 ├── Parcels
+│   ├── Bemyself - from Hansa Studios, Berlin.mp3
+│   ├── Closetowhy - from Hansa Studios, Berlin.mp3
+│   ├── Comedown - from Hansa Studios, Berlin.mp3
 │   ├── Elude - from Hansa Studios, Berlin.mp3
+│   ├── Enter - from Hansa Studios, Berlin.mp3
+│   ├── Everyroad - from Hansa Studios, Berlin.mp3
+│   ├── Gamesofluck - from Hansa Studios, Berlin.mp3
+│   ├── IknowhowIfeel - from Hansa Studios, Berlin.mp3
 │   ├── IknowhowIfeel.mp3
-│   └── Redline - from Hansa Studios, Berlin.mp3
+│   ├── Intrude - from Hansa Studios, Berlin.mp3
+│   ├── Lightenup - from Hansa Studios, Berlin.mp3
+│   ├── Myenemy - from Hansa Studios, Berlin.mp3
+│   ├── Overnight - from Hansa Studios, Berlin.lrc
+│   ├── Overnight - from Hansa Studios, Berlin.mp3
+│   ├── Redline - from Hansa Studios, Berlin.mp3
+│   ├── Retuned - from Hansa Studios, Berlin.mp3
+│   ├── Tieduprightnow - from Hansa Studios, Berlin.mp3
+│   ├── Untried - from Hansa Studios, Berlin.mp3
+│   ├── Withorwithout - from Hansa Studios, Berlin.mp3
+│   └── Yourfault - from Hansa Studios, Berlin.mp3
 ├── Passenger
 │   ├── All The Little Lights.mp3
 │   ├── Circles.mp3
@@ -7116,7 +7364,8 @@
 │   ├── 3 - Philip Glass - Islands.mp3
 │   ├── 4 - Philip Glass - Rubric.mp3
 │   ├── 5 - Philip Glass - Facades.mp3
-│   └── 6 - Philip Glass - Closing.mp3
+│   ├── 6 - Philip Glass - Closing.mp3
+│   └── Prophecies.mp3
 ├── Pigeon John
 │   ├── Before We're Gone.mp3
 │   ├── Hey You.mp3
@@ -7220,9 +7469,6 @@
 ├── Playing For Change
 │   ├── Stand By Me.mp3
 │   └── War No More Trouble.mp3
-├── Playlists
-│   ├── 80s.m3u
-│   └── synth.m3u
 ├── P.Lion
 │   └── Happy Children.mp3
 ├── Pocahontas
@@ -7443,6 +7689,8 @@
 │   ├── La Leyenda Del Hada Y El Mago.mp3
 │   └── Mujer Amante.mp3
 ├── Rauw Alejandro
+│   ├── DIME QUIÉN____.lrc
+│   ├── DIME QUIÉN____.mp3
 │   ├── Todo De Ti.lrc
 │   └── Todo De Ti.mp3
 ├── Ray Charles
@@ -7519,6 +7767,9 @@
 │   ├── Me Va A Extrañar.mp3
 │   ├── Volver.mp3
 │   └── Yo Que Te Ame Con Ilusion.mp3
+├── Ricardo Silva
+│   ├── Chala Head Chala (Opening _D.B.Z._ Versión Clásica).mp3
+│   └── La Canción de los Héroes (Caballeros del Zodiaco).mp3
 ├── Richard Cheese
 │   ├── Baby Got Back (Sir Mix A'lot Cover).mp3
 │   ├── Beat It.mp3
@@ -7562,6 +7813,9 @@
 │   ├── Vente Pa' Ca.mp3
 │   ├── Volveras.mp3
 │   └── Vuelve.mp3
+├── Ricky Nelson
+│   ├── Travelin' Man (Remastered).lrc
+│   └── Travelin' Man (Remastered).mp3
 ├── Ric Ocasek
 │   └── Feeling's Got To Stay.mp3
 ├── Rihanna
@@ -7662,6 +7916,8 @@
 │   ├── Con Altura.mp3
 │   └── LA FAMA.mp3
 ├── ROSALÍA
+│   ├── DESPECHÁ.lrc
+│   ├── DESPECHÁ.mp3
 │   └── LA FAMA.mp3
 ├── Rosana
 │   ├── A Fuego Lento.mp3
@@ -7866,11 +8122,24 @@
 │   └── Stitches.mp3
 ├── Sheena Easton
 │   └── Morning Train.mp3
+├── Sheryl Crow
+│   ├── All I Wanna Do.lrc
+│   └── All I Wanna Do.mp3
 ├── Shift K3Y
 │   ├── I Know.mp3
 │   └── Touch.mp3
 ├── Shigeru Umebayashi
 │   └── Yumeji's Theme.mp3
+├── Shinichi Atobe
+│   ├── 1 - Intro.mp3
+│   ├── 2 - Love of plastic 1.mp3
+│   ├── 3 - Love of plastic 5.mp3
+│   ├── 4 - Love of plastic 8.mp3
+│   ├── 5 - Beyond the pale.mp3
+│   ├── 6 - Loop 6.mp3
+│   ├── 7 - Love of plastic 6.mp3
+│   ├── 8 - Ocean 2.mp3
+│   └── 9 - Severina.mp3
 ├── Shock One
 │   └── The Sun Vip.mp3
 ├── Shotgun Willy
@@ -8034,6 +8303,9 @@
 │   └── Music Sounds Better With You (Radio Edit).mp3
 ├── Starforce
 │   └── Age of Nano.mp3
+├── Starpoint
+│   ├── Object of My Desire.lrc
+│   └── Object of My Desire.mp3
 ├── Starsailor
 │   ├── Four To The Floor.mp3
 │   └── Four To The Floor (Remix).mp3
@@ -8179,6 +8451,8 @@
 │   └── The Logical Song.mp3
 ├── Surfistas Del Sistema
 │   └── La magia esta en tu piel.mp3
+├── S U R V I V E
+│   └── Cutthroat.mp3
 ├── Suzanne Vega
 │   └── Luka.mp3
 ├── Swedish House Mafia
@@ -8199,6 +8473,9 @@
 │   ├── Break Your Heart.mp3
 │   ├── Dynamite.mp3
 │   └── Hangover.mp3
+├── Talking Heads
+│   ├── Psycho Killer (2005 Remaster).lrc
+│   └── Psycho Killer (2005 Remaster).mp3
 ├── Tame Impala
 │   ├── Elephant.mp3
 │   ├── Eventually.mp3
@@ -8267,9 +8544,13 @@
 │   └── When I Was Young.mp3
 ├── The Asteroids Galaxy Tour
 │   └── The Golden Age.mp3
+├── The Band
+│   ├── Long Black Veil (Remastered).lrc
+│   └── Long Black Veil (Remastered).mp3
 ├── The Bangles
 │   └── Eternal Flame.mp3
 ├── The Beach Boys
+│   ├── California Dreamin'.mp3
 │   └── Wouldn't It Be Nice.mp3
 ├── The Bolshoi
 │   └── Sunday Morning.mp3
@@ -8302,6 +8583,8 @@
 │   └── Romeo and Juliet, Op. 64 _ Act 1 _ Dance Of The Knights.mp3
 ├── The Cloud Room
 │   └── Hey Now Now.mp3
+├── The Cramps
+│   └── Fever.mp3
 ├── The Cranberries
 │   ├── Animal Instinct.mp3
 │   ├── Do You Have To Let It Linger.mp3
@@ -8351,7 +8634,11 @@
 │   ├── Build.mp3
 │   └── Happy Hour.mp3
 ├── The Human League
-│   └── Dont You Want Me Baby.mp3
+│   ├── Dont You Want Me Baby.mp3
+│   └── Humman Lee
+│       └── Don't You Want Me.mp3
+├── The Interior Castle
+│   └── Diamonds and Emeralds.mp3
 ├── The Jane Austen Era
 │   └── Menuet No. 5, Op. 11.mp3
 ├── The Killers
@@ -8477,6 +8764,8 @@
 │   ├── Someday.mp3
 │   ├── Under Cover Of Darkness.mp3
 │   └── You Only Live Once.mp3
+├── The Surf Riders
+│   └── Surf Time.mp3
 ├── The Ting Tings
 │   ├── Be The One.mp3
 │   ├── Hands.mp3
@@ -8525,6 +8814,22 @@
 │   ├── Islands.mp3
 │   ├── On Hold.mp3
 │   └── Say Something Loving.mp3
+├── Thievery Corporation
+│   ├── Bateau Rouge (feat. Lou Lou Ghelichkhani).mp3
+│   ├── Claridad (feat. Natalia Clavier).mp3
+│   ├── Décollage (feat. Lou Lou Ghelichkhani).mp3
+│   ├── Depth of My Soul (feat. Shana Halligan).mp3
+│   ├── Firelight (feat. Lou Lou Ghelichkhani).lrc
+│   ├── Firelight (feat. Lou Lou Ghelichkhani).mp3
+│   ├── Le Coeur (feat. Lou Lou Ghelichkhani).mp3
+│   ├── Meu Nego (feat. Karina Zeviani).mp3
+│   ├── No More Disguise (feat. Lou Lou Ghelichkhani).mp3
+│   ├── Nos Dois (feat. Karina Zeviani).mp3
+│   ├── Para Sempre (feat. Elin Melgarejo).lrc
+│   ├── Para Sempre (feat. Elin Melgarejo).mp3
+│   ├── Quem Me Leva (feat. Elin Melgarejo).mp3
+│   ├── Saudade.mp3
+│   └── Sola in Citta (feat. Elin Melgarejo).mp3
 ├── Thomas Newman
 │   └── First Day.mp3
 ├── Three Doors Down
@@ -8582,6 +8887,47 @@
 │   └── Good Times.mp3
 ├── Todo Aparenta Normal
 │   └── La Dicha de los Cobardes.mp3
+├── Todos Tus Muertos
+│   ├── 10 - Mandela.mp3
+│   ├── 11 - Guantanamera_ Hijo Nuestro.mp3
+│   ├── 12 - Politicos.mp3
+│   ├── 13 - Dale Aborigen.mp3
+│   ├── 14 - Lehenbiziko Bala.mp3
+│   ├── 15 - Trece.mp3
+│   ├── 16 - Incomunicado.mp3
+│   ├── 17 - Mandela Dub.mp3
+│   ├── 18 - No Mas Apartheid.mp3
+│   ├── 1 - Andate.mp3
+│   ├── 2 - Rasta Vive.mp3
+│   ├── 3 - Se Que No _ Requebra.mp3
+│   ├── 4 - No te la Vas a Acabar.mp3
+│   ├── 5 - Todo lo Daria.mp3
+│   ├── 6 - Tu Alma Mía _ Adelita.mp3
+│   ├── 7 - Mate.mp3
+│   ├── 8 - Asesinos Profesionales.mp3
+│   ├── 9 - Jah Lion.mp3
+│   ├── Abre la Celda.mp3
+│   ├── Break On Through.mp3
+│   ├── Crisis Mundial.mp3
+│   ├── El Chupadero.mp3
+│   ├── El Espejo.mp3
+│   ├── El Féretro (En Vivo).mp3
+│   ├── El Reventón.mp3
+│   ├── El Ritmo de la Sangre.mp3
+│   ├── El Ritual de la Muerte.mp3
+│   ├── Embrujados.mp3
+│   ├── Eres Mi Vida.mp3
+│   ├── Fallas.mp3
+│   ├── Fiesta Reggae Punky (Cover de Bob Marley).mp3
+│   ├── Fuego Amigo (Sobre Bagdad).mp3
+│   ├── Herido de Muerte.mp3
+│   ├── Incomunicado.mp3
+│   ├── Medios de Confusión.mp3
+│   ├── Nuestros Hijos Son.mp3
+│   ├── Pulso.mp3
+│   ├── Sea Lo Que Sea.mp3
+│   ├── Se Que No.mp3
+│   └── Terror al Cambio.mp3
 ├── TOKiMONSTA
 │   ├── Cheese Smoothie.mp3
 │   ├── Death By Disco.mp3
@@ -8728,6 +9074,9 @@
 │   └── Hunnybee.mp3
 ├── Upgrade
 │   └── Baileys.mp3
+├── Urge Overkill
+│   ├── Girl, You'll Be a Woman Soon.lrc
+│   └── Girl, You'll Be a Woman Soon.mp3
 ├── Usher
 │   ├── DJ Got Us Falling In Love.mp3
 │   ├── More.mp3
@@ -9021,4 +9370,4 @@
     ├── Tush.lrc
     └── Tush.mp3
 
-1480 directories, 7541 files
+1551 directories, 7819 files
