@@ -2,7 +2,7 @@
 source ~/.zshrc
 SCR_PATH=$MY_FOLDER/Scripts
 
-choices="Any\nKeybr\nBurp\nCronometer\nNew Bookmark\nN26\nGalicia Contre\nGarmin\nMercadopago Contre\nGalicia Codelamp\nLichess\nInstagram\nMercadopago Codelamp\nYoutube\nTwitter\nDeemix"
+choices="Any\nKeybr\nMedia\nBurp\nCronometer\nNew Bookmark\nN26\nGalicia Contre\nGarmin\nMercadopago Contre\nGalicia Codelamp\nLichess\nInstagram\nMercadopago Codelamp\nYoutube\nTwitter\nDeemix"
 chosen=$(echo -e "$choices" | dmenu -i -p "Select Layout: " -sb "#8F7DAB")
 
 case "$chosen" in
@@ -17,6 +17,9 @@ case "$chosen" in
 	;;
 "Deemix")
 	exec brave --profile-directory="Contre" --app=http://localhost:6595
+	;;
+"Media")
+	exec brave --profile-directory="Contre" --app=http://media.contre.io
 	;;
 "Youtube")
 	exec brave --profile-directory="Contre" --app=https://youtube.com
