@@ -1,5 +1,5 @@
 ################################################################################################
-# My folder
+#/n My folder
 ################################################################################################
 if [[ `uname` == "Darwin" ]]; then
   export MY_FOLDER="/Users/contre"
@@ -11,6 +11,8 @@ fi
 # Env Variables
 ################################################################################################
 
+bindkey -v
+export KEYTIMEOUT=10
 export PASSWORD_STORE_DIR=$MY_FOLDER/Pass
 export LANG="en_US.UTF-8"
 export LC_ALL=en_US.UTF-8
@@ -34,6 +36,7 @@ antigen theme romkatv/powerlevel10k
 antigen bundle git
 antigen bundle golang
 antigen bundle zsh-users/zsh-autosuggestions
+antigen bundle jeffreytse/zsh-vi-mode
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle autojump
 antigen bundle python
