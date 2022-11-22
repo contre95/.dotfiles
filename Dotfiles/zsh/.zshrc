@@ -11,7 +11,6 @@ fi
 # Env Variables
 ################################################################################################
 
-bindkey -v
 export KEYTIMEOUT=10
 export PASSWORD_STORE_DIR=$MY_FOLDER/Pass
 export LANG="en_US.UTF-8"
@@ -36,7 +35,7 @@ antigen theme romkatv/powerlevel10k
 antigen bundle git
 antigen bundle golang
 antigen bundle zsh-users/zsh-autosuggestions
-antigen bundle jeffreytse/zsh-vi-mode
+#antigen bundle jeffreytse/zsh-vi-mode
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle autojump
 antigen bundle python
@@ -67,9 +66,10 @@ else
 	export EDITOR='nvim'
 fi
 
-################################################################################################
+# Enable vi mode
+bindkey -v
+
 # SSH Configuration with GPG
-################################################################################################
 #echo [KEYGRIP] >> ~/.gnupg/sshcontrol
 export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
 gpgconf --launch gpg-agent
