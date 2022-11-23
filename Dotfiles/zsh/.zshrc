@@ -70,7 +70,7 @@ fi
 xset r rate 250 30
 
 # Enable vi mode
-bindkey -v
+#bindkey -v
 
 # SSH Configuration with GPG
 #echo [KEYGRIP] >> ~/.gnupg/sshcontrol
