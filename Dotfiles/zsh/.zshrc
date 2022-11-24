@@ -1,9 +1,13 @@
 ################################################################################################
-#/n My folder
+# OS Specific configuration
 ################################################################################################
 if [[ `uname` == "Darwin" ]]; then
+  # My folder
   export MY_FOLDER="/Users/contre"
 else
+  # Set keyrate
+  xset r rate 250 30
+  # My folder
   export MY_FOLDER="/home/canus"
 fi
 
@@ -65,9 +69,6 @@ if [[ -n $SSH_CONNECTION ]]; then
 else
 	export EDITOR='nvim'
 fi
-
-# Set keyrate
-xset r rate 250 30
 
 # Enable vi mode
 #bindkey -v
