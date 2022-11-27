@@ -51,10 +51,10 @@ super + {1-9}
     bspc {desktop -f} '^{1-9}'
 # Go to special desktop
 super + ctrl + {6,7,8,9,0}
-    bspc desktop -f {"ﭮ","","","",""}
+    bspc desktop -f {"ﭮ","","","",""}
 # Move window to special destop and then move to that desktop
 super + shift + ctrl + {6,7,8,9,0}
-    desk={"ﭮ","","","",""} ; bspc node -d $desk; bspc desktop -f $desk
+    desk={"ﭮ","","","",""} ; bspc node -d $desk; bspc desktop -f $desk
 super + shift + {1-9}
     desk='^{1-9}' ; bspc node -d $desk; bspc desktop -f $desk
 # Iterate windows through desktops
