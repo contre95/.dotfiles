@@ -15,14 +15,14 @@ nvidia-settings -a "[gpu:0]/GPUFanControlState=1" -a "[fan:0]/GPUTargetFanSpeed=
 
 #### MONITORS ####
 bspc monitor HDMI-0 -d 1 2 3 4 5
-bspc monitor DP-4 -d 6 7 8 9 ﭮ    
+bspc monitor DP-4 -d 6 7 8 9 ﭮ     
 
 #### BSPWM custom layout | https://github.com/phenax/bsp-layout
 bsp-layout set even
 
 #### BSPWM rules ####
 bspc rule -a TelegramDesktop desktop=''
-#bspc rule -a Whatsapp desktop=''
+bspc rule -a Slack desktop=''
 bspc rule -a discord desktop='ﭮ'
 bspc rule -a Music desktop=''
 #bspc rule -a Gmail desktop=''
