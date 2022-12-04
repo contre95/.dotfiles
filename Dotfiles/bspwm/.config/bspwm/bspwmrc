@@ -52,7 +52,7 @@ bspc config focus_by_distance true
 bspc config borderless_monocle true
 bspc config history_aware_focus true
 bspc config focus_follows_pointer true
-bspc config pointer_motion_interval 40
+bspc config pointer_motion_interval 13
 bspc config pointer_action2 resize_side
 bspc config pointer_action3 resize_corner
 bspc config remove_disabled_monitors true
