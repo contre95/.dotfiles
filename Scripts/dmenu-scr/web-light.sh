@@ -2,7 +2,7 @@
 source ~/.zshrc
 SCR_PATH=$MY_FOLDER/Scripts
 
-choices="Any\nKeybr\nMedia\nBurp\nCronometer\nNew Bookmark\nN26\nGalicia Contre\nGarmin\nMercadopago Contre\nGalicia Codelamp\nLichess\nInstagram\nMercadopago Codelamp\nYoutube\nTwitter\nDeemix"
+choices="Any\nKeybr\nMedia\nBurp\nCronometer\nNew Bookmark\nN26\nHome\nGalicia Contre\nGarmin\nMercadopago Contre\nGalicia Codelamp\nLichess\nInstagram\nMercadopago Codelamp\nYoutube\nTwitter\nDeemix"
 chosen=$(echo -e "$choices" | dmenu -i -p "Select Layout: " -sb "#8F7DAB")
 
 case "$chosen" in
@@ -26,6 +26,12 @@ case "$chosen" in
 	;;
 "Lichess")
 	exec brave --profile-directory="Contre" --app=https://lichess.org
+	;;
+"Twitter")
+	exec brave --profile-directory="Contre" --app=https://twitter.com
+	;;
+"Home")
+	exec brave --profile-directory="Contre" --app=http://home.contre.io
 	;;
 "Twitter")
 	exec brave --profile-directory="Contre" --app=https://twitter.com
