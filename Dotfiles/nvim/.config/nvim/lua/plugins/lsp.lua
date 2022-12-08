@@ -191,28 +191,29 @@ lspconfig.sqls.setup({
   capabilities = capabilities,
 })
 
--- Dart 
-require("flutter-tools").setup {
-    flutter_path="/usr/bin/dart",
-	lsp = {
-		on_attach = on_attach,
-		    color = { -- show the derived colours for dart variables
-      enabled = true, -- whether or not to highlight color variables at all, only supported on flutter >= 2.10
-      virtual_text = true, -- show the highlight using virtual text
-      virtual_text_str = "■", -- the virtual text character to highlight
-    },
-	},
-  debugger = {
-    enabled = true,
-    run_via_dap = false,
-  },
-  dev_log = {
-    enabled = true,
-  },
-	-- widget_guides = {
-	-- 	enabled = true,
-	-- },
-}
+-- -- Dart 
+-- require("flutter-tools").setup {
+--     flutter_path="/usr/bin/dart",
+-- 	lsp = {
+-- 		on_attach = on_attach,
+-- 		    color = { -- show the derived colours for dart variables
+--       enabled = true, -- whether or not to highlight color variables at all, only supported on flutter >= 2.10
+--       virtual_text = true, -- show the highlight using virtual text
+--       virtual_text_str = "■", -- the virtual text character to highlight
+--     },
+-- 	},
+--   debugger = {
+--     enabled = true,
+--     run_via_dap = false,
+--   },
+--   dev_log = {
+--     enabled = true,
+--   },
+-- 	-- widget_guides = {
+-- 	-- 	enabled = true,
+-- 	-- },
+-- }
+
 -- Typescript
 --lspconfig.tsserver.setup({ capabilities = capabilities })
 

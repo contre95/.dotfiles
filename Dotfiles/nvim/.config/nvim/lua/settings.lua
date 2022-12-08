@@ -36,3 +36,4 @@ opt.relativenumber = true
 opt.fileencoding = 'utf-8'
 opt.fillchars='eob: '
 --opt.foldexpr = "nvim_treesitter#foldexpr()"
+--vim.g.rasmus_bold_keywords = true

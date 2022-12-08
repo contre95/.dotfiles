@@ -1,4 +1,4 @@
-MusicDir = /mnt/NFS/Music/Music/Playlists
+MusicDir = /home/canus/Music
 StartInMusicDir = yes
 ShowStreamErrors = yes
 
