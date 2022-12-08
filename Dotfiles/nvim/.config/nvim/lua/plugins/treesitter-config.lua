@@ -2,18 +2,29 @@ local ts_config = require("nvim-treesitter.configs")
 
 ts_config.setup {
   ensure_installed = {
-    "javascript",
-    "html",
-    --"go",
+    "go",
     "css",
-    "bash",
+    "hcl",
     "lua",
-    --"json",
-    "python"
+    "bash",
+    "help",
+    "html",
+    "json",
+    "rust",
+    "toml",
+    "yaml",
+    "python",
+    "rego",
+    "markdown",
+    --"proto",
+    --"graphql",
+    "gitcommit",
+    "gitignore",
+    "javascript",
   },
   highlight = {
     enable = true,
     use_languagetree = true,
-    additional_vim_regex_highlighting = false,
+    additional_vim_regex_highlighting = true,
   }
 }

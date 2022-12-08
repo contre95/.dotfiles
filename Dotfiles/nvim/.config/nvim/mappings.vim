@@ -43,16 +43,18 @@ nmap <A-C-Tab> gT
 " run current file
 nnoremap <silent> <leader>r :source %<CR>
 " Open livedown with brave (npm install -g livedown)
-nnoremap <silent> <leader>m :call jobstart(printf('livedown start %s --port 4242 --open --browser "brave --profile-directory="Contre" --app=http://localhost:4242"',@%),{'detach':1})<CR>
+nnoremap <silent> <leader>m :call jobstart(printf('livedown start %s --port 4242 --open --browser "brave --profile-directory="Contre" --app=http://localhost:4242"',@%),{'detach':1})<CR><CR>
 
 " Material Colorscheme
 " Keeping this just in case I change my mind later
-" nmap <silent> <leader>n :lua require('material.functions').toggle_style()<CR>
+"nmap <silent> <C-n> :lua require('material.functions').toggle_style()<CR><CR>
+nmap <silent> <C-n> :lua require('material.functions').toggle_style()<CR><CR>
 
-"NerdCommenter (scrooloose/nerdcommenter)
+" NerdCommenter (scrooloose/nerdcommenter)
 "-------------------------------------
-nmap <C-]> <Plug>NERDCommenterToggle <Down>
-vmap <C-]> <Plug>NERDCommenterToggle<CR>gv
+nmap <C-l> <Plug>NERDCommenterToggle <Down>
+nmap <C-A-l> <Plug>NERDCommenterToggle <Up>
+vmap <C-l> <Plug>NERDCommenterToggle<CR>gv
 
 "Schleep indention
 "-------------------------------------
@@ -63,7 +65,7 @@ vmap <C-d> <Plug>SchleppDup
 " NvimTree (kyazdani42/nvim-tree.lua)
 "-------------------------------------
 "nnoremap <leader>f :NvimTreeToggle<Enter>
-nnoremap <silent> <leader>f :lua require"nvim-tree".toggle(false, true)<Enter>
+nnoremap <silent> <C-f> :lua require"nvim-tree".toggle(false, true)<Enter>
 
 " Telescope (nvim-telescope/telescope.nvim)
 nnoremap <leader>o <cmd>Telescope find_files find_command=rg,--ignore,--hidden,--files prompt_prefix=🔍<cr>
@@ -77,9 +79,6 @@ imap <C-D> X<Esc>lbce
 " Undo with Crtl+z / Redo with Crtl+Shif+z
 :map <C-S-z> :redo
 :map <C-z> u
-
-"Find with Ctrl+f
-:map <C-f> /
 
 "Find and Replace with Ctrl+r
 :map <C-r> :%s/

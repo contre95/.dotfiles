@@ -14,9 +14,11 @@ vim.cmd 'colorscheme rasmus'
 
 local cusotm_highlights = {
   'highlight Function guifg=' .. c.green,
-  --'highlight jsonNull guifg=' .. c.bright_black,
-  --'highlight jsonString guifg=' .. c.green,
-  --'highlight jsonKeyword guifg=' .. c.blue,
+  'highlight @variable guifg=' .. c.white,
+  'highlight @label guifg=' .. c.blue,
+  'highlight @number guifg=' .. c.yellow,
+  'highlight @boolean guifg=' .. c.magenta,
+  'highlight @constant.builtin guifg=' .. c.bright_black,
 }
 
 for _, hicmd in ipairs(cusotm_highlights) do

@@ -30,8 +30,12 @@ require("plugins/telescope-config")
 require("plugins/bufferline-config")
 require("plugins/statusline-config")
 require("plugins/treesitter-config")
-require("plugins/colorscheme-config")
 require("plugins/quick-scope-config")
+require("plugins/colorscheme-config")
+
+-- Colorscheme
+--vim.cmd 'colorscheme rasmus'
+
 
 -- Leader key
 vim.g.mapleader = " "
