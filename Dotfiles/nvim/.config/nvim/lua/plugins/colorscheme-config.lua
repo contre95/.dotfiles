@@ -13,7 +13,7 @@ vim.cmd 'colorscheme rasmus'
 --https://github.com/kvrohit/rasmus.nvim/blob/main/lua/rasmus/init.lua
 
 local cusotm_highlights = {
-  --'highlight jsonNumber guifg=' .. c.yellow,
+  'highlight Function guifg=' .. c.green,
   --'highlight jsonNull guifg=' .. c.bright_black,
   --'highlight jsonString guifg=' .. c.green,
   --'highlight jsonKeyword guifg=' .. c.blue,

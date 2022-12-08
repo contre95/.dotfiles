@@ -111,5 +111,7 @@ noremap gb :Gitsigns blame_line<CR>
 
 "" Dap 
 nmap <leader>db :DapToggleBreakpoint<CR>
-nmap <leader>do :DapOpen<CR>
-nmap <leader>dc :DapClose<CR>
+nmap <leader>do <Cmd>lua require'dapui'.open()<CR>
+nmap <leader>de  <Cmd>lua require'dapui'.close()<CR>
+nmap <silent> <leader>dc <Cmd>lua require'dap'.continue()<CR>
+nmap <silent>  <leader>dn <Cmd>lua require'dap'.step_over()<CR>
