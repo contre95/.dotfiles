@@ -14,11 +14,21 @@ vim.cmd 'colorscheme rasmus'
 
 local cusotm_highlights = {
   'highlight Function guifg=' .. c.green,
-  'highlight @variable guifg=' .. c.white,
-  'highlight @label guifg=' .. c.blue,
-  'highlight @number guifg=' .. c.yellow,
-  'highlight @boolean guifg=' .. c.magenta,
+  'highlight Identifier guifg=' .. c.white,
+  'highlight @field guifg=' .. c.blue,
+  'highlight @type guifg=' .. c.magenta,
+  'highlight @type.definition guifg=' .. c.yellow,
+  'highlight goBlock guifg=' .. c.cyan,
+  'highlight Label guifg=' .. c.blue,
+  'highlight Number guifg=' .. c.yellow,
+  'highlight Boolean guifg=' .. c.magenta,
   'highlight @constant.builtin guifg=' .. c.bright_black,
+  'highlight NonText guibg=#121211',
+  'highlight Normal guibg=#121211',
+  'highlight NormalNC guibg=#121211',
+  'highlight SignColumn guibg=#121211',
+  'highlight LineNr guibg=#121211',
+
 }
 
 for _, hicmd in ipairs(cusotm_highlights) do

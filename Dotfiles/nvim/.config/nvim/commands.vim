@@ -28,8 +28,9 @@ command! -range SortLen <line1>,<line2> !awk '{ print length(), $0 | "sort -n | 
 "" Transparent
 command! -nargs=0 Trans call LetMeSee()
 function LetMeSee()
-    highlight NonText guibg=NONE
-    highlight Normal guibg=NONE
+    highlight Normal guibg=#121211
+    highlight NormalNC guibg=#121211
+    highlight SignColumn guibg=#121211
 endfunction
 
 " Share code
