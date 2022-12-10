@@ -11,8 +11,8 @@ env:
 window:
   opacity: 1.0
   padding:
-    x: 0
-    y: 0
+    x: 3
+    y: 3
 
 # Class (window name)
 class:
