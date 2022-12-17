@@ -1,8 +1,26 @@
- --vim.cmd "set termguicolors"
 require('lualine').setup {
   options = {
-    -- ... your lualine config
-    theme = 'auto'
-    -- ... your lualine config
-  }
+    icons_enabled = true,
+    theme = 'auto',
+    always_divide_middle = true,
+    globalstatus = true,
+    refresh = {
+      statusline = 1000,
+      tabline = 1000,
+      winbar = 1000,
+    }
+  },
+  sections = {
+    lualine_a = { 'mode' },
+    lualine_b = { 'branch', 'diff', 'diagnostics' },
+    lualine_c = { { 'filename', path = 1 } }, -- 0 = just filename, 1 = relative path, 2 = absolute path
+    lualine_x = { 'encoding', 'fileformat', 'filetype' },
+    lualine_y = { 'progress' },
+    lualine_z = { 'location' },
+  },
+  tabline = {},
+  winbar = {},
+  inactive_winbar = {},
+  extensions = {}
 }
+
