@@ -21,5 +21,5 @@ git_bkp() {
 pass git pull
 pass git push
 git_bkp /home/canus
-git_bkp /home/contre/.newsboat
+#git_bkp /home/contre/.newsboat
 #git_bkp /.newsboat 2&> xargs -I {} "notify-send "Error" "{}" -i "$MY_FOLDER"/Library/icons/error.png"
