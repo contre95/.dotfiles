@@ -32,12 +32,9 @@ require("plugins/colorscheme-config")
 vim.g.mapleader = " "
 
 -- Lua setings
-require("commands")
 require("settings")
+require("commands")
 require("mappings")
 
 ---- Vim Imports
-vim.cmd("so ~/.config/nvim/misc.vim")
-vim.cmd("so ~/.config/nvim/mappings.vim")
-vim.cmd("so ~/.config/nvim/commands.vim")
 vim.cmd("so ~/.config/nvim/autocomands.vim")
