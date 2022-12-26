@@ -12,19 +12,13 @@
      \__\/           ~~~~                   \__\/    
 --]]
 
--- Lua setings
-require("commands")
-require("settings")
-
 -- Plugins
 require("plugins")
 require("plugins/lsp")
 require("plugins/dap")
-require("plugins/true-zen")
 require("plugins/schlepp-config")
 require("plugins/gitsigns-config")
 require("plugins/nvim-cmp-config")
-require("plugins/md-fenced-config")
 require("plugins/nvim-tree-config")
 require("plugins/telescope-config")
 require("plugins/bufferline-config")
@@ -33,12 +27,14 @@ require("plugins/treesitter-config")
 require("plugins/quick-scope-config")
 require("plugins/colorscheme-config")
 
--- Colorscheme
---vim.cmd 'colorscheme rasmus'
-
 
 -- Leader key
 vim.g.mapleader = " "
+
+-- Lua setings
+require("commands")
+require("settings")
+require("mappings")
 
 ---- Vim Imports
 vim.cmd("so ~/.config/nvim/misc.vim")

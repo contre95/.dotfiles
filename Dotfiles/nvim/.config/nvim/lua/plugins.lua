@@ -19,44 +19,36 @@ local use = packer.use
 
 return require("packer").startup(function()
   use("wbthomason/packer.nvim")
-  use("marko-cerovac/material.nvim")
-  use("Abstract-IDE/Abstract-cs")
-  use 'rockerBOO/boo-colorscheme-nvim'
+  -- Colorcheme
   use("kvrohit/rasmus.nvim")
-  use({
-    "nvim-lualine/lualine.nvim",
-    requires = { "kyazdani42/nvim-web-devicons", opt = true },
-  })
-  use({ "kyazdani42/nvim-tree.lua", requires = "kyazdani42/nvim-web-devicons" })
-  use({ "lewis6991/gitsigns.nvim", requires = { "nvim-lua/plenary.nvim" } })
-  use("nvim-treesitter/nvim-treesitter")
+  -- Statusline
+  use({ "nvim-lualine/lualine.nvim", requires = { "kyazdani42/nvim-web-devicons", opt = true } })
+  -- Navigation
   use("akinsho/nvim-bufferline.lua")
+  use({ "nvim-telescope/telescope.nvim", requires = { { "nvim-lua/plenary.nvim" } } })
+  use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
+  use({ "kyazdani42/nvim-tree.lua", requires = "kyazdani42/nvim-web-devicons" })
+  use("unblevable/quick-scope")
+  -- Git
+  use({ "lewis6991/gitsigns.nvim", requires = { "nvim-lua/plenary.nvim" } })
+  use("knsh14/vim-github-link")
+  use({ "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap", "leoluz/nvim-dap-go", "mortepau/codicons.nvim" } })
+  -- LSP / CMP / Snippets / Parsers
+  use("nvim-treesitter/nvim-treesitter")
   use("nvim-treesitter/playground")
-  use("tpope/vim-markdown")
-  use("hashivim/vim-terraform")
-  use({ "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap", "leoluz/nvim-dap-go", "mortepau/codicons.nvim"} })
-  use({ "Pocco81/true-zen.nvim" })
   use("neovim/nvim-lspconfig")
   use("hrsh7th/nvim-cmp")
   use("hrsh7th/cmp-buffer")
-  use("knsh14/vim-github-link")
   use("hrsh7th/cmp-path")
-  use("nvim-lua/lsp_extensions.nvim")
   use("hrsh7th/cmp-cmdline")
   use("hrsh7th/cmp-vsnip")
   use("hrsh7th/vim-vsnip-integ")
   use("hrsh7th/vim-vsnip")
   use("rafamadriz/friendly-snippets")
   use("hrsh7th/cmp-nvim-lsp")
-  use("nvim-lua/lsp-status.nvim")
   use("onsails/lspkind-nvim")
+  -- Editting
   use("ekickx/clipboard-image.nvim")
-  use("unblevable/quick-scope")
   use("zirrostig/vim-schlepp")
   use("scrooloose/nerdcommenter")
-  use({
-    "nvim-telescope/telescope.nvim",
-    requires = { { "nvim-lua/plenary.nvim" } },
-  })
-  use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
 end)
