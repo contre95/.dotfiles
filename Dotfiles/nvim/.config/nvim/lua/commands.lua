@@ -1,19 +1,40 @@
--- git add/commit
-vim.api.nvim_create_user_command('GitAdd', function ()
-   local msg = vim.fn.input('msg: ')
-   local bufnr = vim.api.nvim_get_current_buf()
-   local filename = vim.api.nvim_buf_get_name(bufnr)
-   vim.fn.jobstart({"git", "add", filename})
-   vim.fn.jobstart({"git", "commit", "-m", msg})
+-- Order lines by length
+vim.cmd[[command! -range SortLen <line1>,<line2> !awk '{ print length(), $0 | "sort -n | cut -d\\  -f2-" }']]
+
+-- LSP
+vim.api.nvim_create_user_command("Def", function() return vim.lsp.buf.definition() end, {})
+vim.api.nvim_create_user_command("Fmt", function() return vim.lsp.buf.format({ async = true }) end, {})
+vim.api.nvim_create_user_command("Imp", function() return vim.lsp.buf.implementation() end, {})
+vim.api.nvim_create_user_command("DapOpen", function() return require 'dapui'.open() end, {})
+vim.api.nvim_create_user_command("DapClose", function() return require 'dapui'.close() end, {})
+vim.api.nvim_create_user_command("Ref", function() return vim.lsp.buf.references() end, {})
+vim.api.nvim_create_user_command("Info", function() return vim.lsp.buf.hover() end, {})
+vim.api.nvim_create_user_command("Diagnose", function() return vim.diagnostic.open_float() end, {})
+vim.api.nvim_create_user_command("CodeAction", function() return vim.lsp.buf.code_action() end, {})
+vim.api.nvim_create_user_command("Rename", function() return vim.lsp.buf.rename() end, {})
+vim.api.nvim_create_user_command("SignatureHelp", function() return vim.lsp.buf.signature_help() end, {})
+vim.api.nvim_create_user_command("LspLog", function() return vim.cmd('sp' .. vim.lsp.get_log_path()) end, {})
+
+-- Share code
+-- Only Linux. For Mac, see: https://gist.github.com/shmup/db671132f0f9882187b28a677fa8df72 
+vim.cmd[[
+    command! -range=% SP <line1>,<line2>w !curl -F 'sprunge=<-' http://sprunge.us | tr -d '\n' | xclip -i -selection clipboard
+    command! -range=% CL <line1>,<line2>w !curl -F 'clbin=<-' https://clbin.com | tr -d '\n' | xclip -i -selection clipboard
+    command! -range=% VP <line1>,<line2>w !curl -F 'text=<-' http://vpaste.net | tr -d '\n' | xclip -i -selection clipboard
+    command! -range=% IX <line1>,<line2>w !curl -F 'f:1=<-' http://ix.io | tr -d '\n' | xclip -i -selection clipboard
+    command! -range=% EN <line1>,<line2>w !curl -F 'file=@-;' https://envs.sh | tr -d '\n' | xclip -i -selection clipboard
+    command! -range=% TB <line1>,<line2>w !nc termbin.com 9999 | tr -d '\n' | xclip -i -selection clipboard
+]]
+
+-- Terraform check
+vim.api.nvim_create_user_command('Tfsec', function()
+  vim.cmd("vsplit term:// tfsec %:p:h")
 end, {})
 
--- git push
-vim.api.nvim_create_user_command('GitPush', function ()
-   vim.fn.jobstart({"git", "push"})
+-- Git add/commit
+vim.api.nvim_create_user_command('GitAdd', function()
+  local msg = vim.fn.input('msg: ')
+  local bufnr = vim.api.nvim_get_current_buf()
+  local filename = vim.api.nvim_buf_get_name(bufnr)
+  vim.fn.jobstart({ "git", "add", filename })
 end, {})
-
--- git pull
-vim.api.nvim_create_user_command('GitPull', function ()
-   vim.fn.jobstart({"git", "pull"})
-end, {})
-
