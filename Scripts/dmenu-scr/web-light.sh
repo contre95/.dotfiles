@@ -2,7 +2,7 @@
 source ~/.zshrc
 SCR_PATH=$MY_FOLDER/Scripts
 
-choices="Any\nKeybr\nMedia\nBurp\nCronometer\nNew Bookmark\nN26\nHome\nGalicia Contre\nGarmin\nMercadopago Contre\nGalicia Codelamp\nLichess\nInstagram\nMercadopago Codelamp\nYoutube\nTwitter\nDeemix"
+choices="Any\nKeybr\nMedia\nBurp\nCronometer\nNew Bookmark\nN26\nHome\nGalicia Contre\nGarmin\nMercadopago Contre\nGalicia Codelamp\nLichess\nInstagram\nMercadopago Codelamp\nYoutube\nTwitter\nDeemix\nTwitch"
 chosen=$(echo -e "$choices" | dmenu -i -p "Select Layout: " -sb "#8F7DAB")
 
 case "$chosen" in
@@ -11,6 +11,9 @@ case "$chosen" in
 	;;
 "Keybr")
 	exec brave --profile-directory="Contre" --app=https://www.keybr.com/
+	;;
+"Twitch")
+	exec brave --profile-directory="Contre" --app=https://twitch.tv/
 	;;
 "Cronometer")
 	exec brave --profile-directory="Contre" --app=https://cronometer.com/
