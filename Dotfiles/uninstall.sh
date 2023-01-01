@@ -3,13 +3,16 @@
 dotfiles=(
   fzf
   gtk
+  mpd
   zsh
+  cava
   mocp
   nvim
   rofi
   tmux
   bspwm
   dunst
+  picom
   sxhkd
   ranger
   barrier
@@ -17,7 +20,6 @@ dotfiles=(
   zathura
   keyboard
   lemonbar
-  newsboat
   alacritty
   pulseaudio
 )

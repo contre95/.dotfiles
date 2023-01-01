@@ -34,7 +34,7 @@ bspc rule -a "*:*:Picture-in-Picture" state=floating rectangle=600x400+0+0 cente
 
 #### BSPWM configuration ####
 
-bspc config window_gap 0
+bspc config window_gap 5
 bspc config border_width 1
 bspc config left_padding 0
 bspc config right_padding 0

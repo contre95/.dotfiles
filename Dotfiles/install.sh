@@ -1,26 +1,27 @@
 #!/bin/bash
 
 dotfiles=(
-  pulseaudio
-  alacritty
-  keyboard
-  lemonbar
-  barrier
-  pcmanfm
-  zathura
-  ranger
-  bspwm
-  dunst
-  sxhkd
-  rofi
-  tmux
+  fzf
+  gtk
+  mpd
+  zsh
   cava
   mocp
   nvim
-  fzf
-  gtk
-  zsh
-  mpd
+  rofi
+  tmux
+  bspwm
+  dunst
+  picom
+  sxhkd
+  ranger
+  barrier
+  pcmanfm
+  zathura
+  keyboard
+  lemonbar
+  alacritty
+  pulseaudio
 )
 
 for d in "${dotfiles[@]}"; do
