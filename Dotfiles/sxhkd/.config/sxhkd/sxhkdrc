@@ -11,13 +11,13 @@ super + r
 # Terminal emulator
 # -------------------------------------
 super + t
-		{alacritty --class 'Dropdown' -e /bin/zsh -c "tmux -u new-session -A -s Dropdown" }
+		{alacritty --option window.opacity=0.9 --class 'Dropdown' -e /bin/zsh -c "tmux -u new-session -A -s Dropdown" }
 super + Return
 	alacritty -e /bin/zsh -c "tmux -u new-session -A -s Main" 
 #super + ctrl + Return
     #alacritty --option window.opacity=0.7 -e /bin/zsh -c "tmux -u new-session -A -s Transparent" 
 super + shift + Return
-    alacritty --option window.opacity=0.7 
+    alacritty --option window.opacity=0.9
 
 # Audio
 # -------------------------------------
