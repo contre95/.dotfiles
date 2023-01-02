@@ -1,6 +1,3 @@
--- Order lines by length
-vim.cmd[[command! -range SortLen <line1>,<line2> !awk '{ print length(), $0 | "sort -n | cut -d\\  -f2-" }']]
-
 -- LSP
 vim.api.nvim_create_user_command("Def", function() return vim.lsp.buf.definition() end, {})
 vim.api.nvim_create_user_command("Fmt", function() return vim.lsp.buf.format({ async = true }) end, {})
@@ -16,8 +13,8 @@ vim.api.nvim_create_user_command("SignatureHelp", function() return vim.lsp.buf.
 vim.api.nvim_create_user_command("LspLog", function() return vim.cmd('sp' .. vim.lsp.get_log_path()) end, {})
 
 -- Share code
--- Only Linux. For Mac, see: https://gist.github.com/shmup/db671132f0f9882187b28a677fa8df72 
-vim.cmd[[
+-- Only Linux. For Mac, see: https://gist.github.com/shmup/db671132f0f9882187b28a677fa8df72
+vim.cmd [[
     command! -range=% SP <line1>,<line2>w !curl -F 'sprunge=<-' http://sprunge.us | tr -d '\n' | xclip -i -selection clipboard
     command! -range=% CL <line1>,<line2>w !curl -F 'clbin=<-' https://clbin.com | tr -d '\n' | xclip -i -selection clipboard
     command! -range=% VP <line1>,<line2>w !curl -F 'text=<-' http://vpaste.net | tr -d '\n' | xclip -i -selection clipboard
@@ -37,4 +34,16 @@ vim.api.nvim_create_user_command('GitAdd', function()
   local bufnr = vim.api.nvim_get_current_buf()
   local filename = vim.api.nvim_buf_get_name(bufnr)
   vim.fn.jobstart({ "git", "add", filename })
+end, {})
+
+-- Order lines by length
+vim.cmd [[command! -range SortLen <line1>,<line2> !awk '{ print length(), $0 | "sort -n | cut -d\\  -f2-" }']]
+
+-- Transparent Background
+
+vim.api.nvim_create_user_command("LetMeSee", function()
+  vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+  vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+  vim.api.nvim_set_hl(0, "CursorLineNR", { bg = "none" })
+  vim.api.nvim_set_hl(0, "CursorLine", { bg = "none" })
 end, {})
