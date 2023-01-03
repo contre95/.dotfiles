@@ -13,6 +13,6 @@ Photos    - http://photos.google.com
 """
 choices=$(cat $1 | tr -d " " | awk -F"-" '{print $1}')
 var=$(echo -e $choices | dmenu -i -p "Exit menu: " -sb "#1ba4e9" -fn "JetBrainsMono Nerd Font")
-picked=$(grep $var $1 | tr -d " " | awk -F"-" '{print $2}')
+picked=$(grep $var $1 | awk -F"-" '{print $2}')
 
 echo $picked

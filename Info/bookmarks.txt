@@ -10,7 +10,8 @@ Cronometer - https://cronometer.com/
 1337x      - https://www.1377x.to/
 Instagram  - https://www.instagram.com
 Media - http://media.contre.io
- - http://
 RSS - http://rss.contre.io
 StackExchange - http://stackexchange.com
 Translate - http://translate.google.com/
+Twitter - http://twitter.com
+Social - http://twitter.com https://instagram.com https://youtube.com https://reddit.com
