@@ -15,3 +15,4 @@ StackExchange - http://stackexchange.com
 Translate - http://translate.google.com/
 Twitter - http://twitter.com
 Social - http://twitter.com https://instagram.com https://youtube.com https://reddit.com http://rss.contre.io
+Proton - http://account.proton.me/login
