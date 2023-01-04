@@ -36,13 +36,13 @@ super + shift + s
 # -------------------------------------
 
 super + g
-    /usr/bin/librewolf
+    /usr/bin/librewolf -P "Contre"
 super + shift + g
     /usr/bin/brave --profile-directory="Contre"
 super + shift + b
-    /usr/bin/librewolf $($MY_FOLDER/Scripts/dmenu-scr/picker.sh $MY_FOLDER/Info/bookmarks.txt)
+    /usr/bin/librewolf -P "Contre" $($MY_FOLDER/Scripts/dmenu-scr/picker.sh $MY_FOLDER/Info/bookmarks.txt)
 super + h
-     /usr/bin/librewolf -P `zenity --entry --text 'Profile name'` 
+     /usr/bin/librewolf -P `zenity --entry --text 'Profile name:'` 
 
 # BSPWM hotkeys
 # -------------------------------------
