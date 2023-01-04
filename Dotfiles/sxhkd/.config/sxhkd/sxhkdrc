@@ -104,7 +104,7 @@ super + ctrl + p
 super + 0
     $SCR_PATH/dmenu-scr/exit.sh
 super + q
-    tmux kill-server
+    zenity --question --text="Kill tmux?" && tmux kill-server
 super + m
     $SCR_PATH/dmenu-scr/messages.sh
 super + ctrl + v
