@@ -14,8 +14,8 @@ super + t
 		{alacritty --option window.opacity=0.9 --class 'Dropdown' -e /bin/zsh -c "tmux -u new-session -A -s Dropdown" }
 super + Return
 	alacritty -e /bin/zsh -c "tmux -u new-session -A -s Main" 
-#super + ctrl + Return
-    #alacritty --option window.opacity=0.7 -e /bin/zsh -c "tmux -u new-session -A -s Transparent" 
+super + ctrl + Return
+    $SCR_PATH/dmenu-scr/tmux-pick.sh 
 super + shift + Return
     alacritty --option window.opacity=0.9
 

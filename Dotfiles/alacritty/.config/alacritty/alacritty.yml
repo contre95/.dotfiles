@@ -47,11 +47,6 @@ cursor:
 # def Shell
 shell:
 program: /bin/zsh
-args:
-  - -l
-  - -c
-  - "tmux attach || tmux"
-
 ## Font stuff
 tabspaces: 4
 font:
