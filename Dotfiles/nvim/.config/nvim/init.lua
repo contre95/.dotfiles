@@ -16,6 +16,7 @@
 require("plugins")
 require("plugins/lsp")
 require("plugins/dap")
+require("plugins/colorizer")
 require("plugins/schlepp-config")
 require("plugins/gitsigns-config")
 require("plugins/nvim-cmp-config")
