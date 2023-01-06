@@ -1,5 +1,7 @@
 #! /bin/sh
 
+bspc rule -r "*" # Remove any pre-existing rule 
+
 export MY_FOLDER=/home/canus
 export SCR_PATH=$MY_FOLDER/Scripts
 #### AUTOSTART ####
@@ -29,7 +31,8 @@ bspc rule -a Music desktop=''
 bspc rule -a Pavucontrol:pavucontrol state=floating center=true rectangle=1000x600+0+0
 bspc rule -a Alacrity:Alacrity center=true rectangle=1200x600+0+0
 bspc rule -a burp-StartBurp:burp-StartBurp state=floating
-bspc rule -a Dropdown state=floating layer=above rectangle=1899x500+750+280 monitor=HDMI-0
+bspc rule -a Dropdown state=floating layer=above rectangle=1899x500+750+280 monitor=HDMI-0 sticky=on
+bspc rule -a "FloatingCenter" state=floating layer=above rectangle=1920x1082+750+280 monitor=HDMI-0
 bspc rule -a "*:*:Picture-in-Picture" state=floating rectangle=600x400+0+0 center=true
 
 #### BSPWM configuration ####
@@ -43,6 +46,7 @@ bspc config split_ratio 0.50
 bspc config click_to_focus true
 bspc config gapless_monocle false
 bspc config pointer_action1 move
+bspc config directional_focus_tightness low
 bspc config single_monocle false
 #$SCR_PATH/bspwm-scr/borders.sh &
 bspc config -m HDMI-0 top_padding 0
@@ -68,12 +72,12 @@ bspc config presel_feedback_color "#5e81ac"
 ### Lemonbar bar (be sure to load bspwm monitors first)
 pkill -x lemonbar
 python3 "$HOME/.config/lemonbar/bar.py" &
-bspc subscribe node_state | while read _ _ _ _ state flag; do
-	if [[ $state == fullscreen ]]; then
-		if [[ $flag == on ]]; then
-			xdo lower -N Bar
-		else
-			xdo raise -N Bar
-		fi
-	fi
-done &
+#bspc subscribe node_state | while read _ _ _ _ state flag; do
+	#if [[ $state == fullscreen ]]; then
+		#if [[ $flag == on ]]; then
+			#xdo lower -N Bar
+		#else
+			#xdo raise -N Bar
+		#fi
+	#fi
+#done &

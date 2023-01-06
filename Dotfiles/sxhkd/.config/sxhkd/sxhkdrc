@@ -76,9 +76,6 @@ super + {_,shift + }{j,k,i,l}
 # set/toggle windows state
 super + {u,shift + u,shift+f,f}
     bspc node -t {\~tiled,\~pseudo_tiled,\~floating,\~fullscreen}
-# expand a window by moving one of its side outward
-super + r + {j,k,i,l}
-	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
 
 # DMenu Scripts
 # -------------------------------------

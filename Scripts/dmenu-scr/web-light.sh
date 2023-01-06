@@ -1,6 +1,5 @@
 #!/bin/bash
 source ~/.zshrc
-SCR_PATH=$MY_FOLDER/Scripts
 
 choices="Any\nKeybr\nMedia\nBurp\nCronometer\nNew Bookmark\nN26\nHome\nGalicia Contre\nGarmin\nMercadopago Contre\nGalicia Codelamp\nLichess\nInstagram\nMercadopago Codelamp\nYoutube\nTwitter\nDeemix\nTwitch"
 chosen=$(echo -e "$choices" | dmenu -i -p "Select Layout: " -sb "#8F7DAB")
@@ -10,7 +9,7 @@ case "$chosen" in
 	exec brave --profile-directory="Contre" --app=https://app.n26.com/login
 	;;
 "Keybr")
-	exec brave --profile-directory="Contre" --app=https://www.keybr.com/
+	exec brave --class=FloatingCenter --profile-directory="Contre" --app=https://www.keybr.com/
 	;;
 "Twitch")
 	exec brave --profile-directory="Contre" --app=https://twitch.tv/
@@ -35,9 +34,6 @@ case "$chosen" in
 	;;
 "Home")
 	exec brave --profile-directory="Contre" --app=http://home.contre.io
-	;;
-"Twitter")
-	exec brave --profile-directory="Contre" --app=https://twitter.com
 	;;
 "Any")
 	exec brave --app=http://"$(zenity --entry --text='Website  :')"
