@@ -33,7 +33,7 @@
     width = 300
     height = 60
     origin = bottom-right
-    offset = 10x20
+    offset = 10x25
 
     notification_limit = 9
 
