@@ -36,7 +36,7 @@ case "$chosen" in
 	exec brave --profile-directory="Contre" --app=https://twitter.com
 	;;
 "Home")
-	exec brave --profile-directory="Contre" --app=http://home.contre.io
+	exec brave --profile-directory="Contre" --app=http://home.contre.io/home-dash/0
 	;;
 "Any")
 	exec brave --app=http://"$(zenity --entry --text='Website  :')"
