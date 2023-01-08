@@ -6,6 +6,7 @@ export MY_FOLDER=/home/canus
 export SCR_PATH=$MY_FOLDER/Scripts
 #### AUTOSTART ####
 sxhkd &
+syncthing serve &
 picom &
 nitrogen --restore &
 #/usr/bin/feh --randomize --bg-fill "/home/contre/Pictures/Wallpapers/random/3" &
@@ -32,7 +33,8 @@ bspc rule -a Pavucontrol:pavucontrol state=floating center=true rectangle=1000x6
 bspc rule -a Alacrity:Alacrity center=true rectangle=1200x600+0+0
 bspc rule -a burp-StartBurp:burp-StartBurp state=floating
 bspc rule -a Dropdown state=floating layer=above rectangle=1899x500+750+280 monitor=HDMI-0 sticky=on
-bspc rule -a "FloatingCenter" state=floating layer=above rectangle=1920x1082+750+280 monitor=HDMI-0
+bspc rule -a "Brave-browser:www.keybr.com" state=floating layer=above rectangle=1920x1082+750+280 monitor=HDMI-0
+bspc rule -a "obsidian:obsidian" state=floating layer=above rectangle=1920x1082+750+280 monitor=HDMI-0
 bspc rule -a "*:*:Picture-in-Picture" state=floating rectangle=600x400+0+0 center=true
 
 #### BSPWM configuration ####

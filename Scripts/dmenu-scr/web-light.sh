@@ -1,15 +1,18 @@
 #!/bin/bash
 source ~/.zshrc
 
-choices="Any\nKeybr\nMedia\nBurp\nCronometer\nNew Bookmark\nN26\nHome\nGalicia Contre\nGarmin\nMercadopago Contre\nGalicia Codelamp\nLichess\nInstagram\nMercadopago Codelamp\nYoutube\nTwitter\nDeemix\nTwitch"
+choices="Any\nKeybr\nMedia\nBurp\nCronometer\nWhite\nNew Bookmark\nN26\nHome\nGalicia Contre\nGarmin\nMercadopago Contre\nGalicia Codelamp\nLichess\nInstagram\nMercadopago Codelamp\nYoutube\nTwitter\nDeemix\nTwitch"
 chosen=$(echo -e "$choices" | dmenu -i -p "Select Layout: " -sb "#8F7DAB")
 
 case "$chosen" in
 "N26")
 	exec brave --profile-directory="Contre" --app=https://app.n26.com/login
 	;;
+"White")
+	exec brave --profile-directory="Contre" --app=https://blankwhitescreen.com/
+	;;
 "Keybr")
-	exec brave --class=FloatingCenter --profile-directory="Contre" --app=https://www.keybr.com/
+	exec brave --profile-directory="Contre" --app=https://www.keybr.com/
 	;;
 "Twitch")
 	exec brave --profile-directory="Contre" --app=https://twitch.tv/
