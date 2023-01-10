@@ -8,10 +8,14 @@ super + shift + r
 super + r
     feh --bg-fill --randomize ~/Pictures/Wallpapers/current/* 
 
+# Notes
+super + n
+    obsidian
+# -------------------------------------
 # Terminal emulator
 # -------------------------------------
 super + t
-		{alacritty --option window.opacity=0.9 --class 'Dropdown' -e /bin/zsh -c "tmux -u new-session -A -s Dropdown" }
+	{alacritty --option window.opacity=0.9 --class 'Dropdown' -e /bin/zsh -c "tmux -u new-session -A -s Dropdown" }
 super + Return
 	alacritty -e /bin/zsh -c "tmux -u new-session -A -s Main" 
 super + ctrl + Return
