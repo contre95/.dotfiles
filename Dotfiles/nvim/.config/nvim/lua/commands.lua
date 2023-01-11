@@ -7,6 +7,7 @@ vim.api.nvim_create_user_command("DapClose", function() return require 'dapui'.c
 vim.api.nvim_create_user_command("Ref", function() return vim.lsp.buf.references() end, {})
 vim.api.nvim_create_user_command("Info", function() return vim.lsp.buf.hover() end, {})
 vim.api.nvim_create_user_command("Diagnose", function() return vim.diagnostic.open_float() end, {})
+vim.api.nvim_create_user_command("DList", function() return vim.diagnostic.setqflist() end, {})
 vim.api.nvim_create_user_command("CodeAction", function() return vim.lsp.buf.code_action() end, {})
 vim.api.nvim_create_user_command("Rename", function() return vim.lsp.buf.rename() end, {})
 vim.api.nvim_create_user_command("SignatureHelp", function() return vim.lsp.buf.signature_help() end, {})
