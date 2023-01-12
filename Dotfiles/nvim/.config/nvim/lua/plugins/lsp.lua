@@ -12,7 +12,7 @@ end
 
 -- General attachment callback funtion
 
-local on_attach = function(client)
+local on_attach = function()
 end
 
 -- Diagnosticis Signs
@@ -40,6 +40,7 @@ local handlers = {
   ["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { border = border }),
   ["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = border }),
 }
+
 vim.diagnostic.config({
   virtual_text = {
     prefix = " ",
@@ -126,6 +127,8 @@ lspconfig.sumneko_lua.setup({
   },
 })
 
+-- Markdown
+require'lspconfig'.marksman.setup{}
 -- C 
 
 lspconfig.ccls.setup({
@@ -226,7 +229,6 @@ local languages = {
   html = { prettier },
   scss = { prettier },
   css = { prettier },
-  markdown = { prettier },
   sh = { shell },
   zsh = { shell },
 }
