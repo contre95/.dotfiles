@@ -2,6 +2,7 @@
 super + shift + r
     pkill -USR1 -x sxhkd && \
     pkill -x lemonbar && \
+    setxkbmap -layout us -variant mac  && \
     python3 "$HOME/.config/lemonbar/bar.py" &
 
 # Change background
