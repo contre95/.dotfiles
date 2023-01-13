@@ -19,8 +19,8 @@ autocmd BufWritePost *.go lua vim.lsp.buf.format({async = true})
 "Set Markdown
 "-------------------------------------
 autocmd FileType markdown setlocal spell 
-autocmd FileType markdown setlocal spell spellang=es
-autocmd FileType markdown setlocal complete+=kspell
+"autocmd FileType markdown setlocal complete+=kspell
+autocmd FileType markdown setlocal spelllang=es
 " autocmd FileType markdown setlocal textwidth=80
 " autocmd FileType markdown setlocal colorcolumn=-2 
 
