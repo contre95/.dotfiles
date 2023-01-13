@@ -30,6 +30,7 @@ return require("packer").startup(function()
   use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
   use({ "kyazdani42/nvim-tree.lua", requires = "kyazdani42/nvim-web-devicons" })
   use("unblevable/quick-scope")
+  use('eandrju/cellular-automaton.nvim')
   -- Git
   use({ "lewis6991/gitsigns.nvim", requires = { "nvim-lua/plenary.nvim" } })
   use("knsh14/vim-github-link")
