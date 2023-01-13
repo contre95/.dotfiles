@@ -1,4 +1,4 @@
-## make sxhkd reload its configuration files:
+# make sxhkd reload its configuration files:
 super + shift + r
     pkill -USR1 -x sxhkd && \
     pkill -x lemonbar && \
@@ -9,6 +9,10 @@ super + shift + r
 super + r
     feh --bg-fill --randomize ~/Pictures/Wallpapers/current/* 
 
+# Turn monitors off abruptly
+super + o
+    sleep 1; xset dpms force off
+ 
 # Notes
 super + n
     obsidian

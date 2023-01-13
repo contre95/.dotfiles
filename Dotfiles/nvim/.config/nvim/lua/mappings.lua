@@ -11,6 +11,9 @@ vim.keymap.set("i", "<C-D>", "X<Esc>lbce")
 -- Replace word under cursor
 vim.keymap.set("n", "<C-r>", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
+-- Misc
+vim.keymap.set("n", "<leader>f", "<cmd>CellularAutomaton make_it_rain<CR>")
+
 -- Move between buffers in the same window
 vim.keymap.set("n", "<C-A-Up>", "<C-w>k")
 vim.keymap.set("n", "<C-A-Down>", "<C-w>j")
