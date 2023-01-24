@@ -66,3 +66,4 @@ case "$chosen" in
 	exec brave --profile-directory="Codelamp" --app=https://www.mercadopago.com.ar/home
 	;;
 esac
+
