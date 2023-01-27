@@ -18,3 +18,4 @@ Social - http://twitter.com https://instagram.com https://youtube.com https://re
 Proton - http://account.proton.me/login
 Syncthing - http://localhost:8384
  - http://
+Torrent - http://torrents.contre.io
