@@ -25,6 +25,8 @@ super + Return
 	alacritty -e /bin/zsh -c "tmux -u new-session -A -s Main" 
 super + ctrl + Return
     $SCR_PATH/dmenu-scr/tmux-pick.sh 
+super + ctrl + shift +Return
+	alacritty -e /bin/zsh -c "tmux -u new-session -A -s \"$(zenity --entry --text 'Profile name:')\"" 
 super + shift + Return
     alacritty --option window.opacity=0.9
 
