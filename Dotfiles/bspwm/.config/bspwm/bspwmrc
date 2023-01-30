@@ -41,11 +41,11 @@ bspc rule -a "*:*:Picture-in-Picture" state=floating rectangle=600x400+0+0 cente
 
 #### BSPWM configuration ####
 
-bspc config window_gap 5
+bspc config window_gap 0
 bspc config border_width 2
 bspc config left_padding 0
 bspc config right_padding 0
-bspc config bottom_padding 25
+bspc config bottom_padding 20
 bspc config split_ratio 0.50
 bspc config click_to_focus true
 bspc config gapless_monocle false
@@ -67,7 +67,7 @@ bspc config remove_disabled_monitors true
 bspc config merge_overlapping_monitors true
 
 #### BSPWM coloring ####
-bspc config focused_border_color        "#303134"
+bspc config focused_border_color        "#737373"
 bspc config normal_border_color         "#242427"
 bspc config active_border_color         "#242427"
 
