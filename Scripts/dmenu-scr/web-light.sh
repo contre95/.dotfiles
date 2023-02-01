@@ -14,6 +14,9 @@ case "$chosen" in
 "Keybr")
 	exec brave --profile-directory="Contre" --app=https://www.keybr.com/
 	;;
+"Monkeytype")
+	exec brave --profile-directory="Contre" --app=https://www.monkeytype.com/
+	;;
 "Twitch")
 	exec brave --profile-directory="Contre" --app=https://twitch.tv/
 	;;
