@@ -34,10 +34,12 @@ bspc rule -a Alacrity:Alacrity center=true rectangle=1200x600+0+0
 bspc rule -a burp-StartBurp:burp-StartBurp state=floating
 bspc rule -a Dropdown state=floating layer=above rectangle=1899x500+750+280 monitor=HDMI-0 sticky=on
 bspc rule -a "Brave-browser:www.keybr.com" state=floating layer=above rectangle=1920x1082+750+280 monitor=HDMI-0
+bspc rule -a "Brave-browser:www.monkeytype.com" state=floating layer=above rectangle=1920x1082+750+280 monitor=HDMI-0
 bspc rule -a "Brave-browser:connect.garmin.com__modern" state=floating layer=above rectangle=1920x1082+750+280 monitor=HDMI-0
 bspc rule -a "Brave-browser:home.contre.io__home-dash_0" state=floating layer=above rectangle=1920x1082+750+280 monitor=HDMI-0
 bspc rule -a "obsidian:obsidian" state=floating layer=above rectangle=1920x1082+750+280 monitor=HDMI-0
 bspc rule -a "*:*:Picture-in-Picture" state=floating rectangle=600x400+0+0 center=true
+
 
 #### BSPWM configuration ####
 
