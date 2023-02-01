@@ -1,7 +1,7 @@
 #!/bin/bash
 source ~/.zshrc
 
-choices="Any\nKeybr\nMedia\nBurp\nCronometer\nWhite\nNew Bookmark\nN26\nHome\nGalicia Contre\nGarmin\nMercadopago Contre\nGalicia Codelamp\nLichess\nInstagram\nMercadopago Codelamp\nYoutube\nTwitter\nDeemix\nTwitch"
+choices="Any\nKeybr\nMedia\nBurp\nCronometer\nWhite\nNew Bookmark\nN26\nMonkeytype\nHome\nGalicia Contre\nGarmin\nMercadopago Contre\nGalicia Codelamp\nLichess\nInstagram\nMercadopago Codelamp\nYoutube\nTwitter\nDeemix\nTwitch"
 chosen=$(echo -e "$choices" | dmenu -i -p "Select Layout: " -sb "#8F7DAB")
 
 case "$chosen" in
