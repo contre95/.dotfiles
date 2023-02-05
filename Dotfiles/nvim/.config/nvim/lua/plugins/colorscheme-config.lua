@@ -28,6 +28,10 @@ local cusotm_highlights = {
   'highlight NormalNC guibg=#121211',
   'highlight SignColumn guibg=#121211',
   'highlight LineNr guibg=#121211',
+  --Html
+  'highlight @tag guifg=#E06C75',
+  'highlight @tag.delimeter guifg=#EFEFEF',
+  'highlight @tag.attribute guifg=#D19961',
 
 }
 
