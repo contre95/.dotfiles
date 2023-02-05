@@ -1,40 +1,67 @@
-local variants = require("rasmus.colors")
-local cfg = require("rasmus.config").config
-local c = variants[cfg.variant]
+local colors = require 'material.colors'
+require('material').setup({
 
-vim.g.rasmus_bold_keywords = true
-vim.g.rasmus_italic_variables = true
-vim.g.rasmus_italic_comments = true
-vim.g.rasmus_italic_functions = true
+  contrast = {
+    terminal = false, -- Enable contrast for the built-in terminal
+    sidebars = true, -- Enable contrast for sidebar-like windows ( for example Nvim-Tree )
+    floating_windows = true, -- Enable contrast for floating windows
+    cursor_line = false, -- Enable darker background for the cursor line
+    non_current_windows = true, -- Enable darker background for non-current windows
+    filetypes = {}, -- Specify which filetypes get the contrasted (darker) background
+  },
 
-vim.cmd 'colorscheme rasmus'
+  styles = { -- Give comments style such as bold, italic, underline etc.
+    comments = { --[[ italic = true ]] },
+    strings = { --[[ bold = true ]] },
+    keywords = { --[[ underline = true ]] },
+    functions = { --[[ bold = true, undercurl = true ]] },
+    variables = {},
+    operators = {},
+    types = {},
+  },
+
+  plugins = { -- Uncomment the plugins that you use to highlight them
+    -- Available plugins:
+    "dap",
+    -- "dashboard",
+    "gitsigns",
+    -- "hop",
+    -- "indent-blankline",
+    -- "lspsaga",
+    -- "mini",
+    -- "neogit",
+    "nvim-cmp",
+    -- "nvim-navic",
+    "nvim-tree",
+    "nvim-web-devicons",
+    --"sneak",
+    "telescope",
+    -- "trouble",
+    -- "which-key",
+  },
 
 
---https://github.com/kvrohit/rasmus.nvim/blob/main/lua/rasmus/init.lua
 
-local cusotm_highlights = {
-  'highlight Function guifg=' .. c.green,
-  'highlight Identifier guifg=' .. c.white,
-  'highlight @field guifg=' .. c.blue,
-  'highlight @type guifg=' .. c.magenta,
-  'highlight @type.definition guifg=' .. c.yellow,
-  'highlight goBlock guifg=' .. c.cyan,
-  'highlight Label guifg=' .. c.blue,
-  'highlight Number guifg=' .. c.yellow,
-  'highlight Boolean guifg=' .. c.magenta,
-  'highlight @constant.builtin guifg=' .. c.bright_black,
-  'highlight NonText guibg=#121211',
-  'highlight Normal guibg=#121211',
-  'highlight NormalNC guibg=#121211',
-  'highlight SignColumn guibg=#121211',
-  'highlight LineNr guibg=#121211',
-  --Html
-  'highlight @tag guifg=#E06C75',
-  'highlight @tag.delimeter guifg=#EFEFEF',
-  'highlight @tag.attribute guifg=#D19961',
+  lualine_style = "stealth", -- Lualine style ( can be 'stealth' or 'default' )
 
-}
+  async_loading = true, -- Load parts of the theme asyncronously for faster startup (turned on by default)
 
-for _, hicmd in ipairs(cusotm_highlights) do
-  vim.cmd(hicmd)
-end
+  --custom_colors = nil, -- If you want to everride the default colors, set this to a function
+
+  custom_highlights = {
+    --LineNr           = { bg = '#FF0000' },
+    CursorLine       = { fg = colors.editor.constrast, underline = true },
+    GitSignsAdd      = { fg = colors.git.added },
+    GitSignsChange   = { fg = colors.git.modified },
+    GitSignsDelete   = { fg = colors.git.removed },
+    GitSignsAddNr    = { fg = colors.git.added },
+    GitSignsAddLn    = { fg = colors.git.added },
+    GitSignsChangeNr = { fg = colors.git.modified, },
+    GitSignsChangeLn = { fg = colors.git.modified },
+    GitSignsDeleteNr = { fg = colors.git.removed, },
+    GitSignsDeleteLn = { fg = colors.git.removed },
+  },
+})
+vim.g.material_style = "deep ocean"
+vim.cmd 'colorscheme material'
+
