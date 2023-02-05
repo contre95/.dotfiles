@@ -20,15 +20,32 @@ local use = packer.use
 return require("packer").startup(function()
   use("wbthomason/packer.nvim")
   -- Colorcheme
+  use { "kabouzeid/nvim-jellybeans", requires = "rktjmp/lush.nvim" }
+  use({ 'marko-cerovac/material.nvim' })
   use("kvrohit/rasmus.nvim")
   use("norcalli/nvim-colorizer.lua")
+  --use({
+  --'rose-pine/neovim',
+  --as = 'rose-pine',
+  --config = function()
+  --require("rose-pine").setup()
+  --vim.cmd('colorscheme rose-pine')
+  --end
+  --})
   -- Statusline
   use({ "nvim-lualine/lualine.nvim", requires = { "kyazdani42/nvim-web-devicons", opt = true } })
   -- Navigation
   use("akinsho/nvim-bufferline.lua")
   use({ "nvim-telescope/telescope.nvim", requires = { { "nvim-lua/plenary.nvim" } } })
   use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
-  use({ "kyazdani42/nvim-tree.lua", requires = "kyazdani42/nvim-web-devicons" })
+  use({ 'nvim-tree/nvim-web-devicons' })
+  use({
+    'nvim-tree/nvim-tree.lua',
+    requires = {
+      'nvim-tree/nvim-web-devicons', -- optional, for file icons
+    },
+    tag = 'nightly' -- optional, updated every week. (see issue #1193)
+  })
   use("unblevable/quick-scope")
   use('eandrju/cellular-automaton.nvim')
   -- Git

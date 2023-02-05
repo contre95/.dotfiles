@@ -5,6 +5,7 @@ ts_config.setup {
     "go",
     "css",
     "hcl",
+    "vue",
     "lua",
     "bash",
     "help",
