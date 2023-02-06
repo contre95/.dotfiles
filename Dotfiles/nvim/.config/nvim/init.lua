@@ -1,4 +1,5 @@
 --[[
+--
       ___                                    ___     
      /__/\          ___        ___          /__/\    
      \  \:\        /__/\      /  /\        |  |::\   
@@ -31,8 +32,6 @@ require("plugins/colorscheme-config")
 
 -- Leader key
 vim.g.mapleader = " "
-
--- Lua setings
 require("settings")
 require("commands")
 require("mappings")

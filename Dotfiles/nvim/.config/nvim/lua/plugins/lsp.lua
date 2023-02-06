@@ -1,4 +1,5 @@
 local lspconfig = require("lspconfig")
+local util = require 'lspconfig.util'
 local capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities())
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 
@@ -11,9 +12,6 @@ end
 
 
 -- General attachment callback funtion
-
-local on_attach = function()
-end
 
 -- Diagnosticis Signs
 local border = {
@@ -35,7 +33,7 @@ function vim.lsp.util.open_floating_preview(contents, syntax, opts, ...)
   return orig_util_open_floating_preview(contents, syntax, opts, ...)
 end
 
--- LSP settings (for overriding per client)
+-- LSP settings (for overriding per client)latin
 local handlers = {
   ["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { border = border }),
   ["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = border }),
@@ -91,7 +89,7 @@ local shell = {
 -- Languages Configuration
 -----------------------------
 
- --Json
+--Json
 lspconfig.jsonls.setup({ capabilities = capabilities })
 
 -- Lua
@@ -110,7 +108,7 @@ lspconfig.sumneko_lua.setup({
       },
       diagnostics = {
         -- Get the language server to recognize the `vim` global
-        globals = {'vim'},
+        globals = { 'vim' },
       },
       workspace = {
         -- Make the server aware of Neovim runtime files
@@ -128,13 +126,13 @@ lspconfig.sumneko_lua.setup({
 })
 
 -- Markdown
-require'lspconfig'.marksman.setup{}
--- C 
+require 'lspconfig'.marksman.setup {}
+-- C
 
 lspconfig.ccls.setup({
   on_attach = on_attach,
   capabilities = capabilities,
-  filetypes = {  "c" },
+  filetypes = { "c" },
 })
 
 -- Rust
@@ -192,7 +190,7 @@ lspconfig.sqls.setup({
   capabilities = capabilities,
 })
 
--- -- Dart 
+-- -- Dart
 -- require("flutter-tools").setup {
 --     flutter_path="/usr/bin/dart",
 -- 	lsp = {
@@ -218,12 +216,68 @@ lspconfig.sqls.setup({
 -- Typescript
 --lspconfig.tsserver.setup({ capabilities = capabilities })
 
+-- Emmet
+lspconfig.emmet_ls.setup({
+    -- on_attach = on_attach,
+    capabilities = capabilities,
+    filetypes = { 'html', 'typescriptreact', 'javascriptreact', 'css', 'sass', 'scss', 'less', 'vue' },
+    init_options = {
+      html = {
+        options = {
+          -- For possible options, see: https://github.com/emmetio/emmet/blob/master/src/config.ts#L79-L267
+          ["bem.enabled"] = true,
+        },
+      },
+    }
+})
+-- Vue
+lspconfig.vuels.setup {
+  on_attach = function(client)
+    --[[
+                Internal Vetur formatting is not supported out of the box
+
+                This line below is required if you:
+                    - want to format using Nvim's native `vim.lsp.buf.formatting**()`
+                    - want to use Vetur's formatting config instead, e.g, settings.vetur.format {...}
+            --]]
+    client.server_capabilities.document_formatting = true
+  end,
+  capabilities = capabilities,
+  settings = {
+    vetur = {
+      completion = {
+        autoImport = true,
+        useScaffoldSnippets = true
+      },
+      format = {
+        defaultFormatter = {
+          html = "prettier",
+          js = "prettier",
+          ts = "prettier",
+        }
+      },
+      validation = {
+        template = true,
+        script = true,
+        style = true,
+        templateProps = true,
+        interpolation = true
+      },
+      experimental = {
+        templateInterpolationService = true
+      }
+    }
+  },
+  root_dir = util.root_pattern("header.php", "package.json", "style.css", 'webpack.config.js')
+}
+
 -- EFM Lang server
 
 -- Languages setup
 local languages = {
-  typescript = { prettier, eslint },
-  javascript = { prettier, eslint },
+  --typescript = { prettier, eslint },
+  --javascript = { prettier, eslint },
+  vue = { prettier, eslint },
   yaml = { yamllint },
   --lua = { luafmt },
   html = { prettier },
