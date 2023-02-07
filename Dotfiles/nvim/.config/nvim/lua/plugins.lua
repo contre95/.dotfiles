@@ -69,5 +69,5 @@ return require("packer").startup(function()
   -- Editting
   use("ekickx/clipboard-image.nvim")
   use("zirrostig/vim-schlepp")
-  use("scrooloose/nerdcommenter")
+  use { 'numToStr/Comment.nvim' }
 end)
