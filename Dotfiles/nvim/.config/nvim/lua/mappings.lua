@@ -24,16 +24,15 @@ vim.keymap.set("n", "<C-A-Right>", "<C-w>l")
 vim.keymap.set("n", "J", "mzJ`z")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
-
 -- Nvim Tree
-vim.keymap.set("n", "<C-f>", function () return require'nvim-tree'.toggle(false, true) end)
+vim.keymap.set("n", "<C-f>", function() return require 'nvim-tree'.toggle(false, true) end)
 
 -- DAP and DAP-UI
-vim.keymap.set("n", "<leader>do", function() return require'dapui'.open() end)
-vim.keymap.set("n", "<leader>de", function() return require'dapui'.close() end)
-vim.keymap.set("n", "<leader>dc", function() return require'dap'.continue() end)
-vim.keymap.set("n", "<leader>dn", function() return require'dap'.step_over() end)
-vim.keymap.set("n", "<leader>db", function() return require'dap'.toggle_breakpoint() end)
+vim.keymap.set("n", "<leader>do", function() return require 'dapui'.open() end)
+vim.keymap.set("n", "<leader>de", function() return require 'dapui'.close() end)
+vim.keymap.set("n", "<leader>dc", function() return require 'dap'.continue() end)
+vim.keymap.set("n", "<leader>dn", function() return require 'dap'.step_over() end)
+vim.keymap.set("n", "<leader>db", function() return require 'dap'.toggle_breakpoint() end)
 
 -- Git reset hunk
 vim.keymap.set("n", "gr", ":Gitsigns reset_hunk<CR>")
@@ -42,17 +41,19 @@ vim.keymap.set("n", "gb", ":Gitsigns blame_line<CR>")
 
 -- Spelling
 vim.keymap.set("n", "<leader>s", ":set invspell<CR>") -- toggle
-vim.keymap.set("n","<leader>j","1z=") -- Fix spelling with first option
+vim.keymap.set("n", "<leader>j", "1z=") -- Fix spelling with first option
 
 -- Schleep indention (zirrostig/vim-schlep)
 vim.keymap.set("v", "<C-d>", "<Plug>SchleppDup")
 vim.keymap.set("v", "<C-Up>", "<Plug>SchleppIndentUp")
 vim.keymap.set("v", "<C-Down>", "<Plug>SchleppIndentDown")
 
--- NerdCommenter (scrooloose/nerdcommenter)
-vim.keymap.set("n", "<C-l>", "<Plug>NERDCommenterToggle <Down>")
-vim.keymap.set("n", "<C-A-l>", "<Plug>NERDCommenterToggle <Up>")
-vim.keymap.set("v", "<C-l>", "<Plug>NERDCommenterToggle<CR>gv")
+-- Commenter (numToStr/Comment.nvim)
+local commentapi = require('Comment.api')
+local esc = vim.api.nvim_replace_termcodes('<ESC>', true, false, true)
+vim.keymap.set("n", "<C-l>", function() commentapi.toggle.linewise.current() end, { noremap = true, silent = true })
+vim.keymap.set('x', '<C-l>',
+  function() vim.api.nvim_feedkeys(esc, 'nx', false) commentapi.toggle.linewise(vim.fn.visualmode()) end)
 
 -- Telescope
 vim.keymap.set("n", "<leader>b", ":Telescope buffers<cr>")
@@ -91,5 +92,5 @@ vim.keymap.set("n", "<A-C-Tab>", "gT")
 vim.keymap.set("n", "<leader>r", ":so %<CR>")
 
 -- Encode/Decode selection to/from base64
-vim.keymap.set("v","<leader>u", [[c<c-r>=system('base64 -w 0', @")<cr><esc>]])
-vim.keymap.set("v","<leader>y", [[c<c-r>=system('base64 --decode', @")<cr><esc>]])
+vim.keymap.set("v", "<leader>u", [[c<c-r>=system('base64 -w 0', @")<cr><esc>]])
+vim.keymap.set("v", "<leader>y", [[c<c-r>=system('base64 --decode', @")<cr><esc>]])
