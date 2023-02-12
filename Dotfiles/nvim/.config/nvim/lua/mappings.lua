@@ -42,6 +42,8 @@ vim.keymap.set("n", "gb", ":Gitsigns blame_line<CR>")
 -- Spelling
 vim.keymap.set("n", "<leader>s", ":set invspell<CR>") -- toggle
 vim.keymap.set("n", "<leader>j", "1z=") -- Fix spelling with first option
+vim.keymap.set("n", "<leader>i", ":set spelllang=en") -- Set spelling in english
+vim.keymap.set("n", "<leader>e", ":set spelllang=es ") -- Set spelling in spanish
 
 -- Schleep indention (zirrostig/vim-schlep)
 vim.keymap.set("v", "<C-d>", "<Plug>SchleppDup")
