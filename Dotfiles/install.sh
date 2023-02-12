@@ -26,8 +26,8 @@ dotfiles=(
 
 for d in "${dotfiles[@]}"; do
 	if stow "$d"; then
-		notify-send "Dotfiles updated" ":)" -i "$MY_FOLDER"/Library/icons/archlinux.png
+		echo ok
 	else
-		notify-send "Dotfiles Error" "$d" -i "$MY_FOLDER"/Library/icons/error.png
+		echo no
 	fi
 done
