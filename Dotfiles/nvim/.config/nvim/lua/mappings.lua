@@ -34,6 +34,12 @@ vim.keymap.set("n", "<leader>dc", function() return require 'dap'.continue() end
 vim.keymap.set("n", "<leader>dn", function() return require 'dap'.step_over() end)
 vim.keymap.set("n", "<leader>db", function() return require 'dap'.toggle_breakpoint() end)
 
+-- Colorscheme
+vim.keymap.set("n", "<C-n>", function() return require('material.functions').toggle_style() end)
+
+-- Change number when sharing screen 
+vim.keymap.set("n", "<C-h>", ":set relativenumber!<CR>") -- toggle
+
 -- Git reset hunk
 vim.keymap.set("n", "gr", ":Gitsigns reset_hunk<CR>")
 vim.keymap.set("n", "gp", ":Gitsigns preview_hunk<CR>")

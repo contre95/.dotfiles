@@ -38,7 +38,9 @@ autocmd BufWritePre *.go lua go_org_imports()
 "-------------------------------------
 autocmd FileType markdown setlocal spell 
 "autocmd FileType markdown setlocal complete+=kspell
-autocmd FileType markdown setlocal spelllang=es
+autocmd FileType markdown setlocal wrap 
+autocmd FileType markdown setlocal nonumber
+autocmd FileType markdown setlocal norelativenumber
 " autocmd FileType markdown setlocal textwidth=80
 " autocmd FileType markdown setlocal colorcolumn=-2 
 
