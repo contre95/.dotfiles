@@ -20,26 +20,19 @@ local use = packer.use
 return require("packer").startup(function()
   use("wbthomason/packer.nvim")
   -- Colorcheme
-  use { "kabouzeid/nvim-jellybeans", requires = "rktjmp/lush.nvim" }
+  -- use { "kabouzeid/nvim-jellybeans", requires = "rktjmp/lush.nvim" }
   use({ 'marko-cerovac/material.nvim' })
-  use("kvrohit/rasmus.nvim")
-  use("norcalli/nvim-colorizer.lua")
+  -- use("kvrohit/rasmus.nvim")
+  -- use("norcalli/nvim-colorizer.lua")
   use({
     "iamcco/markdown-preview.nvim",
     run = function() vim.fn["mkdp#util#install"]() end,
   })
   use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install",
     setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
-
-
-  --use({
-  --'rose-pine/neovim',
-  --as = 'rose-pine',
-  --config = function()
-  --require("rose-pine").setup()
-  --vim.cmd('colorscheme rose-pine')
-  --end
-  --})
+  -- UI
+  -- Notes
+  use({ "Pocco81/true-zen.nvim" })
   -- Statusline
   use({ "nvim-lualine/lualine.nvim", requires = { "kyazdani42/nvim-web-devicons", opt = true } })
   -- Navigation
