@@ -114,7 +114,7 @@ autocmd BufNewFile,BufRead *.conf call s:DetectLogstash()
 aug terraform_ft_detection
     au!
     au BufNewFile,BufRead *.tf set filetype=terraform
-    au BufWritePre *.tf lua vim.lsp.buf.formatting_sync()
+    au BufWritePre *.tf lua vim.lsp.buf.format({async = true})
 aug end
 
 "Set SXHKD filetype

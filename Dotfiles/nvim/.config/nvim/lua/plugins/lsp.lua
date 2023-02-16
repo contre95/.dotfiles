@@ -170,7 +170,7 @@ lspconfig.pyright.setup({ capabilities = capabilities, handlers = handlers })
 lspconfig.gopls.setup({ capabilities = capabilities })
 
 -- Terraform
-
+--
 lspconfig.tflint.setup({
   flags = { debounce_text_changes = 150 },
 })
