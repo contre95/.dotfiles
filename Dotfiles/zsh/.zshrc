@@ -8,7 +8,7 @@ else
   # Set keyrate
   xset r rate 250 30
   # My folder
-  export MY_FOLDER="/home/canus"
+  export MY_FOLDER="/home/server"
 fi
 
 ################################################################################################

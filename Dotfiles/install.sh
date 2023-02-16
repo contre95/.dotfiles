@@ -18,15 +18,15 @@ dotfiles=(
   barrier
   pcmanfm
   zathura
-  polybar
   keyboard
+  lemonbar
   alacritty
   pulseaudio
 )
 
 for d in "${dotfiles[@]}"; do
 	if stow "$d"; then
-		echo ok
+		echo ok $d
 	else
 		echo no
 	fi
