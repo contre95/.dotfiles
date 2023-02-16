@@ -18,8 +18,8 @@ dotfiles=(
   barrier
   pcmanfm
   zathura
+  polybar
   keyboard
-  lemonbar
   alacritty
   pulseaudio
 )
