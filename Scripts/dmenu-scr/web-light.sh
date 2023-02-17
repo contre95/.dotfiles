@@ -50,7 +50,8 @@ case "$chosen" in
     librewolf --kiosk --profile $LW_PROFILE --new-window https://twitter.com
 	;;
 "Home")
-    librewolf --kiosk --profile $LW_PROFILE --new-window http://home.contre.io/home-dash/0
+    # librewolf --kiosk --profile $LW_PROFILE --new-window http://home.contre.io/home-dash/0
+	exec brave --profile-directory="Contre" --app=http://home.contre.io/home-dash/0
 	;;
 "Any")
     librewolf --kiosk --profile $LW_PROFILE --new-window http://"$(zenity --entry --text='Website  :')"
