@@ -1,15 +1,19 @@
 #!/bin/bash
 source ~/.zshrc
 
-choices="Any\nKeybr\nMedia\nBurp\nCronometer\nWhite\nNew Bookmark\nN26\nMonkeytype\nHome\nGalicia Contre\nChatGPT\nGarmin\nMercadopago Contre\nGalicia Codelamp\nLichess\nInstagram\nMercadopago Codelamp\nYoutube\nTwitter\nDeemix\nTwitch"
+choices="Any\nKeybr\nMedia\nCronometer\nWhite\nNew Bookmark\nN26\nMonkeytype\nHome\nGalicia Contre\nChatGPT\nGarmin\nLichess\nInstagram\nYoutube\nTwitter\nDeemix\nTwitch"
 chosen=$(echo -e "$choices" | dmenu -i -p "Select Layout: " -sb "#8F7DAB")
+
+# NOTE 
+# In order for librefox not to launch this windows in fullscreen (at lead on bspwm) we need to set up full-screen-api.ignore-widgets to `true` in the about:config
+LW_PROFILE="/home/contre/.librewolf/fodihtjs.Contre"
 
 case "$chosen" in
 "N26")
-	exec brave --profile-directory="Contre" --app=https://app.n26.com/login
+    librewolf --kiosk --profile $LW_PROFILE --new-window https://app.n26.com/login
 	;;
 "White")
-	exec brave --profile-directory="Contre" --app=https://blankwhitescreen.com/
+    librewolf --kiosk --profile $LW_PROFILE --new-window https://blankwhitescreen.com/
 	;;
 "Keybr")
 	exec brave --profile-directory="Contre" --app=https://www.keybr.com/
@@ -18,58 +22,44 @@ case "$chosen" in
 	exec brave --profile-directory="Contre" --app=https://www.monkeytype.com/
 	;;
 "Twitch")
-	exec brave --profile-directory="Contre" --app=https://twitch.tv/
+    librewolf --kiosk --profile $LW_PROFILE --new-window https://twitch.tv/
 	;;
 "Cronometer")
-	exec brave --profile-directory="Contre" --app=https://cronometer.com/
+    librewolf --kiosk --profile $LW_PROFILE --new-window https://cronometer.com/
 	;;
 "Deemix")
-	exec brave --profile-directory="Contre" --app=http://localhost:6595
+    librewolf --kiosk --profile $LW_PROFILE --new-window https://dmusic.contre.io
 	;;
 "ChatGPT")
-    exec brave --profile-directory="Contre" --app=https://chat.openai.com/chat
+    librewolf --kiosk --profile $LW_PROFILE --new-window https://chat.openai.com/chat
 	;;
 "Media")
-	exec brave --profile-directory="Contre" --app=http://media.contre.io
+	librewolf --kiosk --profile "$LW_PROFILE" --new-window http://media.contre.io
 	;;
 "Youtube")
-	exec brave --profile-directory="Contre" --app=https://youtube.com
+    # In order for librefox not to launch this windows in fullscreen (at lead on bspwm) we need to set up full-screen-api.ignore-widgets to `true` in the about:config
+    librewolf --kiosk --profile $LW_PROFILE --new-window https://youtube.com
 	;;
 "Lichess")
-	exec brave --profile-directory="Contre" --app=https://lichess.org
+    librewolf --kiosk --profile $LW_PROFILE --new-window https://lichess.org
 	;;
 "Twitter")
-	exec brave --profile-directory="Contre" --app=https://twitter.com
+    librewolf --kiosk --profile $LW_PROFILE --new-window https://twitter.com
 	;;
 "Home")
-	exec brave --profile-directory="Contre" --app=http://home.contre.io/home-dash/0
+    librewolf --kiosk --profile $LW_PROFILE --new-window http://home.contre.io/home-dash/0
 	;;
 "Any")
-	exec brave --app=http://"$(zenity --entry --text='Website  :')"
+    librewolf --kiosk --profile $LW_PROFILE --new-window http://"$(zenity --entry --text='Website  :')"
 	;;
 "New Bookmark")
-   echo "$(zenity --entry --text='Bookmark:')"     - http://"$(zenity --entry --text='Website  :')" >> $MY_FOLDER/Info/bookmarks.txt 
-	;;
-"Galicia Contre")
-	exec brave --profile-directory="Contre" --app=https://onlinebanking.bancogalicia.com.ar/login
-	;;
-"Galicia Codelamp")
-	exec brave --profile-directory="Codelamp" --app=https://onlinebanking.bancogalicia.com.ar/login
+   echo "$(zenity --entry --text='Bookmark:')" - http://"$(zenity --entry --text='Website  :')" >> $MY_FOLDER/Info/bookmarks.txt 
 	;;
 "Garmin")
-	exec brave --profile-directory="Contre" --app=https://connect.garmin.com/modern/
-	;;
-"Mercadopago Contre")
-	exec brave --profile-directory="Contre" --app=https://www.mercadopago.com.ar/home
+    librewolf --kiosk --profile $LW_PROFILE --new-window https://connect.garmin.com/modern/
 	;;
 "Instagram")
-	exec brave --profile-directory="Contre" --app=https://www.instagram.com
-	;;
-"Burp")
-	exec brave --profile-directory="Burp" --proxy-server="http://127.0.0.1:8080"
-	;;
-"Mercadopago Codelamp")
-	exec brave --profile-directory="Codelamp" --app=https://www.mercadopago.com.ar/home
+    librewolf --kiosk --profile $LW_PROFILE --new-window https://instagram.com
 	;;
 esac
 
