@@ -1,16 +1,19 @@
 #!/bin/bash
 source ~/.zshrc
 
-choices="Any\nKeybr\nMedia\nCronometer\nWhite\nNew Bookmark\nN26\nMonkeytype\nHome\nGalicia Contre\nChatGPT\nGarmin\nLichess\nInstagram\nYoutube\nTwitter\nDeemix\nTwitch"
+choices="Any\nKeybr\nTradingView\nMedia\nCronometer\nWhite\nNew Bookmark\nN26\nMonkeytype\nHome\nGalicia Contre\nChatGPT\nGarmin\nLichess\nInstagram\nYoutube\nTwitter\nDeemix\nTwitch"
 chosen=$(echo -e "$choices" | dmenu -i -p "Select Layout: " -sb "#8F7DAB")
 
 # NOTE 
-# In order for librefox not to launch this windows in fullscreen (at lead on bspwm) we need to set up full-screen-api.ignore-widgets to `true` in the about:config
-LW_PROFILE="/home/contre/.librewolf/fodihtjs.Contre"
+# In order for librefox not to launch this windows in fullscreen (at lead on bspwm) we need to set up 'full-screen-api.ignore-widgets' to `true` in the about:config
+LW_PROFILE="/home/contre/.librewolf/bhadvuvg.ContreKiosk"
 
 case "$chosen" in
 "N26")
     librewolf --kiosk --profile $LW_PROFILE --new-window https://app.n26.com/login
+	;;
+"TradingView")
+    librewolf --kiosk --profile $LW_PROFILE --new-window https://www.tradingview.com/
 	;;
 "White")
     librewolf --kiosk --profile $LW_PROFILE --new-window https://blankwhitescreen.com/
@@ -31,7 +34,7 @@ case "$chosen" in
     librewolf --kiosk --profile $LW_PROFILE --new-window https://dmusic.contre.io
 	;;
 "ChatGPT")
-    librewolf --kiosk --profile $LW_PROFILE --new-window https://chat.openai.com/chat
+    librewolf --kiosk --new-instance $LW_PROFILE --new-window https://chat.openai.com/chat
 	;;
 "Media")
 	librewolf --kiosk --profile "$LW_PROFILE" --new-window http://media.contre.io
