@@ -31,13 +31,13 @@ case "$chosen" in
     librewolf --kiosk --profile $LW_PROFILE --new-window https://cronometer.com/
 	;;
 "Deemix")
-    librewolf --kiosk --profile $LW_PROFILE --new-window https://dmusic.contre.io
+    librewolf --kiosk --profile $LW_PROFILE --new-window http://dmusic.contre.io
 	;;
 "ChatGPT")
-    librewolf --kiosk --new-instance $LW_PROFILE --new-window https://chat.openai.com/chat
+    librewolf --kiosk --profile $LW_PROFILE --new-window https://chat.openai.com/chat
 	;;
 "Media")
-	librewolf --kiosk --profile "$LW_PROFILE" --new-window http://media.contre.io
+	librewolf --kiosk --profile $LW_PROFILE --new-window http://media.contre.io
 	;;
 "Youtube")
     # In order for librefox not to launch this windows in fullscreen (at lead on bspwm) we need to set up full-screen-api.ignore-widgets to `true` in the about:config
