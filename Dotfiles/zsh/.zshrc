@@ -74,9 +74,6 @@ fi
 #bindkey -v
 
 # SSH Configuration with GPG
-#echo [KEYGRIP] >> ~/.gnupg/sshcontrol
-export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
-gpgconf --launch gpg-agent
 
 ################################################################################################
 # Alias
