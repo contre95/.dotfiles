@@ -13,7 +13,7 @@ case "$chosen" in
     librewolf --kiosk --profile $LW_PROFILE --new-window https://app.n26.com/login
 	;;
 "TradingView")
-    librewolf --kiosk --profile $LW_PROFILE --new-window https://www.tradingview.com/
+    librewolf --kiosk --profile $LW_PROFILE --new-window https://www.tradingview.com/chart/rH3IToRa/?symbol=BITSTAMP%3ABTCUSD
 	;;
 "White")
     librewolf --kiosk --profile $LW_PROFILE --new-window https://blankwhitescreen.com/
