@@ -2,6 +2,7 @@ import lemonbar_manager
 import modules
 import bspwm_modules
 import clock_modules
+import os
 import disk_modules
 import socket
 
@@ -18,6 +19,7 @@ if socket.gethostname() == 'elserver':
             modules.Const(' '),
             bspwm_modules.Tags('DP3', include={"1","2","3","4","5"}),
             modules.Const('%{c}'),
+            modules.Const(f'{os.environ.get("MYENV")}'),
             modules.Const(' | '),
             modules.Command(command=["/usr/bin/curl","--connect-timeout","3","ifconfig.io"], label="", errMsg="0.0.0.0"),
             modules.Const('%{r}'),
@@ -30,6 +32,8 @@ elif socket.gethostname() == 'archdesk':
             modules.Const(' '),
             bspwm_modules.Tags('HDMI-0', include={"1","2","3","4","5"}),
             modules.Const('%{c}'),
+            modules.Const(f'{os.environ.get("MYENV")}'),
+            modules.Const(' | '),
             modules.Command(command=["iwgetid","-r"], label="", errMsg="Not Connected"),
             modules.Const(' | '),
             modules.Command(command=["/usr/bin/curl","--connect-timeout","3","ifconfig.io"], label="", errMsg="0.0.0.0"),

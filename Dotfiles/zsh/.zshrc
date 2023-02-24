@@ -3,11 +3,6 @@
 ################################################################################################
 if [[ $(uname) == "Darwin" ]]; then
   export MY_FOLDER="/Users/contre"
-elif [[ $HOST == "archdesk" ]]; then
-  xset r rate 250 30
-  export MY_FOLDER="/home/canus"
-elif [[ $HOST == "elserver" ]]; then
-  export MY_FOLDER="/home/server"
 fi
 
 ################################################################################################
