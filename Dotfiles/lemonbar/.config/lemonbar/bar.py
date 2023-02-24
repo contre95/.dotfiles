@@ -12,18 +12,24 @@ PADDING = '  '  # Padding
 #import logging
 #logging.basicConfig(level=logging.INFO, filename='/tmp/lemonbar.log')
 if os.environ.get("MYENV") == 'server':
-        modules = (
-            modules.Const('%{Sf}%{l}'),
-            modules.Const(' '),
-            bspwm_modules.Tags('DP3', include={"1","2","3","4","5"}),
-            modules.Const('%{c}'),
-            modules.Const(f'{os.environ.get("MYENV")}'),
-            modules.Const(' | '),
-            modules.Command(command=["/usr/bin/curl","--connect-timeout","3","ifconfig.io"], label="", errMsg="0.0.0.0"),
-            modules.Const('%{r}'),
-            clock_modules.Clock(),
-            )
+    a = '250'
+    g = 'x45'
+    o = '-1'
+    modules = (
+        modules.Const('%{Sf}%{l}'),
+        modules.Const(' '),
+        bspwm_modules.Tags('DP3', include={"1","2","3","4","5"}),
+        modules.Const('%{c}'),
+        modules.Const(f'{os.environ.get("MYENV")}'),
+        modules.Const(' | '),
+        modules.Command(command=["/usr/bin/curl","--connect-timeout","3","ifconfig.io"], label="", errMsg="0.0.0.0"),
+        modules.Const('%{r}'),
+        clock_modules.Clock(),
+        )
 elif os.environ.get("MYENV") == 'desktop':
+    a = '100'
+    g = 'x20'
+    o = '-3'
     modules = (
             modules.Const('%{Sf}%{l}'),
             modules.Const(' '),
@@ -61,12 +67,11 @@ elif os.environ.get("MYENV") == 'desktop':
 command = (
     'lemonbar',
     '-b',
-    '-a', '250',
-    '-g', 'x45',
+    '-a', a,
+    '-g', g,
     '-B', '#111111',
     '-F', '#5E81AC',
-    '-o', '-1',  # Push Noto down 0px
-    '-o', '-1', # Push Material Desisn Icons down -1px
+    '-o', o,  # Push Noto down 0px
     '-f', 'JetBrainsMono Nerd Font:size=11',
     '-f', 'Material Design Icons:size=13'
 )
