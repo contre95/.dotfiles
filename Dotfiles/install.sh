@@ -1,4 +1,6 @@
 #!/bin/bash
+HOST=$(hostnamectl hostname)
+printf "Installing dotfiles for %s\n" "$HOST" 
 
 server=(
 	fzf
