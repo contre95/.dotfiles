@@ -1,14 +1,13 @@
 ################################################################################################
 # OS Specific configuration
 ################################################################################################
-if [[ `uname` == "Darwin" ]]; then
-  # My folder
+if [[ $(uname) == "Darwin" ]]; then
   export MY_FOLDER="/Users/contre"
-else
-  # Set keyrate
+elif [[ $HOST == "archdesk" ]]; then
   xset r rate 250 30
-  # My folder
   export MY_FOLDER="/home/canus"
+elif [[ $HOST == "elserver" ]]; then
+  export MY_FOLDER="/home/server"
 fi
 
 ################################################################################################

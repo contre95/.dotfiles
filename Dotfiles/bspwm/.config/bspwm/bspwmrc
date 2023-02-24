@@ -4,21 +4,26 @@ bspc rule -r "*" # Remove any pre-existing rule
 
 export MY_FOLDER=/home/canus
 export SCR_PATH=$MY_FOLDER/Scripts
+# export DISPLAY=:0
 #### AUTOSTART ####
 sxhkd &
-syncthing serve &
 picom &
+autorandr --change
 nitrogen --restore &
+# clipmenud &
+# bluetoothctl power on &
+# nvidia-settings -a "[gpu:0]/GPUFanControlState=1" -a "[fan:0]/GPUTargetFanSpeed=10" -a "[fan:1]/GPUTargetFanSpeed=10"
+# syncthing serve &
 #/usr/bin/feh --randomize --bg-fill "/home/contre/Pictures/Wallpapers/random/3" &
-clipmenud &
-~/.screenlayout/widescreen.sh &
-bluetoothctl power on &
-setxkbmap -layout us -variant mac &
-nvidia-settings -a "[gpu:0]/GPUFanControlState=1" -a "[fan:0]/GPUTargetFanSpeed=10" -a "[fan:1]/GPUTargetFanSpeed=10"
 
 #### MONITORS ####
-bspc monitor HDMI-0 -d 1 2 3 4 5
-bspc monitor DP-4 -d 6 7 8 9 ﭮ    
+bspc config -m "$(bspc query -M | sed -n 1p)"  top_padding 0
+bspc monitor "$(bspc query -M | sed -n 1p)" -d 1 2 3 4 5
+
+if [ "$HOST" = 'archdesk' ]; then
+  bspc config -m "$(bspc query -M | sed -n 2p)"  top_padding 0
+  bspc monitor "$(bspc query -M | sed -n 2p)" -d 6 7 8 9 ﭮ    
+fi
 
 #### BSPWM custom layout | https://github.com/phenax/bsp-layout
 bsp-layout set even
@@ -55,8 +60,6 @@ bspc config pointer_action1 move
 bspc config directional_focus_tightness low
 bspc config single_monocle false
 #$SCR_PATH/bspwm-scr/borders.sh &
-bspc config -m HDMI-0 top_padding 0
-bspc config -m DP-4 top_padding 0
 bspc config pointer_modifier mod4
 bspc config focus_by_distance true
 bspc config borderless_monocle true
@@ -74,7 +77,7 @@ bspc config normal_border_color         "#242427"
 bspc config active_border_color         "#242427"
 
 ### Lemonbar bar (be sure to load bspwm monitors first)
-pkill -x lemonbar
+# pkill -x lemonbar
 python3 "$HOME/.config/lemonbar/bar.py" &
 #bspc subscribe node_state | while read _ _ _ _ state flag; do
 	#if [[ $state == fullscreen ]]; then
