@@ -3,6 +3,7 @@ import modules
 import bspwm_modules
 import clock_modules
 import disk_modules
+import socket
 
 
 PADDING = '  '  # Padding
@@ -11,37 +12,49 @@ PADDING = '  '  # Padding
 #import logging
 #logging.basicConfig(level=logging.INFO, filename='/tmp/lemonbar.log')
 
+if socket.gethostname() == 'elserver':
+        modules = (
+            modules.Const('%{Sf}%{l}'),
+            modules.Const(' '),
+            bspwm_modules.Tags('HDMI-0', include={"1","2","3","4","5"}),
+            modules.Const('%{c}'),
+            modules.Command(command=["iwgetid","-r"], label="", errMsg="Not Connected"),
+            modules.Const(' | '),
+            modules.Command(command=["/usr/bin/curl","--connect-timeout","3","ifconfig.io"], label="", errMsg="0.0.0.0"),
+            modules.Const('%{r}'),
+            clock_modules.Clock(),
+            modules.Const(PADDING),
+            )
+elif socket.gethostname() == 'archdesk':
+    modules = (
+            modules.Const('%{Sf}%{l}'),
+            modules.Const(' '),
+            bspwm_modules.Tags('HDMI-0', include={"1","2","3","4","5"}),
+            modules.Const('%{c}'),
+            modules.Command(command=["iwgetid","-r"], label="", errMsg="Not Connected"),
+            modules.Const(' | '),
+            modules.Command(command=["/usr/bin/curl","--connect-timeout","3","ifconfig.io"], label="", errMsg="0.0.0.0"),
+            modules.Const('%{r}'),
+            modules.Command(command=["/home/canus/Scripts/oneliners-scr/connected-blth.sh"], label=""),
+            modules.Const(' | '),
+            modules.Command(command=["/home/canus/Scripts/oneliners-scr/default-audio.sh"], label="%{F#FFEA00}%{F-}"),
 
-# Define the modules to put on the bar (in order)
-modules = (
-    modules.Const('%{Sf}%{l}'),
-    modules.Const(' '),
-    bspwm_modules.Tags('HDMI-0', include={"1","2","3","4","5"}),
-    modules.Const('%{c}'),
-    modules.Command(command=["iwgetid","-r"], label="", errMsg="Not Connected"),
-    modules.Const(' | '),
-    modules.Command(command=["/usr/bin/curl","--connect-timeout","3","ifconfig.io"], label="", errMsg="0.0.0.0"),
-    modules.Const('%{r}'),
-    modules.Command(command=["/home/canus/Scripts/oneliners-scr/connected-blth.sh"], label=""),
-    modules.Const(' | '),
-    modules.Command(command=["/home/canus/Scripts/oneliners-scr/default-audio.sh"], label="%{F#FFEA00}%{F-}"),
-
-    modules.Const('%{Sl}%{l}'),
-    modules.Const(PADDING),
-    bspwm_modules.Tags('DP-4', include={"6","7","8","9"}),
-    modules.Const('%{c}'),
-    bspwm_modules.Tags('DP-4', include={"","ﭮ","","",""}),
-    modules.Const('%{r}'),
-    modules.Const(PADDING),
-    disk_modules.DiskUsage('/dev/sda1',icon=""),
-    modules.Const(PADDING),
-    disk_modules.DiskUsage('/dev/nvme0n1p2',icon=""),
-    modules.Const(PADDING),
-    disk_modules.DiskUsage('/dev/nvme0n1p3', icon=""),
-    modules.Const(PADDING),
-    clock_modules.Clock(),
-    modules.Const(PADDING),
-)
+            modules.Const('%{Sl}%{l}'),
+            modules.Const(PADDING),
+            bspwm_modules.Tags('DP-4', include={"6","7","8","9"}),
+            modules.Const('%{c}'),
+            bspwm_modules.Tags('DP-4', include={"","ﭮ","","",""}),
+            modules.Const('%{r}'),
+            modules.Const(PADDING),
+            disk_modules.DiskUsage('/dev/sda1',icon=""),
+            modules.Const(PADDING),
+            disk_modules.DiskUsage('/dev/nvme0n1p2',icon=""),
+            modules.Const(PADDING),
+            disk_modules.DiskUsage('/dev/nvme0n1p3', icon=""),
+            modules.Const(PADDING),
+            clock_modules.Clock(),
+            modules.Const(PADDING),
+            )
 
 
 # Lemonbar command

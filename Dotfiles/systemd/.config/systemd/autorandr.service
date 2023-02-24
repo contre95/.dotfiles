@@ -1,0 +1,14 @@
+[Unit]
+Description=autorandr execution hook
+After=session-1.scope
+StartLimitIntervalSec=5
+StartLimitBurst=1
+
+[Service]
+ExecStart=/usr/bin/autorandr --batch --change
+Type=oneshot
+RemainAfterExit=false
+KillMode=process
+
+[Install]
+WantedBy=sleep.target
