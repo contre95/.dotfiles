@@ -58,7 +58,7 @@ if [[ $HOST == "archdesk" ]]; then
 			notify-send "Dotfiles Error" "$d" -i "$MY_FOLDER"/Library/icons/error.png
 		fi
 	done
-elif [[ $HOST == "elsever" ]]; then
+elif [[ $HOST == "elserver" ]]; then
 	for d in "${server[@]}"; do
 		if stow "$d"; then
 			echo "$d ok"
