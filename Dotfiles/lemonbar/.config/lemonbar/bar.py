@@ -22,7 +22,6 @@ if os.environ.get("MYENV") == 'server':
             modules.Command(command=["/usr/bin/curl","--connect-timeout","3","ifconfig.io"], label="", errMsg="0.0.0.0"),
             modules.Const('%{r}'),
             clock_modules.Clock(),
-            modules.Const(PADDING),
             )
 elif os.environ.get("MYENV") == 'desktop':
     modules = (
@@ -62,11 +61,11 @@ elif os.environ.get("MYENV") == 'desktop':
 command = (
     'lemonbar',
     '-b',
-    '-a', '100',
-    '-g', 'x20',
+    '-a', '250',
+    '-g', 'x45',
     '-B', '#111111',
     '-F', '#5E81AC',
-    '-o', '-3',  # Push Noto down 0px
+    '-o', '-1',  # Push Noto down 0px
     '-o', '-1', # Push Material Desisn Icons down -1px
     '-f', 'JetBrainsMono Nerd Font:size=11',
     '-f', 'Material Design Icons:size=13'
