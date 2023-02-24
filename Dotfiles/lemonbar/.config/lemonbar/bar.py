@@ -12,8 +12,7 @@ PADDING = '  '  # Padding
 
 #import logging
 #logging.basicConfig(level=logging.INFO, filename='/tmp/lemonbar.log')
-
-if socket.gethostname() == 'elserver':
+if os.environ.get("MYENV") == 'server':
         modules = (
             modules.Const('%{Sf}%{l}'),
             modules.Const(' '),
@@ -26,7 +25,7 @@ if socket.gethostname() == 'elserver':
             clock_modules.Clock(),
             modules.Const(PADDING),
             )
-elif socket.gethostname() == 'archdesk':
+elif os.environ.get("MYENV") == 'desktop':
     modules = (
             modules.Const('%{Sf}%{l}'),
             modules.Const(' '),
