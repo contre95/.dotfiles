@@ -1,6 +1,5 @@
 #!/bin/bash
-HOST=$(hostnamectl hostname)
-printf "Installing dotfiles for %s\n" "$HOST" 
+printf "Installing dotfiles for %s\n" "$MYENV" 
 
 server=(
 	fzf
@@ -48,7 +47,7 @@ desktop=(
 	pulseaudio
 )
 
-if [[ $HOST == "archdesk" ]]; then
+if [[ $MYENV == "desktop" ]]; then
 	for d in "${desktop[@]}"; do
 		if stow "$d"; then
 			echo "$d ok"
@@ -58,7 +57,7 @@ if [[ $HOST == "archdesk" ]]; then
 			notify-send "Dotfiles Error" "$d" -i "$MY_FOLDER"/Library/icons/error.png
 		fi
 	done
-elif [[ $HOST == "elserver" ]]; then
+elif [[ $MYENV == "server" ]]; then
 	for d in "${server[@]}"; do
 		if stow "$d"; then
 			echo "$d ok"
