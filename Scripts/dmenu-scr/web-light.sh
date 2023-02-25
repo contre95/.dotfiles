@@ -5,7 +5,7 @@ choices="Any\nKeybr\nTradingView\nMedia\nCronometer\nWhite\nNew Bookmark\nN26\nM
 chosen=$(echo -e "$choices" | dmenu -i -p "Select Layout: " -sb "#8F7DAB")
 
 # NOTE 
-# In order for librefox not to launch this windows in fullscreen (at lead on bspwm) we need to set up 'full-screen-api.ignore-widgets' to `true` in the about:config
+#Variable MOZ_USE_XINPUT2=1 should be setup in order for librefox not to launch this windows in fullscreen (at lead on bspwm) we need to set up 'full-screen-api.ignore-widgets' to `true` in the about:configexport  # For touchscreen  also need to set 'dom.w3c.touch_events.enabled' to 1 in about:config
 LW_PROFILE="ContreKiosk"
 
 case "$chosen" in
