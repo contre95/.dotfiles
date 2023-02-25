@@ -8,11 +8,18 @@ import disk_modules
 
 PADDING = '  '  # Padding
 
-ONE_TO_FIVE = {"1","2","3","4","5"}
 SIX_TO_NINE = {"6","7","8","9"}
+ONE_TO_FIVE = {"1","2","3","4","5"}
 APPS = {"","ﭮ","","",""}
-IP_CMD = ["/usr/bin/curl","--connect-timeout","3","ifconfig.io"]
-WIFI_CMD = ["iwgetid","-r"]
+ENVIRON = modules.Const(f'{os.environ.get("MYENV")}')
+WIFI = modules.Command(command=["iwgetid","-r"], label="", errMsg="Not Connected")
+BLUETOOTH = modules.Command(command=["$SCR_PATH/oneliners-scr/connected-blth.sh"], label="")
+DEFAULT_AUDIO = modules.Command(command=["$SCR_PATH/oneliners-scr/default-audio.sh"], label="%{F#FFEA00}%{F-}")
+IP = modules.Command(command=["/usr/bin/curl","--connect-timeout","3","ifconfig.io"], label="", errMsg="0.0.0.0")
+BATTERY = modules.Command(command=["/usr/bin/cat","/sys/class/power_supply/BAT0/capacity"], label="%", errMsg="0.0.0.0")
+# BTC = modules.Command(command=["/usr/bin/curl","--connect-timeout","3","usd.rate.sx/1BTC"], label="%{F#FFCF00} %{F-}", errMsg="0.0.0.0")
+BTC = modules.Command(command="printf '%.0f' $(curl usd.rate.sx/1BTC)",shell=True,text=True, label="%{F#FFCF00} %{F-}", errMsg="0.0.0.0")
+DOT = modules.Command(command="printf '%.2f' $(curl usd.rate.sx/1DOT)", shell=True,text=True,label="%{F#FF00C7} D%{F-}", errMsg="0.0.0.0")
 #import logging
 #logging.basicConfig(level=logging.INFO, filename='/tmp/lemonbar.log')
 if os.environ.get("MYENV") == 'server':
@@ -25,10 +32,13 @@ if os.environ.get("MYENV") == 'server':
         modules.Const(' '),
         bspwm_modules.Tags('DP3', include=ONE_TO_FIVE),
         modules.Const('%{c}'),
-        modules.Const(f'{os.environ.get("MYENV")}'),
+        ENVIRON,
         modules.Const(' | '),
-        modules.Command(command=IP_CMD, label="", errMsg="0.0.0.0"),
+        IP,
         modules.Const('%{r}'),
+        BTC,
+        DOT,
+        modules.Const(' | '),
         clock_modules.Clock(),
         )
 elif os.environ.get("MYENV") == 'desktop':
@@ -41,15 +51,15 @@ elif os.environ.get("MYENV") == 'desktop':
             modules.Const(' '),
             bspwm_modules.Tags('HDMI-0', include=ONE_TO_FIVE),
             modules.Const('%{c}'),
-            modules.Const(f'{os.environ.get("MYENV")}'),
+            ENVIRON,
             modules.Const(' | '),
-            modules.Command(command=WIFI_CMD, label="", errMsg="Not Connected"),
+            WIFI,
             modules.Const(' | '),
-            modules.Command(command=IP_CMD, label="", errMsg="0.0.0.0"),
+            IP,
             modules.Const('%{r}'),
-            modules.Command(command=["/home/canus/Scripts/oneliners-scr/connected-blth.sh"], label=""),
+            BLUETOOTH,
             modules.Const(' | '),
-            modules.Command(command=["/home/canus/Scripts/oneliners-scr/default-audio.sh"], label="%{F#FFEA00}%{F-}"),
+            DEFAULT_AUDIO,
             modules.Const('%{Sl}%{l}'),
             modules.Const(PADDING),
             bspwm_modules.Tags('DP-4', include=SIX_TO_NINE),
@@ -75,16 +85,19 @@ elif os.environ.get("MYENV") == 'notebook':
           modules.Const('%{Sf}%{l}'),
           bspwm_modules.Tags('eDP-1', include=ONE_TO_FIVE),
           modules.Const('%{c}'),
-          modules.Command(command=WIFI_CMD, label="", errMsg="Not Connected"),
+          WIFI,
           modules.Const(' | '),
           clock_modules.Clock(),
           modules.Const(' | '),
-          modules.Const(f'{os.environ.get("MYENV")}'),
+          ENVIRON,
           modules.Const(' | '),
-          modules.Command(command=["/usr/bin/cat","/sys/class/power_supply/BAT0/capacity"], label="%", errMsg="0.0.0.0"),
+          BATTERY,
           modules.Const(' | '),
-          modules.Command(command=["/usr/bin/curl","--connect-timeout","3","ifconfig.io"], label="", errMsg="0.0.0.0"),
+          IP,
           modules.Const('%{r}'),
+          BTC,
+          DOT,
+          modules.Const(' | '),
           bspwm_modules.Tags('eDP-1', include=APPS),
           modules.Const(PADDING),
        )
