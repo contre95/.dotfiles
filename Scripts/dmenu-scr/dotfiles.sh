@@ -22,7 +22,7 @@ case $var in
     choice="$HOME/.tmux.conf";;
 esac
 
-#if [[ ! "$choice" -eq "" ]];then
+if [[ $choice ]];then
     alacritty -e nvim "$choice" -c "set autochdir"
 
-#fi
+fi

@@ -13,8 +13,8 @@ ONE_TO_FIVE = {"1","2","3","4","5"}
 APPS = {"","ﭮ","","",""}
 ENVIRON = modules.Const(f'{os.environ.get("MYENV")}')
 WIFI = modules.Command(command=["iwgetid","-r"], label="", errMsg="Not Connected")
-BLUETOOTH = modules.Command(command=["$SCR_PATH/oneliners-scr/connected-blth.sh"], label="")
-DEFAULT_AUDIO = modules.Command(command=["$SCR_PATH/oneliners-scr/default-audio.sh"], label="%{F#FFEA00}%{F-}")
+BLUETOOTH = modules.Command(command=[f"{os.environ.get('SCR_PATH')}/oneliners-scr/connected-blth.sh"], label="")
+DEFAULT_AUDIO = modules.Command(command=[f"{os.environ.get('SCR_PATH')}/oneliners-scr/default-audio.sh"], label="%{F#FFEA00}%{F-}")
 IP = modules.Command(command=["/usr/bin/curl","--connect-timeout","3","ifconfig.io"], label="", errMsg="0.0.0.0")
 BATTERY = modules.Command(command=["/usr/bin/cat","/sys/class/power_supply/BAT0/capacity"], label="%", errMsg="0.0.0.0")
 # BTC = modules.Command(command=["/usr/bin/curl","--connect-timeout","3","usd.rate.sx/1BTC"], label="%{F#FFCF00} %{F-}", errMsg="0.0.0.0")
@@ -43,8 +43,8 @@ if os.environ.get("MYENV") == 'server':
         )
 elif os.environ.get("MYENV") == 'desktop':
     a = '100'
-    g = 'x20'
-    o = '-3'
+    g = 'x25'
+    o = '1'
     f =  'JetBrainsMono Nerd Font:size=12'
     modules = (
             modules.Const('%{Sf}%{l}'),
@@ -57,6 +57,13 @@ elif os.environ.get("MYENV") == 'desktop':
             modules.Const(' | '),
             IP,
             modules.Const('%{r}'),
+            modules.Const(PADDING),
+            disk_modules.DiskUsage('/dev/sda1',icon=""),
+            modules.Const(PADDING),
+            disk_modules.DiskUsage('/dev/nvme0n1p2',icon=""),
+            modules.Const(PADDING),
+            disk_modules.DiskUsage('/dev/nvme0n1p3', icon=""),
+            modules.Const(' | '),
             BLUETOOTH,
             modules.Const(' | '),
             DEFAULT_AUDIO,
@@ -67,12 +74,9 @@ elif os.environ.get("MYENV") == 'desktop':
             bspwm_modules.Tags('DP-4', include=APPS),
             modules.Const('%{r}'),
             modules.Const(PADDING),
-            disk_modules.DiskUsage('/dev/sda1',icon=""),
-            modules.Const(PADDING),
-            disk_modules.DiskUsage('/dev/nvme0n1p2',icon=""),
-            modules.Const(PADDING),
-            disk_modules.DiskUsage('/dev/nvme0n1p3', icon=""),
-            modules.Const(PADDING),
+            DOT,
+            BTC,
+            modules.Const(' | '),
             clock_modules.Clock(),
             modules.Const(PADDING),
             )
