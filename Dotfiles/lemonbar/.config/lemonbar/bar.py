@@ -19,6 +19,7 @@ if os.environ.get("MYENV") == 'server':
     a = '250'
     g = 'x45'
     o = '-1'
+    f =  'JetBrainsMono Nerd Font:size=12'
     modules = (
         modules.Const('%{Sf}%{l}'),
         modules.Const(' '),
@@ -34,6 +35,7 @@ elif os.environ.get("MYENV") == 'desktop':
     a = '100'
     g = 'x20'
     o = '-3'
+    f =  'JetBrainsMono Nerd Font:size=12'
     modules = (
             modules.Const('%{Sf}%{l}'),
             modules.Const(' '),
@@ -66,8 +68,9 @@ elif os.environ.get("MYENV") == 'desktop':
             )
 elif os.environ.get("MYENV") == 'notebook':
     a = '150'
-    g = 'x20'
+    g = 'x25'
     o = '-0'
+    f =  'JetBrainsMono Nerd Font:size=12'
     modules = (
           modules.Const('%{Sf}%{l}'),
           bspwm_modules.Tags('eDP-1', include=ONE_TO_FIVE),
@@ -96,8 +99,7 @@ command = (
     '-B', '#111111',
     '-F', '#5E81AC',
     '-o', o,  # Push Noto down 0px
-    '-f', 'JetBrainsMono Nerd Font:size=11',
-    '-f', 'Material Design Icons:size=13'
+    '-f', f
 )
 
 # Run the bar with the given modules
