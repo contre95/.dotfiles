@@ -11,11 +11,16 @@ xset r rate 250 30
 # nvidia-settings -a "[gpu:0]/GPUFanControlState=1" -a "[fan:0]/GPUTargetFanSpeed=10" -a "[fan:1]/GPUTargetFanSpeed=10"
 
 #### Machine Specific ####
-bspc config -m "$(bspc query -M | sed -n 1p)" top_padding 0
-bspc monitor "$(bspc query -M | sed -n 1p)" -d 1 2 3 4 5
-if [ "$MYENV" = 'desktop' ]; then
+if [ "$MYENV" = 'server' ]; then
+  bspc config -m "$(bspc query -M | sed -n 1p)" top_padding 0
+  bspc monitor "$(bspc query -M | sed -n 1p)" -d 1 2 3 4 5
+elif [ "$MYENV" = 'desktop' ]; then
+  bspc config -m "$(bspc query -M | sed -n 1p)" top_padding 0
+  bspc monitor "$(bspc query -M | sed -n 1p)" -d 1 2 3 4 5
   bspc config -m "$(bspc query -M | sed -n 2p)" top_padding 0
   bspc monitor "$(bspc query -M | sed -n 2p)" -d 6 7 8 9 ﭮ    
+elif [ "$MYENV" = 'notebook' ]; then
+  bspc monitor "$(bspc query -M | sed -n 1p)" -d 1 2 3 4 5 ﭮ    
 fi
 
 autorandr --change &

@@ -16,6 +16,7 @@ server=(
 	pcmanfm
 	keyboard
 	systemd
+	lemonbar
 	alacritty
 	autorandr
 	pulseaudio
@@ -55,6 +56,14 @@ if [[ $MYENV == "desktop" ]]; then
 		else
 			echo "$d failed"
 			notify-send "Dotfiles Error" "$d" -i "$MY_FOLDER"/Library/icons/error.png
+		fi
+	done
+elif [[ $MYENV == "notebook" ]]; then
+	for d in "${server[@]}"; do
+		if stow "$d"; then
+			echo "$d ok"
+		else
+			echo "$d failed"
 		fi
 	done
 elif [[ $MYENV == "server" ]]; then
