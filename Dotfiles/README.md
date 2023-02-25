@@ -4,9 +4,15 @@ In order for this Dotfiles to work both $MY_FOLDER and $SCR_PATH have to be set 
 
 ```bash
 # For example
-export MY_FOLDER="/home/contr"
-export MYENV="desktop"
-export SCR_PATH="$MY_FOLDER/Scripts"
+MY_FOLDER="/home/contr"
+MYENV="desktop"
+SCR_PATH="$MY_FOLDER/Scripts"
 ```
 
 These variables are set differently in different environments I use and most of the dotfiles functionality depends on these
+
+## Additional variables you can set up
+
+```shell
+MOZ_USE_XINPUT2=1 # For firefox touchscreen support. See: 
+```

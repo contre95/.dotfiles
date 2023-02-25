@@ -1,6 +1,6 @@
 #!/bin/zsh
-choices="sxhkd\nbspwm\nvimrc\nlemonbar\nzsh\ntmux\nalacritty"
-var=$(echo -e $choices | dmenu -i -p "Audio Output" -sb "#40444B" -fn "JetBrainsMono Nerd Font") 
+choices="sxhkd\nbspwm\nvimrc\nlemonbar\nzsh\ntmux\nalacritty\nscripts"
+var=$(echo -e $choices | dmenu -i -p "Dotfiles" -sb "#40444B" -fn "JetBrainsMono Nerd Font") 
 TMUX_SCRIPTS=/home/canus/Scripts/tmux-scr
 
 case $var in
@@ -12,6 +12,8 @@ case $var in
     choice="$HOME/.config/sxhkd/sxhkdrc";;
     'lemonbar')
     choice="$HOME/.config/lemonbar/bar.py";;
+    'scripts')
+    choice=$(find $SCR_PATH -type f | dmenu -i -p "Scripts" -l 30 -sb "#40444B" -fn "JetBrainsMono Nerd Font") ;;
     'alacritty')
     choice="$HOME/.config/alacritty/alacritty.yml";;
     'zsh')
