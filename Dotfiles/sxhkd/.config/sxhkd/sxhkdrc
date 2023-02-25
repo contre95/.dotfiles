@@ -47,11 +47,11 @@ super + shift + s
 # -------------------------------------
 
 super + g
-    /usr/bin/librewolf --profile "Contre"
+    /usr/bin/librewolf -P "Contre"
 super + shift + g
     /usr/bin/brave --profile-directory="Contre"
 super + shift + b
-    /usr/bin/librewolf --profile "/home/contre/.librewolf/fodihtjs.Contre" $($MY_FOLDER/Scripts/dmenu-scr/picker.sh $MY_FOLDER/Info/bookmarks.txt)
+    /usr/bin/librewolf -P "Contre" $($MY_FOLDER/Scripts/dmenu-scr/picker.sh $MY_FOLDER/Info/bookmarks.txt)
 super + h
      /usr/bin/librewolf -P `zenity --entry --text 'Profile name:'` 
 
