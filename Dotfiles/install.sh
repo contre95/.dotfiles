@@ -1,6 +1,25 @@
 #!/bin/bash
 printf "Installing dotfiles for %s\n" "$MYENV" 
 
+notebook=(
+	fzf
+	gtk
+	zsh
+	nvim
+	rofi
+	tmux
+	bspwm
+	dunst
+	picom
+	sxhkd
+	ranger
+	pcmanfm
+	keyboard
+	lemonbar
+	alacritty
+	autorandr
+)
+
 server=(
 	fzf
 	gtk
@@ -15,11 +34,9 @@ server=(
 	ranger
 	pcmanfm
 	keyboard
-	systemd
 	lemonbar
 	alacritty
 	autorandr
-	pulseaudio
 )
 
 desktop=(
@@ -41,11 +58,10 @@ desktop=(
 	pcmanfm
 	zathura
 	keyboard
-	lemonbar
+	# lemonbar
 	systemd
 	alacritty
 	autorandr
-	pulseaudio
 )
 
 if [[ $MYENV == "desktop" ]]; then
@@ -59,11 +75,13 @@ if [[ $MYENV == "desktop" ]]; then
 		fi
 	done
 elif [[ $MYENV == "notebook" ]]; then
-	for d in "${server[@]}"; do
+	for d in "${notebook[@]}"; do
 		if stow "$d"; then
 			echo "$d ok"
+			notify-send "Dotfiles updated" "$d" -i "$MY_FOLDER"/Library/icons/archlinux.png
 		else
 			echo "$d failed"
+			notify-send "Dotfiles Error" "$d" -i "$MY_FOLDER"/Library/icons/error.png
 		fi
 	done
 elif [[ $MYENV == "server" ]]; then
