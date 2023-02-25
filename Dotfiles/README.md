@@ -14,5 +14,5 @@ These variables are set differently in different environments I use and most of 
 ## Additional variables you can set up
 
 ```shell
-MOZ_USE_XINPUT2=1 # For firefox touchscreen support. See: 
+MOZ_USE_XINPUT2=1 # For firefox touchscreen support. See https://github.com/contre95/.dotfiles/blob/master/Scripts/dmenu-scr/web-light.sh#L8  
 ```
