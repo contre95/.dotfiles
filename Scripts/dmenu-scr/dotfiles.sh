@@ -13,7 +13,7 @@ case $var in
     'lemonbar')
     choice="$HOME/.config/lemonbar/bar.py";;
     'scripts')
-    choice=$(find $SCR_PATH -type f | dmenu -i -p "Scripts" -l 30 -sb "#40444B" -fn "JetBrainsMono Nerd Font") ;;
+    choice=$SCR_PATH/$(find $SCR_PATH -type f | sed "s|$SCR_PATH/||" | dmenu -i -p "Scripts" -sb "#40444B" -fn "JetBrainsMono Nerd Font");;
     'alacritty')
     choice="$HOME/.config/alacritty/alacritty.yml";;
     'zsh')
