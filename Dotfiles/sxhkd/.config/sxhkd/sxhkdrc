@@ -47,7 +47,7 @@ super + shift + s
 # -------------------------------------
 
 super + g
-    /usr/bin/librewolf --profile "/home/contre/.librewolf/fodihtjs.Contre"
+    /usr/bin/librewolf --profile "Contre"
 super + shift + g
     /usr/bin/brave --profile-directory="Contre"
 super + shift + b

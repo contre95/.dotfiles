@@ -8,7 +8,11 @@ import disk_modules
 
 PADDING = '  '  # Padding
 
-
+ONE_TO_FIVE = {"1","2","3","4","5"}
+SIX_TO_NINE = {"6","7","8","9"}
+APPS = {"","ﭮ","","",""}
+IP_CMD = ["/usr/bin/curl","--connect-timeout","3","ifconfig.io"]
+WIFI_CMD = ["iwgetid","-r"]
 #import logging
 #logging.basicConfig(level=logging.INFO, filename='/tmp/lemonbar.log')
 if os.environ.get("MYENV") == 'server':
@@ -18,11 +22,11 @@ if os.environ.get("MYENV") == 'server':
     modules = (
         modules.Const('%{Sf}%{l}'),
         modules.Const(' '),
-        bspwm_modules.Tags('DP3', include={"1","2","3","4","5"}),
+        bspwm_modules.Tags('DP3', include=ONE_TO_FIVE),
         modules.Const('%{c}'),
         modules.Const(f'{os.environ.get("MYENV")}'),
         modules.Const(' | '),
-        modules.Command(command=["/usr/bin/curl","--connect-timeout","3","ifconfig.io"], label="", errMsg="0.0.0.0"),
+        modules.Command(command=IP_CMD, label="", errMsg="0.0.0.0"),
         modules.Const('%{r}'),
         clock_modules.Clock(),
         )
@@ -33,23 +37,22 @@ elif os.environ.get("MYENV") == 'desktop':
     modules = (
             modules.Const('%{Sf}%{l}'),
             modules.Const(' '),
-            bspwm_modules.Tags('HDMI-0', include={"1","2","3","4","5"}),
+            bspwm_modules.Tags('HDMI-0', include=ONE_TO_FIVE),
             modules.Const('%{c}'),
             modules.Const(f'{os.environ.get("MYENV")}'),
             modules.Const(' | '),
-            modules.Command(command=["iwgetid","-r"], label="", errMsg="Not Connected"),
+            modules.Command(command=WIFI_CMD, label="", errMsg="Not Connected"),
             modules.Const(' | '),
-            modules.Command(command=["/usr/bin/curl","--connect-timeout","3","ifconfig.io"], label="", errMsg="0.0.0.0"),
+            modules.Command(command=IP_CMD, label="", errMsg="0.0.0.0"),
             modules.Const('%{r}'),
             modules.Command(command=["/home/canus/Scripts/oneliners-scr/connected-blth.sh"], label=""),
             modules.Const(' | '),
             modules.Command(command=["/home/canus/Scripts/oneliners-scr/default-audio.sh"], label="%{F#FFEA00}%{F-}"),
-
             modules.Const('%{Sl}%{l}'),
             modules.Const(PADDING),
-            bspwm_modules.Tags('DP-4', include={"6","7","8","9"}),
+            bspwm_modules.Tags('DP-4', include=SIX_TO_NINE),
             modules.Const('%{c}'),
-            bspwm_modules.Tags('DP-4', include={"","ﭮ","","",""}),
+            bspwm_modules.Tags('DP-4', include=APPS),
             modules.Const('%{r}'),
             modules.Const(PADDING),
             disk_modules.DiskUsage('/dev/sda1',icon=""),
@@ -61,6 +64,27 @@ elif os.environ.get("MYENV") == 'desktop':
             clock_modules.Clock(),
             modules.Const(PADDING),
             )
+elif os.environ.get("MYENV") == 'notebook':
+    a = '150'
+    g = 'x20'
+    o = '-0'
+    modules = (
+          modules.Const('%{Sf}%{l}'),
+          bspwm_modules.Tags('eDP-1', include=ONE_TO_FIVE),
+          modules.Const('%{c}'),
+          modules.Command(command=WIFI_CMD, label="", errMsg="Not Connected"),
+          modules.Const(' | '),
+          clock_modules.Clock(),
+          modules.Const(' | '),
+          modules.Const(f'{os.environ.get("MYENV")}'),
+          modules.Const(' | '),
+          modules.Command(command=["/usr/bin/cat","/sys/class/power_supply/BAT0/capacity"], label="%", errMsg="0.0.0.0"),
+          modules.Const(' | '),
+          modules.Command(command=["/usr/bin/curl","--connect-timeout","3","ifconfig.io"], label="", errMsg="0.0.0.0"),
+          modules.Const('%{r}'),
+          bspwm_modules.Tags('eDP-1', include=APPS),
+          modules.Const(PADDING),
+       )
 
 
 # Lemonbar command
@@ -79,3 +103,22 @@ command = (
 # Run the bar with the given modules
 with lemonbar_manager.Manager(command, modules) as mgr:
     mgr.loop()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
