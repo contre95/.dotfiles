@@ -58,7 +58,7 @@ desktop=(
 	pcmanfm
 	zathura
 	keyboard
-	# lemonbar
+	lemonbar
 	systemd
 	alacritty
 	autorandr

@@ -3,12 +3,13 @@
 # Remove any pre-existing rule
 bspc rule -r "*"
 
-#### AUTOSTART ####
+# nvidia-settings -a "[gpu:0]/GPUFanControlState=1" -a "[fan:0]/GPUTargetFanSpeed=10" -a "[fan:1]/GPUTargetFanSpeed=10"
+# Startup
+clipmenud &
 sxhkd &
 picom &
 nitrogen --restore &
-xset r rate 250 30
-# nvidia-settings -a "[gpu:0]/GPUFanControlState=1" -a "[fan:0]/GPUTargetFanSpeed=10" -a "[fan:1]/GPUTargetFanSpeed=10"
+xset r rate 250 30 &
 
 #### Machine Specific ####
 if [ "$MYENV" = 'server' ]; then
