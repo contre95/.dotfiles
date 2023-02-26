@@ -5,7 +5,6 @@ bspc rule -r "*"
 
 # nvidia-settings -a "[gpu:0]/GPUFanControlState=1" -a "[fan:0]/GPUTargetFanSpeed=10" -a "[fan:1]/GPUTargetFanSpeed=10"
 # Startup
-clipmenud &
 sxhkd &
 picom &
 nitrogen --restore &
