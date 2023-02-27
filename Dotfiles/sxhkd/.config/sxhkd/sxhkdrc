@@ -28,6 +28,7 @@ super + ctrl + Return
 super + ctrl + shift +Return
 	alacritty -e /bin/zsh -c "tmux -u new-session -A -s \"$(zenity --entry --text 'Profile name:')\"" 
 super + shift + Return
+    bspc rule -a \* --one-shot state=floating layer=above rectangle=$SCR_CORNER monitor="$(bspc query -M | sed -n 1p)" sticky=on && \
     alacritty --option window.opacity=0.9
 
 # Audio
@@ -57,10 +58,27 @@ super + h
 
 # BSPWM hotkeys
 # -------------------------------------
+# Move a floating window
+super + alt + {j,k,i,l}
+    bspc node -v {-20 0,0 20,0 -20,20 0}
+# Expand/contract a window 
+super + alt + control + {j,k,i,l}
+  bspc node -z {left -20 0 || bspc node -z right -20 0, \
+                bottom 0 20 || bspc node -z top 0 20,\
+                top 0 -20 || bspc node -z bottom 0 -20,\
+                right 20 0 || bspc node -z left 20 0}
+
+super + alt + shift {j,k,i,l}
+    bspc node -z {left 20 0,bottom 0 -20,top 0 20,right -20 0}
+
+# Move to center of screen 
+super + control + c
+     bspc rule -a \* --one-shot state=floating layer=above rectangle=$SCR_CORNER monitor="$(bspc query -M | sed -n 1p)" sticky=on 
+super + c
+     bspc rule -a \* --one-shot state=floating layer=above rectangle=$SCR_CENTER monitor="$(bspc query -M | sed -n 1p)"
 # Go to desktop
 super + {1-9}
     bspc {desktop -f} '^{1-9}'
-# Go to special desktop
 super + ctrl + {6,7,8,9,0}
     bspc desktop -f {"ﭮ","","","",""}
 # Move window to special destop and then move to that desktop

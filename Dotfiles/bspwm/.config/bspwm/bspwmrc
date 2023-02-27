@@ -5,16 +5,15 @@ bspc rule -r "*"
 
 # nvidia-settings -a "[gpu:0]/GPUFanControlState=1" -a "[fan:0]/GPUTargetFanSpeed=10" -a "[fan:1]/GPUTargetFanSpeed=10"
 # Startup
-sxhkd &
-picom &
-nitrogen --restore &
-xset r rate 250 30 &
 
 #### Machine Specific ####
 if [ "$MYENV" = 'server' ]; then
   bspc config -m "$(bspc query -M | sed -n 1p)" top_padding 0
   bspc monitor "$(bspc query -M | sed -n 1p)" -d 1 2 3 4 5
 elif [ "$MYENV" = 'desktop' ]; then
+  export SCR_CENTER="1920x1082+750+280"
+  export SCR_CORNER="800x515+2620+1096"
+  export SCR_DROPDOWN="1899x500+750+280"
   bspc config -m "$(bspc query -M | sed -n 1p)" top_padding 0
   bspc monitor "$(bspc query -M | sed -n 1p)" -d 1 2 3 4 5
   bspc config -m "$(bspc query -M | sed -n 2p)" top_padding 0
@@ -22,6 +21,12 @@ elif [ "$MYENV" = 'desktop' ]; then
 elif [ "$MYENV" = 'notebook' ]; then
   bspc monitor "$(bspc query -M | sed -n 1p)" -d 1 2 3 4 5 ﭮ    
 fi
+
+ 
+sxhkd &
+picom &
+nitrogen --restore &
+xset r rate 250 30 &
 
 autorandr --change &
 #### BSPWM custom layout | https://github.com/phenax/bsp-layout
@@ -33,16 +38,10 @@ bspc rule -a Slack desktop=''
 bspc rule -a discord desktop='ﭮ'
 bspc rule -a Music desktop=''
 #bspc rule -a Gmail desktop=''
+# bspc rule -a burp-StartBurp:burp-StartBurp state=floating
 bspc rule -a Pavucontrol:pavucontrol state=floating center=true rectangle=1000x600+0+0
-bspc rule -a Alacrity:Alacrity center=true rectangle=1200x600+0+0
-bspc rule -a burp-StartBurp:burp-StartBurp state=floating
-bspc rule -a Dropdown state=floating layer=above rectangle=1899x500+750+280 monitor=HDMI-0 sticky=on
-bspc rule -a "Brave-browser:www.keybr.com" state=floating layer=above rectangle=1920x1082+750+280 monitor=HDMI-0
-bspc rule -a "Brave-browser:www.monkeytype.com" state=floating layer=above rectangle=1920x1082+750+280 monitor=HDMI-0
-bspc rule -a "Brave-browser:connect.garmin.com__modern" state=floating layer=above rectangle=1920x1082+750+280 monitor=HDMI-0
-bspc rule -a "Brave-browser:home.contre.io__home-dash_0" state=floating layer=above rectangle=1920x1082+750+280 monitor=HDMI-0
-bspc rule -a "obsidian:obsidian" state=floating layer=above rectangle=1920x1082+750+280 monitor=HDMI-0
-bspc rule -a "*:*:Picture-in-Picture" state=floating rectangle=600x400+0+0 center=true
+bspc rule -a Dropdown state=floating layer=above rectangle="$SCR_DROPDOWN" monitor="$(bspc query -M | sed -n 1p)" sticky=on
+# bspc rule -a "*:*:Picture-in-Picture" state=floating rectangle=600x400+0+0 center=true
 
 #### BSPWM configuration ####
 

@@ -2,19 +2,3 @@
 # search videos on youtube and play them in mpv, without an API key
 # Sayan G
 
-query="$(zenity --entry --text='Search video')"
-if [ "$query" == "" ]; then exit; fi 
-query=$(sed 's| |+|g' <<< $query)	
-videoids=$(
-curl -s https://www.youtube.com/results?search_query=$query | \
-	grep -oP "\"videoRenderer\":{\"videoId\":\"...........\".+?\"text\":\".+?(?=\")" | \
-    	awk -F\" '{ print $NF " | " $6}')
-
-
-while true; do
-	videoid=$(
-    echo -e "$videoids" | 
-    dmenu -l 20 -p "Pick Video: " -sb "#FF0000" -fn "JetBrainsMono Nerd Font" | rev | cut -d'|' -f1 | rev | sed 's/ //g') 
-	if [ "$videoid" == "" ]; then exit; fi	
-    mpv --ytdl-format="bestvideo[height<=?480]+bestaudio/best" https://youtu.be/$videoid
-done
