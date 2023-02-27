@@ -1,12 +1,18 @@
 #!/bin/bash
-source ~/.zshrc
+# source ~/.zshrc
 
-choices="Any\nKeybr\nTradingView\nMedia\nCronometer\nWhite\nNew Bookmark\nN26\nMonkeytype\nHome\nGalicia Contre\nChatGPT\nGarmin\nLichess\nInstagram\nYoutube\nTwitter\nDeemix\nTwitch"
+choices="Any\nKeybr\nTradingView\nMedia\nCronometer\nWhite\nNew Bookmark\nN26\nMonkeytype\nHome\nChatGPT\nGarmin\nLichess\nInstagram\nYoutube\nTwitter\nDeemix\nTwitch"
 chosen=$(echo -e "$choices" | dmenu -i -p "Select Layout: " -sb "#8F7DAB")
 
 # NOTE 
 #Variable MOZ_USE_XINPUT2=1 should be setup in order for librefox not to launch this windows in fullscreen (at lead on bspwm) we need to set up 'full-screen-api.ignore-widgets' to `true` in the about:configexport  # For touchscreen  also need to set 'dom.w3c.touch_events.enabled' to 1 in about:config
 LW_PROFILE="ContreKiosk"
+function screen_center { 
+    bspc rule -a \* --one-shot state=floating layer=above rectangle="$SCR_CENTER" monitor="$(bspc query -M | sed -n 1p)" ;
+}
+function screen_corner { 
+    bspc rule -a \* --one-shot state=floating layer=above rectangle="$SCR_CORNER" monitor="$(bspc query -M | sed -n 1p)" ;
+}
 
 case "$chosen" in
 "N26")
@@ -19,15 +25,18 @@ case "$chosen" in
     librewolf --kiosk -P $LW_PROFILE --new-window https://blankwhitescreen.com/
 	;;
 "Keybr")
-	exec brave --profile-directory="Contre" --app=https://www.keybr.com/
+    screen_center
+    librewolf --kiosk -P $LW_PROFILE --new-window https://www.keybr.com/
 	;;
 "Monkeytype")
-	exec brave --profile-directory="Contre" --app=https://www.monkeytype.com/
+    screen_center
+    librewolf --kiosk -P $LW_PROFILE --new-window https://www.monkeytype.com/
 	;;
 "Twitch")
     librewolf --kiosk -P $LW_PROFILE --new-window https://twitch.tv/
 	;;
 "Cronometer")
+    screen_center
     librewolf --kiosk -P $LW_PROFILE --new-window https://cronometer.com/
 	;;
 "Deemix")
@@ -37,6 +46,7 @@ case "$chosen" in
     librewolf --kiosk -P $LW_PROFILE --new-window https://chat.openai.com/chat
 	;;
 "Media")
+    screen_corner 
 	librewolf --kiosk -P $LW_PROFILE --new-window http://media.contre.io
 	;;
 "Youtube")
@@ -50,8 +60,8 @@ case "$chosen" in
     librewolf --kiosk -P $LW_PROFILE --new-window https://twitter.com
 	;;
 "Home")
-    # librewolf --kiosk -P $LW_PROFILE --new-window http://home.contre.io/home-dash/0
-	exec brave --profile-directory="Contre" --app=http://home.contre.io/home-dash/0
+    screen_center
+    librewolf --kiosk -P $LW_PROFILE --new-window http://home.contre.io/home-dash/0
 	;;
 "Any")
     librewolf --kiosk -P $LW_PROFILE --new-window http://"$(zenity --entry --text='Website  :')"
@@ -60,6 +70,7 @@ case "$chosen" in
    echo "$(zenity --entry --text='Bookmark:')" - http://"$(zenity --entry --text='Website  :')" >> $MY_FOLDER/Info/bookmarks.txt 
 	;;
 "Garmin")
+    screen_center
     librewolf --kiosk -P $LW_PROFILE --new-window https://connect.garmin.com/modern/
 	;;
 "Instagram")
