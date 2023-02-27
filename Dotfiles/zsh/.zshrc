@@ -62,15 +62,16 @@ if [[ -n $SSH_CONNECTION ]]; then
 	export EDITOR='vim'
 else
 	export EDITOR='nvim'
+    # Only use gpg/ssh keys when not in an SSH connection. Not to replace the keys forwarded by the ssh agent.
+    # SSH Configuration with GPG
+    #echo [KEYGRIP] >> ~/.gnupg/sshcontrol
+    export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+    gpgconf --launch gpg-agent
 fi
 
 # Enable vi mode
 #bindkey -v
 
-# SSH Configuration with GPG
-#echo [KEYGRIP] >> ~/.gnupg/sshcontrol
-export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
-gpgconf --launch gpg-agent
 
 ################################################################################################
 # Alias
