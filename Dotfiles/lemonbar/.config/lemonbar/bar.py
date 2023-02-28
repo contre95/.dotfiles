@@ -4,8 +4,6 @@ import bspwm_modules
 import clock_modules
 import os
 import disk_modules
-import requests
-
 
 PADDING = '  '  # Padding
 
