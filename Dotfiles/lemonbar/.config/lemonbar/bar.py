@@ -4,6 +4,7 @@ import bspwm_modules
 import clock_modules
 import os
 import disk_modules
+import requests
 
 
 PADDING = '  '  # Padding
@@ -18,8 +19,8 @@ DEFAULT_AUDIO = modules.Command(command=[f"{os.environ.get('SCR_PATH')}/oneliner
 IP = modules.Command(command=["/usr/bin/curl","--connect-timeout","3","ifconfig.io"], label="", errMsg="0.0.0.0")
 BATTERY = modules.Command(command=["/usr/bin/cat","/sys/class/power_supply/BAT0/capacity"], label="%", errMsg="0.0.0.0")
 # BTC = modules.Command(command=["/usr/bin/curl","--connect-timeout","3","usd.rate.sx/1BTC"], label="%{F#FFCF00} %{F-}", errMsg="0.0.0.0")
-BTC = modules.Command(command="printf '%.0f' $(curl usd.rate.sx/1BTC)",shell=True,text=True, label="%{F#FFCF00} %{F-}", errMsg="0.0.0.0")
-DOT = modules.Command(command="printf '%.2f' $(curl usd.rate.sx/1DOT)", shell=True,text=True,label="%{F#FF00C7} D%{F-}", errMsg="0.0.0.0")
+BTC = modules.Command(command="curl -X GET 'https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd' | jq '.[].usd'",shell=True,text=True, label="%{F#FFCF00} %{F-}", errMsg="0.0.0.0")
+DOT = modules.Command(command="curl -X GET 'https://api.coingecko.com/api/v3/simple/price?ids=polkadot&vs_currencies=usd' | jq '.[] .usd'", shell=True,text=True,label="%{F#FF00C7} D%{F-}", errMsg="0.0.0.0")
 #import logging
 #logging.basicConfig(level=logging.INFO, filename='/tmp/lemonbar.log')
 if os.environ.get("MYENV") == 'server':
