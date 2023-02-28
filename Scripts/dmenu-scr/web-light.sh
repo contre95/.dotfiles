@@ -14,12 +14,23 @@ function screen_corner {
     bspc rule -a \* --one-shot state=floating layer=above rectangle="$SCR_CORNER" monitor="$(bspc query -M | sed -n 1p)" ;
 }
 
+declare -A  markets=(
+    ["BTC|USD"]="https://www.tradingview.com/chart/rH3IToRa/?symbol=BITSTAMP%3ABTCUSD"
+    ["DOT|USD"]="https://www.tradingview.com/chart/rH3IToRa/?symbol=BINANCE%3ADOTUSD"
+    ["EUR|USD"]="https://www.tradingview.com/chart/rH3IToRa/?symbol=FX%3AEURUSD"
+    ["US|INTR"]="https://www.tradingview.com/chart/rH3IToRa/?symbol=ECONOMICS%3AUSINTR"
+    ["ARS|USD"]="https://www.tradingview.com/chart/rH3IToRa/?symbol=FX_IDC%3AARSUSD"
+    ["ETH|USD"]="https://www.tradingview.com/chart/rH3IToRa/?symbol=BITSTAMP%3AETHUSD"
+    ["XMR|USD"]="https://www.tradingview.com/chart/rH3IToRa/?symbol=KRAKEN%3AXMRUSD"
+)
+
 case "$chosen" in
 "N26")
     librewolf --kiosk -P $LW_PROFILE --new-window https://app.n26.com/login
 	;;
 "TradingView")
-    librewolf --kiosk -P $LW_PROFILE --new-window https://www.tradingview.com/chart/rH3IToRa/?symbol=BITSTAMP%3ABTCUSD
+    market=$(echo -e "${!markets[@]}" | tr ' ' '\n'| dmenu -i -p "Scripts" -sb "#40444B" -fn "JetBrainsMono Nerd Font")
+    librewolf --kiosk -P $LW_PROFILE --new-window "${markets[$market]}"
 	;;
 "White")
     librewolf --kiosk -P $LW_PROFILE --new-window https://blankwhitescreen.com/

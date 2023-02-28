@@ -130,7 +130,7 @@ super + ctrl + p
 super + 0
     $SCR_PATH/dmenu-scr/exit.sh
 super + q
-    zenity --question --text="Kill tmux?" && tmux kill-server
+    [ $(echo "YES\nNO" | dmenu  -sb "#34495E" -fn "JetBrainsMono Nerd Font") = "YES" ] && tmux kill-server
 super + m
     $SCR_PATH/dmenu-scr/messages.sh
 super + ctrl + v
