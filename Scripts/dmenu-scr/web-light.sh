@@ -1,7 +1,7 @@
 #!/bin/bash
 # source ~/.zshrc
 
-choices="Any\nKeybr\nTradingView\nMedia\nCronometer\nWhite\nNew Bookmark\nN26\nMonkeytype\nHome\nChatGPT\nGarmin\nLichess\nInstagram\nYoutube\nTwitter\nDeemix\nTwitch"
+choices="Any\nKeybr\nTradingView\nMedia\nCronometer\nWhite\nNew Bookmark\nN26\nMonkeytype\nHome\nChatGPT\nGarmin\nLichess\nInstagram\nYoutube\nTwitter\nDeemix\nTwitch\nTranslate"
 chosen=$(echo -e "$choices" | dmenu -i -p "Select Layout: " -sb "#8F7DAB")
 
 # NOTE 
@@ -25,6 +25,9 @@ declare -A  markets=(
 )
 
 case "$chosen" in
+"Translate")
+    librewolf --kiosk -P $LW_PROFILE --new-window "https://translate.google.com/?es=en"
+	;;
 "N26")
     librewolf --kiosk -P $LW_PROFILE --new-window https://app.n26.com/login
 	;;
@@ -57,7 +60,6 @@ case "$chosen" in
     librewolf --kiosk -P $LW_PROFILE --new-window https://chat.openai.com/chat
 	;;
 "Media")
-    screen_corner 
 	librewolf --kiosk -P $LW_PROFILE --new-window http://media.contre.io
 	;;
 "Youtube")

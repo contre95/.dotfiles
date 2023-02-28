@@ -11,7 +11,7 @@ super + r
 
 # Turn monitors off abruptly
 super + o
-    sleep 1; xset dpms force off
+     [ $(echo "NO\nYES" | dmenu  -sb "#34495E" -fn "JetBrainsMono Nerd Font") = "YES" ]  && xset dpms force off
  
 # Notes
 super + n
@@ -130,7 +130,7 @@ super + ctrl + p
 super + 0
     $SCR_PATH/dmenu-scr/exit.sh
 super + q
-    [ $(echo "YES\nNO" | dmenu  -sb "#34495E" -fn "JetBrainsMono Nerd Font") = "YES" ] && tmux kill-server
+    [ $(echo "NO\nYES" | dmenu  -sb "#34495E" -fn "JetBrainsMono Nerd Font") = "YES" ] && tmux kill-server
 super + m
     $SCR_PATH/dmenu-scr/messages.sh
 super + ctrl + v
