@@ -24,8 +24,8 @@ DOT = modules.Command(command="printf '%.2f' $(curl usd.rate.sx/1DOT)", shell=Tr
 #logging.basicConfig(level=logging.INFO, filename='/tmp/lemonbar.log')
 if os.environ.get("MYENV") == 'server':
     a = '250'
-    g = 'x45'
-    o = '-1'
+    g = 'x25'
+    o = '0'
     f =  'JetBrainsMono Nerd Font:size=12'
     modules = (
         modules.Const('%{Sf}%{l}'),
