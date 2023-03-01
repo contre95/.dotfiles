@@ -81,7 +81,7 @@ case "$chosen" in
     librewolf --kiosk -P $LW_PROFILE --new-window http://"$(zenity --entry --text='Website  :')"
 	;;
 "New Bookmark")
-   echo "$(zenity --entry --text='Bookmark:')" - http://"$(zenity --entry --text='Website  :')" >> $MY_FOLDER/Info/bookmarks.txt 
+    echo "$(zenity --entry --text='Bookmark:')             - http://$(zenity --entry --text='URL:')" >> "$MY_FOLDER"/Info/bookmarks.txt 
 	;;
 "Garmin")
     screen_center
