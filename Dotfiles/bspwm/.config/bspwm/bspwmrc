@@ -19,6 +19,9 @@ elif [ "$MYENV" = 'desktop' ]; then
   bspc config -m "$(bspc query -M | sed -n 2p)" top_padding 0
   bspc monitor "$(bspc query -M | sed -n 2p)" -d 6 7 8 9 ﭮ    
 elif [ "$MYENV" = 'notebook' ]; then
+  export SCR_CENTER="1757x930-64+52"
+  export SCR_CORNER="682x395-8-85"
+  export SCR_DROPDOWN="1623x454+155+21"
   bspc monitor "$(bspc query -M | sed -n 1p)" -d 1 2 3 4 5 ﭮ    
 fi
 
