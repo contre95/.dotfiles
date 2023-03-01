@@ -19,3 +19,6 @@ Proton              - http://account.proton.me/login
 Syncthing           - http://localhost:8384
 Torrent             - http://torrents.contre.io
 Synthing Server     - http://contre.io:8384
+Dmusic             - http://dmusic.contre.io
+Idealista             - http://idealista.com/
+Maps             - http://google.com/maps/
