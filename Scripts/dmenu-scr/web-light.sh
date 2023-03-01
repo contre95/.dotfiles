@@ -27,6 +27,7 @@ declare -A  markets=(
 
 case "$chosen" in
 "Translate")
+    screen_corner
     librewolf --kiosk -P $LW_PROFILE --new-window "https://translate.google.com/?es=en"
 	;;
 "N26")
