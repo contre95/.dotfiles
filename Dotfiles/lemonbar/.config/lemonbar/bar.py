@@ -64,7 +64,7 @@ elif os.environ.get("MYENV") == 'desktop':
             disk_modules.DiskUsage('/dev/nvme0n1p3', icon=""),
             modules.Const(' | '),
             BLUETOOTH,
-            modules.Const(' | '),
+            modules.Const('| '),
             DEFAULT_AUDIO,
             modules.Const('%{Sl}%{l}'),
             modules.Const(PADDING),
