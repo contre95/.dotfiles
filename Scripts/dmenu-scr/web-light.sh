@@ -7,7 +7,7 @@ chosen=$(echo -e "$choices" | dmenu -i -p "Select Layout: " -sb "#8F7DAB")
 # NOTE 
 # Variable MOZ_USE_XINPUT2=1 should be setup in order for librefox not to launch this windows in fullscreen (at lead on bspwm) we need to set up 'full-screen-api.ignore-widgets' to `true` in the about:configexport  
 # For touchscreen  also need to set 'dom.w3c.touch_events.enabled' to 1 in about:config
-LW_PROFILE="ContreKiosk"
+LW_PROFILE="ContreKiosk" # Beware that you should create a new librefox profile named "ContreKiosk" apart from the default one. One profile cannot hold both kiosk and regular windows at the same time.
 function screen_center { 
     bspc rule -a \* --one-shot state=floating layer=above rectangle="$SCR_CENTER" monitor="$(bspc query -M | sed -n 1p)" ;
 }
