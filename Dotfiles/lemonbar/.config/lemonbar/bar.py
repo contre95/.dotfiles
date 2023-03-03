@@ -18,6 +18,7 @@ IP = modules.Command(command=["/usr/bin/curl","--connect-timeout","3","ifconfig.
 BATTERY = modules.Command(command=["/usr/bin/cat","/sys/class/power_supply/BAT0/capacity"], label="%", errMsg="0.0.0.0")
 # BTC = modules.Command(command=["/usr/bin/curl","--connect-timeout","3","usd.rate.sx/1BTC"], label="%{F#FFCF00} %{F-}", errMsg="0.0.0.0")
 BTC = modules.Command(command="curl -X GET 'https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd' | jq '.[].usd'",shell=True,text=True, label="%{F#FFCF00} %{F-}", errMsg="0.0.0.0")
+XMR = modules.Command(command="curl -X GET 'https://api.coingecko.com/api/v3/simple/price?ids=monero&vs_currencies=usd' | jq '.[] .usd'", shell=True,text=True,label="%{F#FF7C00} M%{F-}", errMsg="0.0.0.0")
 DOT = modules.Command(command="curl -X GET 'https://api.coingecko.com/api/v3/simple/price?ids=polkadot&vs_currencies=usd' | jq '.[] .usd'", shell=True,text=True,label="%{F#FF00C7} D%{F-}", errMsg="0.0.0.0")
 #import logging
 #logging.basicConfig(level=logging.INFO, filename='/tmp/lemonbar.log')
@@ -36,6 +37,7 @@ if os.environ.get("MYENV") == 'server':
         IP,
         modules.Const('%{r}'),
         BTC,
+        XMR,
         DOT,
         modules.Const(' | '),
         clock_modules.Clock(),
@@ -73,8 +75,9 @@ elif os.environ.get("MYENV") == 'desktop':
             bspwm_modules.Tags('DP-4', include=APPS),
             modules.Const('%{r}'),
             modules.Const(PADDING),
-            DOT,
             BTC,
+            XMR,
+            DOT,
             modules.Const(' | '),
             clock_modules.Clock(),
             modules.Const(PADDING),
@@ -99,6 +102,7 @@ elif os.environ.get("MYENV") == 'notebook':
           IP,
           modules.Const('%{r}'),
           BTC,
+          XMR,
           DOT,
           modules.Const(' | '),
           bspwm_modules.Tags('eDP-1', include=APPS),
