@@ -27,7 +27,7 @@ fi
 
  
 sxhkd &
-picom &
+picom -experimental-backend &
 nitrogen --restore &
 xset r rate 250 30 &
 
