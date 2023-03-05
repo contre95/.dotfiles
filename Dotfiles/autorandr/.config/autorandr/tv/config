@@ -10,7 +10,7 @@ output VIRTUAL1
 off
 output DP3
 crtc 0
-mode 3840x2160
+mode 1920x1080i
 pos 0x0
 primary
 rate 60.00
