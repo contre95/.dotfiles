@@ -1,7 +1,7 @@
 #!/bin/bash
 # source ~/.zshrc
 
-choices="Any\nKeybr\nTradingView\nMedia\nCronometer\nWhite\nNew Bookmark\nN26\nMonkeytype\nHome\nChatGPT\nGarmin\nLichess\nInstagram\nYoutube\nTwitter\nDeemix\nTwitch\nTranslate"
+choices="Any\nKeybr\nTradingView\nMedia\nCronometer\nWhite\nNew Bookmark\nN26\nMonkeytype\nHome\nChatGPT\nGarmin\nLichess\nInstagram\nPNL\nYoutube\nTwitter\nDeemix\nTwitch\nTranslate"
 chosen=$(echo -e "$choices" | dmenu -i -p "Select Layout: " -sb "#8F7DAB")
 
 # NOTE 
@@ -29,6 +29,9 @@ case "$chosen" in
 "Translate")
     screen_corner
     librewolf --kiosk -P $LW_PROFILE --new-window "https://translate.google.com/?es=en"
+	;;
+"PNL")
+    librewolf --kiosk -P $LW_PROFILE --new-window https://docs.google.com/spreadsheets/d/1v_JZ9QqCnBhPOOXPrl6OE26kyl6XZRzJNjMs27UY8BA
 	;;
 "N26")
     librewolf --kiosk -P $LW_PROFILE --new-window https://app.n26.com/login
