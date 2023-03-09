@@ -9,7 +9,7 @@ bspc rule -r "*"
 #### Machine Specific ####
 if [ "$MYENV" = 'server' ]; then
   export SCR_DROPDOWN="1609x357+157+34"
-  export SCR_CORNER="633x373-59+601"
+  export SCR_CORNER="633x373+1250+601"
   bspc config -m "$(bspc query -M | sed -n 1p)" top_padding 0
   bspc monitor "$(bspc query -M | sed -n 1p)" -d 1 2 3 4 5
 elif [ "$MYENV" = 'desktop' ]; then
