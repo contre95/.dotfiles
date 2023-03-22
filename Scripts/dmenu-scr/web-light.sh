@@ -1,7 +1,7 @@
 #!/bin/bash
 # source ~/.zshrc
 
-choices="Any\nKeybr\nTradingView\nMedia\nCronometer\nWhite\nNew Bookmark\nN26\nMonkeytype\nHome\nChatGPT\nGarmin\nLichess\nInstagram\nPNL\nYoutube\nTwitter\nDeemix\nTwitch\nTranslate"
+choices="Any\nKeybr\nTradingView\nMedia\nCronometer\nWhite\nNew Bookmark\nN26\nFlights\nMonkeytype\nHome\nChatGPT\nGarmin\nLichess\nInstagram\nPNL\nYoutube\nTwitter\nDeemix\nTwitch\nTranslate"
 chosen=$(echo -e "$choices" | dmenu -i -p "Select Layout: " -sb "#8F7DAB")
 
 # NOTE
@@ -76,6 +76,9 @@ case "$chosen" in
 	;;
 "Lichess")
 	librewolf --kiosk -P $LW_PROFILE --new-window https://lichess.org
+	;;
+"Flights")
+  librewolf --kiosk -P $LW_PROFILE --new-window https://flightaware.com/live/flight/map/$(zenity --entry --text='Flight number:')
 	;;
 "Twitter")
 	librewolf --kiosk -P $LW_PROFILE --new-window https://twitter.com
