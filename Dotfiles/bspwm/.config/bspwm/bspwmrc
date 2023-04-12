@@ -44,7 +44,7 @@ bspc rule -a discord desktop='ﭮ'
 bspc rule -a Music desktop=''
 #bspc rule -a Gmail desktop=''
 # bspc rule -a burp-StartBurp:burp-StartBurp state=floating
-bspc rule -a Pavucontrol:pavucontrol state=floating center=true rectangle=1000x600+0+0
+bspc rule -a Pavucontrol:pavucontrol state=floating center=true rectangle="$SCR_CORNER"
 bspc rule -a Dropdown state=floating layer=above rectangle="$SCR_DROPDOWN" monitor="$(bspc query -M | sed -n 1p)" sticky=on
 # bspc rule -a "*:*:Picture-in-Picture" state=floating rectangle=600x400+0+0 center=true
 
