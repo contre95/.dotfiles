@@ -39,6 +39,7 @@ XF86AudioPlay
 XF86Audio{LowerVolume,RaiseVolume}
     pactl set-sink-volume @DEFAULT_SINK@ {-,+}5%
 super + s 
+    bspc rule -a \* --one-shot state=floating layer=above rectangle=$SCR_CORNER monitor="$(bspc query -M | sed -n 1p)" sticky=on && \
     pavucontrol
 super + shift + s
     $SCR_PATH/i3-scr/next-sink-audio.sh
