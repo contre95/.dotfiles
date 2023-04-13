@@ -72,9 +72,9 @@ bspc config remove_disabled_monitors true
 bspc config merge_overlapping_monitors true
 
 #### BSPWM coloring ####
-bspc config focused_border_color "#737373"
-bspc config normal_border_color "#242427"
-bspc config active_border_color "#242427"
+bspc config focused_border_color "#FFFFFF"
+bspc config normal_border_color "#FFFFFF"
+bspc config active_border_color "#FFFFFF"
 
 ### Lemonbar bar (be sure to load bspwm monitors first)
 pkill -x lemonbar
