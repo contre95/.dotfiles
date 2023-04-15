@@ -16,6 +16,7 @@ function screen_corner {
 }
 
 declare -A markets=(
+	["TRX|USDT"]="https://www.tradingview.com/chart/rH3IToRa/?symbol=BINGX%3ATRXUSDT"
 	["BTC|USD"]="https://www.tradingview.com/chart/rH3IToRa/?symbol=BITSTAMP%3ABTCUSD"
 	["DOT|USD"]="https://www.tradingview.com/chart/rH3IToRa/?symbol=BINANCE%3ADOTUSD"
 	["INDX|DXY"]="https://www.tradingview.com/chart/rH3IToRa/?symbol=TVC%3ADXY"
