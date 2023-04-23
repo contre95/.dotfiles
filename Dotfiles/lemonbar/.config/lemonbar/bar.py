@@ -9,7 +9,7 @@ PADDING = '  '  # Padding
 
 SIX_TO_NINE = {"6","7","8","9"}
 ONE_TO_FIVE = {"1","2","3","4","5"}
-APPS = {"","ﭮ","","",""}
+APPS = {"","ﭮ","","",""}
 ENVIRON = modules.Const(f'{os.environ.get("MYENV")}')
 WIFI = modules.Command(command=["iwgetid","-r"], label="", errMsg="Not Connected")
 BLUETOOTH = modules.Command(command=[f"{os.environ.get('SCR_PATH')}/oneliners-scr/connected-blth.sh"], label="")
