@@ -17,7 +17,7 @@ case $var in
       dm-tool lock & pkill -9 bspwm;;
       
     ' Suspend')
-      systemctl hibernate;;
+      systemctl suspend;;
     
 	' Cancel')
       exit 0;;
