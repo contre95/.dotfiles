@@ -22,7 +22,8 @@ return require("packer").startup(function()
   -- Colorcheme
   -- use { "kabouzeid/nvim-jellybeans", requires = "rktjmp/lush.nvim" }
   use({ 'marko-cerovac/material.nvim' })
-  -- use("kvrohit/rasmus.nvim")
+  use({ 'rebelot/kanagawa.nvim' })
+  use("kvrohit/rasmus.nvim")
   -- use("norcalli/nvim-colorizer.lua")
   use({
     "iamcco/markdown-preview.nvim",

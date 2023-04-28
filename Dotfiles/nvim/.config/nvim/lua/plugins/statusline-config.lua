@@ -3,7 +3,7 @@ require('lualine').setup {
     icons_enabled = true,
     theme = 'auto',
     always_divide_middle = true,
-    globalstatus = true,
+    globalstatus = false,
     refresh = {
       statusline = 1000,
       tabline = 1000,
