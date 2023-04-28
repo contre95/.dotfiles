@@ -50,6 +50,8 @@ super + shift + s
 
 super + g
     /usr/bin/librewolf -P "Contre"
+super + y
+    /usr/bin/librewolf -P "Contre" "https://www.youtube.com/results\?search_query=$(zenity --window-icon="$MY_FOLDER/Library/icons/archlinux.png" --entry | sed --expression 's/ /+/g')"
 super + shift + g
     /usr/bin/brave --profile-directory="Contre"
 super + shift + b
