@@ -1,6 +1,6 @@
-#!/usr/bin/zsh
+#!/bin/bash
 
-choices=" RSS\nﳳ Pass\n Server\n Music\n Android\n Anoux\n Mac"
+choices=" RSS\nﳳ Pass\n Server\n Music\n N26\n Android\n Anoux\n Mac"
 var=$(echo -e $choices | dmenu -i -p "Exit menu: " -sb "#2f8a47" -fn "JetBrainsMono Nerd Font")
 TMUX_SCRIPTS=/home/canus/Scripts/tmux-scr
 
@@ -16,6 +16,10 @@ case $var in
 
 'ﳳ Pass')
 	exec alacritty -e "$TMUX_SCRIPTS/pass.sh"
+	;;
+
+' N26')
+	exec alacritty -e "$TMUX_SCRIPTS/n26.sh"
 	;;
 
 ' Server')
