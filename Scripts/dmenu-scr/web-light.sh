@@ -1,7 +1,7 @@
 #!/bin/bash
 # source ~/.zshrc
 
-choices="Any\nKeybr\nTradingView\nMedia\nCronometer\nWhite\nSpotify\nNew Bookmark\nN26\nFlights\nMonkeytype\nHome\nChatGPT\nGarmin\nLichess\nInstagram\nPNL\nYoutube\nTwitter\nDeemix\nTwitch\nTranslate"
+choices="Any\nKeybr\nTradingView\nMedia\nCronometer\nWhite\nSpotify\nNew Bookmark\nN26\nFlights\nMonkeytype\nHome\nChatGPT\nGarmin\nLichess\nInstagram\nPNL\nYoutube\nTwitter\nCoin 360\nDeemix\nTwitch\nTranslate"
 chosen=$(echo -e "$choices" | dmenu -i -p "Select Layout: " -sb "#8F7DAB")
 
 # NOTE
@@ -30,6 +30,9 @@ declare -A markets=(
 )
 
 case "$chosen" in
+"Coin 360")
+	librewolf --kiosk -P $LW_PROFILE --new-window "https://coin360.com/?period=24h"
+	;;
 "Spotify")
 	librewolf --kiosk -P $LW_PROFILE --new-window "https://open.spotify.com/"
 	;;
