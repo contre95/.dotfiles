@@ -3,7 +3,12 @@ require('lualine').setup {
     icons_enabled = true,
     theme = 'auto',
     always_divide_middle = true,
-    globalstatus = false,
+    disabled_filetypes = {
+      'packer',
+      'NvimTree',
+      winbar = {},           -- only ignores the ft for winbar.
+    },
+    globalstatus = true, -- This ignores disabled_filetypes so does set laststatus=3
     refresh = {
       statusline = 1000,
       tabline = 1000,
@@ -23,4 +28,3 @@ require('lualine').setup {
   inactive_winbar = {},
   extensions = {}
 }
-
