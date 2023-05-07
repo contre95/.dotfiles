@@ -25,7 +25,7 @@ super + Return
 	alacritty -e /bin/zsh -c "tmux -u new-session -A -s Main" 
 super + ctrl + Return
     $SCR_PATH/dmenu-scr/tmux-pick.sh 
-super + ctrl + shift +Return
+super + ctrl + shift + Return
 	alacritty -e /bin/zsh -c "tmux -u new-session -A -s \"$(zenity --entry --text 'Profile name:')\"" 
 super + shift + Return
     bspc rule -a \* --one-shot state=floating layer=above rectangle=$SCR_CORNER monitor="$(bspc query -M | sed -n 1p)" sticky=on && \
