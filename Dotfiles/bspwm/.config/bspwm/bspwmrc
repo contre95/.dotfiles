@@ -13,9 +13,9 @@ if [ "$MYENV" = 'server' ]; then
   bspc config -m "$(bspc query -M | sed -n 1p)" top_padding 0
   bspc monitor "$(bspc query -M | sed -n 1p)" -d 1 2 3 4 5
 elif [ "$MYENV" = 'desktop' ]; then
-  export SCR_CENTER="1920x1080+754+229"
-  export SCR_CORNER="800x515+2603+1034"
-  export SCR_DROPDOWN="1899x500+725+216"
+  export SCR_CENTER="1920x1080+754+329"
+  export SCR_CORNER="800x515+2603+1134"
+  export SCR_DROPDOWN="1899x500+754+329"
   bspc config -m "$(bspc query -M | sed -n 1p)" top_padding 0
   bspc monitor "$(bspc query -M | sed -n 1p)" -d 1 2 3 4 5
   bspc config -m "$(bspc query -M | sed -n 2p)" top_padding 0
