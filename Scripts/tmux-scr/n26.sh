@@ -40,11 +40,13 @@ function n26tmux {
 	tmux new-window -t N26:2 -n Salt
 	tmux new-window -t N26:3 -n Docker
 	tmux new-window -t N26:4 -n Ingestors
+	tmux new-window -t N26:5 -n Elastalert
 
 	tmux send-keys -t N26:1 "pushd $BASE/sec26-iac && clear" C-m
 	tmux send-keys -t N26:2 "pushd $BASE/section9_salt && clear" C-m
 	tmux send-keys -t N26:3 "pushd $BASE/section9_docker && clear" C-m
 	tmux send-keys -t N26:4 "pushd $BASE/sec26-log-ingestors && clear" C-m
+	tmux send-keys -t N26:5 "pushd $BASE/section9_elastalert && clear" C-m
 	tmux select-window -t N26:1
 	tmux -u attach-session -t N26
 }
