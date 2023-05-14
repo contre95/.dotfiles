@@ -1,7 +1,7 @@
 #!/bin/bash
 # source ~/.zshrc
 
-choices="Any\nKeybr\nTradingView\nMedia\nCronometer\nWhite\nSpotify\nNew Bookmark\nN26\nFlights\nMonkeytype\nHome\nChatGPT\nGarmin\nLichess\nInstagram\nPNL\nYoutube\nTwitter\nCoin 360\nDeemix\nTwitch\nTranslate"
+choices="Any\nKeybr\nTradingView\nMedia\nCronometer\nWhite\nSpotify\nNew Bookmark\nN26\nFlights\nMonkeytype\nHome\nChatGPT\nGarmin\nLichess\nInstagram\nPNL\nYoutube\nTwitter\nCoin 360\nDeemix\nTwitch\nSpeedTest\nTranslate\nOpenAsistant"
 chosen=$(echo -e "$choices" | dmenu -i -p "Select Layout: " -sb "#8F7DAB")
 
 # NOTE
@@ -40,6 +40,10 @@ case "$chosen" in
 	screen_corner
 	librewolf --kiosk -P $LW_PROFILE --new-window "https://translate.google.com/?es=en"
 	;;
+"SpeedTest")
+	screen_corner
+	librewolf --kiosk -P $LW_PROFILE --new-window "https://librespeed.org/"
+	;;
 "PNL")
 	librewolf --kiosk -P $LW_PROFILE --new-window https://docs.google.com/spreadsheets/d/1v_JZ9QqCnBhPOOXPrl6OE26kyl6XZRzJNjMs27UY8BA
 	;;
@@ -73,6 +77,9 @@ case "$chosen" in
 	;;
 "ChatGPT")
 	librewolf --kiosk -P $LW_PROFILE --new-window https://chat.openai.com/chat
+	;;
+"OpenAsistant")
+	librewolf --kiosk -P $LW_PROFILE --new-window https://open-assistant.io/chat
 	;;
 "Media")
 	librewolf --kiosk -P $LW_PROFILE --new-window http://media.contre.io
