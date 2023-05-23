@@ -74,11 +74,11 @@ require('kanagawa').setup({
     --   dragonBlack4 = "none"
     -- },
     theme = {
-        all = {
-            ui = {
-                bg_gutter = "none"
-            }
+      all = {
+        ui = {
+          bg_gutter = "none"
         }
+      }
     }
   },
   overrides = function(colors)
@@ -116,6 +116,8 @@ require('kanagawa').setup({
   },
 })
 vim.cmd("colorscheme kanagawa-dragon")
+----------------------------------------------
+require('colorizer').setup()
 
 -- ----------------------------------------------
 -- vim.cmd [[colorscheme rasmus]]
