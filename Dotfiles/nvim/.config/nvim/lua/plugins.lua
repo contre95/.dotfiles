@@ -24,7 +24,7 @@ return require("packer").startup(function()
   use({ 'marko-cerovac/material.nvim' })
   use({ 'rebelot/kanagawa.nvim' })
   use("kvrohit/rasmus.nvim")
-  -- use("norcalli/nvim-colorizer.lua")
+  use("norcalli/nvim-colorizer.lua")
   use({
     "iamcco/markdown-preview.nvim",
     run = function() vim.fn["mkdp#util#install"]() end,
