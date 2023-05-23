@@ -13,7 +13,7 @@ case $var in
 	;;
 
 ' Droidcam')
-	/usr/bin/droidcam-cli -v 192.168.1.192 4747 &
+	/usr/bin/droidcam-cli -v 192.168.0.172 4747 &
 	;;
 
 ' Barrier')
