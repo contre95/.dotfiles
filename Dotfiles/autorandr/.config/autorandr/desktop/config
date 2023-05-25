@@ -18,7 +18,7 @@ x-prop-non_desktop 0
 output HDMI-0
 crtc 0
 mode 3440x1440
-pos 0x189
+pos 0x240
 primary
 rate 59.97
 x-prop-non_desktop 0
