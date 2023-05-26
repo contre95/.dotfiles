@@ -34,6 +34,10 @@ lua <<EOF
 EOF
 
 autocmd BufWritePre *.go lua go_org_imports()
+
+"Set Caddyfile
+"-------------------------------------
+au BufNewFile,BufRead Caddyfile,*.Caddyfile,Caddyfile.* set ft=caddyfile
 "Set Markdown
 "-------------------------------------
 autocmd FileType markdown setlocal spell 

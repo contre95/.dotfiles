@@ -1,7 +1,7 @@
 #!/bin/bash
 # source ~/.zshrc
 
-choices="Any\nKeybr\nTradingView\nMedia\nCronometer\nWhite\nSpotify\nNew Bookmark\nN26\nFlights\nMonkeytype\nHome\nChatGPT\nGarmin\nLichess\nInstagram\nPNL\nYoutube\nTwitter\nCoin 360\nDeemix\nTwitch\nSpeedTest\nTranslate\nOpenAsistant"
+choices="Any\nKeybr\nDuolingo\nTradingView\nMedia\nCronometer\nWhite\nSpotify\nNew Bookmark\nN26\nFlights\nMonkeytype\nHome\nChatGPT\nGarmin\nLichess\nInstagram\nPNL\nYoutube\nTwitter\nCoin 360\nMusic\nTwitch\nSpeedTest\nTranslate\nOpenAsistant"
 chosen=$(echo -e "$choices" | dmenu -i -p "Select Layout: " -sb "#8F7DAB")
 
 # NOTE
@@ -32,6 +32,10 @@ declare -A markets=(
 case "$chosen" in
 "Coin 360")
 	librewolf --kiosk -P $LW_PROFILE --new-window "https://coin360.com/?period=24h"
+	;;
+"Duolingo")
+  	screen_center
+	librewolf --kiosk -P $LW_PROFILE --new-window "https://duolingo.com"
 	;;
 "Spotify")
 	librewolf --kiosk -P $LW_PROFILE --new-window "https://open.spotify.com/"
@@ -72,8 +76,9 @@ case "$chosen" in
 	screen_center
 	librewolf --kiosk -P $LW_PROFILE --new-window https://cronometer.com/
 	;;
-"Deemix")
-	librewolf --kiosk -P $LW_PROFILE --new-window http://dmusic.contre.io
+"Music")
+	screen_center
+	librewolf --kiosk -P $LW_PROFILE --new-window http://music.contre.lan/
 	;;
 "ChatGPT")
 	librewolf --kiosk -P $LW_PROFILE --new-window https://chat.openai.com/chat
@@ -99,7 +104,7 @@ case "$chosen" in
 	;;
 "Home")
 	screen_center
-	librewolf --kiosk -P $LW_PROFILE --new-window http://home.contre.io/home-dash/0
+	librewolf --kiosk -P $LW_PROFILE --new-window http://home.contre.lan/home-dash/0
 	;;
 "Any")
 	librewolf --kiosk -P $LW_PROFILE --new-window http://"$(zenity --entry --text='Website  :')"
