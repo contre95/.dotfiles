@@ -9,19 +9,18 @@ Outlook             - https://outlook.live.com
 Cronometer          - https://cronometer.com/
 1337x               - https://www.1377x.to/
 Instagram           - https://www.instagram.com
-Media               - http://media.contre.io
-RSS                 - http://rss.contre.io
+Media               - http://media.contre.lan
+RSS                 - http://rss.contre.lan
 StackExchange       - http://stackexchange.com
 Translate           - http://translate.google.com/
 Twitter             - http://twitter.com
-Social              - http://twitter.com https://instagram.com https://youtube.com https://reddit.com http://rss.contre.io
+Social              - http://twitter.com https://instagram.com https://youtube.com https://reddit.com http://rss.contre.lan
 Proton              - http://account.proton.me/login
-Syncthing           - http://localhost:8384
-Torrent             - http://torrents.contre.io
-SynthingServer     - http://contre.io:8384
-Dmusic             - http://dmusic.contre.io
-Idealista             - http://idealista.com/
-Maps             - http://google.com/maps/
-LetterboxD             - http://https://letterboxd.com
-Twitch             - http://twitch.tv/
-Calendar             - http://calendar.google.com
+Syncthings           - http://localhost:8384 http://sync.contre.lan
+Torrent             - http://torrents.contre.lan
+Dmusic              - http://music.contre.lan
+Idealista           - http://idealista.com/
+Maps                - http://google.com/maps/
+LetterboxD          - http://https://letterboxd.com
+Twitch              - http://twitch.tv/
+Calendar            - http://calendar.google.com
