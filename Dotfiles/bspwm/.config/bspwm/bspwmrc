@@ -17,9 +17,12 @@ elif [ "$MYENV" = 'desktop' ]; then
   export SCR_CORNER="800x515+2603+1134"
   export SCR_DROPDOWN="1899x500+754+329"
   bspc config -m "$(bspc query -M | sed -n 1p)" top_padding 0
-  bspc monitor "$(bspc query -M | sed -n 1p)" -d 1 2 3 4 5
-  bspc config -m "$(bspc query -M | sed -n 2p)" top_padding 0
-  bspc monitor "$(bspc query -M | sed -n 2p)" -d 6 7 8 9 ﭮ    
+  bspc config -m "$(bspc query -M | sed -n 2)" top_padding 0
+  bspc wm --reorder-monitors HDMI-0 DP-4 # Orders of the monitors counting workspaces
+  bspc monitor DP-4 -d ﭮ    
+  bspc monitor HDMI-0 -d 1 2 3 4 5
+  # bspc monitor "$(bspc query -M | sed -n 1p)" -d ﭮ    
+  # bspc monitor "$(bspc query -M | sed -n 2p)" -d 1 2 3 4 5
 elif [ "$MYENV" = 'notebook' ]; then
   export SCR_CENTER="1757x930+64+52"
   export SCR_CORNER="682x395+1132+578"

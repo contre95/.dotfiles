@@ -7,7 +7,7 @@ import disk_modules
 
 PADDING = '  '  # Padding
 
-SIX_TO_NINE = {"6","7","8","9"}
+# SIX_TO_NINE = {"6","7","8","9"}
 ONE_TO_FIVE = {"1","2","3","4","5"}
 APPS = {"","ﭮ","","",""}
 ENVIRON = modules.Const(f'{os.environ.get("MYENV")}')
@@ -48,7 +48,7 @@ elif os.environ.get("MYENV") == 'desktop':
     o = '1'
     f =  'JetBrainsMono Nerd Font:size=12'
     modules = (
-            modules.Const('%{Sf}%{l}'),
+            modules.Const('%{Sl}%{l}'),
             modules.Const(' '),
             bspwm_modules.Tags('HDMI-0', include=ONE_TO_FIVE),
             modules.Const('%{c}'),
@@ -68,10 +68,8 @@ elif os.environ.get("MYENV") == 'desktop':
             BLUETOOTH,
             modules.Const(' | '),
             DEFAULT_AUDIO,
-            modules.Const('%{Sl}%{l}'),
+            modules.Const('%{Sf}%{l}'),
             modules.Const(PADDING),
-            bspwm_modules.Tags('DP-4', include=SIX_TO_NINE),
-            modules.Const('%{c}'),
             bspwm_modules.Tags('DP-4', include=APPS),
             modules.Const('%{r}'),
             modules.Const(PADDING),
