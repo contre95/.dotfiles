@@ -11,14 +11,14 @@ off
 output DP-4
 crtc 1
 mode 1920x1200
-pos 3440x0
+pos 0x0
 rate 59.95
 rotate right
 x-prop-non_desktop 0
 output HDMI-0
 crtc 0
 mode 3440x1440
-pos 0x240
+pos 1200x326
 primary
 rate 59.97
 x-prop-non_desktop 0
