@@ -13,14 +13,15 @@ if [ "$MYENV" = 'server' ]; then
   bspc config -m "$(bspc query -M | sed -n 1p)" top_padding 0
   bspc monitor "$(bspc query -M | sed -n 1p)" -d 1 2 3 4 5
 elif [ "$MYENV" = 'desktop' ]; then
-  export SCR_CENTER="1920x1080+754+329"
-  export SCR_CORNER="800x515+2603+1134"
-  export SCR_DROPDOWN="1899x500+754+329"
-  bspc config -m "$(bspc query -M | sed -n 1p)" top_padding 0
-  bspc config -m "$(bspc query -M | sed -n 2)" top_padding 0
+  export SCR_CENTER="2217x1237+1776+373"
+  export SCR_CORNER="800x515+3709+1154"
+  export SCR_DROPDOWN="1943x458+1996+342"
   bspc wm --reorder-monitors HDMI-0 DP-4 # Orders of the monitors counting workspaces
-  bspc monitor DP-4 -d ﭮ    
   bspc monitor HDMI-0 -d 1 2 3 4 5
+  bspc monitor DP-4 -d ﭮ    
+  bspc config -m "$(bspc query -M | sed -n 2p)" top_padding 0
+  bspc config -m "$(bspc query -M | sed -n 1p)" top_padding 0
+  # bspc wm --reorder-monitors HDMI-0 DP-4 # Orders of the monitors counting workspaces
   # bspc monitor "$(bspc query -M | sed -n 1p)" -d ﭮ    
   # bspc monitor "$(bspc query -M | sed -n 2p)" -d 1 2 3 4 5
 elif [ "$MYENV" = 'notebook' ]; then
@@ -47,7 +48,7 @@ bspc rule -a discord desktop='ﭮ'
 bspc rule -a Music desktop=''
 #bspc rule -a Gmail desktop=''
 # bspc rule -a burp-StartBurp:burp-StartBurp state=floating
-bspc rule -a Dropdown state=floating layer=above rectangle="$SCR_DROPDOWN" monitor="$(bspc query -M | sed -n 1p)" sticky=on
+bspc rule -a Dropdown monitor=HDMI-0 state=floating layer=above rectangle="$SCR_DROPDOWN" sticky=on
 # bspc rule -a "*:*:Picture-in-Picture" state=floating rectangle=600x400+0+0 center=true
 
 #### BSPWM configuration ####

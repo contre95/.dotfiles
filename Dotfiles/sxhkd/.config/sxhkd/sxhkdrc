@@ -28,7 +28,7 @@ super + ctrl + Return
 super + ctrl + shift + Return
 	alacritty -e /bin/zsh -c "tmux -u new-session -A -s \"$(zenity --entry --text 'Profile name:')\"" 
 super + shift + Return
-    bspc rule -a \* --one-shot state=floating layer=above rectangle=$SCR_CORNER monitor="$(bspc query -M | sed -n 1p)" sticky=on && \
+    bspc rule -a \* --one-shot state=floating layer=above rectangle=$SCR_CORNER sticky=on && \
     alacritty --option window.opacity=0.9
 
 # Audio
@@ -76,12 +76,12 @@ super + alt + shift {j,k,i,l}
 
 # Move to center of screen 
 super + control + c
-     bspc rule -a \* --one-shot state=floating layer=above rectangle=$SCR_CORNER monitor="$(bspc query -M | sed -n 1p)" sticky=on 
+     bspc rule -a \* --one-shot state=floating layer=above rectangle=$SCR_CORNER sticky=on 
 super + c
-     bspc rule -a \* --one-shot state=floating layer=above rectangle=$SCR_CENTER monitor="$(bspc query -M | sed -n 1p)"
+     bspc rule -a \* --one-shot state=floating layer=above rectangle=$SCR_CENTER monitor="$(bspc query -M | sed -n 2p)"
 # Go to desktop
 super + {1-5}
-    bspc {desktop -f} '^{1-5}'
+    bspc desktop -f {1,2,3,4,5}
 super + {6,7,8,9,0}
     bspc desktop -f {"ﭮ","","","",""}
 # Move window to special destop and then move to that desktop
@@ -130,8 +130,8 @@ super + shift + d
     $SCR_PATH/dmenu-scr/dotfiles.sh 
 super + ctrl + p
     PASSWORD_STORE_DIR=$MY_FOLDER/Pass $SCR_PATH/dmenu-scr/passmenu.sh 
-# super + 0
-#     $SCR_PATH/dmenu-scr/exit.sh
+super + ctrl + 0
+    $SCR_PATH/dmenu-scr/exit.sh
 super + q
     [ $(echo "no\nyes" | dmenu  -sb "#34495E" -fn "JetBrainsMono Nerd Font") = "yes" ] && tmux kill-server
 super + m

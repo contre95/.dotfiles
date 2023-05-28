@@ -9,10 +9,10 @@ chosen=$(echo -e "$choices" | dmenu -i -p "Select Layout: " -sb "#8F7DAB")
 # For touchscreen  also need to set 'dom.w3c.touch_events.enabled' to 1 in about:config
 LW_PROFILE="ContreKiosk" # Beware that you should create a new librefox profile named "ContreKiosk" apart from the default one. One profile cannot hold both kiosk and regular windows at the same time.
 function screen_center {
-	bspc rule -a \* --one-shot state=floating layer=above rectangle="$SCR_CENTER" monitor="$(bspc query -M | sed -n 1p)"
+	bspc rule -a \* --one-shot state=floating layer=above rectangle="$SCR_CENTER" monitor="$(bspc query -M | sed -n 2p)"
 }
 function screen_corner {
-	bspc rule -a \* --one-shot state=floating layer=above rectangle="$SCR_CORNER" monitor="$(bspc query -M | sed -n 1p)"
+	bspc rule -a \* --one-shot state=floating layer=above rectangle="$SCR_CORNER"
 }
 
 declare -A markets=(
