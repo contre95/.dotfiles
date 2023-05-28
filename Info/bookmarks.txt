@@ -16,7 +16,7 @@ Translate           - http://translate.google.com/
 Twitter             - http://twitter.com
 Social              - http://twitter.com https://instagram.com https://youtube.com https://reddit.com http://rss.contre.lan
 Proton              - http://account.proton.me/login
-Syncthings           - http://localhost:8384 http://sync.contre.lan
+Syncthings          - http://localhost:8384 http://sync.contre.lan
 Torrent             - http://torrents.contre.lan
 Dmusic              - http://music.contre.lan
 Idealista           - http://idealista.com/
@@ -24,3 +24,4 @@ Maps                - http://google.com/maps/
 LetterboxD          - http://https://letterboxd.com
 Twitch              - http://twitch.tv/
 Calendar            - http://calendar.google.com
+Spotify             - https://open.spotify.com/
