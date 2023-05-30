@@ -78,7 +78,7 @@ case "$chosen" in
 	;;
 "Music")
 	screen_center
-	librewolf --kiosk -P $LW_PROFILE --new-window http://music.contre.lan/
+	librewolf --kiosk -P $LW_PROFILE --new-window http://192.168.0.174:6595
 	;;
 "ChatGPT")
 	librewolf --kiosk -P $LW_PROFILE --new-window https://chat.openai.com/chat
@@ -104,7 +104,7 @@ case "$chosen" in
 	;;
 "Home")
 	screen_center
-	librewolf --kiosk -P $LW_PROFILE --new-window http://home.contre.lan/home-dash/0
+	librewolf --kiosk -P $LW_PROFILE --new-window http://192.168.0.174:8123/home-dash/0
 	;;
 "Any")
 	librewolf --kiosk -P $LW_PROFILE --new-window http://"$(zenity --entry --text='Website  :')"
