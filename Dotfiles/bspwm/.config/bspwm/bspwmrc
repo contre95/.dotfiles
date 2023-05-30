@@ -14,14 +14,14 @@ if [ "$MYENV" = 'server' ]; then
   bspc monitor "$(bspc query -M | sed -n 1p)" -d 1 2 3 4 5
 elif [ "$MYENV" = 'desktop' ]; then
   export SCR_CENTER="2217x1237+1776+373"
-  export SCR_CORNER="800x515+3709+1154"
+  export SCR_CORNER="800x515+3715+1096"
   export SCR_DROPDOWN="1943x458+1996+342"
-  bspc wm --reorder-monitors HDMI-0 DP-4 # Orders of the monitors counting workspaces
-  bspc monitor HDMI-0 -d 1 2 3 4 5
-  bspc monitor DP-4 -d ﭮ    
+  bspc wm --reorder-monitors "DP-4" "DP-0": # Orders of the monitors counting workspaces
+  bspc monitor "DP-0" -d ﭮ    
+  bspc monitor "DP-4" -d 1 2 3 4 5
   bspc config -m "$(bspc query -M | sed -n 2p)" top_padding 0
   bspc config -m "$(bspc query -M | sed -n 1p)" top_padding 0
-  # bspc wm --reorder-monitors HDMI-0 DP-4 # Orders of the monitors counting workspaces
+  # bspc wm --reorder-monitors DP-4 DP-0 # Orders of the monitors counting workspaces
   # bspc monitor "$(bspc query -M | sed -n 1p)" -d ﭮ    
   # bspc monitor "$(bspc query -M | sed -n 2p)" -d 1 2 3 4 5
 elif [ "$MYENV" = 'notebook' ]; then
@@ -48,7 +48,7 @@ bspc rule -a discord desktop='ﭮ'
 bspc rule -a Music desktop=''
 #bspc rule -a Gmail desktop=''
 # bspc rule -a burp-StartBurp:burp-StartBurp state=floating
-bspc rule -a Dropdown monitor=HDMI-0 state=floating layer=above rectangle="$SCR_DROPDOWN" sticky=on
+bspc rule -a Dropdown monitor=DP-4 state=floating layer=above rectangle="$SCR_DROPDOWN" sticky=on
 # bspc rule -a "*:*:Picture-in-Picture" state=floating rectangle=600x400+0+0 center=true
 
 #### BSPWM configuration ####
@@ -82,7 +82,7 @@ bspc config focused_border_color "#737373"
 ### Lemonbar bar (be sure to load bspwm monitors first)
 pkill -x lemonbar
 python3 "$HOME/.config/lemonbar/bar.py" &
-xdo above -t $(xdo id -n root) $(xdo id -n lemonbar)
+xdo above -t "$(xdo id -n root)" "$(xdo id -n lemonbar)"
 #bspc subscribe node_state | while read _ _ _ _ state flag; do
 #if [[ $state == fullscreen ]]; then
 #if [[ $flag == on ]]; then

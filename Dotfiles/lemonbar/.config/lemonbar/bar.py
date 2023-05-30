@@ -50,7 +50,7 @@ elif os.environ.get("MYENV") == 'desktop':
     modules = (
             modules.Const('%{Sl}%{l}'),
             modules.Const(' '),
-            bspwm_modules.Tags('HDMI-0', include=ONE_TO_FIVE),
+            bspwm_modules.Tags('DP-4', include=ONE_TO_FIVE),
             modules.Const('%{c}'),
             ENVIRON,
             modules.Const(' | '),
@@ -73,7 +73,7 @@ elif os.environ.get("MYENV") == 'desktop':
             modules.Const(' '),
             modules.Const('%{Sf}%{l}'),
             modules.Const('%{c}'),
-            bspwm_modules.Tags('DP-4', include=APPS),
+            bspwm_modules.Tags('DP-0', include=APPS),
             modules.Const('%{r}'),
             modules.Const(PADDING),
             BTC,
