@@ -80,6 +80,7 @@ alias mf="cd $MY_FOLDER"
 alias p="podman --remote"
 alias copy='xclip -sel clip'
 alias cdr='cd $(git rev-parse --show-toplevel)'
+alias here='pcmanfm .'
 alias ct="mpg123 --quiet $MY_FOLDER/Library/sounds/ct.mp3"
 alias al="mpg123 --quiet $MY_FOLDER/Library/sounds/olx.mp3"
 alias ed="mpg123 --quiet $MY_FOLDER/Library/sounds/circus.mp3"
