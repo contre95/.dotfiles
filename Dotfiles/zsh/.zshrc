@@ -78,6 +78,10 @@ fi
 ################################################################################################
 alias mf="cd $MY_FOLDER"
 alias p="podman --remote"
+alias containers="podman container ls --format '{{.Names}}' | grep -v '\-infra' | fzf -1"
+alias pods="podman pod ls --format '{{.Name}}' | fzf -1"
+alias pogs="podman pod logs -f \`pods\`"
+alias cosh="podman container exec -it \`containers\` sh"
 alias copy='xclip -sel clip'
 alias cdr='cd $(git rev-parse --show-toplevel)'
 alias here='pcmanfm .'
