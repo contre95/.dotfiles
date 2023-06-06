@@ -88,7 +88,7 @@ super + {6,7,8,9,0}
 super + shift + {6,7,8,9,0}
     desk={"ﭮ","","","",""} ; bspc node -d $desk; bspc desktop -f $desk
 super + shift + {1-5}
-    desk='^{1-5}' ; bspc node -d $desk; bspc desktop -f $desk
+    desk={1,2,3,4,5} ; bspc node -d $desk; bspc desktop -f $desk
 # Iterate windows through desktops
 super + ctrl + shift + {l,j}
     bspc node -d {next,prev} -f
