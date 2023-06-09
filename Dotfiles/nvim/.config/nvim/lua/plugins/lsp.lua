@@ -1,3 +1,4 @@
+require("mason").setup() -- Install LSP, DAP servers, linters, and formatters
 local lspconfig = require("lspconfig")
 local util = require 'lspconfig.util'
 local capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities())
@@ -52,6 +53,7 @@ vim.diagnostic.config({
 
 -- Linters, Prettiers and Checkers for EFM
 -----------------------------
+local sqlfmt = { formatCommand = "cat ${INPUT} | sqlfmt -"}
 -- ES Linter -- npm i -g eslint_d
 local eslint = {
   lintCommand = "eslint_d -f visualstudio --stdin --stdin-filename ${INPUT}",
@@ -68,7 +70,7 @@ local prettier = {
 }
 
 -- Yaml linter -- brew install yamllint
-local yamllint = {
+local yamlfmt = {
   --lintCommand = "yamllint --format parsable ${INPUT}",
   formatCommand = "cat ${INPUT} | yamlfmt -in",
   lintStdin = true,
@@ -91,7 +93,21 @@ local shell = {
 
 --Json
 lspconfig.jsonls.setup({ capabilities = capabilities })
-
+-- Yamls
+lspconfig.yamlls.setup({
+  settings = {
+      yaml = {
+          schemas = {
+              ["https://raw.githubusercontent.com/microsoft/azure-pipelines-vscode/master/service-schema.json"] = {
+                  "/azure-pipeline*.y*l",
+                  "/*.azure*",
+                  "Azure-Pipelines/**/*.y*l",
+                  "Pipelines/*.y*l",
+              },
+          },
+      },
+  },
+})
 -- Lua
 -- https://github.com/sumneko/lua-language-server
 local runtime_path = vim.split(package.path, ';')
@@ -231,45 +247,45 @@ lspconfig.emmet_ls.setup({
     }
 })
 -- Vue
-lspconfig.vuels.setup {
-  on_attach = function(client)
-    --[[
-                Internal Vetur formatting is not supported out of the box
-
-                This line below is required if you:
-                    - want to format using Nvim's native `vim.lsp.buf.formatting**()`
-                    - want to use Vetur's formatting config instead, e.g, settings.vetur.format {...}
-            --]]
-    client.server_capabilities.document_formatting = true
-  end,
-  capabilities = capabilities,
-  settings = {
-    vetur = {
-      completion = {
-        autoImport = true,
-        useScaffoldSnippets = true
-      },
-      format = {
-        defaultFormatter = {
-          html = "prettier",
-          js = "prettier",
-          ts = "prettier",
-        }
-      },
-      validation = {
-        template = true,
-        script = true,
-        style = true,
-        templateProps = true,
-        interpolation = true
-      },
-      experimental = {
-        templateInterpolationService = true
-      }
-    }
-  },
-  root_dir = util.root_pattern("header.php", "package.json", "style.css", 'webpack.config.js')
-}
+-- lspconfig.vuels.setup {
+--   on_attach = function(client)
+--     --[[
+--                 Internal Vetur formatting is not supported out of the box
+--
+--                 This line below is required if you:
+--                     - want to format using Nvim's native `vim.lsp.buf.formatting**()`
+--                     - want to use Vetur's formatting config instead, e.g, settings.vetur.format {...}
+--             --]]
+--     client.server_capabilities.document_formatting = true
+--   end,
+--   capabilities = capabilities,
+--   settings = {
+--     vetur = {
+--       completion = {
+--         autoImport = true,
+--         useScaffoldSnippets = true
+--       },
+--       format = {
+--         defaultFormatter = {
+--           html = "prettier",
+--           js = "prettier",
+--           ts = "prettier",
+--         }
+--       },
+--       validation = {
+--         template = true,
+--         script = true,
+--         style = true,
+--         templateProps = true,
+--         interpolation = true
+--       },
+--       experimental = {
+--         templateInterpolationService = true
+--       }
+--     }
+--   },
+--   root_dir = util.root_pattern("header.php", "package.json", "style.css", 'webpack.config.js')
+-- }
 
 -- EFM Lang server
 
@@ -278,10 +294,11 @@ local languages = {
   --typescript = { prettier, eslint },
   --javascript = { prettier, eslint },
   vue = { prettier, eslint },
-  yaml = { yamllint },
+  yaml = { yamlfmt },
   --lua = { luafmt },
   html = { prettier },
   scss = { prettier },
+  sql = { sqlfmt },
   css = { prettier },
   sh = { shell },
   zsh = { shell },
@@ -290,13 +307,13 @@ local languages = {
 lspconfig.efm.setup({
   root_dir = lspconfig.util.root_pattern(".git", "/home/canus/Scripts", vim.loop.os_homedir()),
   filetypes = vim.tbl_keys(languages),
-  cmd = {
-    vim.loop.os_homedir() .. "/go/bin/efm-langserver",
-    "-logfile",
-    vim.loop.os_homedir() .. "/.cache/nvim/lsp.log",
-    "-loglevel",
-    "5",
-  },
+  -- cmd = {
+  --   vim.loop.os_homedir() .. "/go/bin/efm-langserver",
+  --   "-logfile",
+  --   vim.loop.os_homedir() .. "/.cache/nvim/lsp.log",
+  --   "-loglevel",
+  --   "5",
+  -- },
   init_options = { documentFormatting = true, codeAction = true },
   settings = {
     languages = languages,

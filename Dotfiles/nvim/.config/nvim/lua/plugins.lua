@@ -19,6 +19,11 @@ local use = packer.use
 
 return require("packer").startup(function()
   use("wbthomason/packer.nvim")
+  use {
+    "williamboman/mason.nvim",
+    "williamboman/mason-lspconfig.nvim",
+    run = ":MasonUpdate" -- :MasonUpdate updates registry contents
+  }
   -- Colorcheme
   -- use { "kabouzeid/nvim-jellybeans", requires = "rktjmp/lush.nvim" }
   use({ 'marko-cerovac/material.nvim' })
@@ -29,8 +34,12 @@ return require("packer").startup(function()
     "iamcco/markdown-preview.nvim",
     run = function() vim.fn["mkdp#util#install"]() end,
   })
-  use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install",
-    setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
+  use({
+    "iamcco/markdown-preview.nvim",
+    run = "cd app && npm install",
+    setup = function() vim.g.mkdp_filetypes = { "markdown" } end,
+    ft = { "markdown" },
+  })
   -- UI
   -- Notes
   use({ "Pocco81/true-zen.nvim" })
@@ -46,7 +55,7 @@ return require("packer").startup(function()
     requires = {
       'nvim-tree/nvim-web-devicons', -- optional, for file icons
     },
-    tag = 'nightly' -- optional, updated every week. (see issue #1193)
+    tag = 'nightly'                  -- optional, updated every week. (see issue #1193)
   })
   use("unblevable/quick-scope")
   use('eandrju/cellular-automaton.nvim')
