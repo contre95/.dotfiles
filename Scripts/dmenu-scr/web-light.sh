@@ -23,6 +23,7 @@ declare -A markets=(
 	["INDX|SP500"]="https://www.tradingview.com/chart/rH3IToRa/?symbol=SP%3ASPX"
 	["EUR|USD"]="https://www.tradingview.com/chart/rH3IToRa/?symbol=FX%3AEURUSD"
 	["US|INTR"]="https://www.tradingview.com/chart/rH3IToRa/?symbol=ECONOMICS%3AUSINTR"
+	["EU|INTR"]="https://www.tradingview.com/chart/?symbol=ECONOMICS%3AEUINTR"
 	["MELI|USD"]="https://www.tradingview.com/chart/rH3IToRa/?symbol=NASDAQ%3AMELI"
 	["ARS|USD"]="https://www.tradingview.com/chart/rH3IToRa/?symbol=FX_IDC%3AARSUSD"
 	["ETH|USD"]="https://www.tradingview.com/chart/rH3IToRa/?symbol=BITSTAMP%3AETHUSD"
