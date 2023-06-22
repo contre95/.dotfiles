@@ -28,8 +28,8 @@ super + ctrl + Return
 super + ctrl + shift + Return
 	alacritty -e /bin/zsh -c "tmux -u new-session -A -s \"$(zenity --entry --text 'Profile name:')\"" 
 super + shift + Return
-    bspc rule -a \* --one-shot state=floating layer=above rectangle=$SCR_CORNER sticky=on && \
-    alacritty --option window.opacity=0.9
+    bspc rule -a \* --one-shot state=floating layer=above rectangle=$SCR_CORNER sticky=off && \
+    alacritty --option window.opacity=0.4
 
 # Audio
 # -------------------------------------
