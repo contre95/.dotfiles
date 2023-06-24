@@ -50,8 +50,6 @@ super + shift + s
 
 super + g
     /usr/bin/librewolf -P "Contre"
-super + y
-    /usr/bin/librewolf -P "Contre" "https://www.youtube.com/results\?search_query=$(zenity --window-icon="$MY_FOLDER/Library/icons/archlinux.png" --entry | sed --expression 's/ /+/g')"
 super + shift + g
     /usr/bin/brave --profile-directory="Contre"
 super + shift + b
@@ -141,7 +139,7 @@ super + ctrl + v
 super + shift + p
     PASSWORD_STORE_DIR=$MY_FOLDER/Pass $SCR_PATH/dmenu-scr/otpmenu.sh
 super + shift + w
-    zbarimg --raw -q <(maim -s --format=png /dev/stdout) | xclip -sel clip
+    zbarimg --raw -q <(maim -s --format=png /dev/stdout) | xclip 
 super + shift + a
     $SCR_PATH/dmenu-scr/services.sh 
 super + shift + t

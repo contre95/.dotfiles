@@ -1,11 +1,17 @@
 #!/bin/zsh
-choices="sxhkd\nbspwm\nvimrc\nlemonbar\nzsh\ntmux\nalacritty\nscripts"
-var=$(echo -e $choices | dmenu -i -p "Dotfiles" -sb "#40444B" -fn "JetBrainsMono Nerd Font") 
+choices="sxhkd\nbspwm\nvimrc\nlemonbar\nzsh\ntmux\nwaybar\nwaybar-css\nhyprland\nalacritty\nscripts"
+var=$(echo -e $choices | dmenu -m DP-3 -i -p "Dotfiles" -sb "#40444B" -fn "JetBrainsMono Nerd Font") 
 TMUX_SCRIPTS=/home/canus/Scripts/tmux-scr
 
 case $var in
     'vimrc')
     choice="$HOME/.config/nvim/init.lua";;
+    'hyprland')
+    choice="$HOME/.config/hypr/hyprland.conf";;
+    'waybar')
+    choice="$HOME/.config/waybar/config";;
+    'waybar-css')
+    choice="$HOME/.config/waybar/style.css";;
     'bspwm')
     choice="$HOME/.config/bspwm/bspwmrc";;
     'sxhkd')
@@ -13,7 +19,7 @@ case $var in
     'lemonbar')
     choice="$HOME/.config/lemonbar/bar.py";;
     'scripts')
-    choice=$SCR_PATH/$(find $SCR_PATH -type f | sed "s|$SCR_PATH/||" | dmenu -i -p "Scripts" -sb "#40444B" -fn "JetBrainsMono Nerd Font");;
+    choice=$SCR_PATH/$(find $SCR_PATH -type f | sed "s|$SCR_PATH/||" | dmenu -m DP-3 -i -p "Scripts" -sb "#40444B" -fn "JetBrainsMono Nerd Font");;
     'alacritty')
     choice="$HOME/.config/alacritty/alacritty.yml";;
     'zsh')

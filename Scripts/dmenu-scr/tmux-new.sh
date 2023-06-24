@@ -1,7 +1,7 @@
 #!/bin/bash
 
 choices=" RSS\nﳳ Pass\n Server\n Music\n N26\n Android\n Anoux\n Mac"
-var=$(echo -e $choices | dmenu -i -p "Exit menu: " -sb "#2f8a47" -fn "JetBrainsMono Nerd Font")
+var=$(echo -e $choices | dmenu -m DP-3 -i -p "Exit menu: " -sb "#2f8a47" -fn "JetBrainsMono Nerd Font")
 TMUX_SCRIPTS=/home/canus/Scripts/tmux-scr
 
 case $var in

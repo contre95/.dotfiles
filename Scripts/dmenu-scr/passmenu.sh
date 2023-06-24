@@ -13,13 +13,16 @@ password_files=( "$prefix"/**/*.gpg )
 password_files=( "${password_files[@]#"$prefix"/}" )
 password_files=( "${password_files[@]%.gpg}" )
 
-password=$(printf '%s\n' "${password_files[@]}" | dmenu -i -p "Pass  : " "$@" -sb "#34495E" -fn "JetBrainsMono Nerd Font")
+password=$(printf '%s\n' "${password_files[@]}" | dmenu -m DP-3 -i -p "Pass  : " "$@" -sb "#34495E" -fn "JetBrainsMono Nerd Font")
 
 [[ -n $password ]] || exit
 
 if [[ $typeit -eq 0 ]]; then
-	clipctl disable && pass show -c "$password" 2>/dev/null ; clipctl enable
+	pass show -c "$password" 2>/dev/null ;
 else
-	clipctl disable && pass show "$password" | { IFS= read -r pass; printf %s "$pass"; } | xdotool type --clearmodifiers --file -; clipctl enable
+	pass show "$password" | { IFS= read -r pass; printf %s "$pass"; } | xdotool type --clearmodifiers --file -;
 fi
+
+# Delete las entry
+cliphist list | head -n 1 | cliphist delete
 

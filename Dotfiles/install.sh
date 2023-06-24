@@ -44,6 +44,7 @@ desktop=(
 	gtk
 	mpd
 	zsh
+    hypr
 	cava
 	mocp
 	nvim
@@ -56,12 +57,13 @@ desktop=(
 	ranger
 	barrier
 	pcmanfm
+	systemd
 	zathura
 	keyboard
 	lemonbar
-	systemd
 	alacritty
 	autorandr
+    waybar
 )
 
 if [[ $MYENV == "desktop" ]]; then

@@ -2,7 +2,7 @@
 # source ~/.zshrc
 
 choices="Any\nKeybr\nDuolingo\nTradingView\nMedia\nCronometer\nWhite\nSpotify\nNew Bookmark\nN26\nFlights\nMonkeytype\nHome\nChatGPT\nGarmin\nLichess\nInstagram\nPNL\nYoutube\nTwitter\nCoin 360\nMusic\nTwitch\nSpeedTest\nTranslate\nOpenAsistant"
-chosen=$(echo -e "$choices" | dmenu -i -p "Select Layout: " -sb "#8F7DAB")
+chosen=$(echo -e "$choices" | dmenu -m DP-3 -i -p "Select Layout: " -sb "#8F7DAB")
 
 # NOTE
 # Variable MOZ_USE_XINPUT2=1 should be setup in order for librefox not to launch this windows in fullscreen (at lead on bspwm) we need to set up 'full-screen-api.ignore-widgets' to `true` in the about:configexport
@@ -56,7 +56,7 @@ case "$chosen" in
 	librewolf --kiosk -P $LW_PROFILE --new-window https://app.n26.com/login
 	;;
 "TradingView")
-	market=$(echo -e "${!markets[@]}" | tr ' ' '\n' | dmenu -i -p "Scripts" -sb "#40444B" -fn "JetBrainsMono Nerd Font")
+	market=$(echo -e "${!markets[@]}" | tr ' ' '\n' | dmenu -m DP-3 -i -p "Scripts" -sb "#40444B" -fn "JetBrainsMono Nerd Font")
 	librewolf --kiosk -P $LW_PROFILE --new-window "${markets[$market]}"
 	;;
 "White")
@@ -67,8 +67,8 @@ case "$chosen" in
 	librewolf --kiosk -P $LW_PROFILE --new-window https://www.keybr.com/
 	;;
 "Monkeytype")
-	screen_center
-	librewolf --kiosk -P $LW_PROFILE --new-window https://www.monkeytype.com/
+	# screen_center
+	librewolf --class "HOLA" --kiosk -P $LW_PROFILE --new-window https://www.monkeytype.com/ 
 	;;
 "Twitch")
 	librewolf --kiosk -P $LW_PROFILE --new-window https://twitch.tv/
