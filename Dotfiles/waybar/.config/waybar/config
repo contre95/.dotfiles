@@ -1,0 +1,97 @@
+[
+{
+  "layer": "top",
+  "position": "bottom",
+  "output": ["DP-1"],
+    "modules-center": ["wlr/workspaces"],
+    "custom/arch": {
+      "format": "  ",
+      "tooltip": false
+    },
+    "hyprland/window": {
+    "separate-outputs": true
+    },
+    "wlr/workspaces": {
+      "persistent_workspaces":{
+          "6": ["DP-1"],
+          "7": ["DP-1"],
+          "8": ["DP-1"],
+          "9": ["DP-1"],
+          "10": ["DP-1"]
+      },
+      "format": "{icon}",
+      "format-icons": {
+             "6": "|",
+             "7": "|",
+             "8": "|",
+             "9": "ﭮ|",
+             "10": "|"
+      },
+      "tooltip": true,
+      "all-outputs": false
+    }
+},
+{
+  "layer": "top",
+    "output": "DP-3",
+    "position": "bottom",
+    "modules-left": ["custom/arch", "wlr/workspaces"],
+    "modules-center": ["bluetooth", "network"],
+    "modules-right": ["clock"],
+    "custom/arch": {
+      "format": "  ",
+      "tooltip": false,
+      "on-click": "sh $HOME/.config/rofi/bin/powermenu"
+    },
+    "hyprland/window": {
+    "separate-outputs": true
+    },
+    "wlr/workspaces": {
+      "persistent_workspaces":{
+            "1": ["DP-3"],
+          "2": ["DP-3"],
+          "3": ["DP-3"],
+          "4": ["DP-3"],
+          "5": ["DP-3"],
+          "6": ["DP-1"],
+          "7": ["DP-1"],
+          "8": ["DP-1"],
+          "9": ["DP-1"],
+          "10": ["DP-1"]
+      },
+      "format": "{icon}",
+      "format-icons": {
+      },
+      "tooltip": true,
+      "all-outputs": false
+    },
+    "clock": {
+      "format": "<span color='#b4befe'> </span>{:%d/%m/%y | %H:%M}"
+    },
+    "pulseaudio": {
+      "format": "<span color='#b4befe'>{icon}</span> {volume}%",
+      "format-muted": "",
+      "tooltip": true,
+      "format-icons": {
+        "headphone": "",
+        "default": ["", "", "󰕾", "󰕾", "󰕾", "", "", ""]
+      },
+      "scroll-step": 1
+    },
+    "bluetooth": {
+      "format": "<span color='#b4befe'></span> {status}  ",
+      "format-disabled": "no",
+      "format-connected": "<span color='#b4befe'></span> {num_connections}",
+      "tooltip-format": "{device_enumerate}",
+      "tooltip-format-enumerate-connected": "{device_alias}   {device_address}"
+    },
+    "network": {
+      "interface": "wlan0",
+      "format": "{ifname}",
+      "format-wifi": "<span color='#b4befe'> </span>{essid}",
+      "format-ethernet": "{ipaddr}/{cidr} ",
+      "format-disconnected": "<span color='#b4befe'>󰖪 </span>No Network",
+      "tooltip": true
+    }
+}
+]

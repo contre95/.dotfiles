@@ -1,7 +1,7 @@
 #!/bin/bash
 choices=" Instagram\n既 Twitch\n Youtube"
 
-var=$(echo -e $choices | dmenu -i -p "Exit menu: " -sb "#9147FF" -fn "JetBrainsMono Nerd Font")
+var=$(echo -e $choices | dmenu -m DP-3 -i -p "Exit menu: " -sb "#9147FF" -fn "JetBrainsMono Nerd Font")
 
 case "$var" in
 " Instagram")
