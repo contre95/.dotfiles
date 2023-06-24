@@ -43,6 +43,7 @@ au BufNewFile,BufRead Caddyfile,*.Caddyfile,Caddyfile.* set ft=caddyfile
 autocmd FileType markdown setlocal spell 
 "autocmd FileType markdown setlocal complete+=kspell
 autocmd FileType markdown setlocal wrap 
+autocmd FileType hypr setlocal commentstring=#\ %s 
 autocmd FileType markdown setlocal nonumber
 autocmd FileType markdown setlocal norelativenumber
 " autocmd FileType markdown setlocal textwidth=80
@@ -89,6 +90,13 @@ aug julia_ft_detection
   au!
   au BufRead,BufNewFile *.jl set filetype=julia
 aug end
+
+"Set Hyprland
+"-------------------------------------
+augroup hypr_ftdetect
+  au!
+  au BufRead,BufNewFile *hypr/*.conf,*hypr/*/*.conf set ft=hypr
+augroup END
 
 "Set i3config filetype 
 "-------------------------------------
