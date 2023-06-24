@@ -48,16 +48,11 @@
     },
     "wlr/workspaces": {
       "persistent_workspaces":{
-            "1": ["DP-3"],
+          "1": ["DP-3"],
           "2": ["DP-3"],
           "3": ["DP-3"],
           "4": ["DP-3"],
           "5": ["DP-3"],
-          "6": ["DP-1"],
-          "7": ["DP-1"],
-          "8": ["DP-1"],
-          "9": ["DP-1"],
-          "10": ["DP-1"]
       },
       "format": "{icon}",
       "format-icons": {
