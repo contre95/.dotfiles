@@ -31,6 +31,10 @@ window#waybar {
   background: #11111b;
 }
 
+#workspaces button.persistent {
+    color: #2e3440;
+}
+
 #workspaces button.active {
     color: #2e3440;
     background-color: #88c0d0;
