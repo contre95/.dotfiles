@@ -1,4 +1,5 @@
 #!/bin/bash
+#
 # source ~/.zshrc
 
 choices="Any\nKeybr\nDuolingo\nTradingView\nMedia\nCronometer\nWhite\nSpotify\nNew Bookmark\nN26\nFlights\nMonkeytype\nHome\nChatGPT\nGarmin\nLichess\nInstagram\nPNL\nYoutube\nTwitter\nCoin 360\nMusic\nTwitch\nSpeedTest\nTranslate\nOpenAsistant"
@@ -30,24 +31,29 @@ declare -A markets=(
 	["XMR|USD"]="https://www.tradingview.com/chart/rH3IToRa/?symbol=KRAKEN%3AXMRUSD"
 )
 
+corner () {
+  hyprctl dispatch exec "[float; size 800 515;animation slide; move 75%-20 60%-30] $1"
+}
+
+center () {
+  hyprctl dispatch exec "[float;size 2217 1237;animation slide;move 18%-30 3%] $1"
+}
+
 case "$chosen" in
 "Coin 360")
 	librewolf --kiosk -P $LW_PROFILE --new-window "https://coin360.com/?period=24h"
 	;;
 "Duolingo")
-  	screen_center
-	librewolf --kiosk -P $LW_PROFILE --new-window "https://duolingo.com"
+  center "librewolf --kiosk -P $LW_PROFILE --new-window 'https://duolingo.com'"
 	;;
 "Spotify")
 	librewolf --kiosk -P $LW_PROFILE --new-window "https://open.spotify.com/"
 	;;
 "Translate")
-	screen_corner
-	librewolf --kiosk -P $LW_PROFILE --new-window "https://translate.google.com/?es=en"
+	corner "librewolf --kiosk -P $LW_PROFILE --new-window 'https://translate.google.com/?es=en'"
 	;;
 "SpeedTest")
-	screen_corner
-	librewolf --kiosk -P $LW_PROFILE --new-window "https://librespeed.org/"
+	corner "librewolf --kiosk -P $LW_PROFILE --new-window 'https://librespeed.org/'"
 	;;
 "PNL")
 	librewolf --kiosk -P $LW_PROFILE --new-window https://docs.google.com/spreadsheets/d/1v_JZ9QqCnBhPOOXPrl6OE26kyl6XZRzJNjMs27UY8BA
@@ -57,29 +63,25 @@ case "$chosen" in
 	;;
 "TradingView")
 	market=$(echo -e "${!markets[@]}" | tr ' ' '\n' | dmenu -m DP-3 -i -p "Scripts" -sb "#40444B" -fn "JetBrainsMono Nerd Font")
-	librewolf --kiosk -P $LW_PROFILE --new-window "${markets[$market]}"
+    center "librewolf --kiosk -P $LW_PROFILE --new-window \"${markets[$market]}\""
 	;;
 "White")
 	librewolf --kiosk -P $LW_PROFILE --new-window https://blankwhitescreen.com/
 	;;
 "Keybr")
-	screen_center
-	librewolf --kiosk -P $LW_PROFILE --new-window https://www.keybr.com/
+	center "librewolf --kiosk -P $LW_PROFILE --new-window https://www.keybr.com/"
 	;;
 "Monkeytype")
-	# screen_center
-	librewolf --class "HOLA" --kiosk -P $LW_PROFILE --new-window https://www.monkeytype.com/ 
+	center "librewolf --kiosk -P $LW_PROFILE --new-window https://www.monkeytype.com/ "
 	;;
 "Twitch")
 	librewolf --kiosk -P $LW_PROFILE --new-window https://twitch.tv/
 	;;
 "Cronometer")
-	screen_center
 	librewolf --kiosk -P $LW_PROFILE --new-window https://cronometer.com/
 	;;
 "Music")
-	screen_center
-	librewolf --kiosk -P $LW_PROFILE --new-window http://192.168.0.174:6595
+	center "librewolf --kiosk -P $LW_PROFILE --new-window http://192.168.0.174:6595"
 	;;
 "ChatGPT")
 	librewolf --kiosk -P $LW_PROFILE --new-window https://chat.openai.com/chat
@@ -104,8 +106,7 @@ case "$chosen" in
 	librewolf --kiosk -P $LW_PROFILE --new-window https://twitter.com
 	;;
 "Home")
-	screen_center
-	librewolf --kiosk -P $LW_PROFILE --new-window http://192.168.0.174:8123/home-dash/0
+	center "librewolf --kiosk -P $LW_PROFILE --new-window http://192.168.0.174:8123/home-dash/0"
 	;;
 "Any")
 	librewolf --kiosk -P $LW_PROFILE --new-window http://"$(zenity --entry --text='Website  :')"
@@ -114,8 +115,7 @@ case "$chosen" in
 	echo "$(zenity --entry --text='Bookmark:')             - http://$(zenity --entry --text='URL:')" >>"$MY_FOLDER"/Info/bookmarks.txt
 	;;
 "Garmin")
-	screen_center
-	librewolf --kiosk -P $LW_PROFILE --new-window https://connect.garmin.com/modern/
+	center "librewolf --kiosk -P $LW_PROFILE --new-window https://connect.garmin.com/modern/"
 	;;
 "Instagram")
 	librewolf --kiosk -P $LW_PROFILE --new-window https://instagram.com
