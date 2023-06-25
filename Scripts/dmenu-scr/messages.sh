@@ -12,8 +12,8 @@ case $var in
 
     ' Jitsi')
         URL="https://meet.jit.si/$(zenity --entry --text="Enter call name:")"
-        echo "$URL" | xclip -sel clip
-        exec brave --profile-directory="Contre" --app="$URL"
+        echo "$URL" | wl-copy
+        exec librewolf -P "Contre" "$URL"
         ;;
 
     ' Hangouts')
