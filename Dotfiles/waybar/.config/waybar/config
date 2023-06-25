@@ -39,7 +39,7 @@
     "position": "bottom",
     "modules-left": ["custom/arch", "wlr/workspaces"],
     "modules-center": ["bluetooth","custom/spotify", "network"],
-    "modules-right": ["custom/btc", "custom/pacman","disk", "memory","cpu", "wireplumber","clock"],
+    "modules-right": ["custom/recorder","custom/btc", "custom/pacman","disk", "memory","cpu", "wireplumber","clock"],
     "custom/arch": {
       "format": "  ",
       "tooltip": false,
@@ -65,6 +65,14 @@
     "clock": {
       "format": "<span color='#b4befe'> </span>{:%d/%m/%y | %H:%M}"
     },
+    "custom/recorder": {
+		"format": "<span color='#FF0000'>󰑋</span> Rec.",
+		"return-type": "json",
+        "on-click": "pkill -SIGINT wf-recorder",
+		"interval": 1,
+		"exec": "echo '{\"class\": \"recording\"}'",
+		"exec-if": "pgrep wf-recorder"
+	},
     "wireplumber": {
         "format": "{volume}% {icon}",
         "format-muted": " -- <span color='#C57070'></span>",
