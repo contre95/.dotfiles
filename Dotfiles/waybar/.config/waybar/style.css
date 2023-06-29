@@ -6,7 +6,8 @@
 }
 
 window#waybar {
-  background: transparent;
+  background-color: rgba(0, 0, 0, 0.0);
+  /* display: none; */
 }
 
 #custom-arch, #workspaces {
@@ -24,7 +25,8 @@ window#waybar {
 }
 
 #workspaces button {
-  background: #11111b;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* color: rgba(0, 0, 0, 0.1); */
   margin-left: 25px;
 }
 
@@ -49,7 +51,8 @@ window#waybar {
 #memory,
 #cpu,
 #temperature {
-  background: #11111b;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* background: #11111b; */
   border-radius: 10px;
   margin-bottom: 5px;
   padding-left: 10px;

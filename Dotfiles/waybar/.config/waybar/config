@@ -139,8 +139,8 @@
     },
     "bluetooth": {
       "format": "<span color='#b4befe'></span> {status}",
-      "on-click": "bluetoothctl power off",
-      "on-click-right": "bluetoothctl power on",
+      "on-click–right": "bluetoothctl power off",
+      "on-click": "bluetoothctl power on",
       "format-disabled": "no",
       "format-connected": "<span color='#b4befe'></span> {device_alias}",
       "tooltip-format": "{device_enumerate}",
