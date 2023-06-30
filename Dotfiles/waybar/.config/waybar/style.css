@@ -24,6 +24,12 @@ window#waybar {
   color: #168ECA;
 }
 
+#workspaces button:hover {
+  background-color: rgba(0, 0, 0, 1);
+  /* color: rgba(0, 0, 0, 0.1); */
+  margin-left: 25px;
+}
+
 #workspaces button {
   background-color: rgba(0, 0, 0, 0.5);
   /* color: rgba(0, 0, 0, 0.1); */
@@ -42,6 +48,7 @@ window#waybar {
 
 #custom-btc,
 #custom-recorder,
+#custom-music,
 #custom-pacman,
 #clock, #wireplumber,
 #bluetooth,
@@ -63,11 +70,3 @@ window#waybar {
 #clock {
   margin-right: 5px;
 }
-
-.custom-spotify {
-    padding: 0 10px;
-    margin: 0 4px;
-    background-color: #1DB954;
-    color: black;
-}
-
