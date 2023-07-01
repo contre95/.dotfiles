@@ -55,6 +55,7 @@ desktop=(
 	picom
 	sxhkd
 	ranger
+    waybar
 	barrier
 	pcmanfm
 	systemd
@@ -63,7 +64,7 @@ desktop=(
 	lemonbar
 	alacritty
 	autorandr
-    waybar
+    wireplumber
 )
 
 if [[ $MYENV == "desktop" ]]; then

@@ -1,6 +1,6 @@
 * {
   font-family: 'JetBrainsMono Nerd Font', 'Symbols Nerd Font Mono';
-  font-size: 15px;
+  font-size: 16px;
   font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
   min-height: 10px;
 }
@@ -47,6 +47,8 @@ window#waybar {
 }
 
 #custom-btc,
+#custom-ip,
+#custom-audio,
 #custom-recorder,
 #custom-music,
 #custom-pacman,
