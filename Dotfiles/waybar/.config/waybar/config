@@ -38,8 +38,8 @@
     "output": "DP-3",
     "position": "bottom",
     "modules-left": ["custom/arch", "wlr/workspaces"],
-    "modules-center": ["custom/music","bluetooth", "network"],
-    "modules-right": ["custom/recorder","custom/btc", "custom/pacman","disk", "memory","cpu", "wireplumber","clock"],
+    "modules-center": ["custom/music","bluetooth", "network", "custom/ip", "custom/audio"],
+    "modules-right": ["custom/recorder","custom/btc", "custom/wall","custom/pacman","disk", "memory","cpu", "wireplumber","clock"],
     "custom/arch": {
       "format": "  ",
       "tooltip": false,
@@ -65,6 +65,18 @@
     "clock": {
       "format": "<span color='#b4befe'> </span>{:%d/%m/%y | %H:%M}"
     },
+    "custom/ip": {
+      "format": "<span color='#b4befe'></span> {}",
+      "exec" : "curl ifconfig.io"
+	},
+    "custom/audio": {
+      "format": "<span color='#F8D987'></span> {}",
+      "interval": 1,
+      "on-scroll-up":"pactl set-sink-volume @DEFAULT_SINK@ +5%",
+      "on-scroll-down":"pactl set-sink-volume @DEFAULT_SINK@ -5%",
+      "on-click" : "pactl set-default-sink $(pamixer --list-sinks | grep -v $(pamixer --get-default-sink | tail -n 1 | awk -F' ' '{print $2}' | tr -d '\"') | grep -v 'Sinks:' | shuf | head -n 1 | awk -F' ' '{print $2}' | tr -d '\"')",
+      "exec" : "pamixer --get-default-sink | tail -n 1 | awk -F'\".+\" ' '{print $2}' | tr -d '\"'"
+	},
     "custom/recorder": {
 		"format": "<span color='#FF0000'>󰑋</span> Rec.",
 		"return-type": "json",
@@ -79,8 +91,8 @@
         "on-click": "pavucontrol",
         "scroll-step": 0.2,
         "on-click-middle":"pactl set-sink-mute @DEFAULT_SINK@ toggle",
-        "on-scroll-up":"pactl set-sink-volume @DEFAULT_SINK@ +1%",
-        "on-scroll-down":"pactl set-sink-volume @DEFAULT_SINK@ -1%",
+        "on-scroll-up":"pactl set-sink-volume @DEFAULT_SINK@ +5%",
+        "on-scroll-down":"pactl set-sink-volume @DEFAULT_SINK@ -5%",
         "format-icons": ["", "", ""]
     },
     "custom/btc": {
