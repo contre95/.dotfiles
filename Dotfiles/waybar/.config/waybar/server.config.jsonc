@@ -2,7 +2,7 @@
 {
   "layer": "top",
     "output": "DP-3",
-    "position": "bottom",
+    "position": "top",
     "modules-left": ["custom/arch", "wlr/workspaces"],
     "modules-center": ["custom/music","temperature","bluetooth", "network", "custom/ip", "custom/audio"],
     "modules-right": ["custom/recorder","custom/btc", "custom/wall","custom/pacman","disk", "memory","cpu", "wireplumber","clock"],
@@ -117,7 +117,7 @@
       "tooltip-format-enumerate-connected": "{device_alias}  {device_address}"
     },
     "network": {
-      "interface": "wlan0",
+      "interface": "enp89s0",
       "format": "{ifname}",
       "format-wifi": "<span color='#b4befe'> </span>{essid}",
       "format-ethernet": "{ipaddr}/{cidr} ",
