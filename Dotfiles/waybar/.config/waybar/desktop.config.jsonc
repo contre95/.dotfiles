@@ -108,7 +108,7 @@
     "custom/pacman": {
         "format": "<span color='#168ECA'></span> {}",
         "interval": 3600,           
-        "on-click": "pkill -9 waybar && waybar",
+        "on-click": "pkill -9 waybar && waybar -c ~/.config/waybar/$MYENV.config.jsonc",
         "exec": "checkupdates | wc -l",
         "exec-if": "exit 0",           
         "signal": 8
