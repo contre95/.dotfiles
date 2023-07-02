@@ -1,21 +1,21 @@
 * {
   font-family: 'JetBrainsMono Nerd Font', 'Symbols Nerd Font Mono';
   font-size: 16px;
+  border-radius: 0px;
   font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
-  min-height: 10px;
+  min-height: 15px;
 }
 
 window#waybar {
-  background-color: rgba(0, 0, 0, 0.0);
+  background-color: rgba(0, 0, 0, 0.6);
   /* display: none; */
 }
 
 #custom-arch, #workspaces {
-  border-radius: 10px;
   /* background-color: #292929; */
   color: #F1F1F1;
   padding-right: 10px;
-  margin: 5px;
+  margin: 2px;
 }
 
 #custom-arch {
@@ -31,8 +31,10 @@ window#waybar {
 }
 
 #workspaces button {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: transparent;
   color: #FFFFFF;
+  border-radius: 0px;
+
   margin-left: 25px;
 }
 
@@ -55,15 +57,17 @@ window#waybar {
 #clock, #wireplumber,
 #bluetooth,
 #network,
+#battery,
 #window,
+
 #disk,
 #memory,
 #cpu,
 #temperature {
-  background-color: rgba(0, 0, 0, 0.5);
+  /* background-color: KGB(0, 0, 0, 0.5); */
   /* background: #11111b; */
   color: #FFFFFF;
-  border-radius: 10px;
+  /* border-radius: 10px; */
   margin: 5px;
   padding-left: 10px;
   padding-right: 10px;

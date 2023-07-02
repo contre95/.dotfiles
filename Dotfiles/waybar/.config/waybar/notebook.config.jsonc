@@ -4,7 +4,8 @@
     "position": "top",
     "modules-left": ["custom/arch", "wlr/workspaces"],
     "modules-center": ["network", "custom/ip", "custom/audio"],
-    "modules-right": ["custom/recorder","custom/btc", "custom/wall","custom/pacman","disk", "memory","cpu", "wireplumber","clock"],
+    "modules-right": ["custom/recorder","custom/btc", "custom/wall","custom/pacman","disk", "memory","cpu", "wireplumber","battery","clock"],
+
     "custom/arch": {
       "format": "  ",
       "tooltip": false,
@@ -47,9 +48,21 @@
 		"exec": "echo '{\"class\": \"recording\"}'",
 		"exec-if": "pgrep wf-recorder"
 	},
+    "battery": {
+      "states": {
+            		"warning": 30,
+            		"critical": 15
+        	},
+        	"format": "{icon} {capacity}%",
+        	"format-charging": "<span color='#168ECA'>󰂄</span> {capacity}%",
+        	"format-plugged": "<span color='#32CE42'>󰂄</span> {capacity}%",
+        	"format-alt": "{icon} {time}",
+        	"format-full": "󰁹 {capacity}%",
+        	"format-icons": ["󰁻", "󰁿", "󰂁"]
+	},
     "wireplumber": {
-        "format": "{volume}% {icon}",
-        "format-muted": " -- <span color='#C57070'></span>",
+        "format": "{icon} {volume}%",
+        "format-muted": "<span color='#C57070'></span> --",
         "on-click": "pavucontrol",
         "scroll-step": 0.2,
         "on-click-middle":"pactl set-sink-mute @DEFAULT_SINK@ toggle",
@@ -59,7 +72,7 @@
     },
     "custom/btc": {
         "format": "<span color='#EF8E19'></span> {}",
-        "on-click": "hyprctl dispatch exec \"[float; size 1000 600;animation slide; move 68%-20 50%-30] librewolf --kiosk -P 'ContreKiosk' --new-window 'https://www.tradingview.com/chart/rH3IToRa/?symbol=BITSTAMP%3ABTCUSD'\"",
+        "on-click": "hyprctl dispatch exec \"[float; size 24% 35%;animation slide; move 75%-20 60%-30] librewolf --kiosk -P 'ContreKiosk' --new-window 'https://www.tradingview.com/chart/rH3IToRa/?symbol=BITSTAMP%3ABTCUSD'\"",
         "exec" : "curl -X GET 'https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd' -s | jq '.[] .usd'"
     },
     "custom/music": {  
