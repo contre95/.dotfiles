@@ -9,7 +9,7 @@ case $var in
     'hyprland')
     choice="$HOME/.config/hypr/hyprland.conf";;
     'waybar')
-    choice="$HOME/.config/waybar/config";;
+    choice="$HOME/.config/waybar/$MYENV.config.jsonc";;
     'waybar-css')
     choice="$HOME/.config/waybar/style.css";;
     'bspwm')

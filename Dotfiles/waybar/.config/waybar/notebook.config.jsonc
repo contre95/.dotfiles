@@ -1,0 +1,129 @@
+[
+{
+  "layer": "top",
+    "output": "DP-3",
+    "position": "bottom",
+    "modules-left": ["custom/arch", "wlr/workspaces"],
+    "modules-center": ["custom/music","bluetooth", "network", "custom/ip", "custom/audio"],
+    "modules-right": ["custom/recorder","custom/btc", "custom/wall","custom/pacman","disk", "memory","cpu", "wireplumber","clock"],
+    "custom/arch": {
+      "format": "  ",
+      "tooltip": false,
+      "on-click": "sh $HOME/.config/rofi/bin/powermenu"
+    },
+    "wlr/workspaces": {
+      "persistent_workspaces":{
+          "1": ["DP-3"],
+          "2": ["DP-3"],
+          "3": ["DP-3"],
+          "4": ["DP-3"],
+          "5": ["DP-3"]
+      },
+      "format": "{icon}",
+      "format-icons": {
+      },
+      "tooltip": true,
+      "all-outputs": false
+    },
+    "clock": {
+      "format": "<span color='#b4befe'> </span>{:%d/%m/%y | %H:%M}"
+    },
+    "custom/ip": {
+      "format": "<span color='#b4befe'></span> {}",
+      "exec" : "curl ifconfig.io"
+	},
+    "custom/audio": {
+      "format": "<span color='#F8D987'></span> {}",
+      "interval": 1,
+      "on-scroll-up":"pactl set-sink-volume @DEFAULT_SINK@ +5%",
+      "on-scroll-down":"pactl set-sink-volume @DEFAULT_SINK@ -5%",
+      "on-click" : "pactl set-default-sink $(pamixer --list-sinks | grep -v $(pamixer --get-default-sink | tail -n 1 | awk -F' ' '{print $2}' | tr -d '\"') | grep -v 'Sinks:' | shuf | head -n 1 | awk -F' ' '{print $2}' | tr -d '\"')",
+      "exec" : "pamixer --get-default-sink | tail -n 1 | awk -F'\".+\" ' '{print $2}' | tr -d '\"'"
+	},
+    "custom/recorder": {
+		"format": "<span color='#FF0000'>󰑋</span> Rec.",
+		"return-type": "json",
+        "on-click": "pkill -SIGINT wf-recorder",
+		"interval": 1,
+		"exec": "echo '{\"class\": \"recording\"}'",
+		"exec-if": "pgrep wf-recorder"
+	},
+    "wireplumber": {
+        "format": "{volume}% {icon}",
+        "format-muted": " -- <span color='#C57070'></span>",
+        "on-click": "pavucontrol",
+        "scroll-step": 0.2,
+        "on-click-middle":"pactl set-sink-mute @DEFAULT_SINK@ toggle",
+        "on-scroll-up":"pactl set-sink-volume @DEFAULT_SINK@ +5%",
+        "on-scroll-down":"pactl set-sink-volume @DEFAULT_SINK@ -5%",
+        "format-icons": ["", "", ""]
+    },
+    "custom/btc": {
+        "format": "<span color='#EF8E19'></span> {}",
+        "on-click": "hyprctl dispatch exec \"[float; size 1000 600;animation slide; move 68%-20 50%-30] librewolf --kiosk -P 'ContreKiosk' --new-window 'https://www.tradingview.com/chart/rH3IToRa/?symbol=BITSTAMP%3ABTCUSD'\"",
+        "exec" : "curl -X GET 'https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd' -s | jq '.[] .usd'"
+    },
+    "custom/music": {  
+      "exec": "echo $(playerctl metadata title) - $(playerctl metadata artist)",  
+      "format": "<span color='#0AE7A0'></span> {}",  
+      "on-click": "playerctl play-pause",  
+      "interval": 5,
+      "on-scroll-up": "playerctl next",  
+      "on-scroll-down": "playerctl previous"  
+    },
+    "custom/pacman": {
+        "format": "<span color='#168ECA'></span> {}",
+        "interval": 3600,           
+        "on-click": "pkill -9 waybar && waybar",
+        "exec": "checkupdates | wc -l",
+        "exec-if": "exit 0",           
+        "signal": 8
+    },
+    "disk": {
+        "interval": 30,
+        "format": "<span color='#b4befe'> </span> {free}",
+        "path": "/"
+    },
+        "cpu": {
+        "format": "<span color='#b4befe'> </span> {usage}%",
+        "interval": 2,
+        "tooltip": true
+    },
+    "memory": {
+        "format": "<span color='#b4befe'> </span>{}%",
+        "on-click": "htop",
+        "interval": 2
+    },
+    "temperature": {
+        // "thermal-zone": 2,
+        "hwmon-path": "/sys/class/hwmon/hwmon1/temp7_input",
+        "critical-threshold": 90,
+        "format-critical": "{temperatureC}°C {icon}",
+        "format": "{temperatureC}°C {icon}",
+        "format-icons": ["", "", ""],
+        "interval": 2
+    },
+    "hyprland/window": {
+    "format": "{}",
+    "separate-outputs": true
+    },
+    "bluetooth": {
+      "format": "<span color='#b4befe'></span> {status}",
+      "on-click": "bluetoothctl power on",
+      "on-click-right": "bluetoothctl power off",
+      "format-disabled": "no",
+      "format-connected": "<span color='#b4befe'></span> {device_alias}",
+      "tooltip-format": "{device_enumerate}",
+      "tooltip-format-enumerate-connected": "{device_alias}  {device_address}"
+    },
+    "network": {
+      "interface": "wlan0",
+      "format": "{ifname}",
+      "format-wifi": "<span color='#b4befe'> </span>{essid}",
+      "format-ethernet": "{ipaddr}/{cidr} ",
+      "format-disconnected": "<span color='#b4befe'>󰖪 </span>No Network",
+      "tooltip": true
+    }
+}
+]
+

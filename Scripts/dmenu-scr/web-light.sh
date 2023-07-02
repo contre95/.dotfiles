@@ -19,11 +19,11 @@ function screen_corner {
 }
 
 corner () {
-  hyprctl dispatch exec "[float; size 800 515;animation slide; move 75%-20 60%-30] $1"
+  hyprctl dispatch exec "[float;size 24% 35%;animation slide; move 75%-20 60%-30] $1"
 }
 
 center () {
-  hyprctl dispatch exec "[float;size 2217 1237;animation slide;move 18%-30 3%] $1"
+  hyprctl dispatch exec "[float;size 70% 85%;animation slide;move 15%-30 3%] $1"
 }
 
 declare -A markets=(
