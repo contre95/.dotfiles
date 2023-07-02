@@ -120,7 +120,7 @@
       "interface": "enp89s0",
       "format": "{ifname}",
       "format-wifi": "<span color='#b4befe'> </span>{essid}",
-      "format-ethernet": "{ipaddr}/{cidr} ",
+      "format-ethernet": "{ipaddr}",
       "format-disconnected": "<span color='#b4befe'>󰖪 </span>No Network",
       "tooltip": true
     }
