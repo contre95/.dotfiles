@@ -15,7 +15,7 @@ table.insert(alsa_monitor.rules, {
 table.insert(alsa_monitor.rules, {
   matches = {
     {
-      { "node.name", "Equals", "alsa_output.pci-0000_00_1f.3.analog-stereo" },
+      { "node.name", "equals", "alsa_output.pci-0000_00_1f.3.analog-stereo" },
     },
   },
   apply_properties = {
