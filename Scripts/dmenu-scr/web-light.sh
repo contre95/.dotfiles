@@ -18,6 +18,10 @@ function screen_corner {
 	bspc rule -a \* --one-shot state=floating layer=above rectangle="$SCR_CORNER"
 }
 
+side () {
+  hyprctl dispatch exec "[float;size 800px 94%; animation slide right; move 76% 2%] $1"
+}
+
 corner () {
   hyprctl dispatch exec "[float;size 24% 35%;animation slide; move 75%-20 60%-30] $1"
 }
@@ -109,7 +113,7 @@ case "$chosen" in
 	librewolf --kiosk -P $LW_PROFILE --new-window https://twitter.com
 	;;
 "Home")
-	center "librewolf --kiosk -P $LW_PROFILE --new-window http://192.168.0.174:8123/home-dash/0"
+	side "librewolf --kiosk -P $LW_PROFILE --new-window http://192.168.0.174:8123/home-dash/0"
 	;;
 "Any")
 	librewolf --kiosk -P $LW_PROFILE --new-window http://"$(zenity --entry --text='Website  :')"
