@@ -15,7 +15,7 @@ window#waybar {
   /* background-color: #292929; */
   color: #F1F1F1;
   padding-right: 10px;
-  margin-bottom: 5px;
+  margin: 5px;
 }
 
 #custom-arch {
@@ -32,7 +32,7 @@ window#waybar {
 
 #workspaces button {
   background-color: rgba(0, 0, 0, 0.5);
-  /* color: rgba(0, 0, 0, 0.1); */
+  color: #FFFFFF;
   margin-left: 25px;
 }
 
@@ -62,8 +62,9 @@ window#waybar {
 #temperature {
   background-color: rgba(0, 0, 0, 0.5);
   /* background: #11111b; */
+  color: #FFFFFF;
   border-radius: 10px;
-  margin-bottom: 5px;
+  margin: 5px;
   padding-left: 10px;
   padding-right: 10px;
   margin-right: 15px;
