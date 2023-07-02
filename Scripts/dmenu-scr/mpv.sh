@@ -1,7 +1,7 @@
 #!/bin/bash
 
 choices=' Twitch\n YouTube\n Video'
-var=$(echo -e $choices | dmenu -m DP-3 -i -p "Exit menu: " -sb "#9147FF" -fn "JetBrainsMono Nerd Font")
+var=$(echo -e $choices | dmenu  -i -p "Exit menu: " -sb "#9147FF" -fn "JetBrainsMono Nerd Font")
 
 function screen_corner {
 	bspc rule -a \* --one-shot state=floating layer=above rectangle="$SCR_CORNER" monitor="$(bspc query -M | sed -n 1p)"
@@ -26,7 +26,7 @@ case $var in
 	while true; do
 		videoid=$(
 			echo -e "$videoids" |
-				dmenu -m DP-3 -l 10 -p "Pick Video: " -sb "#A52D2D" -fn "JetBrainsMono Nerd Font" | rev | cut -d'|' -f1 | rev | sed 's/ //g'
+				dmenu  -l 10 -p "Pick Video: " -sb "#A52D2D" -fn "JetBrainsMono Nerd Font" | rev | cut -d'|' -f1 | rev | sed 's/ //g'
 		)
 		if [ "$videoid" == "" ]; then exit; fi
 		mpv --ytdl-format="bestvideo[height<=?480]+bestaudio/best" https://youtu.be/$videoid
@@ -34,6 +34,6 @@ case $var in
 	;;
 ' Video')
     screen_corner &&
-	mpv av://v4l2:$(ls /dev/video* | dmenu -m DP-3 -i -p "Exit menu: " -sb "#9147FF" -fn "JetBrainsMono Nerd Font")
+	mpv av://v4l2:$(ls /dev/video* | dmenu  -i -p "Exit menu: " -sb "#9147FF" -fn "JetBrainsMono Nerd Font")
 	;;
 esac

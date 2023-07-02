@@ -4,7 +4,7 @@ SCR_PATH=$MY_FOLDER/Scripts
 
 choices="Single\nDual\nManual\nVertical\nVertical Mac"
 
-chosen=$(echo -e "$choices" | dmenu -m DP-3 -i -p "Select Layout: " -sb "#7E33FF" )
+chosen=$(echo -e "$choices" | dmenu  -i -p "Select Layout: " -sb "#7E33FF" )
 
 case "$chosen" in
 	"Single")  xrandr --output DP-0 --off --output DP-1 --off --output HDMI-0 --mode 2560x1080 --pos 0x0 --rotate normal --output DP-2 --off --output DP-3 --off --output DP-4 --off --output DP-5 --off ;;

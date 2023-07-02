@@ -13,7 +13,7 @@ password_files=( "$prefix"/**/*.gpg )
 password_files=( "${password_files[@]#"$prefix"/}" )
 password_files=( "${password_files[@]%.gpg}" )
 
-password=$(printf '%s\n' "${password_files[@]}" | dmenu -m DP-3 -i -p "Pass  : " "$@" -sb "#34495E" -fn "JetBrainsMono Nerd Font")
+password=$(printf '%s\n' "${password_files[@]}" | dmenu  -i -p "Pass  : " "$@" -sb "#34495E" -fn "JetBrainsMono Nerd Font")
 
 [[ -n $password ]] || exit
 

@@ -15,6 +15,20 @@ table.insert(alsa_monitor.rules, {
 table.insert(alsa_monitor.rules, {
   matches = {
     {
+      { "node.name", "Equals", "alsa_output.pci-0000_00_1f.3.analog-stereo" },
+    },
+  },
+  apply_properties = {
+    ["device.nick"] = "Built-in",
+    ["device.product.name"] = "Built-in",
+    ["node.description"] = "Built-in",
+    ["device.description"] = "Built-in"
+  },
+})
+
+table.insert(alsa_monitor.rules, {
+  matches = {
+    {
       { "node.name", "equals", "alsa_output.usb-Samson_Technologies_Samson_C01U_Pro_Mic-00.analog-stereo" },
     },
   },

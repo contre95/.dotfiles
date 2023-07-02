@@ -1,7 +1,7 @@
 #!/bin/bash
 
 choices=" Shutdown\n Lock\n Suspend\n Restart\n Logout\n Cancel"
-var=$(echo -e "$choices" | dmenu -m DP-3 -i -p "Exit menu: " -sb "#FF3855" -fn "JetBrainsMono Nerd Font" ) 
+var=$(echo -e "$choices" | dmenu  -i -p "Exit menu: " -sb "#FF3855" -fn "JetBrainsMono Nerd Font" ) 
 
 case $var in
     ' Shutdown') 
