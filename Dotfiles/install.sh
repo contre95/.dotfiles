@@ -5,38 +5,36 @@ notebook=(
 	fzf
 	gtk
 	zsh
+	hypr
 	nvim
 	rofi
 	tmux
-	bspwm
 	dunst
 	picom
-	sxhkd
 	ranger
-	pcmanfm
+	waybar
 	keyboard
 	lemonbar
 	alacritty
 	autorandr
+	wireplumber
 )
 
 server=(
-	fzf
-	gtk
-	zsh
-	nvim
-	rofi
-	tmux
-	bspwm
-	dunst
-	picom
-	sxhkd
-	ranger
-	pcmanfm
-	keyboard
-	lemonbar
-	alacritty
-	autorandr
+    fzf
+    gtk
+    zsh
+    hypr
+    nvim
+    rofi
+    tmux
+    dunst
+    ranger
+    waybar
+    pcmanfm
+    keyboard
+    alacritty
+    wireplumber
 )
 
 desktop=(
@@ -50,20 +48,14 @@ desktop=(
 	nvim
 	rofi
 	tmux
-	bspwm
 	dunst
-	picom
-	sxhkd
 	ranger
     waybar
-	barrier
 	pcmanfm
 	systemd
 	zathura
 	keyboard
-	lemonbar
 	alacritty
-	autorandr
     wireplumber
 )
 
