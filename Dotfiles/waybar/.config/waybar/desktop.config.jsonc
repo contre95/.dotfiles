@@ -1,7 +1,7 @@
 [
 {
   "layer": "top",
-  "position": "top",
+  "position": "bottom",
   "output": ["DP-1"],
     "modules-center": ["wlr/workspaces"],
     "custom/arch": {
@@ -36,7 +36,7 @@
 {
   "layer": "top",
     "output": "DP-3",
-    "position": "top",
+    "position": "bottom",
     "modules-left": ["custom/arch", "wlr/workspaces"],
     "modules-center": ["custom/music","bluetooth", "network", "custom/ip", "custom/audio"],
     "modules-right": ["custom/recorder","custom/btc", "custom/wall","custom/pacman","disk", "memory","cpu", "wireplumber","clock"],
