@@ -19,7 +19,7 @@ function screen_corner {
 }
 
 side () {
-  hyprctl dispatch exec "[float;size 800px 94%; animation slide right; move 76% 4%] $1"
+  hyprctl dispatch exec "[float;size 800px 90%; animation slide right; move 76% 4%] $1"
 }
 
 corner () {
