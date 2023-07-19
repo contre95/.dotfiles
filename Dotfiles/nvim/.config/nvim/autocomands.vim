@@ -38,12 +38,20 @@ autocmd BufWritePre *.go lua go_org_imports()
 "Set Caddyfile
 "-------------------------------------
 au BufNewFile,BufRead Caddyfile,*.Caddyfile,Caddyfile.* set ft=caddyfile
+
+"Set Logstash
+"-------------------------------------
+autocmd FileType logstash setlocal commentstring=#\ %s 
+
+"Set Hyprland.conf
+"-------------------------------------
+autocmd FileType hypr setlocal commentstring=#\ %s 
+
 "Set Markdown
 "-------------------------------------
 autocmd FileType markdown setlocal spell 
 "autocmd FileType markdown setlocal complete+=kspell
 autocmd FileType markdown setlocal wrap 
-autocmd FileType hypr setlocal commentstring=#\ %s 
 autocmd FileType markdown setlocal nonumber
 autocmd FileType markdown setlocal norelativenumber
 " autocmd FileType markdown setlocal textwidth=80
