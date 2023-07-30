@@ -93,6 +93,7 @@ local shell = {
 
 --Json
 lspconfig.jsonls.setup({ capabilities = capabilities })
+
 -- Yamls
 lspconfig.yamlls.setup({
   settings = {
@@ -228,7 +229,7 @@ lspconfig.sqlls.setup({
 -- }
 
 -- Typescript
---lspconfig.tsserver.setup({ capabilities = capabilities })
+lspconfig.tsserver.setup({ capabilities = capabilities })
 
 -- Emmet
 lspconfig.emmet_ls.setup({
@@ -245,52 +246,52 @@ lspconfig.emmet_ls.setup({
     }
 })
 -- Vue
--- lspconfig.vuels.setup {
---   on_attach = function(client)
---     --[[
---                 Internal Vetur formatting is not supported out of the box
---
---                 This line below is required if you:
---                     - want to format using Nvim's native `vim.lsp.buf.formatting**()`
---                     - want to use Vetur's formatting config instead, e.g, settings.vetur.format {...}
---             --]]
---     client.server_capabilities.document_formatting = true
---   end,
---   capabilities = capabilities,
---   settings = {
---     vetur = {
---       completion = {
---         autoImport = true,
---         useScaffoldSnippets = true
---       },
---       format = {
---         defaultFormatter = {
---           html = "prettier",
---           js = "prettier",
---           ts = "prettier",
---         }
---       },
---       validation = {
---         template = true,
---         script = true,
---         style = true,
---         templateProps = true,
---         interpolation = true
---       },
---       experimental = {
---         templateInterpolationService = true
---       }
---     }
---   },
---   root_dir = util.root_pattern("header.php", "package.json", "style.css", 'webpack.config.js')
--- }
+lspconfig.vuels.setup {
+  on_attach = function(client)
+    --[[
+                Internal Vetur formatting is not supported out of the box
+
+                This line below is required if you:
+                    - want to format using Nvim's native `vim.lsp.buf.formatting**()`
+                    - want to use Vetur's formatting config instead, e.g, settings.vetur.format {...}
+            --]]
+    client.server_capabilities.document_formatting = true
+  end,
+  capabilities = capabilities,
+  settings = {
+    vetur = {
+      completion = {
+        autoImport = true,
+        useScaffoldSnippets = true
+      },
+      format = {
+        defaultFormatter = {
+          html = "prettier",
+          js = "prettier",
+          ts = "prettier",
+        }
+      },
+      validation = {
+        template = true,
+        script = true,
+        style = true,
+        templateProps = true,
+        interpolation = true
+      },
+      experimental = {
+        templateInterpolationService = true
+      }
+    }
+  },
+  root_dir = util.root_pattern("header.php", "package.json", "style.css", 'webpack.config.js')
+}
 
 -- EFM Lang server
 
 -- Languages setup
 local languages = {
-  --typescript = { prettier, eslint },
-  --javascript = { prettier, eslint },
+  typescript = { prettier, eslint },
+  javascript = { prettier, eslint },
   vue = { prettier, eslint },
   yaml = { yamlfmt },
   --lua = { luafmt },
