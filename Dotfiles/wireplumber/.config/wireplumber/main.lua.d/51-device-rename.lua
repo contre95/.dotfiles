@@ -29,7 +29,7 @@ table.insert(alsa_monitor.rules, {
 table.insert(alsa_monitor.rules, {
   matches = {
     {
-      { "node.name", "equals", "alsa_output.usb-Samson_Technologies_Samson_C01U_Pro_Mic-00.analog-stereo" },
+      { "node.name", "matches", "alsa_output.usb-Samson_Technologies_Samson_C01U_Pro_Mic-00.*-stereo" },
     },
   },
   apply_properties = {
