@@ -53,8 +53,8 @@ require('material').setup({
    GitSignsDeleteLn = { fg = colors.git.removed },
  },
 })
--- vim.g.material_style = "deep ocean"
--- vim.cmd("colorscheme material")
+vim.g.material_style = "deep ocean"
+vim.cmd("colorscheme material")
 
 ----------------------------------------------
 require('kanagawa').setup({
@@ -115,9 +115,9 @@ require('kanagawa').setup({
     light = "lotus"
   },
 })
-vim.cmd("colorscheme kanagawa-dragon")
+-- vim.cmd("colorscheme kanagawa-dragon")
 ----------------------------------------------
-require('colorizer').setup()
+-- require('colorizer').setup()
 
 -- ----------------------------------------------
 -- vim.cmd [[colorscheme rasmus]]
