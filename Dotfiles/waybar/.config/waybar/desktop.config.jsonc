@@ -39,7 +39,7 @@
     "position": "bottom",
     "modules-left": ["custom/arch", "wlr/workspaces"],
     "modules-center": ["custom/music","bluetooth", "network", "custom/ip", "custom/audio"],
-    "modules-right": ["custom/recorder","custom/btc", "custom/wall","custom/pacman","disk", "memory","cpu", "wireplumber","clock"],
+    "modules-right": ["custom/recorder","custom/mic-mute","custom/btc", "custom/wall","custom/pacman","disk", "memory","cpu", "wireplumber","clock"],
     "custom/arch": {
       "format": "  ",
       "tooltip": false,
@@ -104,6 +104,14 @@
       "interval": 5,
       "on-scroll-up": "playerctl next",  
       "on-scroll-down": "playerctl previous"  
+    },
+    "custom/mic-mute": {
+        "format": "<span color='#F47272'>  </span>",
+        "interval": 3600,           
+        "on-click": "$SCR_PATH/audio-scr/mic-mute.sh",
+        "exec-if": "wpctl status | grep -i 'C01U Pro condenser microphone Analog Stereo' | grep 'MUTED'"
+        // "exec-if": "exit 0",           
+        // "signal": 8
     },
     "custom/pacman": {
         "format": "<span color='#168ECA'></span> {}",
