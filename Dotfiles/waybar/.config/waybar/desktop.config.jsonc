@@ -38,7 +38,7 @@
     "output": "DP-3",
     "position": "bottom",
     "modules-left": ["custom/arch", "wlr/workspaces"],
-    "modules-center": ["custom/music","bluetooth", "network", "custom/ip", "custom/audio"],
+    "modules-center": ["bluetooth", "network", "custom/ip", "custom/audio"],
     "modules-right": ["custom/recorder","custom/mic-mute","custom/btc", "custom/wall","custom/pacman","disk", "memory","cpu", "wireplumber","clock"],
     "custom/arch": {
       "format": "  ",
