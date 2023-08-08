@@ -14,11 +14,19 @@ vim.keymap.set("n", "<C-r>", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left
 -- Misc
 vim.keymap.set("n", "<leader>f", "<cmd>CellularAutomaton make_it_rain<CR>")
 
+-- Delete on work backward like normal people
+-- vim.keymap.set("i", "<C-w>", "<C-\\><C-o>dB")
+-- vim.keymap.set("i", "<C-BS>", "<C-\\><C-o>dB")
+
 -- Move between buffers in the same window
 vim.keymap.set("n", "<C-A-Up>", "<C-w>k")
 vim.keymap.set("n", "<C-A-Down>", "<C-w>j")
 vim.keymap.set("n", "<C-A-Left>", "<C-w>h ")
 vim.keymap.set("n", "<C-A-Right>", "<C-w>l")
+
+-- Skip text in normal mode
+vim.keymap.set("n", "<C-Left>", "b")
+vim.keymap.set("n", "<C-Right>", "w")
 
 -- Keep cursor in place when doing J or searching terms
 vim.keymap.set("n", "J", "mzJ`z")
