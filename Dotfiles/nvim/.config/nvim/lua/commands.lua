@@ -12,6 +12,7 @@ vim.api.nvim_create_user_command("CodeAction", function() return vim.lsp.buf.cod
 vim.api.nvim_create_user_command("Rename", function() return vim.lsp.buf.rename() end, {})
 vim.api.nvim_create_user_command("SignatureHelp", function() return vim.lsp.buf.signature_help() end, {})
 vim.api.nvim_create_user_command("LspLog", function() return vim.cmd('sp' .. vim.lsp.get_log_path()) end, {})
+vim.api.nvim_create_user_command("RemoveBlankLines", function() return vim.cmd(":g/^\\s*$/d") end, {})
 
 -- Share code
 -- Only Linux. For Mac, see: https://gist.github.com/shmup/db671132f0f9882187b28a677fa8df72
