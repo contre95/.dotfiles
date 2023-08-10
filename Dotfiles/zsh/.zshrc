@@ -13,6 +13,7 @@ export KEYTIMEOUT=10
 export PASSWORD_STORE_DIR=$MY_FOLDER/Pass
 export LANG="en_US.UTF-8"
 export LC_ALL=en_US.UTF-8
+export KUBECONFIG=/etc/rancher/k3s/k3s.yaml
 
 ################################################################################################
 # Several programs configuration
@@ -85,6 +86,7 @@ alias cosh="podman container exec -it \`containers\` sh"
 alias copy='xclip -sel clip'
 alias cdr='cd $(git rev-parse --show-toplevel)'
 alias here='pcmanfm .'
+alias k='kubectl'
 alias ct="mpg123 --quiet $MY_FOLDER/Library/sounds/ct.mp3"
 alias al="mpg123 --quiet $MY_FOLDER/Library/sounds/olx.mp3"
 alias ed="mpg123 --quiet $MY_FOLDER/Library/sounds/circus.mp3"
