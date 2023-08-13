@@ -65,7 +65,7 @@ return require("packer").startup(function()
   use({ "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap", "leoluz/nvim-dap-go", "mortepau/codicons.nvim" } })
   -- LSP / CMP / Snippets / Parsers
   use("nvim-treesitter/nvim-treesitter")
-  use("nvim-treesitter/playground")
+  -- use("nvim-treesitter/playground")
   use("neovim/nvim-lspconfig")
   use("hrsh7th/nvim-cmp")
   use("hrsh7th/cmp-buffer")
