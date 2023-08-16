@@ -9,5 +9,5 @@ Changing the "Option" key on Mac keyboard for the "Right Alt" on regular keyboar
 If setting up the keyboard layout under .config doesn't work:
 ```
 cp ./us /usr/share/X11/xkb/symbols/us
-setxkbmap -layout us -variant mac
+setxkbmap -layout us -variant altgr-intl
 ```
