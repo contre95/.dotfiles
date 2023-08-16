@@ -1,12 +1,12 @@
 export PYENV_SHELL=zsh
 
 function sp {
-	git branch >/dev/null 2>&1 || return 1
-	git config user.initials
+  git branch >/dev/null 2>&1 || return 1
+  git config user.initials
 }
 
 # Hide python version if it doesn't come from one of these sources.
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(I
+typeset -g POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(I
 	# =========================[ Line #1 ]=========================
 	status          # exit code of the last command
 	virtualenv      # python virtual environment (https://docs.python.org/3/library/venv.html)
@@ -20,7 +20,7 @@ POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(I
 	google_app_cred # google application credentials (https://cloud.google.com/docs/authentication/production)
 )
 
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(root_indicator dir dir_writable_joined custom_git_pair kubecontext aws)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(root_indicator dir dir_writable_joined custom_git_pair vcs_joined kubecontext)
 
 POWERLEVEL9K_AWS_SHOW_ON_COMMAND='aws|awless|terraform|pulumi|'
 POWERLEVEL9K_GCLOUD_SHOW_ON_COMMAND='gcloud|gcs'
