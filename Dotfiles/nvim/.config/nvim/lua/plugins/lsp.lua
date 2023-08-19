@@ -53,7 +53,7 @@ vim.diagnostic.config({
 
 -- Linters, Prettiers and Checkers for EFM
 -----------------------------
-local sqlfmt = { formatCommand = "cat ${INPUT} | sqlfmt -"}
+local sqlfmt = { formatCommand = "cat ${INPUT} | sqlfmt -" }
 -- ES Linter -- npm i -g eslint_d
 local eslint = {
   lintCommand = "eslint_d -f visualstudio --stdin --stdin-filename ${INPUT}",
@@ -97,16 +97,16 @@ lspconfig.jsonls.setup({ capabilities = capabilities })
 -- Yamls
 lspconfig.yamlls.setup({
   settings = {
-      yaml = {
-          schemas = {
-              ["https://raw.githubusercontent.com/microsoft/azure-pipelines-vscode/master/service-schema.json"] = {
-                  "/azure-pipeline*.y*l",
-                  "/*.azure*",
-                  "Azure-Pipelines/**/*.y*l",
-                  "Pipelines/*.y*l",
-              },
-          },
+    yaml = {
+      schemas = {
+        ["https://raw.githubusercontent.com/microsoft/azure-pipelines-vscode/master/service-schema.json"] = {
+          "/azure-pipeline*.y*l",
+          "/*.azure*",
+          "Azure-Pipelines/**/*.y*l",
+          "Pipelines/*.y*l",
+        },
       },
+    },
   },
 })
 -- Lua
@@ -201,7 +201,7 @@ lspconfig.terraformls.setup({
 
 -- SQL  -- go install github.com/lighttiger2505/sqls@latest
 lspconfig.sqlls.setup({
-  cmd = {'sql-language-server', 'up', '--method', 'stdio'},
+  cmd = { 'sql-language-server', 'up', '--method', 'stdio' },
   capabilities = capabilities,
 })
 
@@ -230,31 +230,26 @@ lspconfig.sqlls.setup({
 
 -- Typescript
 lspconfig.tsserver.setup({ capabilities = capabilities })
+-- HTML
+lspconfig.html.setup { capabilities = capabilities, }
 
 -- Emmet
 lspconfig.emmet_ls.setup({
-    -- on_attach = on_attach,
-    capabilities = capabilities,
-    filetypes = { 'html', 'typescriptreact', 'javascriptreact', 'css', 'sass', 'scss', 'less', 'vue' },
-    init_options = {
-      html = {
-        options = {
-          -- For possible options, see: https://github.com/emmetio/emmet/blob/master/src/config.ts#L79-L267
-          ["bem.enabled"] = true,
-        },
+  -- on_attach = on_attach,
+  capabilities = capabilities,
+  filetypes = { 'html', 'typescriptreact', 'javascriptreact', 'css', 'sass', 'scss', 'less', 'vue' },
+  init_options = {
+    html = {
+      options = {
+        -- For possible options, see: https://github.com/emmetio/emmet/blob/master/src/config.ts#L79-L267
+        ["bem.enabled"] = true,
       },
-    }
+    },
+  }
 })
 -- Vue
 lspconfig.vuels.setup {
   on_attach = function(client)
-    --[[
-                Internal Vetur formatting is not supported out of the box
-
-                This line below is required if you:
-                    - want to format using Nvim's native `vim.lsp.buf.formatting**()`
-                    - want to use Vetur's formatting config instead, e.g, settings.vetur.format {...}
-            --]]
     client.server_capabilities.document_formatting = true
   end,
   capabilities = capabilities,
@@ -295,7 +290,7 @@ local languages = {
   vue = { prettier, eslint },
   yaml = { yamlfmt },
   --lua = { luafmt },
-  html = { prettier },
+  -- html = { prettier },
   scss = { prettier },
   sql = { sqlfmt },
   css = { prettier },
