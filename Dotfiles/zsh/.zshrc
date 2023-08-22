@@ -2,7 +2,7 @@
 # OS Specific configuration
 ################################################################################################
 if [[ $(uname) == "Darwin" ]]; then
-  export MY_FOLDER="/Users/contre"
+	export MY_FOLDER="/Users/contre"
 fi
 
 ################################################################################################
@@ -46,13 +46,14 @@ antigen apply
 ################################################################################################
 # Custom PATH  settings
 ################################################################################################
-export PATH="$MY_FOLDER/Scripts/bin-scr:$PATH" # Custom Scripts
-export PATH="$HOME/.pyenv/bin:$PATH"           # Pyenv
-export PATH="$HOME/.cargo/bin:$PATH"           # Rust
-export PATH="$HOME/go/bin/:$PATH"              # Go
-export PATH="$HOME/.local/bin:$PATH"           # ~/.local
-export PATH="/usr/local/bin:$PATH"             # /usr/local
-export PATH="/usr/bin:$PATH"                   # /usr/local
+export PATH="$MY_FOLDER/Scripts/bin-scr:$PATH"   # Custom Scripts
+export PATH="$HOME/.pyenv/bin:$PATH"             # Pyenv
+export PATH="$HOME/.cargo/bin:$PATH"             # Rust
+export PATH="$HOME/go/bin/:$PATH"                # Go
+export PATH="$HOME/.local/bin:$PATH"             # ~/.local
+export PATH="/usr/local/bin:$PATH"               # /usr/local
+export PATH="/usr/bin:$PATH"                     # /usr/local
+export PATH="$HOME/.local/share/nvim/mason/bin/:$PATH" # Mason binaries (Neovim)
 
 ################################################################################################
 # User configuration
@@ -63,16 +64,15 @@ if [[ -n $SSH_CONNECTION ]]; then
 	export EDITOR='vim'
 else
 	export EDITOR='nvim'
-    # Only use gpg/ssh keys when not in an SSH connection. Not to replace the keys forwarded by the ssh agent.
-    # SSH Configuration with GPG
-    #echo [KEYGRIP] >> ~/.gnupg/sshcontrol
-    export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
-    gpgconf --launch gpg-agent
+	# Only use gpg/ssh keys when not in an SSH connection. Not to replace the keys forwarded by the ssh agent.
+	# SSH Configuration with GPG
+	#echo [KEYGRIP] >> ~/.gnupg/sshcontrol
+	export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+	gpgconf --launch gpg-agent
 fi
 
 # Enable vi mode
 #bindkey -v
-
 
 ################################################################################################
 # Alias
@@ -131,8 +131,8 @@ source $HOME/.gvm/scripts/gvm
 #[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
 
 autoload -Uz compinit
 zstyle ':completion:*' menu select
