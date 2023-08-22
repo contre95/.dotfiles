@@ -51,43 +51,6 @@ vim.diagnostic.config({
   severity_sort = false,
 })
 
--- Linters, Prettiers and Checkers for EFM
------------------------------
-local sqlfmt = { formatCommand = "cat ${INPUT} | sqlfmt -" }
--- ES Linter -- npm i -g eslint_d
-local eslint = {
-  lintCommand = "eslint_d -f visualstudio --stdin --stdin-filename ${INPUT}",
-  lintIgnoreExitCode = true,
-  lintStdin = true,
-  lintFormats = { "%f(%l,%c): %tarning %m", "%f(%l,%c): %rror %m" },
-  lintSource = "eslint",
-}
-
--- General prettier -- npm i -g prettier
-local prettier = {
-  formatCommand = "prettier --stdin-filepath ${INPUT}",
-  formatStdin = true,
-}
-
--- Yaml linter -- brew install yamllint
-local yamlfmt = {
-  --lintCommand = "yamllint --format parsable ${INPUT}",
-  formatCommand = "cat ${INPUT} | yamlfmt -in",
-  lintStdin = true,
-}
-
--- Shell Formatter / Checker
-local shell = {
-  formatCommand = "shfmt ${-i:tabWidth}",
-  lintCommand = "shellcheck -f gcc -x -",
-  lintStdin = true,
-  lintFormats = {
-    "%f:%l:%c: %trror: %m",
-    "%f:%l:%c: %tarning: %m",
-    "%f:%l:%c: %tote: %m",
-  },
-}
-
 -- Languages Configuration
 -----------------------------
 
@@ -142,6 +105,14 @@ lspconfig.lua_ls.setup({
   },
 })
 
+-- require 'lspconfig'.vale.setup {}
+-- Latex
+require 'lspconfig'.vale_ls.setup {
+  capabilities = capabilities,
+  root_dir = lspconfig.util.root_pattern(".git"),
+  filetypes = { "tex", "md", "txt" },
+
+}
 -- Markdown
 require 'lspconfig'.marksman.setup {}
 -- C
@@ -282,7 +253,49 @@ lspconfig.vuels.setup {
 }
 
 -- EFM Lang server
+-- Linters, Prettiers and Checkers for EFM
+-----------------------------
+local sqlfmt = { formatCommand = "cat ${INPUT} | sqlfmt -" }
+-- ES Linter -- npm i -g eslint_d
+local eslint = {
+  lintCommand = "eslint_d -f visualstudio --stdin --stdin-filename ${INPUT}",
+  lintIgnoreExitCode = true,
+  lintStdin = true,
+  lintFormats = { "%f(%l,%c): %tarning %m", "%f(%l,%c): %rror %m" },
+  lintSource = "eslint",
+}
 
+-- General prettier -- npm i -g prettier
+local prettier = {
+  formatCommand = "prettier --stdin-filepath ${INPUT}",
+  formatStdin = true,
+}
+
+-- Yaml linter -- brew install yamllint
+local yamlfmt = {
+  --lintCommand = "yamllint --format parsable ${INPUT}",
+  formatCommand = "cat ${INPUT} | yamlfmt -in",
+  lintStdin = true,
+}
+
+-- Latex Formatter
+local latexindent = {
+  formatCommand = "latexindent",
+  lintStdin = true,
+}
+
+-- Shell Formatter / Checker
+local shell = {
+  formatCommand = "shfmt ${-i:tabWidth}",
+  lintCommand = "shellcheck -f gcc -x -",
+  lintStdin = true,
+  lintFormats = {
+    "%f:%l:%c: %trror: %m",
+    "%f:%l:%c: %tarning: %m",
+    "%f:%l:%c: %tote: %m",
+  },
+}
+-- Vale linter
 -- Languages setup
 local languages = {
   typescript = { prettier, eslint },
@@ -293,6 +306,7 @@ local languages = {
   -- html = { prettier },
   scss = { prettier },
   sql = { sqlfmt },
+  tex = { latexindent },
   css = { prettier },
   sh = { shell },
   zsh = { shell },
