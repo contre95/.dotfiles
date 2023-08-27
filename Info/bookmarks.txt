@@ -25,3 +25,4 @@ LetterboxD          - http://https://letterboxd.com
 Twitch              - http://twitch.tv/
 Calendar            - http://calendar.google.com
 Spotify             - https://open.spotify.com/
+             - http://
