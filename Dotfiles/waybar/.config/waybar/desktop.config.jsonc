@@ -1,61 +1,108 @@
 [
-{
-  "layer": "top",
-  "position": "bottom",
-  "output": ["DP-1"],
-    "modules-center": ["wlr/workspaces"],
+  {
+    "layer": "top",
+    "position": "bottom",
+    "output": [
+      "DP-1"
+    ],
+    "modules-center": [
+      "hyprland/workspaces"
+    ],
     "custom/arch": {
       "format": "  ",
       "tooltip": false
     },
     "hyprland/window": {
-    "separate-outputs": true
+      "separate-outputs": true
     },
-    "wlr/workspaces": {
-      "persistent_workspaces":{
-          "6": ["DP-1"],
-          "7": ["DP-1"],
-          "8": ["DP-1"],
-          "9": ["DP-1"],
-          "10": ["DP-1"]
+    "hyprland/workspaces": {
+      "persistent_workspaces": {
+        "6": [
+          "DP-1"
+        ],
+        "7": [
+          "DP-1"
+        ],
+        "8": [
+          "DP-1"
+        ],
+        "9": [
+          "DP-1"
+        ],
+        "10": [
+          "DP-1"
+        ]
       },
-      
-  "sort-by-number": true,
+      "sort-by-number": true,
       "format": "{icon}",
       "format-icons": {
-             "6": "ﭮ|",
-             "7": "|",
-             "8": "|",
-             "9": "|",
-             "10": "|"
+        "6": "ﭮ|",
+        "7": "|",
+        "8": "|",
+        "9": "|",
+        "10": "|"
       },
       "tooltip": true,
       "all-outputs": false
     }
-},
-{
-  "layer": "top",
+  },
+  {
+    "layer": "top",
     "output": "DP-3",
     "position": "bottom",
-    "modules-left": ["custom/arch", "wlr/workspaces"],
-    "modules-center": ["bluetooth", "network", "custom/ip", "custom/audio"],
-    "modules-right": ["custom/recorder","custom/mic-mute","custom/btc", "custom/wall","custom/pacman","disk", "memory","cpu", "wireplumber","clock"],
+    "modules-left": [
+      "custom/arch",
+      "hyprland/workspaces"
+    ],
+    "modules-center": [
+      "bluetooth",
+      "network",
+      "custom/ip",
+      "custom/audio"
+    ],
+    "modules-right": [
+      "custom/recorder",
+      "custom/mic-mute",
+      "custom/btc",
+      "custom/wall",
+      "custom/pacman",
+      "disk",
+      "memory",
+      "cpu",
+      "wireplumber",
+      "clock"
+    ],
     "custom/arch": {
       "format": "  ",
       "tooltip": false,
       "on-click": "sh $HOME/.config/rofi/bin/powermenu"
     },
-    "wlr/workspaces": {
-      "persistent_workspaces":{
-          "1": ["DP-3"],
-          "2": ["DP-3"],
-          "3": ["DP-3"],
-          "4": ["DP-3"],
-          "5": ["DP-3"]
+    "hyprland/workspaces": {
+      "persistent_workspaces": {
+        "1": [
+          "DP-3"
+        ],
+        "2": [
+          "DP-3"
+        ],
+        "3": [
+          "DP-3"
+        ],
+        "4": [
+          "DP-3"
+        ],
+        "5": [
+          "DP-3"
+        ]
       },
-      "format": "{icon}",
-      "format-icons": {
-      },
+      // "format": "{icon}",
+      // "format-icons": {
+      //   "1": "1",
+      //   "2": "2",
+      //   "3": "3",
+      //   "4": "4",
+      //   "5": "5"
+      // },
       "tooltip": true,
       "all-outputs": false
     },
@@ -64,90 +111,98 @@
     },
     "custom/ip": {
       "format": "<span color='#b4befe'></span> {}",
-      "exec" : "curl ifconfig.io"
-	},
+      "exec": "curl ifconfig.io"
+    },
     "custom/audio": {
       "format": "<span color='#F8D987'></span> {}",
       "interval": 1,
-      "on-scroll-up":"pactl set-sink-volume @DEFAULT_SINK@ +5%",
-      "on-scroll-down":"pactl set-sink-volume @DEFAULT_SINK@ -5%",
-      "on-click" : "pactl set-default-sink $(pamixer --list-sinks | grep -v $(pamixer --get-default-sink | tail -n 1 | awk -F' ' '{print $2}' | tr -d '\"') | grep -v 'Sinks:' | shuf | head -n 1 | awk -F' ' '{print $2}' | tr -d '\"')",
-      "exec" : "pamixer --get-default-sink | tail -n 1 | awk -F'\".+\" ' '{print $2}' | tr -d '\"'"
-	},
+      "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
+      "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%",
+      "on-click": "pactl set-default-sink $(pamixer --list-sinks | grep -v $(pamixer --get-default-sink | tail -n 1 | awk -F' ' '{print $2}' | tr -d '\"') | grep -v 'Sinks:' | shuf | head -n 1 | awk -F' ' '{print $2}' | tr -d '\"')",
+      "exec": "pamixer --get-default-sink | tail -n 1 | awk -F'\".+\" ' '{print $2}' | tr -d '\"'"
+    },
     "custom/recorder": {
-		"format": "<span color='#FF0000'>󰑋</span> Rec.",
-		"return-type": "json",
-        "on-click": "pkill -SIGINT wf-recorder",
-		"interval": 1,
-		"exec": "echo '{\"class\": \"recording\"}'",
-		"exec-if": "pgrep wf-recorder"
-	},
+      "format": "<span color='#FF0000'>󰑋</span> Rec.",
+      "return-type": "json",
+      "on-click": "pkill -SIGINT wf-recorder",
+      "interval": 1,
+      "exec": "echo '{\"class\": \"recording\"}'",
+      "exec-if": "pgrep wf-recorder"
+    },
     "wireplumber": {
-        "format": "{volume}% {icon}",
-        "format-muted": " -- <span color='#C57070'></span>",
-        "on-click": "pavucontrol",
-        "scroll-step": 0.2,
-        "on-click-middle":"pactl set-sink-mute @DEFAULT_SINK@ toggle",
-        "on-scroll-up":"pactl set-sink-volume @DEFAULT_SINK@ +5%",
-        "on-scroll-down":"pactl set-sink-volume @DEFAULT_SINK@ -5%",
-        "format-icons": ["", "", ""]
+      "format": "{volume}% {icon}",
+      "format-muted": " -- <span color='#C57070'></span>",
+      "on-click": "pavucontrol",
+      "scroll-step": 0.2,
+      "on-click-middle": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+      "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
+      "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%",
+      "format-icons": [
+        "",
+        "",
+        ""
+      ]
     },
     "custom/btc": {
-        "format": "<span color='#EF8E19'></span> {}",
-        "on-click": "hyprctl dispatch exec \"[float; size 24% 35%;animation slide; move 75%-20 60%-30] librewolf --kiosk -P 'ContreKiosk' --new-window 'https://www.tradingview.com/chart/rH3IToRa/?symbol=BITSTAMP%3ABTCUSD'\"",
-        "exec" : "curl -X GET 'https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd' -s | jq '.[] .usd'"
+      "format": "<span color='#EF8E19'></span> {}",
+      "on-click": "hyprctl dispatch exec \"[float; size 24% 35%;animation slide; move 75%-20 60%-30] librewolf --kiosk -P 'ContreKiosk' --new-window 'https://www.tradingview.com/chart/rH3IToRa/?symbol=BITSTAMP%3ABTCUSD'\"",
+      "exec": "curl -X GET 'https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd' -s | jq '.[] .usd'"
     },
-    "custom/music": {  
-      "exec": "echo $(playerctl metadata title) - $(playerctl metadata artist)",  
-      "format": "<span color='#0AE7A0'></span> {}",  
-      "on-click": "playerctl play-pause",  
+    "custom/music": {
+      "exec": "echo $(playerctl metadata title) - $(playerctl metadata artist)",
+      "format": "<span color='#0AE7A0'></span> {}",
+      "on-click": "playerctl play-pause",
       "interval": 5,
-      "on-scroll-up": "playerctl next",  
-      "on-scroll-down": "playerctl previous"  
+      "on-scroll-up": "playerctl next",
+      "on-scroll-down": "playerctl previous"
     },
     "custom/mic-mute": {
-        "format": "<span color='#F47272'>  </span>",
-        "interval": 3600,           
-        "on-click": "$SCR_PATH/audio-scr/mic-mute.sh",
-        "exec-if": "wpctl status | grep -i 'C01U Pro condenser microphone Analog Stereo' | grep 'MUTED'"
-        // "exec-if": "exit 0",           
-        // "signal": 8
+      "format": "<span color='#F47272'>  </span>",
+      "interval": 3600,
+      "on-click": "$SCR_PATH/audio-scr/mic-mute.sh",
+      "exec-if": "wpctl status | grep -i 'C01U Pro condenser microphone Analog Stereo' | grep 'MUTED'"
+      // "exec-if": "exit 0",           
+      // "signal": 8
     },
     "custom/pacman": {
-        "format": "<span color='#168ECA'></span> {}",
-        "interval": 3600,           
-        "on-click": "pkill -9 waybar && waybar -c ~/.config/waybar/$MYENV.config.jsonc",
-        "exec": "checkupdates | wc -l",
-        "exec-if": "exit 0",           
-        "signal": 8
+      "format": "<span color='#168ECA'></span> {}",
+      "interval": 3600,
+      "on-click": "pkill -9 waybar && waybar -c ~/.config/waybar/$MYENV.config.jsonc",
+      "exec": "checkupdates | wc -l",
+      "exec-if": "exit 0",
+      "signal": 8
     },
     "disk": {
-        "interval": 30,
-        "format": "<span color='#b4befe'> </span> {free}",
-        "path": "/"
+      "interval": 30,
+      "format": "<span color='#b4befe'> </span> {free}",
+      "path": "/"
     },
-        "cpu": {
-        "format": "<span color='#b4befe'> </span> {usage}%",
-        "interval": 2,
-        "tooltip": true
+    "cpu": {
+      "format": "<span color='#b4befe'> </span> {usage}%",
+      "interval": 2,
+      "tooltip": true
     },
     "memory": {
-        "format": "<span color='#b4befe'> </span>{}%",
-        "on-click": "htop",
-        "interval": 2
+      "format": "<span color='#b4befe'> </span>{}%",
+      "on-click": "htop",
+      "interval": 2
     },
     "temperature": {
-        // "thermal-zone": 2,
-        "hwmon-path": "/sys/class/hwmon/hwmon1/temp7_input",
-        "critical-threshold": 90,
-        "format-critical": "{temperatureC}°C {icon}",
-        "format": "{temperatureC}°C {icon}",
-        "format-icons": ["", "", ""],
-        "interval": 2
+      // "thermal-zone": 2,
+      "hwmon-path": "/sys/class/hwmon/hwmon1/temp7_input",
+      "critical-threshold": 90,
+      "format-critical": "{temperatureC}°C {icon}",
+      "format": "{temperatureC}°C {icon}",
+      "format-icons": [
+        "",
+        "",
+        ""
+      ],
+      "interval": 2
     },
     "hyprland/window": {
-    "format": "{}",
-    "separate-outputs": true
+      "format": "{}",
+      "separate-outputs": true
     },
     "bluetooth": {
       "format": "<span color='#b4befe'></span> {status}",
@@ -166,5 +221,5 @@
       "format-disconnected": "<span color='#b4befe'>󰖪 </span>No Network",
       "tooltip": true
     }
-}
+  }
 ]
