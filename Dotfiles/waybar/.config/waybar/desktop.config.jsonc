@@ -38,12 +38,11 @@
       "format-icons": {
         "6": "ﭮ|",
         "7": "|",
-        "8": "|",
-        "9": "|",
-        "10": "|"
+        "8": " |",
+        "9": " |",
+        "10": " |"
       },
-      "tooltip": true,
-      "all-outputs": false
+      "tooltip": true
     }
   },
   {
@@ -74,8 +73,7 @@
     ],
     "custom/arch": {
       "format": "  ",
-      "tooltip": false,
-      "on-click": "sh $HOME/.config/rofi/bin/powermenu"
+      "tooltip": true
     },
     "hyprland/workspaces": {
       "persistent_workspaces": {
@@ -95,19 +93,19 @@
           "DP-3"
         ]
       },
-      // "format": "{icon}",
-      // "format-icons": {
-      //   "1": "1",
-      //   "2": "2",
-      //   "3": "3",
-      //   "4": "4",
-      //   "5": "5"
-      // },
-      "tooltip": true,
-      "all-outputs": false
+      "format": "{icon}",
+      "format-icons": {
+        "1": "1",
+        "2": "2",
+        "3": "3",
+        "4": "4",
+        "5": "5"
+      },
+      "tooltip": true
     },
     "clock": {
-      "format": "<span color='#b4befe'> </span>{:%d/%m/%y | %H:%M}"
+      "format": "<span color='#b4befe'> </span>{:%d/%m/%y | %H:%M}",
+      "on-click": "librewolf https://calendar.google.com/"
     },
     "custom/ip": {
       "format": "<span color='#b4befe'></span> {}",
