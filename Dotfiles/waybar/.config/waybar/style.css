@@ -18,6 +18,22 @@ window#waybar {
   margin: 2px;
 }
 
+
+tooltip {
+    background: #24273a;
+    opacity: 0.8;
+    border-radius: 10px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #181926;
+} 
+
+
+tooltip label {
+    color: #cad3f5;
+}
+
+
 #custom-arch {
   font-size: 20px;
   margin-left: 15px;
@@ -25,22 +41,24 @@ window#waybar {
 }
 
 #workspaces button:hover {
-  background-color: rgba(0, 0, 0, 1);
-  /* color: rgba(0, 0, 0, 0.1); */
-  margin-left: 25px;
+    background-color: #181926;
+    border-radius: 10px;
+    color: #b7bdf8;
 }
 
 #workspaces button {
   background-color: transparent;
-  color: #FFFFFF;
+  color: #D0D0CD;
   border-radius: 0px;
-
   margin-left: 25px;
 }
 
 #workspaces button.persistent {
     color: #2e3440;
+}
 
+#workspaces button.urgent {
+    color: #FF0000
 }
 
 #workspaces button.active {
