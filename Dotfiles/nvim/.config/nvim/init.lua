@@ -29,6 +29,7 @@ require("plugins/statusline-config")
 require("plugins/treesitter-config")
 require("plugins/colorscheme-config")
 require("plugins/quick-scope-config")
+require("plugins/clipboard-image-config")
 
 
 -- Leader key
