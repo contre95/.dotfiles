@@ -78,7 +78,6 @@ return require("packer").startup(function()
   use("hrsh7th/cmp-nvim-lsp")
   use("onsails/lspkind-nvim")
   -- Editting
-  use("ekickx/clipboard-image.nvim")
   use("zirrostig/vim-schlepp")
   use { 'numToStr/Comment.nvim' }
 end)
