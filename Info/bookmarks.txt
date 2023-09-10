@@ -14,7 +14,7 @@ RSS                 - http://rss.contre.lucas
 StackExchange       - http://stackexchange.com
 Translate           - http://translate.google.com/
 Twitter             - http://twitter.com
-Social              - https://elk.zone/home https://youtube.com http://rss.contre.lucas
+Social              - https://elk.zone/home https://youtube.com https://rss.contre.lucas https://reddit.com
 Proton              - http://account.proton.me/login
 Syncthings          - http://localhost:8384 https://sync.contre.lucas
 Torrent             - http://torrents.contre.lucas
