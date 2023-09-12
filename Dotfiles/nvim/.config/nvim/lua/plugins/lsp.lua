@@ -285,6 +285,10 @@ local latexindent = {
 }
 
 -- Shell Formatter / Checker
+local pep8 = {
+  formatCommand = "autopep8",
+}
+
 local shell = {
   formatCommand = "shfmt ${-i:tabWidth}",
   lintCommand = "shellcheck -f gcc -x -",
@@ -310,6 +314,7 @@ local languages = {
   css = { prettier },
   sh = { shell },
   zsh = { shell },
+  python = { pep8 },
 }
 
 lspconfig.efm.setup({
