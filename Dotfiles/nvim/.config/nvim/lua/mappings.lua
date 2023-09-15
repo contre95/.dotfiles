@@ -73,6 +73,8 @@ vim.keymap.set('x', '<C-l>',
 vim.keymap.set("n", "<leader>b", ":Telescope buffers<cr>")
 vim.keymap.set("n", "<leader>g", ":Telescope live_grep<cr>")
 vim.keymap.set("n", "<leader>h", ":Telescope help_tags<cr>")
+vim.keymap.set("n", "<leader>d", ":Telescope diagnostics<cr>")
+vim.keymap.set("n", "<leader>c", ":Telescope lsp_incoming_calls <cr>")
 vim.keymap.set("n", "<leader>o", ":Telescope find_files find_command=rg,--ignore,--hidden,--files prompt_prefix=🔍<cr>")
 
 -- Select with Shift as a normal human being
