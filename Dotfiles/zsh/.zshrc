@@ -48,7 +48,6 @@ antigen apply
 ################################################################################################
 export PATH="$MY_FOLDER/Scripts/bin-scr:$PATH"   # Custom Scripts
 export PATH="$HOME/.pyenv/bin:$PATH"             # Pyenv
-export PATH="$HOME/.cargo/bin:$PATH"             # Rust
 export PATH="$HOME/go/bin/:$PATH"                # Go
 export PATH="$HOME/.local/bin:$PATH"             # ~/.local
 export PATH="/usr/local/bin:$PATH"               # /usr/local
