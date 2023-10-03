@@ -214,7 +214,7 @@
     "network": {
       "interface": "wlan0",
       "format": "{ifname}",
-      "format-wifi": "<span color='#b4befe'> </span>{essid}",
+      "format-wifi": "<span color='#b4befe'> </span> {essid}",
       "format-ethernet": "{ipaddr}/{cidr} ",
       "format-disconnected": "<span color='#b4befe'>󰖪 </span>No Network",
       "tooltip": true
