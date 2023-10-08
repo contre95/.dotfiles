@@ -2,7 +2,7 @@
 #
 # source ~/.zshrc
 
-choices="Any\nKeybr\nDuolingo\nTradingView\nMedia\nCronometer\nWhite\nSpotify\nNew Bookmark\nN26\nFlights\nMonkeytype\nHome\nChatGPT\nGarmin\nLichess\nInstagram\nPNL\nYoutube\nTwitter\nCoin 360\nMusic\nTwitch\nSpeedTest\nTranslate\nOpenAsistant"
+choices="Any\nKeybr\nDuolingo\nTradingView\nMedia\nCronometer\nWhite\nSpotify\nDiscord\nNew Bookmark\nN26\nFlights\nMonkeytype\nHome\nChatGPT\nGarmin\nLichess\nInstagram\nPNL\nYoutube\nTwitter\nCoin 360\nMusic\nTwitch\nSpeedTest\nTranslate\nOpenAsistant"
 chosen=$(echo -e "$choices" | dmenu -i -p "Select Layout: " -sb "#8F7DAB")
 
 # NOTE
@@ -49,6 +49,9 @@ declare -A markets=(
 case "$chosen" in
 "Coin 360")
 	librewolf --kiosk -P $LW_PROFILE --new-window "https://coin360.com/?period=24h"
+	;;
+"Discord")
+  center "librewolf --kiosk -P $LW_PROFILE --new-window 'https://discord.com/app'"
 	;;
 "Duolingo")
   center "librewolf --kiosk -P $LW_PROFILE --new-window 'https://duolingo.com'"
