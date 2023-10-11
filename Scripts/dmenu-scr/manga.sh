@@ -1,4 +1,4 @@
 #!/bin/bash
 source ~/.zshrc 
-MANGA_FOLDER="$MY_FOLDER/Documents/manga/**"
+MANGA_FOLDER="$MY_FOLDER/Documents/manga/"
 koreader "$MANGA_FOLDER/$(ls -1 $MANGA_FOLDER | dmenu  -i -p 'Exit menu: ' -sb '#0F111A' -fn 'JetBrainsMono Nerd Font')"
