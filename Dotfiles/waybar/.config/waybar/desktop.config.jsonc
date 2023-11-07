@@ -62,6 +62,7 @@
     "modules-right": [
       "custom/recorder",
       "custom/mic-mute",
+      "wallpaper",
       "custom/btc",
       "custom/wall",
       "custom/pacman",
@@ -202,11 +203,20 @@
       "format": "{}",
       "separate-outputs": true
     },
+    "wallpaper": {
+      "format": "<span color='#00FFAD'>󰸉</span> {status}",
+      "on-click": "bluetoothctl power on",
+      "on-click-right": "bluetoothctl power off",
+      "format-disabled": "no",
+      "format-connected": "<span color='#00FFAD'>󰸉</span> {device_alias}",
+      "tooltip-format": "{device_enumerate}",
+      "tooltip-format-enumerate-connected": "{device_alias}  {device_address}"
+    },
     "bluetooth": {
       "format": "<span color='#b4befe'></span> {status}",
       "on-click": "bluetoothctl power on",
       "on-click-right": "bluetoothctl power off",
-      // "format-disabled": "no",
+      "format-disabled": "no",
       "format-connected": "<span color='#b4befe'></span> {device_alias}",
       "tooltip-format": "{device_enumerate}",
       "tooltip-format-enumerate-connected": "{device_alias}  {device_address}"

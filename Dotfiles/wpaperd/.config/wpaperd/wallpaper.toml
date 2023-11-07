@@ -1,0 +1,13 @@
+[default]
+path = "/home/contre/Pictures/Wallpapers/"
+duration = "1s"
+# sorting = "ascending"
+
+[DP-1]
+path = "/home/contre/Pictures/Wallpapers/3440x1440/ship.jpg"
+apply-shadow = true
+
+[DP-3]
+path = "/home/contre/Pictures/Wallpapers/3440x1440/ship.jpg"
+sorting = "descending"
+#
