@@ -1,5 +1,5 @@
 #!/bin/zsh
-choices="sxhkd\nbspwm\nvimrc\nlemonbar\nzsh\ntmux\nwaybar\nwaybar-css\nhyprland\nalacritty\nscripts"
+choices="sxhkd\nbspwm\nvimrc\nlemonbar\nzsh\ntmux\nwpaperd\nwaybar\nwaybar-css\nhyprland\nalacritty\nscripts"
 var=$(echo -e $choices | dmenu -i -p "Dotfiles" -sb "#40444B" -fn "JetBrainsMono Nerd Font") 
 TMUX_SCRIPTS=/home/canus/Scripts/tmux-scr
 
@@ -8,6 +8,8 @@ case $var in
     choice="$HOME/.config/nvim/init.lua";;
     'hyprland')
     choice="$HOME/.config/hypr/hyprland.conf";;
+    'wpaperd')
+    choice="$HOME/.config/wpaperd/wallpaper.toml";;
     'waybar')
     choice="$HOME/.config/waybar/$MYENV.config.jsonc";;
     'waybar-css')

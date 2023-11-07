@@ -50,6 +50,7 @@ desktop=(
 	tmux
 	dunst
 	ranger
+    wpaperd
     waybar
 	pcmanfm
 	systemd
