@@ -49,9 +49,9 @@ typeset -g POWERLEVEL9K_CONTEXT_{REMOTE,REMOTE_SUDO}_FOREGROUND="clear"
 # Default context color (no privileges, no SSH).
 typeset -g POWERLEVEL9K_CONTEXT_FOREGROUND="clear"
 # Context format when running with privileges: bold user@hostname.
-typeset -g POWERLEVEL9K_CONTEXT_ROOT_TEMPLATE='%B%n@%m'
+typeset -g POWERLEVEL9K_CONTEXT_ROOT_TEMPLATE='(%m)'
 # Context format when in SSH without privileges: user@hostname.
-typeset -g POWERLEVEL9K_CONTEXT_{REMOTE,REMOTE_SUDO}_TEMPLATE='%n@%m'
+typeset -g POWERLEVEL9K_CONTEXT_{REMOTE,REMOTE_SUDO}_TEMPLATE='(%m)'
 # Default context format (no privileges, no SSH): userhostname.
 typeset -g POWERLEVEL9K_CONTEXT_TEMPLATE='(%m)'
 # Don't show context unless running with privileges or in SSH.
