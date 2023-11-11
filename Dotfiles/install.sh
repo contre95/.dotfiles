@@ -48,6 +48,7 @@ desktop=(
 	nvim
 	rofi
 	tmux
+    gnupg
 	dunst
 	ranger
     wpaperd
