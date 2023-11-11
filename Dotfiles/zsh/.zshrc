@@ -61,6 +61,7 @@ export PATH="$HOME/.local/share/nvim/mason/bin/:$PATH" # Mason binaries (Neovim)
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
 	export EDITOR='vim'
+    gpgconf --create-socketdir
 else
 	export EDITOR='nvim'
 	# Only use gpg/ssh keys when not in an SSH connection. Not to replace the keys forwarded by the ssh agent.
