@@ -2,7 +2,7 @@
 #
 # source ~/.zshrc
 
-choices="Any\nKeybr\nDuolingo\nTradingView\nMedia\nCronometer\nWhite\nSpotify\nDiscord\nNew Bookmark\nN26\nFlights\nMonkeytype\nHome\nChatGPT\nGarmin\nLichess\nInstagram\nPNL\nYoutube\nTwitter\nCoin 360\nMusic\nTwitch\nSpeedTest\nTranslate\nOpenAsistant"
+choices="Any\nKeybr\nDuolingo\nNotes\nTradingView\nMedia\nCronometer\nWhite\nSpotify\nDiscord\nNew Bookmark\nN26\nFlights\nMonkeytype\nHome\nChatGPT\nGarmin\nLichess\nInstagram\nPNL\nYoutube\nTwitter\nCoin 360\nMusic\nTwitch\nSpeedTest\nTranslate\nOpenAsistant"
 chosen=$(echo -e "$choices" | dmenu -i -p "Select Layout: " -sb "#8F7DAB")
 
 # NOTE
@@ -67,6 +67,9 @@ case "$chosen" in
 	;;
 "PNL")
 	librewolf --kiosk-monitor 0 -P $LW_PROFILE --new-window https://docs.google.com/spreadsheets/d/1v_JZ9QqCnBhPOOXPrl6OE26kyl6XZRzJNjMs27UY8BA
+	;;
+"Notes")
+	librewolf --kiosk-monitor 0 -P $LW_PROFILE --new-window https://md.contre.io
 	;;
 "N26")
 	librewolf --kiosk-monitor 0 -P $LW_PROFILE --new-window https://app.n26.com/login
