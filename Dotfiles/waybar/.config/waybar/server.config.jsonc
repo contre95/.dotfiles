@@ -1,7 +1,7 @@
 [
 {
   "layer": "top",
-    "output": "DP-3",
+    "output": "DP-2",
     "position": "top",
     "modules-left": ["custom/arch", "wlr/workspaces"],
     "modules-center": ["temperature","bluetooth", "network", "custom/ip", "custom/audio"],
@@ -13,11 +13,11 @@
     },
     "wlr/workspaces": {
       "persistent_workspaces":{
-          "1": ["DP-3"],
-          "2": ["DP-3"],
-          "3": ["DP-3"],
-          "4": ["DP-3"],
-          "5": ["DP-3"]
+          "1": ["DP-2"],
+          "2": ["DP-2"],
+          "3": ["DP-2"],
+          "4": ["DP-2"],
+          "5": ["DP-2"]
       },
       "format": "{icon}",
       "format-icons": {
