@@ -2,7 +2,7 @@
 {
   "layer": "top",
     "position": "top",
-    "modules-left": ["custom/arch", "wlr/workspaces"],
+    "modules-left": ["custom/arch", "hyprland/workspaces"],
     "modules-center": ["network", "custom/ip", "custom/audio"],
     "modules-right": ["custom/recorder","custom/btc", "custom/wall","custom/pacman","disk", "memory","cpu", "wireplumber","battery","clock"],
 
@@ -11,7 +11,7 @@
       "tooltip": false,
       "on-click": "sh $HOME/.config/rofi/bin/powermenu"
     },
-    "wlr/workspaces": {
+    "hyprland/workspaces": {
       "persistent_workspaces":{
           "1": ["eDP-1"],
           "2": ["eDP-1"],
@@ -21,6 +21,11 @@
       },
       "format": "{icon}",
       "format-icons": {
+        "1": "1",
+        "2": "2",
+        "3": "3",
+        "4": "4",
+        "5": "5"
       },
       "tooltip": true,
       "all-outputs": false
