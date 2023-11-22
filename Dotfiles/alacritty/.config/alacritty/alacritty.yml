@@ -51,22 +51,22 @@ program: /bin/zsh
 tabspaces: 4
 font:
   normal:
-    family: JetBrainsMono Nerd Font Mono
+    family: JetBrainsMono NF
     style: Regular
 
   bold:
-    family: JetBrainsMono Nerd Font Mono
+    family: JetBrainsMono NF
     style: Bold
                                     
   italic:                           
-    family: JetBrainsMono Nerd Font Mono
+    family: JetBrainsMono NF
     style: Italic                   
                                     
   bold_italic:                      
-    family: JetBrainsMono Nerd Font Mono
+    family: JetBrainsMono NF
     style: Bold Italic
 
-  size: 10.0
+  size: 11.0
 
   offset:
     x: 0
