@@ -8,7 +8,7 @@ ts_config.setup {
     "vue",
     "lua",
     "bash",
-    "help",
+    "vimdoc",
     "html",
     "json",
     "rust",
