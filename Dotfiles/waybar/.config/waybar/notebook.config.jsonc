@@ -8,12 +8,12 @@
     ],
     "modules-center": [
       "bluetooth",
-      "custom/ip",
       "network",
       "custom/recorder",
       "custom/wall",
       "custom/pacman",
       "disk",
+      "custom/ip",
       "memory",
       "cpu",
       // "wireplumber",
