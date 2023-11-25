@@ -1,6 +1,6 @@
 [
   {
-    "layer": "top",
+    "layer": "bottom",
     "position": "top",
     "modules-left": [
       "custom/arch",
