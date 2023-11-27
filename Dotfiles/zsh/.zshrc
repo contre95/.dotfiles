@@ -52,6 +52,7 @@ export PATH="$HOME/go/bin/:$PATH"                # Go
 export PATH="$HOME/.local/bin:$PATH"             # ~/.local
 export PATH="/usr/local/bin:$PATH"               # /usr/local
 export PATH="/usr/bin:$PATH"                     # /usr/local
+export PATH="$HOME/bin:$PATH"                    # tfswitch
 export PATH="$HOME/.local/share/nvim/mason/bin/:$PATH" # Mason binaries (Neovim)
 
 ################################################################################################

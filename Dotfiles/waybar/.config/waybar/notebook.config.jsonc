@@ -1,9 +1,9 @@
 [
   {
     "layer": "bottom",
-    "position": "top",
+    "position": "bottom",
     "modules-left": [
-      "custom/arch",
+      // "custom/arch",
       "hyprland/workspaces"
     ],
     "modules-center": [
@@ -12,16 +12,16 @@
       "custom/recorder",
       "custom/wall",
       "custom/pacman",
-      "disk",
+      // "disk",
       "custom/ip",
       "memory",
       "cpu",
-      // "wireplumber",
+      "wireplumber",
       "battery",
-      "custom/btc"
+      "custom/btc",
+      "clock"
     ],
     "modules-right": [
-      "clock"
     ],
     "backlight/slider": {
       "min": 10,
