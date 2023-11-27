@@ -1,0 +1,9 @@
+#!/bin/bash
+A=$(printf ' %.s' {1..80})"$1"
+while :; do
+printf "%s \r" "${A:((P++)):80}"
+if [ $P == ${#A} ];then
+ P=0
+fi
+sleep 0.1
+done
