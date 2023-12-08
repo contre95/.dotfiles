@@ -139,3 +139,5 @@ export NVM_DIR="$HOME/.nvm"
 autoload -Uz compinit
 zstyle ':completion:*' menu select
 fpath+=~/.zfunc
+
+[[ -s "/home/contre/.gvm/scripts/gvm" ]] && source "/home/contre/.gvm/scripts/gvm"
