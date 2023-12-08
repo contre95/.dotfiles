@@ -15,6 +15,7 @@ notebook=(
 	waybar
 	keyboard
 	lemonbar
+	wpaperd
 	alacritty
 	autorandr
 	wireplumber
@@ -71,7 +72,7 @@ if [[ $MYENV == "desktop" ]]; then
 			notify-send "Dotfiles Error" "$d" -i "$MY_FOLDER"/Library/icons/error.png
 		fi
 	done
-elif [[ $MYENV == "notebook" ]]; then
+elif [[ $MYENV == "notebook" ]] || [[ $MYENV == "thinkbook" ]]; then
 	for d in "${notebook[@]}"; do
 		if stow "$d"; then
 			echo "$d ok"
