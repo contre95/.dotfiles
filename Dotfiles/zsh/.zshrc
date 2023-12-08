@@ -72,6 +72,9 @@ else
 	gpgconf --launch gpg-agent
 fi
 
+export GPG_TTY="$(tty)"
+export SSH_AUTH_SOCK="/run/user/$UID/gnupg/S.gpg-agent.ssh"
+gpg-connect-agent updatestartuptty /bye > /dev/null
 # Enable vi mode
 #bindkey -v
 
