@@ -18,7 +18,8 @@
       "cpu",
       "wireplumber",
       "battery",
-      "custom/btc"
+      "custom/btc",
+      "custom/wpp"
     ],
     "modules-right": [
       "clock"
@@ -132,6 +133,10 @@
         "",
         ""
       ]
+    },
+    "custom/wpp": {
+      "format": "<span color='#0FBFCF'>   </span>",
+      "on-click": "$MY_FOLDER/Scripts/wallpapers-scr/random.sh $MY_FOLDER/Library/wallpapers/$MYENV/"
     },
     "custom/btc": {
       "format": "<span color='#EF8E19'></span> {}",
