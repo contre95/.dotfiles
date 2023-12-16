@@ -15,7 +15,6 @@ notebook=(
 	waybar
 	keyboard
 	lemonbar
-	wpaperd
 	alacritty
 	autorandr
 	wireplumber
@@ -52,7 +51,6 @@ desktop=(
     gnupg
 	dunst
 	ranger
-    wpaperd
     waybar
 	pcmanfm
 	systemd
