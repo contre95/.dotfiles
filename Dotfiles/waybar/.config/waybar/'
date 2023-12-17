@@ -55,10 +55,10 @@
     ],
     "modules-center": [
       "bluetooth",
+      "custom/notification",
       "network",
       "custom/ip",
-      "custom/audio",
-      "custom/notification"
+      "custom/audio"
     ],
     "modules-right": [
       "custom/recorder",
@@ -122,11 +122,10 @@
     },
     "custom/notification": {
       "on-click": "notify-toggle-mute",
-      "exec": "notify-status",
-      "format": "<span color='#B2BCFB'>{} </span>",
-      // "format-disabled": "<span color='#FFFFFF'>{} hi</span>",
+      "format": "<span color='#69BFC6'>{} </span>",
+      "format-disabled": "<span color='#FFFFFF'>{} hi</span>",
       "tooltip": false,
-      "interval": 1
+      // "interval": 1
       // "on-click": "dunstctl set-paused toggle"
     },
     "wireplumber": {
