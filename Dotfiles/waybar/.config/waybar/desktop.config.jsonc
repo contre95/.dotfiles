@@ -124,10 +124,8 @@
       "on-click": "notify-toggle-mute",
       "exec": "notify-status",
       "format": "<span color='#B2BCFB'>{} </span>",
-      // "format-disabled": "<span color='#FFFFFF'>{} hi</span>",
       "tooltip": false,
       "interval": 1
-      // "on-click": "dunstctl set-paused toggle"
     },
     "wireplumber": {
       "format": "{volume}% {icon}",
