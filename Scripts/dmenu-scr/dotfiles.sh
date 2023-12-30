@@ -23,7 +23,7 @@ case $var in
     'scripts')
     choice=$SCR_PATH/$(find $SCR_PATH -type f | sed "s|$SCR_PATH/||" | dmenu -i -p "Scripts" -sb "#40444B" -fn "JetBrainsMono Nerd Font");;
     'alacritty')
-    choice="$HOME/.config/alacritty/alacritty.yml";;
+    choice="$HOME/.config/alacritty/alacritty.toml";;
     'zsh')
     choice="$HOME/.zshrc";;
     'tmux')
