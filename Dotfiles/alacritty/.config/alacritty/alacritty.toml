@@ -1,4 +1,4 @@
-import = [ "~/.config/alacritty/colors-material.yml" ]
+import = [ "~/.config/alacritty/colors-material.toml" ]
 # program = "/bin/zsh"
 # tabspaces = 4
 live_config_reload = true
