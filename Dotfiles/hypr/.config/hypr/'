@@ -1,5 +1,0 @@
-
-exec-once = waybar --config ~/.config/waybar/$MYENV.config.jsonc 
-exec-once = swaybg -i $(find "$MY_FOLDER/Library/wallpapers/$MYENV/" -type f | shuf -n1) -m fill &
-exec-once = wl-paste --watch cliphist store
-exec-once=dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
