@@ -48,89 +48,89 @@ declare -A markets=(
 
 case "$chosen" in
 "Coin 360")
-	librewolf --kiosk-monitor 0 -P $LW_PROFILE --new-window "https://coin360.com/?period=24h"
+	librewolf --kiosk -P $LW_PROFILE --new-window "https://coin360.com/?period=24h"
 	;;
 "Discord")
-  center "librewolf --kiosk-monitor 0 -P $LW_PROFILE --new-window 'https://discord.com/app'"
+  center "librewolf --kiosk -P $LW_PROFILE --new-window 'https://discord.com/app'"
 	;;
 "Duolingo")
-  center "librewolf --kiosk-monitor 0 -P $LW_PROFILE --new-window 'https://duolingo.com'"
+  center "librewolf --kiosk -P $LW_PROFILE --new-window 'https://duolingo.com'"
 	;;
 "Spotify")
-	librewolf --kiosk-monitor 0 -P $LW_PROFILE --new-window "https://open.spotify.com/"
+	librewolf --kiosk -P $LW_PROFILE --new-window "https://open.spotify.com/"
 	;;
 "Translate")
-	corner "librewolf --kiosk-monitor 0 -P $LW_PROFILE --new-window 'https://translate.google.com/?es=en'"
+	corner "librewolf --kiosk -P $LW_PROFILE --new-window 'https://translate.google.com/?es=en'"
 	;;
 "SpeedTest")
-	corner "librewolf --kiosk-monitor 0 -P $LW_PROFILE --new-window 'https://librespeed.org/'"
+	corner "librewolf --kiosk -P $LW_PROFILE --new-window 'https://librespeed.org/'"
 	;;
 "PNL")
-	librewolf --kiosk-monitor 0 -P $LW_PROFILE --new-window https://docs.google.com/spreadsheets/d/1v_JZ9QqCnBhPOOXPrl6OE26kyl6XZRzJNjMs27UY8BA
+	librewolf --kiosk -P $LW_PROFILE --new-window https://docs.google.com/spreadsheets/d/1v_JZ9QqCnBhPOOXPrl6OE26kyl6XZRzJNjMs27UY8BA
 	;;
 "Notes")
-	librewolf --kiosk-monitor 0 -P $LW_PROFILE --new-window https://md.contre.io
+	librewolf --kiosk -P $LW_PROFILE --new-window https://md.contre.io
 	;;
 "N26")
-	librewolf --kiosk-monitor 0 -P $LW_PROFILE --new-window https://app.n26.com/login
+	librewolf --kiosk -P $LW_PROFILE --new-window https://app.n26.com/login
 	;;
 "TradingView")
 	market=$(echo -e "${!markets[@]}" | tr ' ' '\n' | dmenu  -i -p "Scripts" -sb "#40444B" -fn "JetBrainsMono Nerd Font")
-    center "brave --kiosk-monitor 0 -P $LW_PROFILE --new-window \"${markets[$market]}\""
+    center "brave --kiosk -P $LW_PROFILE --new-window \"${markets[$market]}\""
 	;;
 "White")
-	librewolf --kiosk-monitor 0 -P $LW_PROFILE --new-window https://blankwhitescreen.com/
+	librewolf --kiosk -P $LW_PROFILE --new-window https://blankwhitescreen.com/
 	;;
 "Keybr")
-	center "librewolf --kiosk-monitor 0 -P $LW_PROFILE --new-window https://www.keybr.com/"
+	center "librewolf --kiosk -P $LW_PROFILE --new-window https://www.keybr.com/"
 	;;
 "Monkeytype")
-	center "librewolf --kiosk-monitor 0 -P $LW_PROFILE --new-window https://www.monkeytype.com/ "
+	center "librewolf --kiosk -P $LW_PROFILE --new-window https://www.monkeytype.com/ "
 	;;
 "Twitch")
-	librewolf --kiosk-monitor 0 -P $LW_PROFILE --new-window https://twitch.tv/
+	librewolf --kiosk -P $LW_PROFILE --new-window https://twitch.tv/
 	;;
 "Cronometer")
-	librewolf --kiosk-monitor 0 -P $LW_PROFILE --new-window https://cronometer.com/
+	librewolf --kiosk -P $LW_PROFILE --new-window https://cronometer.com/
 	;;
 "Music")
-	center "librewolf --kiosk-monitor 0 -P $LW_PROFILE --new-window http://192.168.0.174:6595"
+	center "librewolf --kiosk -P $LW_PROFILE --new-window http://192.168.0.174:6595"
 	;;
 "ChatGPT")
-	librewolf --kiosk-monitor 0 -P $LW_PROFILE --new-window https://chat.openai.com/chat
+	librewolf --kiosk -P $LW_PROFILE --new-window https://chat.openai.com/chat
 	;;
 "OpenAsistant")
-	librewolf --kiosk-monitor 0 -P $LW_PROFILE --new-window https://open-assistant.io/chat
+	librewolf --kiosk -P $LW_PROFILE --new-window https://open-assistant.io/chat
 	;;
 "Media")
-	librewolf --kiosk-monitor 0 -P $LW_PROFILE --new-window http://media.contre.io
+	librewolf --kiosk -P $LW_PROFILE --new-window http://media.contre.io
 	;;
 "Youtube")
 	# In order for librefox not to launch this windows in fullscreen (at lead on bspwm) we need to set up full-screen-api.ignore-widgets to `true` in the about:config
-	librewolf --kiosk-monitor 0 -P $LW_PROFILE --new-window https://youtube.com
+	librewolf --kiosk -P $LW_PROFILE --new-window https://youtube.com
 	;;
 "Lichess")
-	librewolf --kiosk-monitor 0 -P $LW_PROFILE --new-window https://lichess.org
+	librewolf --kiosk -P $LW_PROFILE --new-window https://lichess.org
 	;;
 "Flights")
-  librewolf --kiosk-monitor 0 -P $LW_PROFILE --new-window https://flightaware.com/live/flight/map/$(zenity --entry --text='Flight number:')
+  librewolf --kiosk -P $LW_PROFILE --new-window https://flightaware.com/live/flight/map/$(zenity --entry --text='Flight number:')
 	;;
 "Twitter")
-	librewolf --kiosk-monitor 0 -P $LW_PROFILE --new-window https://twitter.com
+	librewolf --kiosk -P $LW_PROFILE --new-window https://twitter.com
 	;;
 "Home")
-	side "librewolf --kiosk-monitor 0 -P $LW_PROFILE --new-window http://192.168.0.174:8123/home-dash/0"
+	side "librewolf --kiosk -P $LW_PROFILE --new-window http://192.168.0.174:8123/home-dash/0"
 	;;
 "Any")
-	librewolf --kiosk-monitor 0 -P $LW_PROFILE --new-window http://"$(zenity --entry --text='Website  :')"
+	librewolf --kiosk -P $LW_PROFILE --new-window http://"$(zenity --entry --text='Website  :')"
 	;;
 "New Bookmark")
 	echo "$(zenity --entry --text='Bookmark:')             - http://$(zenity --entry --text='URL:')" >>"$MY_FOLDER"/Info/bookmarks.txt
 	;;
 "Garmin")
-	center "librewolf --kiosk-monitor 0 -P $LW_PROFILE --new-window https://connect.garmin.com/modern/"
+	center "librewolf --kiosk -P $LW_PROFILE --new-window https://connect.garmin.com/modern/"
 	;;
 "Instagram")
-	librewolf --kiosk-monitor 0 -P $LW_PROFILE --new-window https://instagram.com
+	librewolf --kiosk -P $LW_PROFILE --new-window https://instagram.com
 	;;
 esac
