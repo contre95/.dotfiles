@@ -46,13 +46,13 @@ antigen apply
 ################################################################################################
 # Custom PATH  settings
 ################################################################################################
-export PATH="$MY_FOLDER/Scripts/bin-scr:$PATH"   # Custom Scripts
-export PATH="$HOME/.pyenv/bin:$PATH"             # Pyenv
-export PATH="$HOME/go/bin/:$PATH"                # Go
-export PATH="$HOME/.local/bin:$PATH"             # ~/.local
-export PATH="/usr/local/bin:$PATH"               # /usr/local
-export PATH="/usr/bin:$PATH"                     # /usr/local
-export PATH="$HOME/bin:$PATH"                    # tfswitch
+export PATH="$MY_FOLDER/Scripts/bin-scr:$PATH"         # Custom Scripts
+export PATH="$HOME/.pyenv/bin:$PATH"                   # Pyenv
+export PATH="$HOME/go/bin/:$PATH"                      # Go
+export PATH="$HOME/.local/bin:$PATH"                   # ~/.local
+export PATH="/usr/local/bin:$PATH"                     # /usr/local
+export PATH="/usr/bin:$PATH"                           # /usr/local
+export PATH="$HOME/bin:$PATH"                          # tfswitch
 export PATH="$HOME/.local/share/nvim/mason/bin/:$PATH" # Mason binaries (Neovim)
 
 ################################################################################################
@@ -62,8 +62,11 @@ export PATH="$HOME/.local/share/nvim/mason/bin/:$PATH" # Mason binaries (Neovim)
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
 	export EDITOR='vim'
-    gpgconf --create-socketdir
+	gpgconf --create-socketdir
 else
+	export GPG_TTY="$(tty)"
+	export SSH_AUTH_SOCK="/run/user/$UID/gnupg/S.gpg-agent.ssh"
+	gpg-connect-agent updatestartuptty /bye >/dev/null
 	export EDITOR='nvim'
 	# Only use gpg/ssh keys when not in an SSH connection. Not to replace the keys forwarded by the ssh agent.
 	# SSH Configuration with GPG
@@ -72,9 +75,6 @@ else
 	gpgconf --launch gpg-agent
 fi
 
-export GPG_TTY="$(tty)"
-export SSH_AUTH_SOCK="/run/user/$UID/gnupg/S.gpg-agent.ssh"
-gpg-connect-agent updatestartuptty /bye > /dev/null
 # Enable vi mode
 #bindkey -v
 
