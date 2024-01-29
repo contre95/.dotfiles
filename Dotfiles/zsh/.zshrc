@@ -83,6 +83,7 @@ fi
 ################################################################################################
 alias mf="cd $MY_FOLDER"
 alias p="podman --remote"
+alias pq="pacman -Q | fzf"
 alias startx="Hyprland"
 alias containers="podman container ls --format '{{.Names}}' | grep -v '\-infra' | fzf -1"
 alias pods="podman pod ls --format '{{.Name}}' | fzf -1"
