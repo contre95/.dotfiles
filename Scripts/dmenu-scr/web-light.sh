@@ -76,7 +76,7 @@ case "$chosen" in
 	;;
 "TradingView")
 	market=$(echo -e "${!markets[@]}" | tr ' ' '\n' | dmenu  -i -p "Scripts" -sb "#40444B" -fn "JetBrainsMono Nerd Font")
-    center "brave --kiosk -P $LW_PROFILE --new-window \"${markets[$market]}\""
+    center "librewolf --kiosk -P $LW_PROFILE --new-window \"${markets[$market]}\""
 	;;
 "White")
 	librewolf --kiosk -P $LW_PROFILE --new-window https://blankwhitescreen.com/
