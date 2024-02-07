@@ -14,8 +14,8 @@ window#waybar {
 #custom-arch, #workspaces {
   /* background-color: #292929; */
   color: #F1F1F1;
-  padding-right: 10px;
-  margin: 2px;
+  /* padding-right: 10px; */
+  /* margin: 2px; */
 }
 
 
@@ -41,16 +41,20 @@ tooltip label {
 }
 
 #workspaces button:hover {
-    background-color: #A5EBFE;
+    background: rgba(255, 255, 255, 0.24);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    color: #b7bdf8;
+}
+
+#workspaces {
+  margin-left: 20px;
 }
 
 #workspaces button {
   background-color: transparent;
-  color: #D0D0CD;
-  border-radius: 0px;
-  margin-left: 25px;
+  color: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  margin: 5px 10px;
 }
 
 #workspaces button.persistent {
@@ -58,12 +62,12 @@ tooltip label {
 }
 
 #workspaces button.urgent {
-    color: #FF0000
+    color: #FF0000;
 }
 
 #workspaces button.active {
-    color: #2e3440;
-    background-color: #88c0d0;
+      background: rgba(255, 255, 255, 0.5);
+      color: #2e3440;
 }
 
 #custom-btc,
