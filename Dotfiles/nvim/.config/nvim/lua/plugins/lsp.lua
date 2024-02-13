@@ -167,7 +167,7 @@ lspconfig.terraformls.setup({
     client.server_capabilities.document_formatting = true
   end,
   cmd = { "terraform-ls", "serve" },
-  filetypes = { "tf", "terraform" },
+  filetypes = { "tf", "terraform" ,"tfvars"},
 })
 
 -- SQL  -- go install github.com/lighttiger2505/sqls@latest
