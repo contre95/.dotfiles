@@ -3,6 +3,8 @@ Description=ShaderWebServer
 After=network.target
 
 [Service]
+; This way I can enable/disable this service in different envs; It will fail on environments that I don't want it
+ExecSearchPath=/home/canus/SmallBinaries/:/home/server/SmallBinaries
 ExecStart=http-cmd
 
 [Install]
