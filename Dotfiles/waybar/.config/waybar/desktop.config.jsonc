@@ -3,7 +3,7 @@
     "layer": "top",
     "position": "bottom",
     "output": [
-      "DP-1"
+      "DP-3"
     ],
     "modules-center": [
       "hyprland/workspaces"
@@ -18,19 +18,19 @@
     "hyprland/workspaces": {
       "persistent_workspaces": {
         "6": [
-          "DP-1"
+          "DP-3"
         ],
         "7": [
-          "DP-1"
+          "DP-3"
         ],
         "8": [
-          "DP-1"
+          "DP-3"
         ],
         "9": [
-          "DP-1"
+          "DP-3"
         ],
         "10": [
-          "DP-1"
+          "DP-3"
         ]
       },
       "sort-by-number": true,
@@ -47,7 +47,7 @@
   },
   {
     "layer": "top",
-    "output": "DP-3",
+    "output": "DP-2",
     "position": "bottom",
     "modules-left": [
       "custom/arch",
@@ -79,19 +79,19 @@
     "hyprland/workspaces": {
       "persistent_workspaces": {
         "1": [
-          "DP-3"
+          "DP-2"
         ],
         "2": [
-          "DP-3"
+          "DP-2"
         ],
         "3": [
-          "DP-3"
+          "DP-2"
         ],
         "4": [
-          "DP-3"
+          "DP-2"
         ],
         "5": [
-          "DP-3"
+          "DP-2"
         ]
       },
       "format": "{icon}",
