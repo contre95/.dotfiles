@@ -122,6 +122,7 @@
       "format": "{icon} {capacity}%",
       "format-charging": "<span color='#168ECA'>󰂄</span> {capacity}%",
       "format-plugged": "<span color='#32CE42'>󰂄</span> {capacity}%",
+      "on-click": "zenity --question --text='Disable charge limit to 100% ?' --icon=battery  && echo $(zenity --password) | sudo -S tlp fullcharge",
       "format-alt": "{icon} {time}",
       "format-full": "󰁹 {capacity}%",
       "format-icons": [
