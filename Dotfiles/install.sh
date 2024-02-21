@@ -31,6 +31,7 @@ server=(
     dunst
     ranger
     waybar
+	systemd
     pcmanfm
     keyboard
     alacritty
