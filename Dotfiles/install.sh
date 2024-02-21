@@ -13,6 +13,7 @@ notebook=(
 	picom
 	ranger
 	waybar
+    systemd
 	keyboard
 	lemonbar
 	alacritty
