@@ -8,5 +8,5 @@ ExecSearchPath=/home/canus/SmallBinaries/:/home/server/SmallBinaries/:/usr/bin/
 ExecStart=http-cmd
 
 [Install]
-WantedBy=multi-user.target
+WantedBy=default.target
 
