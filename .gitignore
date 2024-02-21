@@ -9,6 +9,8 @@ USB
 MANGA
 PDFS
 IPFS
+SmallBinaries/*
+!SmallBinaries/download_binaries.sh
 Anki
 Cuentos
 tmp
