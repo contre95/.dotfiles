@@ -47,6 +47,7 @@ antigen apply
 # Custom PATH  settings
 ################################################################################################
 export PATH="$MY_FOLDER/Scripts/bin-scr:$PATH"         # Custom Scripts
+export PATH="$MY_FOLDER/SmallBinaries:$PATH"         # Custom Scripts
 export PATH="$HOME/.pyenv/bin:$PATH"                   # Pyenv
 export PATH="$HOME/go/bin/:$PATH"                      # Go
 export PATH="$HOME/.local/bin:$PATH"                   # ~/.local
