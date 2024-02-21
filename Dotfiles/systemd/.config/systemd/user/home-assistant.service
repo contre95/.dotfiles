@@ -3,8 +3,7 @@ Description=ShaderWebServer
 After=network.target
 
 [Service]
-Type=simple
-ExecStart=$MY_FOLDER/SmallBinaries/http-cmd
+ExecStart=http-cmd
 
 [Install]
 WantedBy=multi-user.target
