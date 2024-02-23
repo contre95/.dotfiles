@@ -3,10 +3,8 @@ Description=ShaderWebServer
 After=network.target 
 
 [Service]
-; This way I can enable/disable this service in different envs; It will fail on environments that I don't want it
 Type=simple
 Restart=always
-ExecStartPre=/bin/sleep 30
 ExecSearchPath=/home/canus/SmallBinaries/:/home/server/SmallBinaries/:/usr/bin/
 ExecStart=http-cmd
 
