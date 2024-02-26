@@ -58,11 +58,11 @@
       "network",
       "custom/ip",
       "custom/audio",
-      "custom/notification"
+      "custom/notification",
+      "custom/mic"
     ],
     "modules-right": [
       "custom/recorder",
-      "custom/mic-mute",
       "wallpaper",
       "custom/btc",
       "custom/pacman",
@@ -129,10 +129,21 @@
       "exec": "pamixer --get-default-sink | tail -n 1 | awk -F'\".+\" ' '{print $2}' | tr -d '\"'"
     },
     "custom/notification": {
-      "on-click": "notify-toggle-mute",
-      "exec": "notify-status",
+      "on-click": "$MY_FOLDER/Scripts/notification-scr/notify-toggle-mute.sh",
+      "exec": "$MY_FOLDER/Scripts/waybar-scr/notify-status.sh",
       "exec-if": "true",
-      "format": "<span color='#B2BCFB'>{} </span>",
+      "format": "{}",
+      "tooltip": false,
+      "signal": 1,
+      "interval": 2
+    },
+    "custom/mic": {
+      "on-click": "$MY_FOLDER/Scripts/audio-scr/mic-mute.sh",
+      "exec": "$MY_FOLDER/Scripts/waybar-scr/mic-status.sh",
+      "exec-if": "true",
+      "format": "{}",
+      "on-scroll-up": "pactl set-source-volume 0 +5%",
+      "on-scroll-down": "pactl set-source-volume 0 -5%",
       "tooltip": false,
       "signal": 1,
       "interval": 2
@@ -163,14 +174,6 @@
       "interval": 5,
       "on-scroll-up": "playerctl next",
       "on-scroll-down": "playerctl previous"
-    },
-    "custom/mic-mute": {
-      "format": "<span color='#F47272'>  </span>",
-      "interval": 3600,
-      "on-click": "$SCR_PATH/audio-scr/mic-mute.sh",
-      "exec-if": "wpctl status | grep -i 'C01U Pro condenser microphone Analog Stereo' | grep 'MUTED'"
-      // "exec-if": "exit 0",           
-      // "signal": 8
     },
     "custom/pacman": {
       "format": "<span color='#168ECA'></span> {}",
