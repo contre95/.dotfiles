@@ -64,7 +64,7 @@
     "modules-right": [
       "custom/recorder",
       "wallpaper",
-      "custom/magaiba",
+      // "custom/magaiba",
       "custom/btc",
       "custom/pacman",
       "disk",
