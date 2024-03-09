@@ -64,6 +64,7 @@
     "modules-right": [
       "custom/recorder",
       "wallpaper",
+      "custom/magaiba",
       "custom/btc",
       "custom/pacman",
       "disk",
@@ -166,6 +167,11 @@
       "format": "<span color='#EF8E19'></span> {}",
       "on-click": "hyprctl dispatch exec \"[float; size 24% 35%;animation slide; move 75%-20 60%-30] librewolf --kiosk -P 'ContreKiosk' --new-window 'https://www.tradingview.com/chart/rH3IToRa/?symbol=BITSTAMP%3ABTCUSD'\"",
       "exec": "curl -X GET 'https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd' -s | jq '.[] .usd'"
+    },
+    "custom/magaiba": {
+      "format": "<span color='#CD6882'> </span> {}",
+      "on-click": "hyprctl dispatch exec \"[float; size 24% 35%;animation slide; move 75%-20 60%-30] librewolf --kiosk -P 'ContreKiosk' --new-window 'https://www.tradingview.com/chart/rH3IToRa/?symbol=BITSTAMP%3ABTCUSD'\"",
+      "exec": "curl -s https://api.dexscreener.com/latest/dex/pairs/solana/5pxvyeqa7iwfuxcypuiqpdjztafnc8x5s3x3tddmptoa | jq '.pair .priceUsd' | tr -d '\"' "
     },
     "custom/music": {
       "exec": "echo $(playerctl metadata title) - $(playerctl metadata artist)",
