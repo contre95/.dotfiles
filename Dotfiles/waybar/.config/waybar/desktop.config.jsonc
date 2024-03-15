@@ -1,50 +1,50 @@
 [
-  {
-    "layer": "top",
-    "position": "bottom",
-    "output": [
-      "DP-3"
-    ],
-    "modules-center": [
-      "hyprland/workspaces"
-    ],
-    "custom/arch": {
-      "format": "  ",
-      "tooltip": false
-    },
-    "hyprland/window": {
-      "separate-outputs": true
-    },
-    "hyprland/workspaces": {
-      "persistent_workspaces": {
-        "6": [
-          "DP-3"
-        ],
-        "7": [
-          "DP-3"
-        ],
-        "8": [
-          "DP-3"
-        ],
-        "9": [
-          "DP-3"
-        ],
-        "10": [
-          "DP-3"
-        ]
-      },
-      "sort-by-number": true,
-      "format": "{icon}",
-      "format-icons": {
-        "6": "ﭮ|",
-        "7": "|",
-        "8": " | ",
-        "9": " | ",
-        "10": " | "
-      },
-      "tooltip": true
-    }
-  },
+  // {
+  //   "layer": "top",
+  //   "position": "bottom",
+  //   "output": [
+  //     "DP-3"
+  //   ],
+  //   "modules-center": [
+  //     "hyprland/workspaces"
+  //   ],
+  //   "custom/arch": {
+  //     "format": "  ",
+  //     "tooltip": false
+  //   },
+  //   "hyprland/window": {
+  //     "separate-outputs": true
+  //   },
+  //   "hyprland/workspaces": {
+  //     "persistent_workspaces": {
+  //       "6": [
+  //         "DP-3"
+  //       ],
+  //       "7": [
+  //         "DP-3"
+  //       ],
+  //       "8": [
+  //         "DP-3"
+  //       ],
+  //       "9": [
+  //         "DP-3"
+  //       ],
+  //       "10": [
+  //         "DP-3"
+  //       ]
+  //     },
+  //     "sort-by-number": true,
+  //     "format": "{icon}",
+  //     "format-icons": {
+  //       "6": "ﭮ|",
+  //       "7": "|",
+  //       "8": " | ",
+  //       "9": " | ",
+  //       "10": " | "
+  //     },
+  //     "tooltip": true
+  //   }
+  // },
   {
     "layer": "top",
     "output": "DP-2",
