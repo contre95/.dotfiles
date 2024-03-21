@@ -1,7 +1,7 @@
 #!/bin/bash
 
-if wpctl status | grep "C01U Pro condenser microphone Analog Stereo" | grep "MUTED" >/dev/null 2>&1; then
-pactl set-source-mute 0 toggle && # 0 is default
+if wpctl status | grep "MUTED" >/dev/null 2>&1; then
+  pactl set-source-mute 0 toggle && # 0 is default
   notify-send "Mic Monitor" "muted toggle" -i "$MY_FOLDER"/Library/icons/mic-on.png
 else
   pactl set-source-mute 0 toggle &&# 0 is default 

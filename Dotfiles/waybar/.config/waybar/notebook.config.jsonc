@@ -19,8 +19,8 @@
       "wireplumber",
       "battery",
       "custom/btc",
-      "custom/notification"
-      // "custom/wpp"
+      "custom/notification",
+      "custom/mic"
     ],
     "modules-right": [
       "clock"
@@ -36,14 +36,25 @@
       "tooltip": false,
       "on-click": "sh $HOME/.config/rofi/bin/powermenu"
     },
-    "custom/notification": {
-      "on-click": "notify-toggle-mute",
-      "exec": "notify-status",
-      "format": "<span color='#B2BCFB'>{} </span>",
-      // "format-disabled": "<span color='#FFFFFF'>{} hi</span>",
+    "custom/mic": {
+      "on-click": "$MY_FOLDER/Scripts/audio-scr/mic-mute.sh",
+      "exec": "$MY_FOLDER/Scripts/waybar-scr/mic-status.sh",
+      "exec-if": "true",
+      "format": "{}",
+      "on-scroll-up": "pactl set-source-volume 0 +5%",
+      "on-scroll-down": "pactl set-source-volume 0 -5%",
       "tooltip": false,
-      "interval": 1
-      // "on-click": "dunstctl set-paused toggle"
+      "signal": 1,
+      "interval": 2
+    },
+    "custom/notification": {
+      "on-click": "$MY_FOLDER/Scripts/notification-scr/notify-toggle-mute.sh",
+      "exec": "$MY_FOLDER/Scripts/waybar-scr/notify-status.sh",
+      "exec-if": "true",
+      "format": "{}",
+      "tooltip": false,
+      "signal": 1,
+      "interval": 2
     },
     "hyprland/workspaces": {
       "persistent_workspaces": {
