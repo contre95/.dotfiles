@@ -1,13 +1,13 @@
 #!/bin/bash
 
-choices=' Telegram\n Whatsapp\n Meet\n Signal\nﭮ Discord\n Slack\n Hangouts\n Jitsi\n Gmail\n Messenger'
-var=$(echo -e "$choices" | dmenu -i -p "Exit menu: " -sb "#137aad" -fn "JetBrainsMono Nerd Font" ) 
+choices=' Telegram\n Whatsapp\n Meet\n Signal\n󰙯 Discord\n Slack\n Hangouts\n Jitsi\n Gmail\n Messenger'
+var=$(echo -e "$choices" | rofi -dmenu -theme $HOME/.config/rofi/dmenu.style.rasi -i -p "Exit menu: " -sb "#137aad" -fn "JetBrainsMono Nerd Font" ) 
 
 case $var in
     ' Whatsapp') 
 	  brave --class=Whatsapp --profile-directory="Contre" --app=https://web.whatsapp.com;;
 
-    'ﭮ Discord')
+    '󰙯 Discord')
 	  exec 'discord';;
 
     ' Jitsi')

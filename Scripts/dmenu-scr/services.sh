@@ -1,6 +1,6 @@
 #!/bin/zsh
 choices=" OpenSSH\n Bluetooth\n Droidcam\n Barrier"
-var=$(echo -e $choices | dmenu  -i -p "Exit menu: " -sb "#1ba4e9" -fn "JetBrainsMono Nerd Font")
+var=$(echo -e $choices | rofi -dmenu -theme $HOME/.config/rofi/dmenu.style.rasi  -i -p "Exit menu: " -sb "#1ba4e9" -fn "JetBrainsMono Nerd Font")
 
 case $var in
 
