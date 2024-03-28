@@ -12,7 +12,7 @@ Drive     | http://drive.google.com
 Photos    | http://photos.google.com
 """
 choices="$(cat $1 | tr -d ' ' | awk -F'|' '{print $1}')"
-var="$(echo -e $choices | dmenu -i -p 'Pick: ' -sb '#7681C5' -fn 'JetBrainsMono Nerd Font')"
+var="$(echo -e $choices | rofi -dmenu -theme $HOME/.config/rofi/dmenu.style.rasi -i -p 'Pick: ' -sb '#7681C5' -fn 'JetBrainsMono Nerd Font')"
 picked="$(grep $var $1 | awk -F'|' '{print $2}')"
 
 echo $picked

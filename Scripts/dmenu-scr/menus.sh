@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
-# dmenu  theming
-. $HOME/.local/bin/dmenu -theming
+# rofi -dmenu -theme $HOME/.config/rofi/dmenu.style.rasi  theming
+. $HOME/.local/bin/rofi -dmenu -theme $HOME/.config/rofi/dmenu.style.rasi -theming
 
 prompt="-p Run:"
 
-dmenu _run $prompt $lines $colors $font
+rofi -dmenu -theme $HOME/.config/rofi/dmenu.style.rasi _run $prompt $lines $colors $font
 

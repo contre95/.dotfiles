@@ -1,7 +1,7 @@
 #!/bin/bash
 
-choices=" RSS\nﳳ Pass\n Server\n Music\n N26\n Android\n Anoux\n Mac\n Remarkable"
-var=$(echo -e $choices | dmenu -i -p "Exit menu: " -sb "#2f8a47" -fn "JetBrainsMono Nerd Font")
+choices=" RSS\n Server\n Music\n N26\n Android\n Anoux\n Mac\n Remarkable"
+var=$(echo -e $choices | rofi -dmenu -theme $HOME/.config/rofi/dmenu.style.rasi -i -p "Exit menu: " -sb "#2f8a47" -fn "JetBrainsMono Nerd Font")
 TMUX_SCRIPTS=/home/canus/Scripts/tmux-scr
 
 case $var in
@@ -12,10 +12,6 @@ case $var in
 
 ' Music')
 	exec alacritty -o font.offset.y=-1 -o font.offset.x=-1 --option window.opacity=0.7 --class music,Music -e "$TMUX_SCRIPTS/music.sh"
-	;;
-
-'ﳳ Pass')
-	exec alacritty -e "$TMUX_SCRIPTS/pass.sh"
 	;;
 
 ' N26')
