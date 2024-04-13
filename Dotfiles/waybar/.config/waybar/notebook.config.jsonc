@@ -107,7 +107,7 @@
     },
     "custom/ip": {
       "format": "<span color='#b4befe'></span> {}",
-      "exec": "curl ifconfig.io | cut -c -10",
+      "exec": "curl ifconfig.io | cut -c -16",
       "on-click": "curl ifconfig.io | wl-copy"
     },
     "custom/audio": {
