@@ -28,4 +28,5 @@ Spotify             | https://open.spotify.com/
 Devox               | https://devox.me/
 MetalArchive        | http://www.metal-archives.com
 ACM                 | https://myacm.acm.org
-Okta             - http://https://okta.okta.com/app/UserHome?session_hint=AUTHENTICATED
+Okta                | http://https://okta.okta.com/app/UserHome?session_hint=AUTHENTICATED
+Jura                | https://sede.administracionespublicas.gob.es/icpplustiej/acInfo
