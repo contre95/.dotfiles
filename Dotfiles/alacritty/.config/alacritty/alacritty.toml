@@ -1,5 +1,4 @@
 import = [ "~/.config/alacritty/colors-material.toml" ]
-# program = "/bin/zsh"
 # tabspaces = 4
 live_config_reload = true
 colors.draw_bold_text_with_bright_colors = true
@@ -14,6 +13,8 @@ opacity = 0.9
   x = 3
   y = 3
 
+[shell]
+program = "/usr/bin/zsh"
 # [class]
 # instance = "Alacritty"
 # general = "Alacritty"
