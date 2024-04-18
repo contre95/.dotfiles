@@ -11,8 +11,8 @@ fi
 
 export KEYTIMEOUT=10
 export PASSWORD_STORE_DIR=$MY_FOLDER/Pass
-# export LANG="en_US.UTF-8"
-# export LC_ALL=en_US.UTF-8
+export LANG="en_US.UTF-8"
+export LC_ALL=en_US.UTF-8
 export KUBECONFIG=~/.kube/config
 
 ################################################################################################
@@ -85,6 +85,7 @@ alias mf="cd $MY_FOLDER"
 alias p="podman --remote"
 alias pu="podman unshare"
 alias pq="pacman -Q | fzf"
+alias ru="sudo pacman -Ru \$(pacman -Q | fzf | awk -F\" \" '{print \$1}')"
 alias startx="Hyprland"
 alias containers="podman container ls --format '{{.Names}}' | grep -v '\-infra' | fzf -1"
 alias pods="podman pod ls --format '{{.Name}}' | fzf -1"
