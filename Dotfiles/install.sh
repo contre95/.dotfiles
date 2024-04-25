@@ -1,6 +1,14 @@
 #!/bin/bash
 printf "Installing dotfiles for %s\n" "$MYENV" 
 
+mac=(
+	fzf
+	zsh
+	nvim
+	tmux
+	alacritty
+)
+
 notebook=(
 	fzf
 	gtk
@@ -13,7 +21,7 @@ notebook=(
 	picom
 	ranger
 	waybar
-    systemd
+    	systemd
 	keyboard
 	lemonbar
 	alacritty
@@ -32,7 +40,7 @@ server=(
     dunst
     ranger
     waybar
-	systemd
+    systemd
     pcmanfm
     keyboard
     alacritty
@@ -44,16 +52,16 @@ desktop=(
 	gtk
 	mpd
 	zsh
-    hypr
+    	hypr
 	cava
 	mocp
 	nvim
 	rofi
 	tmux
-    gnupg
+    	gnupg
 	dunst
 	ranger
-    waybar
+    	waybar
 	pcmanfm
 	systemd
 	zathura
@@ -66,20 +74,24 @@ if [[ $MYENV == "desktop" ]]; then
 	for d in "${desktop[@]}"; do
 		if stow "$d"; then
 			echo "$d ok"
-			notify-send "Dotfiles updated" ":)" -i "$MY_FOLDER"/Library/icons/archlinux.png
 		else
 			echo "$d failed"
-			notify-send "Dotfiles Error" "$d" -i "$MY_FOLDER"/Library/icons/error.png
 		fi
 	done
 elif [[ $MYENV == "notebook" ]] || [[ $MYENV == "thinkbook" ]]; then
 	for d in "${notebook[@]}"; do
 		if stow "$d"; then
 			echo "$d ok"
-			notify-send "Dotfiles updated" "$d" -i "$MY_FOLDER"/Library/icons/archlinux.png
 		else
 			echo "$d failed"
-			notify-send "Dotfiles Error" "$d" -i "$MY_FOLDER"/Library/icons/error.png
+		fi
+	done
+elif [[ $MYENV == "mac" ]]; then
+	for d in "${mac[@]}"; do
+		if stow "$d"; then
+			echo "$d ok"
+		else
+			echo "$d failed"
 		fi
 	done
 elif [[ $MYENV == "server" ]]; then
