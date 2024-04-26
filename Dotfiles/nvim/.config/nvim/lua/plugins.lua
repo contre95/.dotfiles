@@ -55,7 +55,6 @@ return require("packer").startup(function()
     requires = {
       'nvim-tree/nvim-web-devicons', -- optional, for file icons
     },
-    tag = 'nightly'                  -- optional, updated every week. (see issue #1193)
   })
   use("unblevable/quick-scope")
   use('eandrju/cellular-automaton.nvim')
