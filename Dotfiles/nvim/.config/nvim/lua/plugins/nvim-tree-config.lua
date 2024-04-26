@@ -24,8 +24,8 @@ require("nvim-tree").setup({
   disable_netrw = true,
   hijack_netrw = true,
   hijack_cursor = true,
-  open_on_setup = false,
-  ignore_ft_on_setup = {},
+  -- open_on_setup = false,
+  -- ignore_ft_on_setup = {},
   actions = {
     open_file = {
       quit_on_open = false,
@@ -105,9 +105,9 @@ require("nvim-tree").setup({
   view = {
     width = 40,
     side = "left",
-    mappings = {
-      custom_only = false,
-      list = {},
-    },
+    -- mappings = {
+    --   custom_only = false,
+    --   list = {},
+    -- },
   },
 })
