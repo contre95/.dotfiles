@@ -1,5 +1,5 @@
 #!/bin/bash
-printf "Installing dotfiles for %s\n" "$MYENV" 
+printf "Installing dotfiles for %s\n" "$MYENV"
 
 mac=(
 	fzf
@@ -21,7 +21,7 @@ notebook=(
 	picom
 	ranger
 	waybar
-    	systemd
+	systemd
 	keyboard
 	lemonbar
 	alacritty
@@ -30,21 +30,21 @@ notebook=(
 )
 
 server=(
-    fzf
-    gtk
-    zsh
-    hypr
-    nvim
-    rofi
-    tmux
-    dunst
-    ranger
-    waybar
-    systemd
-    pcmanfm
-    keyboard
-    alacritty
-    wireplumber
+	fzf
+	gtk
+	zsh
+	hypr
+	nvim
+	rofi
+	tmux
+	dunst
+	ranger
+	waybar
+	systemd
+	pcmanfm
+	keyboard
+	alacritty
+	wireplumber
 )
 
 desktop=(
@@ -52,22 +52,22 @@ desktop=(
 	gtk
 	mpd
 	zsh
-    	hypr
+	hypr
 	cava
 	mocp
 	nvim
 	rofi
 	tmux
-    	gnupg
+	gnupg
 	dunst
 	ranger
-    	waybar
+	waybar
 	pcmanfm
 	systemd
 	zathura
 	keyboard
 	alacritty
-    wireplumber
+	wireplumber
 )
 
 if [[ $MYENV == "desktop" ]]; then
