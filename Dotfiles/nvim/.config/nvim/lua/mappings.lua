@@ -33,7 +33,8 @@ vim.keymap.set("n", "J", "mzJ`z")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 -- Nvim Tree
-vim.keymap.set("n", "<C-f>", function() return require 'nvim-tree'.toggle(false, true) end)
+-- vim.keymap.set("n", "<C-f>", function() return require 'nvim-tree'.toggle(false, true) end)
+vim.keymap.set("n", "<C-f>", ":NvimTreeToggle<CR>", { noremap = true })
 
 -- DAP and DAP-UI
 vim.keymap.set("n", "<leader>do", function() return require 'dapui'.open() end)
@@ -45,7 +46,7 @@ vim.keymap.set("n", "<leader>db", function() return require 'dap'.toggle_breakpo
 -- Colorscheme
 vim.keymap.set("n", "<C-n>", function() return require('material.functions').toggle_style() end)
 
--- Change number when sharing screen 
+-- Change number when sharing screen
 vim.keymap.set("n", "<C-h>", ":set relativenumber!<CR>") -- toggle
 
 -- Git reset hunk
@@ -55,7 +56,7 @@ vim.keymap.set("n", "gb", ":Gitsigns blame_line<CR>")
 
 -- Spelling
 vim.keymap.set("n", "<C-s>", ":set invspell<CR>") -- toggle
-vim.keymap.set("n", "<C-j>", "1z=") -- Fix spelling with first option
+vim.keymap.set("n", "<C-j>", "1z=")               -- Fix spelling with first option
 
 -- Schleep indention (zirrostig/vim-schlep)
 vim.keymap.set("v", "<C-d>", "<Plug>SchleppDup")
@@ -67,7 +68,10 @@ local commentapi = require('Comment.api')
 local esc = vim.api.nvim_replace_termcodes('<ESC>', true, false, true)
 vim.keymap.set("n", "<C-l>", function() commentapi.toggle.linewise.current() end, { noremap = true, silent = true })
 vim.keymap.set('x', '<C-l>',
-  function() vim.api.nvim_feedkeys(esc, 'nx', false) commentapi.toggle.linewise(vim.fn.visualmode()) end)
+  function()
+    vim.api.nvim_feedkeys(esc, 'nx', false)
+    commentapi.toggle.linewise(vim.fn.visualmode())
+  end)
 
 -- Telescope
 vim.keymap.set("n", "<leader>b", ":Telescope buffers<cr>")
