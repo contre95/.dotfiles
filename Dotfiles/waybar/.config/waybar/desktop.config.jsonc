@@ -1,38 +1,6 @@
 [
   {
     "layer": "top",
-    "position": "bottom",
-    "output": [
-      "DP-3"
-    ],
-    "modules-center": [
-      "hyprland/workspaces"
-    ],
-    "custom/arch": {
-      "format": "  ",
-      "tooltip": false
-    },
-    "hyprland/window": {
-      "separate-outputs": true
-    },
-    "hyprland/workspaces": {
-      "persistent-workspaces": {
-        "DP-3" : [6,7,8,9,10]
-      },
-      "sort-by-number": true,
-      "format": "{icon}",
-      "format-icons": {
-        "6": "ﭮ|",
-        "7": "|",
-        "8": " | ",
-        "9": " | ",
-        "10": " | "
-      },
-      "tooltip": true
-    }
-  },
-  {
-    "layer": "top",
     "output": "HDMI-A-1",
     "position": "bottom",
     "modules-left": [
@@ -66,7 +34,20 @@
     },
     "hyprland/workspaces": {
       "persistent-workspaces": {
-        "HDMI-A-1": [1,2,3,4,5]
+        "DP-3": [
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "HDMI-A-1": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
       },
       "sort-by-number": true,
       "format": "{icon}",
@@ -76,11 +57,6 @@
         "3": "3",
         "4": "4",
         "5": "5"
-        // "6": " |",
-        // "7": "|",
-        // "8": " | ",
-        // "9": " | ",
-        // "10": " | "
       },
       "tooltip": true
     },
@@ -221,6 +197,51 @@
       "format-wifi": "<span color='#b4befe'> </span> {essid}",
       "format-ethernet": "{ipaddr}/{cidr} ",
       "format-disconnected": "<span color='#b4befe'>󰖪 </span>No Network",
+      "tooltip": true
+    }
+  },
+  {
+    "layer": "top",
+    "position": "bottom",
+    "output": [
+      "DP-3"
+    ],
+    "modules-center": [
+      "hyprland/workspaces"
+    ],
+    "custom/arch": {
+      "format": "  ",
+      "tooltip": false
+    },
+    "hyprland/window": {
+      "separate-outputs": false
+    },
+    "hyprland/workspaces": {
+      "persistent-workspaces": {
+        "DP-3": [
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "HDMI-A-1": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "sort-by-number": true,
+      "format": "{icon}",
+      "format-icons": {
+        "6": " |",
+        "7": "|",
+        "8": " | ",
+        "9": " | ",
+        "10": " | "
+      },
       "tooltip": true
     }
   }
