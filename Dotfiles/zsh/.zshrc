@@ -1,14 +1,3 @@
-################################################################################################
-# OS Specific configuration
-################################################################################################
-if [[ $(uname) == "Darwin" ]]; then
-  # NMV
-   export NVM_DIR="$HOME/.nvm"
-  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
-  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
-  # Home folder
-  export MY_FOLDER="/Users/contre"
-fi
 
 ################################################################################################
 # Env Variables
@@ -35,7 +24,6 @@ autoload -U compinit && compinit -u
 source ~/.zsh/antigen.zsh
 source ~/.zsh/.theme
 antigen use oh-my-zsh
-antigen theme romkatv/powerlevel10k
 antigen bundle git
 antigen bundle golang
 antigen bundle zsh-users/zsh-autosuggestions
@@ -46,6 +34,9 @@ antigen bundle python
 antigen bundle common-aliases
 #antigen bundle docker
 #antigen bundle docker-compose
+antigen theme romkatv/powerlevel10k
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+#[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 antigen apply
 
 ################################################################################################
@@ -80,6 +71,11 @@ else
 	gpgconf --launch gpg-agent
 fi
 
+# Completion
+# autoload -Uz compinit
+# zstyle ':completion:*' menu select
+# fpath+=~/.zfunc
+
 # Enable vi mode
 #bindkey -v
 
@@ -92,7 +88,7 @@ sr() {
 }
 
 ################################################################################################
-# Alias
+# Aliases
 ################################################################################################
 alias mf="cd $MY_FOLDER"
 alias p="podman --remote"
@@ -131,12 +127,6 @@ setopt appendhistory    #Append history to the history file (no overwriting)
 setopt sharehistory     #Share history across terminals
 setopt incappendhistory #Immediately append to the history file, not just when a term is killed
 
-##############################################################################
-# MacBook Pro configuration
-##############################################################################
-# Just in case the unfortunate way Mac has to "Supr" does not work on your terminal.. then here's the fix
-bindkey "^[[3~" delete-char
-
 ################################################################################################
 # Languae environments setup
 ################################################################################################
@@ -148,15 +138,28 @@ eval "$(pyenv init --path)"
 # eval "$(pyenv virtualenv-init -)"
 # source $HOME/.gvm/scripts/gvm
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-#[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
+# Node version manager
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
 
-autoload -Uz compinit
-zstyle ':completion:*' menu select
-fpath+=~/.zfunc
-
+# Golang versions manager
 [[ -s "/home/contre/.gvm/scripts/gvm" ]] && source "/home/contre/.gvm/scripts/gvm"
+
+################################################################################################
+# OS X Specific configuration
+################################################################################################
+if [[ $(uname) == "Darwin" ]]; then
+  # Home folder
+  export MY_FOLDER="/Users/contre"
+  # Just in case the unfortunate way Mac has to "Supr" does not work on your terminal.. then here's the fix
+  bindkey "^[[3~" delete-char
+  # Configuration from here https://github.com/auth0/layer0-base/?tab=readme-ov-file#installing-tools-for-local-development
+  eval "$(direnv hook zsh)" # For other shell read: https://direnv.net/docs/hook.html
+  # Gatekeeper: Unalias gk from zsh git aliases due to gatekeepr conflict `unalias gk`
+  unalias gk
+  # Azure CLI autocomplete (Optional)
+  # autoload bashcompinit && bashcompinit
+  # source /usr/local/etc/bash_completion.d/az
+  # To avoid any terraform state loss on these long running aiven operations:
+fi
