@@ -61,6 +61,10 @@ tooltip label {
     color: #2e3440;
 }
 
+#workspaces button.visible {
+    color: rgba(255, 255, 255, 0.5);
+}
+
 #workspaces button.urgent {
     color: #FF0000;
 }

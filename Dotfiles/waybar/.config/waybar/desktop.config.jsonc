@@ -16,23 +16,9 @@
       "separate-outputs": true
     },
     "hyprland/workspaces": {
-      // "persistent_workspaces": {
-      //   "6": [
-      //     "DP-3"
-      //   ],
-      //   "7": [
-      //     "DP-3"
-      //   ],
-      //   "8": [
-      //     "DP-3"
-      //   ],
-      //   "9": [
-      //     "DP-3"
-      //   ],
-      //   "10": [
-      //     "DP-3"
-      //   ]
-      // },
+      "persistent-workspaces": {
+        "DP-3" : [6,7,8,9,10]
+      },
       "sort-by-number": true,
       "format": "{icon}",
       "format-icons": {
@@ -79,37 +65,8 @@
       "tooltip": true
     },
     "hyprland/workspaces": {
-      "persistent_workspaces": {
-        // "1": [
-        //   "HDMI-A-1"
-        // ],
-        // "2": [
-        //   "HDMI-A-1"
-        // ],
-        // "3": [
-        //   "HDMI-A-1"
-        // ],
-        // "4": [
-        //   "HDMI-A-1"
-        // ],
-        // "5": [
-        //   "HDMI-A-1"
-        // ]
-      //   "6": [
-      //     "HDMI-A-1"
-      //   ],
-      //   "7": [
-      //     "HDMI-A-1"
-      //   ],
-      //   "8": [
-      //     "HDMI-A-1"
-      //   ],
-      //   "9": [
-      //     "HDMI-A-1"
-      //   ],
-      //   "10": [
-      //     "HDMI-A-1"
-      //   ]
+      "persistent-workspaces": {
+        "HDMI-A-1": [1,2,3,4,5]
       },
       "sort-by-number": true,
       "format": "{icon}",
