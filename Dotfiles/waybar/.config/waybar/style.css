@@ -66,11 +66,11 @@ tooltip label {
 }
 
 #workspaces button.urgent {
-    color: #FF0000;
+    color: #524ACB;
 }
 
 #workspaces button.hidden {
-    color: #FF0000;
+    color: #524ACB;
 }
 
 #workspaces button.active {
