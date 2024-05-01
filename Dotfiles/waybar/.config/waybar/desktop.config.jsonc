@@ -34,7 +34,7 @@
     },
     "hyprland/workspaces": {
       "persistent-workspaces": {
-        "DP-3": [
+        "DP-2": [
           6,
           7,
           8,
@@ -204,7 +204,7 @@
     "layer": "top",
     "position": "bottom",
     "output": [
-      "DP-3"
+      "DP-2"
     ],
     "modules-center": [
       "hyprland/workspaces"
@@ -218,7 +218,7 @@
     },
     "hyprland/workspaces": {
       "persistent-workspaces": {
-        "DP-3": [
+        "DP-2": [
           6,
           7,
           8,
