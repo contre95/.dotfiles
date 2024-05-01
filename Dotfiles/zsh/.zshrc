@@ -115,6 +115,9 @@ alias dm="mpg123 --quiet $MY_FOLDER/Library/sounds/deployersmal.mp3"
 alias qn="mpg123 --quiet $MY_FOLDER/Library/sounds/quienteconoce.mp3"
 alias bf="mpg123 --quiet $MY_FOLDER/Library/sounds/back2thefuture.mp3"
 alias fcd="mpg123 --quiet $MY_FOLDER/Library/sounds/final_countdown.mp3"
+alias vimc="nvim $HOME/.config/nvim/init.lua"
+alias zshc="nvim $HOME/.zshrc"
+alias tmuxc="nvim $HOME/.tmux.conf"
 
 ##############################################################################
 # History Configuration
