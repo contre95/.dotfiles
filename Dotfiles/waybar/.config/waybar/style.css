@@ -57,7 +57,7 @@ tooltip label {
   margin: 5px 10px;
 }
 
-#workspaces button.persistent {
+#workspaces button.empty {
     color: #2e3440;
 }
 
