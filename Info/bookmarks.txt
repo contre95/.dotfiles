@@ -1,33 +1,34 @@
-Google              | https://google.com
-Drive               | http://drive.google.com
-Reddit              | https://www.reddit.com
-Photos              | http://photos.google.com
-Youtube             | http://youtube.com
-Garmin              | https://connect.garmin.com/modern
-Gmail               | http://gmail.com
-Outlook             | https://outlook.live.com
-Cronometer          | https://cronometer.com/
-1337x               | https://www.1377x.to/
-Instagram           | https://www.instagram.com
-Media               | http://media.contre.lucas
-RSS                 | http://rss.contre.lucas
-StackExchange       | http://stackexchange.com
-Translate           | http://translate.google.com/
-Twitter             | http://twitter.com
-Social              | https://elk.zone/home https://youtube.com https://rss.contre.lucas https://reddit.com https://twitter.com/home https://devox.me/
-Proton              | http://account.proton.me/login
-Syncthings          | http://localhost:8384 https://sync.contre.lucas
-Torrent             | http://torrents.contre.lucas
-Dmusic              | http://music.contre.lucas
-Idealista           | http://idealista.com/
-Maps                | http://google.com/maps/
-LetterboxD          | http://https://letterboxd.com
-Twitch              | http://twitch.tv/
-Calendar            | http://calendar.google.com
-Spotify             | https://open.spotify.com/
-Devox               | https://devox.me/
-MetalArchive        | http://www.metal-archives.com
-ACM                 | https://myacm.acm.org
-Okta                | http://https://okta.okta.com/app/UserHome?session_hint=AUTHENTICATED
-Jura                | https://sede.administracionespublicas.gob.es/icpplustiej/acInfo
-AmazonOrders        | https://www.amazon.es/gp/css/order-history
+Google,https://google.com
+Drive,http://drive.google.com
+Reddit,https://www.reddit.com
+Photos,http://photos.google.com
+Youtube,http://youtube.com
+Garmin,https://connect.garmin.com/modern
+Gmail,http://gmail.com
+Outlook,https://outlook.live.com
+Cronometer,https://cronometer.com/
+1337x,https://www.1377x.to/
+Instagram,https://www.instagram.com
+Media,http://media.contre.lucas
+RSS,http://rss.contre.lucas
+StackExchange,http://stackexchange.com
+Translate,http://translate.google.com/
+Twitter,http://twitter.com
+Social,https://elk.zone/home https://youtube.com https://rss.contre.lucas https://reddit.com https://twitter.com/home https://devox.me/
+Proton,http://account.proton.me/login
+Syncthings,http://localhost:8384 https://sync.contre.lucas
+Torrent,http://torrents.contre.lucas
+Dmusic,http://music.contre.lucas
+Idealista,http://idealista.com/
+Maps,http://google.com/maps/
+LetterboxD,http://https://letterboxd.com
+Twitch,http://twitch.tv/
+Calendar,http://calendar.google.com
+Spotify,https://open.spotify.com/
+Devox,https://devox.me/
+MetalArchive,http://www.metal-archives.com
+ACM,https://myacm.acm.org
+Okta,http://https://okta.okta.com/app/UserHome?session_hint=AUTHENTICATED
+Jura,https://sede.administracionespublicas.gob.es/icpplustiej/acInfo
+Amazon Orders,https://www.amazon.es/gp/css/order-history
+One Piece,https://mega.nz/folder/TzBAHLLT#qzUPsdJPVakp5ETFN6kJAw
