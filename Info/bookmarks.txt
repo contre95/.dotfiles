@@ -30,3 +30,4 @@ MetalArchive        | http://www.metal-archives.com
 ACM                 | https://myacm.acm.org
 Okta                | http://https://okta.okta.com/app/UserHome?session_hint=AUTHENTICATED
 Jura                | https://sede.administracionespublicas.gob.es/icpplustiej/acInfo
+AmazonOrders        | https://www.amazon.es/gp/css/order-history
