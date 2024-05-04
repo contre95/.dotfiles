@@ -2,7 +2,7 @@
 #
 # source ~/.zshrc
 
-choices="Any\nKeybr\nDuolingo\nNotes\nTradingView\nMedia\nCronometer\nWhite\nSpotify\nDiscord\nNew Bookmark\nN26\nFlights\nMonkeytype\nHome\nChatGPT\nGarmin\nLichess\nInstagram\nPNL\nYoutube\nTwitter\nCoin 360\nMusic\nTwitch\nSpeedTest\nTranslate\nOpenAsistant"
+choices="Any\nKeybr\nDuolingo\nNotes\nTradingView\nMedia\nCronometer\nWhite\nSpotify\nDiscord\nN26\nFlights\nMonkeytype\nHome\nChatGPT\nGarmin\nLichess\nInstagram\nPNL\nYoutube\nTwitter\nCoin 360\nMusic\nTwitch\nSpeedTest\nTranslate\nOpenAsistant"
 chosen=$(echo -e "$choices" | rofi -dmenu -theme $HOME/.config/rofi/dmenu.style.rasi -i -p "Select Layout: " -sb "#8F7DAB")
 
 # NOTE
@@ -123,9 +123,6 @@ case "$chosen" in
 	;;
 "Any")
 	librewolf --kiosk -P $LW_PROFILE --new-window http://"$(zenity --entry --text='Website  :')"
-	;;
-"New Bookmark")
-	echo "$(zenity --entry --text='Bookmark:')             - http://$(zenity --entry --text='URL:')" >>"$MY_FOLDER"/Info/bookmarks.txt
 	;;
 "Garmin")
 	center "librewolf --kiosk -P $LW_PROFILE --new-window https://connect.garmin.com/modern/"
