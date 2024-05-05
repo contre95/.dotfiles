@@ -1,5 +1,4 @@
 #!/bin/bash
-printf "Installing dotfiles for %s\n" "$MYENV"
 
 mac=(
 	fzf
@@ -70,36 +69,22 @@ desktop=(
 	wireplumber
 )
 
-if [[ $MYENV == "desktop" ]]; then
-	for d in "${desktop[@]}"; do
-		if stow "$d"; then
-			echo "$d ok"
+packages=()
+
+case "$MYENV" in
+mac) packages=("${mac[@]}") ;;
+notebook | thinkbook) packages=("${notebook[@]}") ;;
+server) packages=("${server[@]}") ;;
+desktop) packages=("${desktop[@]}") ;;
+esac
+
+if [[ "${#packages[@]}" -gt 0 ]]; then
+	printf "Installing dotfiles for %s\n" "$MYENV"
+	for package in "${packages[@]}"; do
+		if stow "$package"; then
+			echo "$package ok"
 		else
-			echo "$d failed"
-		fi
-	done
-elif [[ $MYENV == "notebook" ]] || [[ $MYENV == "thinkbook" ]]; then
-	for d in "${notebook[@]}"; do
-		if stow "$d"; then
-			echo "$d ok"
-		else
-			echo "$d failed"
-		fi
-	done
-elif [[ $MYENV == "mac" ]]; then
-	for d in "${mac[@]}"; do
-		if stow "$d"; then
-			echo "$d ok"
-		else
-			echo "$d failed"
-		fi
-	done
-elif [[ $MYENV == "server" ]]; then
-	for d in "${server[@]}"; do
-		if stow "$d"; then
-			echo "$d ok"
-		else
-			echo "$d failed"
+			echo "$package failed"
 		fi
 	done
 fi
