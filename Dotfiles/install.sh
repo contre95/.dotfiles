@@ -76,6 +76,7 @@ mac) packages=("${mac[@]}") ;;
 notebook | thinkbook) packages=("${notebook[@]}") ;;
 server) packages=("${server[@]}") ;;
 desktop) packages=("${desktop[@]}") ;;
+*) echo "Wrong environment variable: 'MYENV'. Must be one of 'mac', 'server', 'notebook' or 'desktop'.";;
 esac
 
 if [[ "${#packages[@]}" -gt 0 ]]; then
