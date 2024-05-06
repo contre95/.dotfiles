@@ -1,0 +1,14 @@
+[Unit]
+Description=Suspend hyprland
+Before=systemd-suspend.service
+Before=systemd-hibernate.service
+Before=nvidia-suspend.service
+Before=nvidia-hibernate.service
+
+[Service]
+Type=oneshot
+ExecStart=/home/canus/Scripts/bin-scr/suspend-hyprland.sh suspend
+
+[Install]
+WantedBy=systemd-suspend.service
+WantedBy=systemd-hibernate.service

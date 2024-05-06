@@ -1,0 +1,13 @@
+[Unit]
+Description=Resume hyprland
+After=systemd-suspend.service
+After=systemd-hibernate.service
+After=nvidia-resume.service
+
+[Service]
+Type=oneshot
+ExecStart=/home/canus/Scripts/bin-scr/suspend-hyprland.sh resume
+
+[Install]
+WantedBy=systemd-suspend.service
+WantedBy=systemd-hibernate.service
