@@ -24,6 +24,7 @@ return require("packer").startup(function()
     "williamboman/mason-lspconfig.nvim",
     run = ":MasonUpdate" -- :MasonUpdate updates registry contents
   }
+  -- use({ "stevearc/oil.nvim", config = function() require("oil").setup() end, })
   -- Colorcheme
   -- use { "kabouzeid/nvim-jellybeans", requires = "rktjmp/lush.nvim" }
   use({ 'marko-cerovac/material.nvim' })
@@ -61,7 +62,8 @@ return require("packer").startup(function()
   -- Git
   use({ "lewis6991/gitsigns.nvim", requires = { "nvim-lua/plenary.nvim" } })
   use("knsh14/vim-github-link")
-  use({ "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap", "leoluz/nvim-dap-go", "mortepau/codicons.nvim", "nvim-neotest/nvim-nio"} })
+  use({ "rcarriga/nvim-dap-ui",
+    requires = { "mfussenegger/nvim-dap", "leoluz/nvim-dap-go", "mortepau/codicons.nvim", "nvim-neotest/nvim-nio" } })
   -- LSP / CMP / Snippets / Parsers
   use("nvim-treesitter/nvim-treesitter")
   -- use("nvim-treesitter/playground")
