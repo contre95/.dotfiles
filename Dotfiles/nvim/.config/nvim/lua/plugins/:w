@@ -150,8 +150,8 @@ lspconfig.rust_analyzer.setup({
 })
 
 -- Python
-lspconfig.pyright.setup({ capabilities = capabilities, handlers = handlers })
--- lspconfig.black.setup({ capabilities = capabilities, handlers = handlers })
+-- lspconfig.pyright.setup({ capabilities = capabilities, handlers = handlers })
+lspconfig.black.setup({ capabilities = capabilities, handlers = handlers })
 
 -- Golang
 lspconfig.gopls.setup({ capabilities = capabilities })
