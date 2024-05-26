@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 choices=' Twitch\n YouTube\n Video'
 var=$(echo -e $choices | rofi -dmenu -theme $HOME/.config/rofi/dmenu.style.rasi  -i -p "Exit menu: " -sb "#9147FF" -fn "JetBrainsMono Nerd Font")

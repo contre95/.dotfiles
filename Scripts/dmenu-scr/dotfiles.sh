@@ -1,4 +1,5 @@
-#!/bin/zsh
+#!/usr/bin/env zsh
+#
 choices="sxhkd\nbspwm\nvimrc\nlemonbar\nzsh\ntmux\nwpaperd\nwaybar\nwaybar-css\nhyprland\nalacritty\nscripts"
 var=$(echo -e $choices | rofi -dmenu -theme $HOME/.config/rofi/dmenu.style.rasi -i -p "Dotfiles" -sb "#40444B" -fn "JetBrainsMono Nerd Font") 
 TMUX_SCRIPTS=/home/canus/Scripts/tmux-scr

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash 
 
 choices=" Shutdown\n Lock\n Suspend\n Restart\n Logout\n Cancel"
 var=$(echo -e "$choices" | rofi -dmenu -theme $HOME/.config/rofi/dmenu.style.rasi  -i -p "Exit menu: " -sb "#FF3855" -fn "JetBrainsMono Nerd Font" ) 

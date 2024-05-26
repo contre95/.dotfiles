@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 choices=' Telegram\n Whatsapp\n Meet\n Signal\n󰙯 Discord\n Slack\n Hangouts\n Jitsi\n Gmail\n Messenger'
 var=$(echo -e "$choices" | rofi -dmenu -theme $HOME/.config/rofi/dmenu.style.rasi -i -p "Exit menu: " -sb "#137aad" -fn "JetBrainsMono Nerd Font" ) 

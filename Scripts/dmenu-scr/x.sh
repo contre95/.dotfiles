@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 choices="Screenshot\nScreeshot Clipboard\nWindow class\nWindow xprop"
 var=$(echo -e "$choices" | rofi -dmenu -theme $HOME/.config/rofi/dmenu.style.rasi -i -p "Audio Output" -sb "#6D6D6D" -fn "JetBrainsMono Nerd Font") 
 

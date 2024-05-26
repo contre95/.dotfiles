@@ -1,10 +1,8 @@
-{...}:{
-nixpkgs.overlays = [
-  (self: super: {
-    waybar = super.waybar.overrideAttrs (oldAttrs: {
+{ pkgs, ... }:{
+  programs.waybar = {
+    enable = true;
+    package = pkgs.waybar.overrideAttrs (oldAttrs: {
       mesonFlags = oldAttrs.mesonFlags ++ [ "-Dexperimental=true" ];
     });
-  })
-];
+  };
 }
-
