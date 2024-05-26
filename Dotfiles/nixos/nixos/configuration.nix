@@ -91,6 +91,7 @@ in
     gammastep
     libnotify
     wl-clipboard
+    hyprpicker
     wayland-utils
     wayland-protocols
     rofi-wayland-unwrapped
