@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 shadersPath=~/.config/hypr/shaders
 shader="$(find $shadersPath -type f -printf '%f\n' | rofi -dmenu -theme $HOME/.config/rofi/dmenu.style.rasi -i -p 'Shader: ' -sb '#D96E1F' -fn 'JetBrainsMono Nerd Font')"
 

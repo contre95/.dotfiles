@@ -46,9 +46,6 @@ in
     efm-langserver
     lua-language-server
 
-
-
-
     # Essentials User 
     zsh
     stow
@@ -70,6 +67,7 @@ in
 
     # Desktop apps
     discord
+    obs-studio
     alacritty
     librewolf
     telegram-desktop
@@ -83,11 +81,15 @@ in
     dunst
     waybar
     wlroots
+    swappy
+    grim
+    slurp
     pinentry
     xwayland
     hyprpaper
+    clipman
+    gammastep
     libnotify
-    wl-clipboard
     wl-clipboard
     wayland-utils
     wayland-protocols
