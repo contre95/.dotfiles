@@ -289,6 +289,9 @@ local latexindent = {
 local pep8 = {
   formatCommand = "autopep8",
 }
+local nixpkgs = {
+  formatCommand = "nixpkgs-fmt %",
+}
 
 local shell = {
   formatCommand = "shfmt ${-i:tabWidth}",
@@ -312,11 +315,14 @@ local languages = {
   scss = { prettier },
   sql = { sqlfmt },
   tex = { latexindent },
+  -- nix = { nixpkgs },
   css = { prettier },
   sh = { shell },
   zsh = { shell },
   python = { pep8 },
 }
+
+lspconfig.rnix.setup({})
 
 lspconfig.efm.setup({
   root_dir = lspconfig.util.root_pattern(".git", "/home/canus/Scripts", vim.loop.os_homedir()),
