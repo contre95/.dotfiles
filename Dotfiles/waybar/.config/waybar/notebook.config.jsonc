@@ -57,10 +57,10 @@
       "interval": 2
     },
     "hyprland/workspaces": {
-      // "persistent_workspaces": {
-      //   "1": [
-      //     "eDP-1"
-      //   ],
+      "persistent_workspaces": {
+        "eDP-1": [
+          1,2,3,4,5
+        ]},
       //   "2": [
       //     "eDP-1"
       //   ],
@@ -224,7 +224,7 @@
       "tooltip-format-enumerate-connected": "{device_alias}  {device_address}"
     },
     "network": {
-      "interface": "wlan0",
+      "interface": "wlo1",
       "format": "{ifname}",
       "format-wifi": "<span color='#b4befe'>  </span>{essid}",
       "format-ethernet": "{ipaddr}/{cidr} ",

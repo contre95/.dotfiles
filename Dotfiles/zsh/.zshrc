@@ -137,8 +137,8 @@ setopt incappendhistory #Immediately append to the history file, not just when a
 export BROWSER="librewolf"
 alias vim="nvim"
 alias tf="terraform"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
+# eval "$(pyenv init -)"
+# eval "$(pyenv virtualenv-init -)"
 # source $HOME/.gvm/scripts/gvm
 
 # Node version manager
