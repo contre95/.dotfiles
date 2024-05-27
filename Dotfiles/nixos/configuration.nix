@@ -1,9 +1,10 @@
 # Edit this configuration file to define what should be installed on
-# your system.  Help is available in the configuration.nix(5) man page
+# your system.  Help is available in the configuration.nix(5) man pagecon
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
 { config, pkgs, ... }:
 let
+  unstable = import <nixos-unstable> { config = { allowUnfree = true; }; };
   whichMachine = builtins.getEnv "MYENV";
   machineSpecifics =
     if whichMachine == "desktop" then ./desktop.nix
@@ -16,17 +17,26 @@ in
     [
       # Include the results of the hardware scan.
       machineSpecifics
-      ./sound.nix
+      ./system/networking.nix
+      ./system/sound.nix
       ./programs/hyprland.nix
       ./programs/waybar.nix
       ./programs/zsh.nix
+      ./programs/git.nix
+      ./programs/gpg.nix
+
     ];
+  # networking.networkmanager.enable = true;
+  networking.hostName = "${whichMachine}";
 
   environment.variables = {
     WLR_NO_HARDWARE_CURSORS = "1";
     NIXOS_OZONE_WL = "1";
+    PAGER = "less";
     EDITOR = "nvim";
   };
+
+  nix.settings.experimental-features = [ "nix-command" ];
 
   environment.systemPackages = with pkgs; [
 
@@ -34,8 +44,9 @@ in
     go
     jq
     cargo
-    pyenv
     python3
+    # pyenv # Creo que esto ya no tiene más sentido
+    # virtualenv
 
     # LSP
     sqls
@@ -49,17 +60,31 @@ in
     # Essentials User 
     zsh
     stow
+    bandwhich
+    awscli
+    tree
+    tree-sitter
+    kubectl
     tmux
+    pass
     gnupg
+    vlc
+    mpv
     neovim
 
     # Essentials OS 
     fzf
+    less
     gcc
+    coreutils
     git
     bash
+    btop
     nmap
     wget
+    wirelesstools
+    bluez5-experimental
+    iwd
     rsync
     gnumake
     ripgrep
@@ -67,19 +92,21 @@ in
 
     # Desktop apps
     discord
+    betterdiscordctl
     obs-studio
     alacritty
     librewolf
     telegram-desktop
 
-     # Sound
+    # Sound
     pipewire
     wireplumber
     pavucontrol
 
     # Desktop Environment 
+    pcmanfm
     dunst
-    waybar
+    unstable.waybar
     wlroots
     swappy
     grim
@@ -90,11 +117,16 @@ in
     clipman
     gammastep
     libnotify
+    hyprshade
     wl-clipboard
     hyprpicker
+    hyprland
     wayland-utils
     wayland-protocols
     rofi-wayland-unwrapped
+    polkit
+    dconf
+    xdg-desktop-portal
     xdg-desktop-portal-gtk
     xdg-desktop-portal-hyprland
 
@@ -104,32 +136,11 @@ in
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "${whichMachine}"; # Define your hostname.
-  #  networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-  # Configure network proxy if necessary
-  # networking.proxy.default = "http://user:password@proxy:port/";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
-
-  # Programs 
-
-
-  programs.gnupg = {
-    agent.enable = true;
-    agent.enableSSHSupport = true;
-    agent.pinentryFlavor = "curses";
-  };
-
-  # Environment setup
-  nix.settings.experimental-features = [ "nix-command" ];
-  # Networking
-  networking.networkmanager.enable = true;
-
   # Set your time zone.
   time.timeZone = "Europe/Madrid";
 
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
-
   i18n.extraLocaleSettings = {
     LC_ADDRESS = "es_ES.UTF-8";
     LC_IDENTIFICATION = "es_ES.UTF-8";
@@ -141,7 +152,6 @@ in
     LC_TELEPHONE = "es_ES.UTF-8";
     LC_TIME = "es_ES.UTF-8";
   };
-
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.contre = {
@@ -156,31 +166,13 @@ in
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-
   # Fonts
   fonts.packages = with pkgs; [
-    nerdfonts
+    (nerdfonts.override { fonts = [ "FiraCode" "JetBrainsMono" "Iosevka" ]; })
   ];
-  # List packages installed in system profile. To search, run:
-
-  # Some programs need SUID wrappers, can be configured further or are
-  # started in user sessions.
-  # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
-  # };
-
-  # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
-
-  # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
-  # Or disable the firewall altogether.
-  # networking.firewall.enable = false;
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
