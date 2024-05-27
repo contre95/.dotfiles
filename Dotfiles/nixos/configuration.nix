@@ -4,7 +4,11 @@
 
 { config, pkgs, ... }:
 let
+  # Home Manager
+  # home-manager = builtins.fetchTarball "https://github.com/nix-community/home-manager/archive/master.tar.gz";
+  # Unstable packages only for <unstable.package_name>
   unstable = import <nixos-unstable> { config = { allowUnfree = true; }; };
+  # Pich machine base on MYENV
   whichMachine = builtins.getEnv "MYENV";
   machineSpecifics =
     if whichMachine == "desktop" then ./desktop.nix
@@ -13,19 +17,20 @@ let
     else throw "Please set the variable WHICH_MACHINE first";
 in
 {
-  imports =
-    [
-      # Include the results of the hardware scan.
-      machineSpecifics
-      ./system/networking.nix
-      ./system/sound.nix
-      ./programs/hyprland.nix
-      ./programs/waybar.nix
-      ./programs/zsh.nix
-      ./programs/git.nix
-      ./programs/gpg.nix
-
-    ];
+  imports = [
+    # (import "${home-manager}/nixos")
+    /etc/nixos/hardware-configuration.nix
+    ./system/networking.nix
+    ./system/sound.nix
+    ./system/hardware.nix
+    ./programs/hyprland.nix
+    ./programs/waybar.nix
+    ./programs/zsh.nix
+    ./programs/librewolf.nix
+    ./programs/git.nix
+    ./programs/gpg.nix
+    machineSpecifics
+  ];
   # networking.networkmanager.enable = true;
   networking.hostName = "${whichMachine}";
 
@@ -35,8 +40,6 @@ in
     PAGER = "less";
     EDITOR = "nvim";
   };
-
-  nix.settings.experimental-features = [ "nix-command" ];
 
   environment.systemPackages = with pkgs; [
 
@@ -61,6 +64,7 @@ in
     zsh
     stow
     bandwhich
+    home-manager
     awscli
     tree
     tree-sitter
@@ -83,6 +87,7 @@ in
     nmap
     wget
     wirelesstools
+    bluez
     bluez5-experimental
     iwd
     rsync
@@ -100,6 +105,8 @@ in
 
     # Sound
     pipewire
+    pw-volume
+    pamixer
     wireplumber
     pavucontrol
 
@@ -129,7 +136,6 @@ in
     xdg-desktop-portal
     xdg-desktop-portal-gtk
     xdg-desktop-portal-hyprland
-
   ];
 
   # Bootloader.

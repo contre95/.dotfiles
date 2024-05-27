@@ -20,7 +20,8 @@
       "battery",
       "custom/btc",
       "custom/notification",
-      "custom/mic"
+      "custom/pipewire"
+      // "custom/mic"
     ],
     "modules-right": [
       "clock"
@@ -36,17 +37,17 @@
       "tooltip": false,
       "on-click": "sh $HOME/.config/rofi/bin/powermenu"
     },
-    "custom/mic": {
-      "on-click": "$MY_FOLDER/Scripts/audio-scr/mic-mute.sh",
-      "exec": "$MY_FOLDER/Scripts/waybar-scr/mic-status.sh",
-      "exec-if": "true",
-      "format": "{}",
-      "on-scroll-up": "pactl set-source-volume 0 +5%",
-      "on-scroll-down": "pactl set-source-volume 0 -5%",
-      "tooltip": false,
-      "signal": 1,
-      "interval": 2
-    },
+    // "custom/mic": {
+    //   "on-click": "$MY_FOLDER/Scripts/audio-scr/mic-mute.sh",
+    //   "exec": "$MY_FOLDER/Scripts/waybar-scr/mic-status.sh",
+    //   "exec-if": "true",
+    //   "format": "{}",
+    //   "on-scroll-up": "pactl set-source-volume 0 +5%",
+    //   "on-scroll-down": "pactl set-source-volume 0 -5%",
+    //   "tooltip": false,
+    //   "signal": 1,
+    //   "interval": 2
+    // },
     "custom/notification": {
       "on-click": "$MY_FOLDER/Scripts/notification-scr/notify-toggle-mute.sh",
       "exec": "$MY_FOLDER/Scripts/waybar-scr/notify-status.sh",
@@ -110,14 +111,6 @@
       "exec": "curl ifconfig.io | cut -c -16",
       "on-click": "curl ifconfig.io | wl-copy"
     },
-    "custom/audio": {
-      "format": "<span color='#F8D987'></span> {}",
-      "interval": 1,
-      "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
-      "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%",
-      "on-click": "pactl set-default-sink $(pamixer --list-sinks | grep -v $(pamixer --get-default-sink | tail -n 1 | awk -F' ' '{print $2}' | tr -d '\"') | grep -v 'Sinks:' | shuf | head -n 1 | awk -F' ' '{print $2}' | tr -d '\"')",
-      "exec": "pamixer --get-default-sink | tail -n 1 | awk -F'\".+\" ' '{print $2}' | tr -d '\"'"
-    },
     "custom/recorder": {
       "format": "<span color='#FF0000'>󰑋</span> Rec.",
       "return-type": "json",
@@ -148,9 +141,9 @@
       "format-muted": "<span color='#C57070'></span> --",
       "on-click": "pavucontrol",
       "scroll-step": 0.2,
-      "on-click-middle": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
-      "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
-      "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%",
+      "on-click-middle": "pw-volume mute toggle ",
+      "on-scroll-up": "pw-volume change +5%",
+      "on-scroll-down": "pw-volume change -5%",
       "format-icons": [
         "",
         "",
@@ -219,12 +212,12 @@
       "on-click": "bluetoothctl power on",
       "on-click-right": "bluetoothctl power off",
       "format-disabled": "no",
-      "format-connected": "<span color='#b4befe'></span> {device_alias}",
+      "format-connected": "<span color='#b4befe'></span> {device_alias} <span color='#474D56'>{device_battery_percentage}%</span>",
       "tooltip-format": "{device_enumerate}",
-      "tooltip-format-enumerate-connected": "{device_alias}  {device_address}"
+      "tooltip-format-enumerate-connected": "{device_address}"
     },
     "network": {
-      "interface": "wlo1",
+      "interface": "wlan0",
       "format": "{ifname}",
       "format-wifi": "<span color='#b4befe'>  </span>{essid}",
       "format-ethernet": "{ipaddr}/{cidr} ",
