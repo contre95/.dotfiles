@@ -1,4 +1,4 @@
-#!/usr/bin/sh
+#!env bash
 
 if [ "$(dunstctl is-paused)" = "true" ] ;then
    echo '<span color="#FF6363"> </span>'

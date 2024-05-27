@@ -1,4 +1,4 @@
-#!/bin/bash
+#!env bash
 
 
 if wpctl status | grep "MUTED" | grep "*" >/dev/null 2>&1; then
