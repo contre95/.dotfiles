@@ -28,6 +28,7 @@ in
     ./programs/zsh.nix
     ./programs/librewolf.nix
     ./programs/git.nix
+    ./programs/${machineSpecific}.ssh.nix
     ./programs/gpg.nix
     machineSpecifics
   ];
