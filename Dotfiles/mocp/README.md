@@ -1,1 +1,0 @@
-# mocp dotfiles
