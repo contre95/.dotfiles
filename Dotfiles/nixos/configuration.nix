@@ -17,6 +17,7 @@ let
     else throw "Please set the variable WHICH_MACHINE first";
 in
 {
+  networking.hostName = "${whichMachine}";
   imports = [
     # (import "${home-manager}/nixos")
     /etc/nixos/hardware-configuration.nix
@@ -28,12 +29,11 @@ in
     ./programs/zsh.nix
     ./programs/librewolf.nix
     ./programs/git.nix
-    ./programs/${machineSpecific}.ssh.nix
+    ./programs/ssh.nix
     ./programs/gpg.nix
     machineSpecifics
   ];
   # networking.networkmanager.enable = true;
-  networking.hostName = "${whichMachine}";
 
   environment.variables = {
     WLR_NO_HARDWARE_CURSORS = "1";
@@ -178,9 +178,6 @@ in
   fonts.packages = with pkgs; [
     (nerdfonts.override { fonts = [ "FiraCode" "JetBrainsMono" "Iosevka" ]; })
   ];
-
-  # Enable the OpenSSH daemon.
-  services.openssh.enable = true;
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
