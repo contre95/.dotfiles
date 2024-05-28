@@ -1,1 +1,0 @@
-# lemonbar dotfiles
