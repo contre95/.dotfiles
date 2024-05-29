@@ -1,4 +1,12 @@
-{ ... }: {
+{ pkgs, ... }: {
+  environment.systemPackages = with pkgs; [
+    pipewire
+    pw-volume
+    pamixer
+    wireplumber
+    pavucontrol
+  ];
+
   sound.enable = true;
   security.rtkit.enable = true;
   services.pipewire = {
@@ -17,6 +25,8 @@
     # };
 
   };
+
+  # Bluetooth config
   environment.etc = {
     "wireplumber/bluetooth.lua.d/51-bluez-config.lua".text = ''
       		bluez_monitor.properties = {
