@@ -2,143 +2,43 @@
 # your system.  Help is available in the configuration.nix(5) man pagecon
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 let
-  # Home Manager
-  # home-manager = builtins.fetchTarball "https://github.com/nix-community/home-manager/archive/master.tar.gz";
-  # Unstable packages only for <unstable.package_name>
-  unstable = import <nixos-unstable> { config = { allowUnfree = true; }; };
-  # Pich machine base on MYENV
-  whichMachine = builtins.getEnv "MYENV";
-  machineSpecifics =
-    if whichMachine == "desktop" then ./desktop.nix
-    else if whichMachine == "notebook" then ./notebook.nix
-    else if whichMachine == "server" then ./server.nix
-    else throw "Please set the variable WHICH_MACHINE first";
+  # Machine and environemnt definition
+  home-manager = builtins.fetchTarball "https://github.com/nix-community/home-manager/archive/master.tar.gz";
+  whichMachine = builtins.getEnv "WHICH_MACHINE";
+  machineConfig =
+    if lib.elem whichMachine [ "notebook" "server" "desktop" "macos" ] then "${whichMachine}.nix"
+    else throw "Please set the variable $WHICH_MACHINE first";
+  distro = if lib.elem whichMachine [ "notebook" "server" "desktop" ] then "linux" else "osx";
 in
 {
   networking.hostName = "${whichMachine}";
   imports = [
-    # (import "${home-manager}/nixos")
+    (import "${home-manager}/nixos")
     /etc/nixos/hardware-configuration.nix
-    ./system/networking.nix
-    ./system/sound.nix
-    ./system/hardware.nix
-    ./programs/hyprland.nix
-    ./programs/waybar.nix
-    ./programs/zsh.nix
-    ./programs/librewolf.nix
-    ./programs/git.nix
+    ./${machineConfig}
     ./programs/ssh.nix
     ./programs/gpg.nix
-    machineSpecifics
+    ./system/networking.nix
+    ./system/sound.nix
+    ./system/gtk.nix
+    ./system/common.packages.nix
+    ./system/bluetooth.nix
+    ./programs/librewolf.nix
+    ./programs/git.nix
   ];
-  # networking.networkmanager.enable = true;
+  # Enable common programs 
+  programs.zsh.enable = distro == "linux";
+  programs.hyprland.enable = true;
 
+  # Environment variables
   environment.variables = {
     WLR_NO_HARDWARE_CURSORS = "1";
     NIXOS_OZONE_WL = "1";
     PAGER = "";
     EDITOR = "nvim";
   };
-
-  environment.systemPackages = with pkgs; [
-
-    # Languages
-    go
-    jq
-    cargo
-    python3
-    # pyenv # Creo que esto ya no tiene más sentido
-    # virtualenv
-
-    # LSP
-    sqls
-    black
-    gopls
-    yamlfmt
-    marksman
-    efm-langserver
-    lua-language-server
-
-    # Essentials User 
-    zsh
-    stow
-    bandwhich
-    autojump
-    home-manager
-    awscli
-    tree
-    tree-sitter
-    kubectl
-    tmux
-    pass
-    gnupg
-    vlc
-    mpv
-    neovim
-
-    # Essentials OS 
-    fzf
-    less
-    gcc
-    coreutils
-    git
-    bash
-    btop
-    nmap
-    wget
-    wirelesstools
-    bluez
-    bluez5-experimental
-    iwd
-    rsync
-    gnumake
-    ripgrep
-    envsubst
-
-    # Desktop apps
-    discord
-    betterdiscordctl
-    obs-studio
-    alacritty
-    librewolf
-    telegram-desktop
-
-    # Sound
-    pipewire
-    pw-volume
-    pamixer
-    wireplumber
-    pavucontrol
-
-    # Desktop Environment 
-    pcmanfm
-    dunst
-    unstable.waybar
-    wlroots
-    swappy
-    grim
-    slurp
-    pinentry
-    xwayland
-    hyprpaper
-    clipman
-    gammastep
-    libnotify
-    hyprshade
-    wl-clipboard
-    hyprpicker
-    hyprland
-    wayland-utils
-    wayland-protocols
-    rofi-wayland-unwrapped
-    polkit
-    dconf
-    xdg-desktop-portal
-    xdg-desktop-portal-gtk
-    xdg-desktop-portal-hyprland
-  ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -149,27 +49,19 @@ in
 
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
-  i18n.extraLocaleSettings = {
-    LC_ADDRESS = "es_ES.UTF-8";
-    LC_IDENTIFICATION = "es_ES.UTF-8";
-    LC_MEASUREMENT = "es_ES.UTF-8";
-    LC_MONETARY = "es_ES.UTF-8";
-    LC_NAME = "es_ES.UTF-8";
-    LC_NUMERIC = "es_ES.UTF-8";
-    LC_PAPER = "es_ES.UTF-8";
-    LC_TELEPHONE = "es_ES.UTF-8";
-    LC_TIME = "es_ES.UTF-8";
-  };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.contre = {
-    isNormalUser = true;
-    shell = pkgs.zsh;
-    uid = 1000;
-    description = "Yerno VIP aka Master Senior";
-    extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [ ];
-  };
+  users.users =
+    if distro == "linux" then {
+      contre = {
+        isNormalUser = true;
+        shell = pkgs.zsh;
+        uid = 1000;
+        description = "Yerno VIP aka Master Senior";
+        extraGroups = [ "wheel" ];
+        packages = with pkgs; [ ];
+      };
+    } else { };
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
