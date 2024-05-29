@@ -1,0 +1,4 @@
+#!env bash
+
+read notification
+notify-send "Success" "$notification" "$@" -i $MY_FOLDER/library/icons/success.png
