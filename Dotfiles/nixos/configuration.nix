@@ -1,11 +1,7 @@
-# Edit this configuration file to define what should be installed on
-# your system.  Help is available in the configuration.nix(5) man pagecon
-# and in the NixOS manual (accessible by running ‘nixos-help’).
-
 { config, pkgs, lib, ... }:
 let
   # Machine and environemnt definition
-  home-manager = builtins.fetchTarball "https://github.com/nix-community/home-manager/archive/master.tar.gz";
+  home-manager = builtins.fetchTarball "https://github.com/nix-community/home-manager/archive/release-23.11.tar.gz";
   whichMachine = builtins.getEnv "WHICH_MACHINE";
   machineConfig =
     if lib.elem whichMachine [ "notebook" "server" "desktop" "macos" ] then "${whichMachine}.nix"
@@ -14,20 +10,25 @@ let
 in
 {
   networking.hostName = "${whichMachine}";
-  imports = [
-    (import "${home-manager}/nixos")
-    /etc/nixos/hardware-configuration.nix
-    ./${machineConfig}
-    ./programs/ssh.nix
-    ./programs/gpg.nix
-    ./system/networking.nix
-    ./system/sound.nix
-    ./system/gtk.nix
-    ./system/common.packages.nix
-    ./system/bluetooth.nix
-    ./programs/librewolf.nix
-    ./programs/git.nix
-  ];
+
+  imports =
+    if "${distro}" == "linux" then [
+      (import "${home-manager}/nixos")
+      ./system/sound.nix
+      ./system/bluetooth.nix
+      ./system/networking.nix
+      ./system/openssh.nix
+      ./users/contre.nix
+      ./machines/${machineConfig}
+      /etc/nixos/hardware-configuration.nix
+    ] else if "${distro}" == "macos" then
+      [
+        (import "${home-manager}/nixos")
+        ./machines/${machineConfig}
+        ./users/work.nix
+      ]
+    else throw "akhdlksjahlskdjs" ;
+
   # Enable common programs 
   programs.zsh.enable = distro == "linux";
   programs.hyprland.enable = true;

@@ -1,8 +1,18 @@
-{ lib, pkgs, ... }: {
-  programs.gnupg = {
-    agent.enable = true;
-    agent.enableSSHSupport = true;
-    agent.pinentryFlavor = "qt";
+{ home-manager, config, ... }: {
+
+  programs.gpg = {
+    enable = true;
+    publicKeys = [
+      #      { source = ../contre.pub; trust = 5; }
+    ];
   };
+
+  services.gpg-agent = {
+    sshKeys = [ "B38C2E9A5402A38D13E510DADD0B71744684EA35" ];
+    enableSshSupport = true;
+    defaultCacheTtl = 1300;
+    enableExtraSocket = true;
+  };
+
 }
 
