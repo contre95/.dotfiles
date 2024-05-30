@@ -125,11 +125,48 @@ in
        target = ".config/rofi";
      };
 
+     tmux = {
+       recursive = false;
+       source = /home/canus/dotfiles/tmux/.tmux.conf;
+       target = "./.tmux.conf";
+     };
+
+     wireplumber = {
+       recursive = true;
+       source = /home/canus/dotfiles/wireplumber;
+       target = ".config/wireplumber";
+     };
+
+     waybar = {
+       recursive = true;
+       source = /home/canus/dotfiles/waybar;
+       target = ".config/waybar";
+     };
+
+     hyprland = {
+       recursive = true;
+       source = /home/canus/dotfiles/hypr;
+       target = ".config/hypr";
+     };
+
+     keyboard = {
+       recursive = true;
+       source = /home/canus/dotfiles/keybaord;
+       target = ".config/xkb";
+     };
+
+     dunst= {
+       recursive = true;
+       source = /home/canus/dotfiles/dunst;
+       target = ".config/dunst";
+     };
+
      zshrc = {
        recursive = false;
        source = /home/canus/dotfiles/zsh/.zshrc;
        target = "./.zshrc";
      };
+
      zsh = {
        recursive = false;
        source = /home/canus/dotfiles/zsh/.zsh;
