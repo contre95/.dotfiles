@@ -1,4 +1,4 @@
-{ pkgs, home-manager, config, ... }: 
+{ pkgs, home-manager, config, ... }:
 let
   # Unstable packages only for <unstable.package_name>
   unstable = import <nixos-unstable> { config = { allowUnfree = true; }; };
@@ -9,16 +9,15 @@ in
 
   # Contre
   home-manager.users.contre = { pkgs, ... }: {
+    programs.home-manager.enable = true;
     home.username = "contre";
     home.homeDirectory = "/home/contre";
-
-    programs.home-manager.enable = true;
     home.stateVersion = "23.11";
     imports = [
-     ../programs/gpg.nix
-     # ../programs/gtk.nix
-     ../programs/git.nix
-     ../programs/librewolf.nix
+      ../programs/gpg.nix
+      ../programs/gtk.nix
+      ../programs/git.nix
+      ../programs/librewolf.nix
     ];
 
     home.packages = with pkgs; [
@@ -112,68 +111,68 @@ in
 
     ];
 
-   home.file = {
-     neovim = {
-       recursive = true;
-       source = /home/canus/dotfiles/nvim;
-       target = ".config/nvim";
-     };
+    home.file = {
+      neovim = {
+        recursive = true;
+        source = /home/canus/dotfiles/nvim;
+        target = ".config/nvim";
+      };
 
-     rofi = {
-       recursive = true;
-       source = /home/canus/dotfiles/rofi;
-       target = ".config/rofi";
-     };
+      rofi = {
+        recursive = true;
+        source = /home/canus/dotfiles/rofi;
+        target = ".config/rofi";
+      };
 
-     tmux = {
-       recursive = false;
-       source = /home/canus/dotfiles/tmux/.tmux.conf;
-       target = "./.tmux.conf";
-     };
+      tmux = {
+        recursive = false;
+        source = /home/canus/dotfiles/tmux/.tmux.conf;
+        target = "./.tmux.conf";
+      };
 
-     wireplumber = {
-       recursive = true;
-       source = /home/canus/dotfiles/wireplumber;
-       target = ".config/wireplumber";
-     };
+      wireplumber = {
+        recursive = true;
+        source = /home/canus/dotfiles/wireplumber;
+        target = ".config/wireplumber";
+      };
 
-     waybar = {
-       recursive = true;
-       source = /home/canus/dotfiles/waybar;
-       target = ".config/waybar";
-     };
+      waybar = {
+        recursive = true;
+        source = /home/canus/dotfiles/waybar;
+        target = ".config/waybar";
+      };
 
-     hyprland = {
-       recursive = true;
-       source = /home/canus/dotfiles/hypr;
-       target = ".config/hypr";
-     };
+      hyprland = {
+        recursive = true;
+        source = /home/canus/dotfiles/hypr;
+        target = ".config/hypr";
+      };
 
-     keyboard = {
-       recursive = true;
-       source = /home/canus/dotfiles/keybaord;
-       target = ".config/xkb";
-     };
+      keyboard = {
+        recursive = true;
+        source = /home/canus/dotfiles/keybaord;
+        target = ".config/xkb";
+      };
 
-     dunst= {
-       recursive = true;
-       source = /home/canus/dotfiles/dunst;
-       target = ".config/dunst";
-     };
+      dunst = {
+        recursive = true;
+        source = /home/canus/dotfiles/dunst;
+        target = ".config/dunst";
+      };
 
-     zshrc = {
-       recursive = false;
-       source = /home/canus/dotfiles/zsh/.zshrc;
-       target = "./.zshrc";
-     };
+      zshrc = {
+        recursive = false;
+        source = /home/canus/dotfiles/zsh/.zshrc;
+        target = "./.zshrc";
+      };
 
-     zsh = {
-       recursive = false;
-       source = /home/canus/dotfiles/zsh/.zsh;
-       target = "./.zsh";
-     };
+      zsh = {
+        recursive = false;
+        source = /home/canus/dotfiles/zsh/.zsh;
+        target = "./.zsh";
+      };
 
-   };
+    };
   };
 
 }
