@@ -1,6 +1,7 @@
 { config, pkgs, lib, ... }:
 let
   # Machine and environemnt definition
+  unstableTarball = builtins.fetchTarball "https://github.com/NixOS/nixpkgs/archive/nixos-unstable.tar.gz";
   home-manager = builtins.fetchTarball "https://github.com/nix-community/home-manager/archive/release-23.11.tar.gz";
   whichMachine = builtins.getEnv "WHICH_MACHINE";
   machineConfig =
