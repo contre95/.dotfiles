@@ -31,7 +31,14 @@ in
     else throw "Uknown OS";
 
   # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
+   nixpkgs.config = {
+     allowUnfree = true;
+    packageOverrides = pkgs: {
+      unstable = import nixos-unstable{
+        config = config.nixpkgs.config;
+      };
+    };
+  };
 
   # Common env variables
   environment.variables = {
