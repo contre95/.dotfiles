@@ -11,14 +11,14 @@
     enable = true;
     sshKeys = [ "B38C2E9A5402A38D13E510DADD0B71744684EA35" ];
     enableSshSupport = true;
-    defaultCacheTtl = 1300;
+    enableZshIntegration = true;
     enableExtraSocket = true;
+    defaultCacheTtl = 1300;
     grabKeyboardAndMouse = true;
-    # pinentryFlavor = "qt";
-    extraConfig = ''
-      pinentry-program ${pkgs.pinentry-qt}/bin/pinentry-qt
-      auto-expand-secmem
-    '';
+    # extraConfig = ''
+    #   pinentry-program ${pkgs.pinentry-gnome}/bin/pinentry-qt
+    #   auto-expand-secmem
+    # '';
   };
 
 }

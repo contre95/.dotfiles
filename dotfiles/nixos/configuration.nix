@@ -32,7 +32,6 @@ in
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-
   # Common env variables
   environment.variables = {
     PAGER = "";
