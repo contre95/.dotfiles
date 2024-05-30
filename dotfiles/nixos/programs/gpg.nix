@@ -1,9 +1,9 @@
-{ home-manager, config, ... }: {
+{ home-manager, config, pkgs, ... }: {
 
   programs.gpg = {
     enable = true;
     publicKeys = [
-      #      { source = ../contre.pub; trust = 5; }
+      { source = ../contre.pub; trust = 5; }
     ];
   };
 

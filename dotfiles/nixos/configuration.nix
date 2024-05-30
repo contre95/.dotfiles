@@ -27,11 +27,17 @@ in
         ./machines/${machineConfig}
         ./users/work.nix
       ]
-    else throw "Uknown OS" ;
+    else throw "Uknown OS";
 
-  # Enable common programs 
+  # Move this somewhere else with home manager or organize better
   programs.zsh.enable = os == "linux";
   programs.hyprland.enable = true;
+  programs.gnupg.agent = {
+    enable = true;
+    enableSSHSupport = true;
+    pinentryFlavor = "qt";
+  };
+
 
   # Environment variables
   environment.variables = {
@@ -52,17 +58,17 @@ in
   i18n.defaultLocale = "en_US.UTF-8";
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  # users.users =
-  #   if os == "linux" then {
-  #     contre = {
-  #       isNormalUser = true;
-  #       shell = pkgs.zsh;
-  #       uid = 1000;
-  #       description = "Yerno VIP aka Master Senior";
-  #       extraGroups = [ "wheel" ];
-  #       packages = with pkgs; [ ];
-  #     };
-  #   } else { };
+  users.users =
+    if os == "linux" then {
+      contre = {
+        isNormalUser = true;
+        shell = pkgs.zsh;
+        uid = 1000;
+        description = "Yerno VIP aka Master Senior";
+        extraGroups = [ "wheel" ];
+        packages = with pkgs; [ ];
+      };
+    } else { };
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
