@@ -84,7 +84,7 @@ in
       betterdiscordctl
       obs-studio
       alacritty
-      librewolf
+      # librewolf
       telegram-desktop
 
       # Desktop Environment 
