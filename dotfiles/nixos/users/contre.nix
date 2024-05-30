@@ -7,6 +7,16 @@ in
   users.users.contre.isNormalUser = true;
   home-manager.useGlobalPkgs = true;
 
+  # Use wayland pls uwu
+  environment.sessionVariables = {
+    NIXOS_OZONE_WL = "1";
+    GDK_BACKEND = "wayland,x11";
+    QT_QPA_PLATFORM = "wayland;xcb";
+    SDL_VIDEODRIVER = "wayland";
+    CLUTTER_BACKEND = "wayland";
+    MOZ_ENABLE_WAYLAND = "1";
+  };
+
   # Contre
   home-manager.users.contre = { pkgs, ... }: {
     programs.home-manager.enable = true;
@@ -96,15 +106,15 @@ in
       wl-clipboard
       hyprpicker
       hyprland
+      libsForQt5.qt5.qtwayland
+      # kdePackages.qtwayland
       wayland-utils
       wayland-protocols
       rofi-wayland-unwrapped
       polkit
-      dconf
-      gtk3
-      gtk4
-      yaru-theme
-      papirus-nord
+      # dconf
+      # gtk3
+      # gtk4
       xdg-desktop-portal
       xdg-desktop-portal-gtk
       xdg-desktop-portal-hyprland

@@ -1,25 +1,28 @@
 { pkgs, ... }:
 {
-# qt.enable = true;
-# qt.platformTheme = "gtk2";
-# qt.style = "bb10dark";
-
-# dconf.settings = {
-#   "org/gnome/desktop/interface" = {
-#     color-scheme = "prefer-dark";
-#   };
-# };
-  #   theme = {
-  #     name = "Yaru-Lavender-dark";
-  #     package = pkgs.yaru-theme;
-  #   };
-    # iconTheme = {
-    #   name = "Frost Blue 3";
-    #   package = pkgs.gnome.papirus-nord;
-    # };
-    # cursorTheme = {
-    #   name = "Adwaita";
-    #   package = pkgs.gnome.adwaita-icon-theme;
-    # };
-  # };
+  home.packages = [pkgs.glib]; # gsettings
+  # Use `nwg-look` to test out themes
+  gtk = {
+    enable = true;
+    theme = {
+      name = "Catppuccin-Mocha-Standard-Mauve-Dark";
+      package = pkgs.catppuccin-gtk.override {
+        accents = ["mauve"];
+        #tweaks = [ "rimless" "black" ];
+        variant = "mocha";
+      };
+    };
+    iconTheme = {
+      name = "Papirus-Dark";
+      package = pkgs.catppuccin-papirus-folders.override {
+        flavor = "mocha";
+        accent = "mauve";
+      };
+    };
+  };
+  # Symlinking the `~/.config/gtk-4.0/` folder is done by home-manager automatically
+  # Enable dark mode for certain apps
+  dconf.settings."org/gnome/desktop/interface" = {
+    color-scheme = "prefer-dark";
+  };
 }

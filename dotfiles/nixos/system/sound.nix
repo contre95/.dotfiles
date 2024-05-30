@@ -12,8 +12,10 @@
   services.pipewire = {
     enable = true;
     alsa.enable = true;
-    alsa.support32Bit = true;
     pulse.enable = true;
+    audio.enable = true;
+    wireplumber.enable = true;
+    alsa.support32Bit = true;
     # 24.05
     # wireplumber.extraConfig = {
     #   "monitor.bluez.properties" = {
