@@ -9,6 +9,8 @@ in
 
   # Contre
   home-manager.users.contre = { pkgs, ... }: {
+    home.username = "contre";
+    home.homeDirectory = "/home/contre";
 
     programs.home-manager.enable = true;
     home.stateVersion = "23.11";
@@ -16,7 +18,7 @@ in
      ../programs/gpg.nix
      # ../programs/gtk.nix
      ../programs/git.nix
-     # ../programs/librewolf.nix
+     ../programs/librewolf.nix
     ];
 
     home.packages = with pkgs; [
@@ -110,13 +112,31 @@ in
 
     ];
 
-   # home.file = {
-   #   neovim = {
-   #     recursive = true;
-   #     source = ../../nvim;
-   #     target = "~/.config/nvim";
-   #   };
-   # };
+   home.file = {
+     neovim = {
+       recursive = true;
+       source = /home/canus/dotfiles/nvim;
+       target = ".config/nvim";
+     };
+
+     rofi = {
+       recursive = true;
+       source = /home/canus/dotfiles/rofi;
+       target = ".config/rofi";
+     };
+
+     zshrc = {
+       recursive = false;
+       source = /home/canus/dotfiles/zsh/.zshrc;
+       target = "./.zshrc";
+     };
+     zsh = {
+       recursive = false;
+       source = /home/canus/dotfiles/zsh/.zsh;
+       target = "./.zsh";
+     };
+
+   };
   };
 
 }
