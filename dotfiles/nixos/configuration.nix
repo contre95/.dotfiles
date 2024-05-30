@@ -32,11 +32,11 @@ in
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-  # Environment variables
+
+  # Common env variables
   environment.variables = {
-    WLR_NO_HARDWARE_CURSORS = "1";
-    NIXOS_OZONE_WL = "1";
     PAGER = "";
+    MYENV = "${whichMachine}";
     EDITOR = "nvim";
   };
 

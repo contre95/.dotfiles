@@ -11,7 +11,6 @@
   # };
 
   environment.variables = {
-    MYENV = "notebook";
     MY_FOLDER = "/home/canus";
     SCR_PATH = "/home/canus/scripts";
   };
