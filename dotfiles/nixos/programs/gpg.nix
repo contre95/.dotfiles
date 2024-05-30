@@ -12,6 +12,11 @@
     enableSshSupport = true;
     defaultCacheTtl = 1300;
     enableExtraSocket = true;
+    pinentryFlavor = null;
+    extraConfig = ''
+      pinentry-program ${pkgs.pinentry-rofi}/bin/pinentry-rofi
+      auto-expand-secmem
+    '';
   };
 
 }

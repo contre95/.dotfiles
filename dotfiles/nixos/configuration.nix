@@ -29,15 +29,8 @@ in
       ]
     else throw "Uknown OS";
 
-  # Move this somewhere else with home manager or organize better
-  programs.zsh.enable = os == "linux";
-  programs.hyprland.enable = true;
-  programs.gnupg.agent = {
-    enable = true;
-    enableSSHSupport = true;
-    pinentryFlavor = "qt";
-  };
-
+  # Allow unfree packages
+  nixpkgs.config.allowUnfree = true;
 
   # Environment variables
   environment.variables = {
@@ -57,6 +50,12 @@ in
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
 
+  # Enable Graphics (Hyprland needs to be enable at a systems level)
+  programs.hyprland.enable = os == "linux";
+
+  # Enable Shell (Shell needs to be enable at a system level)
+  programs.zsh.enable = true;
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users =
     if os == "linux" then {
@@ -69,9 +68,6 @@ in
         packages = with pkgs; [ ];
       };
     } else { };
-
-  # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
 
   # Fonts
   fonts.packages = with pkgs; [
