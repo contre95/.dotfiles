@@ -1,7 +1,6 @@
 { config, pkgs, lib, ... }:
 let
   # Machine and environemnt definition
-  nixosUnstable = builtins.fetchTarball "https://github.com/NixOS/nixpkgs/archive/nixos-unstable.tar.gz";
   home-manager = builtins.fetchTarball "https://github.com/nix-community/home-manager/archive/release-23.11.tar.gz";
   whichMachine = builtins.getEnv "WHICH_MACHINE";
   machineConfig =
@@ -31,13 +30,8 @@ in
     else throw "Uknown OS";
 
   # Allow unfree packages
-   nixpkgs.config = {
-     allowUnfree = true;
-    packageOverrides = pkgs: {
-      unstable = import nixosUnstable{
-        config = config.nixpkgs.config;
-      };
-    };
+  nixpkgs.config = {
+    allowUnfree = true;
   };
 
   # Common env variables
