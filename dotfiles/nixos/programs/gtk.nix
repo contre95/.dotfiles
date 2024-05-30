@@ -1,27 +1,75 @@
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 {
-  home.packages = [pkgs.glib]; # gsettings
-  # Use `nwg-look` to test out themes
-  gtk = {
+  home.packages = [ pkgs.glib ]; # gsettings
+
+  home.sessionVariables = {
+    QT_AUTO_SCREEN_SCALE_FACTOR = 1;
+    XCURSOR_SIZE = "16";
+    GTK_USE_PORTAL = "1";
+  };
+
+  home.pointerCursor = {
+    package = pkgs.bibata-cursors;
+    name = "Bibata-Original-Ice";
+    size = 24;
+    gtk.enable = true;
+    x11.enable = true;
+  };
+
+
+  # qt = {
+  #   enable = true;
+  #   platformTheme = "gtk";
+  #   style = {
+  #     name = "adwaita-dark";
+  #     package = pkgs.adwaita-qt;
+  #   };
+  # };
+    qt = {
     enable = true;
-    theme = {
-      name = "Catppuccin-Mocha-Standard-Mauve-Dark";
-      package = pkgs.catppuccin-gtk.override {
-        accents = ["mauve"];
-        #tweaks = [ "rimless" "black" ];
-        variant = "mocha";
-      };
-    };
-    iconTheme = {
-      name = "Papirus-Dark";
-      package = pkgs.catppuccin-papirus-folders.override {
-        flavor = "mocha";
-        accent = "mauve";
+    platformTheme = "qtct";
+    style = {
+      name = "Catppuccin-Frappe-Dark";
+      package = pkgs.catppuccin-kde.override {
+        flavour = ["frappe"];
+        accents = ["pink"];
       };
     };
   };
-  # Symlinking the `~/.config/gtk-4.0/` folder is done by home-manager automatically
-  # Enable dark mode for certain apps
+
+  gtk = {
+    enable = true;
+
+    theme = {
+      name = "Orchis-Dark-Compact";
+      package = pkgs.orchis-theme;
+    };
+    #
+    # iconTheme = {
+    #   name = "Papirus-Dark";
+    #   package = pkgs.papirus-icon-theme;
+    # };
+    #
+    cursorTheme = {
+      name = "Bibata-Modern-Classic";
+      package = pkgs.bibata-cursors;
+    };
+
+    iconTheme = {
+      name = "Colloid";
+      package = pkgs.colloid-icon-theme;
+    };
+
+    # theme = {
+    #   name = "Yaru-dark";
+    #   package = pkgs.yaru-theme;
+    # };
+
+    font = {
+      name = "JetBrainsMono Nerd Font";
+    };
+
+  };
   dconf.settings."org/gnome/desktop/interface" = {
     color-scheme = "prefer-dark";
   };

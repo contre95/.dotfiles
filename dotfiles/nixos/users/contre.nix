@@ -99,6 +99,7 @@ in
       pinentry-qt
       xwayland
       hyprpaper
+      librsvg
       clipman
       gammastep
       libnotify
@@ -107,6 +108,7 @@ in
       hyprpicker
       hyprland
       libsForQt5.qt5.qtwayland
+      qt5.full
       # kdePackages.qtwayland
       wayland-utils
       wayland-protocols
