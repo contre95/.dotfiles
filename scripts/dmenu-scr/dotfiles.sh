@@ -20,9 +20,9 @@ case $var in
     'alacritty')
     choice="$MY_FOLDER/dotfiles/alacritty/alacritty.toml";;
     'zsh')
-    choice="$HOME/.zshrc";;
+    choice="$MY_FOLDER/dotfiles/zsh/.zshrc";;
     'tmux')
-    choice="$HOME/.tmux.conf";;
+    choice="$MY_FOLDER/dotfiles/tmux/.tmux.conf";;
 esac
 
 if [[ $choice ]];then

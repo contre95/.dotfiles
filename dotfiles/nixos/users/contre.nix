@@ -64,6 +64,7 @@ in
 
       # Essentials OS 
       fzf
+      wdisplays
       less
       gcc
       coreutils
