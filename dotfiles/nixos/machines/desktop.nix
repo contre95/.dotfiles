@@ -9,15 +9,16 @@
   xdg.portal.wlr.enable = true;
   services.dbus.enable = true;
 
+  # System packages for desktop
   environment.systemPackages = with pkgs; [ ];
 
-  # User specific
+  # User specific packages for desktop
   home-manager.users.contre = { pkgs, ... }: {
     home.packages = with pkgs; [
-      # obs-studio
+      obs-studio
     ];
   };
-
+  services.xserver.displayManager.startx.enable = true;
 
   # Enable OpenGL
   hardware.opengl = {
@@ -26,31 +27,15 @@
     driSupport32Bit = true;
   };
 
+  services.xserver.enable = true;
+  services.xserver.dpi = 100;
   # Load nvidia driver for Xorg and Wayland
   services.xserver.videoDrivers = [ "nvidia" ];
   hardware.nvidia.modesetting.enable = true;
-  hardware.nvidia.powerManagement.enable = false;
+  hardware.nvidia.powerManagement.enable = true;
   hardware.nvidia.powerManagement.finegrained = false;
   hardware.nvidia.open = false;
   hardware.nvidia.nvidiaSettings = true;
   hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.vulkan_beta;
-  # Special config to load the latest (535 or 550) driver for the support of the 4070 SUPER
-  # hardware.nvidia.package =
-  #   let
-  #     rcu_patch = pkgs.fetchpatch {
-  #       url = "https://github.com/gentoo/gentoo/raw/c64caf53/x11-drivers/nvidia-drivers/files/nvidia-drivers-470.223.02-gpl-pfn_valid.patch";
-  #       hash = "sha256-eZiQQp2S/asE7MfGvfe6dA/kdCvek9SYa/FFGp24dVg=";
-  #     };
-  #   in
-  #   config.boot.kernelPackages.nvidiaPackages.mkDriver {
-  #
-  #     version = "550.40.07";
-  #     sha256_64bit = "sha256-KYk2xye37v7ZW7h+uNJM/u8fNf7KyGTZjiaU03dJpK0=";
-  #     sha256_aarch64 = "sha256-AV7KgRXYaQGBFl7zuRcfnTGr8rS5n13nGUIe3mJTXb4=";
-  #     openSha256 = "sha256-mRUTEWVsbjq+psVe+kAT6MjyZuLkG2yRDxCMvDJRL1I=";
-  #     settingsSha256 = "sha256-c30AQa4g4a1EHmaEu1yc05oqY01y+IusbBuq+P6rMCs=";
-  #     persistencedSha256 = "sha256-11tLSY8uUIl4X/roNnxf5yS2PQvHvoNjnd2CB67e870=";
-  #
-  #     patches = [ rcu_patch ];
-  #   };
+
 }

@@ -1,6 +1,7 @@
 { config, pkgs, lib, ... }:
 let
   # Machine and environemnt definition
+  unstable = import <nixos-unstable> { config = { allowUnfree = true; }; };
   home-manager = builtins.fetchTarball "https://github.com/nix-community/home-manager/archive/release-23.11.tar.gz";
   whichMachine = builtins.getEnv "WHICH_MACHINE";
   machineConfig =
@@ -18,6 +19,7 @@ in
       ./system/bluetooth.nix
       ./system/networking.nix
       ./system/openssh.nix
+      ./system/gpg.nix
       ./users/contre.nix
       ./machines/${machineConfig}
       /etc/nixos/hardware-configuration.nix
@@ -39,9 +41,11 @@ in
     PAGER = "";
     MYENV = "${whichMachine}";
     EDITOR = "nvim";
-    MY_FOLDER = if os == "linux" then "/home/canus" else "/Users/lucas.contreras/.dotfiles"; 
+    MY_FOLDER = if os == "linux" then "/home/canus" else "/Users/lucas.contreras/.dotfiles";
     SCR_PATH = "$MY_FOLDER/scripts";
   };
+
+
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -59,17 +63,9 @@ in
     xwayland.enable = true;
   };
 
-  # Enable GPG at a system level 
-  programs.gnupg.agent = {
-    enable = true;
-    enableSSHSupport = true;
-  };
-
-  # Enable GPG Smartcards (Like Yubikeys)
-  hardware.gpgSmartcards.enable = true;
-
-  # Enable Shell (Shell needs to be enable at a system level)
+  # Enable/Disable deafult system programs 
   programs.zsh.enable = true;
+  programs.nano.enable = false;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users =
@@ -86,7 +82,7 @@ in
 
   # Fonts
   fonts.packages = with pkgs; [
-    (nerdfonts.override { fonts = [ "FiraCode" "JetBrainsMono" "Iosevka" ]; })
+    (unstable.nerdfonts.override { fonts = [ "JetBrainsMono" "Iosevka" "FiraCode" ]; })
   ];
 
   # This value determines the NixOS release from which the default

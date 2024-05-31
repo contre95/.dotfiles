@@ -1,6 +1,5 @@
 { pkgs, home-manager, config, ... }:
 let
-  # Unstable packages only for <unstable.package_name>
   unstable = import <nixos-unstable> { config = { allowUnfree = true; }; };
 in
 {
@@ -16,7 +15,6 @@ in
     CLUTTER_BACKEND = "wayland";
     MOZ_ENABLE_WAYLAND = "1";
   };
-
   # Contre
   home-manager.users.contre = { pkgs, ... }: {
     programs.home-manager.enable = true;
@@ -56,7 +54,7 @@ in
       tree-sitter
       kubectl
       tmux
-      pass
+      (pass.withExtensions (ext: with ext; [ pass-checkup pass-otp ]))
       gnupg
       vlc
       mpv
@@ -68,6 +66,7 @@ in
       less
       gcc
       coreutils
+      feh
       git
       bash
       btop
