@@ -39,6 +39,8 @@ in
     PAGER = "";
     MYENV = "${whichMachine}";
     EDITOR = "nvim";
+    MY_FOLDER = if os == "linux" then "/home/canus" else "/Users/lucas.contreras/.dotfiles"; 
+    SCR_PATH = "$MY_FOLDER/scripts";
   };
 
   # Bootloader.
@@ -52,8 +54,15 @@ in
   i18n.defaultLocale = "en_US.UTF-8";
 
   # Enable Graphics (Hyprland needs to be enable at a systems level)
-  programs.hyprland.enable = os == "linux";
+  programs.hyprland = {
+    enable = os == "linux";
+    xwayland.enable = true;
+  };
 
+  # Enable Shell (Shell needs to be enable at a system level)
+  hardware.gpgSmartcards.enable = true;
+  # hardware.nitrokey.enable = true;
+  # users.users.mentos.extraGroups = [ "nitrokey" ];
   # Enable Shell (Shell needs to be enable at a system level)
   programs.zsh.enable = true;
 
