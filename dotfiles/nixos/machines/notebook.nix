@@ -10,8 +10,4 @@
   #   ];
   # };
 
-  environment.variables = {
-    MY_FOLDER = "/home/canus";
-    SCR_PATH = "/home/canus/scripts";
-  };
 }
