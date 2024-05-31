@@ -59,10 +59,15 @@ in
     xwayland.enable = true;
   };
 
-  # Enable Shell (Shell needs to be enable at a system level)
+  # Enable GPG at a system level 
+  programs.gnupg.agent = {
+    enable = true;
+    enableSSHSupport = true;
+  };
+
+  # Enable GPG Smartcards (Like Yubikeys)
   hardware.gpgSmartcards.enable = true;
-  # hardware.nitrokey.enable = true;
-  # users.users.mentos.extraGroups = [ "nitrokey" ];
+
   # Enable Shell (Shell needs to be enable at a system level)
   programs.zsh.enable = true;
 
