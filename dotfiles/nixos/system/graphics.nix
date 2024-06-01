@@ -3,10 +3,10 @@
 
   environment.systemPackages = with pkgs; [
     hyprland
+    xdg-desktop-portal-gtk
     xdg-desktop-portal-hyprland
     xwayland
     wlroots
-    xdg-launch
   ];
 
   environment.variables = {
@@ -15,7 +15,7 @@
     # QT_QPA_PLATFORM = "wayland;xcb";
     LIBVA_DRIVER_NAME = "nvidia";
     XMODIFIERS = "@im=ibus";
-    MOZ_DBUS_REMOTE= "1";
+    MOZ_DBUS_REMOTE = "1";
     GTK_IM_MODULE = "ibus";
     QT_IM_MODULE = "ibus";
     MOZ_ENABLE_WAYLAND = "1";
@@ -55,13 +55,13 @@
 
   xdg.portal = {
     enable = true;
-    # xdgOpenUsePortal = true;
-    # config = {
-    #   common.default = [ "hyprland" ];
-    #   hyprland.default = [ "gtk" "hyprland" ];
-    # };
-    #
-    # extraPortals = [ pkgs.xdg-desktop-portal-gtk pkgs.xdg-desktop-portal-wlr ];
+    xdgOpenUsePortal = true;
+    config = {
+      common.default = [ "gtk" ];
+      hyprland.default = [ "gtk" "hyprland" ];
+    };
+
+    extraPortals = [ pkgs.xdg-desktop-portal-gtk pkgs.xdg-desktop-portal-wlr ];
   };
 
 }
