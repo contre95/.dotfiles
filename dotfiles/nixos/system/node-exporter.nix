@@ -1,6 +1,6 @@
 { lib, pkgs, ... }: {
   # services.prometheus.exporters.node.enable = true;
-
+  
   services.prometheus.exporters.node =  {
     port = 9100;
     enable = true;
@@ -9,6 +9,7 @@
       "diskstats"
       "entropy"
       "filefd"
+      "cpu_vulnerabilities"
       "filesystem"
       "loadavg"
       "mdadm"

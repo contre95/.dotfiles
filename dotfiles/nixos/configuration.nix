@@ -18,19 +18,18 @@ in
       ./system/sound.nix
       ./system/bluetooth.nix
       ./system/networking.nix
-      ./system/exporter.nix
+      ./system/node-exporter.nix
       ./system/graphics.nix
       ./system/openssh.nix
       ./system/gpg.nix
       ./users/contre.nix
       ./machines/${machineConfig}
       /etc/nixos/hardware-configuration.nix
-    ] else if "${os}" == "macos" then
-      [
-        (import "${home-manager}/nixos")
-        ./machines/${machineConfig}
-        ./users/work.nix
-      ]
+    ] else if "${os}" == "macos" then [
+      (import "${home-manager}/nixos")
+      ./machines/${machineConfig}
+      ./users/work.nix
+    ]
     else throw "Uknown OS";
 
   # Allow unfree packages
