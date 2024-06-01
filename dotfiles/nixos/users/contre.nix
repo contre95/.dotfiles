@@ -16,6 +16,7 @@ in
     MOZ_ENABLE_WAYLAND = "1";
   };
   # Contre
+
   home-manager.users.contre = { pkgs, ... }: {
     programs.home-manager.enable = true;
     home.username = "contre";
@@ -24,7 +25,6 @@ in
     imports = [
       ../programs/gpg.nix
       ../programs/gtk.nix
-      # ../programs/zsh.nix
       ../programs/git.nix
       ../programs/librewolf.nix
     ];
