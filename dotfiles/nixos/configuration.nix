@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }:
+{lib, pkgs, ... }:
 let
   # Machine and environemnt definition
   unstable = import <nixos-unstable> { config = { allowUnfree = true; }; };
