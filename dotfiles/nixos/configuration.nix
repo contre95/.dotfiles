@@ -14,21 +14,23 @@ in
 
   imports =
     if "${os}" == "linux" then [
-      (import "${home-manager}/nixos")
+      ./system/gpg.nix
       ./system/sound.nix
+      ./users/contre.nix
+      ./system/openssh.nix
+      ./system/graphics.nix
       ./system/bluetooth.nix
+      ./system/containers.nix
       ./system/networking.nix
       ./system/node-exporter.nix
-      ./system/graphics.nix
-      ./system/openssh.nix
-      ./system/gpg.nix
-      ./users/contre.nix
       ./machines/${machineConfig}
+      (import "${home-manager}/nixos")
       /etc/nixos/hardware-configuration.nix
     ] else if "${os}" == "macos" then [
-      (import "${home-manager}/nixos")
-      ./machines/${machineConfig}
+      ./system/gpg.nix
       ./users/work.nix
+      ./system/containers.nix
+      (import "${home-manager}/nixos")
     ]
     else throw "Uknown OS";
 
