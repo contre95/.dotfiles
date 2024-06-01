@@ -3,7 +3,6 @@
     "layer": "bottom",
     "position": "bottom",
     "modules-left": [
-      // "custom/arch",
       "hyprland/workspaces"
     ],
     "modules-center": [
@@ -14,14 +13,14 @@
       "custom/pacman",
       // "disk",
       "custom/ip",
-      "memory",
-      "cpu",
+      "custom/audio",
+      // "memory",
+      // "cpu",
       "wireplumber",
       "battery",
       "custom/btc",
       "custom/notification",
-      "custom/pipewire"
-      // "custom/mic"
+      "custom/mic"
     ],
     "modules-right": [
       "clock"
@@ -37,17 +36,6 @@
       "tooltip": false,
       "on-click": "sh $HOME/.config/rofi/bin/powermenu"
     },
-    // "custom/mic": {
-    //   "on-click": "$MY_FOLDER/Scripts/audio-scr/mic-mute.sh",
-    //   "exec": "$MY_FOLDER/Scripts/waybar-scr/mic-status.sh",
-    //   "exec-if": "true",
-    //   "format": "{}",
-    //   "on-scroll-up": "pactl set-source-volume 0 +5%",
-    //   "on-scroll-down": "pactl set-source-volume 0 -5%",
-    //   "tooltip": false,
-    //   "signal": 1,
-    //   "interval": 2
-    // },
     "custom/notification": {
       "on-click": "$MY_FOLDER/Scripts/notification-scr/notify-toggle-mute.sh",
       "exec": "$MY_FOLDER/Scripts/waybar-scr/notify-status.sh",
@@ -136,14 +124,42 @@
         "󰂁"
       ]
     },
+     "custom/audio": {
+      "format": "<span color='#F8D987'></span> {}",
+      "interval": 1,
+      "on-scroll-up": "wpctl set-volume @DEFAULT_SINK@ 0.02+",
+      "on-scroll-down": "wpctl set-volume @DEFAULT_SINK@ 0.02-",
+      // "on-click": "wpctl set-default $(pamixer --list-sinks | grep -v $(pamixer --get-default-sink | tail -n 1 | awk -F' ' '{print $2}' | tr -d '\"') | grep -v 'Sinks:' | shuf | head -n 1 | awk -F' ' '{print $2}' | tr -d '\"')",
+      "exec": "pamixer --get-default-sink | tail -n 1 | awk -F'\".+\" ' '{print $2}' | tr -d '\"'"
+    },
+    "custom/notification": {
+      "on-click": "$SCR_PATH/notification-scr/notify-toggle-mute.sh",
+      "exec": "$SCR_PATH/waybar-scr/notify-status.sh",
+      "exec-if": "true",
+      "format": "{}",
+      "tooltip": false,
+      "signal": 1,
+      "interval": 2
+    },
+    "custom/mic": {
+      "on-click": "$SCR_PATH/audio-scr/mic-mute.sh",
+      "exec": "$SCR_PATH/waybar-scr/mic-status.sh",
+      "exec-if": "true",
+      "format": "{}",
+      "on-scroll-up": "wpctl set-volume @DEFAULT_SOURCE@ 0.02+",
+      "on-scroll-down": "wpctl set-volume @DEFAULT_SOURCE@ 0.02-",
+      "tooltip": false,
+      "signal": 1,
+      "interval": 2
+    },
     "wireplumber": {
-      "format": "{icon} {volume}%",
-      "format-muted": "<span color='#C57070'></span> --",
+      "format": "{volume}% {icon}",
+      "format-muted": " -- <span color='#C57070'></span>",
       "on-click": "pavucontrol",
       "scroll-step": 0.2,
-      "on-click-middle": "pw-volume mute toggle ",
-      "on-scroll-up": "pw-volume change +5%",
-      "on-scroll-down": "pw-volume change -5%",
+      "on-click-middle": "wpctl set-mute @DEFAULT_SINK@ toggle",
+      "on-scroll-up": "wpctl set-volume @DEFAULT_SINK@ 0.02+",
+      "on-scroll-down": "wpctl set-volume @DEFAULT_SINK@ 0.02-",
       "format-icons": [
         "",
         "",
