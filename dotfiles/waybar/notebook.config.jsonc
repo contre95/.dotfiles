@@ -13,7 +13,7 @@
       "custom/pacman",
       // "disk",
       "custom/ip",
-      "custom/audio",
+      // "custom/audio",
       // "memory",
       // "cpu",
       "wireplumber",
