@@ -97,7 +97,7 @@ case "$chosen" in
 	center "librewolf --kiosk -P $LW_PROFILE --new-window http://192.168.0.174:6595"
 	;;
 "ChatGPT")
-	librewolf --kiosk -P $LW_PROFILE --new-window https://chat.openai.com/chat
+	corner "librewolf --kiosk -P $LW_PROFILE --new-window https://chat.openai.com/chat"
 	;;
 "OpenAsistant")
 	librewolf --kiosk -P $LW_PROFILE --new-window https://open-assistant.io/chat

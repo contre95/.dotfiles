@@ -19,7 +19,17 @@ local use = packer.use
 
 return require("packer").startup(function()
   use("wbthomason/packer.nvim")
-  use("github/copilot.vim")
+  -- use("github/copilot.vim")
+  use {
+    "jcdickinson/codeium.nvim",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "hrsh7th/nvim-cmp",
+    },
+    config = function()
+      require("codeium").setup({})
+    end,
+  }
   use {
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",
@@ -43,7 +53,8 @@ return require("packer").startup(function()
   use({ "nvim-lualine/lualine.nvim", requires = { "kyazdani42/nvim-web-devicons", opt = true } })
   -- Navigation
   use("akinsho/nvim-bufferline.lua")
-  use({ "nvim-telescope/telescope.nvim", requires = { { "nvim-lua/plenary.nvim"} } })
+  use({ "nvim-telescope/telescope.nvim", requires = { { "nvim-lua/plenary.nvim" } } })
+
   use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
   use({ 'nvim-tree/nvim-web-devicons' })
   use({

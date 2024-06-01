@@ -1,4 +1,4 @@
-{ pkgs, home-manager, config, ... }:
+{ pkgs, ... }:
 let
   unstable = import <nixos-unstable> { config = { allowUnfree = true; }; };
 in
@@ -6,25 +6,25 @@ in
   users.users.contre.isNormalUser = true;
   home-manager.useGlobalPkgs = true;
 
-  # Use wayland pls uwu
-  environment.sessionVariables = {
-    NIXOS_OZONE_WL = "1";
-    GDK_BACKEND = "wayland,x11";
-    QT_QPA_PLATFORM = "wayland;xcb";
-    SDL_VIDEODRIVER = "wayland";
-    CLUTTER_BACKEND = "wayland";
-    MOZ_ENABLE_WAYLAND = "1";
-  };
-  # Contre
+  environment.variables = { };
 
+  # Contre
   home-manager.users.contre = { pkgs, ... }: {
+    xdg.mimeApps.defaultApplications = {
+      "text/html" = "org.librewolf.librewolf.desktop";
+      "x-scheme-handler/http" = "org.librewolf.librewolf.desktop";
+      "x-scheme-handler/https" = "org.librewolf.librewolf.desktop";
+      "x-scheme-handler/about" = "org.librewolf.librewolf.desktop";
+      "x-scheme-handler/unknown" = "org.librewolf.librewolf.desktop";
+    };
     programs.home-manager.enable = true;
     home.username = "contre";
     home.homeDirectory = "/home/contre";
-    home.stateVersion = "23.11";
+    home.stateVersion = "24.05";
     imports = [
       ../programs/gpg.nix
       ../programs/gtk.nix
+      ../programs/test.nix
       ../programs/git.nix
       ../programs/librewolf.nix
     ];
@@ -35,12 +35,18 @@ in
       jq
       cargo
       python3
+      terraform
+
 
       # LSP
       sqls
       black
       gopls
+      pyright
       nil
+      tfsec
+      tflint
+      terraform-ls
       nixpkgs-fmt
       yamlfmt
       marksman
@@ -89,21 +95,18 @@ in
       discord
       betterdiscordctl
       alacritty
-      # librewolf
       telegram-desktop
 
       # Desktop Environment 
       pcmanfm
       dunst
       unstable.waybar
-      wlroots
       swappy
       grim
       slurp
       gnome.zenity
       wf-recorder
       pinentry-qt
-      xwayland
       hyprpaper
       librsvg
       clipman
@@ -112,18 +115,12 @@ in
       hyprshade
       wl-clipboard
       hyprpicker
-      hyprland
       libsForQt5.qt5.qtwayland
       qt5.full
-      # kdePackages.qtwayland
       wayland-utils
       wayland-protocols
-      rofi-wayland-unwrapped
+      rofi-wayland
       polkit
-      # dconf
-      # gtk3
-      # gtk4
-      xdg-desktop-portal-hyprland
 
     ];
 
@@ -187,7 +184,6 @@ in
         source = /home/canus/dotfiles/zsh/.zsh;
         target = "./.zsh";
       };
-
     };
   };
 

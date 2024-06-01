@@ -19,23 +19,23 @@ cmp.setup({
     }),
 
     --["<Down>"] = cmp.mapping(function(fallback)
-      --if cmp.visible() then
-        --cmp.select_next_item()
-      --elseif vim.fn["vsnip#available"](1) == 1 then
-        --feedkey("<Plug>(vsnip-expand-or-jump)", "")
-      --elseif has_words_before() then
-        --cmp.complete()
-      --else
-        --fallback() -- The fallback function sends a already mapped key. In this case, it's probably `<Tab>`.
-      --end
+    --if cmp.visible() then
+    --cmp.select_next_item()
+    --elseif vim.fn["vsnip#available"](1) == 1 then
+    --feedkey("<Plug>(vsnip-expand-or-jump)", "")
+    --elseif has_words_before() then
+    --cmp.complete()
+    --else
+    --fallback() -- The fallback function sends a already mapped key. In this case, it's probably `<Tab>`.
+    --end
     --end, { "i", "s" }),
 
     --["<Up>"] = cmp.mapping(function()
-      --if cmp.visible() then
-        --cmp.select_prev_item()
-      --elseif vim.fn["vsnip#jumpable"](-1) == 1 then
-        --feedkey("<Plug>(vsnip-jump-prev)", "")
-      --end
+    --if cmp.visible() then
+    --cmp.select_prev_item()
+    --elseif vim.fn["vsnip#jumpable"](-1) == 1 then
+    --feedkey("<Plug>(vsnip-jump-prev)", "")
+    --end
     --end, { "i", "s" }),
 
     ["<S-Tab>"] = cmp.mapping(function()
@@ -69,8 +69,13 @@ cmp.setup({
   sources = cmp.config.sources({
     { name = 'path' },
     { name = 'vsnip' },
+    {
+      name = 'codeium',
+      group_index = 1,
+      priority = 100,
+    },
     { name = 'nvim_lsp' },
-    { name = 'buffer', keyword_length = 3, },
+    { name = 'buffer',  keyword_length = 3, },
   }),
 
   snippet = {
@@ -87,6 +92,7 @@ cmp.setup({
         buffer = "[buf]",
         nvim_lsp = "[LSP]",
         path = "[path]",
+        codeium = "[Codeium]",
         vsnip = "[snip]",
         gh_issues = "[issues]",
         tn = "[TabNine]",

@@ -55,7 +55,15 @@ vim.diagnostic.config({
 -----------------------------
 
 --Json
-lspconfig.jsonls.setup({ capabilities = capabilities })
+lspconfig.jsonls.setup {
+    commands = {
+      Format = {
+        function()
+          vim.lsp.buf.range_formatting({},{0,0},{vim.fn.line("$"),0})
+        end
+      }
+    }
+}
 
 -- Yamls
 lspconfig.yamlls.setup({
@@ -219,39 +227,6 @@ lspconfig.emmet_ls.setup({
     },
   }
 })
--- Vue
-lspconfig.vuels.setup {
-  on_attach = function(client)
-    client.server_capabilities.document_formatting = true
-  end,
-  capabilities = capabilities,
-  settings = {
-    vetur = {
-      completion = {
-        autoImport = true,
-        useScaffoldSnippets = true
-      },
-      format = {
-        defaultFormatter = {
-          html = "prettier",
-          js = "prettier",
-          ts = "prettier",
-        }
-      },
-      validation = {
-        template = true,
-        script = true,
-        style = true,
-        templateProps = true,
-        interpolation = true
-      },
-      experimental = {
-        templateInterpolationService = true
-      }
-    }
-  },
-  root_dir = util.root_pattern("header.php", "package.json", "style.css", 'webpack.config.js')
-}
 
 -- EFM Lang server
 -- Linters, Prettiers and Checkers for EFM
