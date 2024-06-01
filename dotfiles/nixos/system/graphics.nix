@@ -17,7 +17,7 @@
     GTK_IM_MODULE = "ibus";
     QT_IM_MODULE = "ibus";
     MOZ_ENABLE_WAYLAND = "1";
-    MOZ_USE_XINPUT2 = "1";
+    # MOZ_USE_XINPUT2 = "1";
     GDK_SCALE = "1";
     GBM_BACKEND = "nvidia-drm";
     BROWSER = "librewolf";
@@ -32,7 +32,6 @@
     # WLR_DRM_DEVICES = "/dev/dri/card1:/dev/dri/card0";
     CLUTTER_BACKEND = "wayland";
     __GLX_VENDOR_LIBRARY_NAME = "nvidia";
-    __NV_PRIME_RENDER_OFFLOAD = "1";
     XDG_CURRENT_DESKTOP = "Hyprland";
     XDG_SESSION_DESKTOP = "Hyprland";
     XDG_SESSION_TYPE = "wayland";
