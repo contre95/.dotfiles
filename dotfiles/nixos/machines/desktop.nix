@@ -1,4 +1,4 @@
-{ config, pkgs, home-manager, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   # Environment Packages
@@ -10,16 +10,29 @@
   services.dbus.enable = true;
 
   # System packages for desktop
-  environment.systemPackages = with pkgs; [ ];
+  programs.steam = {
+    enable = true;
+    remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
+    dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
+    gamescopeSession.enable = true;
+  };
+
+  nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
+    "steam"
+    "steam-original"
+    "steam-run"
+  ];
 
   # User specific packages for desktop
   home-manager.users.contre = { pkgs, ... }: {
-
     programs.obs-studio = {
       enable = true;
       plugins = with pkgs.obs-studio-plugins; [
         wlrobs
         obs-pipewire-audio-capture
+        advanced-scene-switcher
+        input-overlay
+        obs-backgroundremoval
       ];
     };
 
@@ -45,6 +58,11 @@
   services.xserver.displayManager.startx.enable = true;
   hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.vulkan_beta;
 
+  # Mount disks
+  fileSystems."/mnt/games" = {
+    device = "/dev/sda1";
+    fsType = "ext4"; # Replace with your filesystem type
+  };
   # Kernel Packages
 
   boot.kernelParams = [ "nvidia-drm.modeset=1" ];

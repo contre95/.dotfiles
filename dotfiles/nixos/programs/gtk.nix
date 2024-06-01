@@ -16,23 +16,14 @@
     x11.enable = true;
   };
 
-
-  # qt = {
-  #   enable = true;
-  #   platformTheme = "gtk";
-  #   style = {
-  #     name = "adwaita-dark";
-  #     package = pkgs.adwaita-qt;
-  #   };
-  # };
-    qt = {
+  qt = {
     enable = true;
     platformTheme.name = "qtct";
     style = {
       name = "Catppuccin-Frappe-Dark";
       package = pkgs.catppuccin-kde.override {
-        flavour = ["frappe"];
-        accents = ["pink"];
+        flavour = [ "frappe" ];
+        accents = [ "pink" ];
       };
     };
   };
@@ -44,12 +35,7 @@
       name = "Orchis-Dark-Compact";
       package = pkgs.orchis-theme;
     };
-    #
-    # iconTheme = {
-    #   name = "Papirus-Dark";
-    #   package = pkgs.papirus-icon-theme;
-    # };
-    #
+
     cursorTheme = {
       name = "Bibata-Modern-Classic";
       package = pkgs.bibata-cursors;
@@ -59,7 +45,6 @@
       name = "Colloid";
       package = pkgs.colloid-icon-theme;
     };
-
 
     font = {
       name = "JetBrainsMono Nerd Font";
