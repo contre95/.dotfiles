@@ -60,10 +60,6 @@
       package = pkgs.colloid-icon-theme;
     };
 
-    # theme = {
-    #   name = "Yaru-dark";
-    #   package = pkgs.yaru-theme;
-    # };
 
     font = {
       name = "JetBrainsMono Nerd Font";
