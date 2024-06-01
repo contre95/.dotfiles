@@ -10,6 +10,7 @@
   sound.enable = true;
   security.rtkit.enable = true;
   services.pipewire = {
+    systemWide = true;
     enable = true;
     alsa.enable = true;
     pulse.enable = true;

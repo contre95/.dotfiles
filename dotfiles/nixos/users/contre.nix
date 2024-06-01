@@ -24,6 +24,7 @@ in
     imports = [
       ../programs/gpg.nix
       ../programs/gtk.nix
+      # ../programs/zsh.nix
       ../programs/git.nix
       ../programs/librewolf.nix
     ];
@@ -53,12 +54,14 @@ in
       autojump
       awscli
       tree
+      zbar
       tree-sitter
       kubectl
       tmux
       (pass.withExtensions (ext: with ext; [ pass-checkup pass-otp ]))
       gnupg
       vlc
+      cliphist
       mpv
       neovim
 
@@ -70,6 +73,7 @@ in
       coreutils
       feh
       git
+      prometheus-node-exporter
       bash
       btop
       nmap
@@ -97,6 +101,7 @@ in
       grim
       slurp
       gnome.zenity
+      wf-recorder
       pinentry-qt
       xwayland
       hyprpaper
@@ -118,8 +123,6 @@ in
       # dconf
       # gtk3
       # gtk4
-      xdg-desktop-portal
-      xdg-desktop-portal-gtk
       xdg-desktop-portal-hyprland
 
     ];

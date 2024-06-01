@@ -1,4 +1,4 @@
-{ config, lib, pkgs, modulesPath, home-manager, ... }:
+{ config, pkgs, home-manager, ... }:
 
 {
   # Environment Packages
@@ -19,7 +19,6 @@
       enable = true;
       plugins = with pkgs.obs-studio-plugins; [
         wlrobs
-        obs-backgroundremoval
         obs-pipewire-audio-capture
       ];
     };
@@ -34,7 +33,7 @@
     driSupport32Bit = true;
   };
 
-  services.xserver.dpi = 100;
+
   services.xserver.enable = true;
   services.xserver.videoDrivers = [ "nvidia" ];
   # Nvidia
@@ -48,6 +47,7 @@
 
   # Kernel Packages
 
+  boot.kernelParams = [ "nvidia-drm.modeset=1" ];
   # OBS Virtual camera 
   boot.extraModulePackages = with config.boot.kernelPackages; [
     v4l2loopback

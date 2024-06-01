@@ -18,6 +18,8 @@ in
       ./system/sound.nix
       ./system/bluetooth.nix
       ./system/networking.nix
+      ./system/exporter.nix
+      ./system/graphics.nix
       ./system/openssh.nix
       ./system/gpg.nix
       ./users/contre.nix
@@ -46,7 +48,6 @@ in
   };
 
 
-
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -57,14 +58,12 @@ in
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
 
-  # Enable Graphics (Hyprland needs to be enable at a systems level)
-  programs.hyprland = {
-    enable = os == "linux";
-    xwayland.enable = true;
-  };
+  # Default Shell
+  programs.zsh.enable = true;
+  users.defaultUserShell = pkgs.zsh;
+  environment.shells = with pkgs; [ zsh ];
 
   # Enable/Disable deafult system programs 
-  programs.zsh.enable = true;
   programs.nano.enable = false;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
@@ -76,12 +75,11 @@ in
         uid = 1000;
         description = "Yerno VIP aka Master Senior";
         extraGroups = [ "wheel" ];
-        packages = with pkgs; [ ];
       };
     } else { };
 
   # Fonts
-  fonts.packages = with pkgs; [
+  fonts.packages = [
     (unstable.nerdfonts.override { fonts = [ "JetBrainsMono" "Iosevka" "FiraCode" ]; })
   ];
 

@@ -1,29 +1,14 @@
-{ home-manager, ... }: {
+{ ... }: {
   programs.librewolf = {
     enable = true;
-
     settings = {
-      "middlemouse.paste" = false;
-
-      "ui.use_activity_cursor" = true;
-
-      "browser.download.useDownloadDir" = true;
-      "browser.tabs.insertAfterCurrent" = true;
-      "browser.tabs.warnOnClose" = true;
+      "webgl.disabled" = false;
+      "privacy.resistFingerprinting" = false;
+      "privacy.clearOnShutdown.history" = false;
+      "privacy.clearOnShutdown.cookies" = false;
+      "network.cookie.lifetimePolicy" = 0;
       "browser.toolbars.bookmarks.visibility" = "never";
-      "browser.quitShortcut.disabled" = true;
-      "browser.sessionstore.restore_pinned_tabs_on_demand" = true;
-
-      "browser.urlbar.suggest.bookmark" = false;
-      "browser.urlbar.suggest.engines" = false;
-      "browser.urlbar.suggest.history" = false;
-      "browser.urlbar.suggest.openpage" = false;
-      "browser.urlbar.suggest.topsites" = false;
-
-      "sidebar.position_start" = false;
-      "findbar.highlightAll" = true;
-
-      "xpinstall.signatures.required" = false;
+      "privacy.clearOnShutdown.sessions" = false;
     };
   };
 }

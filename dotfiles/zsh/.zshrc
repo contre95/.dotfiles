@@ -104,6 +104,7 @@ alias copy='xclip -sel clip'
 alias cdr='cd $(git rev-parse --show-toplevel)'
 alias here='pcmanfm .'
 alias ns="kubectl get namespaces -o json | jq '.items[].metadata.name' | tr -d '\"' | fzf"
+alias ch="cliphist list | fzf | cliphist decode"
 alias kns="kubectl config set-context --current --namespace=\`ns\`"
 alias k='kubectl'
 alias ct="mpg123 --quiet $MY_FOLDER/Library/sounds/ct.mp3"
