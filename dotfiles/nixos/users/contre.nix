@@ -185,9 +185,16 @@ in
         source = /home/canus/dotfiles/zsh/.zsh;
         target = "./.zsh";
       };
+
+      alacritty = {
+        recursive = true;
+        source = /home/canus/dotfiles/alacritty;
+        target = ".config/alacritty";
+      };
+
     };
   };
-
 }
+
 
 

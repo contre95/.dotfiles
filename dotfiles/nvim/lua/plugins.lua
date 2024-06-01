@@ -1,4 +1,5 @@
--- Install Packer
+-- Install Packerplugplug
+--
 local install_path = vim.fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
 
 if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
@@ -21,24 +22,11 @@ return require("packer").startup(function()
   use("wbthomason/packer.nvim")
   -- use("github/copilot.vim")
   use {
-    "jcdickinson/codeium.nvim",
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-      "hrsh7th/nvim-cmp",
-    },
-    config = function()
-      require("codeium").setup({})
-    end,
-  }
-  use {
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",
     run = ":MasonUpdate" -- :MasonUpdate updates registry contents
   }
-  -- use({ "stevearc/oil.nvim", config = function() require("oil").setup() end, })
   -- Colorcheme
-  -- use { "kabouzeid/nvim-jellybeans", requires = "rktjmp/lush.nvim" }
-  use({ 'marko-cerovac/material.nvim' })
   use({ 'rebelot/kanagawa.nvim' })
   use("kvrohit/rasmus.nvim")
   use("norcalli/nvim-colorizer.lua")

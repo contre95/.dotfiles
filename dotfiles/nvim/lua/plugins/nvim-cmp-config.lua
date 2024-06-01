@@ -69,11 +69,7 @@ cmp.setup({
   sources = cmp.config.sources({
     { name = 'path' },
     { name = 'vsnip' },
-    {
-      name = 'codeium',
-      group_index = 1,
-      priority = 100,
-    },
+    { name = 'codeium', },
     { name = 'nvim_lsp' },
     { name = 'buffer',  keyword_length = 3, },
   }),
