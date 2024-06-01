@@ -1,6 +1,6 @@
 [
   {
-    "layer": "top",
+   "layer": "top",
     "output": "HDMI-A-1",
     "position": "bottom",
     "modules-left": [
@@ -80,14 +80,14 @@
     "custom/audio": {
       "format": "<span color='#F8D987'></span> {}",
       "interval": 1,
-      "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
-      "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%",
-      "on-click": "pactl set-default-sink $(pamixer --list-sinks | grep -v $(pamixer --get-default-sink | tail -n 1 | awk -F' ' '{print $2}' | tr -d '\"') | grep -v 'Sinks:' | shuf | head -n 1 | awk -F' ' '{print $2}' | tr -d '\"')",
+      "on-scroll-up": "wpctl set-volume @DEFAULT_SINK@ 0.025+",
+      "on-scroll-down": "wpctl set-volume @DEFAULT_SINK@ 0.025-",
+      // "on-click": "wpctl set-default $(pamixer --list-sinks | grep -v $(pamixer --get-default-sink | tail -n 1 | awk -F' ' '{print $2}' | tr -d '\"') | grep -v 'Sinks:' | shuf | head -n 1 | awk -F' ' '{print $2}' | tr -d '\"')",
       "exec": "pamixer --get-default-sink | tail -n 1 | awk -F'\".+\" ' '{print $2}' | tr -d '\"'"
     },
     "custom/notification": {
-      "on-click": "$MY_FOLDER/Scripts/notification-scr/notify-toggle-mute.sh",
-      "exec": "$MY_FOLDER/Scripts/waybar-scr/notify-status.sh",
+      "on-click": "$SCR_PATH/notification-scr/notify-toggle-mute.sh",
+      "exec": "$SCR_PATH/waybar-scr/notify-status.sh",
       "exec-if": "true",
       "format": "{}",
       "tooltip": false,
@@ -95,12 +95,12 @@
       "interval": 2
     },
     "custom/mic": {
-      "on-click": "$MY_FOLDER/Scripts/audio-scr/mic-mute.sh",
-      "exec": "$MY_FOLDER/Scripts/waybar-scr/mic-status.sh",
+      "on-click": "$SCR_PATH/audio-scr/mic-mute.sh",
+      "exec": "$SCR_PATH/waybar-scr/mic-status.sh",
       "exec-if": "true",
       "format": "{}",
-      "on-scroll-up": "pactl set-source-volume 0 +5%",
-      "on-scroll-down": "pactl set-source-volume 0 -5%",
+      "on-scroll-up": "wpctl set-volume @DEFAULT_SOURCE@ 0.025+",
+      "on-scroll-down": "wpctl set-volume @DEFAULT_SOURCE@ 0.025-",
       "tooltip": false,
       "signal": 1,
       "interval": 2
@@ -110,9 +110,9 @@
       "format-muted": " -- <span color='#C57070'></span>",
       "on-click": "pavucontrol",
       "scroll-step": 0.2,
-      "on-click-middle": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
-      "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
-      "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%",
+      "on-click-middle": "wpctl set-mute @DEFAULT_SINK@ toggle",
+      "on-scroll-up": "wpctl set-volume @DEFAULT_SINK@ 0.025+",
+      "on-scroll-down": "wpctl set-volume @DEFAULT_SINK@ 0.025-",
       "format-icons": [
         "",
         "",

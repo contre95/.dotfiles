@@ -168,7 +168,7 @@ lspconfig.terraformls.setup({
     client.server_capabilities.document_formatting = true
   end,
   cmd = { "terraform-ls", "serve" },
-  filetypes = { "tf", "terraform" ,"tfvars"},
+  filetypes = { "tf", "terraform", "tfvars" },
 })
 
 -- SQL  -- go install github.com/lighttiger2505/sqls@latest
@@ -322,7 +322,20 @@ local languages = {
   python = { pep8 },
 }
 
-lspconfig.rnix.setup({})
+-- local lsp_path = vim.env.NIL_PATH or 'target/debug/nil'
+lspconfig.nil_ls.setup {
+  autostart = true,
+  capabilities = capabilities,
+  cmd = { 'nil' },
+  settings = {
+    ['nil'] = {
+      testSetting = 42,
+      formatting = {
+        command = { "nixpkgs-fmt" },
+      },
+    },
+  }
+}
 
 lspconfig.efm.setup({
   root_dir = lspconfig.util.root_pattern(".git", "/home/canus/Scripts", vim.loop.os_homedir()),

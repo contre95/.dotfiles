@@ -14,11 +14,18 @@
 
   # User specific packages for desktop
   home-manager.users.contre = { pkgs, ... }: {
-    home.packages = with pkgs; [
-      obs-studio
-    ];
+
+    programs.obs-studio = {
+      enable = true;
+      plugins = with pkgs.obs-studio-plugins; [
+        wlrobs
+        obs-backgroundremoval
+        obs-pipewire-audio-capture
+      ];
+    };
+
   };
-  services.xserver.displayManager.startx.enable = true;
+
 
   # Enable OpenGL
   hardware.opengl = {
@@ -27,15 +34,27 @@
     driSupport32Bit = true;
   };
 
-  services.xserver.enable = true;
   services.xserver.dpi = 100;
-  # Load nvidia driver for Xorg and Wayland
+  services.xserver.enable = true;
   services.xserver.videoDrivers = [ "nvidia" ];
+  # Nvidia
+  hardware.nvidia.open = false;
+  hardware.nvidia.nvidiaSettings = true;
   hardware.nvidia.modesetting.enable = true;
   hardware.nvidia.powerManagement.enable = true;
   hardware.nvidia.powerManagement.finegrained = false;
-  hardware.nvidia.open = false;
-  hardware.nvidia.nvidiaSettings = true;
+  services.xserver.displayManager.startx.enable = true;
   hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.vulkan_beta;
+
+  # Kernel Packages
+
+  # OBS Virtual camera 
+  boot.extraModulePackages = with config.boot.kernelPackages; [
+    v4l2loopback
+  ];
+  boot.extraModprobeConfig = ''
+    options v4l2loopback devices=1 video_nr=1 card_label="OBS Cam" exclusive_caps=1
+  '';
+  security.polkit.enable = true;
 
 }

@@ -39,6 +39,8 @@ in
       sqls
       black
       gopls
+      nil
+      nixpkgs-fmt
       yamlfmt
       marksman
       efm-langserver
@@ -82,7 +84,6 @@ in
       # Desktop apps
       discord
       betterdiscordctl
-      obs-studio
       alacritty
       # librewolf
       telegram-desktop
