@@ -10,13 +10,13 @@ in
 
   # Contre
   home-manager.users.contre = { pkgs, ... }: {
-    xdg.mimeApps.defaultApplications = {
-      "text/html" = "org.librewolf.librewolf.desktop";
-      "x-scheme-handler/http" = "org.librewolf.librewolf.desktop";
-      "x-scheme-handler/https" = "org.librewolf.librewolf.desktop";
-      "x-scheme-handler/about" = "org.librewolf.librewolf.desktop";
-      "x-scheme-handler/unknown" = "org.librewolf.librewolf.desktop";
-    };
+    # xdg.mimeApps.defaultApplications = {
+    #   "text/html" = "org.librewolf.librewolf.desktop";
+    #   "x-scheme-handler/http" = "org.librewolf.librewolf.desktop";
+    #   "x-scheme-handler/https" = "org.librewolf.librewolf.desktop";
+    #   "x-scheme-handler/about" = "org.librewolf.librewolf.desktop";
+    #   "x-scheme-handler/unknown" = "org.librewolf.librewolf.desktop";
+    # };
     programs.home-manager.enable = true;
     home.username = "contre";
     home.homeDirectory = "/home/contre";
@@ -95,6 +95,7 @@ in
       discord
       betterdiscordctl
       alacritty
+      librewolf
       telegram-desktop
 
       # Desktop Environment 
