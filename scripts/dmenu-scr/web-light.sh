@@ -48,7 +48,7 @@ declare -A markets=(
 
 case "$chosen" in
 "Coin 360")
-	librewolf --kiosk -P $LW_PROFILE --new-window "https://coin360.com/?period=24h"
+  librewolf --kiosk -P $LW_PROFILE --new-window "https://coin360.com/?period=24h"
 	;;
 "Discord")
   center "librewolf --kiosk -P $LW_PROFILE --new-window 'https://discord.com/app'"

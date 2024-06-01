@@ -1,8 +1,9 @@
-{ config, ... }:
-let
-  hostname = config.networking.hostName;
-in
+{ pkgs, ... }:
 {
+  environment.variables = {
+    GPG_TTY = "${pkgs.coreutils}/bin/tty";
+    SSH_AUTH_SOCK = "/run/user/1000/gnupg/S.gpg-agent.ssh";
+  };
   programs.ssh.startAgent = false; # GPG act as ssh-agent
   services.openssh = {
     enable = true;
@@ -11,6 +12,7 @@ in
       AllowUsers = null; # Allows all users by default. Can be [ "user1" "user2" ]
       hostKeys = null; # This is now working, still creates and reference the hostKeys
       X11Forwarding = false;
+      # forwardAgent = true;
       PermitRootLogin = "no";
       KbdInteractiveAuthentication = false;
     };
