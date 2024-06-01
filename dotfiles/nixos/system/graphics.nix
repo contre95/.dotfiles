@@ -6,23 +6,25 @@
     xdg-desktop-portal-hyprland
     xwayland
     wlroots
+    xdg-launch
   ];
 
   environment.variables = {
     NIXOS_OZONE_WL = "1";
     GDK_BACKEND = "wayland,x11";
-    QT_QPA_PLATFORM = "wayland;xcb";
+    # QT_QPA_PLATFORM = "wayland;xcb";
     LIBVA_DRIVER_NAME = "nvidia";
     XMODIFIERS = "@im=ibus";
+    MOZ_DBUS_REMOTE= "1";
     GTK_IM_MODULE = "ibus";
     QT_IM_MODULE = "ibus";
     MOZ_ENABLE_WAYLAND = "1";
     # MOZ_USE_XINPUT2 = "1";
     GDK_SCALE = "1";
     GBM_BACKEND = "nvidia-drm";
-    BROWSER = "librewolf";
+    BROWSER = "librewolf.desktop";
     TERMINAL = "alacritty";
-    QT_QPA_PLATFORMTHEME = "gtk3";
+    QT_QPA_PLATFORMTHEME = "gtk";
     SDL_VIDEODRIVER = "wayland";
     QT_SCALE_FACTOR = "1";
     _JAVA_AWT_WM_NONREPARENTING = "1";
@@ -53,13 +55,13 @@
 
   xdg.portal = {
     enable = true;
-    xdgOpenUsePortal = true;
-    config = {
-      common.default = [ "gnome" ];
-      hyprland.default = [ "gtk" "hyprland" ];
-    };
-
-    extraPortals = [ pkgs.xdg-desktop-portal-gtk pkgs.xdg-desktop-portal-wlr ];
+    # xdgOpenUsePortal = true;
+    # config = {
+    #   common.default = [ "hyprland" ];
+    #   hyprland.default = [ "gtk" "hyprland" ];
+    # };
+    #
+    # extraPortals = [ pkgs.xdg-desktop-portal-gtk pkgs.xdg-desktop-portal-wlr ];
   };
 
 }

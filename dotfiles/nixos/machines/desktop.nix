@@ -6,7 +6,7 @@
   nixpkgs.config.nvidia.acceptLicense = true;
 
 
-  xdg.portal.wlr.enable = true;
+  # xdg.portal.wlr.enable = true;
   services.dbus.enable = true;
 
   # System packages for desktop
