@@ -77,6 +77,7 @@ in
       gcc
       coreutils
       feh
+      imv
       git
       prometheus-node-exporter
       bash
