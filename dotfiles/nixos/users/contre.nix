@@ -93,8 +93,8 @@ in
       # Desktop apps
       discord
       betterdiscordctl
+      spotify
       alacritty
-      # librewolf
       telegram-desktop
 
       # Desktop Environment 

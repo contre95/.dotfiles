@@ -1,10 +1,12 @@
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 {
   environment.variables = {
     GPG_TTY = "${pkgs.coreutils}/bin/tty";
     SSH_AUTH_SOCK = "/run/user/1000/gnupg/S.gpg-agent.ssh";
   };
+
   programs.ssh.startAgent = false; # GPG act as ssh-agent
+
   services.openssh = {
     enable = true;
     settings = {
@@ -16,6 +18,39 @@
       PermitRootLogin = "no";
       KbdInteractiveAuthentication = false;
     };
+    banner =
+      if config.networking.hostName == "notebook" then "
+            ,\
+       (`.  : \               __..----..__
+        `.`.| |:          _,-':::''' '  `:`-._
+          `.:\||       _,':::::'         `::::`-.
+            \\`|    _,':::::::'     `:.     `':::`.
+             ;` `-''  `::::::.                  `::\
+          ,-'      .::'  `:::::.         `::..    `:\
+        ,' /_) -.            `::.           `:.     |
+      ,'.:     `    `:.        `:.     .::.          \
+ __,-'   ___,..-''-.  `:.        `.   /::::.         |
+|):'_,--'           `.    `::..       |::::::.      ::\
+ `-'                 |`--.:_::::|_____\::::::::.__  ::|
+                     |   _/|::::|      \::::::|::/\  :|
+                     /:./  |:::/        \__:::):/  \  :\
+                   ,'::'  /:::|        ,'::::/_/    `. ``-.__
+                  ''''   (//|/\      ,';':,-'         `-.__  `'--..__
+                                                           `''---::::"
+      else if config.networking.hostName == "desktop" then "
+             _.-````'-,_
+   _,.,_ ,-'`           `'-.,_
+ /)     (\                   '``-.
+((      ) )                      `\
+ \)    (_/                        )\
+  |       /)           '    ,'    / \
+  `\    ^'            '     (    /  ))
+    |      _/\ ,     /    ,,`\   (   `
+     \Y,   |  \  \  | ````| / \_ \
+       `)_/    \  \  )    ( >  ( >
+                \( \(     |/   |/
+               /_(/_(    /_(  /_("
+      else { };
 
     extraConfig = ''
       Match Address 192.168.0.170/32
