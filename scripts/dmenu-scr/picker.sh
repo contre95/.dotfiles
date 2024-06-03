@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Picker script receives as first arguments files with the following format 
 #
