@@ -105,8 +105,8 @@
       "interval": 2
     },
     "wireplumber": {
+
       "format": "{volume}% {icon}",
-      "format-icons": ["", "", ""],
       "format-muted": " -- <span color='#C57070'></span>",
       "on-click": "pavucontrol",
       // "scroll-step": 0.5,

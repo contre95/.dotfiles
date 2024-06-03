@@ -1,3 +1,4 @@
+# ---------------------------------------------
 [colors.primary]
 foreground = "#d1d1d1"
 background = "#1a1a19"
@@ -25,7 +26,7 @@ blue = "#a6cded"
 magenta = "#f7b4e1"
 cyan = "#94c9b2"
 white = "#eaeaea"
-
+# ---------------------------------------------
 # [colors.primary]
 # background = '0x1f1f28'
 # foreground = '0xdcd7ba'

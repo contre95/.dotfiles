@@ -1,7 +1,12 @@
-{...}: {
+{ ... }: {
   # services.prometheus.exporters.node.enable = true;
-  
-  services.prometheus.exporters.node =  {
+
+  networking.firewall = {
+    enable = true;
+    allowedTCPPorts = [ 9100 ];
+  };
+
+  services.prometheus.exporters.node = {
     port = 9100;
     enable = true;
     enabledCollectors = [

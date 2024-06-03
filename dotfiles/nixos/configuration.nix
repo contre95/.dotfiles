@@ -62,6 +62,7 @@ in
 
   # Default Shell
   programs.zsh.enable = true;
+  programs.zsh.enableCompletion = true;
   users.defaultUserShell = pkgs.zsh;
   environment.shells = with pkgs; [ zsh ];
 

@@ -1,7 +1,6 @@
 { pkgs, ... }:
 {
   # Enable common container config files in /etc/containers
-  virtualisation.containers.enable = true;
   virtualisation = {
     podman = {
       enable = true;
@@ -16,6 +15,7 @@
     };
 
     containers = {
+      enable = true;
       # storage.settings = {
       #   storage.driver = "zfs";
       #   storage.graphroot = "/var/lib/containers/storage";
