@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ ... }: {
   # Enable GPG at a system level 
   programs.gnupg.agent = {
     enable = true;

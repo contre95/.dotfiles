@@ -106,9 +106,11 @@
     },
     "wireplumber": {
       "format": "{volume}% {icon}",
+      "format-icons": ["", "", ""],
       "format-muted": " -- <span color='#C57070'></span>",
       "on-click": "pavucontrol",
-      "scroll-step": 0.2,
+      // "scroll-step": 0.5,
+      "max-volume" : 100,
       "on-click-middle": "wpctl set-mute @DEFAULT_SINK@ toggle",
       "on-scroll-up": "wpctl set-volume @DEFAULT_SINK@ 0.025+",
       "on-scroll-down": "wpctl set-volume @DEFAULT_SINK@ 0.025-",
@@ -155,7 +157,7 @@
     },
     "memory": {
       "format": "<span color='#b4befe'> </span>{}%",
-      "on-click": "htop",
+      "on-click": "btop",
       "interval": 2
     },
     "temperature": {
@@ -190,6 +192,7 @@
       "format": "{ifname}",
       "format-wifi": "<span color='#b4befe'> </span> {essid}",
       "format-ethernet": "{ipaddr}/{cidr} ",
+      "on-click": "nix-shell -p iwgtk --run iwgtk",
       "format-disconnected": "<span color='#b4befe'>󰖪 </span>No Network",
       "tooltip": true
     }

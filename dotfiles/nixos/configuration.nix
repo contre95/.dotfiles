@@ -20,6 +20,7 @@ in
       ./system/openssh.nix
       ./system/graphics.nix
       ./system/bluetooth.nix
+      ./system/syncthings.nix
       ./system/containers.nix
       ./system/networking.nix
       ./system/node-exporter.nix
