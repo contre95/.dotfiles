@@ -33,8 +33,9 @@
                 '   \ .' 
                  \   (
                   \   '.
-      notebook     \ \ '.)a
-   "
+      notebook     \ \ '.)
+
+"
       else if config.networking.hostName == "desktop" then
         "
              _.-````'-,_
@@ -49,7 +50,8 @@
        `)_/    \  \  )    ( >  ( >
                 \( \(     |/   |/
       desktop   /_(/_(    /_(  /_(
-   "
+
+"
       else if config.networking.hostName == "server" then
         "
                           .' `'.__
@@ -68,7 +70,8 @@
    /    | |  `\    /-'    /;
    \  ,,/ |    \   D    .'  \
     `''`   \  nnh  D_.-'L__nnh    server
-    "
+
+"
       else "";
 
     extraConfig = ''
