@@ -23,7 +23,6 @@ in
     imports = [
       ../programs/gpg.nix
       ../programs/gtk.nix
-      ../programs/test.nix
       ../programs/git.nix
       ../programs/librewolf.nix
     ];
