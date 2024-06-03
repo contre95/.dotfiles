@@ -24,6 +24,7 @@ in
       ../programs/gpg.nix
       ../programs/gtk.nix
       ../programs/git.nix
+      ../programs/test.nix
       ../programs/librewolf.nix
     ];
 
@@ -62,6 +63,7 @@ in
       tree-sitter
       kubectl
       tmux
+      tmuxPlugins.tmux-thumbs
       (pass.withExtensions (ext: with ext; [ pass-checkup pass-otp ]))
       gnupg
       vlc
@@ -124,6 +126,8 @@ in
       polkit
 
     ];
+
+    home.extraOutputsToInstall = [ "share/tmux-plugins" ];
 
     home.file = {
       neovim = {
