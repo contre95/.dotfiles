@@ -1,18 +1,8 @@
-{ home-preset, ... }:
+{ ... }:
 {
   networking.firewall = {
-    allowedUDPPorts = [
-      # syncthing QUIC
-      22000
-      # syncthing discovery broadcast on ipv4 and multicast ipv6
-      21027
-    ];
-
-    allowedTCPPorts = [
-      42355
-      # syncthing
-      22000
-    ];
+    allowedUDPPorts = [ 22000 21027 ];
+    allowedTCPPorts = [ 22000 42355 ];
   };
   services = {
     syncthing = {
