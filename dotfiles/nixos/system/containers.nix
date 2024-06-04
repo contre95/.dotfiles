@@ -2,8 +2,13 @@
 {
   # Enable common container config files in /etc/containers
   virtualisation = {
+    oci-containers.backend = "podman";
     podman = {
       enable = true;
+      autoPrune = {
+        enable = true;
+        flags = [ "-af" ];
+      };
 
       # Create a `docker` alias for podman, to use it as a drop-in replacement
 
