@@ -7,7 +7,7 @@ Before=nvidia-hibernate.service
 
 [Service]
 Type=oneshot
-ExecStart=/home/canus/Scripts/bin-scr/suspend-hyprland.sh suspend
+ExecStart=/home/canus/scripts/bin-scr/suspend-hyprland.sh suspend
 
 [Install]
 WantedBy=systemd-suspend.service

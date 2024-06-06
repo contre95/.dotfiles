@@ -2,7 +2,7 @@
 #
 choices="vimrc\nzsh\nnixos\ntmux\nwaybar\nwaybar-css\nhyprland\nalacritty\nscripts"
 var=$(echo -e $choices | rofi -dmenu -theme $MY_FOLDER/dotfiles/rofi/dmenu.style.rasi -i -p "Dotfiles" -sb "#40444B" -fn "JetBrainsMono Nerd Font") 
-TMUX_SCRIPTS=/home/canus/Scripts/tmux-scr
+TMUX_SCRIPTS=/home/canus/scripts/tmux-scr
 
 case $var in
     'vimrc')
