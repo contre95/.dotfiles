@@ -21,6 +21,7 @@ in
     home.username = "contre";
     home.homeDirectory = "/home/contre";
     home.stateVersion = "24.05";
+
     imports = [
       ../programs/gpg.nix
       ../programs/gtk.nix
@@ -54,7 +55,8 @@ in
       lua-language-server
 
       # Essentials User 
-      zsh
+      unzip
+      unrar
       stow
       bandwhich
       autojump
@@ -95,8 +97,15 @@ in
       envsubst
 
       # Desktop apps
-      discord
+      spotify
+      #   (pkgs.discord.override {
+      #     # remove any overrides that you don't want
+      #     withOpenASAR = true;
+      #     withVencord = true;
+      #     # withTTS = true;
+      #   })
       betterdiscordctl
+      vesktop
       alacritty
       # librewolf
       telegram-desktop
