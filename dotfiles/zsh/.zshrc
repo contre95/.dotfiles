@@ -59,7 +59,7 @@ if [[ -n $SSH_CONNECTION ]]; then
 	export EDITOR='vim'
 	gpgconf --create-socketdir
 else
-	# export GPG_TTY="$(tty)"
+	export GPG_TTY="$(tty)"
 	# export SSH_AUTH_SOCK="/run/user/$UID/gnupg/S.gpg-agent.ssh"
 	# gpg-connect-agent updatestartuptty /bye >/dev/null
 	# export EDITOR='nvim'
