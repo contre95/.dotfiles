@@ -90,6 +90,7 @@ in
       rsync
       gnumake
       ripgrep
+      pinentry-gnome3
       envsubst
 
       # Desktop apps
@@ -109,7 +110,6 @@ in
       slurp
       gnome.zenity
       wf-recorder
-      pinentry-gnome3
       hyprpaper
       librsvg
       clipman

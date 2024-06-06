@@ -12,8 +12,8 @@ TERM = "xterm-256color"
   x = 3
   y = 3
 
-[shell]
-program = "/usr/bin/zsh"
+# [shell]
+# program = "zsh"
 # [class]
 # instance = "Alacritty"
 # general = "Alacritty"
