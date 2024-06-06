@@ -6,7 +6,7 @@ After=nvidia-resume.service
 
 [Service]
 Type=oneshot
-ExecStart=/home/canus/Scripts/bin-scr/suspend-hyprland.sh resume
+ExecStart=/home/canus/scripts/bin-scr/suspend-hyprland.sh resume
 
 [Install]
 WantedBy=systemd-suspend.service

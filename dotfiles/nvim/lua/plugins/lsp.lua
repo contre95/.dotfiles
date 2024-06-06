@@ -313,7 +313,7 @@ lspconfig.nil_ls.setup {
 }
 
 lspconfig.efm.setup({
-  root_dir = lspconfig.util.root_pattern(".git", "/home/canus/Scripts", vim.loop.os_homedir()),
+  root_dir = lspconfig.util.root_pattern(".git", vim.loop.os_homedir()),
   filetypes = vim.tbl_keys(languages),
   -- cmd = {
   --   vim.loop.os_homedir() .. "/go/bin/efm-langserver",
