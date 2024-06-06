@@ -105,15 +105,14 @@
       "interval": 2
     },
     "wireplumber": {
-
       "format": "{volume}% {icon}",
       "format-muted": " -- <span color='#C57070'></span>",
       "on-click": "pavucontrol",
-      // "scroll-step": 0.5,
+      "scroll-step": 0.5,
       "max-volume" : 100,
       "on-click-middle": "wpctl set-mute @DEFAULT_SINK@ toggle",
-      "on-scroll-up": "wpctl set-volume @DEFAULT_SINK@ 0.025+",
-      "on-scroll-down": "wpctl set-volume @DEFAULT_SINK@ 0.025-",
+      // "on-scroll-up": "wpctl set-volume @DEFAULT_SINK@ 0.025+",
+      // "on-scroll-down": "wpctl set-volume @DEFAULT_SINK@ 0.025-",
       "format-icons": [
         "",
         "",
