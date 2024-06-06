@@ -9,7 +9,7 @@
   programs.ssh = {
     startAgent = false; # GPG act as ssh-agent
       extraConfig = ''
-      Host 192.168.*, contre.lucas
+      Host 192.168.*, contre.*
         ForwardAgent yes
     '';
   };
