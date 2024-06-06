@@ -2,12 +2,12 @@
 
 {
   # Environment Packages
-  environment.systemPackages = with pkgs; [ ];
+  # environment.systemPackages = with pkgs; [ ];
 
   # # User specific
-  home-manager.users.contre = { pkgs, ... }: {
-    home.packages = with pkgs; [
-    ];
-  };
+  # home-manager.users.contre = { pkgs, ... }: {
+  #   home.packages = with pkgs; [
+  #   ];
+  # };
 
 }
