@@ -5,6 +5,7 @@ in
 {
   users.users.contre.isNormalUser = true;
   home-manager.useGlobalPkgs = true;
+  services.dbus.enable = true;
 
   environment.variables = { };
 
