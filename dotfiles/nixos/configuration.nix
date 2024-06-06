@@ -21,6 +21,7 @@ in
       ./system/graphics.nix
       ./system/bluetooth.nix
       ./system/syncthings.nix
+      ./system/shell.nix
       ./system/containers.nix
       ./system/networking.nix
       ./system/node-exporter.nix
@@ -30,6 +31,7 @@ in
     ] else if "${os}" == "macos" then [
       ./system/gpg.nix
       ./users/work.nix
+      ./system/shell.nix
       ./system/containers.nix
       (import "${home-manager}/nixos")
     ]
@@ -59,12 +61,6 @@ in
 
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
-
-  # Default Shell
-  programs.zsh.enable = true;
-  programs.zsh.enableCompletion = true;
-  users.defaultUserShell = pkgs.zsh;
-  environment.shells = with pkgs; [ zsh ];
 
   # Enable/Disable deafult system programs 
   programs.nano.enable = false;
