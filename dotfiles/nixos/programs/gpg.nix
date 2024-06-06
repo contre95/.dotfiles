@@ -18,7 +18,7 @@
     defaultCacheTtl = 1300;
     grabKeyboardAndMouse = true;
     extraConfig = ''
-      pinentry-program ${pkgs.pinentry-qt}/bin/pinentry-qt
+      pinentry-program ${pkgs.pinentry-gnome3}/bin/pinentry-gnome
       auto-expand-secmem
     '';
   };

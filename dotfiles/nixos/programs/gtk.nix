@@ -4,6 +4,8 @@
 
   home.sessionVariables = {
     QT_AUTO_SCREEN_SCALE_FACTOR = 1;
+    QT_QPA_PLATFORM = "wayland";
+    # QT_QPA_PLATFORMTHEME = "qt5ct";
     XCURSOR_SIZE = "16";
     GTK_USE_PORTAL = "1";
   };
@@ -18,7 +20,7 @@
 
   qt = {
     enable = true;
-    platformTheme.name = "qtct";
+    platformTheme.name = "qt5ct";
     style = {
       name = "Catppuccin-Frappe-Dark";
       package = pkgs.catppuccin-kde.override {
