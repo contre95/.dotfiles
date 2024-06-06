@@ -3,8 +3,8 @@
 # Env Variables
 ################################################################################################
 export KEYTIMEOUT=10
-export PASSWORD_STORE_DIR=$MY_FOLDER/pass
 export LANG="en_US.UTF-8"
+export PASSWORD_STORE_DIR=$MY_FOLDER/pass
 export LC_ALL=en_US.UTF-8
 export KUBECONFIG=~/.kube/config
 
