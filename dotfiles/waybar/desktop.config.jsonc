@@ -108,7 +108,7 @@
       "format": "{volume}% {icon}",
       "format-muted": " -- <span color='#C57070'></span>",
       "on-click": "pavucontrol",
-      "scroll-step": 0.5,
+      "scroll-step": 1,
       "max-volume" : 100,
       "on-click-middle": "wpctl set-mute @DEFAULT_SINK@ toggle",
       // "on-scroll-up": "wpctl set-volume @DEFAULT_SINK@ 0.025+",
