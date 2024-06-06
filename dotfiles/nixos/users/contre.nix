@@ -12,9 +12,9 @@ in
   home-manager.users.contre = { pkgs, ... }: {
     xdg.mimeApps.defaultApplications = {
       "text/html" = "org.mozilla.librewolf.desktop";
-      "x-scheme-handler/http" = "org.mozilla.librewolf.desktop";
       "x-scheme-handler/https" = "org.mozilla.librewolf.desktop";
       "x-scheme-handler/about" = "org.mozilla.librewolf.desktop";
+      "x-scheme-handler/http" = "org.mozilla.librewolf.desktop";
     };
     programs.home-manager.enable = true;
     home.username = "contre";
@@ -109,7 +109,7 @@ in
       slurp
       gnome.zenity
       wf-recorder
-      pinentry-qt
+      pinentry-gnome3
       hyprpaper
       librsvg
       clipman
