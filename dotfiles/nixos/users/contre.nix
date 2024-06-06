@@ -24,6 +24,7 @@ in
 
     imports = [
       ../programs/gpg.nix
+      ../programs/ssh.nix
       ../programs/gtk.nix
       ../programs/git.nix
       ../programs/test.nix
