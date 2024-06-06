@@ -1,4 +1,4 @@
-{ ... }: 
+{ pkgs, ... }: 
 
 {
 
@@ -17,10 +17,10 @@
     enableExtraSocket = true;
     defaultCacheTtl = 1300;
     grabKeyboardAndMouse = true;
-    # extraConfig = ''
-    #   pinentry-program ${pkgs.pinentry-gnome}/bin/pinentry-qt
-    #   auto-expand-secmem
-    # '';
+    extraConfig = ''
+      pinentry-program ${pkgs.pinentry-qt}/bin/pinentry-qt
+      auto-expand-secmem
+    '';
   };
 
 }
