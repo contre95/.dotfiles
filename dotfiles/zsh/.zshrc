@@ -66,7 +66,7 @@ else
 	# # Only use gpg/ssh keys when not in an SSH connection. Not to replace the keys forwarded by the ssh agent.
 	# # SSH Configuration with GPG
 	# #echo [KEYGRIP] >> ~/.gnupg/sshcontrol
-	# export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+	export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
 	# gpgconf --launch gpg-agent
 fi
 
