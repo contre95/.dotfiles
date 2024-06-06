@@ -5,10 +5,11 @@
     GPG_TTY = "${pkgs.coreutils}/bin/tty";
     SSH_AUTH_SOCK = "/run/user/1000/gnupg/S.gpg-agent.ssh";
   };
+
   programs.ssh = {
     startAgent = false; # GPG act as ssh-agent
       extraConfig = ''
-      Host 192.168.*
+      Host 192.168.*, contre.lucas
         ForwardAgent yes
     '';
   };
@@ -20,7 +21,7 @@
       AllowUsers = null; # Allows all users by default. Can be [ "user1" "user2" ]
       hostKeys = null; # This is now working, still creates and reference the hostKeys
       X11Forwarding = false;
-      # forwardAgent = true;
+      # forwardAgent = true; # You don't want to forward agent for any hosts
       PermitRootLogin = "no";
       KbdInteractiveAuthentication = false;
     };
