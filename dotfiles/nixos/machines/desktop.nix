@@ -9,7 +9,17 @@
   # xdg.portal.wlr.enable = true;
   services.dbus.enable = true;
 
-  # System packages for desktop
+  # System packages
+  environment.systemPackages = with pkgs; [
+    wineWowPackages.waylandFull
+    lutris
+    mangohud
+    winetricks
+    vulkan-loader
+    vulkan-tools
+  ];
+
+  programs.gamemode.enable = true;
   programs.steam = {
     enable = true;
     remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
@@ -17,11 +27,13 @@
     gamescopeSession.enable = true;
   };
 
+  # System programs config
   nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
     "steam"
     "steam-original"
     "steam-run"
   ];
+
 
   # User specific packages for desktop
   home-manager.users.contre = { pkgs, ... }: {
@@ -47,19 +59,20 @@
   };
 
 
-  services.xserver.enable = true;
-  services.xserver.videoDrivers = [ "nvidia" ];
+
   # Nvidia
   hardware.nvidia.open = false;
+  services.xserver.enable = true;
   hardware.nvidia.nvidiaSettings = true;
   hardware.nvidia.modesetting.enable = true;
+  services.xserver.videoDrivers = [ "nvidia" ];
   hardware.nvidia.powerManagement.enable = true;
   hardware.nvidia.powerManagement.finegrained = false;
   services.xserver.displayManager.startx.enable = true;
   hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.vulkan_beta;
 
   # Mount disks
-  fileSystems."/mnt/games" = {
+  fileSystems."/home/canus/mounts" = {
     device = "/dev/sda1";
     fsType = "ext4"; # Replace with your filesystem type
   };
