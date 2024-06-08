@@ -76,9 +76,12 @@ in
       neovim
 
       # Essentials OS 
+      gparted
+      xorg.xhost
       fzf
       wdisplays
       less
+      iwgtk
       gcc
       coreutils
       feh
