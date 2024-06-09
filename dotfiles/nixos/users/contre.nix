@@ -28,7 +28,8 @@ in
       ../programs/gtk.nix
       ../programs/git.nix
       ../programs/test.nix
-      ../programs/librewolf.nix
+      # ../programs/librewolf.nix
+      ../programs/firefox.nix
     ];
 
     home.packages = with pkgs; [
@@ -38,7 +39,6 @@ in
       cargo
       python3
       terraform
-
 
       # LSP
       sqls
