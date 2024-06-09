@@ -24,6 +24,9 @@
         SearchBar = "unified"; # alternative: "separate"
       };
     profiles = {
+      ContreKiosk = {
+        id = 1;
+      };
       Contre = {
         id = 0;
         extensions = with pkgs.nur.repos.rycee.firefox-addons; [
