@@ -51,6 +51,7 @@
           "browser.newtab.preload" = false;
           "browser.newtabpage.directory.ping" = "";
           "browser.newtabpage.activity-stream.feeds.telemetry" = false;
+          "browser.translations.automaticallyPopup" = false;
           "browser.newtabpage.activity-stream.telemetry" = false;
           "browser.ping-centre.telemetry" = false;
           "toolkit.telemetry.archive.enabled" = false;
