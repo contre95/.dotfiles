@@ -24,11 +24,11 @@ require("plugins/nvim-cmp-config")
 require("plugins/commenter-config")
 require("plugins/nvim-tree-config")
 require("plugins/telescope-config")
+require("plugins/quick-scope-config")
 require("plugins/bufferline-config")
 require("plugins/statusline-config")
 require("plugins/treesitter-config")
 require("plugins/colorscheme-config")
-require("plugins/quick-scope-config")
 require("plugins/clipboard-image-config")
 
 

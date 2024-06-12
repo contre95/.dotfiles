@@ -38,6 +38,7 @@ in
       jq
       cargo
       python3
+      nodejs_22
       terraform
 
       # LSP
