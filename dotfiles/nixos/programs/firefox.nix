@@ -35,12 +35,13 @@
           # firefox-color
           darkreader
           sponsorblock
-          multi-account-containers
+          # multi-account-containers
           h264ify
           i-dont-care-about-cookies
         ];
 
         settings = {
+          "signon.rememberSignons" = false;
           "browser.startup.homepage" = "https://contre.io";
           "general.smoothScrolling" = true;
           # Enable DRM support (Spotify, Netflix, so on and so forth... i really don't want to enable this, but... oh well...)
@@ -98,7 +99,7 @@
             "NixOS Options" = {
               urls = [{ template = "https://search.nixos.org/options?query={searchTerms}"; }];
               icon = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
-              definedAliases = [ "np" ];
+              definedAliases = [ "no" ];
             };
             "NixOS Wiki" = {
               urls = [{ template = "https://nixos.wiki/index.php?search={searchTerms}"; }];
@@ -185,6 +186,7 @@
           	# user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
           	user_pref("full-screen-api.ignore-widgets", false);
           	user_pref("media.ffmpeg.vaapi.enabled", true);
+            lockPref("signon.rememberSignons",false);
           	user_pref("media.rdd-vpx.enabled", true);
         '';
       };
