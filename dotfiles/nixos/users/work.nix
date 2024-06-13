@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ config, pkgs, ... }:
 {
   imports = [ <home-manager/nix-darwin> ];
 
@@ -12,6 +12,8 @@
   };
 
   home-manager.users.contre = {
+    home.username = "lucas.contreras";
+    home.homeDirectory = "/Users/lucas.contreras";
 
     home = {
       # username = "contre";
