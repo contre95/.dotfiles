@@ -1,6 +1,15 @@
 { pkgs, ... }:
 {
   imports = [ <home-manager/nix-darwin> ];
+  environment = {
+    shells = with pkgs; [ zsh ];
+    darwinConfig = "/Users/contre/dotfiles/nixos/configuration.nix";
+    loginShell = pkgs.zsh;
+    systemPackages = [ pkgs.coreutils ];
+    systemPath = [ "/opt/homebrew/bin" ];
+    pathsToLink = [ "/Applications" ];
+  };
+
   home-manager.users.contre = {
 
     home = {
@@ -54,16 +63,8 @@
 
       ];
     };
-  };
 
-  environment = {
-    shells = with pkgs; [ zsh ];
-    darwinConfig = "/Users/contre/dotfiles/nixos/configuration.nix";
-    loginShell = pkgs.zsh;
-    systemPackages = [ pkgs.coreutils ];
-    systemPath = [ "/opt/homebrew/bin" ];
-    pathsToLink = [ "/Applications" ];
-  };
+    home.stateVersion = "24.05";
 
-  home.stateVersion = "24.05";
+  };
 }
