@@ -11,7 +11,6 @@
     caskArgs.no_quarantine = true;
     global = {
       brewfile = true;
-
     };
     casks = [
       # "slack"
