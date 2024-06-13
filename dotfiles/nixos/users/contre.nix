@@ -6,14 +6,13 @@ in
   users.users.contre.isNormalUser = true;
   home-manager.useGlobalPkgs = true;
   services.dbus.enable = true;
-
+  programs.nano.enable = false;
   environment.variables = { };
 
   # Contre
   home-manager.users.contre = { pkgs, ... }: {
 
     # Enable/Disable deafult system programs 
-    programs.nano.enable = false;
     programs.home-manager.enable = true;
     home.username = "contre";
     home.homeDirectory = "/home/contre";

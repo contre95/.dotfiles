@@ -139,7 +139,7 @@
               urls = [{ template = "https://www.google.com/search?q={searchTerms}"; }];
               iconUpdateURL = "https://www.google.com/favicon.ico";
               updateInterval = 7 * 24 * 60 * 60 * 1000;
-              definedAliases = [ "g" ];
+              definedAliases = [ "go" ];
             };
             "Twitter" = {
               urls = [{ template = "https://twitter.com/search?q={searchTerms}&src = typed_query "; }];
