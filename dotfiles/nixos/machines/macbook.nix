@@ -1,5 +1,5 @@
 { ... }: {
-
+  users.users.contre.home = "/Users/contre";
   services.nix-daemon.enable = true;
 
   nix.extraOptions = ''
