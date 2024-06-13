@@ -14,7 +14,7 @@
   home-manager.useGlobalPkgs = true;
   home-manager.useUserPackages = true;
   home-manager.users.contre = {
-    home.username = "lucas.contreras";
+    home.username = "contre";
     home.homeDirectory = "/Users/lucas.contreras";
 
     home = {
