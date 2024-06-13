@@ -7,6 +7,7 @@ in
   home-manager.useGlobalPkgs = true;
   services.dbus.enable = true;
   programs.nano.enable = false;
+
   environment.variables = { };
 
   # Contre
@@ -16,7 +17,6 @@ in
     programs.home-manager.enable = true;
     home.username = "contre";
     home.homeDirectory = "/home/contre";
-    home.stateVersion = "24.05";
 
     imports = [
       ../programs/gpg.nix
@@ -200,6 +200,9 @@ in
       };
 
     };
+
+    home.stateVersion = "24.05";
+
   };
 }
 
