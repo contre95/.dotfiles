@@ -110,6 +110,7 @@ in
       unstable.waybar
       swappy
       grim
+      bruno
       slurp
       gnome.zenity
       wf-recorder
