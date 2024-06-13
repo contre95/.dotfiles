@@ -29,7 +29,7 @@ in
       ./machines/${machineConfig}
       (import "${home-manager}/nixos")
       /etc/nixos/hardware-configuration.nix
-    ] else if "${os}" == "macos" then [
+    ] else if "${os}" == "osx" then [
       ./system/gpg.nix
       ./users/work.nix
       ./system/shell.nix
