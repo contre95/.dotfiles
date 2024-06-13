@@ -14,8 +14,8 @@
   home-manager.users.contre = {
 
     home = {
-      username = "contre";
-      homeDirectory = "/Users/contre";
+      # username = "contre";
+      # homeDirectory = "/Users/contre";
       packages = [
         # Languages
         pkgs.go
