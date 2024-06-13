@@ -39,6 +39,8 @@
         pkgs.tflint
         pkgs.terraform-ls
         pkgs.nixpkgs-fmt
+        pkgs.bruno
+        pkgs.rectangle
         pkgs.yamlfmt
         pkgs.marksman
         pkgs.efm-langserver
@@ -59,7 +61,6 @@
         pkgs.tmuxPlugins.tmux-thumbs
         (pkgs.pass.withExtensions (ext: with ext; [ pass-checkup pass-otp ]))
         pkgs.gnupg
-        pkgs.mpv
         pkgs.git
         pkgs.neovim
 

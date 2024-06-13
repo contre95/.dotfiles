@@ -14,15 +14,12 @@
 
     };
     casks = [
-      "slack"
-      "zoom"
+      # "slack"
+      # "zoom"
       "1password"
-      "goland"
-      "pycharm"
+      # "goland"
+      # "pycharm"
       "rectangle"
-      "notion"
-      "notion-calendar"
-      "viscosity"
       "bruno"
     ];
   };
