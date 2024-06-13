@@ -1,7 +1,6 @@
-{ lib, pkgs, inputs, ... }:
+{ lib, pkgs, ... }:
 let
   # Machine and environemnt definition
-  unstable = import <nixos-unstable> { config = { allowUnfree = true; }; };
   home-manager = builtins.fetchTarball "https://github.com/nix-community/home-manager/archive/release-24.05.tar.gz";
   whichMachine = builtins.getEnv "WHICH_MACHINE";
   machineConfig =
@@ -22,6 +21,8 @@ in
       ./system/bluetooth.nix
       ./system/syncthings.nix
       ./system/shell.nix
+      ./system/boot.nix
+      ./system/fonts.nix
       ./system/containers.nix
       ./system/networking.nix
       ./system/node-exporter.nix
@@ -58,10 +59,6 @@ in
   };
 
 
-  # Bootloader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-
   # Set your time zone.
   time.timeZone = "Europe/Madrid";
 
@@ -83,10 +80,6 @@ in
       };
     } else { };
 
-  # Fonts
-  fonts.packages = [
-    (unstable.nerdfonts.override { fonts = [ "JetBrainsMono" "Iosevka" "FiraCode" ]; })
-  ];
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
