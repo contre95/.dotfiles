@@ -4,7 +4,7 @@ let
   home-manager = builtins.fetchTarball "https://github.com/nix-community/home-manager/archive/release-24.05.tar.gz";
   whichMachine = builtins.getEnv "WHICH_MACHINE";
   machineConfig =
-    if lib.elem whichMachine [ "notebook" "server" "desktop" "macos" ] then "${whichMachine}.nix"
+    if lib.elem whichMachine [ "notebook" "server" "desktop" "macbook" ] then "${whichMachine}.nix"
     else throw "Please set the variable $WHICH_MACHINE first";
   os = if lib.elem whichMachine [ "notebook" "server" "desktop" ] then "linux" else "osx";
 in
@@ -31,6 +31,7 @@ in
       (import "${home-manager}/nixos")
       /etc/nixos/hardware-configuration.nix
     ] else if "${os}" == "osx" then [
+      ./machines/${machineConfig}
       ./users/work.nix
     ]
     else throw "Uknown OS";
