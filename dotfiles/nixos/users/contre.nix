@@ -71,6 +71,7 @@ in
       vlc
       cliphist
       mpv
+      git
       neovim
 
       # Essentials OS 
@@ -84,7 +85,6 @@ in
       coreutils
       feh
       imv
-      git
       prometheus-node-exporter
       bash
       btop
@@ -100,20 +100,12 @@ in
 
       # Desktop apps
       spotify
-      #   (pkgs.discord.override {
-      #     # remove any overrides that you don't want
-      #     withOpenASAR = true;
-      #     withVencord = true;
-      #     # withTTS = true;
-      #   })
       betterdiscordctl
       vesktop
       alacritty
-      # librewolf
       telegram-desktop
 
       # Desktop Environment 
-
       pcmanfm
       dunst
       unstable.waybar
