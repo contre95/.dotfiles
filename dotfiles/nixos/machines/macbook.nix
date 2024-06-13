@@ -1,5 +1,7 @@
 { ... }: {
 
+  services.nix-daemon.enable = true;
+
   nix.extraOptions = ''
     experimental-features = nix-command
   '';
@@ -25,7 +27,6 @@
     };
   };
 
-  services.nix-daemon.enable = true;
   system.stateVersion = 4;
 }
 
