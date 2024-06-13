@@ -62,8 +62,6 @@ in
   # Set your time zone.
   time.timeZone = "Europe/Madrid";
 
-  # Select internationalisation properties.
-  i18n.defaultLocale = "en_US.UTF-8";
 
   # Enable/Disable deafult system programs 
   programs.nano.enable = false;
