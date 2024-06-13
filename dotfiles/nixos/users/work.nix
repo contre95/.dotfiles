@@ -11,6 +11,8 @@
     pathsToLink = [ "/Applications" ];
   };
 
+  home-manager.useGlobalPkgs = true;
+  home-manager.useUserPackages = true;
   home-manager.users.contre = {
     home.username = "lucas.contreras";
     home.homeDirectory = "/Users/lucas.contreras";
