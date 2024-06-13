@@ -6,7 +6,7 @@
     home = {
       username = "rich";
       homeDirectory = "/Users/rich";
-      packages =  [
+      packages = [
         # Languages
         pkgs.go
         pkgs.jq
@@ -65,4 +65,7 @@
 
     };
   };
+
+  home.stateVersion = "24.05";
+
 }
