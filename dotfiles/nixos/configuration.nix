@@ -30,7 +30,7 @@ in
       (import "${home-manager}/nixos")
       /etc/nixos/hardware-configuration.nix
     ] else if "${os}" == "osx" then [
-      ./system/gpg.nix
+      # ./system/gpg.nix
       ./users/work.nix
       ./system/shell.nix
       ./system/containers.nix
