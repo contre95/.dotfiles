@@ -11,12 +11,9 @@ in
 
   # Contre
   home-manager.users.contre = { pkgs, ... }: {
-    xdg.mimeApps.defaultApplications = {
-      "text/html" = "org.mozilla.librewolf.desktop";
-      "x-scheme-handler/https" = "org.mozilla.librewolf.desktop";
-      "x-scheme-handler/about" = "org.mozilla.librewolf.desktop";
-      "x-scheme-handler/http" = "org.mozilla.librewolf.desktop";
-    };
+
+    # Enable/Disable deafult system programs 
+    programs.nano.enable = false;
     programs.home-manager.enable = true;
     home.username = "contre";
     home.homeDirectory = "/home/contre";
