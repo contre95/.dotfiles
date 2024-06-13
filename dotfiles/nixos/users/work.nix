@@ -1,6 +1,7 @@
 { pkgs, ... }:
 {
   imports = [ <home-manager/nix-darwin> ];
+
   environment = {
     shells = with pkgs; [ zsh ];
     darwinConfig = "/Users/contre/dotfiles/nixos/configuration.nix";
@@ -13,8 +14,8 @@
   home-manager.users.contre = {
 
     home = {
-      username = "rich";
-      homeDirectory = "/Users/rich";
+      username = "contre";
+      homeDirectory = "/Users/contre";
       packages = [
         # Languages
         pkgs.go
