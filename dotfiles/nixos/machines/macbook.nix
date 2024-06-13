@@ -5,6 +5,7 @@
   nix.extraOptions = ''
     experimental-features = nix-command
   '';
+
   homebrew = {
     brewPrefix = "/opt/homebrew/bin";
     enable = true;
