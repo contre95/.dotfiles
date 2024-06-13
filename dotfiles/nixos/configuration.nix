@@ -32,9 +32,6 @@ in
       /etc/nixos/hardware-configuration.nix
     ] else if "${os}" == "osx" then [
       ./users/work.nix
-      ./system/shell.nix
-      ./system/containers.nix
-      (import "${home-manager}/nixos")
     ]
     else throw "Uknown OS";
 
