@@ -62,10 +62,6 @@ in
   # Set your time zone.
   time.timeZone = "Europe/Madrid";
 
-
-  # Enable/Disable deafult system programs 
-  # programs.nano.enable = false;
-
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users =
     if os == "linux" then {
