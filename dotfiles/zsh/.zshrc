@@ -41,15 +41,18 @@ antigen apply
 ################################################################################################
 # Custom PATH  settings
 ################################################################################################
-export PATH="$MY_FOLDER/scripts/bin-scr:$PATH"           # Custom Scripts
-export PATH="$MY_FOLDER/bin:$PATH"                       # Custom binaries
-# export PATH="$HOME/.pyenv/bin:$PATH"                   # Pyenv
-# export PATH="$HOME/go/bin/:$PATH"                      # Go
-# export PATH="$HOME/.local/bin:$PATH"                   # ~/.local
-# export PATH="/usr/local/bin:$PATH"                     # /usr/local
-export PATH="/usr/bin:$PATH"                             # just env in nix.. apparently 
-# export PATH="$HOME/bin:$PATH"                          # tfswitch
-export PATH="$HOME/.local/share/nvim/mason/bin/:$PATH"   # Mason binaries (Neovim)
+export PATH="$MY_FOLDER/scripts/bin-scr:$PATH"                  # Custom Scripts
+export PATH="$MY_FOLDER/bin:$PATH"                              # Custom binaries
+export PATH="/Users/lucas.contreras/.nix-profile/bin:$PATH"     # Mac OS Nix profile
+export PATH="/run/current-system/sw/bin:$PATH"                  # Mac bin
+export PATH="/nix/var/nix/profiles/default/bin:$PATH"           # 
+export PATH="$HOME/.pyenv/bin:$PATH"                            # Pyenv
+export PATH="$HOME/go/bin/:$PATH"                               # Go
+export PATH="$HOME/.local/bin:$PATH"                            # ~/.local
+export PATH="/usr/local/bin:$PATH"                              # /usr/local
+export PATH="/usr/bin:$PATH"                                    # just env in nix.. apparently 
+# export PATH="$HOME/bin:$PATH"                                 # tfswitch
+export PATH="$HOME/.local/share/nvim/mason/bin/:$PATH"          # Mason binaries (Neovim)
 
 ################################################################################################
 # User configuration
