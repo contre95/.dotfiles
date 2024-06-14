@@ -52,7 +52,7 @@ in
     PAGER = "";
     MYENV = "${whichMachine}";
     EDITOR = "nvim";
-    MY_FOLDER = if os == "linux" then "/home/canus" else "/Users/lucas.contreras/.dotfiles";
+    MY_FOLDER = if os == "linux" then "/home/canus" else "/Users/contre/";
     SCR_PATH = "$MY_FOLDER/scripts";
   };
 

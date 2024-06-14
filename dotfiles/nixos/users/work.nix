@@ -1,6 +1,6 @@
 { config, pkgs, ... }:
 {
-  # imports = [ <home-manager/nix-darwin> ];
+  imports = [ <home-manager/nix-darwin> ];
 
   environment = {
     shells = with pkgs; [ zsh ];
@@ -9,6 +9,7 @@
     systemPath = [ "/opt/homebrew/bin" ];
     pathsToLink = [ "/Applications" ];
   };
+
 
   environment.systemPackages = [
     # Languages
@@ -40,11 +41,12 @@
     pkgs.unzip
     pkgs.unrar
     pkgs.stow
+    pkgs.ripgrep
+    pkgs.nerdfonts
     pkgs.bandwhich
     pkgs.autojump
     pkgs.tree
     pkgs.awscli
-    pkgs.zbar
     pkgs.tree-sitter
     pkgs.kubectl
     pkgs.tmux
@@ -60,20 +62,60 @@
 
 
   ];
-  # home-manager.useGlobalPkgs = true;
-  # home-manager.useUserPackages = true;
-  # home-manager.users.contre = {
-  #   home.username = "contre";
-  #   home.homeDirectory = "/Users/contre";
-  #
-  #   home = {
-  #     # username = "contre";
-  #     # homeDirectory = "/Users/contre";
-  #     packages = [
-  #     ];
-  #   };
-  #
-  #   home.stateVersion = "24.05";
-  #
-  # };
+  home-manager.useGlobalPkgs = true;
+  home-manager.useUserPackages = true;
+  home-manager.users."lucas.contreras" = {
+    imports = [
+      ../programs/git.nix
+    ];
+    home.username = "lucas.contreras";
+    home.homeDirectory = "/Users/lucas.contreras";
+  
+    home = {
+      packages = [
+      ];
+    };
+
+    home.file = {
+      neovim = {
+        recursive = true;
+        source = /Users/contre/dotfiles/nvim;
+        target = ".config/nvim";
+      };
+
+      tmux = {
+        recursive = false;
+        source = /Users/contre/dotfiles/tmux/.tmux.conf;
+        target = "./.tmux.conf";
+      };
+
+#      keyboard = {
+#        recursive = true;
+#        source = /Users/contre/dotfiles/keybaord;
+#        target = ".config/xkb";
+#      };
+
+      zshrc = {
+        recursive = false;
+        source = /Users/contre/dotfiles/zsh/.zshrc;
+        target = "./.zshrc";
+      };
+
+      zsh = {
+        recursive = false;
+        source = /Users/contre/dotfiles/zsh/.zsh;
+        target = "./.zsh";
+      };
+
+      alacritty = {
+        recursive = true;
+        source = /Users/contre/dotfiles/alacritty;
+        target = ".config/alacritty";
+      };
+
+    };
+  
+    home.stateVersion = "24.05";
+  
+  };
 }
