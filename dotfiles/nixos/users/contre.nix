@@ -101,6 +101,10 @@ in
       spotify
       betterdiscordctl
       vesktop
+      (pkgs.discord.override {
+        withOpenASAR = true;
+        withVencord = true;
+      })
       alacritty
       telegram-desktop
 

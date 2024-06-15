@@ -37,7 +37,7 @@
           sponsorblock
           # multi-account-containers
           h264ify
-          i-dont-care-about-cookies
+          # i-dont-care-about-cookies
         ];
 
         settings = {
