@@ -54,6 +54,7 @@ in
 
       # Essentials User 
       unzip
+      p7zip
       unrar
       stow
       bandwhich
@@ -64,6 +65,7 @@ in
       tree-sitter
       kubectl
       tmux
+      go-chromecast
       tmuxPlugins.tmux-thumbs
       (pass.withExtensions (ext: with ext; [ pass-checkup pass-otp ]))
       gnupg

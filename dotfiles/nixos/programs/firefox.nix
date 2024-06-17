@@ -35,6 +35,7 @@
           # firefox-color
           darkreader
           sponsorblock
+          improved-tube
           # multi-account-containers
           h264ify
           # i-dont-care-about-cookies
@@ -152,6 +153,11 @@
               iconUpdateURL = "https://www.protondb.com/sites/protondb/images/favicon.ico";
               updateInterval = 7 * 24 * 60 * 60 * 1000;
               definedAliases = [ "pdb" ];
+            };
+            "AmazonES" = {
+              urls = [{ template = "https://www.amazon.es/s?k={searchTerms}"; }];
+              iconUpdateURL = "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg";
+              definedAliases = [ "amz" ];
             };
             "Youtube" = {
               urls = [{ template = "https://youtube.com/search?q={searchTerms}"; }];
