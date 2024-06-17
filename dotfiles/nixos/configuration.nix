@@ -52,6 +52,7 @@ in
     PAGER = "";
     MYENV = "${whichMachine}";
     EDITOR = "nvim";
+    PATH = if os == "linux" then "$PATH" else "$PATH:/Users/lucas.contreras/.nix-profile/bin:/run/current-system/sw/bin:/nix/var/nix/profiles/default/bin:$HOME/.pyenv/bin:/go/bin/";
     MY_FOLDER = if os == "linux" then "/home/canus" else "/Users/contre/";
     SCR_PATH = "$MY_FOLDER/scripts";
   };
