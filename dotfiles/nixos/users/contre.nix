@@ -36,11 +36,13 @@ in
       nodejs_22
       terraform
 
-      # LSP
+      # LSP and toolkits
       sqls
       black
+      delve
       gopls
       pyright
+      air
       nil
       tfsec
       tflint
@@ -83,6 +85,7 @@ in
       less
       iwgtk
       gcc
+      busybox
       coreutils
       feh
       imv
