@@ -21,6 +21,7 @@ in
       ./system/bluetooth.nix
       ./system/syncthings.nix
       ./system/shell.nix
+      ./system/test.nix
       ./system/boot.nix
       ./system/fonts.nix
       ./system/containers.nix
@@ -41,6 +42,7 @@ in
     allowUnfree = true;
   };
 
+  nix.settings.experimental-features = [ "nix-command" "flakes"];
   nixpkgs.config.packageOverrides = pkgs: {
     nur = import (builtins.fetchTarball "https://github.com/nix-community/NUR/archive/master.tar.gz") {
       inherit pkgs;
