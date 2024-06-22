@@ -24,7 +24,6 @@ in
       ../programs/gtk.nix
       ../programs/git.nix
       ../programs/test.nix
-      # ../programs/librewolf.nix
       ../programs/firefox.nix
     ];
 
@@ -76,6 +75,7 @@ in
       neovim
 
       # Essentials OS 
+      peek
       gparted
       xorg.xhost
       fzf
