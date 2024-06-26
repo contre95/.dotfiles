@@ -6,7 +6,7 @@
     kernelPackages = pkgs.linuxPackages_latest;
     loader.efi.canTouchEfiVariables = true;
       loader.systemd-boot = {
-        enable = true;
+        # enable = true;
         # devices = [ "nodev" ];
         # efiSupport = true;
         configurationLimit = 10;
