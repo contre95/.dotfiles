@@ -43,6 +43,7 @@ in
       gopls
       pyright
       air
+      mycli
       nil
       tfsec
       tflint
@@ -77,7 +78,6 @@ in
       neovim
 
       # Essentials OS 
-      peek
       gparted
       xorg.xhost
       fzf
@@ -89,6 +89,7 @@ in
       coreutils
       feh
       imv
+      ffmpeg
       prometheus-node-exporter
       bash
       btop
