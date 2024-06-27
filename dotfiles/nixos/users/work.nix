@@ -4,7 +4,7 @@
 
   environment = {
     shells = with pkgs; [ zsh ];
-    darwinConfig = "/Users/contre/dotfiles/nixos/configuration.nix";
+    darwinConfig = "/Users/canus/dotfiles/nixos/configuration.nix";
     loginShell = pkgs.zsh;
     systemPath = [ "/opt/homebrew/bin" ];
     pathsToLink = [ "/Applications" ];
@@ -68,7 +68,6 @@
     imports = [
       ../programs/git.nix
     ];
-    home.username = "lucas.contreras";
     home.homeDirectory = "/Users/lucas.contreras";
   
     home = {
@@ -79,37 +78,37 @@
     home.file = {
       neovim = {
         recursive = true;
-        source = /Users/contre/dotfiles/nvim;
+        source = /Users/canus/dotfiles/nvim;
         target = ".config/nvim";
       };
 
       tmux = {
         recursive = false;
-        source = /Users/contre/dotfiles/tmux/.tmux.conf;
+        source = /Users/canus/dotfiles/tmux/.tmux.conf;
         target = "./.tmux.conf";
       };
 
 #      keyboard = {
 #        recursive = true;
-#        source = /Users/contre/dotfiles/keybaord;
+#        source = /Users/canus/dotfiles/keybaord;
 #        target = ".config/xkb";
 #      };
 
       zshrc = {
         recursive = false;
-        source = /Users/contre/dotfiles/zsh/.zshrc;
+        source = /Users/canus/dotfiles/zsh/.zshrc;
         target = "./.zshrc";
       };
 
       zsh = {
         recursive = false;
-        source = /Users/contre/dotfiles/zsh/.zsh;
+        source = /Users/canus/dotfiles/zsh/.zsh;
         target = "./.zsh";
       };
 
       alacritty = {
         recursive = true;
-        source = /Users/contre/dotfiles/alacritty;
+        source = /Users/canus/dotfiles/alacritty;
         target = ".config/alacritty";
       };
 
