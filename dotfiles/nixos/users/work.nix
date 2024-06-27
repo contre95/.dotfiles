@@ -47,6 +47,7 @@
     pkgs.autojump
     pkgs.tree
     pkgs.awscli
+    pkgs.azure-cli
     pkgs.tree-sitter
     pkgs.kubectl
     pkgs.tmux
