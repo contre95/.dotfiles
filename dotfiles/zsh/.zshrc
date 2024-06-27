@@ -14,7 +14,7 @@ export KUBECONFIG=~/.kube/config
 # Fuzzy Finder (aka FZF)
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 # The next line enables autojump
-[[ -s $HOME/.cache/yay/autojump-git/pkg/autojump-git/etc/profile.d/autojump.sh ]] && source $HOME/.cache/yay/autojump-git/pkg/autojump-git/etc/profile.d/autojump.sh
+# [[ -s $HOME/.cache/yay/autojump-git/pkg/autojump-git/etc/profile.d/autojump.sh ]] && source $HOME/.cache/yay/autojump-git/pkg/autojump-git/etc/profile.d/autojump.sh
 autoload -U compinit && compinit -u
 
 ################################################################################################
@@ -95,6 +95,7 @@ sr() {
 ################################################################################################
 alias mf="cd $MY_FOLDER"
 alias p="podman --remote"
+alias j="autojump"
 alias pu="podman unshare"
 alias pq="pacman -Q | fzf"
 alias ru="sudo pacman -Ru \$(pacman -Q | fzf | awk -F\" \" '{print \$1}')"
