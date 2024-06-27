@@ -46,6 +46,11 @@ export PATH="$MY_FOLDER/bin:$PATH"                              # Custom binarie
 export PATH="$HOME/.local/bin:$PATH"                            # ~/.local
 export PATH="/usr/local/bin:$PATH"                              # /usr/local
 export PATH="/usr/bin:$PATH"                                    # just env in nix.. apparently 
+# If os is darwin
+if [[ $(uname) = "Darwin" ]]; then
+	export PATH="$PATH:/Users/lucas.contreras/.nix-profile/bin:/run/current-system/sw/bin:/nix/var/nix/profiles/default/bin:$HOME/.pyenv/bin:/go/bin/";
+ 	export NIX_PATH="/Users/lucas.contreras/.nix-defexpr/channels:darwin-config=/Users/canus/dotfiles/nixos/configuration.nix:/nix/var/nix/profiles/per-user/root/channels";
+fi
 # export PATH="$HOME/bin:$PATH"                                 # tfswitch
 export PATH="$HOME/.local/share/nvim/mason/bin/:$PATH"          # Mason binaries (Neovim)
 
@@ -154,7 +159,7 @@ export NVM_DIR="$HOME/.nvm"
 ################################################################################################
 if [[ $(uname) == "Darwin" ]]; then
   # Home folder
-  export MY_FOLDER="/Users/contre"
+  export MY_FOLDER="/Users/canus"
   # Just in case the unfortunate way Mac has to "Supr" does not work on your terminal.. then here's the fix
   bindkey "^[[3~" delete-char
   # Configuration from here https://github.com/auth0/layer0-base/?tab=readme-ov-file#installing-tools-for-local-development
