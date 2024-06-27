@@ -1,6 +1,6 @@
 { ... }: {
-  users.users."lucas.contreras".home = "/Users/lucas.contreras";
   services.nix-daemon.enable = true;
+  users.users."lucas.contreras".home = "/Users/lucas.contreras";
 
   nix.extraOptions = ''
     experimental-features = nix-command
