@@ -24,7 +24,6 @@ in
       ../programs/gtk.nix
       ../programs/git.nix
       ../programs/test.nix
-      # ../programs/librewolf.nix
       ../programs/firefox.nix
     ];
 
@@ -37,11 +36,14 @@ in
       nodejs_22
       terraform
 
-      # LSP
+      # LSP and toolkits
       sqls
       black
+      delve
       gopls
       pyright
+      air
+      mycli
       nil
       tfsec
       tflint
@@ -54,6 +56,7 @@ in
 
       # Essentials User 
       unzip
+      p7zip
       unrar
       stow
       bandwhich
@@ -64,6 +67,7 @@ in
       tree-sitter
       kubectl
       tmux
+      go-chromecast
       tmuxPlugins.tmux-thumbs
       (pass.withExtensions (ext: with ext; [ pass-checkup pass-otp ]))
       gnupg
@@ -81,9 +85,11 @@ in
       less
       iwgtk
       gcc
+      busybox
       coreutils
       feh
       imv
+      ffmpeg
       prometheus-node-exporter
       bash
       btop
@@ -101,6 +107,10 @@ in
       spotify
       betterdiscordctl
       vesktop
+      (pkgs.discord.override {
+        withOpenASAR = true;
+        withVencord = true;
+      })
       alacritty
       telegram-desktop
 
