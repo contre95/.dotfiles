@@ -29,15 +29,17 @@
       };
       Contre = {
         id = 0;
-        extensions = with pkgs.nur.repos.rycee.firefox-addons; [
+        extensions = with pkgs.nur.repos.rycee.firefox-addons; [ # https://nur.nix-community.org/repos/rycee/
           ublock-origin
           privacy-badger
+          hover-zoom-plus
           # firefox-color
           darkreader
           sponsorblock
+          improved-tube
           # multi-account-containers
           h264ify
-          i-dont-care-about-cookies
+          # i-dont-care-about-cookies
         ];
 
         settings = {
@@ -152,6 +154,11 @@
               iconUpdateURL = "https://www.protondb.com/sites/protondb/images/favicon.ico";
               updateInterval = 7 * 24 * 60 * 60 * 1000;
               definedAliases = [ "pdb" ];
+            };
+            "AmazonES" = {
+              urls = [{ template = "https://www.amazon.es/s?k={searchTerms}"; }];
+              iconUpdateURL = "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg";
+              definedAliases = [ "amz" ];
             };
             "Youtube" = {
               urls = [{ template = "https://youtube.com/search?q={searchTerms}"; }];
