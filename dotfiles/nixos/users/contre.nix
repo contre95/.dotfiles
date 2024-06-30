@@ -60,7 +60,8 @@ in
       unrar
       stow
       bandwhich
-      autojump
+      # autojump
+      zoxide
       awscli
       tree
       zbar

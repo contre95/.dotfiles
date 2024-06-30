@@ -13,8 +13,7 @@ export KUBECONFIG=~/.kube/config
 ################################################################################################
 # Fuzzy Finder (aka FZF)
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-# The next line enables autojump
-# [[ -s $HOME/.cache/yay/autojump-git/pkg/autojump-git/etc/profile.d/autojump.sh ]] && source $HOME/.cache/yay/autojump-git/pkg/autojump-git/etc/profile.d/autojump.sh
+eval "$(zoxide init zsh)"
 autoload -U compinit && compinit -u
 
 ################################################################################################
