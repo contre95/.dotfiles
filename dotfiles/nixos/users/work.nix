@@ -39,6 +39,7 @@
 
     # Essentials User 
     pkgs.unzip
+    pkgs.direnv
     pkgs.unrar
     pkgs.stow
     pkgs.ripgrep
