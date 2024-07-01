@@ -44,7 +44,7 @@
     pkgs.ripgrep
     pkgs.nerdfonts
     pkgs.bandwhich
-    pkgs.autojump
+    pkgs.zoxide
     pkgs.tree
     pkgs.awscli
     pkgs.azure-cli
