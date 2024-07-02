@@ -21,6 +21,7 @@ in
       ./system/bluetooth.nix
       ./system/syncthings.nix
       ./system/shell.nix
+      ./system/test.nix
       ./system/boot.nix
       ./system/fonts.nix
       ./system/containers.nix
@@ -41,6 +42,7 @@ in
     allowUnfree = true;
   };
 
+  nix.settings.experimental-features = [ "nix-command" "flakes"];
   nixpkgs.config.packageOverrides = pkgs: {
     nur = import (builtins.fetchTarball "https://github.com/nix-community/NUR/archive/master.tar.gz") {
       inherit pkgs;
@@ -52,8 +54,9 @@ in
     PAGER = "";
     MYENV = "${whichMachine}";
     EDITOR = "nvim";
+    MY_FOLDER = if os == "linux" then "/home/canus" else "/Users/canus/";
     PATH = if os == "linux" then "$PATH" else "$PATH:/Users/lucas.contreras/.nix-profile/bin:/run/current-system/sw/bin:/nix/var/nix/profiles/default/bin:$HOME/.pyenv/bin:/go/bin/";
-    MY_FOLDER = if os == "linux" then "/home/canus" else "/Users/contre/";
+    # NIX_PATH = if os == "linux" then "$NIX_PATH" else "NIX_PATH=/Users/lucas.contreras/.nix-defexpr/channels:darwin-config=/Users/canus/dotfiles/nixos/configuration.nix:/nix/var/nix/profiles/per-user/root/channels";
     SCR_PATH = "$MY_FOLDER/scripts";
   };
 

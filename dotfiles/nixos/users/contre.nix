@@ -24,7 +24,6 @@ in
       ../programs/gtk.nix
       ../programs/git.nix
       ../programs/test.nix
-      # ../programs/librewolf.nix
       ../programs/firefox.nix
     ];
 
@@ -44,6 +43,7 @@ in
       gopls
       pyright
       air
+      mycli
       nil
       tfsec
       tflint
@@ -60,7 +60,8 @@ in
       unrar
       stow
       bandwhich
-      autojump
+      # autojump
+      zoxide
       awscli
       tree
       zbar
@@ -89,6 +90,7 @@ in
       coreutils
       feh
       imv
+      ffmpeg
       prometheus-node-exporter
       bash
       btop
