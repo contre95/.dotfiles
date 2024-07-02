@@ -29,9 +29,10 @@
       };
       Contre = {
         id = 0;
-        extensions = with pkgs.nur.repos.rycee.firefox-addons; [
+        extensions = with pkgs.nur.repos.rycee.firefox-addons; [ # https://nur.nix-community.org/repos/rycee/
           ublock-origin
           privacy-badger
+          hover-zoom-plus
           # firefox-color
           darkreader
           sponsorblock

@@ -17,6 +17,7 @@
     winetricks
     vulkan-loader
     vulkan-tools
+    nv-codec-headers-12
   ];
 
   programs.gamemode.enable = true;
@@ -72,10 +73,10 @@
   hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.vulkan_beta;
 
   # Mount disks
- # fileSystems."/home/canus/mounts/games" = {
- #   device = "/dev/nvme1n1p1";
- #   fsType = "ext4"; # Replace with your filesystem type
- # };
+  # fileSystems."/home/canus/mounts/games" = {
+  #   device = "/dev/nvme1n1p1";
+  #   fsType = "ext4"; # Replace with your filesystem type
+  # };
   # Kernel Packages
 
   boot.kernelParams = [ "nvidia-drm.modeset=1" ];

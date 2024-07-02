@@ -8,7 +8,7 @@ TERM = "xterm-256color"
 # [window]
 # opacity = 0.5
 
-  [window.padding]
+[window.padding]
   x = 3
   y = 3
 
