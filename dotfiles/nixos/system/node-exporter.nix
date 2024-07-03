@@ -1,10 +1,10 @@
 { ... }: {
   # services.prometheus.exporters.node.enable = true;
 
-  networking.firewall = {
-    enable = true;
-    allowedTCPPorts = [ 9100 ];
-  };
+  # networking.firewall = {
+  #   enable = true;
+  #   allowedTCPPorts = [ 9100 ];
+  # };
 
   services.prometheus.exporters.node = {
     port = 9100;
