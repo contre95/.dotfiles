@@ -21,14 +21,14 @@ local use = packer.use
 return require("packer").startup(function()
   use("wbthomason/packer.nvim")
   -- use("github/copilot.vim")
-  use { "zbirenbaum/copilot.lua" }
-  use {
-    "zbirenbaum/copilot-cmp",
-    after = { "copilot.lua" },
-    config = function()
-      require("copilot_cmp").setup()
-    end
-  }
+  -- use { "zbirenbaum/copilot.lua" }
+  -- use {
+  --   "zbirenbaum/copilot-cmp",
+  --   after = { "copilot.lua" },
+  --   config = function()
+  --     require("copilot_cmp").setup()
+  --   end
+  -- }
   use {
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",
