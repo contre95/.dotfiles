@@ -1,7 +1,7 @@
-require("copilot").setup({
-  suggestion = { enabled = false },
-  panel = { enabled = false },
-})
+--require("copilot").setup({
+--  suggestion = { enabled = false },
+--  panel = { enabled = false },
+--})
 
 table.unpack = table.unpack or unpack -- 5.1 compatibility
 local has_words_before = function()
