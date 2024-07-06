@@ -176,10 +176,11 @@
       "format": "{}",
       "separate-outputs": true
     },
-        "bluetooth": {
+    "bluetooth": {
       "format": "<span color='#b4befe'></span> {status}",
       "on-click": "bluetoothctl power on",
       "on-click-right": "bluetoothctl power off",
+      "on-middle-click": "nix-shell -p blueman --run blueman-manager",
       "format-disabled": "no",
       "format-connected": "<span color='#b4befe'></span> {device_alias} <span color='#3773AB'>{device_battery_percentage}%</span>",
       "tooltip-format": "{device_enumerate}",

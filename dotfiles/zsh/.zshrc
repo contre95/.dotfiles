@@ -94,6 +94,8 @@ sr() {
 ################################################################################################
 alias mf="cd $MY_FOLDER"
 alias p="podman --remote"
+alias nrn="nix-shell -p &1 --run &2"
+alias nsh="nix-shell -p &1"
 alias j="autojump"
 alias pu="podman unshare"
 alias pq="pacman -Q | fzf"
