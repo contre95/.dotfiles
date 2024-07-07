@@ -4,6 +4,9 @@
   # Environment Packages
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.nvidia.acceptLicense = true;
+  nix.optimise.automatic = true;
+  nix.settings.auto-optimise-store = true;
+
 
 
   # xdg.portal.wlr.enable = true;
