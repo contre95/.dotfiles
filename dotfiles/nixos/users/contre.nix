@@ -41,6 +41,8 @@ in
       black
       delve
       gopls
+      mariadb
+      sqlite
       pyright
       air
       mycli
@@ -51,6 +53,7 @@ in
       nixpkgs-fmt
       yamlfmt
       marksman
+      jetbrains.datagrip
       efm-langserver
       lua-language-server
 
