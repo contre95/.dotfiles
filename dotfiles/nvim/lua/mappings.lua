@@ -73,11 +73,14 @@ vim.keymap.set('x', '<C-l>',
     commentapi.toggle.linewise(vim.fn.visualmode())
   end)
 
+-- LSP
+vim.keymap.set("n", "<leader>d", ":vs|:Def<cr>")
+
 -- Telescope
 vim.keymap.set("n", "<leader>b", ":Telescope buffers<cr>")
 vim.keymap.set("n", "<leader>g", ":Telescope live_grep<cr>")
 vim.keymap.set("n", "<leader>h", ":Telescope help_tags<cr>")
-vim.keymap.set("n", "<leader>d", ":Telescope diagnostics<cr>")
+vim.keymap.set("n", "<leader>e", ":Telescope diagnostics<cr>")
 vim.keymap.set("n", "<leader>c", ":Telescope lsp_incoming_calls <cr>")
 vim.keymap.set("n", "<leader>o", ":Telescope find_files find_command=rg,--ignore,--hidden,--files prompt_prefix=🔍<cr>")
 
