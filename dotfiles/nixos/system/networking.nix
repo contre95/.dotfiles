@@ -16,6 +16,9 @@
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
   networking.firewall = {
+    allowedTCPPorts = [ 8080 ];
+  };
+  networking.firewall = {
     enable = true;
   };
 }
