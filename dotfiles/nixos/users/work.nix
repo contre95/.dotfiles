@@ -19,6 +19,7 @@
     pkgs.python3
     pkgs.nodejs_22
     pkgs.terraform
+    pkgs.terraform-docs
 
     # LSP
     pkgs.sqls
