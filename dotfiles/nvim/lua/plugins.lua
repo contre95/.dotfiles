@@ -20,15 +20,20 @@ local use = packer.use
 
 return require("packer").startup(function()
   use("wbthomason/packer.nvim")
-  -- use("github/copilot.vim")
-  -- use { "zbirenbaum/copilot.lua" }
-  -- use {
-  --   "zbirenbaum/copilot-cmp",
-  --   after = { "copilot.lua" },
-  --   config = function()
-  --     require("copilot_cmp").setup()
-  --   end
-  -- }
+  use { "zbirenbaum/copilot.lua" }
+  use {
+    "zbirenbaum/copilot-cmp",
+    after = { "copilot.lua" },
+    config = function()
+      require("copilot_cmp").setup()
+    end
+  }
+  use {
+    "CopilotC-Nvim/CopilotChat.nvim",
+    requires = {
+      { "nvim-lua/plenary.nvim" }, -- for curl, log wrapper
+    },
+  }
   use {
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",
@@ -69,6 +74,13 @@ return require("packer").startup(function()
     requires = { "mfussenegger/nvim-dap", "leoluz/nvim-dap-go", "mortepau/codicons.nvim", "nvim-neotest/nvim-nio" }
   })
   -- LSP / CMP / Snippets / Parsers
+  use({
+    "L3MON4D3/LuaSnip",
+    -- follow latest release.
+    tag = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
+    -- install jsregexp (optional!:).
+    run = "make install_jsregexp"
+  })
   use("nvim-treesitter/nvim-treesitter")
   -- use("nvim-treesitter/playground")
   use("neovim/nvim-lspconfig")
@@ -76,9 +88,7 @@ return require("packer").startup(function()
   use("hrsh7th/cmp-buffer")
   use("hrsh7th/cmp-path")
   use("hrsh7th/cmp-cmdline")
-  use("hrsh7th/cmp-vsnip")
-  use("hrsh7th/vim-vsnip-integ")
-  use("hrsh7th/vim-vsnip")
+  use("saadparwaiz1/cmp_luasnip")
   use("rafamadriz/friendly-snippets")
   use("hrsh7th/cmp-nvim-lsp")
   use("onsails/lspkind-nvim")
