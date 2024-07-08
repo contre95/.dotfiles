@@ -27,7 +27,6 @@ antigen bundle golang
 antigen bundle zsh-users/zsh-autosuggestions
 #antigen bundle jeffreytse/zsh-vi-mode
 antigen bundle zsh-users/zsh-syntax-highlighting
-antigen bundle autojump
 antigen bundle python
 antigen bundle common-aliases
 #antigen bundle docker
