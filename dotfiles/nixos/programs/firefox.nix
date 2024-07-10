@@ -37,7 +37,7 @@
           darkreader
           sponsorblock
           improved-tube
-          # multi-account-containers
+          multi-account-containers
           h264ify
           # i-dont-care-about-cookies
         ];
