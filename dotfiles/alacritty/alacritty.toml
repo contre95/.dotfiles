@@ -12,11 +12,32 @@ TERM = "xterm-256color"
   x = 3
   y = 3
 
-# [shell]
-# program = "zsh"
-# [class]
-# instance = "Alacritty"
-# general = "Alacritty"
+# This guy: https://github.com/fatih/dotfiles/blob/cd5fed7106b29c0cbe722d0ee59c44d588872df7/alacritty.toml#L86
+[[keyboard.bindings]]
+action = "Paste"
+key = "V"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+action = "IncreaseFontSize"
+key = "Equals"
+mods = "Control"
+
+[[keyboard.bindings]]
+action = "DecreaseFontSize"
+key = "Minus"
+mods = "Control"
+
+[[keyboard.bindings]]
+chars = "\u001b[1;5D"
+key = "Left"
+mods = "Control"
+
+[[keyboard.bindings]]
+chars = "\u001b[1;5C"
+key = "Right"
+mods = "Control"
+
 
 [scrolling]
 history = 10_000
