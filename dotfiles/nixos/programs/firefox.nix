@@ -55,6 +55,7 @@
           # Disable Activity Stream
           "browser.newtabpage.introShown" = true;
           "browser.newtab.preload" = false;
+           "permissions.fullscreen.allowed" = false;
           "browser.newtabpage.directory.ping" = "";
           "browser.newtabpage.activity-stream.feeds.telemetry" = false;
           "browser.translations.automaticallyPopup" = false;
@@ -191,7 +192,7 @@
 
         extraConfig = ''
           	# user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
-          	user_pref("full-screen-api.ignore-widgets", false);
+          	# user_pref("full-screen-api.ignore-widgets", false);
           	user_pref("media.ffmpeg.vaapi.enabled", true);
             lockPref("signon.rememberSignons",false);
           	user_pref("media.rdd-vpx.enabled", true);

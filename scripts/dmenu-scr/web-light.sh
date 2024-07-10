@@ -10,24 +10,16 @@ chosen=$(echo -e "$choices" | rofi -dmenu -theme $HOME/.config/rofi/dmenu.style.
 # For touchscreen  also need to set 'dom.w3c.touch_events.enabled' to 1 in about:config
 LW_PROFILE="ContreKiosk" # Beware that you should create a new librefox profile named "ContreKiosk" apart from the default one. One profile cannot hold both kiosk and regular windows at the same time.
 
-function screen_center {
-	bspc rule -a \* --one-shot state=floating layer=above rectangle="$SCR_CENTER" monitor="$(bspc query -M | sed -n 2p)"
-}
-
-function screen_corner {
-	bspc rule -a \* --one-shot state=floating layer=above rectangle="$SCR_CORNER"
-}
-
 side () {
-  hyprctl dispatch exec "[float;size 800px 90%; animation slide right; move 76% 4%] $1"
+  hyprctl dispatch exec "[float;size 800px 90%; animation slide right; move 76% 4%;fullscreen:0;] $1"
 }
 
 corner () {
-  hyprctl dispatch exec "[float;size 24% 35%;animation slide; move 75%-20 60%-30] $1"
+  hyprctl dispatch exec "[float;size 24% 35%;animation slide; move 75%-20 60%-30;fullscreen:0;] $1"
 }
 
 center () {
-  hyprctl dispatch exec "[float;size 70% 85%;animation slide;move 15%-30 3%] $1"
+  hyprctl dispatch exec "[fullscreen:0;float;size 70% 85%;animation slide;move 15%-30 3%;] $1"
 }
 
 declare -A markets=(
