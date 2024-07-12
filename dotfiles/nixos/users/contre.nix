@@ -20,9 +20,10 @@ in
 
     imports = [
       ../programs/gpg.nix
-      ../programs/ssh.nix
       ../programs/gtk.nix
       ../programs/git.nix
+      ../programs/zsh.nix
+      ../programs/ssh.nix
       ../programs/test.nix
       ../programs/firefox.nix
     ];
@@ -83,7 +84,6 @@ in
       # Essentials OS 
       gparted
       xorg.xhost
-      fzf
       wdisplays
       less
       iwgtk
@@ -195,16 +195,16 @@ in
         target = ".config/dunst";
       };
 
-      zshrc = {
-        recursive = false;
-        source = /home/canus/dotfiles/zsh/.zshrc;
-        target = "./.zshrc";
-      };
+      #  zshrc = {
+      #   recursive = false;
+      #   source = /home/canus/dotfiles/zsh/.zshrc;
+      #   target = "./.zshrc";
+      # };
 
-      zsh = {
+      p10k = {
         recursive = false;
-        source = /home/canus/dotfiles/zsh/.zsh;
-        target = "./.zsh";
+        source = /home/canus/dotfiles/zsh/.p10k.zsh;
+        target = "./.p10k.zsh";
       };
 
       alacritty = {

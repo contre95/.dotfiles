@@ -14,27 +14,11 @@ export KUBECONFIG=~/.kube/config
 # Fuzzy Finder (aka FZF)
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 eval "$(zoxide init zsh)"
+# No plugin manager
 autoload -U compinit && compinit -u
-
-################################################################################################
-# Antigen
-################################################################################################
-source ~/.zsh/antigen.zsh
+autoload -U history-search-end
+autoload -U colors && colors
 source ~/.zsh/.theme
-antigen use oh-my-zsh
-antigen bundle git
-antigen bundle golang
-antigen bundle zsh-users/zsh-autosuggestions
-#antigen bundle jeffreytse/zsh-vi-mode
-antigen bundle zsh-users/zsh-syntax-highlighting
-antigen bundle python
-antigen bundle common-aliases
-#antigen bundle docker
-#antigen bundle docker-compose
-antigen theme romkatv/powerlevel10k
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-#[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-antigen apply
 
 ################################################################################################
 # Custom PATH  settings
@@ -72,13 +56,9 @@ else
 	# gpgconf --launch gpg-agent
 fi
 
-# Completion
-# autoload -Uz compinit
-# zstyle ':completion:*' menu select
-# fpath+=~/.zfunc
-
-# Enable vi mode
-#bindkey -v
+# Search with Ctrl+R
+bindkey -v
+bindkey '^R' history-incremental-search-backward
 
 ################################################################################################
 # Shell Functions
@@ -91,39 +71,49 @@ sr() {
 ################################################################################################
 # Aliases
 ################################################################################################
-alias mf="cd $MY_FOLDER"
-alias p="podman --remote"
-alias nrn="nix-shell -p &1 --run &2"
-alias nsh="nix-shell -p &1"
-alias j="z"
-alias pu="podman unshare"
-alias pq="pacman -Q | fzf"
-alias ru="sudo pacman -Ru \$(pacman -Q | fzf | awk -F\" \" '{print \$1}')"
-alias sine="pass Canus/Sinenomine | grep -i -A2 $1"
-alias startx="Hyprland"
-alias containers="podman container ls --format '{{.Names}}' | grep -v '\-infra' | fzf -1"
-alias pods="podman pod ls --format '{{.Name}}' | fzf -1"
-alias pogs="podman pod logs -f \`pods\`"
-alias cosh="podman container exec -it \`containers\` sh"
-alias copy='xclip -sel clip'
-alias cdr='cd $(git rev-parse --show-toplevel)'
-alias here='pcmanfm .'
-alias ns="kubectl get namespaces -o json | jq '.items[].metadata.name' | tr -d '\"' | fzf"
-alias ch="cliphist list | fzf | cliphist decode"
-alias kns="kubectl config set-context --current --namespace=\`ns\`"
-alias k='kubectl'
-alias ct="mpg123 --quiet $MY_FOLDER/Library/sounds/ct.mp3"
-alias al="mpg123 --quiet $MY_FOLDER/Library/sounds/olx.mp3"
-alias ed="mpg123 --quiet $MY_FOLDER/Library/sounds/circus.mp3"
-alias xf="mpg123 --quiet $MY_FOLDER/Library/sounds/xfiles.mp3"
-alias mi="mpg123 --quiet $MY_FOLDER/Library/sounds/monster_inc.mp3"
-alias dm="mpg123 --quiet $MY_FOLDER/Library/sounds/deployersmal.mp3"
-alias qn="mpg123 --quiet $MY_FOLDER/Library/sounds/quienteconoce.mp3"
-alias bf="mpg123 --quiet $MY_FOLDER/Library/sounds/back2thefuture.mp3"
-alias fcd="mpg123 --quiet $MY_FOLDER/Library/sounds/final_countdown.mp3"
-alias vimc="nvim $HOME/.config/nvim/init.lua"
-alias zshc="nvim $HOME/.zshrc"
-alias tmuxc="nvim $HOME/.tmux.conf"
+shellAliases = {
+mf="cd $MY_FOLDER";
+p="podman --remote";
+pu="podman unshare";
+nsh="nix-shell -p";
+gst="git status";
+gp="git push";
+gl="git pull";
+j="z";
+l='ls -lFh'     #size,show type,human readable;
+la='ls -lAFh'   #long list,show almost all,show type,human readable;
+lr='ls -tRFh'   #sorted by date,recursive,show type,human readable;
+lt='ls -ltFh'   #long list,sorted by date,show type,human readable;
+grep='grep --color';
+ll='ls -l'      #long list;
+pq="pacman -Q | fzf";
+ru="sudo pacman -Ru \$(pacman -Q | fzf | awk -F\" \" '{print \$1}')";
+sine="pass Canus/Sinenomine | grep -i -A2 $1";
+startx="Hyprland";
+containers="podman container ls --format '{{.Names}}' | grep -v '\-infra' | fzf -1";
+pods="podman pod ls --format '{{.Name}}' | fzf -1";
+pogs="podman pod logs -f \`pods\`";
+cosh="podman container exec -it \`containers\` sh";
+copy='xclip -sel clip';
+cdr='cd $(git rev-parse --show-toplevel)';
+here='pcmanfm .';
+ns="kubectl get namespaces -o json | jq '.items[].metadata.name' | tr -d '\"' | fzf";
+ch="cliphist list | fzf | cliphist decode";
+kns="kubectl config set-context --current --namespace=\`ns\`";
+k='kubectl';
+ct="mpg123 --quiet $MY_FOLDER/Library/sounds/ct.mp3";
+al="mpg123 --quiet $MY_FOLDER/Library/sounds/olx.mp3";
+ed="mpg123 --quiet $MY_FOLDER/Library/sounds/circus.mp3";
+xf="mpg123 --quiet $MY_FOLDER/Library/sounds/xfiles.mp3";
+mi="mpg123 --quiet $MY_FOLDER/Library/sounds/monster_inc.mp3";
+dm="mpg123 --quiet $MY_FOLDER/Library/sounds/deployersmal.mp3";
+qn="mpg123 --quiet $MY_FOLDER/Library/sounds/quienteconoce.mp3";
+bf="mpg123 --quiet $MY_FOLDER/Library/sounds/back2thefuture.mp3";
+fcd="mpg123 --quiet $MY_FOLDER/Library/sounds/final_countdown.mp3";
+vimc="nvim $HOME/.config/nvim/init.lua";
+zshc="nvim $HOME/.zshrc";
+tmuxc="nvim $HOME/.tmux.conf";
+  };
 
 ##############################################################################
 # History Configuration
