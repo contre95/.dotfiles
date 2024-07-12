@@ -63,7 +63,6 @@ in
       unrar
       stow
       bandwhich
-      # autojump
       zoxide
       awscli
       tree
