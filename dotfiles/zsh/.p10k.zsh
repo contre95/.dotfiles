@@ -12,15 +12,23 @@ typeset -g POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(I
 	virtualenv      # python virtual environment (https://docs.python.org/3/library/venv.html)
 	pyenv           # python environment (https://github.com/pyenv/pyenv)
 	goenv           # go environment (https://github.com/syndbg/goenv)
+    terraform_version
 	rust_version    # rustc version (https://www.rust-lang.org)
 	luaenv          # lua version from luaenv (https://github.com/cehoffman/luaenv)
 	terraform       # terraform workspace (https://www.terraform.io)
 	aws             # aws profile (https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-profiles.html)
 	gcloud          # google cloud cli account and project (https://cloud.google.com/)
+    azure
+    background_jobs
+    direnv
+    go_version
+    luaenv
+    public_ip
+    nix_shell
 	google_app_cred # google application credentials (https://cloud.google.com/docs/authentication/production)
 )
 
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(root_indicator dir context dir_writable_joined custom_git_pair vcs_joined kubecontext)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon dir context dir_writable_joined custom_git_pair vcs_joined kubecontext)
 
 POWERLEVEL9K_AWS_SHOW_ON_COMMAND='aws|awless|terraform|pulumi|'
 POWERLEVEL9K_GCLOUD_SHOW_ON_COMMAND='gcloud|gcs'
