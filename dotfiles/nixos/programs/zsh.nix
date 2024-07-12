@@ -1,4 +1,4 @@
-{ config, pkgs, home,... }:
+{ config, pkgs,... }:
 {
   home.packages = with pkgs; [
     zsh-autosuggestions
@@ -33,7 +33,7 @@
       ga = "git add";
       gp = "git push";
       gl = "git pull";
-      j = "z";
+      j = "zoxide";
       l = "ls -lFh";
       la = "ls -lAFh";
       lr = "ls -tRFh";
