@@ -18,16 +18,6 @@ in
     home.username = "contre";
     home.homeDirectory = "/home/contre";
 
-    imports = [
-      ../programs/gpg.nix
-      ../programs/gtk.nix
-      ../programs/git.nix
-      ../programs/zsh.nix
-      ../programs/ssh.nix
-      ../programs/test.nix
-      ../programs/firefox.nix
-    ];
-
     home.packages = with pkgs; [
       # Languages
       go
@@ -214,6 +204,16 @@ in
       };
 
     };
+
+    imports = [
+      ../programs/gpg.nix
+      ../programs/gtk.nix
+      ../programs/git.nix
+      ../programs/zsh.nix
+      ../programs/ssh.nix
+      ../programs/test.nix
+      ../programs/firefox.nix
+    ];
 
     home.stateVersion = "24.05";
 
