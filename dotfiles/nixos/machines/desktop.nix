@@ -62,7 +62,8 @@
     driSupport32Bit = true;
   };
 
-
+  networking.firewall.allowedTCPPorts = [ 4747 ];
+  networking.firewall.allowedUDPPorts = [ 4747 ];
 
   # Nvidia
   hardware.nvidia.open = false;
@@ -73,22 +74,22 @@
   hardware.nvidia.powerManagement.enable = true;
   hardware.nvidia.powerManagement.finegrained = false;
   services.xserver.displayManager.startx.enable = true;
-  hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.vulkan_beta;
+  hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.production;
 
   # Mount disks
   # fileSystems."/home/canus/mounts/games" = {
   #   device = "/dev/nvme1n1p1";
   #   fsType = "ext4"; # Replace with your filesystem type
   # };
+  boot.kernelModules = [ "v4l2loopback" ];
   # Kernel Packages
-
   boot.kernelParams = [ "nvidia-drm.modeset=1" ];
   # OBS Virtual camera 
   boot.extraModulePackages = with config.boot.kernelPackages; [
     v4l2loopback
   ];
   boot.extraModprobeConfig = ''
-    options v4l2loopback devices=1 video_nr=1 card_label="OBS Cam" exclusive_caps=1
+    options v4l2loopback devices=1 video_nr=1,2,3 card_label="OBS Cam" exclusive_caps=1 debug=1
   '';
   security.polkit.enable = true;
 
