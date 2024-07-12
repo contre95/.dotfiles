@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, home,... }:
 {
   home.packages = with pkgs; [
     zsh-autosuggestions
@@ -67,6 +67,7 @@
       zshc = "nvim $HOME/.zshrc";
       tmuxc = "nvim $HOME/.tmux.conf";
     };
+
     plugins = with pkgs; [
       {
         file = "powerlevel10k.zsh-theme";
@@ -76,7 +77,7 @@
       {
         file = "p10k.zsh";
         name = "powerlevel10k-config";
-        src = ~/.p10k.zsh;
+        src = "/home/contre/.p10k.zsh";
       }
     ];
     zplug = {
