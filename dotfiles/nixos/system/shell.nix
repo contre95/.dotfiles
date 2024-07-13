@@ -16,9 +16,10 @@
     enableCompletion = true;
 
     enableGlobalCompInit = true;
-      # source ${pkgs.zsh-nix-shell}/share/zsh-nix-shell/nix-shell.plugin.zsh
+    # source ${pkgs.zsh-nix-shell}/share/zsh-nix-shell/nix-shell.plugin.zsh
     interactiveShellInit = ''
       source ~/.p10k.zsh
+      eval "$(zoxide init zsh)"
     '';
   };
 }
