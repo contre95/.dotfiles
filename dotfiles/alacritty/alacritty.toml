@@ -28,15 +28,15 @@ action = "DecreaseFontSize"
 key = "Minus"
 mods = "Control"
 
-# [[keyboard.bindings]]
-# chars = "\u001b[1;5D"
-# key = "Left"
-# mods = "Control"
-#
-# [[keyboard.bindings]]
-# chars = "\u001b[1;5C"
-# key = "Right"
-# mods = "Control"
+[[keyboard.bindings]]
+chars = "\u001b[1;5D"
+key = "Left"
+mods = "Control"
+
+[[keyboard.bindings]]
+chars = "\u001b[1;5C"
+key = "Right"
+mods = "Control"
 
 
 [scrolling]
