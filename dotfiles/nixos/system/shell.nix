@@ -20,6 +20,9 @@
     interactiveShellInit = ''
       source ~/.p10k.zsh
       eval "$(zoxide init zsh)"
+      bindkey "^[[1;5C" forward-word
+      bindkey "^[[1;5D" backward-word
+      zstyle ":completion:*" matcher-list "" "m:{a-zA-Z}={A-Za-z}" "r:|[._-]=* r:|=*" "l:|=* r:|=*"
     '';
   };
 }

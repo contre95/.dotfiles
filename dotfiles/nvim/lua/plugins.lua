@@ -74,21 +74,16 @@ return require("packer").startup(function()
     requires = { "mfussenegger/nvim-dap", "leoluz/nvim-dap-go", "mortepau/codicons.nvim", "nvim-neotest/nvim-nio" }
   })
   -- LSP / CMP / Snippets / Parsers
-  use({
-    "L3MON4D3/LuaSnip",
-    -- follow latest release.
-    tag = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
-    -- install jsregexp (optional!:).
-    run = "make install_jsregexp"
-  })
   use("nvim-treesitter/nvim-treesitter")
   -- use("nvim-treesitter/playground")
   use("neovim/nvim-lspconfig")
+  use("hrsh7th/vim-vsnip")
   use("hrsh7th/nvim-cmp")
+  use("hrsh7th/cmp-vsnip")
   use("hrsh7th/cmp-buffer")
   use("hrsh7th/cmp-path")
   use("hrsh7th/cmp-cmdline")
-  use("saadparwaiz1/cmp_luasnip")
+  use { 'saadparwaiz1/cmp_luasnip' }
   use("rafamadriz/friendly-snippets")
   use("hrsh7th/cmp-nvim-lsp")
   use("onsails/lspkind-nvim")

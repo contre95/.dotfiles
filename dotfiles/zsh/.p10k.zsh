@@ -10,25 +10,22 @@ typeset -g POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(I
 	# =========================[ Line #1 ]=========================
 	status          # exit code of the last command
 	virtualenv      # python virtual environment (https://docs.python.org/3/library/venv.html)
-	pyenv           # python environment (https://github.com/pyenv/pyenv)
 	goenv           # go environment (https://github.com/syndbg/goenv)
-    terraform_version
-	rust_version    # rustc version (https://www.rust-lang.org)
+    direnv
+    luaenv
+    pyenv           # python environment (https://github.com/pyenv/pyenv)
 	luaenv          # lua version from luaenv (https://github.com/cehoffman/luaenv)
 	terraform       # terraform workspace (https://www.terraform.io)
 	aws             # aws profile (https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-profiles.html)
 	gcloud          # google cloud cli account and project (https://cloud.google.com/)
     azure
     background_jobs
-    direnv
-    go_version
-    luaenv
     public_ip
-    nix_shell
+    # nix_shell
 	google_app_cred # google application credentials (https://cloud.google.com/docs/authentication/production)
 )
 
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon dir context dir_writable_joined custom_git_pair vcs_joined kubecontext)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon dir context dir_writable_joined custom_git_pair vcs_joined kubecontext go_version  rust_version)
 
 POWERLEVEL9K_AWS_SHOW_ON_COMMAND='aws|awless|terraform|pulumi|'
 POWERLEVEL9K_GCLOUD_SHOW_ON_COMMAND='gcloud|gcs'
@@ -46,6 +43,7 @@ POWERLEVEL9K_AWS_DEFAULT_FOREGROUND="orange3"
 POWERLEVEL9K_AWS_CLASSES=('*' DEFAULT)
 POWERLEVEL9K_AWS_DEFAULT_BACKGROUND=0
 
+POWERLEVEL9K_BACKGROUND="clear"
 POWERLEVEL9K_KUBECONTEXT_BACKGROUND="clear"
 POWERLEVEL9K_KUBECONTEXT_DEFAULT_FOREGROUND="blue"
 
@@ -88,11 +86,11 @@ POWERLEVEL9K_ETC_ICON='%F{blue}\uf423'
 POWERLEVEL9K_DIR_WRITABLE_FORBIDDEN_FOREGROUND="red"
 POWERLEVEL9K_DIR_WRITABLE_FORBIDDEN_BACKGROUND="clear"
 
-POWERLEVEL9K_GO_ICON="\uf7b7"
+POWERLEVEL9K_GO_ICON=""
 POWERLEVEL9K_GO_VERSION_BACKGROUND='clear'
 POWERLEVEL9K_GO_VERSION_FOREGROUND='081'
 
-POWERLEVEL9K_HOME_ICON="\ufb26"
+POWERLEVEL9K_HOME_ICON=" "
 
 POWERLEVEL9K_INSTALLATION_PATH=$ANTIGEN_BUNDLES/bhilburn/powerlevel9k
 
@@ -102,6 +100,7 @@ POWERLEVEL9K_LINUX_MANJARO_ICON="\uf312 "
 POWERLEVEL9K_LINUX_UBUNTU_ICON="\uf31b "
 
 POWERLEVEL9K_MODE='nerdfont-complete'
+POWERLEVEL10K_MODE='nerdfont-complete'
 
 POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX=""
 POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX=" \uf101 "
@@ -117,7 +116,7 @@ POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 
 POWERLEVEL9K_RIGHT_SEGMENT_SEPARATOR=''
 POWERLEVEL9K_RIGHT_SUBSEGMENT_SEPARATOR='%F{008}\uf104%F{008}'
-
+POWERLEVEL9K_GO_VERSION_ICON=''
 POWERLEVEL9K_SHORTEN_DELIMITER='%F{008} …%F{008}'
 POWERLEVEL9K_SHORTEN_DIR_LENGTH=3
 POWERLEVEL9K_SHORTEN_STRATEGY="none"

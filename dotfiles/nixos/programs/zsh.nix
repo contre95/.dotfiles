@@ -29,6 +29,7 @@
       pu = "podman unshare";
       nsh = "nix-shell -p";
       gst = "git status";
+      ".." = "cd ..";
       gco = "git checkout";
       ga = "git add";
       gp = "git push";
