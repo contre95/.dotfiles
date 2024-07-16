@@ -28,6 +28,7 @@
     pkgs.pyright
     pkgs.nil
     pkgs.tfsec
+    pkgs.zoxide
     pkgs.tflint
     pkgs.terraform-ls
     pkgs.nixpkgs-fmt
@@ -68,11 +69,9 @@
   home-manager.useGlobalPkgs = true;
   home-manager.useUserPackages = true;
   home-manager.users."lucas.contreras" = {
-    imports = [
-      ../programs/git.nix
-    ];
+
     home.homeDirectory = "/Users/lucas.contreras";
-  
+
     home = {
       packages = [
       ];
@@ -91,22 +90,10 @@
         target = "./.tmux.conf";
       };
 
-#      keyboard = {
-#        recursive = true;
-#        source = /Users/canus/dotfiles/keybaord;
-#        target = ".config/xkb";
-#      };
-
-      zshrc = {
+      p10k = {
         recursive = false;
-        source = /Users/canus/dotfiles/zsh/.zshrc;
-        target = "./.zshrc";
-      };
-
-      zsh = {
-        recursive = false;
-        source = /Users/canus/dotfiles/zsh/.zsh;
-        target = "./.zsh";
+        source = /Users/canus/dotfiles/zsh/.p10k.zsh;
+        target = ".config/.p10k.zsh";
       };
 
       alacritty = {
@@ -116,8 +103,15 @@
       };
 
     };
-  
+
+    # These imports uses the files linked above
+    imports = [
+      ../programs/git.nix
+      ../programs/zsh.nix
+    ];
+
+
     home.stateVersion = "24.05";
-  
+
   };
 }
