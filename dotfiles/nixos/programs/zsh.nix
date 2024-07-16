@@ -11,7 +11,7 @@
 
   programs.zsh = {
     initExtra = ''
-      # source ~/.config/.p10k.zsh
+      source ~/.config/.p10k.zsh
       eval "$(zoxide init zsh)"
       bindkey "^[[1;5C" forward-word
       bindkey "^[[1;5D" backward-word
