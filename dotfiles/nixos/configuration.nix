@@ -48,7 +48,7 @@ in
       inherit pkgs;
     };
   };
-
+  programs.nix-ld.enable = true;
   # Common env variables
   environment.variables = {
     PAGER = "";
