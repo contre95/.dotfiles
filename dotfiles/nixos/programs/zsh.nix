@@ -12,6 +12,7 @@
   programs.zsh = {
     initExtra = ''
       source ~/.config/.p10k.zsh
+      export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
       eval "$(zoxide init zsh)"
       bindkey "^[[1;5C" forward-word
       bindkey "^[[1;5D" backward-word
