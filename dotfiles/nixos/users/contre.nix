@@ -194,7 +194,7 @@ in
       p10k = {
         recursive = false;
         source = /home/canus/dotfiles/zsh/.p10k.zsh;
-        target = "./.p10k.zsh";
+        target = ".config/.p10k.zsh";
       };
 
       alacritty = {

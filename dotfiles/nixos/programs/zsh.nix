@@ -1,4 +1,4 @@
-{ config, pkgs,... }:
+{ config, pkgs, ... }:
 {
   home.packages = with pkgs; [
     zsh-autosuggestions
@@ -10,6 +10,14 @@
   ];
 
   programs.zsh = {
+    initExtra = ''
+      # source ~/.config/.p10k.zsh
+      eval "$(zoxide init zsh)"
+      bindkey "^[[1;5C" forward-word
+      bindkey "^[[1;5D" backward-word
+      zstyle ":completion:*" matcher-list "" "m:{a-zA-Z}={A-Za-z}" "r:|[._-]=* r:|=*" "l:|=* r:|=*"
+    '';
+
 
     enable = true;
 
@@ -23,6 +31,7 @@
 
     shellAliases = {
       update = "sudo WHICH_MACHINE=$(hostname) nixos-rebuild switch";
+      update-mac = "sudo WHICH_MACHINE=macbook darwin-rebuild";
       mf = "cd $MY_FOLDER";
       p = "podman --remote";
       vim = "nvim";
@@ -79,7 +88,7 @@
       {
         file = "p10k.zsh";
         name = "powerlevel10k-config";
-        src = "/home/contre/.p10k.zsh";
+        src = "${config.xdg.configHome}/.p10k.zsh";
       }
     ];
     zplug = {
