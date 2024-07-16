@@ -52,7 +52,7 @@ in
   # Common env variables
   environment.variables = {
     PAGER = "";
-    KEYTIMEOUT = 10;
+    KEYTIMEOUT = "10";
     LANG = "en_US.UTF-8";
     PASSWORD_STORE_DIR = "$MY_FOLDER/pass";
     LC_ALL = "en_US.UTF-8";
