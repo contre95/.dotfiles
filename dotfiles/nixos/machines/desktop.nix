@@ -6,6 +6,8 @@
   nixpkgs.config.nvidia.acceptLicense = true;
   nix.optimise.automatic = true;
   nix.settings.auto-optimise-store = true;
+  programs.nix-ld.enable = true;
+
 
 
 
