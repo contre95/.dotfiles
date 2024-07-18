@@ -73,7 +73,7 @@
 
     home.sessionVariables = {
       MY_FOLDER = "/Users/canus";
-      PATH = "$PATH:/Users/lucas.contreras/.nix-profile/bin:/run/current-system/sw/bin:/nix/var/nix/profiles/default/bin:$HOME/.pyenv/bin:/go/bin/";
+      PATH = "$PATH:/Users/lucas.contreras/.nix-profile/bin:/run/current-system/sw/bin:/nix/var/nix/profiles/default/bin:$HOME/.pyenv/bin:/go/bin/:/usr/local/bin";
       NIX_PATH = "/Users/lucas.contreras/.nix-defexpr/channels:darwin-config=/Users/canus/dotfiles/nixos/configuration.nix:/nix/var/nix/profiles/per-user/root/channels";
       SCR_PATH = "$MY_FOLDER/scripts";
       EDITOR = "nvim";
