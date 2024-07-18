@@ -18,6 +18,13 @@ in
     home.username = "contre";
     home.homeDirectory = "/home/contre";
 
+    home.sessionVariables = {
+      MY_FOLDER = "/home/canus";
+      PATH = "$PATH:/Users/lucas.contreras/.nix-profile/bin:/run/current-system/sw/bin:/nix/var/nix/profiles/default/bin:$HOME/.pyenv/bin:/go/bin/";
+      SCR_PATH = "$MY_FOLDER/scripts";
+      EDITOR = "nvim";
+    };
+
     home.packages = with pkgs; [
       # Languages
       go
