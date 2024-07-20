@@ -73,6 +73,9 @@ in
 
       # Essentials OS 
       gparted
+      quickemu
+      cava
+      quickgui
       xorg.xhost
       wdisplays
       less
