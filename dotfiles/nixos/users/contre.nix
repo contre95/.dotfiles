@@ -64,6 +64,7 @@ in
       go-chromecast
       tmuxPlugins.tmux-thumbs
       (pass.withExtensions (ext: with ext; [ pass-checkup pass-otp ]))
+      tessen
       gnupg
       vlc
       cliphist
