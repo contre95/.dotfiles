@@ -51,19 +51,13 @@ in
 
   # Common env variables
   environment.variables = {
+    EDITOR = "nvim";
     PAGER = "";
     KEYTIMEOUT = "10";
     LANG = "en_US.UTF-8";
     PASSWORD_STORE_DIR = "$MY_FOLDER/pass";
     LC_ALL = "en_US.UTF-8";
     MYENV = "${whichMachine}";
-    EDITOR = "nvim";
-    MY_FOLDER = if os == "linux" then "/home/canus" else "/Users/canus/";
-    PATH =
-      if os == "linux" then
-        "$PATH:$MY_FOLDER/bin:$MY_FOLDER/scripts/bin-scr" else
-        "$PATH:/Users/lucas.contreras/.nix-profile/bin:/run/current-system/sw/bin:/nix/var/nix/profiles/default/bin:$HOME/.pyenv/bin:/go/bin/";
-    SCR_PATH = "$MY_FOLDER/scripts";
   };
 
 
