@@ -88,6 +88,8 @@ in
       xorg.xhost
       wdisplays
       less
+      openvpn
+      pritunl-client
       iwgtk
       gcc
       busybox
