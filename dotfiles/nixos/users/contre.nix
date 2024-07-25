@@ -20,7 +20,8 @@ in
 
     home.sessionVariables = {
       MY_FOLDER = "/home/canus";
-      PATH = "$PATH:/Users/lucas.contreras/.nix-profile/bin:/run/current-system/sw/bin:/nix/var/nix/profiles/default/bin:$HOME/.pyenv/bin:/go/bin/";
+      PASSWORD_STORE_DIR = "$MY_FOLDER/pass";
+      # PATH = "$PATH:/Users/lucas.contreras/.nix-profile/bin:/run/current-system/sw/bin:/nix/var/nix/profiles/default/bin:$HOME/.pyenv/bin:/go/bin/";
       SCR_PATH = "$MY_FOLDER/scripts";
       EDITOR = "nvim";
     };
