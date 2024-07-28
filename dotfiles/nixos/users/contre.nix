@@ -84,12 +84,13 @@ in
       gparted
       quickemu
       cava
+      gawk
       quickgui
       xorg.xhost
       wdisplays
       less
+      wl-kbptr
       openvpn
-      pritunl-client
       iwgtk
       gcc
       busybox
