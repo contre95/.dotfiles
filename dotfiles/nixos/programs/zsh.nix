@@ -22,8 +22,9 @@
 
     enable = true;
 
-    # Autosuggestions.enable = true;
-    # syntaxHighlighting.enable = true;
+    enableCompletion = true;
+    autosuggestion.enable = true;
+    syntaxHighlighting.enable = true;
 
     history = {
       size = 10000;
@@ -93,15 +94,22 @@
         src = "${config.xdg.configHome}/.p10k.zsh";
       }
     ];
-    zplug = {
-      enable = true;
-      plugins = [
-        { name = "zsh-users/zsh-autosuggestions"; }
-        { name = "zsh-users/zsh-syntax-highlighting"; }
-        { name = "zsh-users/zsh-completions"; }
-        { name = "zsh-users/zsh-history-substring-search"; }
-      ];
-    };
+    # I gave it a try, but I couldn't make load time any faster :/
+    # zplug = {
+    #   enable = true;
+    #   plugins = [
+    #     { name = "zsh-users/zsh-autosuggestions"; }
+    #     { name = "zsh-users/zsh-syntax-highlighting"; }
+    #     { name = "zsh-users/zsh-completions"; }
+    #     { name = "zsh-users/zsh-history-substring-search"; }
+    #   ];
+    # };
+      oh-my-zsh = {
+    enable = true;
+    plugins = [ 
+    "history-substring-search" 
+    ];
+  };
   };
 
   programs.fzf =
