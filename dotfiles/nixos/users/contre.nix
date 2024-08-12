@@ -19,6 +19,7 @@ in
     home.homeDirectory = "/home/contre";
 
     home.sessionVariables = {
+      LD_LIBRARY_PATH = "${pkgs.stdenv.cc.cc.lib}/lib";
       MY_FOLDER = "/home/canus";
       PASSWORD_STORE_DIR = "$MY_FOLDER/pass";
       # PATH = "$PATH:/Users/lucas.contreras/.nix-profile/bin:/run/current-system/sw/bin:/nix/var/nix/profiles/default/bin:$HOME/.pyenv/bin:/go/bin/";
@@ -32,6 +33,7 @@ in
       jq
       cargo
       python3
+      python311Packages.pip
       nodejs_22
       terraform
 
@@ -60,16 +62,18 @@ in
       unzip
       p7zip
       unrar
-      stow
+      scrcpy # To share android screen
+      android-tools
+      stow # To create symlinks
       bandwhich
-      zoxide
+      zoxide # Like autojump but in Rust
       awscli
       tree
-      zbar
+      zbar # For scanning QR codes
       tree-sitter
       kubectl
       tmux
-      go-chromecast
+      # go-chromecast
       tmuxPlugins.tmux-thumbs
       (pass.withExtensions (ext: with ext; [ pass-checkup pass-otp ]))
       tessen
@@ -100,14 +104,14 @@ in
       ffmpeg
       prometheus-node-exporter
       bash
-      btop
+      btop # Like htop which is like top
       nmap
       wget
       wirelesstools
       iwd
       rsync
       gnumake
-      ripgrep
+      ripgrep # Like grep but in Rust
       pinentry-gnome3
       envsubst
 
@@ -127,9 +131,9 @@ in
       dunst
       unstable.waybar
       swappy
-      grim
-      bruno
-      slurp
+      grim # For screenshots
+      slurp # For screenshots
+      bruno # Like Postman but this one has a Dog as a logo
       gnome.zenity
       wf-recorder
       hyprpaper
