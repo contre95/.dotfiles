@@ -57,6 +57,8 @@
     (pkgs.pass.withExtensions (ext: with ext; [ pass-checkup pass-otp ]))
     pkgs.gnupg
     pkgs.git
+    pkgs.scrcpy
+    pkgs.android-tools
     pkgs.neovim
     pkgs.coreutils
 
