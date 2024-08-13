@@ -21,6 +21,7 @@ local use = packer.use
 return require("packer").startup(function()
   use("wbthomason/packer.nvim")
   use { "zbirenbaum/copilot.lua" }
+  use { "marko-cerovac/material.nvim" }
   use {
     "zbirenbaum/copilot-cmp",
     after = { "copilot.lua" },
