@@ -1,0 +1,137 @@
+export PYENV_SHELL=zsh
+
+function sp {
+  git branch >/dev/null 2>&1 || return 1
+  git config user.initials
+}
+
+# Hide python version if it doesn't come from one of these sources.
+typeset -g POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(I
+	# =========================[ Line #1 ]=========================
+	status          # exit code of the last command
+	virtualenv      # python virtual environment (https://docs.python.org/3/library/venv.html)
+	goenv           # go environment (https://github.com/syndbg/goenv)
+    direnv
+    luaenv
+    pyenv           # python environment (https://github.com/pyenv/pyenv)
+	luaenv          # lua version from luaenv (https://github.com/cehoffman/luaenv)
+	terraform       # terraform workspace (https://www.terraform.io)
+	aws             # aws profile (https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-profiles.html)
+	gcloud          # google cloud cli account and project (https://cloud.google.com/)
+    azure
+    background_jobs
+    public_ip
+    # nix_shell
+	google_app_cred # google application credentials (https://cloud.google.com/docs/authentication/production)
+)
+
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon dir context dir_writable_joined custom_git_pair vcs_joined kubecontext go_version  rust_version)
+
+POWERLEVEL9K_AWS_SHOW_ON_COMMAND='aws|awless|terraform|pulumi|'
+POWERLEVEL9K_GCLOUD_SHOW_ON_COMMAND='gcloud|gcs'
+POWERLEVEL9K_PYENV_SHOW_ON_COMMAND='python'
+POWERLEVEL9K_KUBECONTEXT_SHOW_ON_COMMAND='kubectl'
+
+POWERLEVEL9K_PHPENV_SHOW_SYSTEM=true
+POWERLEVEL9K_PYENV_SHOW_SYSTEM=true
+
+POWERLEVEL9K_JENV_SHOW_SYSTEM=true
+
+POWERLEVEL9K_NODENV_SHOW_SYSTEM=true
+
+POWERLEVEL9K_AWS_DEFAULT_FOREGROUND="orange3"
+POWERLEVEL9K_AWS_CLASSES=('*' DEFAULT)
+POWERLEVEL9K_AWS_DEFAULT_BACKGROUND=0
+
+POWERLEVEL9K_BACKGROUND="clear"
+POWERLEVEL9K_KUBECONTEXT_BACKGROUND="clear"
+POWERLEVEL9K_KUBECONTEXT_DEFAULT_FOREGROUND="blue"
+
+# Context color when running with privileges.
+typeset -g POWERLEVEL9K_CONTEXT_ROOT_FOREGROUND="clear"
+typeset -g POWERLEVEL9K_CONTEXT_BACKGROUND="clear"
+# Context color in SSH without privileges.
+typeset -g POWERLEVEL9K_CONTEXT_{REMOTE,REMOTE_SUDO}_FOREGROUND="clear"
+# Default context color (no privileges, no SSH).
+typeset -g POWERLEVEL9K_CONTEXT_FOREGROUND="clear"
+# Context format when running with privileges: bold user@hostname.
+typeset -g POWERLEVEL9K_CONTEXT_ROOT_TEMPLATE='(%m)'
+# Context format when in SSH without privileges: user@hostname.
+typeset -g POWERLEVEL9K_CONTEXT_{REMOTE,REMOTE_SUDO}_TEMPLATE='(%m)'
+# Default context format (no privileges, no SSH): userhostname.
+typeset -g POWERLEVEL9K_CONTEXT_TEMPLATE='(%m)'
+# Don't show context unless running with privileges or in SSH.
+
+POWERLEVEL9K_CUSTOM_MY_ENV="echo  $MYENV"
+POWERLEVEL9K_CUSTOM_MY_ENV_BACKGROUND="clear"
+POWERLEVEL9K_CUSTOM_MY_ENV_FOREGROUND="blue"
+#POWERLEVEL9K_CUSTOM_MY_ENV_ICON="\uebc6"
+
+OWERLEVEL9K_DIR_BACKGROUND='237'
+POWERLEVEL9K_CUSTOM_GIT_PAIR="echo \$(sp)"
+POWERLEVEL9K_CUSTOM_GIT_PAIR_BACKGROUND="clear"
+POWERLEVEL9K_CUSTOM_GIT_PAIR_FOREGROUND="blue"
+POWERLEVEL9K_CUSTOM_GIT_PAIR_ICON="\uf7af"
+POWERLEVEL9K_DIR_DEFAULT_BACKGROUND="clear"
+POWERLEVEL9K_DIR_DEFAULT_FOREGROUND="012"
+POWERLEVEL9K_DIR_FOREGROUND='010'
+POWERLEVEL9K_DIR_HOME_BACKGROUND="clear"
+POWERLEVEL9K_DIR_HOME_FOREGROUND="012"
+POWERLEVEL9K_DIR_HOME_SUBFOLDER_BACKGROUND="clear"
+POWERLEVEL9K_DIR_HOME_SUBFOLDER_FOREGROUND="012"
+POWERLEVEL9K_DIR_PATH_SEPARATOR="%F{008}/%F{cyan}"
+
+POWERLEVEL9K_DIR_ETC_BACKGROUND="clear"
+POWERLEVEL9K_ETC_ICON='%F{blue}\uf423'
+POWERLEVEL9K_DIR_WRITABLE_FORBIDDEN_FOREGROUND="red"
+POWERLEVEL9K_DIR_WRITABLE_FORBIDDEN_BACKGROUND="clear"
+
+POWERLEVEL9K_GO_ICON=""
+POWERLEVEL9K_GO_VERSION_BACKGROUND='clear'
+POWERLEVEL9K_GO_VERSION_FOREGROUND='081'
+
+POWERLEVEL9K_HOME_ICON=" "
+
+POWERLEVEL9K_INSTALLATION_PATH=$ANTIGEN_BUNDLES/bhilburn/powerlevel9k
+
+POWERLEVEL9K_LEFT_SUBSEGMENT_SEPARATOR='%F{008}\uf460%F{008}'
+
+POWERLEVEL9K_LINUX_MANJARO_ICON="\uf312 "
+POWERLEVEL9K_LINUX_UBUNTU_ICON="\uf31b "
+
+POWERLEVEL9K_MODE='nerdfont-complete'
+POWERLEVEL10K_MODE='nerdfont-complete'
+
+POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX=""
+POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX=" \uf101 "
+
+POWERLEVEL9K_NVM_BACKGROUND='clear'
+POWERLEVEL9K_NVM_FOREGROUND='green'
+
+POWERLEVEL9K_OS_ICON_BACKGROUND='clear'
+POWERLEVEL9K_OS_ICON_FOREGROUND='cyan'
+
+POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
+POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+
+POWERLEVEL9K_RIGHT_SEGMENT_SEPARATOR=''
+POWERLEVEL9K_RIGHT_SUBSEGMENT_SEPARATOR='%F{008}\uf104%F{008}'
+POWERLEVEL9K_GO_VERSION_ICON=''
+POWERLEVEL9K_SHORTEN_DELIMITER='%F{008} …%F{008}'
+POWERLEVEL9K_SHORTEN_DIR_LENGTH=3
+POWERLEVEL9K_SHORTEN_STRATEGY="none"
+
+POWERLEVEL9K_STATUS_ERROR_BACKGROUND="clear"
+POWERLEVEL9K_STATUS_ERROR_FOREGROUND="001"
+POWERLEVEL9K_STATUS_OK_BACKGROUND="clear"
+POWERLEVEL9K_STATUS_BACKGROUND="clear"
+POWERLEVEL9K_CARRIAGE_RETURN_ICON="\uf071"
+
+POWERLEVEL9K_TIME_FORMAT="%D{%H:%M \uE868  %d.%m}"
+
+POWERLEVEL9K_VCS_CLEAN_BACKGROUND='clear'
+POWERLEVEL9K_VCS_CLEAN_FOREGROUND='green'
+POWERLEVEL9K_VCS_MODIFIED_BACKGROUND='clear'
+POWERLEVEL9K_VCS_MODIFIED_FOREGROUND='yellow'
+POWERLEVEL9K_VCS_UNTRACKED_BACKGROUND='clear'
+POWERLEVEL9K_VCS_UNTRACKED_FOREGROUND='green'
