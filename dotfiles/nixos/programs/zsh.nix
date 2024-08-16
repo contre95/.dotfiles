@@ -44,6 +44,7 @@
       ".." = "cd ..";
       gco = "git checkout";
       ga = "git add";
+      gap = "git add --patch";
       gp = "git push";
       gl = "git pull";
       j = "z";

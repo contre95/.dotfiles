@@ -13,6 +13,11 @@
   environment.systemPackages = [
     # Languages
     pkgs.go
+    # pkgs.protobuf_26
+    pkgs.protoc-gen-go
+    pkgs.protoc-gen-go-grpc
+    pkgs.grpc-gateway
+    # pkgs.grpc-tools
     pkgs.jq
     pkgs.cargo
     pkgs.python3
@@ -57,8 +62,6 @@
     (pkgs.pass.withExtensions (ext: with ext; [ pass-checkup pass-otp ]))
     pkgs.gnupg
     pkgs.git
-    pkgs.scrcpy
-    pkgs.android-tools
     pkgs.neovim
     pkgs.coreutils
 
