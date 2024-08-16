@@ -30,7 +30,7 @@ vim.api.nvim_create_user_command('Tfsec', function()
   vim.cmd("vsplit term:// tfsec %:p:h")
 end, {})
 
--- Git add/commit
+-- Git add
 vim.api.nvim_create_user_command('GitAdd', function()
   local bufnr = vim.api.nvim_get_current_buf()
   local filename = vim.api.nvim_buf_get_name(bufnr)
