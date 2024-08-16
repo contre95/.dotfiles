@@ -31,6 +31,7 @@
       path = "${config.xdg.dataHome}/zsh/history";
     };
 
+
     shellAliases = {
       update = "sudo WHICH_MACHINE=$(hostname) nixos-rebuild switch";
       update-mac = "sudo WHICH_MACHINE=macbook darwin-rebuild";
@@ -42,10 +43,18 @@
       gst = "git status";
       gd = "git diff";
       ".." = "cd ..";
-      gco = "git checkout";
+      gA = "git add .";
+      gS = "git stash";
       ga = "git add";
       gap = "git add --patch";
+      gbD = "git branch -D";
+      gc = "git checkout";
+      gcb = "git checkout -b";
+      gcm = "git commit -S -m";
+      gll = "git pull";
       gp = "git push";
+      gt = "gitui";
+      gco = "git checkout";
       gl = "git pull";
       j = "z";
       l = "ls -lFh";
