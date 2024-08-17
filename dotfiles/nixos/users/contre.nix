@@ -22,8 +22,8 @@ in
       LD_LIBRARY_PATH = "${pkgs.stdenv.cc.cc.lib}/lib";
       MY_FOLDER = "/home/canus";
       PASSWORD_STORE_DIR = "$MY_FOLDER/pass";
-      # PATH = "$PATH:/Users/lucas.contreras/.nix-profile/bin:/run/current-system/sw/bin:/nix/var/nix/profiles/default/bin:$HOME/.pyenv/bin:/go/bin/";
       SCR_PATH = "$MY_FOLDER/scripts";
+      PATH = "$PATH:$MY_FOLDER/scripts/bin-scr:/Users/lucas.contreras/.nix-profile/bin:/run/current-system/sw/bin:/nix/var/nix/profiles/default/bin:$HOME/.pyenv/bin:/go/bin/";
       EDITOR = "nvim";
     };
 

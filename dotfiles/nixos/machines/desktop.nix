@@ -68,15 +68,15 @@
   networking.firewall.allowedUDPPorts = [ 4747 ];
 
   # Nvidia
-  hardware.nvidia.open = false;
+  hardware.nvidia.open = true;
   services.xserver.enable = true;
   hardware.nvidia.nvidiaSettings = true;
   hardware.nvidia.modesetting.enable = true;
   services.xserver.videoDrivers = [ "nvidia" ];
   hardware.nvidia.powerManagement.enable = true;
   hardware.nvidia.powerManagement.finegrained = false;
-  services.xserver.displayManager.startx.enable = true;
-  hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.production;
+  services.xserver.displayManager.startx.enable = true; # No display manager
+  hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.stable;
 
   # Mount disks
   # fileSystems."/home/canus/mounts/games" = {
