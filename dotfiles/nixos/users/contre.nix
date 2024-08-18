@@ -113,7 +113,7 @@ in
       gnumake
       ripgrep # Like grep but in Rust
       pinentry-gnome3
-      envsubst
+      gettext
 
       # Desktop apps
       spotify
