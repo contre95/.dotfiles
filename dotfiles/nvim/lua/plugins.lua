@@ -69,7 +69,10 @@ return require("packer").startup(function()
   use('eandrju/cellular-automaton.nvim')
   -- Git
   use({ "lewis6991/gitsigns.nvim", requires = { "nvim-lua/plenary.nvim" } })
-  use("knsh14/vim-github-link")
+  use {
+    'ruifm/gitlinker.nvim',
+    requires = 'nvim-lua/plenary.nvim',
+  }
   use({
     "rcarriga/nvim-dap-ui",
     requires = { "mfussenegger/nvim-dap", "leoluz/nvim-dap-go", "mortepau/codicons.nvim", "nvim-neotest/nvim-nio" }

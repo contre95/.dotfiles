@@ -31,6 +31,7 @@ require("plugins/statusline-config")
 require("plugins/treesitter-config")
 require("plugins/colorscheme-config")
 require("plugins/clipboard-image-config")
+require("plugins/git-linker")
 
 
 -- Leader key
