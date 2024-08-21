@@ -65,6 +65,9 @@
     pkgs.neovim
     pkgs.coreutils
 
+    pkgs.# Web apps
+    pkgs.yarr 
+
     pkgs.# Desktop apps
     pkgs.alacritty
 
