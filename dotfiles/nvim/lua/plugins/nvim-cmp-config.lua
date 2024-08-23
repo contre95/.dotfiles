@@ -52,10 +52,10 @@ cmp.setup({
 
   -- Sources
   sources = cmp.config.sources({
-    { name = 'copilot', group_index = 2 },
+    { name = 'nvim_lsp' },
     { name = 'path' },
     { name = 'vsnip' },
-    { name = 'nvim_lsp' },
+    { name = 'copilot', group_index = 2 },
     { name = 'buffer',  keyword_length = 3, },
   }),
 
