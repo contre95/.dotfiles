@@ -9,6 +9,11 @@
   programs.nix-ld.enable = true;
 
 
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-older-than 30d";
+  };
 
 
   # xdg.portal.wlr.enable = true;

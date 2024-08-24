@@ -70,6 +70,7 @@
       containers = "podman container ls --format '{{.Names}}' | grep -v '\-infra' | fzf -1";
       pods = "podman pod ls --format '{{.Name}}' | fzf -1";
       pogs = "podman pod logs -f \`pods\`";
+      pot = "podman top \`containers\` user huser group hgroup";
       cosh = "podman container exec -it \`containers\` sh";
       copy = "xclip -sel clip";
       cdr = "cd $(git rev-parse --show-toplevel)";
