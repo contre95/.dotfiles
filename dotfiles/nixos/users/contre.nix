@@ -106,6 +106,7 @@ in
       bash
       btop # Like htop which is like top
       nmap
+      mpg123
       wget
       wirelesstools
       iwd
@@ -124,6 +125,7 @@ in
         withVencord = true;
       })
       alacritty
+      alacritty-theme
       telegram-desktop
 
       # Desktop Environment 
