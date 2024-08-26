@@ -70,6 +70,7 @@
 
     pkgs.# Desktop apps
     pkgs.alacritty
+    pkgs.alacritty-theme
 
 
   ];
