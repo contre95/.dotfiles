@@ -25,7 +25,6 @@
     pkgs.terraform
     pkgs.terraform-docs
     pkgs.terragrunt
-    pkgs.tenv
 
     # LSP
     pkgs.sqls
