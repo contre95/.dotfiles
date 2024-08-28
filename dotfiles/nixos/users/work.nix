@@ -24,6 +24,8 @@
     pkgs.nodejs_22
     pkgs.terraform
     pkgs.terraform-docs
+    pkgs.terragrunt
+    pkgs.tenv
 
     # LSP
     pkgs.sqls
