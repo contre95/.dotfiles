@@ -86,6 +86,7 @@ in
 
       # Essentials OS 
       gparted
+      openssl
       quickemu
       cava
       gawk
