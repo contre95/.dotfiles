@@ -25,6 +25,7 @@ in
       ./system/boot.nix
       ./system/fonts.nix
       ./system/containers.nix
+      ./system/security.nix
       ./system/networking.nix
       ./system/version.nix
       ./system/node-exporter.nix
