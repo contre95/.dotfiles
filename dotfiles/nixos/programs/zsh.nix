@@ -67,7 +67,7 @@
       ru = "sudo pacman -Ru \$(pacman -Q | fzf | awk -F\" \" '{print \$1}')";
       sine = "pass Canus/Sinenomine | grep -i -A2 $1";
       startx = "Hyprland";
-      containers = "podman container ls --format '{{.Names}}' | grep -v '\-infra' | fzf -1";
+      containers = "podman container ls --format '{{.Names}}' | grep -v infra | fzf -1";
       pods = "podman pod ls --format '{{.Name}}' | fzf -1";
       pogs = "podman pod logs -f \`pods\`";
       pot = "podman top \`containers\` user huser group hgroup";
