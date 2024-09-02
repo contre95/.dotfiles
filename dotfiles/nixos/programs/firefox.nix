@@ -73,7 +73,10 @@
           "toolkit.telemetry.updatePing.enabled" = false;
           # Remove annoying indicator that's shown when webcam or mic is in use via firefox.
           "privacy.webrtc.legacyGlobalIndicator" = false;
-          "privacy.webrtc.hideGlobalIndicator" = true;
+          "privacy.webrtc.hideGlobalIndicator" = false;
+          "browser.fixup.domainsuffixwhitelist.lucas" = true; 
+          "browser.fixup.domainwhitelist.contre.lucas" = true; # whitelist contre.lucas tld
+          # "keyword.enable" = false; # Disable search when typing unexistent TLD
         };
 
         search = {

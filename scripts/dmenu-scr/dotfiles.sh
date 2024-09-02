@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 #
-choices="vimrc\nzsh\nnixos\ntmux\nwaybar\nwaybar-css\nhyprland\nalacritty\nscripts"
+choices="vimrc\nzsh\nnixos\ntmux\nwaybar\nwaybar-css\nhyprland\nalacritty\nfirefox\nscripts"
 var=$(echo -e $choices | rofi -dmenu -theme $MY_FOLDER/dotfiles/rofi/dmenu.style.rasi -i -p "Dotfiles" -sb "#40444B" -fn "JetBrainsMono Nerd Font") 
 TMUX_SCRIPTS=/home/canus/scripts/tmux-scr
 
@@ -20,7 +20,9 @@ case $var in
     'alacritty')
     choice="$MY_FOLDER/dotfiles/alacritty/alacritty.toml";;
     'zsh')
-    choice="$MY_FOLDER/dotfiles/zsh/.zshrc";;
+    choice="$MY_FOLDER/dotfiles/nixos/programs/zsh.nix";;
+    'firefox')
+    choice="$MY_FOLDER/dotfiles/nixos/programs/firefox.nix";;
     'tmux')
     choice="$MY_FOLDER/dotfiles/tmux/.tmux.conf";;
 esac
