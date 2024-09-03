@@ -2,7 +2,6 @@
   # services.prometheus.exporters.node.enable = true;
 
   networking.firewall = {
-    enable = true;
     allowedTCPPorts = [ 9100 ];
   };
 
