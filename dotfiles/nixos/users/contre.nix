@@ -147,6 +147,7 @@ in
       alacritty
       alacritty-theme
       telegram-desktop
+      simplex-chat-desktop
 
       # Desktop Environment 
       pcmanfm
