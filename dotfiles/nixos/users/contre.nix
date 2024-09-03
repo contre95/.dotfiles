@@ -137,6 +137,7 @@ in
 
       # Desktop apps
       spotify
+      yubikey-manager
       betterdiscordctl
       vesktop
       (pkgs.discord.override {
