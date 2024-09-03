@@ -29,7 +29,8 @@
       };
       Contre = {
         id = 0;
-        extensions = with pkgs.nur.repos.rycee.firefox-addons; [ # https://nur.nix-community.org/repos/rycee/
+        extensions = with pkgs.nur.repos.rycee.firefox-addons; [
+          # https://nur.nix-community.org/repos/rycee/
           ublock-origin
           privacy-badger
           hover-zoom-plus
@@ -51,11 +52,11 @@
           "media.gmp-widevinecdm.enabled" = true;
           "media.gmp-widevinecdm.visible" = true;
           "browser.newtabpage.enabled" = false;
-          "browser.newtab.url" = "about:blank";
+          "browser.newtab.url" = "https://contre.lucas";
           # Disable Activity Stream
           "browser.newtabpage.introShown" = true;
           "browser.newtab.preload" = false;
-           "permissions.fullscreen.allowed" = false;
+          "permissions.fullscreen.allowed" = false;
           "browser.newtabpage.directory.ping" = "";
           "browser.newtabpage.activity-stream.feeds.telemetry" = false;
           "browser.translations.automaticallyPopup" = false;
@@ -74,7 +75,7 @@
           # Remove annoying indicator that's shown when webcam or mic is in use via firefox.
           "privacy.webrtc.legacyGlobalIndicator" = false;
           "privacy.webrtc.hideGlobalIndicator" = false;
-          "browser.fixup.domainsuffixwhitelist.lucas" = true; 
+          "browser.fixup.domainsuffixwhitelist.lucas" = true;
           "browser.fixup.domainwhitelist.contre.lucas" = true; # whitelist contre.lucas tld
           # "keyword.enable" = false; # Disable search when typing unexistent TLD
         };
