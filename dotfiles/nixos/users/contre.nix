@@ -10,19 +10,21 @@ in
 
   environment.variables = { };
 
+  # This will give you the intermediate.crt
+  # curl --insecure https://<your-stie> -w "%{certs}" -o /dev/null  > asd
   security.pki.certificates = [
     ''
       -----BEGIN CERTIFICATE-----
-      MIIByDCCAW2gAwIBAgIQHCckBsPn/vX1/fk5OXzDgzAKBggqhkjOPQQDAjAwMS4w
+      MIIBxzCCAW2gAwIBAgIQAegWCa+N+dGfq8VNE4k2GzAKBggqhkjOPQQDAjAwMS4w
       LAYDVQQDEyVDYWRkeSBMb2NhbCBBdXRob3JpdHkgLSAyMDI0IEVDQyBSb290MB4X
-      DTI0MDgyOTE2MTYyMVoXDTI0MDkwNTE2MTYyMVowMzExMC8GA1UEAxMoQ2FkZHkg
+      DTI0MDkwNDA2NDAzM1oXDTI0MDkxMTA2NDAzM1owMzExMC8GA1UEAxMoQ2FkZHkg
       TG9jYWwgQXV0aG9yaXR5IC0gRUNDIEludGVybWVkaWF0ZTBZMBMGByqGSM49AgEG
-      CCqGSM49AwEHA0IABGWB8swa/+ZmuuFKyG+HeajL6SPQeFIUijPfAx+AXxiwHagI
-      NBIQ/Mv39rildybS2/AN3V2jvxE9+1BRxL2HfZujZjBkMA4GA1UdDwEB/wQEAwIB
-      BjASBgNVHRMBAf8ECDAGAQH/AgEAMB0GA1UdDgQWBBRFCgdsOxL5B6VYME+U1K2s
-      HB0TDjAfBgNVHSMEGDAWgBTp0gFCbe5jm+agPVYZ0w3NSSS9+DAKBggqhkjOPQQD
-      AgNJADBGAiEA0wW2IeCBRPlzoIoCUk3Ipr4e2ZyeDBZREkP6FfuewN4CIQCW9L1x
-      cE7lM8SE6R5JDys6x4f6C+UPUk2wdYdCzdhNjQ==
+      CCqGSM49AwEHA0IABOrLjbiTS17bKxjVrZM5fjocygN/D65Aur8ZYhzDcccR/GRN
+      vfbGmYfjyZrBdg6pIf6bCIVj9vZC6MoPrMhnkgWjZjBkMA4GA1UdDwEB/wQEAwIB
+      BjASBgNVHRMBAf8ECDAGAQH/AgEAMB0GA1UdDgQWBBRCaX82G8ryIYCxz8S6QY9R
+      n//zjzAfBgNVHSMEGDAWgBTp0gFCbe5jm+agPVYZ0w3NSSS9+DAKBggqhkjOPQQD
+      AgNIADBFAiAzhOQ9rp+znNz0O9BHLsY19trF24rtFOXXIgfmQ+l0kQIhAIYZEXyN
+      EQjGyD/S2/Ifu2AtoOfp7Gvu+5b01cLMOsnd
       -----END CERTIFICATE-----
     ''
   ];
