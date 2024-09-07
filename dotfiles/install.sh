@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+echo "Remember to create the machines/<machine_name>.nix and add machine to configuration.nix" 
+sleep 3
 nix-shell -p gpg git 
 sudo mkdir /home/canus
 sudo chown contre /home/canus
@@ -18,3 +20,4 @@ sudo nix-channel --add https://nixos.org/channels/nixos-24.05 nixos
 sudo nix-channel --add https://nixos.org/channels/nixos-unstable nixos-unstable 
 # Prepare and run 
 cp  ./zsh/p10k.zsh /home/contre/.config
+sudo WHICH_MACHINE=$1 nixos-rebuild switch --upgrade
