@@ -2,7 +2,7 @@
 #
 # source ~/.zshrc
 
-choices="Any\nKeybr\nDuolingo\nNotes\nTradingView\nMedia\nCronometer\nWhite\nSpotify\nDiscord\nN26\nFlights\nMonkeytype\nHome\nChatGPT\nGarmin\nLichess\nInstagram\nPNL\nYoutube\nTwitter\nCoin 360\nMusic\nTwitch\nSpeedTest\nTranslate\nOpenAsistant"
+choices="Any\nKeybr\nDuolingo\nNotes\nTradingView\nMedia\nCronometer\nWhite\nSpotify\nDiscord\nN26\nFlights\nMonkeytype\nHome\nChatGPT\nGarmin\nLichess\nInstagram\nYoutube\nTwitter\nCoin 360\nMusic\nTwitch\nSpeedTest\nTranslate\nOpenAsistant"
 chosen=$(echo -e "$choices" | rofi -dmenu -theme $HOME/.config/rofi/dmenu.style.rasi -i -p "Select Layout: " -sb "#8F7DAB")
 
 # NOTE
@@ -11,15 +11,15 @@ chosen=$(echo -e "$choices" | rofi -dmenu -theme $HOME/.config/rofi/dmenu.style.
 LW_PROFILE="ContreKiosk" # Beware that you should create a new librefox profile named "ContreKiosk" apart from the default one. One profile cannot hold both kiosk and regular windows at the same time.
 
 side () {
-  hyprctl dispatch exec "[float;size 800px 90%; animation slide right; move 76% 4%;fullscreen:0;] $1"
+  hyprctl dispatch exec "[size 800px 90%; animation slide right; move 76% 4%;fullscreen:0;] $1"
 }
 
 corner () {
-  hyprctl dispatch exec "[float;size 24% 35%;animation slide; move 75%-20 60%-30;fullscreen:0;] $1"
+  hyprctl dispatch exec "[size 24% 35%;animation slide; move 75%-20 60%-30;fullscreen:0;] $1"
 }
 
 center () {
-  hyprctl dispatch exec "[fullscreen:0;float;size 70% 85%;animation slide;move 15%-30 3%;] $1"
+  hyprctl dispatch exec "[fullscreen:0;size 70% 85%;animation slide;move 15%-30 3%;] $1"
 }
 
 declare -A markets=(
@@ -56,9 +56,6 @@ case "$chosen" in
 	;;
 "SpeedTest")
 	corner "firefox --kiosk -P $LW_PROFILE --new-window 'https://librespeed.org/'"
-	;;
-"PNL")
-	firefox --kiosk -P $LW_PROFILE --new-window https://docs.google.com/spreadsheets/d/1v_JZ9QqCnBhPOOXPrl6OE26kyl6XZRzJNjMs27UY8BA
 	;;
 "Notes")
 	firefox --kiosk -P $LW_PROFILE --new-window https://md.contre.io
