@@ -69,8 +69,6 @@
     driSupport32Bit = true;
   };
 
-  networking.firewall.allowedTCPPorts = [ 4747 ];
-  networking.firewall.allowedUDPPorts = [ 4747 ];
 
   # Nvidia
   hardware.nvidia.open = true;
