@@ -42,6 +42,7 @@
   # Environment Packages
   environment.systemPackages = with pkgs; [ acpi ];
 
+
   nixpkgs.config.packageOverrides = pkgs: {
     intel-vaapi-driver = pkgs.intel-vaapi-driver.override { enableHybridCodec = true; };
   };
@@ -58,10 +59,6 @@
   };
 
   # # User specific
-  home-manager.users.contre = { pkgs, ... }: {
-    home.packages = with pkgs; [
-      brightnessctl
-    ];
-  };
+    programs.git.signing.signByDefault = false;
 
 }

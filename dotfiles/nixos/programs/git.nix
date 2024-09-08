@@ -1,11 +1,11 @@
-{ ... }: {
-  programs.git = {
+{ config, ... }: {
+  programs.git = with config;{
     enable = true;
     userName = "Contre";
     userEmail = "lucascontre95@gmail.com";
     signing = {
       key = "E27E9BED3E07CE8F";
-      signByDefault = true;
+      # signByDefault = true;
     };
     extraConfig = {
       push = { autoSetupRemote = true; };

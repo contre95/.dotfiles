@@ -16,7 +16,8 @@
       # * Excluding 'photoprism' since the data stored is too big.
       "0 6 * * * /usr/bin/rsync -r --exclude 'photoprism' --info=NAME --out-format='\%t \%n'  /mnt/SSD/data/ /mnt/HDD2/backup/ssd/homeserver-data/ >> /mnt/SSD/logs/cronjobs/data-bkp.log"
       # Changing permission to zigbe dongle on startup
-      "@reboot chmod 666 $(/home/canus/home-server/podman/zigbee2mqtt/find-dongle.sh | grep -i sonof | awk -F" " '{print $1}')"
+      "@reboot chmod 666 $(/home/canus/home-server/podman/zigbee2mqtt/find-dongle.sh | grep -i sonof | awk -F"
+      " '{print $1}')"
     ];
   };
 
@@ -33,6 +34,13 @@
     #     iptables -t nat -I PREROUTING -i enp89s0 -p tcp -m tcp --dport 443 -j REDIRECT --to-ports 4430
     #   '';
   };
+
+  home-manager.users.contre = { pkgs, ... }: {
+    programs.git.signing.signByDefault = false;
+    home.packages = with pkgs; [
+    ];
+  };
+
   environment.systemPackages = with pkgs; [
     motion
     audit

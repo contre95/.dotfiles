@@ -54,6 +54,7 @@
 
   # User specific packages for desktop
   home-manager.users.contre = { pkgs, ... }: {
+    programs.git.signing.signByDefault = true;
     programs.obs-studio = {
       enable = true;
       plugins = with pkgs.obs-studio-plugins; [
