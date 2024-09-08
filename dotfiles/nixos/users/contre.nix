@@ -106,6 +106,7 @@ in
       # Essentials OS 
       gparted
       openssl
+      sshpass
       quickemu
       cava
       gawk

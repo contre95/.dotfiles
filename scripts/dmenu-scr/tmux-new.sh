@@ -1,12 +1,24 @@
 #!/usr/bin/env bash
 
-choices=" RSS\n Server\n Music\n N26\n Android\n Anoux\n Mac\n Remarkable"
-var=$(echo -e $choices | rofi -dmenu -theme $HOME/.config/rofi/dmenu.style.rasi -i -p "Exit menu: " -sb "#2f8a47" -fn "JetBrainsMono Nerd Font")
-TMUX_SCRIPTS=/home/canus/scripts/tmux-scr
+# Define the hosts
+hosts=("desktop" "notebook" "server")
 
-case $var in
+# Define the command to run
+command="pushd $MY_FOLDER && git pull && sudo WHICH_MACHINE=$(hostname) nixos-rebuild switch"
 
-' Server')
-	exec alacritty -e "$TMUX_SCRIPTS/contre-server.sh"
-	;;
-esac
+# Create a new tmux session
+tmux new-session -d -s mysession
+
+# Loop over each host and create a new pane for each
+for i in "${!hosts[@]}"; do
+  if [ $i -eq 0 ]; then
+    tmux send-keys "ssh contre@contre.${hosts[$i]} '$command'" C-m
+  else
+    tmux split-window -h
+    tmux send-keys "ssh contre@contre.${hosts[$i]} '$command'" C-m
+    tmux select-layout tiled
+  fi
+done
+
+# Attach to the tmux session
+tmux attach-session -t mysession
