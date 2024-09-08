@@ -6,8 +6,8 @@ in
 {
 
   environment.variables = {
-    GPG_TTY = "${pkgs.coreutils}/bin/tty";
-    SSH_AUTH_SOCK = "/run/user/1000/gnupg/S.gpg-agent.ssh";
+    # GPG_TTY = "${pkgs.coreutils}/bin/tty";
+    # SSH_AUTH_SOCK = "/run/user/1000/gnupg/S.gpg-agent.ssh";
   };
 
   programs.ssh = {
