@@ -20,6 +20,8 @@
     ];
   };
 
+  networking.wireless.enable = false;
+  networking.wireless.iwd.enable = false;
   networking.firewall = {
     enable = false;
     interfaces.enp89s0 = {
