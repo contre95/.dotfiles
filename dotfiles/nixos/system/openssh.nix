@@ -10,23 +10,22 @@ in
     SSH_AUTH_SOCK = "/run/user/1000/gnupg/S.gpg-agent.ssh";
   };
 
-  # programs.ssh = {
-  #   startAgent = false; # GPG act as ssh-agent
-  #   extraConfig = ''
-  #     Host 192.168.*, contre.*
-  #       ForwardAgent yes
-  #   '';
-  # };
+  programs.ssh = {
+    startAgent = false; # GPG act as ssh-agent
+    extraConfig = ''
+      Host 192.168.*, contre.*
+        ForwardAgent yes
+    '';
+  };
 
   services.openssh = {
     enable = true;
     settings = {
       PasswordAuthentication = false;
       AllowUsers = null; # Allows all users by default. Can be [ "user1" "user2" ]
-      hostKeys = null; # This is now working, still creates and reference the hostKeys
+      # hostKeys = null; # This is now working, still creates and reference the hostKeys
       X11Forwarding = false;
       LogLevel = "INFO";
-      # forwardAgent = true; # You don't want to forward agent for any hosts
       PermitRootLogin = "no";
       KbdInteractiveAuthentication = false;
     };
