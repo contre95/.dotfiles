@@ -1,5 +1,4 @@
 { config, pkgs, lib, ... }:
-
 {
   # Environment Packages
   nixpkgs.config.allowUnfree = true;
@@ -18,6 +17,14 @@
 
   # xdg.portal.wlr.enable = true;
   services.dbus.enable = true;
+
+  # Networking
+  # networking.firewall = {
+  #   enable = false;
+  #
+  #   extraCommands = ''
+  #   '';
+  # };
 
   # System packages
   environment.systemPackages = with pkgs; [
@@ -44,7 +51,6 @@
     "steam-original"
     "steam-run"
   ];
-
 
   # User specific packages for desktop
   home-manager.users.contre = { pkgs, ... }: {
