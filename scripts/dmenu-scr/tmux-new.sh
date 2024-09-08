@@ -4,7 +4,7 @@
 hosts=("desktop" "notebook" "server")
 
 # Define the command to run
-command="pushd $MY_FOLDER && git pull && sudo WHICH_MACHINE=$(hostname) nixos-rebuild switch"
+command="pushd $MY_FOLDER && git pull"
 
 # Create a new tmux session
 tmux new-session -d -s mysession
