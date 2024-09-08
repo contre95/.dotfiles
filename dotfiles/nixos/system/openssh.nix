@@ -1,4 +1,8 @@
 { pkgs, config, ... }:
+let
+  socketDir = "/run/user/1000/gnupg";
+
+in
 {
 
   environment.variables = {
@@ -6,13 +10,13 @@
     SSH_AUTH_SOCK = "/run/user/1000/gnupg/S.gpg-agent.ssh";
   };
 
-  programs.ssh = {
-    startAgent = false; # GPG act as ssh-agent
-      extraConfig = ''
-      Host 192.168.*, contre.*
-        ForwardAgent yes
-    '';
-  };
+  # programs.ssh = {
+  #   startAgent = false; # GPG act as ssh-agent
+  #   extraConfig = ''
+  #     Host 192.168.*, contre.*
+  #       ForwardAgent yes
+  #   '';
+  # };
 
   services.openssh = {
     enable = true;
@@ -21,13 +25,13 @@
       AllowUsers = null; # Allows all users by default. Can be [ "user1" "user2" ]
       hostKeys = null; # This is now working, still creates and reference the hostKeys
       X11Forwarding = false;
+      LogLevel = "INFO";
       # forwardAgent = true; # You don't want to forward agent for any hosts
       PermitRootLogin = "no";
       KbdInteractiveAuthentication = false;
     };
+    # Allow phone from local network and VPN use password
     extraConfig = "
-      Match Address 192.168.0.170/32
-        PasswordAuthentication yes
       Match Address 192.168.0.172/32,10.8.0.0/24
         PasswordAuthentication yes
     ";
