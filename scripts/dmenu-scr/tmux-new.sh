@@ -12,10 +12,10 @@ tmux new-session -d -s mysession
 # Loop over each host and create a new pane for each
 for i in "${!hosts[@]}"; do
   if [ $i -eq 0 ]; then
-    tmux send-keys "ssh contre@contre.${hosts[$i]} '$command'" C-m
+    tmux send-keys "ssh contre@contre.${hosts[$i]}" C-m
   else
     tmux split-window -h
-    tmux send-keys "ssh contre@contre.${hosts[$i]} '$command'" C-m
+    tmux send-keys "ssh contre@contre.${hosts[$i]}" C-m
     tmux select-layout tiled
   fi
 done
