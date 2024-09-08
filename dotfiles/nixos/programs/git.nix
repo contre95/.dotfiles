@@ -5,7 +5,6 @@
     userEmail = "lucascontre95@gmail.com";
     signing = {
       key = "E27E9BED3E07CE8F";
-      # signByDefault = true;
     };
     extraConfig = {
       push = { autoSetupRemote = true; };
