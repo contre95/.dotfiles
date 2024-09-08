@@ -4,7 +4,7 @@
 hosts=("desktop" "notebook" "server")
 
 # Define the command to run
-command="pushd \$MY_FOLDER && git pull"
+command="pushd \$MY_FOLDER && git pull && update"
 
 # Create a new tmux session
 tmux new-session -d -s mysession
