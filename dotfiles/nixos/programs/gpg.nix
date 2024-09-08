@@ -1,8 +1,9 @@
-{ pkgs, ... }: 
+{ pkgs, config, ... }: 
 
 {
   programs.gpg = {
     enable = true;
+    homedir = "${config.xdg.dataHome}/gnupg";
     publicKeys = [
       { source = ../contre.pub; trust = 5; }
     ];
