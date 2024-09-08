@@ -12,14 +12,21 @@
   # export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
   programs.zsh = {
 
-    # ${if config.services.gpg-agent.enable then
-    #   ''
-    #     if [[ -z "$SSH_AUTH_SOCK" ]]; then
-    #       fi
-    #         '' else ''''
-    # }
     initExtra = ''
-      export SSH_AUTH_SOCK="$(${config.programs.gpg.package}/bin/gpgconf --list-dirs agent-ssh-socket)"
+      if [[ -n $SSH_CONNECTION ]]; then
+        export EDITOR='vim'
+        gpgconf --create-socketdir
+      else
+        export GPG_TTY="$(tty)"
+        export SSH_AUTH_SOCK="/run/user/$UID/gnupg/S.gpg-agent.ssh"
+        gpg-connect-agent updatestartuptty /bye >/dev/null
+        export EDITOR='nvim'
+        # Only use gpg/ssh keys when not in an SSH connection. Not to replace the keys forwarded by the ssh agent.
+        # SSH Configuration with GPG
+        #echo [KEYGRIP] >> ~/.gnupg/sshcontrol
+        export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+        gpgconf --launch gpg-agent
+      fi
       source ~/.config/.p10k.zsh
       eval "$(zoxide init zsh)"
       bindkey "^[[1;5C" forward-word
