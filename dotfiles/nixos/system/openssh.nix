@@ -26,10 +26,10 @@
       KbdInteractiveAuthentication = false;
     };
     # Allow phone from local network and VPN use password
-    extraConfig = "
+    extraConfig = ''
       Match Address 192.168.0.172/32,10.8.0.0/24
         PasswordAuthentication yes
-    ";
+    '';
 
     banner =
       if config.networking.hostName == "notebook" then
