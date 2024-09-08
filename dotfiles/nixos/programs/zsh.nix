@@ -50,6 +50,7 @@
       gbD = "git branch -D";
       gc = "git checkout";
       gcb = "git checkout -b";
+      gr = "git remote";
       gcm = "git commit -S -m";
       gll = "git pull";
       gp = "git push";
