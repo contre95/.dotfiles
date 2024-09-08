@@ -11,14 +11,21 @@
 
   # export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
   programs.zsh = {
+
     initExtra = ''
+      ${if config.services.gpg-agent.enable then
+        ''
+          if [[ -z "$SSH_AUTH_SOCK" ]]; then
+            export SSH_AUTH_SOCK="$(${config.programs.gpg.package}/bin/gpgconf --list-dirs agent-ssh-socket)"
+          fi
+        '' else ''''
+      }
       source ~/.config/.p10k.zsh
       eval "$(zoxide init zsh)"
       bindkey "^[[1;5C" forward-word
       bindkey "^[[1;5D" backward-word
       zstyle ":completion:*" matcher-list "" "m:{a-zA-Z}={A-Za-z}" "r:|[._-]=* r:|=*" "l:|=* r:|=*"
     '';
-
 
     enable = true;
 
@@ -116,12 +123,12 @@
     #     { name = "zsh-users/zsh-history-substring-search"; }
     #   ];
     # };
-      oh-my-zsh = {
-    enable = true;
-    plugins = [ 
-    "history-substring-search" 
-    ];
-  };
+    oh-my-zsh = {
+      enable = true;
+      plugins = [
+        "history-substring-search"
+      ];
+    };
   };
 
   programs.fzf =
