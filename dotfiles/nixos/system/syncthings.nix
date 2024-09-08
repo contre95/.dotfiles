@@ -1,4 +1,4 @@
-{ ... }:
+{ config, ... }:
 {
   networking.firewall = {
     allowedUDPPorts = [ 22000 21027 ];
@@ -6,7 +6,7 @@
   };
   services = {
     syncthing = {
-      enable = true;
+      enable = config.networking.hostName != "server";
       user = "contre";
       # dataDir = "/home/contre/Documents/syncthings/data";
       configDir = "/home/contre/.config/syncthing";
@@ -25,11 +25,11 @@
           "nuc" = { id = "D6ZKEKW-NSUXQOK-TCZYKPU-KPT2L3O-IHEJPO5-DV4CN57-KKIW6B4-H6SVUAC"; };
         };
         # folders = {
-          # "Example" = {
-          #   path = "/home/myusername/Example";
-          #   devices = [ "device1" ];
-          #   ignorePerms = false; # By default, Syncthing doesn't sync file permissions. This line enables it for this folder.
-          # };
+        # "Example" = {
+        #   path = "/home/myusername/Example";
+        #   devices = [ "device1" ];
+        #   ignorePerms = false; # By default, Syncthing doesn't sync file permissions. This line enables it for this folder.
+        # };
         # };
       };
     };

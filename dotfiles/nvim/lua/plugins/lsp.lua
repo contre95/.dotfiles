@@ -209,7 +209,7 @@ lspconfig.sqlls.setup({
 -- }
 
 -- Typescript
-lspconfig.tsserver.setup({ capabilities = capabilities })
+-- lspconfig.tsserver.setup({ capabilities = capabilities })
 -- HTML
 lspconfig.html.setup { capabilities = capabilities, }
 

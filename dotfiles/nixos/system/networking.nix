@@ -1,10 +1,10 @@
-{ ... }: {
-  networking.wireless.iwd.enable = true;
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+{ config, ... }: {
+  networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
   networking.useDHCP = true;
   networking.useNetworkd = true;
   networking.networkmanager.enable = false;
   systemd.network.enable = true;
+  networking.wireless.iwd.enable = config.networking.hostName != "server";
   networking.wireless.iwd.settings = {
     Settings = {
       AutoConnect = true;
@@ -14,9 +14,4 @@
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
-
-  networking.firewall = {
-    enable = false;
-    allowedTCPPorts = [ 8080 ];
-  };
 }
