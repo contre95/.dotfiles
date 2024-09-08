@@ -7,7 +7,7 @@
     ],
     "modules-center": [
       "bluetooth",
-      "network",
+      // "network",
       "custom/recorder",
       "custom/wall",
       "custom/pacman",
