@@ -1,21 +1,17 @@
-{ pkgs, config, ... }:
-let
-  socketDir = "/run/user/1000/gnupg";
-
-in
+{ pkgs, config, lib, ... }:
+# let
+#   socketDir = "/run/user/1000/gnupg";
+# in
 {
-
-  environment.variables = {
-    # GPG_TTY = "${pkgs.coreutils}/bin/tty";
-    # SSH_AUTH_SOCK = "/run/user/1000/gnupg/S.gpg-agent.ssh";
-  };
 
   programs.ssh = {
     startAgent = false; # GPG act as ssh-agent
     extraConfig = ''
       Host 192.168.*, contre.*
         ForwardAgent yes
+        AddKeysToAgent yes
     '';
+    # RemoteForward <socket_on_remote_box> <extra_socket_on_local_box>
   };
 
   services.openssh = {
@@ -23,7 +19,7 @@ in
     settings = {
       PasswordAuthentication = false;
       AllowUsers = null; # Allows all users by default. Can be [ "user1" "user2" ]
-      # hostKeys = null; # This is now working, still creates and reference the hostKeys
+      hostKeys = null; # This is now working, still creates and reference the hostKeys
       X11Forwarding = false;
       LogLevel = "INFO";
       PermitRootLogin = "no";
