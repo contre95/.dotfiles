@@ -12,14 +12,14 @@
   # export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
   programs.zsh = {
 
+    # ${if config.services.gpg-agent.enable then
+    #   ''
+    #     if [[ -z "$SSH_AUTH_SOCK" ]]; then
+    #       fi
+    #         '' else ''''
+    # }
     initExtra = ''
-      ${if config.services.gpg-agent.enable then
-        ''
-          if [[ -z "$SSH_AUTH_SOCK" ]]; then
-            export SSH_AUTH_SOCK="$(${config.programs.gpg.package}/bin/gpgconf --list-dirs agent-ssh-socket)"
-          fi
-        '' else ''''
-      }
+      export SSH_AUTH_SOCK="$(${config.programs.gpg.package}/bin/gpgconf --list-dirs agent-ssh-socket)"
       source ~/.config/.p10k.zsh
       eval "$(zoxide init zsh)"
       bindkey "^[[1;5C" forward-word
