@@ -42,7 +42,7 @@
 
 
     shellAliases = {
-      update = "sudo WHICH_MACHINE=$(hostname) nixos-rebuild switch";
+      update = "pushd $MY_FOLDER && git pull && sudo WHICH_MACHINE=$(hostname) nixos-rebuild switch";
       update-mac = "sudo WHICH_MACHINE=macbook darwin-rebuild";
       mf = "cd $MY_FOLDER";
       p = "podman --remote";
