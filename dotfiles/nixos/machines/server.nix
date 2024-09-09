@@ -46,7 +46,7 @@
     audit
   ];
   fileSystems."/mnt/HDD2" = {
-    device = "/dev/disk/by-uuid/b84f2f7b-d23f-46e7-bea0-4fcf552ee54c";
+    device = "/dev/disk/by-uuid/b0b93094-b438-458c-97fe-68d4e49bd007";
     fsType = "ext4"; # Replace with your filesystem type
   };
 
