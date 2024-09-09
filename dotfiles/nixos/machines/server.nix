@@ -24,7 +24,7 @@
   # };
 
   environment.variables = {
-    DISK_SSD_A = "/mnt/SDD";
+    DISK_SSD_A = "/mnt/SSD";
     DISK_HDD_A = "/mnt/HDD2";
   };
 
