@@ -20,6 +20,16 @@
   #     " '{print $1}')"
   #   ];
   # };
+
+   system.activationScripts = {
+      enableLingering = ''
+        # remove all existing lingering users
+        rm -r /var/lib/systemd/linger
+        mkdir /var/lib/systemd/linger
+        # enable for the subset of declared home-manager users
+        touch /var/lib/systemd/linger/contre 
+      '';
+    };
  
   networking.wireless.enable = false;
   networking.wireless.iwd.enable = false;
