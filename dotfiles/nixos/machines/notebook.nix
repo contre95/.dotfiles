@@ -59,6 +59,12 @@
   };
 
   # # User specific
+  home-manager.users.contre = { pkgs, ... }: {
     programs.git.signing.signByDefault = false;
+    # home.packages = with pkgs; [
+    # ];
+  };
+
+
 
 }
