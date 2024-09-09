@@ -1,5 +1,7 @@
 { pkgs, ... }:
 {
+  # Cronjobs
+
   # services.cron = {
   #   enable = true;
   #   systemCronJobs = [
@@ -21,16 +23,22 @@
   #   ];
   # };
 
-   system.activationScripts = {
-      enableLingering = ''
-        # remove all existing lingering users
-        rm -r /var/lib/systemd/linger
-        mkdir /var/lib/systemd/linger
-        # enable for the subset of declared home-manager users
-        touch /var/lib/systemd/linger/contre 
-      '';
-    };
- 
+  environment.variables = {
+    DISK_SSD_A = "/mnt/SDD";
+    DISK_HDD_A = "/mnt/HDD2";
+  };
+
+  # User process persist after sessions logout since it's a server.
+  system.activationScripts = {
+    enableLingering = ''
+      # remove all existing lingering users
+      rm -r /var/lib/systemd/linger
+      mkdir /var/lib/systemd/linger
+      # enable for the subset of declared home-manager users
+      touch /var/lib/systemd/linger/contre 
+    '';
+  };
+
   networking.wireless.enable = false;
   networking.wireless.iwd.enable = false;
   networking.firewall = {
@@ -47,8 +55,8 @@
 
   home-manager.users.contre = { pkgs, ... }: {
     programs.git.signing.signByDefault = false;
-    home.packages = with pkgs; [
-    ];
+    # home.packages = with pkgs; [
+    # ];
   };
 
   environment.systemPackages = with pkgs; [

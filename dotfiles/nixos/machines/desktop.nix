@@ -8,10 +8,9 @@
   programs.nix-ld.enable = true;
 
 
-  nix.gc = {
-    automatic = true;
-    dates = "weekly";
-    options = "--delete-older-than 30d";
+  environment.variables = {
+    DISK_SSD_A = "/home/contre/server-poc";
+    DISK_HDD_A = "/home/contre/server-poc";
   };
 
 
