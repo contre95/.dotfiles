@@ -41,8 +41,8 @@
 
   networking.wireless.enable = false;
   networking.wireless.iwd.enable = false;
-  # networking.firewall = {
-  #   enable = false;
+  networking.firewall = {
+    enable = false;
   #   interfaces.enp89s0 = {
   #     allowedTCPPorts = [ ];
   #     allowedUDPPorts = [ ];
@@ -51,7 +51,7 @@
   #   #   ''
   #   #     iptables -t nat -I PREROUTING -i enp89s0 -p tcp -m tcp --dport 443 -j REDIRECT --to-ports 4430
   #   #   '';
-  # };
+  };
 
   home-manager.users.contre = { pkgs, ... }: {
     programs.git.signing.signByDefault = false;
