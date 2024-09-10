@@ -44,6 +44,7 @@
     shellAliases = {
       update = "pushd $MY_FOLDER && git pull && sudo WHICH_MACHINE=$(hostname) nixos-rebuild switch";
       update-mac = "sudo WHICH_MACHINE=macbook darwin-rebuild";
+      iptr = "sudo iptables -t nat -L -v -n";
       mf = "cd $MY_FOLDER";
       p = "podman --remote";
       vim = "nvim";
