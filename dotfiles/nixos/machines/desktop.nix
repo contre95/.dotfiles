@@ -17,12 +17,23 @@
   # xdg.portal.wlr.enable = true;
   services.dbus.enable = true;
 
-  # Networking
   # networking.firewall = {
-  #   enable = false;
-  #
-  #   extraCommands = ''
-  #   '';
+  #   enable = true;
+  #   interfaces.enp6s0 = {
+  #     allowedTCPPorts = [ 443 4430 ];
+  #   };
+  #   interfaces.wlan0 = {
+  #     allowedTCPPorts = [ 443 4430 ];
+  #   };
+  #   interfaces.lo = {
+  #     allowedTCPPorts = [ 443 4430 ];
+  #   };
+  #   extraCommands =
+  #     ''
+  #       iptables -t nat -I PREROUTING -i enp6s0 -p tcp -m tcp --dport 443 -j REDIRECT --to-ports 4430
+  #       iptables -t nat -I PREROUTING -i wlan0 -p tcp -m tcp --dport 443 -j REDIRECT --to-ports 4430
+  #       iptables -t nat -I PREROUTING -i lo -p tcp -m tcp --dport 443 -j REDIRECT --to-ports 4430
+  #     '';
   # };
 
   # System packages
