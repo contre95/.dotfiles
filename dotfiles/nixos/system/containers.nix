@@ -28,7 +28,7 @@
       #   storage.options.zfs.fsname = "zroot/podman";
       # };
       containersConf.settings = {
-        containers.dns_servers = [ "192.168.0.174" ];
+        containers.dns_servers = [ "1.1.1.1" "1.1.0.0" ];
       };
     };
   };
