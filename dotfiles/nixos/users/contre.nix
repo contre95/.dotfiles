@@ -126,7 +126,6 @@ in
       prometheus-node-exporter
       bash
       btop # Like htop which is like top
-      nmap
       mpg123
       wget
       wirelesstools

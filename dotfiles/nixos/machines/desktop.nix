@@ -17,8 +17,9 @@
   # xdg.portal.wlr.enable = true;
   services.dbus.enable = true;
 
-  # networking.firewall = {
-  #   enable = true;
+  networking.firewall = {
+    enable = false;
+  };
   #   interfaces.enp6s0 = {
   #     allowedTCPPorts = [ 443 4430 ];
   #   };

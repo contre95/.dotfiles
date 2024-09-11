@@ -1,4 +1,4 @@
-{ config, ... }: {
+{ config, pkgs, ... }: {
   networking.wireless.enable = false;
   networking.useDHCP = true;
   networking.useNetworkd = true;
@@ -10,6 +10,16 @@
       AutoConnect = true;
       AlwaysRandomizeAddress = false;
     };
+  };
+  environment.systemPackages = with pkgs; [
+    wireguard-tools
+    traceroute
+    netcat
+    nmap
+  ];
+
+  users.users.contre = {
+    extraGroups = [ "networkmanager" ];
   };
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
