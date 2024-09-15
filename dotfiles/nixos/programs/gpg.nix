@@ -17,7 +17,7 @@
     enableSshSupport = true;
     verbose = true;
     defaultCacheTtl = 1300;
-    enableZshIntegration = true;
+    enableZshIntegration = false;
     enableExtraSocket = true;
     pinentryPackage = pkgs.pinentry-gnome3;
     enableScDaemon = true;

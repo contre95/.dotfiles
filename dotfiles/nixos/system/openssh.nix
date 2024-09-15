@@ -38,7 +38,7 @@
     extraConfig = ''
       StreamLocalBindUnlink yes
       Match User contre Address 192.168.0.172
-        PasswordAuthentication yes
+          PasswordAuthentication yes
     '';
 
     banner =
