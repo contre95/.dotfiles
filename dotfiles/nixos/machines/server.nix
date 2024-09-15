@@ -5,6 +5,7 @@
   environment.variables = {
     DISK_SSD_A = "/mnt/SSD";
     DISK_HDD_A = "/mnt/HDD2";
+    DISK_HDD_B = "/mnt/HDD";
   };
 
   # Ports for rootless podman, use iptables to redirect ports here
