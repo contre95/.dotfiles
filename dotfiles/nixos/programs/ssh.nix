@@ -7,23 +7,27 @@
 
   programs.ssh = {
     enable = true;
-
     # forward gpg agent
     matchBlocks = {
-      "contre@contre.server" = {
+      "contre.server" = {
         remoteForwards = [
           {
             bind.address = "/run/user/1000/gnupg/S.gpg-agent";
-            host.address = "/\${XDG_RUNTIME_DIR}/gnupg/S.gpg-agent.extra";
+            host.address = "/run/user/1000/gnupg/S.gpg-agent.extra";
           }
           {
             bind.address = "/run/user/1000/gnupg/S.gpg-agent.ssh";
-            host.address = "/\${XDG_RUNTIME_DIR}/gnupg/S.gpg-agent.ssh";
+            host.address = "/run/user/1000/gnupg/S.gpg-agent.ssh";
           }
         ];
       };
     };
 
-    extraConfig = "Include config.local";
+    extraConfig = ''
+      Host contre.server
+        ForwardAgent yes
+        RemoteForward /run/user/1000/gnupg/S.gpg-agent /run/user/1000/gnupg/S.gpg-agent.extra
+        ExitOnForwardFailure yes
+    '';
   };
 }

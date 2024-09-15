@@ -2,6 +2,7 @@
 
 {
   programs.gpg = {
+    
     enable = true;
     settings.no-autostart = true; # don’t autostart gpg-agent if not started
     # mutableKeys = true;
