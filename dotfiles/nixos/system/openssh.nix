@@ -7,19 +7,12 @@
   programs.ssh = {
     package = pkgs.openssh;
     startAgent = false; # GPG act as ssh-agent
-        # AddKeysToAgent yes
+    # AddKeysToAgent yes
     extraConfig = ''
       Host contre.server
         ForwardAgent yes
         RemoteForward /run/user/1000/gnupg/S.gpg-agent /run/user/1000/gnupg/S.gpg-agent.extra
-
-      Host contre.notebook
-        ForwardAgent yes
-        RemoteForward /run/user/1000/gnupg/S.gpg-agent /run/user/1000/gnupg/S.gpg-agent.extra
-
-      Host contre.desktop
-        ForwardAgent yes
-        RemoteForward /run/user/1000/gnupg/S.gpg-agent /run/user/1000/gnupg/S.gpg-agent.extra
+        ExitOnForwardFailure yes
     '';
   };
 
@@ -35,11 +28,9 @@
       KbdInteractiveAuthentication = true;
     };
     # Allow phone from local network and VPN use password
-    extraConfig = ''
-      StreamLocalBindUnlink yes
-      Match User contre Address 192.168.0.172
-          PasswordAuthentication yes
-    '';
+    extraConfig = ''StreamLocalBindUnlink yes'';
+    # Match User contre Address 192.168.0.172
+    #     PasswordAuthentication yes
 
     banner =
       if config.networking.hostName == "notebook" then
