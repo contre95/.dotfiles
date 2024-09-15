@@ -12,16 +12,16 @@
   # export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
   programs.zsh = {
 
+    # if [[ -n $SSH_CONNECTION ]]; then
+    #   export EDITOR='vim'
+    #     gpgconf --create-socketdir
+    # else
+    #   export GPG_TTY="$(tty)"
+    #     export EDITOR='nvim'
+    #     export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+    #     gpgconf --launch gpg-agent
+    #     fi
     initExtra = ''
-      if [[ -n $SSH_CONNECTION ]]; then
-        export EDITOR='vim'
-        gpgconf --create-socketdir
-      else
-        export GPG_TTY="$(tty)"
-        export EDITOR='nvim'
-        export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
-        gpgconf --launch gpg-agent
-      fi
       source ~/.config/.p10k.zsh
       eval "$(zoxide init zsh)"
       bindkey "^[[1;5C" forward-word
