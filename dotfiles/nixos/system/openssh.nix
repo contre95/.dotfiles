@@ -1,37 +1,45 @@
-{ pkgs, config, lib, ... }:
+{ pkgs, config, ... }:
 # let
 #   socketDir = "/run/user/1000/gnupg";
 # in
 {
 
   programs.ssh = {
+    package = pkgs.openssh;
     startAgent = false; # GPG act as ssh-agent
+        # AddKeysToAgent yes
     extraConfig = ''
-      Host 192.168.0.*, contre.*
+      Host contre.server
         ForwardAgent yes
-        AddKeysToAgent yes
+        RemoteForward /run/user/1000/gnupg/S.gpg-agent /run/user/1000/gnupg/S.gpg-agent.extra
+
+      Host contre.notebook
+        ForwardAgent yes
+        RemoteForward /run/user/1000/gnupg/S.gpg-agent /run/user/1000/gnupg/S.gpg-agent.extra
+
+      Host contre.desktop
+        ForwardAgent yes
         RemoteForward /run/user/1000/gnupg/S.gpg-agent /run/user/1000/gnupg/S.gpg-agent.extra
     '';
-    # RemoteForward <socket_on_remote_box> <extra_socket_on_local_box>
   };
 
   services.openssh = {
     enable = true;
     settings = {
       PasswordAuthentication = false;
-      AllowUsers = null; # Allows all users by default. Can be [ "user1" "user2" ]
-      hostKeys = null; # This is now working, still creates and reference the hostKeys
-      X11Forwarding = false;
-      LogLevel = "INFO";
       PermitRootLogin = "no";
-      KbdInteractiveAuthentication = false;
+      # AllowUsers = null; # Allows all users by default. Can be [ "user1" "user2" ]
+      # hostKeys = null; # This is now working, still creates and reference the hostKeys
+      # X11Forwarding = false;
+      # LogLevel = "INFO";
+      KbdInteractiveAuthentication = true;
     };
     # Allow phone from local network and VPN use password
-    extraConfig = ''StreamLocalBindUnlink yes'';
-    # extraConfig = ''
-    #   Match Address 192.168.0.172/32,10.8.0.0/24
-    #     PasswordAuthentication yes
-    # '';
+    extraConfig = ''
+      StreamLocalBindUnlink yes
+      Match User contre Address 192.168.0.172
+        PasswordAuthentication yes
+    '';
 
     banner =
       if config.networking.hostName == "notebook" then
