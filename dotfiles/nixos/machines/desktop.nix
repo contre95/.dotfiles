@@ -10,7 +10,8 @@
 
   environment.variables = {
     DISK_SSD_A = "/home/contre/server-poc/ssd";
-    DISK_HDD_A = "/home/contre/server-poc/hdd";
+    DISK_HDD_A = "/home/contre/server-poc/hdd2";
+    DISK_HDD_B = "/home/contre/server-poc/hdd";
   };
 
 

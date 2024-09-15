@@ -11,7 +11,6 @@
 
   # export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
   programs.zsh = {
-
     # if [[ -n $SSH_CONNECTION ]]; then
     #   export EDITOR='vim'
     #     gpgconf --create-socketdir
