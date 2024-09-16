@@ -66,6 +66,7 @@
       gt = "gitui";
       gco = "git checkout";
       gl = "git pull";
+      due = "find . -type f | awk -F. '{if (NF>1) print $NF}' | sort | uniq -c | sort -nr"; # Disk Usage per file Extension
       j = "z";
       l = "ls -lFh";
       la = "ls -lAFh";
