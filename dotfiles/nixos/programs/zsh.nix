@@ -16,10 +16,10 @@
     #     gpgconf --create-socketdir
     # else
     #   export GPG_TTY="$(tty)"
-    #     export EDITOR='nvim'
-    #     export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
-    #     gpgconf --launch gpg-agent
-    #     fi
+    #   export EDITOR='nvim'
+    #   export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+    #   gpgconf --launch gpg-agent
+    # fi
     initExtra = ''
       source ~/.config/.p10k.zsh
       eval "$(zoxide init zsh)"
