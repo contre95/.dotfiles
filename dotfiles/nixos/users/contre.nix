@@ -73,7 +73,8 @@ in
       nixpkgs-fmt
       yamlfmt
       marksman
-      jetbrains.datagrip
+      # jetbrains.datagrip
+      easyeffects
       efm-langserver
       lua-language-server
 
