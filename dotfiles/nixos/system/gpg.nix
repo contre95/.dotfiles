@@ -10,7 +10,7 @@
     enable = true;
     enableSSHSupport = true;
     enableExtraSocket = true;
-    # pinentryPackage = pkgs.pinentry-gnome3;
+    pinentryPackage = pkgs.pinentry-gnome3;
   };
 
   # Enable GPG Smartcards (Like Yubikeys)
