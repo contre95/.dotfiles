@@ -28,9 +28,13 @@
       KbdInteractiveAuthentication = true;
     };
     # Allow phone from local network and VPN use password
-    extraConfig = ''StreamLocalBindUnlink yes'';
-    # Match User contre Address 192.168.0.172
-    #     PasswordAuthentication yes
+
+    extraConfig = ''
+      StreamLocalBindUnlink yes
+      Match User contre Address 192.168.0.172
+          PasswordAuthentication yes
+      Match All
+    '';
 
     banner =
       if config.networking.hostName == "notebook" then
