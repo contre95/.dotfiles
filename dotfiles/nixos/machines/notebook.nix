@@ -40,7 +40,7 @@
     };
   };
   # Environment Packages
-  environment.systemPackages = with pkgs; [ acpi ];
+  environment.systemPackages = with pkgs; [ acpi upower ];
 
 
   nixpkgs.config.packageOverrides = pkgs: {
