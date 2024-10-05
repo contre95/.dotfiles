@@ -176,6 +176,7 @@ in
       wayland-protocols
       rofi-wayland
       polkit
+
     ];
 
     home.extraOutputsToInstall = [ "share/tmux-plugins" ];
