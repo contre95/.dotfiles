@@ -138,7 +138,7 @@ in
       gettext
 
       # Desktop apps
-      # spotify
+      spotify
       # picard
       # yubikey-manager
       betterdiscordctl
@@ -159,7 +159,7 @@ in
       swappy
       grim # For screenshots
       slurp # For screenshots
-      bruno # Like Postman but this one has a Dog as a logo
+      # bruno # Like Postman but this one has a Dog as a logo
       gnome.zenity
       wf-recorder
       hyprpaper
