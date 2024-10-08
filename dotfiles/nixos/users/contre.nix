@@ -111,6 +111,7 @@ in
       quickemu
       cava
       gawk
+      hugo
       quickgui
       xorg.xhost
       wdisplays
