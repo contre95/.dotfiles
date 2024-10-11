@@ -54,6 +54,7 @@
     pkgs.bandwhich
     pkgs.zoxide
     pkgs.tree
+    pkgs.openvpn
     pkgs.awscli
     pkgs.azure-cli
     pkgs.tree-sitter
