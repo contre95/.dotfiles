@@ -73,8 +73,7 @@ in
         isNormalUser = true;
         shell = pkgs.zsh;
         uid = 1000;
-        description = "Yerno VIP aka Master Senior";
-        extraGroups = [ "wheel" ];
+        extraGroups = [ "wheel" "video" "dialout"];
       };
     } else { };
 }

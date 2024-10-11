@@ -111,7 +111,6 @@ in
       quickemu
       cava
       gawk
-      hugo
       quickgui
       xorg.xhost
       wdisplays
@@ -139,7 +138,7 @@ in
       gettext
 
       # Desktop apps
-      spotify
+      # spotify
       # picard
       # yubikey-manager
       betterdiscordctl
@@ -160,7 +159,7 @@ in
       swappy
       grim # For screenshots
       slurp # For screenshots
-      # bruno # Like Postman but this one has a Dog as a logo
+      bruno # Like Postman but this one has a Dog as a logo
       gnome.zenity
       wf-recorder
       hyprpaper
@@ -177,6 +176,7 @@ in
       wayland-protocols
       rofi-wayland
       polkit
+
     ];
 
     home.extraOutputsToInstall = [ "share/tmux-plugins" ];
