@@ -1,5 +1,16 @@
 { pkgs, ... }:
 {
+
+  # home-manager.users.contre = {
+  #
+  #   home.file = {
+  #     ".config/containers/containers.conf".text = ''
+  #       [containers]
+  #       annotations=["run.oci.keep_original_groups=1"]
+  #         '';
+  #   };
+  # };
+
   # Enable common container config files in /etc/containers
   virtualisation = {
     oci-containers.backend = "podman";

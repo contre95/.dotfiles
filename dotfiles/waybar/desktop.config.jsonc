@@ -81,7 +81,7 @@
       "interval": 1,
       "on-scroll-up": "wpctl set-volume @DEFAULT_SINK@ 0.025+",
       "on-scroll-down": "wpctl set-volume @DEFAULT_SINK@ 0.025-",
-      // "on-click": "wpctl set-default $(pamixer --list-sinks | grep -v $(pamixer --get-default-sink | tail -n 1 | awk -F' ' '{print $2}' | tr -d '\"') | grep -v 'Sinks:' | shuf | head -n 1 | awk -F' ' '{print $2}' | tr -d '\"')",
+      "on-click": "easyeffects",
       "exec": "pamixer --get-default-sink | tail -n 1 | awk -F'\".+\" ' '{print $2}' | tr -d '\"'"
     },
     "custom/notification": {

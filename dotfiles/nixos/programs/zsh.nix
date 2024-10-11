@@ -10,18 +10,17 @@
   ];
 
   # export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+#     gpgconf --create-socketdir
+# else
+#   export GPG_TTY="$(tty)"
+#   export EDITOR='nvim'
+#   export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+#   gpgconf --launch gpg-agent
+# fi
   programs.zsh = {
-
     initExtra = ''
-      if [[ -n $SSH_CONNECTION ]]; then
-        export EDITOR='vim'
-        gpgconf --create-socketdir
-      else
-        export GPG_TTY="$(tty)"
-        export EDITOR='nvim'
-        export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
-        gpgconf --launch gpg-agent
-      fi
       source ~/.config/.p10k.zsh
       eval "$(zoxide init zsh)"
       bindkey "^[[1;5C" forward-word
@@ -67,6 +66,7 @@
       gt = "gitui";
       gco = "git checkout";
       gl = "git pull";
+      due = "find . -type f | awk -F. '{if (NF>1) print $NF}' | sort | uniq -c | sort -nr"; # Disk Usage per file Extension
       j = "z";
       l = "ls -lFh";
       la = "ls -lAFh";
@@ -90,15 +90,15 @@
       ch = "cliphist list | fzf | cliphist decode";
       kns = "kubectl config set-context --current --namespace=\`ns\`";
       k = "kubectl";
-      ct = "mpg123 --quiet $MY_FOLDER/Library/sounds/ct.mp3";
-      al = "mpg123 --quiet $MY_FOLDER/Library/sounds/olx.mp3";
-      ed = "mpg123 --quiet $MY_FOLDER/Library/sounds/circus.mp3";
-      xf = "mpg123 --quiet $MY_FOLDER/Library/sounds/xfiles.mp3";
-      mi = "mpg123 --quiet $MY_FOLDER/Library/sounds/monster_inc.mp3";
-      dm = "mpg123 --quiet $MY_FOLDER/Library/sounds/deployersmal.mp3";
-      qn = "mpg123 --quiet $MY_FOLDER/Library/sounds/quienteconoce.mp3";
-      bf = "mpg123 --quiet $MY_FOLDER/Library/sounds/back2thefuture.mp3";
-      fcd = "mpg123 --quiet $MY_FOLDER/Library/sounds/final_countdown.mp3";
+      ct = "mpg123 --quiet $MY_FOLDER/library/sounds/ct.mp3";
+      al = "mpg123 --quiet $MY_FOLDER/library/sounds/olx.mp3";
+      ed = "mpg123 --quiet $MY_FOLDER/library/sounds/circus.mp3";
+      xf = "mpg123 --quiet $MY_FOLDER/library/sounds/xfiles.mp3";
+      mi = "mpg123 --quiet $MY_FOLDER/library/sounds/monster_inc.mp3";
+      dm = "mpg123 --quiet $MY_FOLDER/library/sounds/deployersmal.mp3";
+      qn = "mpg123 --quiet $MY_FOLDER/library/sounds/quienteconoce.mp3";
+      bf = "mpg123 --quiet $MY_FOLDER/library/sounds/back2thefuture.mp3";
+      fcd = "mpg123 --quiet $MY_FOLDER/library/sounds/final_countdown.mp3";
       vimc = "nvim $HOME/.config/nvim/init.lua";
       zshc = "nvim $HOME/.zshrc";
       tmuxc = "nvim $HOME/.tmux.conf";
