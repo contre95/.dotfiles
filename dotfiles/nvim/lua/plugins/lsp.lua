@@ -56,13 +56,13 @@ vim.diagnostic.config({
 
 --Json
 lspconfig.jsonls.setup {
-    commands = {
-      Format = {
-        function()
-          vim.lsp.buf.range_formatting({},{0,0},{vim.fn.line("$"),0})
-        end
-      }
+  commands = {
+    Format = {
+      function()
+        vim.lsp.buf.range_formatting({}, { 0, 0 }, { vim.fn.line("$"), 0 })
+      end
     }
+  }
 }
 
 -- Yamls
@@ -163,6 +163,9 @@ lspconfig.pyright.setup({ capabilities = capabilities, handlers = handlers })
 
 -- Golang
 lspconfig.gopls.setup({ capabilities = capabilities })
+lspconfig.golangci_lint_ls.setup {
+  filetypes = { 'go', 'gomod' }
+}
 
 -- Terraform
 --
