@@ -108,7 +108,7 @@ case "$chosen" in
 	firefox --kiosk -P $LW_PROFILE --new-window https://twitter.com
 	;;
 "Home")
-	side "firefox --kiosk -P $LW_PROFILE --new-window http://192.168.0.174:8123/home-dash/0"
+	side "firefox --kiosk -P $LW_PROFILE --new-window http://192.168.0.174:8123"
 	;;
 "Any")
 	firefox --kiosk -P $LW_PROFILE --new-window http://"$(zenity --entry --text='Website  :')"

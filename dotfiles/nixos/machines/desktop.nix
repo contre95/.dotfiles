@@ -56,6 +56,7 @@
     dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
     gamescopeSession.enable = true;
   };
+  hardware.amdgpu.opencl.enable = true;
 
   # System programs config
   nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
