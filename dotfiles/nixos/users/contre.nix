@@ -139,9 +139,6 @@ in
       gettext
 
       # Desktop apps
-      davinci-resolve
-      kdenlive
-      olive-editor
       spotify
       # picard
       # yubikey-manager
