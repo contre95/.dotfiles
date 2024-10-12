@@ -1,6 +1,14 @@
-{ config, lib, pkgs, modulesPath, home-manager, ... }:
+{ pkgs, ... }:
 
 {
+
+  # Garbace collector
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-older-than 30d";
+  };
+
   services.tlp = {
     enable = true;
     settings = {
