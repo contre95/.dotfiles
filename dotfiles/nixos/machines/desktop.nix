@@ -1,5 +1,13 @@
 { config, pkgs, lib, ... }:
 {
+  
+  # Garbace collector
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-older-than 30d";
+  };
+
   # Environment Packages
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.nvidia.acceptLicense = true;
