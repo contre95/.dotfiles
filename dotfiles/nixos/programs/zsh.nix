@@ -21,7 +21,7 @@
 # fi
   programs.zsh = {
     initExtra = ''
-      source ~/.config/.p10k.zsh
+      source $MY_FOLDER/dotfiles/zsh/.p10k.zsh
       eval "$(zoxide init zsh)"
       bindkey "^[[1;5C" forward-word
       bindkey "^[[1;5D" backward-word
@@ -110,22 +110,13 @@
         name = "powerlevel10k";
         src = "${zsh-powerlevel10k}/share/zsh-powerlevel10k";
       }
-      {
-        file = "p10k.zsh";
-        name = "powerlevel10k-config";
-        src = "${config.xdg.configHome}/.p10k.zsh";
-      }
+      # {
+      #   file = "p10k.zsh";
+      #   name = "powerlevel10k-config";
+      #   src = "${config.xdg.configHome}/.p10k.zsh";
+      # }
     ];
-    # I gave it a try, but I couldn't make load time any faster :/
-    # zplug = {
-    #   enable = true;
-    #   plugins = [
-    #     { name = "zsh-users/zsh-autosuggestions"; }
-    #     { name = "zsh-users/zsh-syntax-highlighting"; }
-    #     { name = "zsh-users/zsh-completions"; }
-    #     { name = "zsh-users/zsh-history-substring-search"; }
-    #   ];
-    # };
+
     oh-my-zsh = {
       enable = true;
       plugins = [

@@ -51,20 +51,17 @@
       ];
 
       settings = {
-        "signon.rememberSignons" = false;
         "browser.startup.homepage" = "https://contre.io";
         "general.smoothScrolling" = true;
         # Enable DRM support (Spotify, Netflix, so on and so forth... i really don't want to enable this, but... oh well...)
         "media.eme.enabled" = true;
-        "media.gmp-widevinecdm.enabled" = true;
-        "media.gmp-widevinecdm.visible" = true;
-        "browser.newtabpage.enabled" = false;
-        "browser.newtab.url" = "https://contre.lucas";
+        # "media.gmp-widevinecdm.enabled" = true;
+        # "media.gmp-widevinecdm.visible" = true;
+        "browser.newtabpage.enabled" = true;
         # Disable Activity Stream
         "browser.newtabpage.introShown" = true;
         "browser.newtab.preload" = false;
         "permissions.fullscreen.allowed" = false;
-        "browser.newtabpage.directory.ping" = "";
         "browser.newtabpage.activity-stream.feeds.telemetry" = false;
         "browser.translations.automaticallyPopup" = false;
         "browser.newtabpage.activity-stream.telemetry" = false;
@@ -149,12 +146,6 @@
             updateInterval = 7 * 24 * 60 * 60 * 1000;
             definedAliases = [ "sdb" ];
           };
-          "Google" = {
-            urls = [{ template = "https://www.google.com/search?q={searchTerms}"; }];
-            iconUpdateURL = "https://www.google.com/favicon.ico";
-            updateInterval = 7 * 24 * 60 * 60 * 1000;
-            definedAliases = [ "go" ];
-          };
           "Twitter" = {
             urls = [{ template = "https://twitter.com/search?q={searchTerms}&src = typed_query "; }];
             iconUpdateURL = " https://abs.twimg.com/favicons/twitter.2.ico ";
@@ -199,14 +190,7 @@
         default = "DuckDuckGo";
       };
 
-      # userChrome = import ../../../../misc/themes/cascade + builtins.readFile ../../../../misc/themes/everblush/cascade.css;
-
       extraConfig = ''
-        	# user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
-        	# user_pref("full-screen-api.ignore-widgets", false);
-        	user_pref("media.ffmpeg.vaapi.enabled", true);
-          lockPref("signon.rememberSignons",false);
-        	user_pref("media.rdd-vpx.enabled", true);
       '';
     };
   };
