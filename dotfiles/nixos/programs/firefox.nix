@@ -16,11 +16,11 @@
         DisableFirefoxAccounts = true;
         DisableAccounts = true;
         DisableFirefoxScreenshots = true;
-        OverrideFirstRunPage = "";
-        OverridePostUpdatePage = "";
+        # OverrideFirstRunPage = "";
+        # OverridePostUpdatePage = "";
         DontCheckDefaultBrowser = true;
         DisplayBookmarksToolbar = "never"; # alternatives: "always" or "newtab"
-        DisplayMenuBar = "default-off"; # alternatives: "always", "never" or "default-on"
+        DisplayMenuBar = "default-on"; # alternatives: "always", "never" or "default-on"
         SearchBar = "unified"; # alternative: "separate"
       };
     profiles.ContreKiosk = {
@@ -39,11 +39,11 @@
       extensions = with pkgs.nur.repos.rycee.firefox-addons; [
         # https://nur.nix-community.org/repos/rycee/
         ublock-origin
-        privacy-badger
         hover-zoom-plus
         # firefox-color
-        darkreader
         sponsorblock
+        darkreader
+        privacy-badger
         improved-tube
         multi-account-containers
         h264ify
@@ -54,14 +54,14 @@
         "browser.startup.homepage" = "https://contre.io";
         "general.smoothScrolling" = true;
         # Enable DRM support (Spotify, Netflix, so on and so forth... i really don't want to enable this, but... oh well...)
-        "media.eme.enabled" = true;
+        # "media.eme.enabled" = true;
         # "media.gmp-widevinecdm.enabled" = true;
         # "media.gmp-widevinecdm.visible" = true;
         "browser.newtabpage.enabled" = true;
         # Disable Activity Stream
         "browser.newtabpage.introShown" = true;
         "browser.newtab.preload" = false;
-        "permissions.fullscreen.allowed" = false;
+        # "permissions.fullscreen.allowed" = false;
         "browser.newtabpage.activity-stream.feeds.telemetry" = false;
         "browser.translations.automaticallyPopup" = false;
         "browser.newtabpage.activity-stream.telemetry" = false;
@@ -79,9 +79,9 @@
         # Remove annoying indicator that's shown when webcam or mic is in use via firefox.
         "privacy.webrtc.legacyGlobalIndicator" = false;
         "privacy.webrtc.hideGlobalIndicator" = false;
+        # "keyword.enable" = false; # Disable search when typing unexistent TLD
         "browser.fixup.domainsuffixwhitelist.lucas" = true;
         "browser.fixup.domainwhitelist.contre.lucas" = true; # whitelist contre.lucas tld
-        # "keyword.enable" = false; # Disable search when typing unexistent TLD
       };
 
       search = {
@@ -189,9 +189,6 @@
         };
         default = "DuckDuckGo";
       };
-
-      extraConfig = ''
-      '';
     };
   };
 }
