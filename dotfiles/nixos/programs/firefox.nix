@@ -84,6 +84,8 @@
         "privacy.webrtc.hideGlobalIndicator" = false;
         "browser.fixup.domainsuffixwhitelist.lucas" = true;
         "browser.fixup.domainwhitelist.contre.lucas" = true; # whitelist contre.lucas tld
+        "browser.fixup.domainsuffixwhitelist.server" = true;
+        "browser.fixup.domainwhitelist.contre.server" = true; # whitelist contre.lucas tld
         # "keyword.enable" = false; # Disable search when typing unexistent TLD
       };
 
