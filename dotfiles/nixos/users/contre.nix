@@ -79,6 +79,7 @@ in
       lua-language-server
 
       # Essentials User 
+      ollama
       unzip
       p7zip
       unrar
