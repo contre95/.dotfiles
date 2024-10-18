@@ -16,11 +16,11 @@
         DisableFirefoxAccounts = true;
         DisableAccounts = true;
         DisableFirefoxScreenshots = true;
-        OverrideFirstRunPage = "";
-        OverridePostUpdatePage = "";
+        # OverrideFirstRunPage = "";
+        # OverridePostUpdatePage = "";
         DontCheckDefaultBrowser = true;
         DisplayBookmarksToolbar = "never"; # alternatives: "always" or "newtab"
-        DisplayMenuBar = "default-off"; # alternatives: "always", "never" or "default-on"
+        DisplayMenuBar = "default-on"; # alternatives: "always", "never" or "default-on"
         SearchBar = "unified"; # alternative: "separate"
       };
     profiles.ContreKiosk = {
@@ -39,11 +39,11 @@
       extensions = with pkgs.nur.repos.rycee.firefox-addons; [
         # https://nur.nix-community.org/repos/rycee/
         ublock-origin
-        privacy-badger
         hover-zoom-plus
         # firefox-color
-        darkreader
         sponsorblock
+        darkreader
+        privacy-badger
         improved-tube
         multi-account-containers
         h264ify
@@ -51,20 +51,17 @@
       ];
 
       settings = {
-        "signon.rememberSignons" = false;
         "browser.startup.homepage" = "https://contre.io";
         "general.smoothScrolling" = true;
         # Enable DRM support (Spotify, Netflix, so on and so forth... i really don't want to enable this, but... oh well...)
-        "media.eme.enabled" = true;
-        "media.gmp-widevinecdm.enabled" = true;
-        "media.gmp-widevinecdm.visible" = true;
-        "browser.newtabpage.enabled" = false;
-        "browser.newtab.url" = "https://contre.lucas";
+        # "media.eme.enabled" = true;
+        # "media.gmp-widevinecdm.enabled" = true;
+        # "media.gmp-widevinecdm.visible" = true;
+        "browser.newtabpage.enabled" = true;
         # Disable Activity Stream
         "browser.newtabpage.introShown" = true;
         "browser.newtab.preload" = false;
-        "permissions.fullscreen.allowed" = false;
-        "browser.newtabpage.directory.ping" = "";
+        # "permissions.fullscreen.allowed" = false;
         "browser.newtabpage.activity-stream.feeds.telemetry" = false;
         "browser.translations.automaticallyPopup" = false;
         "browser.newtabpage.activity-stream.telemetry" = false;
@@ -82,8 +79,7 @@
         # Remove annoying indicator that's shown when webcam or mic is in use via firefox.
         "privacy.webrtc.legacyGlobalIndicator" = false;
         "privacy.webrtc.hideGlobalIndicator" = false;
-        "browser.fixup.domainsuffixwhitelist.lucas" = true;
-        "browser.fixup.domainwhitelist.contre.lucas" = true; # whitelist contre.lucas tld
+        # "keyword.enable" = false; # Disable search when typing unexistent TLD
         "browser.fixup.domainsuffixwhitelist.server" = true;
         "browser.fixup.domainwhitelist.contre.server" = true; # whitelist contre.lucas tld
         # "keyword.enable" = false; # Disable search when typing unexistent TLD
@@ -108,8 +104,7 @@
             definedAliases = [ "ho" ];
           };
           "Nix Packages" = {
-            urls = [{ template = "https://search.nixos.org/packages?query={searchTerms}"; }];
-            icon = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
+            urls = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
             definedAliases = [ "np" ];
           };
           "NixOS Options" = {
@@ -150,12 +145,6 @@
             iconUpdateURL = "https://steamdb.info/static/logos/512px.png";
             updateInterval = 7 * 24 * 60 * 60 * 1000;
             definedAliases = [ "sdb" ];
-          };
-          "Google" = {
-            urls = [{ template = "https://www.google.com/search?q={searchTerms}"; }];
-            iconUpdateURL = "https://www.google.com/favicon.ico";
-            updateInterval = 7 * 24 * 60 * 60 * 1000;
-            definedAliases = [ "go" ];
           };
           "Twitter" = {
             urls = [{ template = "https://twitter.com/search?q={searchTerms}&src = typed_query "; }];
@@ -200,16 +189,6 @@
         };
         default = "DuckDuckGo";
       };
-
-      # userChrome = import ../../../../misc/themes/cascade + builtins.readFile ../../../../misc/themes/everblush/cascade.css;
-
-      extraConfig = ''
-        	# user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
-        	# user_pref("full-screen-api.ignore-widgets", false);
-        	user_pref("media.ffmpeg.vaapi.enabled", true);
-          lockPref("signon.rememberSignons",false);
-        	user_pref("media.rdd-vpx.enabled", true);
-      '';
     };
   };
 }
