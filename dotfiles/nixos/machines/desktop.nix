@@ -1,6 +1,6 @@
 { config, pkgs, lib, ... }:
 {
-  
+
   # Garbace collector
   nix.gc = {
     automatic = true;
@@ -46,6 +46,10 @@
   #     '';
   # };
 
+  # Android
+  services.udev.packages = [
+    pkgs.android-udev-rules
+  ];
   # System packages
   environment.systemPackages = with pkgs; [
     wineWowPackages.waylandFull

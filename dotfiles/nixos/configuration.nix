@@ -73,7 +73,7 @@ in
         isNormalUser = true;
         shell = pkgs.zsh;
         uid = 1000;
-        extraGroups = [ "wheel" "video" "dialout"];
+        extraGroups = [ "wheel" "video" "dialout" "kvm" "adbusers"];
       };
     } else { };
 }
