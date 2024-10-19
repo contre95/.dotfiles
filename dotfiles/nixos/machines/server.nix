@@ -17,15 +17,6 @@
   };
 
   # Ports for rootless podman, use iptables to redirect ports here
-  services.cockpit = {
-    enable = true;
-    port = 7591;
-    settings = {
-      WebService = {
-        AllowUnencrypted = false;
-      };
-    };
-  };
   boot.kernel.sysctl = {
     "net.ipv4.ip_unprivileged_port_start" = 23;
   };
