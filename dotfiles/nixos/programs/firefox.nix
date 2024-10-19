@@ -152,6 +152,12 @@
             updateInterval = 7 * 24 * 60 * 60 * 1000;
             definedAliases = [ "x" ];
           };
+          "Google" = {
+            urls = [{ template = "https://www.google.com/search?q={searchTerms}"; }];
+            iconUpdateURL = "https://www.google.com/favicon.ico";
+            updateInterval = 7 * 24 * 60 * 60 * 1000;
+            definedAliases = [ "gg" ];
+          };
           "ProtonDB" = {
             urls = [{ template = "https://www.protondb.com/search?q={searchTerms}"; }];
             iconUpdateURL = "https://www.protondb.com/sites/protondb/images/favicon.ico";
