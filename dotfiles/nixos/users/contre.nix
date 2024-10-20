@@ -108,6 +108,7 @@ in
       # Essentials OS 
       gparted
       openssl
+      dig
       sshpass
       quickemu
       cava
