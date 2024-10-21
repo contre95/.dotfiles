@@ -9,7 +9,7 @@
     enable = true;
     # forward gpg agent
     matchBlocks = {
-      "contre.server" = {
+      "server.home" = {
         remoteForwards = [
           {
             bind.address = "/run/user/1000/gnupg/S.gpg-agent";

@@ -1,4 +1,9 @@
+RSS,http://rss.server.home
+Emby,https://media.server.home
+Grafana,https://metrics.server.home
 Google,https://google.com
+ChatGPT,https://chatgpt.com/
+NotebookLM,https://notebooklm.google.com/
 Drive,http://drive.google.com
 Reddit,https://www.reddit.com
 Photos,http://photos.google.com
@@ -9,16 +14,14 @@ Outlook,https://outlook.live.com
 Cronometer,https://cronometer.com/
 1337x,https://www.1377x.to/
 Instagram,https://www.instagram.com
-Media,http://media.contre.lucas
-RSS,http://rss.contre.lucas
 StackExchange,http://stackexchange.com
 Translate,http://translate.google.com/
-Twitter,http://twitter.com
-Social,https://elk.zone/home https://youtube.com https://rss.contre.lucas https://reddit.com https://twitter.com/home https://devox.me/
+Twitter,http://x.com
+Social,https://elk.zone/home https://youtube.com https://rss.server.home https://reddit.com https://x.com/home https://devox.me/
 Proton,http://account.proton.me/login
-Syncthings,http://localhost:8384 https://sync.contre.lucas
-Torrent,http://torrents.contre.lucas
-Dmusic,http://music.contre.lucas
+Syncthings,http://localhost:8384 https://sync.server.home
+Torrent,http://torrents.server.home
+Music,http://music.server.home
 Idealista,http://idealista.com/
 Maps,http://google.com/maps/
 LetterboxD,http://https://letterboxd.com
