@@ -80,8 +80,8 @@
         "privacy.webrtc.legacyGlobalIndicator" = false;
         "privacy.webrtc.hideGlobalIndicator" = false;
         # "keyword.enable" = false; # Disable search when typing unexistent TLD
-        "browser.fixup.domainsuffixwhitelist.server" = true;
-        "browser.fixup.domainwhitelist.contre.server" = true; # whitelist contre.lucas tld
+        "browser.fixup.domainsuffixwhitelist.home" = true;
+        "browser.fixup.domainwhitelist.server.home" = true; # whitelist contre.lucas tld
         # "keyword.enable" = false; # Disable search when typing unexistent TLD
       };
 
