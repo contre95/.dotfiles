@@ -51,17 +51,42 @@
       ];
 
       settings = {
-        "browser.startup.homepage" = "https://contre.io";
-        "general.smoothScrolling" = true;
-        # Enable DRM support (Spotify, Netflix, so on and so forth... i really don't want to enable this, but... oh well...)
-        # "media.eme.enabled" = true;
-        # "media.gmp-widevinecdm.enabled" = true;
-        # "media.gmp-widevinecdm.visible" = true;
-        "browser.newtabpage.enabled" = true;
-        # Disable Activity Stream
-        "browser.newtabpage.introShown" = true;
-        "browser.newtab.preload" = false;
-        # "permissions.fullscreen.allowed" = false;
+        "dom.security.https_only_mode" = true; # force https
+        "browser.download.panel.shown" = true; # show download panel
+        "identity.fxaccounts.enabled" = false; # disable firefox accounts
+        "signon.rememberSignons" = false; # disable saving passwords
+        "extensions.pocket.enabled" = false; # disable pocket
+        "app.shield.optoutstudies.enabled" = false; # disable shield studies
+        "app.update.auto" = false; # disable auto update
+        "browser.bookmarks.restore_default_bookmarks" = false; # don't restore default bookmarks
+        "browser.quitShortcut.disabled" = true; # disable ctrl+q
+        "browser.shell.checkDefaultBrowser" = false; # don't check if default browser
+
+        # download handling
+        "browser.download.dir" = "/home/meain/down"; # default download dir
+        "browser.startup.page" = 3; # restore previous session
+
+        # ui changes
+        "browser.aboutConfig.showWarning" = false; # disable warning about about:config
+        "browser.compactmode.show" = true; # enable compact mode
+        "browser.uidensity" = 1; # enable dense UI
+        "general.autoScroll" = true; # enable autoscroll
+        "browser.tabs.firefox-view" = false; # enable firefox view
+        "browser.toolbars.bookmarks.visibility" = "never"; # hide bookmarks toolbar
+        "media.videocontrols.picture-in-picture.video-toggle.enabled" = true; # disable picture in picture button
+        "startup.homepage_welcome_url" = ""; # disable welcome page
+        "browser.newtabpage.enabled" = false; # disable new tab page
+        # "toolkit.legacyUserProfileCustomizations.stylesheets" = true; # enable userChrome.css
+        "full-screen-api.ignore-widgets" = true; # fullscreen within window
+
+        # privacy
+        "browser.contentblocking.category" = "custom"; # set tracking protection to custom
+        "browser.discovery.enabled" = false; # disable discovery
+        "browser.search.suggest.enabled" = false; # disable search suggestions
+        "browser.protections_panel.infoMessage.seen" = true; # disable tracking protection info
+        "dom.private-attribution.submission.enabled" = false; # stop doing dumb stuff mozilla
+
+        # disable telemetry
         "browser.newtabpage.activity-stream.feeds.telemetry" = false;
         "browser.translations.automaticallyPopup" = false;
         "browser.newtabpage.activity-stream.telemetry" = false;
@@ -76,9 +101,38 @@
         "toolkit.telemetry.shutdownPingSender.enabled" = false;
         "toolkit.telemetry.unified" = false;
         "toolkit.telemetry.updatePing.enabled" = false;
-        # Remove annoying indicator that's shown when webcam or mic is in use via firefox.
-        "privacy.webrtc.legacyGlobalIndicator" = false;
-        "privacy.webrtc.hideGlobalIndicator" = false;
+
+        # let me close and open tabs without confirmation
+        "browser.tabs.closeWindowWithLastTab" = false; # don't close window when last tab is closed
+        "browser.tabs.loadBookmarksInTabs" = true; # open bookmarks in new tab
+        "browser.tabs.loadDivertedInBackground" = false; # open new tab in background
+        "browser.tabs.loadInBackground" = true; # open new tab in background
+        "browser.tabs.warnOnClose" = false; # don't warn when closing multiple tabs
+        "browser.tabs.warnOnCloseOtherTabs" = false; # don't warn when closing multiple tabs
+        "browser.tabs.warnOnOpen" = false; # don't warn when opening multiple tabs
+        "browser.tabs.warnOnQuit" = false; # don't warn when closing multiple tabs
+
+        # other
+        "devtools.cache.disabled" = true; # disable caching in devtools
+        "devtools.toolbox.host" = "right"; # move devtools to right
+        # "browser.ssb.enabled" = true; # enable site specific browser
+        "media.autoplay.default" = 0; # enable autoplay on open
+        "media.ffmpeg.vaapi.enabled" = true; # enable hardware acceleration
+        "media.rdd-vpx.enabled" = true; # enable hardware acceleration
+
+        # override fonts (Set tracking protection to custom without "Suspected fingerprinters")
+        "font.minimum-size.x-western" = 13;
+        "font.size.fixed.x-western" = 15;
+        "font.size.monospace.x-western" = 15;
+        "font.size.variable.x-western" = 15;
+        "browser.display.use_document_fonts" = 0;
+
+        # do not open a tab in a new window
+        # ascentpayroll.net open link in a new without without any
+        # chrome and I can't even use my password manager
+        # https://support.mozilla.org/eu/questions/1151067?&mobile=1
+        "browser.link.open_newwindow.restriction" = 0;
+
         # "keyword.enable" = false; # Disable search when typing unexistent TLD
         "browser.fixup.domainsuffixwhitelist.home" = true;
         "browser.fixup.domainwhitelist.server.home" = true; # whitelist contre.lucas tld
@@ -88,113 +142,79 @@
       search = {
         force = true;
         engines = {
-          "Home Manager" = {
-            urls = [{ template = "https://mipmip.github.io/home-manager/search?query={searchTerms}"; }];
-            icon = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
-            definedAliases = [ "hm" ];
-          };
-          "Reddit" = {
-            urls = [{ template = "https://www.reddit.com/search/?q={searchTerms}"; }];
-            icon = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
-            definedAliases = [ "re" ];
-          };
-          "Home Manager Options" = {
-            urls = [{ template = "https://nix-community.github.io/home-manager/options.html#opt-{searchTerms}"; }];
-            icon = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
-            definedAliases = [ "ho" ];
-          };
-          "Nix Packages" = {
-            urls = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
-            definedAliases = [ "np" ];
-          };
-          "NixOS Options" = {
-            urls = [{ template = "https://search.nixos.org/options?query={searchTerms}"; }];
-            icon = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
-            definedAliases = [ "no" ];
-          };
-          "NixOS Wiki" = {
-            urls = [{ template = "https://nixos.wiki/index.php?search={searchTerms}"; }];
-            icon = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
-            definedAliases = [ "nw" ];
-          };
-          "SearXNG" = {
-            urls = [{ template = "https://searx.org/search?q={searchTerms}"; }];
-            iconUpdateURL = "https://searx.org/static/themes/simple/img/favicon.svg?ee99f2c4793c32451062177672c8ab309dbef940";
-            updateInterval = 7 * 24 * 60 * 60 * 1000;
-            definedAliases = [ "@sex" ];
-          };
-          "Ecosia" = {
-            urls = [{ template = "https://www.ecosia.org/search?q={searchTerms}"; }];
-            iconUpdateURL = "https://cdn-static.ecosia.org/static/icons/favicon.ico";
-            updateInterval = 7 * 24 * 60 * 60 * 1000;
-            definedAliases = [ "@eco" ];
-          };
-          "GitHub" = {
-            urls = [{ template = "https://github.com/search?q={searchTerms}"; }];
-            iconUpdateURL = "https://blog.contre.io/images/img.svg";
-            definedAliases = [ "gh" ];
-          };
-          "Start Page" = {
-            urls = [{ template = "https://www.startpage.com/sp/search?query={searchTerms}"; }];
-            iconUpdateURL = "https://www.startpage.com/sp/cdn/favicons/favicon--dark.ico";
-            updateInterval = 7 * 24 * 60 * 60 * 1000;
-            definedAliases = [ "@start" ];
-          };
-          "SteamDB" = {
-            urls = [{ template = "https://steamdb.info/search/?a=app&q={searchTerms}"; }];
-            iconUpdateURL = "https://steamdb.info/static/logos/512px.png";
-            updateInterval = 7 * 24 * 60 * 60 * 1000;
-            definedAliases = [ "sdb" ];
-          };
-          "Twitter" = {
-            urls = [{ template = "https://twitter.com/search?q={searchTerms}&src = typed_query "; }];
-            iconUpdateURL = " https://abs.twimg.com/favicons/twitter.2.ico ";
-            updateInterval = 7 * 24 * 60 * 60 * 1000;
-            definedAliases = [ "x" ];
+          # don't need these default ones
+          "Amazon.com".metaData.hidden = true;
+          "Bing".metaData.hidden = true;
+          "eBay".metaData.hidden = true;
+
+          "DuckDuckGo" = {
+            urls = [{
+              template = "https://duckduckgo.com";
+              params = [
+                { name = "q"; value = "{searchTerms}"; }
+              ];
+            }];
+            definedAliases = [ ",d" ];
           };
           "Google" = {
-            urls = [{ template = "https://www.google.com/search?q={searchTerms}"; }];
-            iconUpdateURL = "https://www.google.com/favicon.ico";
-            updateInterval = 7 * 24 * 60 * 60 * 1000;
-            definedAliases = [ "gg" ];
+            urls = [{
+              template = "https://google.com/search";
+              params = [
+                { name = "q"; value = "{searchTerms}"; }
+              ];
+            }];
+            definedAliases = [ ",g" ];
           };
-          "ProtonDB" = {
-            urls = [{ template = "https://www.protondb.com/search?q={searchTerms}"; }];
-            iconUpdateURL = "https://www.protondb.com/sites/protondb/images/favicon.ico";
-            updateInterval = 7 * 24 * 60 * 60 * 1000;
-            definedAliases = [ "pdb" ];
+          "Nix Packages" = {
+            urls = [{
+              template = "https://search.nixos.org/packages";
+              params = [
+                { name = "type"; value = "packages"; }
+                { name = "query"; value = "{searchTerms}"; }
+              ];
+            }];
+            definedAliases = [ "np" ];
           };
-          "AmazonES" = {
-            urls = [{ template = "https://www.amazon.es/s?k={searchTerms}"; }];
-            iconUpdateURL = "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg";
-            definedAliases = [ "amz" ];
+          "YouTube" = {
+            urls = [{
+              template = "https://www.youtube.com/results";
+              params = [
+                { name = "search_query"; value = "{searchTerms}"; }
+              ];
+            }];
+            definedAliases = [ "y" ];
           };
-          "Youtube" = {
-            urls = [{ template = "https://youtube.com/search?q={searchTerms}"; }];
-            iconUpdateURL = "https://www.youtube.com/s/desktop/5d5de6d9/img/favicon.ico";
-            updateInterval = 7 * 24 * 60 * 60 * 1000;
-            definedAliases = [ "y" "@youtube" ];
+          "Wikipedia" = {
+            urls = [{
+              template = "https://en.wikipedia.org/wiki/Special:Search";
+              params = [
+                { name = "search"; value = "{searchTerms}"; }
+              ];
+            }];
+            definedAliases = [ "wik" ];
           };
-          "YoutubeMusic" = {
-            urls = [{ template = "https://music.youtube.com/search?q={searchTerms}"; }];
-            iconUpdateURL = "https://www.youtube.com/s/desktop/5d5de6d9/img/favicon.ico";
-            updateInterval = 7 * 24 * 60 * 60 * 1000;
-            definedAliases = [ "@ytm" "@ym" ];
+          "DockerHub" = {
+            urls = [{
+              template = "https://hub.docker.com/search";
+              params = [
+                { name = "q"; value = "{searchTerms}"; }
+              ];
+            }];
+            definedAliases = [ "dh" ];
           };
-          "Spotify" = {
-            urls = [{ template = "https://open.spotify.com/search/{searchTerms}"; }];
-            iconUpdateURL = "https://www.scdn.co/i/_global/favicon.png";
-            updateInterval = 7 * 24 * 60 * 60 * 1000;
-            definedAliases = [ "sp" ];
-          };
-          "DuckDuckGo" = {
-            urls = [{ template = "https://duckduckgo.com/?q={searchTerms}"; }];
-            iconUpdateURL = "https://blog.contre.io/images/img.svg";
-            definedAliases = [ "ddg" ];
+          "GitHub" = {
+            urls = [{
+              template = "https://github.com/search";
+              params = [
+                { name = "q"; value = "{searchTerms}"; }
+              ];
+            }];
+            definedAliases = [ "gh" ];
           };
         };
         default = "DuckDuckGo";
       };
+
     };
   };
 }
