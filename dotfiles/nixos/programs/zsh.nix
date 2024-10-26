@@ -42,8 +42,11 @@
 
     shellAliases = {
       rebuild = "sudo WHICH_MACHINE=$(hostname) nixos-rebuild switch";
+      rebuild-boot = "sudo WHICH_MACHINE=$(hostname) nixos-rebuild boot";
       update = "pushd $MY_FOLDER && git pull && sudo WHICH_MACHINE=$(hostname) nixos-rebuild switch";
       iptr = "sudo iptables -t nat -L -v -n";
+      gc = "sudo nix-store --gc";
+      cg = "sudo nix-collect-garbage -d && nix-collect-garbage -d";
       mf = "cd $MY_FOLDER";
       p = "podman --remote";
       vim = "nvim";
@@ -57,7 +60,6 @@
       ga = "git add";
       gap = "git add --patch";
       gbD = "git branch -D";
-      gc = "git checkout";
       gcb = "git checkout -b";
       gr = "git remote";
       gcm = "git commit -S -m";
