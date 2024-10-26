@@ -109,6 +109,7 @@ in
       gparted
       openssl
       dig
+      speedtest-cli
       sshpass
       quickemu
       cava
