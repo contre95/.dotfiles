@@ -1,4 +1,7 @@
 { pkgs, ... }:
+let
+  unstable = import <nixos-unstable> { config = { allowUnfree = true; }; };
+in
 {
 
   # home-manager.users.contre = {
@@ -49,6 +52,7 @@
   environment.systemPackages = with pkgs; [
     dive # look into docker image layers
     podman-tui # status of containers in the terminal
+    unstable.podman
     # docker-compose # start group of containers for dev
     podman-compose # start group of containers for dev
   ];
