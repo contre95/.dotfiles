@@ -42,7 +42,7 @@ in
       #   storage.options.zfs.fsname = "zroot/podman";
       # };
       containersConf.settings = {
-        containers.dns_servers = [ "1.1.1.1" "1.1.0.0" ];
+        containers.dns_servers = [ "10.12.95.2" "1.1.1.1" ]; # Will this work as a fallback to 1.1.1.1 ? 
       };
     };
   };
