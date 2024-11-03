@@ -55,6 +55,7 @@ in
   environment.variables = {
     EDITOR = "nvim";
     PAGER = "";
+    XDG_SESSION_TYPE = "wayland";
     KEYTIMEOUT = "10";
     LANG = "en_US.UTF-8";
     LC_ALL = "en_US.UTF-8";
@@ -73,7 +74,7 @@ in
         isNormalUser = true;
         shell = pkgs.zsh;
         uid = 1000;
-        extraGroups = [ "wheel" "video" "dialout" "kvm" "adbusers"];
+        extraGroups = [ "wheel" "video" "dialout" "kvm" "adbusers" ];
       };
     } else { };
 }
