@@ -21,6 +21,13 @@
     "net.ipv4.ip_unprivileged_port_start" = 23;
   };
 
+
+  # Podman /udev rules for dongles on server
+
+  services.udev.extraRules = ''
+    KERNEL=="ttyUSB0", MODE:="666"
+  '';
+
   # User process persist after sessions logout since it's a server.
   system.activationScripts = {
     enableLingering = ''

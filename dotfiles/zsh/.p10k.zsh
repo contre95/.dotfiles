@@ -51,7 +51,7 @@ POWERLEVEL9K_KUBECONTEXT_DEFAULT_FOREGROUND="blue"
 typeset -g POWERLEVEL9K_CONTEXT_ROOT_FOREGROUND="clear"
 typeset -g POWERLEVEL9K_CONTEXT_BACKGROUND="clear"
 # Context color in SSH without privileges.
-typeset -g POWERLEVEL9K_CONTEXT_{REMOTE,REMOTE_SUDO}_FOREGROUND="clear"
+typeset -g POWERLEVEL9K_CONTEXT_{REMOTE,REMOTE_SUDO}_FOREGROUND="#FD67B1"
 # Default context color (no privileges, no SSH).
 typeset -g POWERLEVEL9K_CONTEXT_FOREGROUND="clear"
 # Context format when running with privileges: bold user@hostname.
