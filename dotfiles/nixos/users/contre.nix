@@ -108,6 +108,7 @@ in
       # Essentials OS 
       gparted
       openssl
+      wireshark
       dig
       speedtest-cli
       sshpass
