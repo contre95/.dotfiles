@@ -53,6 +53,7 @@
     gamescopeSession.enable = true;
   };
   hardware.amdgpu.opencl.enable = true;
+  hardware.enableRedistributableFirmware = true;
 
   # System programs config
   nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
@@ -102,6 +103,7 @@
   #   device = "/dev/nvme1n1p1";
   #   fsType = "ext4"; # Replace with your filesystem type
   # };
+  # boot.kernelPackages = pkgs.linuxPackages_latest;
   boot.kernelModules = [ "v4l2loopback" ];
   # Kernel Packages
   boot.kernelParams = [ "nvidia-drm.modeset=1" ];
