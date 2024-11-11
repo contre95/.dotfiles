@@ -103,7 +103,7 @@ in
       cliphist
       mpv
       git
-      neovim
+      unstable.neovim
 
       # Essentials OS 
       gparted
