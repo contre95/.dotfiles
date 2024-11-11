@@ -1,16 +1,15 @@
-require"gitlinker".setup()
-
--- Define the :GithubCopy command for visual mode
-vim.api.nvim_create_user_command('GithubCopy', function()
-  require('gitlinker').get_buf_range_url('v', {
-    action_callback = require('gitlinker.actions').copy_to_clipboard
-  })
-end, { range = true })
-
--- Define the :GithubOpen command for visual mode
-vim.api.nvim_create_user_command('GithubOpen', function()
-  require('gitlinker').get_buf_range_url('v', {
-    action_callback = require('gitlinker.actions').open_in_browser
-  })
-end, { range = true })
-
+require"gitlinker".setup({
+	"linrongbin16/gitlinker.nvim",
+	cmd = "GitLink",
+	opts = {},
+	keys = {
+		{ "<leader>gy", "<cmd>GitLink<cr>",  mode = { "n", "v" }, desc = "Yank git link" },
+		{ "<leader>gY", "<cmd>GitLink!<cr>", mode = { "n", "v" }, desc = "Open git link" },
+		{
+			"<leader>gdy",
+			"<cmd>GitLink default_branch<cr>",
+			mode = { "n", "v" },
+			desc = "Yank git link for default branch",
+		},
+	},
+})
