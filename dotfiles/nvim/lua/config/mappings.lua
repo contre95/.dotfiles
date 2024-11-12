@@ -49,19 +49,19 @@ vim.keymap.set("n", "<C-n>", function() return require('material.functions').tog
 -- Change number when sharing screen
 vim.keymap.set("n", "<C-h>", ":set relativenumber!<CR>") -- toggle
 
--- Git reset hunk
-vim.keymap.set("n", "gr", ":Gitsigns reset_hunk<CR>")
-vim.keymap.set("n", "gp", ":Gitsigns preview_hunk<CR>")
-vim.keymap.set("n", "gb", ":Gitsigns blame_line<CR>")
+-- -- Git reset hunk
+-- vim.keymap.set("n", "gr", ":Gitsigns reset_hunk<CR>")
+-- vim.keymap.set("n", "gp", ":Gitsigns preview_hunk<CR>")
+-- vim.keymap.set("n", "gb", ":Gitsigns blame_line<CR>")
 
 -- Spelling
 vim.keymap.set("n", "<C-s>", ":set invspell<CR>") -- toggle
 vim.keymap.set("n", "<C-j>", "1z=")               -- Fix spelling with first option
 
 -- Schleep indention (zirrostig/vim-schlep)
-vim.keymap.set("v", "<C-d>", "<Plug>SchleppDup")
-vim.keymap.set("v", "<C-Up>", "<Plug>SchleppIndentUp")
-vim.keymap.set("v", "<C-Down>", "<Plug>SchleppIndentDown")
+-- vim.keymap.set("v", "<C-d>", "<Plug>SchleppDup")
+-- vim.keymap.set("v", "<C-Up>", "<Plug>SchleppIndentUp")
+-- vim.keymap.set("v", "<C-Down>", "<Plug>SchleppIndentDown")
 
 -- Commenter (numToStr/Comment.nvim)
 local commentapi = require('Comment.api')
