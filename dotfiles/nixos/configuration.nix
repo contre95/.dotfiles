@@ -14,20 +14,20 @@ in
   imports =
     if "${os}" == "linux" then [
       ./system/gpg.nix
+      ./system/boot.nix
+      ./system/test.nix
+      ./system/fonts.nix
+      ./system/shell.nix
       ./system/sound.nix
       ./users/contre.nix
       ./system/openssh.nix
-      ./system/graphics.nix
-      ./system/bluetooth.nix
-      ./system/syncthings.nix
-      ./system/shell.nix
-      ./system/test.nix
-      ./system/boot.nix
-      ./system/fonts.nix
-      ./system/containers.nix
-      ./system/security.nix
-      ./system/networking.nix
       ./system/version.nix
+      ./system/graphics.nix
+      ./system/security.nix
+      ./system/bluetooth.nix
+      ./system/containers.nix
+      ./system/networking.nix
+      ./system/syncthings.nix
       ./system/node-exporter.nix
       ./machines/${machineConfig}
       (import "${home-manager}/nixos")
@@ -53,13 +53,13 @@ in
 
   # Common env variables
   environment.variables = {
-    EDITOR = "nvim";
     PAGER = "";
-    XDG_SESSION_TYPE = "wayland";
+    EDITOR = "nvim";
     KEYTIMEOUT = "10";
     LANG = "en_US.UTF-8";
     LC_ALL = "en_US.UTF-8";
     MYENV = "${whichMachine}";
+    XDG_SESSION_TYPE = "wayland";
     WHICH_MACHINE = "${whichMachine}";
   };
 
@@ -71,9 +71,9 @@ in
   users.users =
     if os == "linux" then {
       contre = {
-        isNormalUser = true;
-        shell = pkgs.zsh;
         uid = 1000;
+        shell = pkgs.zsh;
+        isNormalUser = true;
         extraGroups = [ "wheel" "video" "dialout" "kvm" "adbusers" ];
       };
     } else { };

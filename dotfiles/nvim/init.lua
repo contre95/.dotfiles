@@ -13,33 +13,16 @@
      \__\/           ~~~~                   \__\/
 --]]
 
--- Plugins
-require("plugins")
-require("plugins/dap")
-require("plugins/lsp")
-require("plugins/true-zen")
-require("plugins/schlepp-config")
-require("plugins/gitsigns-config")
-require("plugins/copilot-config")
-require("plugins/nvim-cmp-config")
-require("plugins/commenter-config")
-require("plugins/nvim-tree-config")
-require("plugins/telescope-config")
-require("plugins/quick-scope-config")
-require("plugins/bufferline-config")
-require("plugins/statusline-config")
-require("plugins/treesitter-config")
-require("plugins/colorscheme-config")
-require("plugins/clipboard-image-config")
-require("plugins/git-linker")
-
-
 -- Leader key
 vim.g.mapleader = " "
-require("settings")
-require("commands")
-require("mappings")
 
+-- Lua imports
+require("config.lazy")
+require("config.settings")
+require("config.commands")
+require("config.mappings")
 
+vim.cmd("colorscheme kanagawa")
+--
 ---- Vim Imports
 vim.cmd("so ~/.config/nvim/autocomands.vim")
