@@ -48,7 +48,7 @@
     };
   };
   # Environment Packages
-  environment.systemPackages = with pkgs; [ acpi upower ];
+  environment.systemPackages = with pkgs; [ acpi upower brightnessctl];
 
 
   nixpkgs.config.packageOverrides = pkgs: {
