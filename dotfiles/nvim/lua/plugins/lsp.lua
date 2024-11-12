@@ -1,334 +1,199 @@
-require("mason").setup() -- Install LSP, DAP servers, linters, and formatters
-local lspconfig = require("lspconfig")
-local util = require 'lspconfig.util'
-local capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities())
--- capabilities.textDocument.completion.completionItem.snippetSupport = true
-
--- LSP settings (for overriding per client)
-local signs = { Error = "❌", Warn = " ", Hint = " ", Info = " " }
-for type, icon in pairs(signs) do
-  local hl = "DiagnosticSign" .. type
-  vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
-end
-
-
--- General attachment callback funtion
-
--- Diagnosticis Signs
-local border = {
-  { "╭", "FloatBorder" },
-  { "─", "FloatBorder" },
-  { "╮", "FloatBorder" },
-  { "│", "FloatBorder" },
-  { "╯", "FloatBorder" },
-  { "─", "FloatBorder" },
-  { "╰", "FloatBorder" },
-  { "│", "FloatBorder" },
-}
-
-
-local orig_util_open_floating_preview = vim.lsp.util.open_floating_preview
-function vim.lsp.util.open_floating_preview(contents, syntax, opts, ...)
-  opts = opts or {}
-  opts.border = opts.border or border
-  return orig_util_open_floating_preview(contents, syntax, opts, ...)
-end
-
--- LSP settings (for overriding per client)latin
+-- Set rounded borders for LSP handlers
 local handlers = {
-  ["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { border = border }),
-  ["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = border }),
+  ["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { border = "rounded" }),
+  ["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = "rounded" }),
 }
+
+-- Apply the handlers
+for name, handler in pairs(handlers) do
+  vim.lsp.handlers[name] = handler
+end
 
 vim.diagnostic.config({
-  virtual_text = {
-    prefix = " ",
-    spacing = 0,
-  },
-  signs = true,
-  underline = true,
-  update_in_insert = false,
-  severity_sort = false,
-})
-
--- Languages Configuration
------------------------------
-
---Json
-lspconfig.jsonls.setup {
-  commands = {
-    Format = {
-      function()
-        vim.lsp.buf.range_formatting({}, { 0, 0 }, { vim.fn.line("$"), 0 })
-      end
-    }
+  float = {
+    border = "rounded",
   }
-}
-
--- Yamls
-lspconfig.yamlls.setup({
-  settings = {
-    yaml = {
-      schemas = {
-        ["https://raw.githubusercontent.com/microsoft/azure-pipelines-vscode/master/service-schema.json"] = {
-          "/azure-pipeline*.y*l",
-          "/*.azure*",
-          "Azure-Pipelines/**/*.y*l",
-          "Pipelines/*.y*l",
-        },
-      },
-    },
-  },
 })
--- Lua
--- https://github.com/sumneko/lua-language-server
-local runtime_path = vim.split(package.path, ';')
-table.insert(runtime_path, "lua/?.lua")
-table.insert(runtime_path, "lua/?/init.lua")
-lspconfig.lua_ls.setup({
-  settings = {
-    Lua = {
-      runtime = {
-        -- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
-        version = 'LuaJIT',
-        -- Setup your lua path
-        path = runtime_path,
-      },
-      diagnostics = {
-        -- Get the language server to recognize the `vim` global
-        globals = { 'vim' },
-      },
-      workspace = {
-        -- Make the server aware of Neovim runtime files
-        library = {
-          vim.fn.expand('$VIMRUNTIME/lua'),
-          vim.fn.stdpath('config') .. '/lua'
+
+-- Define capabilities with cmp_nvim_lsp
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities = vim.tbl_deep_extend("force", capabilities, require("cmp_nvim_lsp").default_capabilities())
+capabilities.textDocument.completion.completionItem.snippetSupport = true
+
+-- Plugin configuration
+return {
+  {
+    "neovim/nvim-lspconfig",
+    lazy = false,
+    config = function()
+      local lspconfig = require("lspconfig")
+
+      -- TSServer setup
+      local function organize_imports()
+        local params = {
+          command = "_typescript.organizeImports",
+          arguments = { vim.api.nvim_buf_get_name(0) },
         }
-      },
-      -- Do not send telemetry data containing a randomized but unique identifier
-      telemetry = {
-        enable = false,
-      },
-    },
-  },
-})
+        vim.lsp.buf.execute_command(params)
+      end
 
--- require 'lspconfig'.vale.setup {}
--- Latex
-require 'lspconfig'.vale_ls.setup {
-  capabilities = capabilities,
-  root_dir = lspconfig.util.root_pattern(".git"),
-  filetypes = { "tex", "md", "txt" },
-
-}
--- Markdown
-require 'lspconfig'.marksman.setup {}
--- C
-
-lspconfig.ccls.setup({
-  capabilities = capabilities,
-  filetypes = { "c" },
-})
-
--- Rust
-lspconfig.rust_analyzer.setup({
-  capabilities = capabilities,
-  filetypes = { "rs", "rust" },
-  settings = {
-    ["rust-analyzer"] = {
-      checkOnSave = {
-        command = "clippy",
-      },
-      imports = {
-        granularity = {
-          group = "module",
+      lspconfig.ts_ls.setup {
+        capabilities = capabilities,
+        handlers = handlers,
+        init_options = {
+          preferences = {
+            disableSuggestions = true,
+          },
         },
-        prefix = "self",
-      },
-      cargo = {
-        buildScripts = {
-          enable = true,
+        commands = {
+          OrganizeImports = {
+            organize_imports,
+            description = "Organize imports",
+          },
         },
-      },
-      procMacro = {
-        enable = true
-      },
-    }
-  }
-})
+      }
 
--- Python
-lspconfig.pyright.setup({ capabilities = capabilities, handlers = handlers })
--- lspconfig.black.setup({ capabilities = capabilities, handlers = handlers })
+      -- Pyright setup
+      lspconfig.pyright.setup {
+        capabilities = capabilities,
+        handlers = handlers,
+        filetypes = { "python" },
+      }
 
--- Golang
-lspconfig.gopls.setup({ capabilities = capabilities })
-lspconfig.golangci_lint_ls.setup {
-  filetypes = { 'go', 'gomod' }
-}
+      -- BashLS setup
+      lspconfig.bashls.setup {
+        capabilities = capabilities,
+        handlers = handlers,
+        filetypes = { "shell", "bash", "zsh", "sh" },
+      }
 
--- Terraform
---
-lspconfig.tflint.setup({
-  flags = { debounce_text_changes = 150 },
-})
+      -- Gopls setup
+      lspconfig.gopls.setup {
+        capabilities = capabilities,
+        handlers = handlers,
+        filetypes = { "go", "gomod", "gowork", "gotmpl" },
+        cmd = { "gopls" },
+        root_dir = require("lspconfig/util").root_pattern("go.work", "go.mod", ".git"),
+        settings = {
+          gopls = {
+            completeUnimported = true,
+            usePlaceholders = true,
+            analyses = {
+              unusedparams = true,
+            },
+          },
+        },
+      }
 
-lspconfig.terraformls.setup({
-  capabilities = capabilities,
-  on_attach = function(client)
-    client.server_capabilities.document_formatting = true
-  end,
-  cmd = { "terraform-ls", "serve" },
-  filetypes = { "tf", "terraform", "tfvars" },
-})
+      -- DockerLS setup
+      lspconfig.dockerls.setup {
+        capabilities = capabilities,
+        handlers = handlers,
+        cmd = { "docker-langserver", "--stdio" },
+        filetypes = { "dockerfile" },
+        root_dir = require("lspconfig/util").root_pattern "Dockerfile",
+        single_file_support = true,
+      }
 
--- SQL  -- go install github.com/lighttiger2505/sqls@latest
-lspconfig.sqlls.setup({
-  cmd = { 'sql-language-server', 'up', '--method', 'stdio' },
-  capabilities = capabilities,
-})
+      -- Docker Compose Language Service setup
+      lspconfig.docker_compose_language_service.setup {
+        capabilities = capabilities,
+        handlers = handlers,
+        cmd = { "docker-compose-langserver", "--stdio" },
+        filetypes = { "yaml.docker-compose" },
+        root_dir = require("lspconfig/util").root_pattern("docker-compose.yaml", "docker-compose.yml", "compose.yaml", "compose.yml"),
+        single_file_support = true,
+      }
 
--- -- Dart
--- require("flutter-tools").setup {
---     flutter_path="/usr/bin/dart",
--- 	lsp = {
--- 		on_attach = on_attach,
--- 		    color = { -- show the derived colours for dart variables
---       enabled = true, -- whether or not to highlight color variables at all, only supported on flutter >= 2.10
---       virtual_text = true, -- show the highlight using virtual text
---       virtual_text_str = "■", -- the virtual text character to highlight
---     },
--- 	},
---   debugger = {
---     enabled = true,
---     run_via_dap = false,
---   },
---   dev_log = {
---     enabled = true,
---   },
--- 	-- widget_guides = {
--- 	-- 	enabled = true,
--- 	-- },
--- }
+      -- yaml
+      lspconfig.yamlls.setup {
+        capabilities = capabilities,
+        handlers = handlers,
+        settings = {
+          yaml = {
+            schemas = {
+              kubernetes = "k8s-*.yaml",
+              ["http://json.schemastore.org/github-workflow"] = ".github/workflows/*",
+              ["http://json.schemastore.org/github-action"] = ".github/action.{yml,yaml}",
+              ["http://json.schemastore.org/ansible-stable-2.9"] = "roles/tasks/*.{yml,yaml}",
+              ["http://json.schemastore.org/prettierrc"] = ".prettierrc.{yml,yaml}",
+              ["http://json.schemastore.org/kustomization"] = "kustomization.{yml,yaml}",
+              ["http://json.schemastore.org/ansible-playbook"] = "*play*.{yml,yaml}",
+              ["http://json.schemastore.org/chart"] = "Chart.{yml,yaml}",
+              ["https://json.schemastore.org/dependabot-v2"] = ".github/dependabot.{yml,yaml}",
+              ["https://json.schemastore.org/gitlab-ci"] = "*gitlab-ci*.{yml,yaml}",
+              -- ["https://raw.githubusercontent.com/OAI/OpenAPI-Specification/main/schemas/v3.1/schema.json"] = "*api*.{yml,yaml}",
+              ["https://raw.githubusercontent.com/compose-spec/compose-spec/master/schema/compose-spec.json"] = "*docker-compose*.{yml,yaml}",
+              ["https://raw.githubusercontent.com/argoproj/argo-workflows/master/api/jsonschema/schema.json"] = "*flow*.{yml,yaml}",
+            },
+          },
+        }
+      }
 
--- Typescript
--- lspconfig.tsserver.setup({ capabilities = capabilities })
--- HTML
-lspconfig.html.setup { capabilities = capabilities, }
+      -- SQL Language Server setup
+      lspconfig.sqlls.setup {
+        capabilities = capabilities,
+        handlers = handlers,
+        filetypes = { "sql", "pgsql", "mysql" },
+        -- root_dir = function(_)
+        --   return vim.loop.cwd()
+        -- end,
+      }
 
--- Emmet
-lspconfig.emmet_ls.setup({
-  -- on_attach = on_attach,
-  capabilities = capabilities,
-  filetypes = { 'html', 'typescriptreact', 'javascriptreact', 'css', 'sass', 'scss', 'less', 'vue' },
-  init_options = {
-    html = {
-      options = {
-        -- For possible options, see: https://github.com/emmetio/emmet/blob/master/src/config.ts#L79-L267
-        ["bem.enabled"] = true,
-      },
-    },
-  }
-})
+      -- HTML setup
+      lspconfig.html.setup {
+        capabilities = capabilities,
+        handlers = handlers,
+      }
 
--- EFM Lang server
--- Linters, Prettiers and Checkers for EFM
------------------------------
-local sqlfmt = { formatCommand = "cat ${INPUT} | sqlfmt -" }
--- ES Linter -- npm i -g eslint_d
-local eslint = {
-  lintCommand = "eslint_d -f visualstudio --stdin --stdin-filename ${INPUT}",
-  lintIgnoreExitCode = true,
-  lintStdin = true,
-  lintFormats = { "%f(%l,%c): %tarning %m", "%f(%l,%c): %rror %m" },
-  lintSource = "eslint",
-}
+      -- HTMX setup
+      lspconfig.htmx.setup {
+        capabilities = capabilities,
+        handlers = handlers,
+      }
 
--- General prettier -- npm i -g prettier
-local prettier = {
-  formatCommand = "prettier --stdin-filepath ${INPUT}",
-  formatStdin = true,
-}
 
--- Yaml linter -- brew install yamllint
-local yamlfmt = {
-  --lintCommand = "yamllint --format parsable ${INPUT}",
-  formatCommand = "cat ${INPUT} | yamlfmt -in",
-  lintStdin = true,
-}
+      -- CSS Language Server setup
+      lspconfig.cssls.setup {
+        capabilities = capabilities,
+        handlers = handlers,
+      }
 
--- Latex Formatter
-local latexindent = {
-  formatCommand = "latexindent",
-  lintStdin = true,
-}
+      -- CCLS setup
+      lspconfig.ccls.setup {
+        capabilities = capabilities,
+        handlers = handlers,
+        init_options = {
+          compilationDatabaseDirectory = "build",
+          index = {
+            threads = 0,
+          },
+          clang = {
+            excludeArgs = { "-frounding-math" },
+          },
+        },
+      }
 
--- Shell Formatter / Checker
-local pep8 = {
-  formatCommand = "autopep8",
-}
-local nixpkgs = {
-  formatCommand = "nixpkgs-fmt %",
-}
+      -- nix
+      lspconfig.nil_ls.setup {
+        capabilities = capabilities,
+        handlers = handlers,
+      }
 
-local shell = {
-  formatCommand = "shfmt ${-i:tabWidth}",
-  lintCommand = "shellcheck -f gcc -x -",
-  lintStdin = true,
-  lintFormats = {
-    "%f:%l:%c: %trror: %m",
-    "%f:%l:%c: %tarning: %m",
-    "%f:%l:%c: %tote: %m",
+
+      -- lua
+      lspconfig.lua_ls.setup({
+        capabilities = capabilities,
+        handlers = handlers,
+        settings = {
+          Lua = {
+            diagnostics = {
+              globals = { "vim" },
+              disable = { "different-requires" },
+            },
+          },
+        },
+      })
+    end,
   },
 }
--- Vale linter
--- Languages setup
-local languages = {
-  typescript = { prettier, eslint },
-  javascript = { prettier, eslint },
-  vue = { prettier, eslint },
-  yaml = { yamlfmt },
-  --lua = { luafmt },
-  -- html = { prettier },
-  scss = { prettier },
-  sql = { sqlfmt },
-  tex = { latexindent },
-  -- nix = { nixpkgs },
-  css = { prettier },
-  sh = { shell },
-  zsh = { shell },
-  python = { pep8 },
-}
-
--- local lsp_path = vim.env.NIL_PATH or 'target/debug/nil'
-lspconfig.nil_ls.setup {
-  autostart = true,
-  capabilities = capabilities,
-  cmd = { 'nil' },
-  settings = {
-    ['nil'] = {
-      testSetting = 42,
-      formatting = {
-        command = { "nixpkgs-fmt" },
-      },
-    },
-  }
-}
-
-lspconfig.efm.setup({
-  root_dir = lspconfig.util.root_pattern(".git", vim.loop.os_homedir()),
-  filetypes = vim.tbl_keys(languages),
-  -- cmd = {
-  --   vim.loop.os_homedir() .. "/go/bin/efm-langserver",
-  --   "-logfile",
-  --   vim.loop.os_homedir() .. "/.cache/nvim/lsp.log",
-  --   "-loglevel",
-  --   "5",
-  -- },
-  init_options = { documentFormatting = true, codeAction = true },
-  settings = {
-    languages = languages,
-    log_level = 1,
-    log_file = vim.loop.os_homedir() .. ".cache/nvim/lsp.log",
-  },
-})
