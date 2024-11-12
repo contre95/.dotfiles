@@ -60,6 +60,9 @@ in
       sqls
       black
       delve
+      golangci-lint-langserver
+      gosec
+      golangci-lint
       gopls
       mariadb
       sqlite
