@@ -30,6 +30,7 @@ opt.splitbelow = true
 opt.splitright = true
 opt.cursorline = false
 opt.smartindent = true
+opt.modifiable = true
 --opt.foldmethod = "expr"
 opt.signcolumn = "yes:1"
 opt.relativenumber = true

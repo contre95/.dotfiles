@@ -1,4 +1,4 @@
-{ pkgs, config, ... }:
+{ pkgs, ... }:
 
 {
   programs.gpg = {
@@ -15,15 +15,15 @@
 
   services.gpg-agent = {
     enable = true;
-    sshKeys = [ "B38C2E9A5402A38D13E510DADD0B71744684EA35" ]; # [A] Subkey with auth capabilities.
-    enableSshSupport = true;
     verbose = true;
-    defaultCacheTtl = 1300;
-    enableZshIntegration = false;
-    enableExtraSocket = true;
-    pinentryPackage = pkgs.pinentry-gnome3;
     enableScDaemon = true;
+    defaultCacheTtl = 1300;
+    enableSshSupport = true;
+    enableExtraSocket = true;
     grabKeyboardAndMouse = true;
+    enableZshIntegration = false;
+    pinentryPackage = pkgs.pinentry-gnome3;
+    sshKeys = [ "B38C2E9A5402A38D13E510DADD0B71744684EA35" ]; # [A] Subkey with auth capabilities.
     # extraConfig = ''
     #   pinentry-program ${pkgs.pinentry-gnome3}/bin/pinentry-gnome3
     #   allow-loopback-pinentry
@@ -40,9 +40,9 @@
       };
       Service = {
         Type = "oneshot";
-        ExecStart = "${pkgs.coreutils}/bin/ln -Tfs /run/user/%U/gnupg %h/.gnupg-sockets";
-        ExecStop = "${pkgs.coreutils}/bin/rm $HOME/.gnupg-sockets";
         RemainAfterExit = true;
+        ExecStop = "${pkgs.coreutils}/bin/rm $HOME/.gnupg-sockets";
+        ExecStart = "${pkgs.coreutils}/bin/ln -Tfs /run/user/%U/gnupg %h/.gnupg-sockets";
       };
       Install.WantedBy = [ "default.target" ];
     };
