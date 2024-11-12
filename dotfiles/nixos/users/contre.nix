@@ -1,4 +1,4 @@
-{ config, ... }:
+{ ... }:
 let
   unstable = import <nixos-unstable> { config = { allowUnfree = true; }; };
 in
@@ -52,206 +52,187 @@ in
       jq
       cargo
       python3
-      python311Packages.pip
       nodejs_22
       terraform
+      python311Packages.pip
 
-      # LSP and toolkits
+      # LSP and toolkits (Also NVIM LPS)
+      unstable.neovim
+      air
+      nil
       sqls
       black
       delve
       gopls
-      mariadb
-      sqlite
-      pyright
-      air
       mycli
-      nil
       tfsec
+      sqlite
       tflint
-      terraform-ls
-      nixpkgs-fmt
+      mariadb
+      pyright
       yamlfmt
+      htmx-lsp
       marksman
-      # jetbrains.datagrip
       easyeffects
+      nixpkgs-fmt
+      terraform-ls
       efm-langserver
       lua-language-server
+      # jetbrains.datagrip
 
       # Essentials User 
-      ollama
-      unzip
+      git
+      mpv
+      vlc
+      tmux
+      tree
+      gnupg
       p7zip
       unrar
-      scrcpy # To share android screen
-      android-tools
-      stow # To create symlinks
-      bandwhich
-      zoxide # Like autojump but in Rust
+      unzip
       awscli
-      tree
-      zbar # For scanning QR codes
-      tree-sitter
+      ollama
+      tessen
       kubectl
-      tmux
+      cliphist
+      bandwhich
+      tree-sitter
+      android-tools
       # go-chromecast
       tmuxPlugins.tmux-thumbs
+      stow # To create symlinks
+      zbar # For scanning QR codes
+      scrcpy # To share android screen
+      zoxide # Like autojump but in Rust
       (pass.withExtensions (ext: with ext; [ pass-checkup pass-otp ]))
-      tessen
-      gnupg
-      vlc
-      cliphist
-      mpv
-      git
-      unstable.neovim
 
       # Essentials OS 
-      gparted
-      openssl
-      wireshark
       dig
-      speedtest-cli
-      sshpass
-      quickemu
+      feh
+      gcc
+      imv
+      iwd
+      bash
       cava
       gawk
       hugo
-      quickgui
-      xorg.xhost
-      wdisplays
       less
-      wl-kbptr
-      openvpn
-      iwgtk
-      gcc
-      busybox
-      coreutils
-      feh
-      imv
-      ffmpeg
-      prometheus-node-exporter
-      bash
-      btop # Like htop which is like top
-      mpg123
       wget
-      wirelesstools
-      iwd
+      iwgtk
       rsync
-      gnumake
-      ripgrep # Like grep but in Rust
-      pinentry-gnome3
+      ffmpeg
+      mpg123
+      busybox
       gettext
+      gnumake
+      gparted
+      openssl
+      openvpn
+      sshpass
+      quickemu
+      quickgui
+      wl-kbptr
+      coreutils
+      wdisplays
+      wireshark
+      xorg.xhost
+      speedtest-cli
+      wirelesstools
+      pinentry-gnome3
+      prometheus-node-exporter
+      ripgrep # Like grep but in Rust
+      btop # Like htop which is like top
 
       # Desktop apps
       spotify
-      # picard
-      # yubikey-manager
-      betterdiscordctl
       vesktop
-      (pkgs.discord.override {
-        withOpenASAR = true;
-        withVencord = true;
-      })
       alacritty
       alacritty-theme
+      betterdiscordctl
       telegram-desktop
+      # yubikey-manager
       simplex-chat-desktop
+      # picard # Excelent software to organize music
+      (pkgs.discord.override { withOpenASAR = true; withVencord = true; })
 
       # Desktop Environment 
-      pcmanfm
       dunst
-      unstable.waybar
+      polkit
       swappy
+      clipman
+      librsvg
+      pcmanfm
+      qt5.full
+      gammastep
+      hyprpaper
+      hyprshade
+      libnotify
+      hyprpicker
+      wf-recorder
+      gnome.zenity
+      rofi-wayland
+      wl-clipboard
+      wayland-utils
+      unstable.waybar
+      wayland-protocols
       grim # For screenshots
       slurp # For screenshots
-      # bruno # Like Postman but this one has a Dog as a logo
-      gnome.zenity
-      wf-recorder
-      hyprpaper
-      librsvg
-      clipman
-      gammastep
-      libnotify
-      hyprshade
-      wl-clipboard
-      hyprpicker
       libsForQt5.qt5.qtwayland
-      qt5.full
-      wayland-utils
-      wayland-protocols
-      rofi-wayland
-      polkit
+      # bruno # Like Postman but this one has a Dog as a logo
     ];
 
     home.extraOutputsToInstall = [ "share/tmux-plugins" ];
-
     home.file = {
       neovim = {
         recursive = true;
-        source = /home/canus/dotfiles/nvim;
         target = ".config/nvim";
+        source = /home/canus/dotfiles/nvim;
       };
-
       rofi = {
         recursive = true;
-        source = /home/canus/dotfiles/rofi;
         target = ".config/rofi";
+        source = /home/canus/dotfiles/rofi;
       };
-
       tmux = {
         recursive = false;
-        source = /home/canus/dotfiles/tmux/.tmux.conf;
         target = "./.tmux.conf";
+        source = /home/canus/dotfiles/tmux/.tmux.conf;
       };
-
       wireplumber = {
         recursive = true;
-        source = /home/canus/dotfiles/wireplumber;
         target = ".config/wireplumber";
+        source = /home/canus/dotfiles/wireplumber;
       };
-
       waybar = {
         recursive = true;
-        source = /home/canus/dotfiles/waybar;
         target = ".config/waybar";
+        source = /home/canus/dotfiles/waybar;
       };
-
       hyprland = {
         recursive = true;
-        source = /home/canus/dotfiles/hypr;
         target = ".config/hypr";
+        source = /home/canus/dotfiles/hypr;
       };
-
       keyboard = {
         recursive = true;
-        source = /home/canus/dotfiles/keybaord;
         target = ".config/xkb";
+        source = /home/canus/dotfiles/keybaord;
       };
-
       dunst = {
         recursive = true;
-        source = /home/canus/dotfiles/dunst;
         target = ".config/dunst";
+        source = /home/canus/dotfiles/dunst;
       };
-
-      #  zshrc = {
-      #   recursive = false;
-      #   source = /home/canus/dotfiles/zsh/.zshrc;
-      #   target = "./.zshrc";
-      # };
-
       p10k = {
         recursive = false;
-        source = /home/canus/dotfiles/zsh/.p10k.zsh;
         target = ".config/.p10k.zsh";
+        source = /home/canus/dotfiles/zsh/.p10k.zsh;
       };
-
       alacritty = {
         recursive = true;
-        source = /home/canus/dotfiles/alacritty;
         target = ".config/alacritty";
+        source = /home/canus/dotfiles/alacritty;
       };
-
     };
 
     imports = [
