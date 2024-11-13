@@ -1,11 +1,11 @@
+vim.keymap.set("n", "<C-n>", function() return require('material.functions').toggle_style() end)
 return {
   {
     "rebelot/kanagawa.nvim",
     dependencies = {
-      { 'marko-cerovac/material.nvim' }, -- Not a real dependencie
+      { 'marko-cerovac/material.nvim' }, -- Not a real dependency
     },
     lazy = false,
-    priority = 1000,
     opts = {
       compile = false,  -- enable compiling the colorscheme
       undercurl = true, -- enable undercurls
@@ -21,8 +21,7 @@ return {
         palette = {},
         theme = { dragon = {}, lotus = {}, wave = {}, all = {} },
       },
-      overrides = function(colors)
-        local theme = colors.theme
+      overrides = function()
         return {
           LineNr           = { bg = "#161616" },
           FoldColumn       = { bg = "#161616" },

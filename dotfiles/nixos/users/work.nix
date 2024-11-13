@@ -43,6 +43,7 @@
     pkgs.marksman
     pkgs.efm-langserver
     pkgs.lua-language-server
+    pkgs.luarocks
 
     # Essentials User 
     pkgs.unzip

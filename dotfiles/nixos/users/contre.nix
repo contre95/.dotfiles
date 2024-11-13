@@ -81,6 +81,7 @@ in
       terraform-ls
       efm-langserver
       lua-language-server
+      #luarocks
       # jetbrains.datagrip
 
       # Essentials User 
