@@ -123,6 +123,8 @@ in
       less
       wget
       iwgtk
+      inotify-tools # sudo inotifywait -m -r /path/to/disk/mountpoint
+      iotop
       rsync
       ffmpeg
       mpg123
