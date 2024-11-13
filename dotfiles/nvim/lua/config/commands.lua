@@ -36,13 +36,6 @@ vim.api.nvim_create_user_command('GitAdd', function()
   vim.fn.jobstart({ "git", "add", filename })
 end, {})
 
--- Open minimap
-vim.api.nvim_create_user_command('MM', function()
-  local codewindow = require('codewindow')
-  codewindow.setup()
-  codewindow.toggle_minimap()
-end, {})
-
 -- Order lines by length
 vim.cmd [[command! -range SortLen <line1>,<line2> !awk '{ print length(), $0 | "sort -n | cut -d\\  -f2-" }']]
 
