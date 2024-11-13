@@ -1,3 +1,21 @@
+-- Mappings
+vim.keymap.set("n", "<leader>d", ":vs|:Def<cr>")
+-- Commands
+vim.api.nvim_create_user_command("Info", function() return vim.lsp.buf.hover() end, {})
+vim.api.nvim_create_user_command("Rename", function() return vim.lsp.buf.rename() end, {})
+vim.api.nvim_create_user_command("Def", function() return vim.lsp.buf.definition() end, {})
+vim.api.nvim_create_user_command("Ref", function() return vim.lsp.buf.references() end, {})
+vim.api.nvim_create_user_command("DapOpen", function() return require 'dapui'.open() end, {})
+vim.api.nvim_create_user_command("DapClose", function() return require 'dapui'.close() end, {})
+vim.api.nvim_create_user_command("DList", function() return vim.diagnostic.setqflist() end, {})
+vim.api.nvim_create_user_command("Imp", function() return vim.lsp.buf.implementation() end, {})
+vim.api.nvim_create_user_command("CodeAction", function() return vim.lsp.buf.code_action() end, {})
+vim.api.nvim_create_user_command("Diagnose", function() return vim.diagnostic.open_float() end, {})
+vim.api.nvim_create_user_command("RemoveBlankLines", function() return vim.cmd(":g/^\\s*$/d") end, {})
+vim.api.nvim_create_user_command("Fmt", function() return vim.lsp.buf.format({ async = true }) end, {})
+vim.api.nvim_create_user_command("SignatureHelp", function() return vim.lsp.buf.signature_help() end, {})
+vim.api.nvim_create_user_command("LspLog", function() return vim.cmd('sp' .. vim.lsp.get_log_path()) end, {})
+
 -- Set rounded borders for LSP handlers
 local handlers = {
   ["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { border = "rounded" }),

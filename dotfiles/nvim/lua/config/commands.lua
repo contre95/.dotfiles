@@ -1,18 +1,17 @@
--- LSP
-vim.api.nvim_create_user_command("Info", function() return vim.lsp.buf.hover() end, {})
-vim.api.nvim_create_user_command("Rename", function() return vim.lsp.buf.rename() end, {})
-vim.api.nvim_create_user_command("Def", function() return vim.lsp.buf.definition() end, {})
-vim.api.nvim_create_user_command("Ref", function() return vim.lsp.buf.references() end, {})
-vim.api.nvim_create_user_command("DapOpen", function() return require 'dapui'.open() end, {})
-vim.api.nvim_create_user_command("DapClose", function() return require 'dapui'.close() end, {})
-vim.api.nvim_create_user_command("DList", function() return vim.diagnostic.setqflist() end, {})
-vim.api.nvim_create_user_command("Imp", function() return vim.lsp.buf.implementation() end, {})
-vim.api.nvim_create_user_command("CodeAction", function() return vim.lsp.buf.code_action() end, {})
-vim.api.nvim_create_user_command("Diagnose", function() return vim.diagnostic.open_float() end, {})
-vim.api.nvim_create_user_command("RemoveBlankLines", function() return vim.cmd(":g/^\\s*$/d") end, {})
-vim.api.nvim_create_user_command("Fmt", function() return vim.lsp.buf.format({ async = true }) end, {})
-vim.api.nvim_create_user_command("SignatureHelp", function() return vim.lsp.buf.signature_help() end, {})
-vim.api.nvim_create_user_command("LspLog", function() return vim.cmd('sp' .. vim.lsp.get_log_path()) end, {})
+-- Transparent Background
+vim.api.nvim_create_user_command("LetMeSee", function()
+  vim.api.nvim_set_hl(0, "LineNr", { bg = "none" })
+  vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+  vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })
+  vim.api.nvim_set_hl(0, "VertSplit", { bg = "none" })
+  vim.api.nvim_set_hl(0, "CursorLine", { bg = "none" })
+  vim.api.nvim_set_hl(0, "FoldColumn", { bg = "none" })
+  vim.api.nvim_set_hl(0, "SignColumn", { bg = "none" })
+  vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+  vim.api.nvim_set_hl(0, "CursorLineNR", { bg = "none" })
+  vim.api.nvim_set_hl(0, "CursorLineFold", { bg = "none" })
+  vim.api.nvim_set_hl(0, "CursorLineSign", { bg = "none" })
+end, {})
 
 -- Share code -- Only Linux. For Mac, see: https://gist.github.com/shmup/db671132f0f9882187b28a677fa8df72
 vim.cmd [[
@@ -39,18 +38,3 @@ end, {})
 -- Order lines by length
 vim.cmd [[command! -range SortLen <line1>,<line2> !awk '{ print length(), $0 | "sort -n | cut -d\\  -f2-" }']]
 
--- Transparent Background
-
-vim.api.nvim_create_user_command("LetMeSee", function()
-  vim.api.nvim_set_hl(0, "LineNr", { bg = "none" })
-  vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-  vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })
-  vim.api.nvim_set_hl(0, "VertSplit", { bg = "none" })
-  vim.api.nvim_set_hl(0, "CursorLine", { bg = "none" })
-  vim.api.nvim_set_hl(0, "FoldColumn", { bg = "none" })
-  vim.api.nvim_set_hl(0, "SignColumn", { bg = "none" })
-  vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
-  vim.api.nvim_set_hl(0, "CursorLineNR", { bg = "none" })
-  vim.api.nvim_set_hl(0, "CursorLineFold", { bg = "none" })
-  vim.api.nvim_set_hl(0, "CursorLineSign", { bg = "none" })
-end, {})
