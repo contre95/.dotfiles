@@ -99,11 +99,6 @@
   hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.stable;
 
   # Mount disks
-  # fileSystems."/home/canus/mounts/games" = {
-  #   device = "/dev/nvme1n1p1";
-  #   fsType = "ext4"; # Replace with your filesystem type
-  # };
-  # boot.kernelPackages = pkgs.linuxPackages_latest;
   boot.kernelModules = [ "v4l2loopback" ];
   # Kernel Packages
   boot.kernelParams = [ "nvidia-drm.modeset=1" ];
