@@ -31,6 +31,7 @@ return {
           Normal           = { bg = "#161616" },
           Todo             = { bg = "#ffA500" },
           CursorLineSign   = { bg = "#161616" },
+          Pmenu   = { bg = "#161616" },
           CursorLineFold   = { bg = "#161616" },
           CodewindowBorder = { fg = "#1c1c1c" },
           NormalNC         = { bg = "#161616" },
