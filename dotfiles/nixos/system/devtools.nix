@@ -76,7 +76,7 @@ in
     ccls
     rocmPackages_5.llvm.clang-unwrapped
 
-    yaml
+    # yaml
     yaml-language-server
 
     # misc
