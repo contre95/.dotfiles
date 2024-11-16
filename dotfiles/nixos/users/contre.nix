@@ -47,42 +47,9 @@ in
     };
 
     home.packages = with pkgs; [
-      # Languages
-      go
-      jq
-      cargo
-      python3
-      nodejs_22
-      terraform
-      python311Packages.pip
 
       # LSP and toolkits (Also NVIM LPS)
       unstable.neovim
-      air
-      nil
-      sqls
-      black
-      delve
-      golangci-lint-langserver
-      gosec
-      golangci-lint
-      gopls
-      mycli
-      tfsec
-      sqlite
-      tflint
-      mariadb
-      pyright
-      yamlfmt
-      htmx-lsp
-      marksman
-      easyeffects
-      nixpkgs-fmt
-      terraform-ls
-      efm-langserver
-      lua-language-server
-      #luarocks
-      # jetbrains.datagrip
 
       # Essentials User 
       git
@@ -101,6 +68,7 @@ in
       cliphist
       bandwhich
       tree-sitter
+      easyeffects
       android-tools
       # go-chromecast
       tmuxPlugins.tmux-thumbs
@@ -111,6 +79,7 @@ in
       (pass.withExtensions (ext: with ext; [ pass-checkup pass-otp ]))
 
       # Essentials OS 
+      jq
       fd
       dig
       feh
@@ -250,6 +219,7 @@ in
       ../programs/ssh.nix
       ../programs/test.nix
       ../programs/firefox.nix
+      ../programs/devtools.nix
     ];
 
     home.stateVersion = "24.05";
