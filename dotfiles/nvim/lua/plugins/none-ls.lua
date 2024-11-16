@@ -9,6 +9,7 @@ return {
       opts.sources = vim.list_extend(opts.sources or {}, {
         nls.builtins.formatting.fish_indent,
         nls.builtins.diagnostics.fish,
+        nls.builtins.hover.dictionary,
         nls.builtins.formatting.stylua,
         nls.builtins.formatting.shfmt,
         nls.builtins.formatting.yamlfmt,
