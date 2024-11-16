@@ -1,4 +1,7 @@
-{ pkgs, unstable, ... }:
+{ pkgs, ... }:
+let
+  unstable = import <nixos-unstable> { config = { allowUnfree = true; }; };
+in
 {
   # langs, linters, formatters, lsps, etc
   environment.systemPackages = with pkgs; [
