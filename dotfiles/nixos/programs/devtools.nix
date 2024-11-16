@@ -4,22 +4,30 @@ let
 in
 {
   # langs, linters, formatters, lsps, etc
-  environment.systemPackages = with pkgs; [
+ home.packages = with pkgs; [
     # nix
     nil
     alejandra
+    nixpkgs-fmt
     nixfmt-rfc-style
     statix
 
+    # terraform 
+    terraform
+    tflint
+    tfsec
+
     # go
+    air
     unstable.go
+    unstable.delve
     unstable.gopls
     unstable.gofumpt
-    unstable.goimports-reviser
     unstable.golines
-    unstable.gotools
     unstable.gotests
-    unstable.delve
+    unstable.gotools
+    unstable.golangci-lint
+    unstable.goimports-reviser
     # unstable.gdlv GUI frontend for delve
 
     # Dockerfile
@@ -28,23 +36,21 @@ in
 
     # lua
     stylua
-    lua54Packages.luacheck
     luarocks
-    lua51Packages.lua
-    lua53Packages.lua
+    luarocks
     lua-language-server
-    luarocks
 
     # rust
     cargo
     rustc
 
     # python
-    python3
-    black
     mypy
     ruff
+    black
     pyright
+    python3
+    python311Packages.pip
     # debugpy // who needs debuggers anyways
 
     # js
@@ -65,6 +71,7 @@ in
 
     # sql
     sqlfluff
+    mycli
 
     # css
     # vscode-langservers-extracted # alternative?
@@ -77,6 +84,7 @@ in
     rocmPackages_5.llvm.clang-unwrapped
 
     # yaml
+    yamlfmt
     yaml-language-server
 
     # misc
