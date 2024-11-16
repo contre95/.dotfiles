@@ -111,6 +111,7 @@ in
       (pass.withExtensions (ext: with ext; [ pass-checkup pass-otp ]))
 
       # Essentials OS 
+      fd
       dig
       feh
       gcc
@@ -122,9 +123,8 @@ in
       hugo
       less
       wget
-      iwgtk
-      inotify-tools # sudo inotifywait -m -r /path/to/disk/mountpoint
       iotop
+      iwgtk
       rsync
       ffmpeg
       mpg123
@@ -148,6 +148,7 @@ in
       prometheus-node-exporter
       ripgrep # Like grep but in Rust
       btop # Like htop which is like top
+      inotify-tools # sudo inotifywait -m -r /path/to/disk/mountpoint
 
       # Desktop apps
       spotify

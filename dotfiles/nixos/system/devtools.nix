@@ -26,6 +26,7 @@
     # lua
     stylua
     lua54Packages.luacheck
+    luarocks
     lua51Packages.lua
     lua53Packages.lua
     lua-language-server
@@ -72,7 +73,7 @@
     ccls
     rocmPackages_5.llvm.clang-unwrapped
 
-    # yaml
+    yaml
     yaml-language-server
 
     # misc
