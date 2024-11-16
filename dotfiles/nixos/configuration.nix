@@ -24,6 +24,7 @@ in
       ./system/version.nix
       ./system/graphics.nix
       ./system/security.nix
+      ./system/devtools.nix
       ./system/bluetooth.nix
       ./system/containers.nix
       ./system/networking.nix
