@@ -77,6 +77,19 @@ return {
         handlers = handlers,
         filetypes = { "python" },
       }
+      -- Terraform setup
+      lspconfig.tflint.setup({
+        flags = { debounce_text_changes = 150 },
+      })
+
+      lspconfig.terraformls.setup({
+        capabilities = capabilities,
+        on_attach = function(client)
+          client.server_capabilities.document_formatting = true
+        end,
+        cmd = { "terraform-ls", "serve" },
+        filetypes = { "tf", "terraform", "tfvars" },
+      })
 
       -- BashLS setup
       lspconfig.bashls.setup {
