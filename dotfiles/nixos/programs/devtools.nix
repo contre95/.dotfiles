@@ -14,6 +14,7 @@ in
 
     # terraform 
     terraform
+    terraform-ls
     tflint
     tfsec
 
