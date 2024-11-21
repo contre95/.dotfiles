@@ -122,6 +122,7 @@ in
       # Desktop apps
       spotify
       vesktop
+      blender
       alacritty
       alacritty-theme
       betterdiscordctl
