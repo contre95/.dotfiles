@@ -97,6 +97,7 @@ in
       rsync
       ffmpeg
       mpg123
+      smassh
       busybox
       gettext
       gnumake
@@ -124,6 +125,7 @@ in
       vesktop
       blender
       alacritty
+      bambu-studio
       alacritty-theme
       betterdiscordctl
       telegram-desktop
