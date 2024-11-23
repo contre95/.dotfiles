@@ -20,7 +20,7 @@ Twitter,http://x.com
 Social,https://elk.zone/home https://youtube.com https://rss.server.home https://reddit.com https://x.com/home https://devox.me/
 Proton,http://account.proton.me/login
 Syncthings,http://localhost:8384 https://sync.server.home
-Torrent,http://torrents.server.home https://fearnopeer.com/ https://digitalcore.club/ https://upload.cx/ https://autobrr.server.home/ https://prowlarr.server.home/
+Torrent,https://radarr.server.home/ http://torrents.server.home https://fearnopeer.com/ https://digitalcore.club/ https://upload.cx/ https://autobrr.server.home/ https://prowlarr.server.home/ https://metrics.server.home/d/1U1DXvKme/network?var-interval=1h&from=now-3h&to=now&timezone=utc&var-cpus=$__all&var-mountpoint=$__all
 Music,http://music.server.home
 Idealista,http://idealista.com/
 Maps,http://google.com/maps/
