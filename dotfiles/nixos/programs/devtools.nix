@@ -56,6 +56,7 @@ in
 
     # js
     biome
+    nodePackages.jsonlint
     pkgs.nodePackages.typescript-language-server
     # js-debug-adapter
 

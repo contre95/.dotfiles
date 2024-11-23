@@ -52,6 +52,7 @@ in
       unstable.neovim
 
       # Essentials User 
+
       git
       mpv
       vlc
@@ -79,6 +80,7 @@ in
       (pass.withExtensions (ext: with ext; [ pass-checkup pass-otp ]))
 
       # Essentials OS 
+
       jq
       fd
       dig
@@ -121,6 +123,7 @@ in
       inotify-tools # sudo inotifywait -m -r /path/to/disk/mountpoint
 
       # Desktop apps
+
       spotify
       vesktop
       blender
@@ -135,6 +138,8 @@ in
       (pkgs.discord.override { withOpenASAR = true; withVencord = true; })
 
       # Desktop Environment 
+
+      wofi 
       dunst
       polkit
       swappy
@@ -158,6 +163,7 @@ in
       slurp # For screenshots
       libsForQt5.qt5.qtwayland
       # bruno # Like Postman but this one has a Dog as a logo
+
     ];
 
     home.extraOutputsToInstall = [ "share/tmux-plugins" ];
