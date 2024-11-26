@@ -123,7 +123,7 @@
         "font.minimum-size.x-western" = 13;
         "font.size.variable.x-western" = 15;
         "font.size.monospace.x-western" = 15;
-        "browser.display.use_document_fonts" = 0;
+        "browser.display.use_document_fonts" = 1;
         "browser.link.open_newwindow.restriction" = 0;
 
         "browser.fixup.domainsuffixwhitelist.home" = true;
