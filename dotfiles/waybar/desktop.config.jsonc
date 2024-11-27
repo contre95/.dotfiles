@@ -107,22 +107,26 @@
     "wireplumber": {
       "format": "{volume}% {icon}",
       "format-muted": " -- <span color='#C57070'></span>",
-      "on-click-left": "~/.config/waybar/scripts/audio_changer.py",
+      "on-click-right": "~/.config/waybar/scripts/audio_changer.py",
       "on-click": "pavucontrol",
       "scroll-step": 1,
-      "max-volume" : 100,
+      "max-volume": 100,
       "on-click-middle": "wpctl set-mute @DEFAULT_SINK@ toggle",
       // "on-scroll-up": "wpctl set-volume @DEFAULT_SINK@ 0.025+",
       // "on-scroll-down": "wpctl set-volume @DEFAULT_SINK@ 0.025-",
-     "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": ["", "", ""]
-
+      "format-icons": {
+        "headphone": "",
+        "hands-free": "",
+        "headset": "",
+        "phone": "",
+        "portable": "",
+        "car": "",
+        "default": [
+          "",
+          "",
+          ""
+        ]
+      }
     },
     "custom/btc": {
       "format": "<span color='#EF8E19'></span> {}",

@@ -36,15 +36,6 @@
       "tooltip": false,
       "on-click": "sh $HOME/.config/rofi/bin/powermenu"
     },
-    "custom/notification": {
-      "on-click": "$MY_FOLDER/Scripts/notification-scr/notify-toggle-mute.sh",
-      "exec": "$MY_FOLDER/Scripts/waybar-scr/notify-status.sh",
-      "exec-if": "true",
-      "format": "{}",
-      "tooltip": false,
-      "signal": 1,
-      "interval": 2
-    },
     "hyprland/workspaces": {
       "persistent_workspaces": {
         "eDP-1": [

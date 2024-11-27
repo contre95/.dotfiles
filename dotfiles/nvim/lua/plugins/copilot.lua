@@ -1,3 +1,4 @@
+vim.keymap.set({ "n", "i" }, "gc", ":CopilotChatToggle<CR>")
 return {
   {
     "zbirenbaum/copilot-cmp",
