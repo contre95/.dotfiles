@@ -12,7 +12,6 @@ return {
         nls.builtins.formatting.shfmt,
         nls.builtins.formatting.yamlfmt,
         nls.builtins.formatting.prettier, -- JSON formatting
-        nls.builtins.diagnostics.jsonlint, -- JSON diagnostics
       })
     end
   },
