@@ -38,8 +38,8 @@ in
     home.homeDirectory = "/home/contre";
 
     home.sessionVariables = {
-      LD_LIBRARY_PATH = "${pkgs.stdenv.cc.cc.lib}/lib";
       MY_FOLDER = "/home/canus";
+      LD_LIBRARY_PATH = "${pkgs.stdenv.cc.cc.lib}/lib";
       PASSWORD_STORE_DIR = "$MY_FOLDER/pass";
       SCR_PATH = "$MY_FOLDER/scripts";
       PATH = "$PATH:$MY_FOLDER/scripts/bin-scr:/Users/lucas.contreras/.nix-profile/bin:/run/current-system/sw/bin:/nix/var/nix/profiles/default/bin:$HOME/.pyenv/bin:/go/bin/";
@@ -89,7 +89,7 @@ in
       imv
       iwd
       bash
-      cava
+      # cava
       gawk
       hugo
       less
@@ -217,6 +217,11 @@ in
         recursive = true;
         target = ".config/alacritty";
         source = /home/canus/dotfiles/alacritty;
+      };
+      kitty = {
+        recursive = true;
+        target = ".config/kitty";
+        source = /home/canus/dotfiles/kitty;
       };
     };
 

@@ -13,10 +13,10 @@ in
     statix
 
     # terraform 
-    terraform
-    terraform-ls
-    tflint
-    tfsec
+    # terraform
+    # terraform-ls
+    # tflint
+    # tfsec
 
     # go
     air
@@ -50,8 +50,9 @@ in
     ruff
     black
     pyright
-    python3
-    python311Packages.pip
+    unstable.python3
+    unstable.python311Packages.pip
+    # python311Packages.numpy
     # debugpy // who needs debuggers anyways
 
     # js
@@ -91,6 +92,7 @@ in
 
     # misc
     gcc
+    libgcc
     nodePackages.prettier
   ];
 }

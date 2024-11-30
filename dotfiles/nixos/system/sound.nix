@@ -8,8 +8,6 @@
     pw-volume
   ];
 
-  sound.enable = true;
-
   services.pipewire = {
     systemWide = false;
     audio.enable = true;
@@ -19,7 +17,7 @@
     pulse.enable = true;
     wireplumber.enable = true;
     alsa.support32Bit = true;
-    # 24.05
+
     extraConfig.pipewire-pulse."92-low-latency" = {
       context.modules = [
         {

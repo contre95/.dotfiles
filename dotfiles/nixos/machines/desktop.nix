@@ -57,9 +57,9 @@
 
   # System programs config
   nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
-    "steam"
-    "steam-original"
-    "steam-run"
+    # "steam"
+    # "steam-original"
+    # "steam-run"
   ];
 
   # User specific packages for desktop
@@ -79,16 +79,8 @@
   };
 
 
-  # Enable OpenGL
-  hardware.opengl = {
-    enable = true;
-    driSupport = true;
-    driSupport32Bit = true;
-  };
-
-
   # Nvidia
-  hardware.nvidia.open = true;
+  hardware.nvidia.open = false;
   services.xserver.enable = true;
   hardware.nvidia.nvidiaSettings = true;
   hardware.nvidia.modesetting.enable = true;
