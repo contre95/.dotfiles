@@ -10,7 +10,6 @@
       "network",
       "custom/recorder",
       "custom/wall",
-      "custom/pacman",
       // "disk",
       "custom/ip",
       // "custom/audio",
@@ -32,7 +31,7 @@
       "device": "intel_backlight"
     },
     "custom/arch": {
-      "format": "  ",
+      "format": "  ",
       "tooltip": false,
       "on-click": "sh $HOME/.config/rofi/bin/powermenu"
     },
@@ -104,7 +103,7 @@
         "critical": 15
       },
       "format": "{icon} {capacity}%",
-      "format-charging": "<span color='#168ECA'>󰂄</span> {capacity}%",
+      "format-charging": "<span color='##85AFD8'>󰂄</span> {capacity}%",
       "format-plugged": "<span color='#32CE42'>󰂄</span> {capacity}%",
       "on-click": "zenity --question --text='Disable charge limit to 100% ?' --icon=battery  && echo $(zenity --password) | sudo -S tlp fullcharge",
       "format-alt": "{icon} {time}",
@@ -170,14 +169,6 @@
       "interval": 5,
       "on-scroll-up": "playerctl next",
       "on-scroll-down": "playerctl previous"
-    },
-    "custom/pacman": {
-      "format": "<span color='#168ECA'></span> {}",
-      "interval": 3600,
-      "on-click": "pkill -9 waybar && waybar -c ~/.config/waybar/$MYENV.config.jsonc",
-      "exec": "checkupdates | wc -l",
-      "exec-if": "exit 0",
-      "signal": 8
     },
     "disk": {
       "interval": 30,
