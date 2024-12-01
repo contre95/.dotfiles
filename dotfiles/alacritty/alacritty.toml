@@ -1,7 +1,8 @@
 # import = [ "~/.config/alacritty/themes/gruvbox_material_medium.toml"]
 # import = [ "~/.config/alacritty/themes/ayu_dark.toml"]
-live_config_reload = true
 # colors.draw_bold_text_with_bright_colors = true
+[general]
+live_config_reload = true
 
 [env]
 TERM = "xterm-256color"

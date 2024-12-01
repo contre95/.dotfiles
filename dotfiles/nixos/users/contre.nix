@@ -39,7 +39,7 @@ in
 
     home.sessionVariables = {
       MY_FOLDER = "/home/canus";
-      LD_LIBRARY_PATH = "${pkgs.stdenv.cc.cc.lib}/lib";
+      # LD_LIBRARY_PATH = "${pkgs.stdenv.cc.cc.lib}/lib";
       PASSWORD_STORE_DIR = "$MY_FOLDER/pass";
       SCR_PATH = "$MY_FOLDER/scripts";
       PATH = "$PATH:$MY_FOLDER/scripts/bin-scr:/Users/lucas.contreras/.nix-profile/bin:/run/current-system/sw/bin:/nix/var/nix/profiles/default/bin:$HOME/.pyenv/bin:/go/bin/";
@@ -107,8 +107,6 @@ in
       openssl
       openvpn
       sshpass
-      quickemu
-      quickgui
       wl-kbptr
       coreutils
       wdisplays
@@ -153,7 +151,7 @@ in
       libnotify
       hyprpicker
       wf-recorder
-      gnome.zenity
+      zenity
       rofi-wayland
       wl-clipboard
       wayland-utils
@@ -236,7 +234,7 @@ in
       ../programs/devtools.nix
     ];
 
-    home.stateVersion = "24.05";
+    home.stateVersion = "24.11";
 
   };
 }
