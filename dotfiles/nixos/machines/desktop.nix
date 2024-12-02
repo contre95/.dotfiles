@@ -1,6 +1,9 @@
 { config, pkgs, lib, ... }:
 {
 
+  system.autoUpgrade.enable = true;
+  system.autoUpgrade.allowReboot = true;
+
   # Garbace collector
   nix.gc = {
     automatic = true;
