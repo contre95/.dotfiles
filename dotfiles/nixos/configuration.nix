@@ -44,9 +44,6 @@ in
     allowUnfree = true;
   };
 
-  system.autoUpgrade.enable = true;
-  system.autoUpgrade.allowReboot = true;
-
   # Local certificate
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   nixpkgs.config.packageOverrides = pkgs: {
