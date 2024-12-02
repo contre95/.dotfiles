@@ -33,7 +33,6 @@ Spotify,https://open.spotify.com/
 Devox,https://devox.me/
 MetalArchive,http://www.metal-archives.com
 ACM,https://myacm.acm.org
-Okta,http://https://okta.okta.com/app/UserHome?session_hint=AUTHENTICATED
 Jura,https://sede.administracionespublicas.gob.es/icpplustiej/acInfo
 Amazon Orders,https://www.amazon.es/gp/css/order-history
 One Piece,https://mega.nz/folder/TzBAHLLT#qzUPsdJPVakp5ETFN6kJAw
