@@ -48,9 +48,6 @@ in
 
     home.packages = with pkgs; [
 
-      # LSP and toolkits (Also NVIM LPS)
-      unstable.neovim
-
       # Essentials User 
 
       git
@@ -72,6 +69,7 @@ in
       easyeffects
       android-tools
       # go-chromecast
+      unstable.neovim
       tmuxPlugins.tmux-thumbs
       stow # To create symlinks
       zbar # For scanning QR codes
@@ -126,7 +124,7 @@ in
       vesktop
       blender
       alacritty
-      bambu-studio
+      unstable.bambu-studio
       alacritty-theme
       betterdiscordctl
       telegram-desktop
