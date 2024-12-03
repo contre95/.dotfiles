@@ -5,7 +5,6 @@
   environment = {
     shells = with pkgs; [ zsh ];
     darwinConfig = "/Users/canus/dotfiles/nixos/configuration.nix";
-    loginShell = pkgs.zsh;
     systemPath = [ "/opt/homebrew/bin" ];
     pathsToLink = [ "/Applications" ];
   };
@@ -79,6 +78,8 @@
   ];
   home-manager.useGlobalPkgs = true;
   home-manager.useUserPackages = true;
+
+  ids.uids.nixbld = 300;
   home-manager.users."lucas.contreras" = {
 
     home.homeDirectory = "/Users/lucas.contreras";
@@ -131,7 +132,7 @@
     ];
 
 
-    home.stateVersion = "24.05";
+    home.stateVersion = "24.11";
 
   };
 }

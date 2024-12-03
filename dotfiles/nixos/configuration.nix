@@ -1,5 +1,4 @@
 { lib, pkgs, ... }:
-
 let
   # Machine and environemnt definition
   home-manager = builtins.fetchTarball "https://github.com/nix-community/home-manager/archive/release-24.11.tar.gz";
@@ -43,9 +42,6 @@ in
   nixpkgs.config = {
     allowUnfree = true;
   };
-
-  system.autoUpgrade.enable = true;
-  system.autoUpgrade.allowReboot = true;
 
   # Local certificate
   nix.settings.experimental-features = [ "nix-command" "flakes" ];

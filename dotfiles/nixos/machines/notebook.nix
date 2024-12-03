@@ -1,6 +1,11 @@
 { pkgs, ... }:
-
+let
+  unstable = import <nixos-unstable> { config = { allowUnfree = true; }; };
+in
 {
+
+  system.autoUpgrade.enable = true;
+  system.autoUpgrade.allowReboot = true;
 
   # Garbace collector
   nix.gc = {
@@ -21,7 +26,7 @@
       CPU_MIN_PERF_ON_AC = 0;
       CPU_MAX_PERF_ON_AC = 100;
       CPU_MIN_PERF_ON_BAT = 0;
-      CPU_MAX_PERF_ON_BAT = 20;
+      CPU_MAX_PERF_ON_BAT = 80;
 
       #Optional helps save long term battery health
       START_CHARGE_THRESH_BAT0 = 40; # 40 and bellow it starts to charge
@@ -54,11 +59,9 @@
   nixpkgs.config.packageOverrides = pkgs: {
     intel-vaapi-driver = pkgs.intel-vaapi-driver.override { enableHybridCodec = true; };
   };
-  hardware = {
-    opengl.enable = true;
-    opengl.driSupport = true;
-    opengl.driSupport32Bit = true;
-    opengl.extraPackages = with pkgs; [
+  hardware.graphics = {
+    enable = true;
+    extraPackages = with pkgs; [
       intel-media-driver
       intel-vaapi-driver
       vaapiVdpau
@@ -69,8 +72,9 @@
   # # User specific
   home-manager.users.contre = { pkgs, ... }: {
     programs.git.signing.signByDefault = false;
-    # home.packages = with pkgs; [
-    # ];
+    home.packages = with pkgs; [
+      orca-slicer
+    ];
   };
 
 
