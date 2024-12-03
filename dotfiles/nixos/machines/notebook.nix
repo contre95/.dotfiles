@@ -1,4 +1,7 @@
 { pkgs, ... }:
+let
+  unstable = import <nixos-unstable> { config = { allowUnfree = true; }; };
+in
 {
 
   system.autoUpgrade.enable = true;
@@ -69,8 +72,9 @@
   # # User specific
   home-manager.users.contre = { pkgs, ... }: {
     programs.git.signing.signByDefault = false;
-    # home.packages = with pkgs; [
-    # ];
+    home.packages = with pkgs; [
+      orca-slicer
+    ];
   };
 
 

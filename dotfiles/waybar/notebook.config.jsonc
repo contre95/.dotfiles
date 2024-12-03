@@ -3,6 +3,7 @@
     "layer": "bottom",
     "position": "bottom",
     "modules-left": [
+      "custom/arch",
       "hyprland/workspaces"
     ],
     "modules-center": [
@@ -32,8 +33,8 @@
     },
     "custom/arch": {
       "format": "  ",
-      "tooltip": false,
-      "on-click": "sh $HOME/.config/rofi/bin/powermenu"
+      "on-click": "pkill -9 waybar && waybar -c ~/.config/waybar/$MYENV.config.jsonc",
+      "tooltip": false
     },
     "hyprland/workspaces": {
       "persistent_workspaces": {
