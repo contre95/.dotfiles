@@ -23,8 +23,8 @@ sudo find /home/canus/dotfiles/nixos/ -mindepth 1 -maxdepth 1 -exec ln -vs "{}" 
 #sudo ln -s /home/canus/dotfiles/nixos/machines /etc/nixos/machines
 #sudo ln -s /home/canus/dotfiles/nixos/programs /etc/nixos/programs
 #sudo ln -s /home/canus/dotfiles/nixos/system /etc/nixos/system
-sudo nix-channel --add https://github.com/nix-community/home-manager/archive/release-24.05.tar.gz home-manager  && \
-sudo nix-channel --add https://nixos.org/channels/nixos-24.05 nixos  && \
+sudo nix-channel --add https://github.com/nix-community/home-manager/archive/release-24.11.tar.gz home-manager  && \
+sudo nix-channel --add https://nixos.org/channels/nixos-24.11 nixos  && \
 sudo nix-channel --add https://nixos.org/channels/nixos-unstable nixos-unstable  && \
 cp  /home/canus/dotfiles/zsh/.p10k.zsh /home/contre/.config && \
 sudo cp /home/contre/hardware-configuration.nix /etc/nixos/hardware-configuration.nix && \
