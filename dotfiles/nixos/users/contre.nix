@@ -126,7 +126,6 @@ in
       vesktop
       blender
       alacritty
-      bambu-studio
       alacritty-theme
       betterdiscordctl
       telegram-desktop
