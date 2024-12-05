@@ -6,7 +6,7 @@ return {
       { "zbirenbaum/copilot.lua" }
     },
     config = function()
-      require("copilot").setup({
+      require("ccanaryopilot").setup({
         suggestion = { enabled = false },
         panel = { enabled = false },
       })
