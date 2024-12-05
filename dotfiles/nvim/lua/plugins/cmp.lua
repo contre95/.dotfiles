@@ -34,7 +34,7 @@ return { -- Autocompletion
 		"hrsh7th/cmp-nvim-lsp",
 		"onsails/lspkind.nvim",
 		"hrsh7th/cmp-path",
-		-- "zbirenbaum/copilot-cmp",
+		"zbirenbaum/copilot-cmp",
 	},
 	config = function()
 		local lspkind = require("lspkind")
