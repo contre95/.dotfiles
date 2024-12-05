@@ -41,6 +41,9 @@ in
     luarocks
     lua-language-server
 
+    # FGA
+    openfga-cli
+
     # rust
     cargo
     rustc

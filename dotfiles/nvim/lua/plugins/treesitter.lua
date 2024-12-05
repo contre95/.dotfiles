@@ -19,6 +19,7 @@ return {
         "nix",
         "sql",
         "tsx",
+        "fga",
         "vim",
         "xml",
         "bash",
