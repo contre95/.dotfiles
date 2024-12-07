@@ -114,4 +114,8 @@
   '';
   security.polkit.enable = true;
 
+  fileSystems."/home/contre/games" = {
+    device = "/dev/disk/by-uuid/474b736a-eb2e-4971-9ff7-d70fcd479d78";
+    fsType = "ext4"; # Replace with your filesystem type
+  };
 }
