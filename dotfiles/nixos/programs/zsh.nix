@@ -43,6 +43,7 @@
     shellAliases = {
       rebuild = "sudo WHICH_MACHINE=$(hostname) nixos-rebuild switch";
       rebuild-boot = "sudo WHICH_MACHINE=$(hostname) nixos-rebuild boot";
+      gparted = "sudo --preserve-env gparted";
       update = "pushd $MY_FOLDER && git pull && sudo WHICH_MACHINE=$(hostname) nixos-rebuild switch";
       iptr = "sudo iptables -t nat -L -v -n";
       gc = "sudo nix-store --gc";
