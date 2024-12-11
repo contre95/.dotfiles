@@ -28,6 +28,7 @@ return {
         "json",
         "luap",
         "toml",
+        "rust",
         "yaml",
         "jsdoc",
         "jsonc",
