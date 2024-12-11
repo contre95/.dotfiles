@@ -19,7 +19,7 @@ return {
         "nix",
         "sql",
         "tsx",
-        "fga",
+        -- "fga", ":TSInstall fga" works but not adding it here :hmm:
         "vim",
         "xml",
         "bash",
