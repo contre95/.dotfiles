@@ -42,7 +42,7 @@ in
       # LD_LIBRARY_PATH = "${pkgs.stdenv.cc.cc.lib}/lib";
       PASSWORD_STORE_DIR = "$MY_FOLDER/pass";
       SCR_PATH = "$MY_FOLDER/scripts";
-      PATH = "$PATH:$MY_FOLDER/scripts/bin-scr:/Users/lucas.contreras/.nix-profile/bin:/run/current-system/sw/bin:/nix/var/nix/profiles/default/bin:$HOME/.pyenv/bin:/go/bin/:$HOME/.cargo/bin`";
+      PATH = "$PATH:$MY_FOLDER/scripts/bin-scr:/Users/lucas.contreras/.nix-profile/bin:/run/current-system/sw/bin:/nix/var/nix/profiles/default/bin:$HOME/.pyenv/bin:/go/bin/:$HOME/.cargo/bin";
       EDITOR = "nvim";
     };
 

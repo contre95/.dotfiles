@@ -48,6 +48,11 @@
     nv-codec-headers-12
   ];
 
+  programs.coolercontrol = {
+    enable = true;
+    nvidiaSupport = true;
+  };
+
   programs.gamemode.enable = true;
   programs.steam = {
     enable = true;
