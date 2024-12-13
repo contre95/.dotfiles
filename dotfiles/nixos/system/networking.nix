@@ -1,6 +1,7 @@
 { config, pkgs, ... }: {
   networking.wireless.enable = false;
   networking.useDHCP = true;
+  interfaces.enp6s0.useDHCP = true;
   networking.useNetworkd = true;
   networking.networkmanager.enable = false;
   systemd.network.enable = true;
