@@ -58,6 +58,7 @@ in
       gnupg
       p7zip
       unrar
+      vscode
       unzip
       awscli
       ollama
