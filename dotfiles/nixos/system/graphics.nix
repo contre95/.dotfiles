@@ -14,10 +14,10 @@ in
   environment.systemPackages = with pkgs; [
     unstable.wayland-scanner
     unstable.hyprland
+    unstable.hyprgui
+    unstable.hyprcursor
     unstable.hyprland-protocols
     unstable.hyprland-workspaces
-    # hyprgui
-    # hyprcursor
     # hyprdim
     unstable.xdg-desktop-portal-gtk
     unstable.xdg-desktop-portal-hyprland
@@ -67,6 +67,7 @@ in
 
   programs.hyprland = {
     enable = true;
+    withUWSM  = true;
     xwayland.enable = true;
   };
 
