@@ -1,4 +1,9 @@
-{ config, pkgs, lib, ... }:
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
 {
 
   system.autoUpgrade.enable = true;
@@ -18,13 +23,11 @@
   nix.settings.auto-optimise-store = true;
   programs.nix-ld.enable = true;
 
-
   environment.variables = {
     DISK_SSD_A = "/home/contre/server-poc/ssd";
     DISK_HDD_A = "/home/contre/server-poc/hdd2";
     DISK_HDD_B = "/home/contre/server-poc/hdd";
   };
-
 
   # xdg.portal.wlr.enable = true;desktop
   services.dbus.enable = true;
@@ -60,34 +63,37 @@
     remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
     dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
     gamescopeSession.enable = true;
-    extraCompatPackages = [pkgs.proton-ge-bin];
+    extraCompatPackages = [ pkgs.proton-ge-bin ];
   };
   hardware.amdgpu.opencl.enable = true;
   hardware.enableRedistributableFirmware = true;
 
   # System programs config
-  nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
-    # "steam"
-    # "steam-original"
-    # "steam-run"
-  ];
+  nixpkgs.config.allowUnfreePredicate =
+    pkg:
+    builtins.elem (lib.getName pkg) [
+      # "steam"
+      # "steam-original"
+      # "steam-run"
+    ];
 
   # User specific packages for desktop
-  home-manager.users.contre = { pkgs, ... }: {
-    programs.git.signing.signByDefault = true;
-    programs.obs-studio = {
-      enable = true;
-      plugins = with pkgs.obs-studio-plugins; [
-        wlrobs
-        obs-pipewire-audio-capture
-        advanced-scene-switcher
-        input-overlay
-        obs-backgroundremoval
-      ];
+  home-manager.users.contre =
+    { pkgs, ... }:
+    {
+      programs.git.signing.signByDefault = true;
+      programs.obs-studio = {
+        enable = true;
+        plugins = with pkgs.obs-studio-plugins; [
+          wlrobs
+          obs-pipewire-audio-capture
+          advanced-scene-switcher
+          input-overlay
+          obs-backgroundremoval
+        ];
+      };
+
     };
-
-  };
-
 
   # Nvidia
   hardware.nvidia.open = false;
@@ -112,7 +118,7 @@
   boot.kernelModules = [ "v4l2loopback" ];
   # Kernel Packages
   boot.kernelParams = [ "nvidia-drm.modeset=1" ];
-  # OBS Virtual camera 
+  # OBS Virtual camera
   boot.extraModulePackages = with config.boot.kernelPackages; [
     v4l2loopback
   ];

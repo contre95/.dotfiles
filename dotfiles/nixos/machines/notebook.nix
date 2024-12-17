@@ -1,6 +1,10 @@
 { pkgs, ... }:
 let
-  unstable = import <nixos-unstable> { config = { allowUnfree = true; }; };
+  unstable = import <nixos-unstable> {
+    config = {
+      allowUnfree = true;
+    };
+  };
 in
 {
 
@@ -53,8 +57,11 @@ in
     };
   };
   # Environment Packages
-  environment.systemPackages = with pkgs; [ acpi upower brightnessctl];
-
+  environment.systemPackages = with pkgs; [
+    acpi
+    upower
+    brightnessctl
+  ];
 
   nixpkgs.config.packageOverrides = pkgs: {
     intel-vaapi-driver = pkgs.intel-vaapi-driver.override { enableHybridCodec = true; };
@@ -76,13 +83,13 @@ in
   };
 
   # # User specific
-  home-manager.users.contre = { pkgs, ... }: {
-    programs.git.signing.signByDefault = false;
-    home.packages = with pkgs; [
-      orca-slicer
-    ];
-  };
-
-
+  home-manager.users.contre =
+    { pkgs, ... }:
+    {
+      programs.git.signing.signByDefault = false;
+      home.packages = with pkgs; [
+        orca-slicer
+      ];
+    };
 
 }

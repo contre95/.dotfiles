@@ -1,4 +1,5 @@
-{ config, pkgs, ... }: {
+{ config, pkgs, ... }:
+{
   networking.wireless.enable = false;
   networking.useDHCP = true;
   networking.useNetworkd = true;

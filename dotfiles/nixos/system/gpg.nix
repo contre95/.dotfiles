@@ -1,8 +1,9 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
   services.pcscd.enable = true;
   services.dbus.packages = [ pkgs.gcr ];
 
-  # Enable GPG at a system level 
+  # Enable GPG at a system level
   # services.yubikey-agent.enable = true;
   # programs.gnupg.dirmngr.enable = true;
 
