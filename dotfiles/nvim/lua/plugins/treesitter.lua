@@ -1,9 +1,17 @@
+vim.filetype.add({
+  extension = { rasi = "rasi" },
+  pattern = {
+    [".*/waybar/config"] = "jsonc",
+    [".*/mako/config"] = "dosini",
+    [".*/hypr/.*%.conf"] = "hyprlang",
+  },
+})
 return {
   {
     "nvim-treesitter/nvim-treesitter",
     event = { "BufReadPost", "BufNewFile", "BufReadPre", "VimEnter" },
     cmd = { "TSInstall", "TSBufEnable", "TSBufDisable", "TSModuleInfo" },
-    lazy = true,
+    lazy = false,
     build = ":TSUpdate",
     dependencies = "windwp/nvim-ts-autotag",
     config = function(_, opts)
@@ -38,6 +46,7 @@ return {
         "printf",
         "python",
         "vimdoc",
+        "hyprlang",
         "markdown",
         "terraform",
         "javascript",
