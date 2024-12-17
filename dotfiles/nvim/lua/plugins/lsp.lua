@@ -120,6 +120,9 @@ return {
         filetypes = { "tf", "terraform", "tfvars" },
       })
 
+      -- Nix setup
+      lspconfig.rnix.setup{}
+
       -- Rust setup
       lspconfig.rust_analyzer.setup({})
 
