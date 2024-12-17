@@ -17,6 +17,7 @@ in
     unstable.hyprgui
     unstable.hyprcursor
     unstable.hyprland-protocols
+    unstable.wev
     unstable.hyprland-workspaces
     # hyprdim
     unstable.xdg-desktop-portal-gtk

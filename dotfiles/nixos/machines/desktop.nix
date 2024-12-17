@@ -26,7 +26,7 @@
   };
 
 
-  # xdg.portal.wlr.enable = true;
+  # xdg.portal.wlr.enable = true;desktop
   services.dbus.enable = true;
 
   networking.firewall = {
@@ -39,13 +39,14 @@
   ];
   # System packages
   environment.systemPackages = with pkgs; [
-    wineWowPackages.waylandFull
     lutris
     mangohud
     winetricks
-    vulkan-loader
     vulkan-tools
+    protonup
+    vulkan-loader
     nv-codec-headers-12
+    wineWowPackages.waylandFull
   ];
 
   programs.coolercontrol = {
@@ -59,6 +60,7 @@
     remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
     dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
     gamescopeSession.enable = true;
+    extraCompatPackages = [pkgs.proton-ge-bin];
   };
   hardware.amdgpu.opencl.enable = true;
   hardware.enableRedistributableFirmware = true;
@@ -92,7 +94,7 @@
   services.xserver.enable = true;
   hardware.nvidia.nvidiaSettings = true;
   hardware.nvidia.modesetting.enable = true;
-  services.xserver.videoDrivers = [ "nvidia" ];
+  services.xserver.videoDrivers = [ "nvidia" ]; # This also enables it for wayland
   hardware.nvidia.powerManagement.enable = true;
   hardware.nvidia.powerManagement.finegrained = false;
   services.xserver.displayManager.startx.enable = true; # No display manager
