@@ -1,6 +1,10 @@
 { pkgs, ... }:
 let
-  unstable = import <nixos-unstable> { config = { allowUnfree = true; }; };
+  unstable = import <nixos-unstable> {
+    config = {
+      allowUnfree = true;
+    };
+  };
 in
 {
 
@@ -53,11 +57,20 @@ in
     };
   };
   # Environment Packages
-  environment.systemPackages = with pkgs; [ acpi upower brightnessctl];
-
+  environment.systemPackages = with pkgs; [
+    acpi
+    upower
+    brightnessctl
+  ];
 
   nixpkgs.config.packageOverrides = pkgs: {
     intel-vaapi-driver = pkgs.intel-vaapi-driver.override { enableHybridCodec = true; };
+  };
+  programs.steam = {
+    enable = true;
+    remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
+    dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
+    gamescopeSession.enable = true;
   };
   hardware.graphics = {
     enable = true;
@@ -70,13 +83,13 @@ in
   };
 
   # # User specific
-  home-manager.users.contre = { pkgs, ... }: {
-    programs.git.signing.signByDefault = false;
-    home.packages = with pkgs; [
-      orca-slicer
-    ];
-  };
-
-
+  home-manager.users.contre =
+    { pkgs, ... }:
+    {
+      programs.git.signing.signByDefault = false;
+      home.packages = with pkgs; [
+        orca-slicer
+      ];
+    };
 
 }

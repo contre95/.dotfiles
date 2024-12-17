@@ -1,9 +1,17 @@
+vim.filetype.add({
+  extension = { rasi = "rasi" },
+  pattern = {
+    [".*/waybar/config"] = "jsonc",
+    [".*/mako/config"] = "dosini",
+    [".*/hypr/.*%.conf"] = "hyprlang",
+  },
+})
 return {
   {
     "nvim-treesitter/nvim-treesitter",
     event = { "BufReadPost", "BufNewFile", "BufReadPre", "VimEnter" },
     cmd = { "TSInstall", "TSBufEnable", "TSBufDisable", "TSModuleInfo" },
-    lazy = true,
+    lazy = false,
     build = ":TSUpdate",
     dependencies = "windwp/nvim-ts-autotag",
     config = function(_, opts)
@@ -19,7 +27,7 @@ return {
         "nix",
         "sql",
         "tsx",
-        "fga",
+        -- "fga", ":TSInstall fga" works but not adding it here :hmm:
         "vim",
         "xml",
         "bash",
@@ -28,6 +36,7 @@ return {
         "json",
         "luap",
         "toml",
+        "rust",
         "yaml",
         "jsdoc",
         "jsonc",
@@ -37,6 +46,7 @@ return {
         "printf",
         "python",
         "vimdoc",
+        "hyprlang",
         "markdown",
         "terraform",
         "javascript",

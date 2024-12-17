@@ -1,4 +1,9 @@
-{ config, pkgs, lib, ... }:
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
 {
 
   system.autoUpgrade.enable = true;
@@ -18,15 +23,13 @@
   nix.settings.auto-optimise-store = true;
   programs.nix-ld.enable = true;
 
-
   environment.variables = {
     DISK_SSD_A = "/home/contre/server-poc/ssd";
     DISK_HDD_A = "/home/contre/server-poc/hdd2";
     DISK_HDD_B = "/home/contre/server-poc/hdd";
   };
 
-
-  # xdg.portal.wlr.enable = true;
+  # xdg.portal.wlr.enable = true;desktop
   services.dbus.enable = true;
 
   networking.firewall = {
@@ -39,14 +42,20 @@
   ];
   # System packages
   environment.systemPackages = with pkgs; [
-    wineWowPackages.waylandFull
     lutris
     mangohud
     winetricks
-    vulkan-loader
     vulkan-tools
+    protonup
+    vulkan-loader
     nv-codec-headers-12
+    wineWowPackages.waylandFull
   ];
+
+  programs.coolercontrol = {
+    enable = true;
+    nvidiaSupport = true;
+  };
 
   programs.gamemode.enable = true;
   programs.steam = {
@@ -54,44 +63,48 @@
     remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
     dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
     gamescopeSession.enable = true;
+    extraCompatPackages = [ pkgs.proton-ge-bin ];
   };
   hardware.amdgpu.opencl.enable = true;
   hardware.enableRedistributableFirmware = true;
 
   # System programs config
-  nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
-    # "steam"
-    # "steam-original"
-    # "steam-run"
-  ];
+  nixpkgs.config.allowUnfreePredicate =
+    pkg:
+    builtins.elem (lib.getName pkg) [
+      # "steam"
+      # "steam-original"
+      # "steam-run"
+    ];
 
   # User specific packages for desktop
-  home-manager.users.contre = { pkgs, ... }: {
-    programs.git.signing.signByDefault = true;
-    programs.obs-studio = {
-      enable = true;
-      plugins = with pkgs.obs-studio-plugins; [
-        wlrobs
-        obs-pipewire-audio-capture
-        advanced-scene-switcher
-        input-overlay
-        obs-backgroundremoval
-      ];
+  home-manager.users.contre =
+    { pkgs, ... }:
+    {
+      programs.git.signing.signByDefault = true;
+      programs.obs-studio = {
+        enable = true;
+        plugins = with pkgs.obs-studio-plugins; [
+          wlrobs
+          obs-pipewire-audio-capture
+          advanced-scene-switcher
+          input-overlay
+          obs-backgroundremoval
+        ];
+      };
+
     };
-
-  };
-
 
   # Nvidia
   hardware.nvidia.open = false;
   services.xserver.enable = true;
   hardware.nvidia.nvidiaSettings = true;
   hardware.nvidia.modesetting.enable = true;
-  services.xserver.videoDrivers = [ "nvidia" ];
+  services.xserver.videoDrivers = [ "nvidia" ]; # This also enables it for wayland
   hardware.nvidia.powerManagement.enable = true;
   hardware.nvidia.powerManagement.finegrained = false;
   services.xserver.displayManager.startx.enable = true; # No display manager
-  hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.stable;
+  hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.vulkan_beta;
   # hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.mkDriver {
   #   version = "555.58.02";
   #   sha256_64bit = "sha256-xctt4TPRlOJ6r5S54h5W6PT6/3Zy2R4ASNFPu8TSHKM=";
@@ -105,7 +118,7 @@
   boot.kernelModules = [ "v4l2loopback" ];
   # Kernel Packages
   boot.kernelParams = [ "nvidia-drm.modeset=1" ];
-  # OBS Virtual camera 
+  # OBS Virtual camera
   boot.extraModulePackages = with config.boot.kernelPackages; [
     v4l2loopback
   ];
@@ -114,4 +127,8 @@
   '';
   security.polkit.enable = true;
 
+  fileSystems."/home/contre/games" = {
+    device = "/dev/disk/by-uuid/474b736a-eb2e-4971-9ff7-d70fcd479d78";
+    fsType = "ext4"; # Replace with your filesystem type
+  };
 }

@@ -1,4 +1,5 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
 
   environment.systemPackages = with pkgs; [
     # blueman
@@ -16,7 +17,7 @@
       # FastConnectable = true;
       # JustWorksRepairing = "always";
       # Privacy = "device";
-      # Enable = "Source,Sink,Media,Socket"; 
+      # Enable = "Source,Sink,Media,Socket";
       Enable = "Sink,Media,Socket"; # Don't enable Source since I don't want bluetooth mic to be use
       AutoEnable = true;
       ControllerMode = "bredr";
