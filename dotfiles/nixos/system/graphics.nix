@@ -1,12 +1,10 @@
-# { pkgs, ... }:
-# {
-#   environment.systemPackages = [
-#       (builtins.getFlake "path:/home/canus/dotfiles/nixos/flakes/hyprland.nix").packages.hyprland];
-# }
-
 { pkgs, ... }:
 let
-unstable = import <nixos-unstable> { config = { allowUnfree = true; }; };
+  unstable = import <nixos-unstable> {
+    config = {
+      allowUnfree = true;
+    };
+  };
 in
 {
   # Enable Graphics (Hyprland needs to be enable at a systems level)
@@ -14,10 +12,11 @@ in
   environment.systemPackages = with pkgs; [
     unstable.wayland-scanner
     unstable.hyprland
+    unstable.hyprgui
+    unstable.hyprcursor
     unstable.hyprland-protocols
+    unstable.wev
     unstable.hyprland-workspaces
-    # hyprgui
-    # hyprcursor
     # hyprdim
     unstable.xdg-desktop-portal-gtk
     unstable.xdg-desktop-portal-hyprland
@@ -63,10 +62,9 @@ in
 
   };
 
-
-
   programs.hyprland = {
     enable = true;
+    withUWSM = true;
     xwayland.enable = true;
   };
 
@@ -75,10 +73,16 @@ in
     xdgOpenUsePortal = true;
     config = {
       common.default = [ "gtk" ];
-      hyprland.default = [ "gtk" "hyprland" ];
+      hyprland.default = [
+        "gtk"
+        "hyprland"
+      ];
     };
 
-    extraPortals = [ pkgs.xdg-desktop-portal-gtk pkgs.xdg-desktop-portal-wlr ];
+    extraPortals = [
+      pkgs.xdg-desktop-portal-gtk
+      pkgs.xdg-desktop-portal-wlr
+    ];
   };
 
 }

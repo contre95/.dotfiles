@@ -26,6 +26,7 @@
       bindkey "^[[1;5C" forward-word
       bindkey "^[[1;5D" backward-word
       zstyle ":completion:*" matcher-list "" "m:{a-zA-Z}={A-Za-z}" "r:|[._-]=* r:|=*" "l:|=* r:|=*"
+      PS1="%F{#008000}%B%n@%m%b %1~:%f"
     '';
 
     enable = true;
@@ -43,6 +44,7 @@
     shellAliases = {
       rebuild = "sudo WHICH_MACHINE=$(hostname) nixos-rebuild switch";
       rebuild-boot = "sudo WHICH_MACHINE=$(hostname) nixos-rebuild boot";
+      gparted = "sudo --preserve-env gparted";
       update = "pushd $MY_FOLDER && git pull && sudo WHICH_MACHINE=$(hostname) nixos-rebuild switch";
       iptr = "sudo iptables -t nat -L -v -n";
       gc = "sudo nix-store --gc";

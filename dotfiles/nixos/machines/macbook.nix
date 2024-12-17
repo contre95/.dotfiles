@@ -1,4 +1,5 @@
-{ ... }: {
+{ ... }:
+{
   services.nix-daemon.enable = true;
   users.users."lucas.contreras".home = "/Users/lucas.contreras";
 
@@ -24,7 +25,6 @@
     ];
   };
 
-
   system = {
     defaults = {
       NSGlobalDomain = {
@@ -48,4 +48,3 @@
 
   system.stateVersion = 4;
 }
-
