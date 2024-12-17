@@ -120,9 +120,6 @@ return {
         filetypes = { "tf", "terraform", "tfvars" },
       })
 
-      -- Nix setup
-      lspconfig.rnix.setup{}
-
       -- Rust setup
       lspconfig.rust_analyzer.setup({})
 
@@ -257,11 +254,19 @@ return {
         },
       })
 
-      -- nil
+      -- Nix setup
       lspconfig.nil_ls.setup({
         capabilities = capabilities,
         handlers = handlers,
+        settings = {
+          ["nil"] = {
+            formatting = {
+              command = { "nixfmt" },
+            },
+          },
+        },
       })
+      -- lspconfig.rnix.setup{}
 
       -- lua
       lspconfig.lua_ls.setup({

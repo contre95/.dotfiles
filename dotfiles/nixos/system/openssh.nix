@@ -87,7 +87,8 @@
     `''`   \__nnh  D_.-'L__nnh    server
 
 "
-      else "";
+      else
+        "";
   };
 
   users.users."contre".openssh.authorizedKeys.keys = [

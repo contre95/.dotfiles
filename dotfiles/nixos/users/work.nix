@@ -44,7 +44,7 @@
     pkgs.lua-language-server
     pkgs.luarocks
 
-    # Essentials User 
+    # Essentials User
     pkgs.unzip
     pkgs.direnv
     pkgs.unrar
@@ -61,19 +61,23 @@
     pkgs.kubectl
     pkgs.tmux
     pkgs.tmuxPlugins.tmux-thumbs
-    (pkgs.pass.withExtensions (ext: with ext; [ pass-checkup pass-otp ]))
+    (pkgs.pass.withExtensions (
+      ext: with ext; [
+        pass-checkup
+        pass-otp
+      ]
+    ))
     pkgs.gnupg
     pkgs.git
     pkgs.neovim
     pkgs.coreutils
 
-    pkgs.# Web apps
-    pkgs.yarr 
+    pkgs. # Web apps
+    pkgs.yarr
 
-    pkgs.# Desktop apps
+    pkgs. # Desktop apps
     pkgs.alacritty
     pkgs.alacritty-theme
-
 
   ];
   home-manager.useGlobalPkgs = true;
@@ -130,7 +134,6 @@
       ../programs/git.nix
       ../programs/zsh.nix
     ];
-
 
     home.stateVersion = "24.11";
 

@@ -21,7 +21,6 @@
     "net.ipv4.ip_unprivileged_port_start" = 23;
   };
 
-
   # Podman /udev rules for dongles on server
 
   services.udev.extraRules = ''
@@ -53,11 +52,13 @@
     #   #   '';
   };
 
-  home-manager.users.contre = { pkgs, ... }: {
-    programs.git.signing.signByDefault = false;
-    # home.packages = with pkgs; [
-    # ];
-  };
+  home-manager.users.contre =
+    { pkgs, ... }:
+    {
+      programs.git.signing.signByDefault = false;
+      # home.packages = with pkgs; [
+      # ];
+    };
 
   environment.systemPackages = with pkgs; [
     motion

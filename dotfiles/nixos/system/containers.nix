@@ -1,6 +1,10 @@
 { pkgs, ... }:
 let
-  unstable = import <nixos-unstable> { config = { allowUnfree = true; }; };
+  unstable = import <nixos-unstable> {
+    config = {
+      allowUnfree = true;
+    };
+  };
 in
 {
 
@@ -42,11 +46,13 @@ in
       #   storage.options.zfs.fsname = "zroot/podman";
       # };
       containersConf.settings = {
-        containers.dns_servers = [ "10.12.95.2" "1.1.1.1" ]; # Will this work as a fallback to 1.1.1.1 ? 
+        containers.dns_servers = [
+          "10.12.95.2"
+          "1.1.1.1"
+        ]; # Will this work as a fallback to 1.1.1.1 ?
       };
     };
   };
-
 
   # Useful otherdevelopment tools
   environment.systemPackages = with pkgs; [
