@@ -34,7 +34,7 @@ in
 
   # Contre
   home-manager.users.contre =
-    { pkgs, ... }:
+    { pkgs,config, ... }:
     {
 
       # Enable/Disable deafult system programs
@@ -179,7 +179,7 @@ in
         neovim = {
           recursive = true;
           target = ".config/nvim";
-          source = /home/canus/dotfiles/nvim;
+          source = config.lib.file.mkOutOfStoreSymlink /home/canus/dotfiles/nvim;
         };
         rofi = {
           recursive = true;
@@ -189,7 +189,7 @@ in
         tmux = {
           recursive = false;
           target = "./.tmux.conf";
-          source = /home/canus/dotfiles/tmux/.tmux.conf;
+          source = config.lib.file.mkOutOfStoreSymlink /home/canus/dotfiles/tmux/.tmux.conf;
         };
         wireplumber = {
           recursive = true;
@@ -199,12 +199,12 @@ in
         waybar = {
           recursive = true;
           target = ".config/waybar";
-          source = /home/canus/dotfiles/waybar;
+          source = config.lib.file.mkOutOfStoreSymlink /home/canus/dotfiles/waybar;
         };
         hyprland = {
           recursive = true;
           target = ".config/hypr";
-          source = /home/canus/dotfiles/hypr;
+          source = config.lib.file.mkOutOfStoreSymlink /home/canus/dotfiles/hypr;
         };
         keyboard = {
           recursive = true;
@@ -222,14 +222,10 @@ in
           source = /home/canus/dotfiles/zsh/.p10k.zsh;
         };
         alacritty = {
-          recursive = true;
+          # recursive = true;
+          enable = true;
           target = ".config/alacritty";
-          source = /home/canus/dotfiles/alacritty;
-        };
-        kitty = {
-          recursive = true;
-          target = ".config/kitty";
-          source = /home/canus/dotfiles/kitty;
+          source = config.lib.file.mkOutOfStoreSymlink /home/canus/dotfiles/alacritty;
         };
       };
 
