@@ -83,7 +83,7 @@
   home-manager.useGlobalPkgs = true;
   home-manager.useUserPackages = true;
 
-  ids.uids.nixbld = 300;
+  ids.uids.nixbld = 350;
   home-manager.users."lucas.contreras" = {
 
     home.homeDirectory = "/Users/lucas.contreras";
