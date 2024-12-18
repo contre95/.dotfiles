@@ -48,6 +48,7 @@
       update = "pushd $MY_FOLDER && git pull && sudo WHICH_MACHINE=$(hostname) nixos-rebuild switch";
       iptr = "sudo iptables -t nat -L -v -n";
       gc = "sudo nix-store --gc";
+      no = "nix store optimise";
       cg = "sudo nix-collect-garbage -d && nix-collect-garbage -d";
       mf = "cd $MY_FOLDER";
       p = "podman --remote";
