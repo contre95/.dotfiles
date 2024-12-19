@@ -79,6 +79,7 @@
     "custom/audio": {
       "format": "<span color='#F8D987'></span> {}",
       "interval": 1,
+      "on-click-right": "~/.config/waybar/scripts/audio_changer.py",
       "on-scroll-up": "wpctl set-volume @DEFAULT_SINK@ 0.025+",
       "on-scroll-down": "wpctl set-volume @DEFAULT_SINK@ 0.025-",
       "on-click": "easyeffects",
@@ -107,7 +108,6 @@
     "wireplumber": {
       "format": "{volume}% {icon}",
       "format-muted": " -- <span color='#C57070'></span>",
-      "on-click-right": "~/.config/waybar/scripts/audio_changer.py",
       "on-click": "pavucontrol",
       "scroll-step": 1,
       "max-volume": 100,
