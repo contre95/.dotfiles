@@ -16,6 +16,7 @@
       "custom/mic",
     ],
     "modules-right": [
+      "custom/hypr",
       "custom/recorder",
       "wallpaper",
       // "custom/magaiba",
@@ -26,6 +27,11 @@
       "wireplumber",
       "clock",
     ],
+    "custom/hypr": {
+      "format": " <span color='#00CDDE'>  </span>",
+      "on-click": "hyprgui",
+      // "tooltip": true,
+    },
     "custom/arch": {
       "format": " <span color='#85AFD8'> </span>",
       "on-click": "pkill -9 waybar && waybar -c ~/.config/waybar/$MYENV.config.jsonc",
