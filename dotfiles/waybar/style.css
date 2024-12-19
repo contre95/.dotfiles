@@ -1,16 +1,16 @@
 * {
   font-family: "JetBrainsMono Nerd Font", "Symbols Nerd Font Mono";
-  font-size: 16px;
+  font-size: 15px;
   border-radius: 0px;
   font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
-  min-height: 15px;
+  min-height: 10px;
 }
 
 window#waybar {
   /* -webkit-border-radius: 0px 0px 10px 9px; */
   /* -moz-border-radius: 0px 0px 10px 9px; */
   background-color: #161616;
-  border-bottom: 1px solid #4d6074;
+  /* border-bottom: 1px solid #4d6074; */
 }
 
 #custom-arch,
@@ -41,9 +41,9 @@ tooltip label {
 }
 
 #workspaces button:hover {
-  background: rgba(255, 255, 255, 0.24);
+  background: rgba(255, 255, 255, 0.1);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 #workspaces {
@@ -53,7 +53,7 @@ tooltip label {
 #workspaces button {
   background-color: transparent;
   color: rgba(255, 255, 255, 0.5);
-  border-radius: 10px;
+  border-radius: 5px;
   margin: 5px 10px;
 }
 
@@ -74,8 +74,10 @@ tooltip label {
 }
 
 #workspaces button.active {
-  background: rgba(255, 255, 255, 0.5);
-  color: #2e3440;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  color: #7a81a9;
 }
 
 #custom-btc,

@@ -129,7 +129,6 @@ in
         inotify-tools # sudo inotifywait -m -r /path/to/disk/mountpoint
 
         # Desktop apps
-
         spotify
         vesktop
         blender
@@ -151,6 +150,7 @@ in
         dunst
         polkit
         swappy
+        zenity
         clipman
         librsvg
         pcmanfm
@@ -161,7 +161,6 @@ in
         libnotify
         hyprpicker
         wf-recorder
-        zenity
         rofi-wayland
         wl-clipboard
         wayland-utils
