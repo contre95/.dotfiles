@@ -11,6 +11,8 @@ in
 
   environment.systemPackages = with pkgs; [
     unstable.wayland-scanner
+    # inputs.swww.packages.${pkgs.system}.swww
+    unstable.swww
     unstable.hyprland
     unstable.hyprgui
     unstable.hyprcursor

@@ -29,7 +29,8 @@
     ],
     "custom/hypr": {
       "format": " <span color='#00CDDE'>  </span>",
-      "on-click": "hyprgui",
+      "on-click-right": "hyprgui",
+      "on-click": "swww img --transition-type outer --transition-pos 0.854,0.977 --transition-step 90 $(find /home/canus/library/wallpapers/$MYENV -type f | shuf -n 1)",
       // "tooltip": true,
     },
     "custom/arch": {
