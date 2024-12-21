@@ -160,6 +160,7 @@ in
         hyprshade
         libnotify
         hyprpicker
+        input-leap
         wf-recorder
         rofi-wayland
         wl-clipboard
