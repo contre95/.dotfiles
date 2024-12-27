@@ -4,13 +4,13 @@
   lib,
   ...
 }:
-let
-  unstable = import <nixos-unstable> {
-    config = {
-      allowUnfree = true;
-    };
-  };
-in
+# let
+#   unstable = import <nixos-unstable> {
+#     config = {
+#       allowUnfree = true;
+#     };
+#   };
+# in
 {
 
   system.autoUpgrade.enable = true;

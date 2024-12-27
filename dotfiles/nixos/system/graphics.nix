@@ -12,7 +12,8 @@ in
   environment.systemPackages = with pkgs; [
     unstable.wayland-scanner
     # inputs.swww.packages.${pkgs.system}.swww
-    swww
+    unstable.swww
+    unstable.nwg-look
     unstable.hyprland
     unstable.hyprgui
     unstable.hyprcursor
@@ -48,7 +49,7 @@ in
     QT_SCALE_FACTOR = "1";
     _JAVA_AWT_WM_NONREPARENTING = "1";
     QT_WAYLAND_DISABLE_WINDOWDECORATION = "1";
-    WLR_NO_GARDWARE_CURSORS = "1";
+    WLR_NO_HARDWARE_CURSORS = "1";
     QT_AUTO_SCREEN_SCALE_FACTOR = "1";
     # WLR_DRM_DEVICES = "/dev/dri/card1:/dev/dri/card0";
     CLUTTER_BACKEND = "wayland";
