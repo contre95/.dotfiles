@@ -16,6 +16,7 @@ in
     unstable.hyprland
     unstable.hyprgui
     unstable.hyprcursor
+    unstable.xcur2png
     unstable.hyprland-protocols
     unstable.wev
     unstable.hyprland-workspaces
