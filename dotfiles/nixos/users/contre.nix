@@ -52,7 +52,7 @@ in
       };
 
       home.packages = with pkgs; [
-
+        # ghostty
         # Essentials User
 
         git
@@ -233,6 +233,7 @@ in
         ../programs/gpg.nix
         ../programs/gtk.nix
         ../programs/git.nix
+        ../programs/ghostty.nix
         ../programs/zsh.nix
         ../programs/ssh.nix
         ../programs/test.nix
