@@ -65,7 +65,6 @@ in
         unrar
         unzip
         awscli
-        ollama
         tessen
         kubectl
         cliphist

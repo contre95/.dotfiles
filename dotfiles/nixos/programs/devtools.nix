@@ -45,6 +45,7 @@ in
     openfga-cli
 
     # rust
+    rustlings
     cargo
     rustc
 

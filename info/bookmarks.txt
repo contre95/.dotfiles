@@ -1,4 +1,5 @@
 White,https://blankwhitescreen.com/
+Notes,https://db.server.home/
 RSS,http://rss.server.home
 Emby,https://media.server.home
 Grafana,https://metrics.server.home
