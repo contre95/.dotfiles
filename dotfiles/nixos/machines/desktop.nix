@@ -49,6 +49,7 @@
   ];
   # System packages
   environment.systemPackages = with pkgs; [
+    ollama
     lutris
     mangohud
     winetricks
