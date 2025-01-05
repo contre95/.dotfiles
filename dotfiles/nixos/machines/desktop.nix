@@ -113,7 +113,7 @@
   hardware.nvidia.powerManagement.enable = true;
   hardware.nvidia.powerManagement.finegrained = false;
   services.xserver.displayManager.startx.enable = true; # No display manager
-  hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.stable;
+  hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.beta; # 550 as per nixos docs
   # hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.mkDriver {
   #   version = "555.58.02";
   #   sha256_64bit = "sha256-xctt4TPRlOJ6r5S54h5W6PT6/3Zy2R4ASNFPu8TSHKM=";
@@ -126,7 +126,7 @@
   # Mount disks
   boot.kernelModules = [ "v4l2loopback" ];
   # Kernel Packages
-  boot.kernelParams = [ "nvidia-drm.modeset=1" ];
+  boot.kernelParams = [ "nvidia-drm.modeset=1" "nvidia.NVreg_PreserveVideoMemoryAllocations=1" ];
   # OBS Virtual camera
   boot.extraModulePackages = with config.boot.kernelPackages; [
     v4l2loopback

@@ -11,7 +11,7 @@ return {
     "nvim-treesitter/nvim-treesitter",
     event = { "BufReadPost", "BufNewFile", "BufReadPre", "VimEnter" },
     cmd = { "TSInstall", "TSBufEnable", "TSBufDisable", "TSModuleInfo" },
-    lazy = false,
+    lazy = true,
     build = ":TSUpdate",
     dependencies = "windwp/nvim-ts-autotag",
     config = function(_, opts)
@@ -23,6 +23,7 @@ return {
       ensure_installed = {
         "c",
         "go",
+        "css",
         "lua",
         "nix",
         "sql",

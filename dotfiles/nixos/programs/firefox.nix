@@ -1,30 +1,27 @@
 { pkgs, ... }:
 {
   programs.firefox = {
+    package = (pkgs.wrapFirefox (pkgs.firefox-devedition-unwrapped.override { pipewireSupport = true; }) { });
     enable = true;
-    policies =
-      {
-        DisableTelemetry = true;
-        DisableFirefoxStudies = true;
-        EnableTrackingProtection = {
-          Value = true;
-          Locked = true;
-          Cryptomining = true;
-          Fingerprinting = true;
-        };
-        DisablePocket = true;
-        DisableFirefoxAccounts = true;
-        DisableAccounts = true;
-        DisableFirefoxScreenshots = true;
-        # OverrideFirstRunPage = "";
-        # OverridePostUpdatePage = "";
-        DontCheckDefaultBrowser = true;
-        DisplayBookmarksToolbar = "never"; # alternatives: "always" or "newtab"
-        DisplayMenuBar = "default-on"; # alternatives: "always", "never" or "default-on"
-        SearchBar = "unified"; # alternative: "separate"
+    policies = {
+      DisableTelemetry = true;
+      DisableFirefoxStudies = true;
+      EnableTrackingProtection = {
+        Value = true;
+        Locked = true;
+        Cryptomining = true;
+        Fingerprinting = true;
       };
-    profiles.ContreKiosk = {
-      id = 1;
+      DisablePocket = true;
+      DisableFirefoxAccounts = true;
+      DisableAccounts = true;
+      DisableFirefoxScreenshots = true;
+      # OverrideFirstRunPage = "";
+      # OverridePostUpdatePage = "";
+      DontCheckDefaultBrowser = true;
+      DisplayBookmarksToolbar = "never"; # alternatives: "always" or "newtab"
+      DisplayMenuBar = "never"; # alternatives: "always", "never" or "default-on"
+      SearchBar = "unified"; # alternative: "separate"
     };
     profiles.Contre = {
       id = 0;
@@ -42,16 +39,15 @@
         hover-zoom-plus
         # firefox-color
         sponsorblock
-        darkreader
         privacy-badger
         improved-tube
         multi-account-containers
-        h264ify
+        # h264ify
         # i-dont-care-about-cookies
       ];
 
       settings = {
-        "app.update.auto" = false; # disable auto update
+        "app.update.auto" = true; # disable auto update
         "dom.security.https_only_mode" = true; # force https
         "extensions.pocket.enabled" = false; # disable pocket
         "browser.quitShortcut.disabled" = true; # disable ctrl+q
@@ -66,10 +62,10 @@
         "browser.download.dir" = "/home/meain/down"; # default download dir
         "browser.startup.page" = 3; # restore previous session
         # UI changes
-        "browser.uidensity" = 1; # enable dense UI
+        # "browser.uidensity" = 1; # enable dense UI
         "general.autoScroll" = true; # enable autoscroll
-        "browser.compactmode.show" = true; # enable compact mode
-        "browser.tabs.firefox-view" = false; # enable firefox view
+        # "browser.compactmode.show" = true; # enable compact mode
+        # "browser.tabs.firefox-view" = false; # enable firefox view
         "startup.homepage_welcome_url" = ""; # disable welcome page
         "browser.newtabpage.enabled" = false; # disable new tab page
         "full-screen-api.ignore-widgets" = true; # fullscreen within window
@@ -140,67 +136,105 @@
           "eBay".metaData.hidden = true;
 
           "DuckDuckGo" = {
-            urls = [{
-              template = "https://duckduckgo.com";
-              params = [
-                { name = "q"; value = "{searchTerms}"; }
-              ];
-            }];
+            urls = [
+              {
+                template = "https://duckduckgo.com";
+                params = [
+                  {
+                    name = "q";
+                    value = "{searchTerms}";
+                  }
+                ];
+              }
+            ];
             definedAliases = [ ",d" ];
           };
           "Google" = {
-            urls = [{
-              template = "https://google.com/search";
-              params = [
-                { name = "q"; value = "{searchTerms}"; }
-              ];
-            }];
+            urls = [
+              {
+                template = "https://google.com/search";
+                params = [
+                  {
+                    name = "q";
+                    value = "{searchTerms}";
+                  }
+                ];
+              }
+            ];
             definedAliases = [ ",g" ];
           };
           "Nix Packages" = {
-            urls = [{
-              template = "https://search.nixos.org/packages";
-              params = [
-                { name = "type"; value = "packages"; }
-                { name = "query"; value = "{searchTerms}"; }
-              ];
-            }];
+            urls = [
+              {
+                template = "https://search.nixos.org/packages";
+                params = [
+                  {
+                    name = "type";
+                    value = "packages";
+                  }
+                  {
+                    name = "query";
+                    value = "{searchTerms}";
+                  }
+                ];
+              }
+            ];
             definedAliases = [ "np" ];
           };
           "YouTube" = {
-            urls = [{
-              template = "https://www.youtube.com/results";
-              params = [
-                { name = "search_query"; value = "{searchTerms}"; }
-              ];
-            }];
+            urls = [
+              {
+                template = "https://www.youtube.com/results";
+                params = [
+                  {
+                    name = "search_query";
+                    value = "{searchTerms}";
+                  }
+                ];
+              }
+            ];
             definedAliases = [ "y" ];
           };
           "Wikipedia" = {
-            urls = [{
-              template = "https://en.wikipedia.org/wiki/Special:Search";
-              params = [
-                { name = "search"; value = "{searchTerms}"; }
-              ];
-            }];
+            urls = [
+              {
+                template = "https://en.wikipedia.org/wiki/Special:Search";
+                params = [
+                  {
+                    name = "search";
+                    value = "{searchTerms}";
+                  }
+                ];
+              }
+            ];
             definedAliases = [ "wik" ];
           };
           "DockerHub" = {
-            urls = [{
-              template = "https://hub.docker.com/search";
-              params = [
-                { name = "q"; value = "{searchTerms}"; }
-              ];
-            }];
+            urls = [
+              {
+                template = "https://hub.docker.com/search";
+                params = [
+                  {
+                    name = "q";
+                    value = "{searchTerms}";
+                  }
+                ];
+              }
+            ];
             definedAliases = [ "dh" ];
           };
           "GitHub" = {
-            urls = [{
-              template = "https://github.com/search";
-              params = [
-                { name = "q"; value = "{searchTerms}"; }
-              ];
-            }];
+            urls = [
+              {
+                template = "https://github.com/search";
+                params = [
+                  {
+                    name = "q";
+                    value = "{searchTerms}";
+                  }
+                ];
+              }
+            ];
             definedAliases = [ "gh" ];
           };
         };
