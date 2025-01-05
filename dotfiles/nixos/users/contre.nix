@@ -129,22 +129,23 @@ in
 
         # Desktop apps
         spotify
-        vesktop
         blender
         alacritty
         alacritty-theme
-        betterdiscordctl
         telegram-desktop
         # yubikey-manager
+        # firefox-unwrapped
         simplex-chat-desktop
         # picard # Excelent software to organize music
+        # betterdiscordctl
+        # webcord
+        vesktop
         (pkgs.discord.override {
           withOpenASAR = true;
-          withVencord = true;
+          withVencord = false;
         })
 
         # Desktop Environment
-
         wofi
         dunst
         polkit

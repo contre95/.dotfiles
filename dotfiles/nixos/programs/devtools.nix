@@ -21,6 +21,9 @@ in
     # go
     air
     unstable.go
+    unstable.impl #:GoInstallDeps
+    unstable.iferr #:GoInstallDeps
+    unstable.gomodifytags  #:GoInstallDeps
     unstable.delve
     unstable.gopls
     unstable.gofumpt
@@ -45,9 +48,12 @@ in
     openfga-cli
 
     # rust
-    rustlings
     cargo
     rustc
+    # rustup
+    rustfmt
+    rustlings
+    rust-analyzer
 
     # python
     mypy
@@ -78,6 +84,7 @@ in
     vscode-langservers-extracted # for html lsp
 
     # sql
+    sqlite
     sqlfluff
     mycli
 
