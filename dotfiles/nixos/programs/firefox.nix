@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
   programs.firefox = {
-    package = (pkgs.wrapFirefox (pkgs.firefox-devedition-unwrapped.override { pipewireSupport = true; }) { });
+    # package = (pkgs.wrapFirefox (pkgs.firefox-devedition-unwrapped.override { pipewireSupport = true; }) { });
     enable = true;
     policies = {
       DisableTelemetry = true;
@@ -23,7 +23,7 @@
       DisplayMenuBar = "never"; # alternatives: "always", "never" or "default-on"
       SearchBar = "unified"; # alternative: "separate"
     };
-    profiles.Contre = {
+    profiles.Con3 = {
       id = 0;
       containersForce = true;
       containers = {
