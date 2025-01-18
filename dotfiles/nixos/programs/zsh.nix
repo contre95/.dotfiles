@@ -51,7 +51,7 @@
       no = "nix store optimise";
       cg = "sudo nix-collect-garbage -d && nix-collect-garbage -d";
       mf = "cd $MY_FOLDER";
-      p = "podman --remote";
+      piu = "for image in $(docker images --format '{{.Repository}}:{{.Tag}}' | grep -v '<none>'); do docker pull $image; done;"; # Update all images
       vim = "nvim";
       pu = "podman unshare";
       nsh = "nix-shell -p";
