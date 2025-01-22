@@ -1,13 +1,13 @@
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 
 {
   programs.gpg = {
     
     enable = true;
-    settings.no-autostart = true; # don’t autostart gpg-agent if not started
+    # settings.no-autostart = true; # don’t autostart gpg-agent if not started
     # mutableKeys = true;
     # mutableTrust = false;
-    # homedir = "${config.xdg.dataHome}/gnupg";
+    homedir = "${config.xdg.dataHome}/gnupg";
     publicKeys = [
       { source = ../contre.pub; trust = 5; }
     ];

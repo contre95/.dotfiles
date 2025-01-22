@@ -133,7 +133,7 @@ in
         alacritty
         alacritty-theme
         telegram-desktop
-        # yubikey-manager
+        yubikey-manager
         # firefox-unwrapped
         simplex-chat-desktop
         # picard # Excelent software to organize music
