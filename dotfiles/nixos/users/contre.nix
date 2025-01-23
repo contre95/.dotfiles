@@ -34,7 +34,7 @@ in
 
   # Contre
   home-manager.users.contre =
-    { pkgs,config, ... }:
+    { pkgs, config, ... }:
     {
 
       # Enable/Disable deafult system programs
@@ -133,13 +133,34 @@ in
         alacritty
         alacritty-theme
         telegram-desktop
-        yubikey-manager
+        # yubikey-manager
         # firefox-unwrapped
         simplex-chat-desktop
         # picard # Excelent software to organize music
         # betterdiscordctl
         # webcord
-        vesktop
+        (vesktop.overrideAttrs (oldAttrs: {
+          desktopItems = [
+            (pkgs.makeDesktopItem {
+              name = "vesktop";
+              desktopName = "Vesktop";
+              icon = "discord";
+              startupWMClass = "Vesktop";
+              exec = "vesktop --disable-features=WebRtcAllowInputVolumeAdjustment %U";
+              keywords = [
+                "discord"
+                "vencord"
+                "electron"
+                "chat"
+              ];
+              categories = [
+                "Network"
+                "InstantMessaging"
+                "Chat"
+              ];
+            })
+          ];
+        }))
         (pkgs.discord.override {
           withOpenASAR = true;
           withVencord = false;
