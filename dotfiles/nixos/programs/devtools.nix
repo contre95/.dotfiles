@@ -67,9 +67,9 @@ in
 
     # js
     biome
-    # nodePackages.jsonlint
-    # pkgs.nodePackages.typescript-language-server
-    # nodejs_23
+    nodePackages.jsonlint
+    pkgs.nodePackages.typescript-language-server
+    nodejs_23
     # js-debug-adapter
 
     # shell

@@ -5,6 +5,7 @@ Emby,https://media.server.home
 Grafana,https://metrics.server.home
 Google,https://google.com
 ChatGPT,https://chatgpt.com/
+DeepSeek,https://chat.deepseek.com/
 NotebookLM,https://notebooklm.google.com/
 Drive,http://drive.google.com
 Reddit,https://www.reddit.com

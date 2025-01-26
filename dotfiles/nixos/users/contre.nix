@@ -145,7 +145,7 @@ in
               name = "vesktop";
               desktopName = "Vesktop";
               icon = "discord";
-              startupWMClass = "Vesktop";
+              startupWMClass = "discord";
               exec = "vesktop --disable-features=WebRtcAllowInputVolumeAdjustment %U";
               keywords = [
                 "discord"
