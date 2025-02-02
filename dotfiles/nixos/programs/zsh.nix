@@ -49,7 +49,7 @@
       iptr = "sudo iptables -t nat -L -v -n";
       gc = "sudo nix-store --gc";
       no = "nix store optimise";
-      cg = "sudo nix-collect-garbage -d && nix-collect-garbage -d";
+      cg = "sudo nix-collect-garbage --delete-old && nix-collect-garbage -d --delete-old";
       mf = "cd $MY_FOLDER";
       piu = "for image in $(docker images --format '{{.Repository}}:{{.Tag}}' | grep -v '<none>'); do docker pull $image; done;"; # Update all images
       vim = "nvim";
