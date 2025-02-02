@@ -14,7 +14,6 @@ in
     # inputs.swww.packages.${pkgs.system}.swww
     unstable.swww
     unstable.nwg-look
-    unstable.hyprland
     # unstable.hyprgui
     unstable.hyprcursor
     unstable.xcur2png
@@ -22,8 +21,6 @@ in
     unstable.wev
     unstable.hyprland-workspaces
     # hyprdim
-    unstable.xdg-desktop-portal-gtk
-    unstable.xdg-desktop-portal-hyprland
     unstable.xwayland
     unstable.aquamarine
     unstable.wlroots
@@ -68,6 +65,8 @@ in
 
   programs.hyprland = {
     enable = true;
+    package = unstable.hyprland;
+    portalPackage = unstable.xdg-desktop-portal-hyprland;
     withUWSM = true;
     xwayland.enable = true;
   };

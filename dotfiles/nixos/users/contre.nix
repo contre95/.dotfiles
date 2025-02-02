@@ -132,6 +132,7 @@ in
         blender
         alacritty
         alacritty-theme
+        lingot
         telegram-desktop
         # yubikey-manager
         # firefox-unwrapped

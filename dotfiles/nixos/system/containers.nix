@@ -20,6 +20,16 @@ in
 
   # Enable common container config files in /etc/containers
   virtualisation = {
+    # containers.storage.settings = {
+    #   storage = {
+    #     driver = "overlay";
+    #     runroot = "/run/containers/storage";
+    #     graphroot = "/var/lib/containers/storage";
+    #     rootless_storage_path = "/home/contre/games/Podman/";
+    #     options.overlay.mountopt = "nodev,metacopy=on";
+    #   };
+    # };
+
     oci-containers.backend = "podman";
     podman = {
       enable = true;

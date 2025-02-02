@@ -4,13 +4,13 @@
   lib,
   ...
 }:
-# let
-#   unstable = import <nixos-unstable> {
-#     config = {
-#       allowUnfree = true;
-#     };
-#   };
-# in
+let
+  unstable = import <nixos-unstable> {
+    config = {
+      allowUnfree = true;
+    };
+  };
+in
 {
 
   system.autoUpgrade.enable = true;
@@ -47,6 +47,29 @@
   services.udev.packages = [
     pkgs.android-udev-rules
   ];
+
+  # # AI
+  # services.ollama = {
+  #   # models = "/home/contre/games/Podman";
+  #   enable = true;
+  #   package = unstable.ollama-cuda;
+  #   acceleration = "cuda";
+  #   # loadModels = [
+  #   #   "deepseek-r1:14b"
+  #   # ];
+  # };
+  #
+  # services.open-webui = {
+  #   enable = true;
+  #   environment = {
+  #     # ANONYMIZED_TELEMETRY = "False";
+  #     # BYPASS_MODEL_ACCESS_CONTROL = "True";
+  #     # DO_NOT_TRACK = "True";
+  #     # HOME = ".";
+  #     # SCARF_NO_ANALYTICS = "True";
+  #   };
+  # };
+
   # System packages
   environment.systemPackages = with pkgs; [
     ollama
