@@ -131,6 +131,7 @@ in
   hardware.nvidia.open = false;
   services.xserver.enable = true;
   hardware.nvidia.nvidiaSettings = true;
+  hardware.nvidia.forceFullCompositionPipeline = true;
   hardware.nvidia.modesetting.enable = true;
   services.xserver.videoDrivers = [ "nvidia" ]; # This also enables it for wayland
   hardware.nvidia.powerManagement.enable = true;
