@@ -63,6 +63,7 @@ in
 
   };
 
+  hardware.graphics.enable = true;
   programs.hyprland = {
     enable = true;
     package = unstable.hyprland;
