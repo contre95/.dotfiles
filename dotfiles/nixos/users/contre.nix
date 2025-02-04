@@ -137,7 +137,8 @@ in
         # yubikey-manager
         # firefox-unwrapped
         simplex-chat-desktop
-        # picard # Excelent software to organize music
+        sshfs
+        picard # Excelent software to organize music
         # betterdiscordctl
         # webcord
         (vesktop.overrideAttrs (oldAttrs: {

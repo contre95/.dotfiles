@@ -4,13 +4,6 @@
   lib,
   ...
 }:
-let
-  unstable = import <nixos-unstable> {
-    config = {
-      allowUnfree = true;
-    };
-  };
-in
 {
 
   system.autoUpgrade.enable = true;
@@ -48,29 +41,9 @@ in
     pkgs.android-udev-rules
   ];
 
-  # # AI
-  # services.ollama = {
-  #   # models = "/home/contre/games/Podman";
-  #   enable = true;
-  #   package = unstable.ollama-cuda;
-  #   acceleration = "cuda";
-  #   # loadModels = [
-  #   #   "deepseek-r1:14b"
-  #   # ];
-  # };
-  #
-  # services.open-webui = {
-  #   enable = true;
-  #   environment = {
-  #     # ANONYMIZED_TELEMETRY = "False";
-  #     # BYPASS_MODEL_ACCESS_CONTROL = "True";
-  #     # DO_NOT_TRACK = "True";
-  #     # HOME = ".";
-  #     # SCARF_NO_ANALYTICS = "True";
-  #   };
-  # };
-
   # System packages
+  # imports = [ ../programs/ai.nix ];
+
   environment.systemPackages = with pkgs; [
     ollama
     lutris
@@ -113,18 +86,9 @@ in
   home-manager.users.contre =
     { pkgs, ... }:
     {
-      programs.git.signing.signByDefault = true;
-      programs.obs-studio = {
-        enable = true;
-        plugins = with pkgs.obs-studio-plugins; [
-          wlrobs
-          obs-pipewire-audio-capture
-          advanced-scene-switcher
-          input-overlay
-          obs-backgroundremoval
-        ];
-      };
+      imports = [ ../programs/obs.nix ];
 
+      programs.git.signing.signByDefault = true;
     };
 
   # Nvidia
