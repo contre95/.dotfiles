@@ -7,12 +7,12 @@
   # services.yubikey-agent.enable = true;
   # programs.gnupg.dirmngr.enable = true;
 
-  programs.gnupg.agent = {
-    enable = true;
-    enableSSHSupport = true;
-    enableExtraSocket = true;
-    pinentryPackage = pkgs.pinentry-gnome3;
-  };
+  # programs.gnupg.agent = {
+  #   enable = true;
+  #   enableSSHSupport = true;
+  #   enableExtraSocket = true;
+  #   pinentryPackage = pkgs.pinentry-gnome3;
+  # };
 
   # Enable GPG Smartcards (Like Yubikeys)
   hardware.gpgSmartcards.enable = true;
