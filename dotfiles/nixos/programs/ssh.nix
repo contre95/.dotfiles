@@ -1,5 +1,5 @@
-{ config, ... }: {
-
+{ config, pkgs, ... }:
+{
 
   home.sessionVariablesExtra = ''
     export SSH_AUTH_SOCK="$(${config.programs.gpg.package}/bin/gpgconf --list-dirs agent-ssh-socket)"
@@ -10,6 +10,8 @@
     # forward gpg agent
     matchBlocks = {
       "server.home" = {
+        user = "contre";
+        forwardAgent = true;
         remoteForwards = [
           {
             bind.address = "/run/user/1000/gnupg/S.gpg-agent";
@@ -24,10 +26,16 @@
     };
 
     extraConfig = ''
+      Host notebook.home
+        ForwardAgent yes
+        ExitOnForwardFailure yes
+        RemoteForward /run/user/1000/gnupg/S.gpg-agent /run/user/1000/gnupg/S.gpg-agent.extra
       Host server.home
         ForwardAgent yes
-        RemoteForward /run/user/1000/gnupg/S.gpg-agent /run/user/1000/gnupg/S.gpg-agent.extra
         ExitOnForwardFailure yes
+        RemoteForward /run/user/1000/gnupg/S.gpg-agent /run/user/1000/gnupg/S.gpg-agent.extra
+      SetEnv TERM="xterm-color"
+      PKCS11Provider ${pkgs.opensc}/lib/opensc-pkcs11.so
     '';
   };
 }

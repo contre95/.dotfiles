@@ -1,12 +1,17 @@
-{ pkgs, config, ... }:
-
+{
+  lib,
+  pkgs,
+  config,
+  ...
+}:
 {
   programs.gpg = {
+    enable = true;
     scdaemonSettings = {
-      reader-port = "Yubico Yubi";
+      # reader-port = "Yubico Yubi";
+      pcsc-driver = "${lib.getLib pkgs.pcsclite}/lib/libpcsclite.so";
       disable-ccid = true;
     };
-    enable = true;
     # settings.no-autostart = true; # don’t autostart gpg-agent if not started
     # mutableKeys = true;
     # mutableTrust = false;
@@ -48,7 +53,7 @@
         Type = "oneshot";
         RemainAfterExit = true;
         ExecStop = "${pkgs.coreutils}/bin/rm $HOME/.gnupg-sockets";
-        ExecStart = "${pkgs.coreutils}/bin/ln -Tfs /run/user/%U/gnupg %h/.gnupg-sockets";
+        ExecStart = "${pkgs.coreutils}/bin/ln -Tfs /run/user/1000/gnupg %h/.gnupg-sockets";
       };
       Install.WantedBy = [ "default.target" ];
     };
