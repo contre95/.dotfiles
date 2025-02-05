@@ -12,16 +12,16 @@
       "server.home" = {
         user = "contre";
         forwardAgent = true;
-        remoteForwards = [
-          {
-            bind.address = "/run/user/1000/gnupg/S.gpg-agent";
-            host.address = "/run/user/1000/gnupg/S.gpg-agent.extra";
-          }
-          {
-            bind.address = "/run/user/1000/gnupg/S.gpg-agent.ssh";
-            host.address = "/run/user/1000/gnupg/S.gpg-agent.ssh";
-          }
-        ];
+        # remoteForwards = [
+        #   {
+        #     bind.address = "/run/user/1000/gnupg/S.gpg-agent";
+        #     host.address = "/run/user/1000/gnupg/S.gpg-agent.extra";
+        #   }
+        #   {
+        #     bind.address = "/run/user/1000/gnupg/S.gpg-agent.ssh";
+        #     host.address = "/run/user/1000/gnupg/S.gpg-agent.ssh";
+        #   }
+        # ];
       };
     };
 
@@ -34,7 +34,6 @@
         ForwardAgent yes
         ExitOnForwardFailure yes
         RemoteForward /run/user/1000/gnupg/S.gpg-agent /run/user/1000/gnupg/S.gpg-agent.extra
-      SetEnv TERM="xterm-color"
       PKCS11Provider ${pkgs.opensc}/lib/opensc-pkcs11.so
     '';
   };
