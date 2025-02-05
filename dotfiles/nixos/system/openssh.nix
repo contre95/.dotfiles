@@ -9,6 +9,10 @@
     startAgent = false; # GPG act as ssh-agent
     # AddKeysToAgent yes
     extraConfig = ''
+      Host notebook.home
+        ForwardAgent yes
+        RemoteForward /run/user/1000/gnupg/S.gpg-agent /run/user/1000/gnupg/S.gpg-agent.extra
+        ExitOnForwardFailure yes
       Host server.home
         ForwardAgent yes
         RemoteForward /run/user/1000/gnupg/S.gpg-agent /run/user/1000/gnupg/S.gpg-agent.extra
