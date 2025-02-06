@@ -258,6 +258,7 @@ return {
       lspconfig.nil_ls.setup({
         capabilities = capabilities,
         handlers = handlers,
+        filetypes = "nix",
         settings = {
           ["nil"] = {
             formatting = {

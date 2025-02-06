@@ -49,6 +49,7 @@ in
 
     containers = {
       enable = true;
+      registries.search = [ "docker.io" "ghcr.io" "lscr.io" ];
       # storage.settings = {
       #   storage.driver = "zfs";
       #   storage.graphroot = "/var/lib/containers/storage";
