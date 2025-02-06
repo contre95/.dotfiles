@@ -14,9 +14,12 @@
       disable-ccid = true;
     };
     # settings.no-autostart = true; # don’t autostart gpg-agent if not started
+    settings = {
+      use-agent = "";
+    };
     # mutableKeys = true;
     # mutableTrust = false;
-    homedir = "${config.xdg.dataHome}/gnupg";
+    # homedir = "${config.xdg.dataHome}/gnupg";
     publicKeys = [
       {
         source = ../contre.pub;
@@ -28,19 +31,17 @@
   services.gpg-agent = {
     enable = true;
     verbose = true;
-    enableScDaemon = true;
     defaultCacheTtl = 1300;
+    enableScDaemon = true;
     enableSshSupport = true;
     enableExtraSocket = true;
     grabKeyboardAndMouse = true;
-    enableZshIntegration = false;
+    enableZshIntegration = true;
     pinentryPackage = pkgs.pinentry-gnome3;
     sshKeys = [ "B38C2E9A5402A38D13E510DADD0B71744684EA35" ]; # [A] Subkey with auth capabilities.
-    # extraConfig = ''
-    #   pinentry-program ${pkgs.pinentry-gnome3}/bin/pinentry-gnome3
-    #   allow-loopback-pinentry
-    #   auto-expand-secmem
-    # '';
+    extraConfig = ''
+      extra-socket /run/user/1000/gnupg/S.gpg-agent.extra
+    '';
   };
 
   systemd.user.services = {
