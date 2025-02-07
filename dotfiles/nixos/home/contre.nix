@@ -1,10 +1,5 @@
 { pkgs, ... }:
 let
-  unstable = import <nixos-unstable> {
-    config = {
-      allowUnfree = true;
-    };
-  };
   whichMachine = builtins.getEnv "WHICH_MACHINE";
 
   commonPkgs = with pkgs; [
