@@ -44,13 +44,12 @@
   # System packages
   # imports = [ ../programs/ai.nix ];
 
+  hardware.amdgpu.opencl.enable = true;
+  hardware.enableRedistributableFirmware = true;
   environment.systemPackages = with pkgs; [
-    ollama
-    lutris
-    mangohud
     winetricks
-    vulkan-tools
     protonup
+    vulkan-tools
     vulkan-loader
     orca-slicer
     nv-codec-headers-12
@@ -62,32 +61,10 @@
     nvidiaSupport = true;
   };
 
-  programs.gamemode.enable = true;
-  programs.steam = {
-    enable = true;
-    remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
-    dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
-    gamescopeSession.enable = true;
-    extraCompatPackages = [ pkgs.proton-ge-bin ];
-  };
-  hardware.amdgpu.opencl.enable = true;
-  hardware.enableRedistributableFirmware = true;
-
-  # System programs config
-  nixpkgs.config.allowUnfreePredicate =
-    pkg:
-    builtins.elem (lib.getName pkg) [
-      # "steam"
-      # "steam-original"
-      # "steam-run"
-    ];
-
   # User specific packages for desktop
   home-manager.users.contre =
     { pkgs, ... }:
     {
-      imports = [ ../programs/obs.nix ];
-
       programs.git.signing.signByDefault = true;
     };
 
