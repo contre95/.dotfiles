@@ -8,15 +8,30 @@ let
 in
 {
   # Enable Graphics (Hyprland needs to be enable at a systems level)
-
   environment.systemPackages = with pkgs; [
+    zenity
+    gammastep
+    dunst
+    unstable.swww
+    wofi
+    rofi-wayland
+    wdisplays
     unstable.wayland-scanner
     # inputs.swww.packages.${pkgs.system}.swww
-    unstable.swww
+    unstable.hyprpaper
+    unstable.hyprshade
+    unstable.waybar
+    unstable.wayland-utils
+    unstable.wayland-protocols
     unstable.nwg-look
+    qt5.full
     # unstable.hyprgui
+    unstable.libsForQt5.qt5.qtwayland
+    unstable.inotify-tools # sudo inotifywait -m -r /path/to/disk/mountpoint
     unstable.hyprcursor
     unstable.xcur2png
+    unstable.librsvg
+    unstable.libnotify
     unstable.hyprland-protocols
     unstable.wev
     unstable.hyprland-workspaces
