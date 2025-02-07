@@ -1,7 +1,6 @@
 { pkgs, ... }:
 let
   whichMachine = builtins.getEnv "WHICH_MACHINE";
-
   commonPkgs = with pkgs; [
     fd
     feh
@@ -55,16 +54,22 @@ in
 {
   users.users.contre.isNormalUser = true;
   home-manager.useGlobalPkgs = true;
-  programs.nano.enable = false; # I don't like this is not the default :)
 
-  # Contre
+  # System programs
+  programs.nano.enable = false; # I don't like this is not the default :)
+  imports = [
+    ../system/gpg.nix
+    ../system/openssh.nix
+    ../system/syncthings.nix
+    #   ../programs/steam.nix
+  ];
+  # Home manager
   home-manager.users.contre =
     { pkgs, config, ... }:
     {
       programs.home-manager.enable = true;
       home.username = "contre";
       home.homeDirectory = "/home/contre";
-
       home.sessionVariables = {
         MY_FOLDER = "/home/canus";
         # LD_LIBRARY_PATH = "${pkgs.stdenv.cc.cc.lib}/lib";
@@ -72,7 +77,6 @@ in
         PATH = "$PATH:$MY_FOLDER/scripts/bin-scr:/Users/lucas.contreras/.nix-profile/bin:/run/current-system/sw/bin:/nix/var/nix/profiles/default/bin:$HOME/.pyenv/bin:/go/bin/:$HOME/.cargo/bin";
         EDITOR = "nvim";
       };
-
       home.packages =
         if "${whichMachine}" == "desktop" then
           commonPkgs
@@ -100,19 +104,19 @@ in
           commonPkgs ++ [ ]
         else
           throw "Unknown OS";
-
       imports = [
+        ../programs/git.nix
         ../programs/gpg.nix
         ../programs/gtk.nix
-        ../programs/git.nix
+        ../programs/obs.nix
         ../programs/ssh.nix
-        ../programs/pass.nix
         ../programs/zsh.nix
+        ../programs/pass.nix
         ../programs/test.nix
+        ../programs/discord.nix
         ../programs/firefox.nix
         ../programs/devtools.nix
       ];
-
       home.extraOutputsToInstall = [ "share/tmux-plugins" ];
       home.file = {
         neovim = {
@@ -167,8 +171,6 @@ in
           source = config.lib.file.mkOutOfStoreSymlink /home/canus/dotfiles/alacritty;
         };
       };
-
       home.stateVersion = "24.11";
-
     };
 }

@@ -1,5 +1,6 @@
-{ config, ... }: {
-  programs.git = with config;{
+{ ... }:
+{
+  programs.git = {
     enable = true;
     userName = "Contre";
     userEmail = "lucascontre95@gmail.com";
@@ -10,10 +11,18 @@
       color.ui = true;
       core.editor = "nvim";
       blame.date = "relative";
-      pull = { rebase = false; };
-      diff = { colorMoved = "default"; };
-      push = { autoSetupRemote = true; };
-      github = { user = "thiagokokada"; };
+      pull = {
+        rebase = false;
+      };
+      diff = {
+        colorMoved = "default";
+      };
+      push = {
+        autoSetupRemote = true;
+      };
+      github = {
+        user = "thiagokokada";
+      };
     };
     # difftastic = {
     #   enable = true;
@@ -39,5 +48,5 @@
       };
     };
   };
-}
 
+}

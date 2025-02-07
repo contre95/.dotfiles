@@ -34,21 +34,18 @@ in
     if "${os}" == "linux" then
       [
         ./home/contre.nix
-        ./system/gpg.nix
         ./system/boot.nix
         ./system/test.nix
         ./system/fonts.nix
         ./system/shell.nix
         ./system/sound.nix
-        ./system/openssh.nix
         ./system/version.nix
         ./system/graphics.nix
         ./system/security.nix
         ./system/bluetooth.nix
         ./system/containers.nix
         ./system/networking.nix
-        ./system/syncthings.nix
-        ./system/node-exporter.nix
+        ./system/monitoring.nix
         ./machines/${machineConfig}
         (import "${home-manager}/nixos")
         /etc/nixos/hardware-configuration.nix
