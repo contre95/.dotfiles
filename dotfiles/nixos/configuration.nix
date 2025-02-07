@@ -14,7 +14,7 @@ let
     then
       "${whichMachine}.nix"
     else
-      throw "Please set the variable $WHICH_MACHINE first";
+      throw "Please set the variable WHICH_MACHINE first";
   os =
     if
       lib.elem whichMachine [
@@ -33,13 +33,13 @@ in
   imports =
     if "${os}" == "linux" then
       [
+        ./home/contre.nix
         ./system/gpg.nix
         ./system/boot.nix
         ./system/test.nix
         ./system/fonts.nix
         ./system/shell.nix
         ./system/sound.nix
-        ./users/contre.nix
         ./system/openssh.nix
         ./system/version.nix
         ./system/graphics.nix
@@ -56,7 +56,7 @@ in
     else if "${os}" == "osx" then
       [
         ./machines/${machineConfig}
-        ./users/work.nix
+        ./home/work.nix
       ]
     else
       throw "Uknown OS";

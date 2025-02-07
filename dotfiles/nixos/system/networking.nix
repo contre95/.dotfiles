@@ -12,13 +12,22 @@
       AlwaysRandomizeAddress = false;
     };
   };
+  # Packager related to Networking
   environment.systemPackages = with pkgs; [
-    wireguard-tools
-    traceroute
-    netcat
+    iwd
+    dig
     nmap
+    iwgtk
+    netcat
+    tcpdump
+    wireshark
+    traceroute
+    speedtest-cli
+    wirelesstools
+    wireguard-tools
   ];
 
+  # Groups related to Networking
   users.users.contre = {
     extraGroups = [ "networkmanager" ];
   };

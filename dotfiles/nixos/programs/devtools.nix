@@ -5,6 +5,12 @@ in
 {
   # langs, linters, formatters, lsps, etc
  home.packages = with pkgs; [
+    # Text editor
+    unstable.neovim
+
+    # Cloud
+    awscli
+
     # nix
     nil
     alejandra
@@ -65,7 +71,8 @@ in
     # python311Packages.numpy
     # debugpy // who needs debuggers anyways
 
-    # js
+    # json / js
+    jq
     biome
     nodePackages.jsonlint
     pkgs.nodePackages.typescript-language-server
@@ -95,7 +102,9 @@ in
 
     # c
     # clang-format # not available
+    gcc
     ccls
+    gnumake
     rocmPackages_5.llvm.clang-unwrapped
 
     # yaml
