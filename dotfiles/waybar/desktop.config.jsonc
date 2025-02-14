@@ -68,7 +68,7 @@
     },
     "clock": {
       "format": "<span color='#b4befe'> </span>{:%d/%m/%y | %H:%M}",
-      "on-click": "firefox https://db.server.home"
+      "on-click": "firefox https://db.server.home/dashboard/#/nc/p882zgn6hihp2j3/mu7toxmd7aloo25/vwil1ibd8kzkimid"
     },
     "custom/ip": {
       "format": "<span color='#b4befe'></span> {}",

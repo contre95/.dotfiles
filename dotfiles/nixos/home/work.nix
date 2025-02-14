@@ -61,12 +61,12 @@
     pkgs.kubectl
     pkgs.tmux
     pkgs.tmuxPlugins.tmux-thumbs
-    (pkgs.pass.withExtensions (
-      ext: with ext; [
-        pass-checkup
-        pass-otp
-      ]
-    ))
+    # (pkgs.pass.withExtensions (
+    #   ext: with ext; [
+    #     pass-checkup
+    #     pass-otp
+    #   ]
+    # ))
     pkgs.gnupg
     pkgs.git
     pkgs.neovim
@@ -131,6 +131,7 @@
 
     # These imports uses the files linked above
     imports = [
+      ../programs/pass.nix
       ../programs/git.nix
       ../programs/zsh.nix
     ];
