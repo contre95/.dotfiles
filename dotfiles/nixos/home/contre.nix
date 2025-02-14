@@ -61,7 +61,7 @@ in
     ../system/gpg.nix
     ../system/openssh.nix
     ../system/syncthings.nix
-    #   ../programs/steam.nix
+    ../programs/steam.nix
   ];
   # Home manager
   home-manager.users.contre =
@@ -104,6 +104,7 @@ in
           commonPkgs ++ [ ]
         else
           throw "Unknown OS";
+
       imports = [
         ../programs/git.nix
         ../programs/gpg.nix
