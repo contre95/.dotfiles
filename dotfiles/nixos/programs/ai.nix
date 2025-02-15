@@ -1,5 +1,6 @@
-{ ... }:
+{ lib, pkgs, ... }:
 let
+  whichMachine = builtins.getEnv "WHICH_MACHINE";
   unstable = import <nixos-unstable> {
     config = {
       allowUnfree = true;
@@ -7,25 +8,35 @@ let
   };
 in
 {
-  # # AI
-  services.ollama = {
-    # models = "/home/contre/games/models";
-    enable = true;
-    package = unstable.ollama-cuda;
-    acceleration = "cuda";
-    # loadModels = [
-    #   "deepseek-r1:8b"
-    # ];
-  };
-  #
-  services.open-webui = {
-    enable = true;
-    environment = {
-      # ANONYMIZED_TELEMETRY = "False";
-      # BYPASS_MODEL_ACCESS_CONTROL = "True";
-      # DO_NOT_TRACK = "True";
-      # HOME = ".";
-      # SCARF_NO_ANALYTICS = "True";
-    };
-  };
+  config =
+    if
+      lib.elem whichMachine [
+        "desktop"
+      ]
+    then
+      {
+        # # AI
+        services.ollama = {
+          # models = "/home/contre/games/models";
+          enable = true;
+          package = unstable.ollama-cuda;
+          acceleration = "cuda";
+          # loadModels = [
+          #   "deepseek-r1:8b"
+          # ];
+        };
+        #
+        services.open-webui = {
+          enable = true;
+          environment = {
+            # ANONYMIZED_TELEMETRY = "False";
+            # BYPASS_MODEL_ACCESS_CONTROL = "True";
+            # DO_NOT_TRACK = "True";
+            # HOME = ".";
+            # SCARF_NO_ANALYTICS = "True";
+          };
+        };
+      }
+    else
+      { };
 }
