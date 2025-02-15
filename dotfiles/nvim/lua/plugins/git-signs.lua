@@ -6,7 +6,7 @@ vim.keymap.set("v", "ga", ":Gitsigns stage_hunk<CR>")
 return {
   {
     "lewis6991/gitsigns.nvim",
-    lazy = true,
+    -- lazy = true,
     opts = {},
   },
 }

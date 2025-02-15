@@ -9,13 +9,13 @@ in
 {
   # # AI
   services.ollama = {
-    models = "/home/contre/games/Podman";
+    # models = "/home/contre/games/models";
     enable = true;
     package = unstable.ollama-cuda;
     acceleration = "cuda";
-    loadModels = [
-      "deepseek-r1:8b"
-    ];
+    # loadModels = [
+    #   "deepseek-r1:8b"
+    # ];
   };
   #
   services.open-webui = {
