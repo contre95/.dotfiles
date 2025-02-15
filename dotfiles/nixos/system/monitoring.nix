@@ -1,8 +1,6 @@
 { pkgs, ... }:
 {
   # services.prometheus.exporters.node.enable = true;
-
-
   environment.systemPackages = with pkgs; [
     btop # Like htop which is like top
     prometheus-node-exporter
