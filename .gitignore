@@ -6,3 +6,4 @@ music/
 mounts/
 **/result
 documents/
+dotfiles/nvim/lazy-lock.json

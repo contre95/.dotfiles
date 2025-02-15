@@ -62,6 +62,7 @@ in
     ../system/openssh.nix
     ../system/syncthings.nix
     ../programs/steam.nix
+    ../programs/ai.nix
   ];
   # Home manager
   home-manager.users.contre =
