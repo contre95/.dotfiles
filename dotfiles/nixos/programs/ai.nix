@@ -15,8 +15,16 @@ in
       ]
     then
       {
+
         # # AI
+        networking.firewall = {
+          allowedTCPPorts = [
+            11434
+          ];
+        };
+
         services.ollama = {
+          host = "0.0.0.0";
           # models = "/home/contre/games/models";
           enable = true;
           package = unstable.ollama-cuda;

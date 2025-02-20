@@ -16,6 +16,7 @@
     options = "--delete-older-than 30d";
   };
 
+  programs.adb.enable = true;
   # Environment Packages
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.nvidia.acceptLicense = true;
@@ -51,7 +52,6 @@
     protonup
     vulkan-tools
     vulkan-loader
-    orca-slicer
     nv-codec-headers-12
     wineWowPackages.waylandFull
   ];
