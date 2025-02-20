@@ -1,6 +1,11 @@
 { pkgs, ... }:
 let
   whichMachine = builtins.getEnv "WHICH_MACHINE";
+  unstable = import <nixos-unstable> {
+    config = {
+      allowUnfree = true;
+    };
+  };
   commonPkgs = with pkgs; [
     fd
     feh
@@ -34,6 +39,7 @@ let
     alacritty
     bandwhich
     coreutils
+    grimblast
     hyprpicker
     xorg.xhost
     easyeffects
@@ -88,7 +94,7 @@ in
             pkgs.scrcpy
             pkgs.blender
             pkgs.spotify
-            pkgs.telegram-desktop
+            unstable.telegram-desktop
             pkgs.simplex-chat-desktop
           ]
         else if "${whichMachine}" == "notebook" then
@@ -116,6 +122,7 @@ in
         ../programs/pass.nix
         ../programs/test.nix
         ../programs/discord.nix
+        ../programs/slicer.nix
         ../programs/firefox.nix
         ../programs/devtools.nix
       ];

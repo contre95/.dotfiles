@@ -12,6 +12,11 @@
       AlwaysRandomizeAddress = false;
     };
   };
+  networking.firewall = {
+    allowedTCPPorts = [
+      3535
+    ];
+  };
   # Packager related to Networking
   environment.systemPackages = with pkgs; [
     iwd
