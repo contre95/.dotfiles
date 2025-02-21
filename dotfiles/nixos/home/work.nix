@@ -50,32 +50,24 @@
     pkgs.unrar
     pkgs.stow
     pkgs.ripgrep
-    pkgs.nerdfonts
+    pkgs.nerd-fonts._0xproto
+    pkgs.nerd-fonts.droid-sans-mono
     pkgs.bandwhich
     pkgs.zoxide
     pkgs.tree
     pkgs.openvpn
     pkgs.awscli
     pkgs.azure-cli
+    pkgs.openssl
     pkgs.tree-sitter
     pkgs.kubectl
     pkgs.tmux
     pkgs.tmuxPlugins.tmux-thumbs
-    # (pkgs.pass.withExtensions (
-    #   ext: with ext; [
-    #     pass-checkup
-    #     pass-otp
-    #   ]
-    # ))
     pkgs.gnupg
     pkgs.git
     pkgs.neovim
     pkgs.coreutils
 
-    pkgs. # Web apps
-    pkgs.yarr
-
-    pkgs. # Desktop apps
     pkgs.alacritty
     pkgs.alacritty-theme
 

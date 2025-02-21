@@ -1,0 +1,9 @@
+[user]
+signingkey = CB40A3FF0B48D9E12893B0543CF6D29191DA5EEE
+email = lucascontre95@gmail.com
+name = Contre
+[commit]
+gpgsign = true
+[gpg]
+program = gpg2
+
