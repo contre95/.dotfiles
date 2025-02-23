@@ -37,15 +37,3 @@ opt.selection = "exclusive"
 opt.virtualedit = "onemore"
 --vim.g.rasmus_bold_keywords = true
 --opt.foldexpr = "nvim_treesitter#foldexpr()"
-vim.g.clipboard = {
-    name = 'osc52',
-    copy = {
-        ["+"] = {'osc52'},
-        ["*"] = {'osc52'},
-    },
-    paste = {
-        ["+"] = {'pbpaste'},
-        ["*"] = {'pbpaste'},
-    },
-    cache_enabled = 1,
-}
