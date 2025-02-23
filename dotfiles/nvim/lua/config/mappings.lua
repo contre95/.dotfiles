@@ -53,16 +53,6 @@ vim.keymap.set({ "n", "i" }, "<A-k>", "<C-E><C-E>")
 
 vim.keymap.set({ "n", "i" }, "<A-i>", "<C-Y><C-Y>")
 
--- Copy current line to clipboard
-vim.keymap.set('v', '<C-X>', '"+x')
-vim.keymap.set('v', '<C-C>', '"+y')
-function copy()
-  if vim.v.event.operator == 'y' and vim.v.event.regname == '+' then
-    require('osc52').copy_register('+')
-  end
-end
-vim.api.nvim_create_autocmd('TextYankPost', {callback = copy})
-
 
 -- Switch tabs with Alt+Tab (Alt+Shift+Tab)
 vim.keymap.set("n", "<A-Tab>", "gt")
