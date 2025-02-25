@@ -28,7 +28,6 @@ let
     smassh
     swappy
     tessen
-    busybox
     clipman
     gettext
     gparted
@@ -41,6 +40,7 @@ let
     coreutils
     grimblast
     hyprpicker
+    util-linux
     xorg.xhost
     easyeffects
     tree-sitter
