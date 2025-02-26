@@ -27,6 +27,7 @@
       bindkey "^[[1;5D" backward-word
       zstyle ":completion:*" matcher-list "" "m:{a-zA-Z}={A-Za-z}" "r:|[._-]=* r:|=*" "l:|=* r:|=*"
       PS1="%F{#008000}%B%n@%m%b %1~:%f"
+      eval "$(ocm handler init)"
     '';
 
     enable = true;
