@@ -20,9 +20,6 @@
       push = {
         autoSetupRemote = true;
       };
-      github = {
-        user = "thiagokokada";
-      };
     };
     # difftastic = {
     #   enable = true;
