@@ -88,7 +88,7 @@ in
         if "${whichMachine}" == "desktop" then
           commonPkgs
           ++ [
-            pkgs.hugo
+            pkgs.slack
             pkgs.lingot
             pkgs.picard
             pkgs.scrcpy
@@ -100,6 +100,7 @@ in
         else if "${whichMachine}" == "notebook" then
           commonPkgs
           ++ [
+            pkgs.slack
             pkgs.lingot
             pkgs.scrcpy
             pkgs.blender

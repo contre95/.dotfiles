@@ -88,6 +88,7 @@ in
     # html/x
     html-tidy
     htmx-lsp
+    hugo
     vscode-langservers-extracted # for html lsp
 
     # sql
