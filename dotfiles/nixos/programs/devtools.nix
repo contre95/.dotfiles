@@ -19,10 +19,10 @@ in
     statix
 
     # terraform 
-    # terraform
-    # terraform-ls
-    # tflint
-    # tfsec
+    terraform
+    terraform-ls
+    tflint
+    tfsec
 
     # go
     air

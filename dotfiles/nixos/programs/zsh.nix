@@ -3,6 +3,8 @@
   home.packages = with pkgs; [
     zsh-autosuggestions
     zsh-syntax-highlighting
+    nix-zsh-completions
+    zsh-nix-shell
     zsh-fzf-history-search
     zsh-completions
     zsh-history-substring-search
@@ -10,15 +12,15 @@
   ];
 
   # export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-#     gpgconf --create-socketdir
-# else
-#   export GPG_TTY="$(tty)"
-#   export EDITOR='nvim'
-#   export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
-#   gpgconf --launch gpg-agent
-# fi
+  # if [[ -n $SSH_CONNECTION ]]; then
+  #   export EDITOR='vim'
+  #     gpgconf --create-socketdir
+  # else
+  #   export GPG_TTY="$(tty)"
+  #   export EDITOR='nvim'
+  #   export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+  #   gpgconf --launch gpg-agent
+  # fi
   programs.zsh = {
     initExtra = ''
       source $MY_FOLDER/dotfiles/zsh/.p10k.zsh
@@ -39,7 +41,6 @@
       size = 10000;
       path = "${config.xdg.dataHome}/zsh/history";
     };
-
 
     shellAliases = {
       rebuild = "sudo WHICH_MACHINE=$(hostname) nixos-rebuild switch";
@@ -116,29 +117,39 @@
         name = "powerlevel10k";
         src = "${zsh-powerlevel10k}/share/zsh-powerlevel10k";
       }
-      # {
-      #   file = "p10k.zsh";
-      #   name = "powerlevel10k-config";
-      #   src = "${config.xdg.configHome}/.p10k.zsh";
-      # }
+      {
+        name = "zsh-nix-shell";
+        file = "nix-shell.plugin.zsh";
+        src = pkgs.fetchFromGitHub {
+          owner = "chisui";
+          repo = "zsh-nix-shell";
+          rev = "v0.8.0";
+          sha256 = "1lzrn0n4fxfcgg65v0qhnj7wnybybqzs4adz7xsrkgmcsr0ii8b7";
+        };
+      }
     ];
 
     oh-my-zsh = {
       enable = true;
       plugins = [
         "history-substring-search"
+        # "nix-shell"
+        # "nix-zsh-completions"
       ];
     };
   };
 
-  programs.fzf =
-    {
-      enable = true;
-      enableFishIntegration = true;
-      enableBashIntegration = true;
-      defaultOptions = [ "--layout=reverse" "--border" "--height=70%" ];
-      # Use fd to find files
-      changeDirWidgetCommand = "fd --type d";
-      defaultCommand = "fd --type file";
-    };
+  programs.fzf = {
+    enable = true;
+    enableFishIntegration = true;
+    enableBashIntegration = true;
+    defaultOptions = [
+      "--layout=reverse"
+      "--border"
+      "--height=70%"
+    ];
+    # Use fd to find files
+    changeDirWidgetCommand = "fd --type d";
+    defaultCommand = "fd --type file";
+  };
 }
