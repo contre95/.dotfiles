@@ -21,7 +21,7 @@ typeset -g POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(I
     azure
     background_jobs
     public_ip
-    # nix_shell
+    nix_shell
 	google_app_cred # google application credentials (https://cloud.google.com/docs/authentication/production)
 )
 
