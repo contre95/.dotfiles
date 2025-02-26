@@ -8,7 +8,7 @@
   ];
 
   hardware.bluetooth.enable = true;
-  hardware.bluetooth.powerOnBoot = false;
+  hardware.bluetooth.powerOnBoot = true;
   hardware.bluetooth.settings = {
     General = {
       # # make Xbox Series X controller work
