@@ -19,10 +19,10 @@ in
     statix
 
     # terraform 
-    # terraform
-    # terraform-ls
-    # tflint
-    # tfsec
+    terraform
+    terraform-ls
+    tflint
+    tfsec
 
     # go
     air
@@ -88,6 +88,7 @@ in
     # html/x
     html-tidy
     htmx-lsp
+    hugo
     vscode-langservers-extracted # for html lsp
 
     # sql

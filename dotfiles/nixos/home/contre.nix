@@ -28,7 +28,6 @@ let
     smassh
     swappy
     tessen
-    busybox
     clipman
     gettext
     gparted
@@ -41,6 +40,7 @@ let
     coreutils
     grimblast
     hyprpicker
+    util-linux
     xorg.xhost
     easyeffects
     tree-sitter
@@ -88,7 +88,7 @@ in
         if "${whichMachine}" == "desktop" then
           commonPkgs
           ++ [
-            pkgs.hugo
+            pkgs.slack
             pkgs.lingot
             pkgs.picard
             pkgs.scrcpy
@@ -100,6 +100,7 @@ in
         else if "${whichMachine}" == "notebook" then
           commonPkgs
           ++ [
+            pkgs.slack
             pkgs.lingot
             pkgs.scrcpy
             pkgs.blender

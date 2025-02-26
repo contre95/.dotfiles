@@ -37,6 +37,11 @@
           icon = "chill";
           color = "purple";
         };
+        cloudie = {
+          id = 2;
+          icon = "chill";
+          color = "blue";
+        };
       };
       extensions = with pkgs.nur.repos.rycee.firefox-addons; [
         # https://nur.nix-community.org/repos/rycee/
