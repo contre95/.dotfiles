@@ -16,6 +16,9 @@ in
     then
       {
 
+        environment.systemPackages = with pkgs; [
+          unstable.lmstudio
+        ];
         # # AI
         networking.firewall = {
           allowedTCPPorts = [

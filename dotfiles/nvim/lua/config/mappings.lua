@@ -3,7 +3,7 @@ vim.keymap.set("n", "<C-Down>", ":m+<CR>")
 vim.keymap.set("n", "<C-Up>", ":m-2<CR>")
 
 -- Duplicate line with Ctrl+d (To duplicate selection check zirrostig/vim-schlep)
-vim.keymap.set({ 'v', 'n' }, "<C-d>", "mzyyp`z")
+vim.keymap.set({ "v", "n" }, "<C-d>", "mzyyp`z")
 
 -- Delete the word in front of the cursor
 vim.keymap.set("i", "<C-D>", "X<Esc>lbce")
@@ -31,7 +31,7 @@ vim.keymap.set("n", "<C-h>", ":set relativenumber!<CR>") -- toggle
 
 -- Spelling
 vim.keymap.set("n", "<C-s>", ":set invspell<CR>") -- toggle
-vim.keymap.set("n", "<C-j>", "1z=")               -- Fix spelling with first option
+vim.keymap.set("n", "<C-j>", "1z=") -- Fix spelling with first option
 
 -- Select with Shift as a normal human being
 vim.keymap.set("v", "<S-Up>", "<Up>")
@@ -50,11 +50,9 @@ vim.keymap.set("i", "<S-Right>", "<Esc>V<Right>")
 
 -- Scroll Alt + Shift + Arrows
 vim.keymap.set({ "n", "i" }, "<A-k>", "<C-E><C-E>")
+
 vim.keymap.set({ "n", "i" }, "<A-i>", "<C-Y><C-Y>")
 
--- Copy current line to clipboard
-vim.keymap.set('v', '<C-X>', '"+x')
-vim.keymap.set('v', '<C-C>', '"+y')
 
 -- Switch tabs with Alt+Tab (Alt+Shift+Tab)
 vim.keymap.set("n", "<A-Tab>", "gt")
@@ -66,4 +64,3 @@ vim.keymap.set("n", "<leader>r", ":so %<CR>")
 -- Encode/Decode selection to/from base64
 vim.keymap.set("v", "<leader>u", [[c<c-r>=system('base64 -w 0', @")<cr><esc>]])
 vim.keymap.set("v", "<leader>y", [[c<c-r>=system('base64 --decode', @")<cr><esc>]])
-
