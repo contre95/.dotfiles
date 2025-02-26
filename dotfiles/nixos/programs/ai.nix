@@ -1,4 +1,4 @@
-{ lib, pkgs, ... }:
+{ lib, ... }:
 let
   whichMachine = builtins.getEnv "WHICH_MACHINE";
   unstable = import <nixos-unstable> {
@@ -9,14 +9,10 @@ let
 in
 {
   config =
-    if
-      lib.elem whichMachine [
-        "desktop"
-      ]
+    if lib.elem whichMachine [ "desktop" ]
     then
       {
-
-        environment.systemPackages = with pkgs; [
+        environment.systemPackages = [
           unstable.lmstudio
         ];
         # # AI
