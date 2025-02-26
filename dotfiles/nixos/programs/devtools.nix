@@ -1,10 +1,14 @@
 { pkgs, ... }:
 let
-  unstable = import <nixos-unstable> { config = { allowUnfree = true; }; };
+  unstable = import <nixos-unstable> {
+    config = {
+      allowUnfree = true;
+    };
+  };
 in
 {
   # langs, linters, formatters, lsps, etc
- home.packages = with pkgs; [
+  home.packages = with pkgs; [
     # Text editor
     unstable.neovim
 
@@ -18,18 +22,18 @@ in
     nixfmt-rfc-style
     statix
 
-    # terraform 
-    terraform
-    terraform-ls
-    tflint
-    tfsec
+    # terraform
+    unstable.terraform
+    unstable.terraform-ls
+    unstable.tflint
+    unstable.tfsec
 
     # go
     air
     unstable.go
-    unstable.impl #:GoInstallDeps
-    unstable.iferr #:GoInstallDeps
-    unstable.gomodifytags  #:GoInstallDeps
+    unstable.impl # :GoInstallDeps
+    unstable.iferr # :GoInstallDeps
+    unstable.gomodifytags # :GoInstallDeps
     unstable.delve
     unstable.gopls
     unstable.gofumpt
