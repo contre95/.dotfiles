@@ -1,4 +1,7 @@
 { config, pkgs, ... }:
+let
+  whichMachine = builtins.getEnv "WHICH_MACHINE";
+in
 {
   home.packages = with pkgs; [
     zsh-autosuggestions
@@ -11,16 +14,6 @@
     zsh-powerlevel10k
   ];
 
-  # export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
-  # if [[ -n $SSH_CONNECTION ]]; then
-  #   export EDITOR='vim'
-  #     gpgconf --create-socketdir
-  # else
-  #   export GPG_TTY="$(tty)"
-  #   export EDITOR='nvim'
-  #   export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
-  #   gpgconf --launch gpg-agent
-  # fi
   programs.zsh = {
     initExtra = ''
       source $MY_FOLDER/dotfiles/zsh/.p10k.zsh
@@ -29,7 +22,7 @@
       bindkey "^[[1;5D" backward-word
       zstyle ":completion:*" matcher-list "" "m:{a-zA-Z}={A-Za-z}" "r:|[._-]=* r:|=*" "l:|=* r:|=*"
       PS1="%F{#008000}%B%n@%m%b %1~:%f"
-      eval "$(ocm handler init)"
+      ${pkgs.lib.optionalString (whichMachine == "macbook") "eval $(ocm handler init)'"}
     '';
 
     enable = true;
