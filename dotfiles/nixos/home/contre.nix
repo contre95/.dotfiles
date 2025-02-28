@@ -88,7 +88,6 @@ in
         if "${whichMachine}" == "desktop" then
           commonPkgs
           ++ [
-            pkgs.slack
             pkgs.lingot
             pkgs.picard
             pkgs.scrcpy
