@@ -74,6 +74,7 @@ in
   home-manager.users.contre =
     { pkgs, config, ... }:
     {
+        wayland.windowManager.hyprland.systemd.enable = false;
       programs.home-manager.enable = true;
       home.username = "contre";
       home.homeDirectory = "/home/contre";
