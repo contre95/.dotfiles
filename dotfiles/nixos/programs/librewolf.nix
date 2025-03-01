@@ -13,7 +13,7 @@ in
     enable = true;
     policies = {
       ExtensionSettings = {
-        "*".installation_mode = "blocked";
+        # "*".installation_mode = "blocked";
         "jid1-MnnxcxisBPnSXQ@jetpack" = {
           install_url = "https://addons.mozilla.org/en-US/firefox/downloads/latest/privacy-badger17/latest.xpi";
           installation_mode = "force_installed";
@@ -200,6 +200,11 @@ in
           icon = "chill";
           color = "blue";
         };
+       biyuya  = {
+          id = 3;
+          icon = "dollar";
+          color = "green";
+        };
       };
       settings = {
         # settings = lib.mapAttrs' (n: lib.nameValuePair "pref.${n}") {
@@ -232,6 +237,9 @@ in
         "privacy.resistFingerprinting" = false;
         # "privacy.clearOnShutdown.cache" = false;
         "privacy.clearOnShutdown.history" = false;
+        "privacy.clearHistory.cookiesAndStorage" = false;
+        "privacy.clearHistory.historyFormDataAndDownloads" = false;
+        "privacy.clearHistory.cache" = false;
         "privacy.clearOnShutdown_v2.siteSettings" = false;
         "privacy.clearOnShutdown_v2.cookiesAndStorage" = false;
         "services.sync.prefs.sync.privacy.clearOnShutdown_v2.history" = false;
