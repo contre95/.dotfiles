@@ -173,7 +173,7 @@
     },
     "custom/btc": {
       "format": "<span color='#EF8E19'></span> {}",
-      "on-click": "hyprctl dispatch exec \"[float; size 24% 35%;animation slide; move 75%-20 60%-30] firefox --kiosk -P 'ContreKiosk' --new-window 'https://www.tradingview.com/chart/rH3IToRa/?symbol=BITSTAMP%3ABTCUSD'\"",
+      "on-click": "hyprctl dispatch exec \"[float; size 24% 35%;animation slide; move 75%-20 60%-30] librewolf --kiosk -P 'ContreKiosk' --new-window 'https://www.tradingview.com/chart/rH3IToRa/?symbol=BITSTAMP%3ABTCUSD'\"",
       "exec": "curl -X GET 'https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd' -s | jq '.[] .usd'",
     },
     "custom/music": {

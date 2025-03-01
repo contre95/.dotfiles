@@ -71,7 +71,7 @@ in
         "browser.quitShortcut.disabled" = true; # disable ctrl+q
         "browser.download.panel.shown" = true; # show download panel
         "signon.rememberSignons" = false; # disable saving passwords
-        "identity.fxaccounts.enabled" = false; # disable firefox accounts
+        "identity.fxaccounts.enabled" = false; # disable librewolf accounts
         "app.shield.optoutstudies.enabled" = false; # disable shield studies
         "browser.shell.checkDefaultBrowser" = false; # don't check if default browser
         "browser.bookmarks.restore_default_bookmarks" = false; # don't restore default bookmarks
@@ -83,7 +83,7 @@ in
         # "browser.uidensity" = 1; # enable dense UI
         "general.autoScroll" = true; # enable autoscroll
         # "browser.compactmode.show" = true; # enable compact mode
-        # "browser.tabs.firefox-view" = false; # enable firefox view
+        # "browser.tabs.firefox-view" = false; # enable librewolf view
         "startup.homepage_welcome_url" = ""; # disable welcome page
         "browser.newtabpage.enabled" = false; # disable new tab page
         "full-screen-api.ignore-widgets" = true; # fullscreen within window
