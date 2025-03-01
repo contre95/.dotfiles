@@ -7,7 +7,6 @@ let
   };
 in
 {
-
   system.autoUpgrade.enable = true;
   system.autoUpgrade.allowReboot = true;
 
@@ -38,6 +37,7 @@ in
 
     };
   };
+  imports = [ ./system/wgvpn.nix ];
 
   boot = {
     kernelPackages = pkgs.linuxPackages_latest;

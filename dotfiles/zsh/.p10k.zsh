@@ -21,17 +21,17 @@ typeset -g POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(I
     azure
     background_jobs
     public_ip
-    nix_shell
 	google_app_cred # google application credentials (https://cloud.google.com/docs/authentication/production)
 )
 
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon dir context dir_writable_joined custom_git_pair vcs_joined kubecontext go_version  rust_version)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon dir context dir_writable_joined custom_git_pair vcs_joined kubecontext nix_shell go_version  rust_version)
 
 POWERLEVEL9K_AWS_SHOW_ON_COMMAND='aws|awless|terraform|pulumi|'
 POWERLEVEL9K_GCLOUD_SHOW_ON_COMMAND='gcloud|gcs'
 POWERLEVEL9K_PYENV_SHOW_ON_COMMAND='python'
 POWERLEVEL9K_KUBECONTEXT_SHOW_ON_COMMAND='kubectl'
-
+POWERLEVEL9K_NIX_SHELL_CONTENT_EXPANSION=
+POWERLEVEL9K_NIX_SHELL_FOREGROUND='blue'
 POWERLEVEL9K_PHPENV_SHOW_SYSTEM=true
 POWERLEVEL9K_PYENV_SHOW_SYSTEM=true
 
