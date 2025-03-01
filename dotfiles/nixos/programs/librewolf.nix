@@ -1,4 +1,4 @@
-{ pkgs, fetchurl, ... }:
+{ pkgs, ... }:
 let
   unstable = import <nixos-unstable> {
     config = {
