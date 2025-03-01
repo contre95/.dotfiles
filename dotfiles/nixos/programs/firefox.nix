@@ -1,7 +1,15 @@
 { pkgs, ... }:
+let
+  unstable = import <nixos-unstable> {
+    config = {
+      allowUnfree = true;
+    };
+  };
+in
 {
   programs.firefox = {
     # package = (pkgs.wrapFirefox (pkgs.firefox-devedition-unwrapped.override { pipewireSupport = true; }) { });
+    package = unstable.librewolf;
     enable = true;
     policies = {
       DisableTelemetry = true;
