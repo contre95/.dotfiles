@@ -195,7 +195,7 @@ in
           icon = "chill";
           color = "purple";
         };
-        cloudie = {
+        nublado = {
           id = 2;
           icon = "chill";
           color = "blue";
