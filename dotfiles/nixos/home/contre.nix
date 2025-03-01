@@ -74,7 +74,7 @@ in
   home-manager.users.contre =
     { pkgs, config, ... }:
     {
-        wayland.windowManager.hyprland.systemd.enable = false;
+      wayland.windowManager.hyprland.systemd.enable = false;
       programs.home-manager.enable = true;
       home.username = "contre";
       home.homeDirectory = "/home/contre";
@@ -129,6 +129,14 @@ in
       ];
       home.extraOutputsToInstall = [ "share/tmux-plugins" ];
       home.file = {
+        librewolf = {
+          target = ".librewolf/default/chrome";
+          source = pkgs.fetchzip {
+            url = "https://github.com/datguypiko/Firefox-Mod-Blur/releases/latest/download/v2.14_ModBlur-Firefox_v133.zip";
+            hash = "sha256-eO0N96JjpmcQhhofDQ5zLA0Mz8/G/Uzh6/i4Tq59uUw=";
+            stripRoot = false;
+          };
+        };
         neovim = {
           recursive = true;
           target = ".config/nvim";

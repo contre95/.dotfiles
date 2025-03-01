@@ -60,12 +60,7 @@ in
     };
     profiles.default = {
       # userChrome = builtins.readFile ./userChrome.css;
-      userChrome = builtins.fetchurl {
-        url = "https://raw.githubusercontent.com/datguypiko/Firefox-Mod-Blur/refs/heads/master/userChrome.css";
-      };
-      userContent = builtins.fetchurl {
-        url = "https://raw.githubusercontent.com/datguypiko/Firefox-Mod-Blur/refs/heads/master/userContent.css";
-      };
+      # userContent = builtins.readFile ./userChrome.css;
       search = {
         force = true;
         engines = {
@@ -243,6 +238,7 @@ in
         # Disable telemetry
         "toolkit.telemetry.enabled" = false;
         "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
+        "svg.context-properties.content.enabled" = true;
         "toolkit.telemetry.unified" = false;
         "browser.ping-centre.telemetry" = false;
         "toolkit.telemetry.archive.enabled" = false;
