@@ -124,7 +124,7 @@ in
         ../programs/test.nix
         ../programs/discord.nix
         ../programs/slicer.nix
-        ../programs/firefox.nix
+        ../programs/librewolf.nix
         ../programs/devtools.nix
       ];
       home.extraOutputsToInstall = [ "share/tmux-plugins" ];
