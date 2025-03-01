@@ -229,6 +229,20 @@ in
         "media.videocontrols.picture-in-picture.video-toggle.enabled" = true; # disable picture in picture button
 
         # Privacy
+        "privacy.resistFingerprinting" = false;
+        # "privacy.clearOnShutdown.cache" = false;
+        "privacy.clearOnShutdown.history" = false;
+        "privacy.clearOnShutdown_v2.siteSettings" = false;
+        "privacy.clearOnShutdown_v2.cookiesAndStorage" = false;
+        "services.sync.prefs.sync.privacy.clearOnShutdown_v2.history" = false;
+        "services.sync.prefs.sync.privacy.clearOnShutdown_v2.siteSettings" = false;
+        "services.sync.prefs.sync.privacy.clearOnShutdown_v2.sessions" = false;
+        "services.sync.prefs.sync.privacy.clearOnShutdown_v2.cookies" = false;
+        "services.sync.prefs.sync.privacy.clearOnShutdown.history" = false;
+        "services.sync.prefs.sync.privacy.clearOnShutdown.siteSettings" = false;
+        "services.sync.prefs.sync.privacy.clearOnShutdown.sessions" = false;
+        "services.sync.prefs.sync.privacy.clearOnShutdown.cookies" = false;
+        "privacy.clearOnShutdown.cookies" = false;
         "browser.discovery.enabled" = false; # disable discovery
         "browser.search.suggest.enabled" = false; # disable search suggestions
         "browser.contentblocking.category" = "custom"; # set tracking protection to custom
@@ -266,6 +280,7 @@ in
         # other
         "media.autoplay.default" = 0; # enable autoplay on open
         "devtools.toolbox.host" = "right"; # move devtools to right
+        "devtools.theme" = "dark";
         # "browser.ssb.enabled" = true; # enable site specific browser
         "media.rdd-vpx.enabled" = true; # enable hardware acceleration
         "devtools.cache.disabled" = true; # disable caching in devtools
