@@ -8,11 +8,12 @@
     ],
     "modules-center": [
       "bluetooth",
+      "custom/wg",
       "network",
+      "custom/ip",
       "custom/recorder",
       "custom/wall",
       // "disk",
-      "custom/ip",
       // "custom/audio",
       // "memory",
       // "cpu",
@@ -33,7 +34,7 @@
       "device": "intel_backlight",
     },
     "custom/arch": {
-      "format": "  ",
+      "format": " <span color='#85AFD8'> </span>",
       "on-click": "pkill -9 waybar && waybar -c ~/.config/waybar/$MYENV.config.jsonc",
       "tooltip": false,
     },
@@ -47,31 +48,6 @@
           5
         ],
       },
-      //   "2": [
-      //     "eDP-1"
-      //   ],
-      //   "3": [
-      //     "eDP-1"
-      //   ],
-      //   "4": [
-      //     "eDP-1"
-      //   ],
-      //   "5": [
-      //     "eDP-1"
-      //   ],
-      //   "6": [
-      //     "HDMI-A-1"
-      //   ],
-      //   "7": [
-      //     "HDMI-A-1"
-      //   ],
-      //   "8": [
-      //     "HDMI-A-1"
-      //   ],
-      //   "9": [
-      //     "HDMI-A-1"
-      //   ]
-      // },
       "format": "{icon}",
       "format-icons": {
         "1": "1",
@@ -95,6 +71,13 @@
       "format": "<span color='#b4befe'></span> {}",
       "exec": "curl ifconfig.io | cut -c -16",
       "on-click": "curl ifconfig.io | wl-copy",
+    },
+    "custom/wg": {
+      "format": "{} ",
+      "on-click": "sudo -n /usr/bin/env systemctl start wg-quick-wg0.service",
+      "on-click-right": "sudo -n /usr/bin/env systemctl stop wg-quick-wg0.service",
+      "interval": 1,
+      "exec": "bash -c 'systemctl is-active --quiet wg-quick-wg0.service && echo \"<span color=\\\"#8A9A7B\\\">󰌘</span>\" || echo \"<span color=\\\"#FD6262\\\">󰌙</span>\"'"
     },
     "custom/recorder": {
       "format": "<span color='#FF0000'>󰑋</span> Rec.",
