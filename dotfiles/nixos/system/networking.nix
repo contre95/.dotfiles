@@ -1,10 +1,11 @@
 { config, pkgs, ... }:
 {
+  
+  systemd.network.enable = true;
   networking.wireless.enable = false;
   networking.useDHCP = true;
   networking.useNetworkd = true;
   networking.networkmanager.enable = false;
-  systemd.network.enable = true;
   networking.wireless.iwd.enable = config.networking.hostName != "server";
   networking.wireless.iwd.settings = {
     Settings = {
@@ -29,7 +30,6 @@
     traceroute
     speedtest-cli
     wirelesstools
-    wireguard-tools
   ];
 
   # Groups related to Networking

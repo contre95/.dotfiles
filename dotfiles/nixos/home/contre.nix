@@ -69,7 +69,8 @@ in
     ../system/syncthings.nix
     ../programs/steam.nix
     ../programs/ai.nix
-  ];
+  ] ++ (if whichMachine == "notebook" then [ ../system/wgvpn.nix ] else [ ]);
+
   # Home manager
   home-manager.users.contre =
     { pkgs, config, ... }:
