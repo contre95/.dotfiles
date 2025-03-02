@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 {
   networking.firewall.allowedUDPPorts = [ 51028 ];
   environment.systemPackages = with pkgs; [ wireguard-tools ];
@@ -7,7 +7,7 @@
       autostart = false;
       address = [ "10.16.12.93/32" ];
       dns = [ "10.16.12.1" ];
-      privateKeyFile = "/home/contre/.wg/pk.key";
+      privateKey = "$(${pkgs.pass}/bin/pass show WireGuard/ClientPrivateKey)";
 
       peers = [
         {
@@ -22,18 +22,19 @@
       ];
     };
   };
-security.sudo.extraRules = [
-  {
-    groups = [ "wheel" ];  # Replace with your actual group (e.g., "users", "sudo")
-    commands = [
-      {
-        command = "/usr/bin/env systemctl start wg-quick-wg0.service";  # Use "@" if your service is templated
-        options = [ "NOPASSWD" ];
-      }
-      {
-        command = "/usr/bin/env systemctl stop wg-quick-wg0.service";
-        options = [ "NOPASSWD" ];
-      }
-    ];
-  }
-];}
+  security.sudo.extraRules = [
+    {
+      groups = [ "wheel" ]; # Replace with your actual group (e.g., "users", "sudo")
+      commands = [
+        {
+          command = "/usr/bin/env systemctl start wg-quick-wg0.service"; # Use "@" if your service is templated
+          options = [ "NOPASSWD" ];
+        }
+        {
+          command = "/usr/bin/env systemctl stop wg-quick-wg0.service";
+          options = [ "NOPASSWD" ];
+        }
+      ];
+    }
+  ];
+}
