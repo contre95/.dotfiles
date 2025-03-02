@@ -7,7 +7,9 @@
       autostart = false;
       address = [ "10.16.12.93/32" ];
       dns = [ "10.16.12.1" ];
-      privateKey = "$(${pkgs.pass}/bin/pass show WireGuard/ClientPrivateKey)";
+      # privateKeyFile = "/root/wireguard-keys/privatekey";
+      privateKeyFile = "/etc/wireguard/private.key";
+      generatePrivateKeyFile = true;
 
       peers = [
         {
