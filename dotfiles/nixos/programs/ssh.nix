@@ -46,7 +46,7 @@ in
 
           extraConfig = ''
             PKCS11Provider ${pkgs.opensc}/lib/opensc-pkcs11.so
-            Host notebook.home
+            Host notebook.home, desktop.home
               ForwardAgent yes
               ExitOnForwardFailure yes
             Host server.home
