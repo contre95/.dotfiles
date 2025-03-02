@@ -9,7 +9,6 @@
       dns = [ "10.16.12.1" ];
       # privateKeyFile = "/root/wireguard-keys/privatekey";
       privateKeyFile = "/etc/wireguard/private.key";
-      generatePrivateKeyFile = true;
 
       peers = [
         {
