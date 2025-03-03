@@ -7,7 +7,6 @@ let
   };
 in
 {
-
   system.autoUpgrade.enable = true;
   system.autoUpgrade.allowReboot = true;
 
@@ -87,9 +86,7 @@ in
     { pkgs, ... }:
     {
       programs.git.signing.signByDefault = false;
-      home.packages = with pkgs; [
-        orca-slicer
-      ];
+      home.packages = with pkgs; [ ];
     };
 
 }
