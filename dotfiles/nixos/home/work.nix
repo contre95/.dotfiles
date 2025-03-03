@@ -67,7 +67,7 @@ in
           "${mod}-shift-right" = "move right";
 
           # Toggle layouts
-          "${mod}-q" = "close";
+          "${mod}-shift-q" = "close";
           "${mod}-s" = "layout accordion tiles";
           "${mod}-o" = "layout horizontal vertical";
           "${mod}-y" = "layout tiles accordion";
