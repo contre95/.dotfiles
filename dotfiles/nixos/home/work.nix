@@ -17,6 +17,15 @@ in
       settings = {
         default-root-container-layout = "tiles";
         after-startup-command = [ "layout tiles" ];
+        workspace-to-monitor-force-assignment = {
+          "1" = "secondary";
+          "2" = "secondary";
+          "3" = "secondary";
+          "4" = "secondary";
+          "5" = "secondary";
+          "6" = "main";
+          "7" = "main";
+        };
 
         gaps = {
           inner.horizontal = 8;
