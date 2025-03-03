@@ -1,5 +1,6 @@
 { pkgs, ... }:
 let
+  whichMachine = builtins.getEnv "WHICH_MACHINE";
   unstable = import <nixos-unstable> {
     config = {
       allowUnfree = true;
@@ -65,9 +66,9 @@ in
   };
 
   hardware.graphics.enable = true;
-  programs.hyprland = {
+  programs.hyprland = with pkgs;{
     enable = true;
-    package = unstable.hyprland;
+    package = if whichMachine == "desktop" then unstable.hyprland else hyprland;
     portalPackage = unstable.xdg-desktop-portal-hyprland;
     withUWSM = true;
     xwayland.enable = true;

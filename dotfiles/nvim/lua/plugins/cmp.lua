@@ -34,7 +34,7 @@ return { -- Autocompletion
 		"hrsh7th/cmp-nvim-lsp",
 		"onsails/lspkind.nvim",
 		"hrsh7th/cmp-path",
-		-- "zbirenbaum/copilot-cmp",
+		"zbirenbaum/copilot-cmp",
 	},
 	config = function()
 		local lspkind = require("lspkind")
@@ -96,8 +96,8 @@ return { -- Autocompletion
 				["<Tab>"] = cmp.mapping(function(fallback)
 					if cmp.visible() then
 						cmp.select_next_item()
-					-- elseif require("copilot.suggestion").is_visible() then
-					-- 	require("copilot.suggestion").accept()
+					elseif require("copilot.suggestion").is_visible() then
+						require("copilot.suggestion").accept()
 					elseif luasnip.expandable() then
 						luasnip.expand()
 					elseif luasnip.expand_or_jumpable() then
@@ -152,7 +152,7 @@ return { -- Autocompletion
 			}),
 			sources = {
 				{ name = "nvim_lsp" },
-				-- { name = "copilot" },copilot
+				{ name = "copilot" },
 				{ name = "buffer" },
 				{ name = "luasnip" },
 				{ name = "path" },
