@@ -35,6 +35,7 @@ in
     unstable.wev
     unstable.hyprland-workspaces
     # hyprdim
+    unstable.hyprlock
     unstable.xwayland
     unstable.aquamarine
     unstable.wlroots
