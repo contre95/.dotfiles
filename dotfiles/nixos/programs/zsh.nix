@@ -40,7 +40,7 @@ in
       rebuild = "sudo WHICH_MACHINE=$(hostname) nixos-rebuild switch";
       rebuild-boot = "sudo WHICH_MACHINE=$(hostname) nixos-rebuild boot";
       gparted = "sudo --preserve-env gparted";
-      update = "pushd $MY_FOLDER && git pull && sudo WHICH_MACHINE=$(hostname) nixos-rebuild switch";
+      update = "pushd $MY_FOLDER && git pull && sudo nix-channel --update && sudo WHICH_MACHINE=$(hostname) nixos-rebuild switch && popd";
       iptr = "sudo iptables -t nat -L -v -n";
       gc = "sudo nix-store --gc";
       no = "nix store optimise";
