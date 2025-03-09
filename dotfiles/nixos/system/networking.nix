@@ -26,6 +26,7 @@
     iwgtk
     netcat
     tcpdump
+    mullvad
     wireshark
     traceroute
     speedtest-cli
