@@ -19,8 +19,6 @@
       "1password"
       # "goland"
       # "pycharm"
-      "rectangle"
-      "bruno"
     ];
   };
 
