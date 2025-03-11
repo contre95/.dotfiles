@@ -62,9 +62,9 @@ in
   home-manager.useGlobalPkgs = true;
 
   # System programs
-  programs.nano.enable = false; # I don't like this is not the default :)
+  programs.nano.enable = false;
   imports = [
-    ../system/gpg.nix
+    ../system/gnupg.nix
     ../system/openssh.nix
     ../system/syncthings.nix
     ../programs/steam.nix

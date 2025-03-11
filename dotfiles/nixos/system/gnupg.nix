@@ -15,6 +15,7 @@ in
       ]
     then
       {
+        environment.systemPackages = with pkgs; [ gnupg ];
         services.pcscd.enable = true;
         services.dbus.packages = [ pkgs.gcr ];
         # Enable GPG at a system level
@@ -23,5 +24,7 @@ in
         hardware.gpgSmartcards.enable = true;
       }
     else
-      { };
+      {
+        environment.systemPackages = with pkgs; [ gnupg ];
+      };
 }
