@@ -54,32 +54,31 @@ in
       lib.elem whichMachine [
         "notebook"
         "desktop"
-        "server"
       ]
     then
       {
-        # programs.gpg = {
-        #   enable = true;
-        #   scdaemonSettings = {
-        #     # reader-port = "Yubico Yubi";
-        #     pcsc-driver = "${lib.getLib pkgs.pcsclite}/lib/libpcsclite.so";
-        #     pcsc-shared = true;
-        #     disable-ccid = true;
-        #   };
-        #   # settings.no-autostart = true; # don’t autostart gpg-agent if not started
-        #   # settings = {
-        #   #   use-agent = "";
-        #   # };
-        #   # mutableKeys = true;
-        #   # mutableTrust = false;
-        #   # homedir = "${config.xdg.dataHome}/gnupg";
-        #   publicKeys = [
-        #     {
-        #       source = ../contre.pub;
-        #       trust = 5;
-        #     }
-        #   ];
-        # };
+        programs.gpg = {
+          enable = true;
+          scdaemonSettings = {
+            # reader-port = "Yubico Yubi";
+            pcsc-driver = "${lib.getLib pkgs.pcsclite}/lib/libpcsclite.so";
+            pcsc-shared = true;
+            disable-ccid = true;
+          };
+          # settings.no-autostart = true; # don’t autostart gpg-agent if not started
+          # settings = {
+          #   use-agent = "";
+          # };
+          # mutableKeys = true;
+          # mutableTrust = false;
+          # homedir = "${config.xdg.dataHome}/gnupg";
+          publicKeys = [
+            {
+              source = ../contre.pub;
+              trust = 5;
+            }
+          ];
+        };
       }
     else
       { };
