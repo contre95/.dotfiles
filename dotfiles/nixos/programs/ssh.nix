@@ -6,6 +6,7 @@
 }:
 let
   whichMachine = builtins.getEnv "WHICH_MACHINE";
+  socketDir = "/run/user/1000/gnupg";
 in
 {
   config =
@@ -26,21 +27,23 @@ in
         ];
         programs.ssh = {
           enable = true;
-          # forward gpg agent
           matchBlocks = {
             "server.home" = {
               user = "contre";
               forwardAgent = true;
               remoteForwards = [
                 {
-                  bind.address = "/run/user/1000/gnupg/S.gpg-agent";
-                  host.address = "/run/user/1000/gnupg/S.gpg-agent.extra";
+                  bind.address = "${socketDir}/S.gpg-agent";
+                  host.address = "${socketDir}/S.gpg-agent.extra";
                 }
                 {
-                  bind.address = "/run/user/1000/gnupg/S.gpg-agent.ssh";
-                  host.address = "/run/user/1000/gnupg/S.gpg-agent.ssh";
+                  bind.address = "${socketDir}/S.gpg-agent.ssh";
+                  host.address = "${socketDir}/S.gpg-agent.ssh";
                 }
               ];
+              # sendEnv = [
+              #   "SSH_AUTH_SOCK=${socketDir}/S.gpg-agent.ssh"
+              # ];
             };
           };
 
@@ -49,10 +52,6 @@ in
             Host notebook.home, desktop.home
               ForwardAgent yes
               ExitOnForwardFailure yes
-            Host server.home
-              ForwardAgent yes
-              ExitOnForwardFailure yes
-              RemoteForward /run/user/1000/gnupg/S.gpg-agent /run/user/1000/gnupg/S.gpg-agent.extra
           '';
         };
       }
