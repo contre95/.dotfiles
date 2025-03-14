@@ -15,6 +15,8 @@ in
   ];
 
   programs.zsh = {
+    enable = true;
+
     initExtra = ''
       source $MY_FOLDER/dotfiles/zsh/.p10k.zsh
       eval "$(zoxide init zsh)"
@@ -22,10 +24,13 @@ in
       bindkey "^[[1;5D" backward-word
       zstyle ":completion:*" matcher-list "" "m:{a-zA-Z}={A-Za-z}" "r:|[._-]=* r:|=*" "l:|=* r:|=*"
       PS1="%F{#008000}%B%n@%m%b %1~:%f"
-      ${pkgs.lib.optionalString (whichMachine == "macbook") "eval $(ocm handler init)'"}
+      ${pkgs.lib.optionalString (whichMachine == "macbook") ''
+      eval $(ocm handler init)'
+      export GPG_TTY=$(tty)
+      export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+      gpgconf --launch gpg-agent
+      ''}
     '';
-
-    enable = true;
 
     enableCompletion = true;
     autosuggestion.enable = true;
@@ -51,21 +56,16 @@ in
       pu = "podman unshare";
       nsh = "nix-shell -p";
       gst = "git status";
+      cdr = "cd $(git rev-parse --show-toplevel)";
       gd = "git diff";
       ".." = "cd ..";
-      gA = "git add .";
-      gS = "git stash";
       ga = "git add";
       gap = "git add --patch";
-      gbD = "git branch -D";
-      gcb = "git checkout -b";
       gr = "git remote";
       gcm = "git commit -S -m";
-      gll = "git pull";
-      gp = "git push";
-      gt = "gitui";
-      gco = "git checkout";
       gl = "git pull";
+      gp = "git push";
+      gco = "git checkout";
       due = "find . -type f | awk -F. '{if (NF>1) print $NF}' | sort | uniq -c | sort -nr"; # Disk Usage per file Extension
       j = "z";
       l = "ls -lFh";
@@ -85,7 +85,6 @@ in
       pot = "podman top \`containers\` user huser group hgroup";
       cosh = "podman container exec -it \`containers\` sh";
       copy = "xclip -sel clip";
-      cdr = "cd $(git rev-parse --show-toplevel)";
       here = "pcmanfm .";
       ns = "kubectl get namespaces -o json | jq '.items[].metadata.name' | tr -d '\"' | fzf";
       ch = "cliphist list | fzf | cliphist decode";
@@ -127,8 +126,6 @@ in
       enable = true;
       plugins = [
         "history-substring-search"
-        # "nix-shell"
-        # "nix-zsh-completions"
       ];
     };
   };
