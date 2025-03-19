@@ -86,6 +86,7 @@ in
       cosh = "podman container exec -it \`containers\` sh";
       copy = "xclip -sel clip";
       here = "pcmanfm .";
+      tf = "terraform";
       ns = "kubectl get namespaces -o json | jq '.items[].metadata.name' | tr -d '\"' | fzf";
       ch = "cliphist list | fzf | cliphist decode";
       kns = "kubectl config set-context --current --namespace=\`ns\`";
