@@ -47,6 +47,7 @@ let
     wf-recorder
     wl-clipboard
     android-tools
+    yubikey-manager
     alacritty-theme
     grim # For screenshots
     slurp # For screenshots
