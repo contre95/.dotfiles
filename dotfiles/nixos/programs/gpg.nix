@@ -60,7 +60,7 @@ in
         programs.gpg = {
           enable = true;
           scdaemonSettings = {
-            # reader-port = "Yubico Yubi";
+            reader-port = "Yubico Yubi";
             pcsc-driver = "${lib.getLib pkgs.pcsclite}/lib/libpcsclite.so";
             pcsc-shared = true;
             disable-ccid = true;

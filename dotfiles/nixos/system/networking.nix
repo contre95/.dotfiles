@@ -1,16 +1,18 @@
 { config, pkgs, ... }:
 {
-  
+
   systemd.network.enable = true;
   networking.wireless.enable = false;
   networking.useDHCP = true;
   networking.useNetworkd = true;
   networking.networkmanager.enable = false;
-  networking.wireless.iwd.enable = config.networking.hostName != "server";
-  networking.wireless.iwd.settings = {
-    Settings = {
-      AutoConnect = true;
-      AlwaysRandomizeAddress = false;
+  networking.wireless.iwd = {
+    enable = config.networking.hostName != "server";
+    settings = {
+      Settings = {
+        AutoConnect = true;
+        AlwaysRandomizeAddress = false;
+      };
     };
   };
   networking.firewall = {
