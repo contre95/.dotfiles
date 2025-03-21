@@ -14,6 +14,7 @@ in
 
     # Cloud
     awscli
+    gh 
 
     # nix
     nil
