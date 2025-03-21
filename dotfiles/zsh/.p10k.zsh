@@ -8,6 +8,7 @@ function sp {
 # Hide python version if it doesn't come from one of these sources.
 typeset -g POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(I
 	# =========================[ Line #1 ]=========================
+    time
 	status          # exit code of the last command
 	virtualenv      # python virtual environment (https://docs.python.org/3/library/venv.html)
 	goenv           # go environment (https://github.com/syndbg/goenv)
@@ -127,7 +128,8 @@ POWERLEVEL9K_STATUS_OK_BACKGROUND="clear"
 POWERLEVEL9K_STATUS_BACKGROUND="clear"
 POWERLEVEL9K_CARRIAGE_RETURN_ICON="\uf071"
 
-POWERLEVEL9K_TIME_FORMAT="%D{%H:%M \uE868  %d.%m}"
+POWERLEVEL9K_TIME_FORMAT="%D{%H:%M}"
+POWERLEVEL9K_TIME_FOREGROUND="cyan"
 
 POWERLEVEL9K_VCS_CLEAN_BACKGROUND='clear'
 POWERLEVEL9K_VCS_CLEAN_FOREGROUND='green'
