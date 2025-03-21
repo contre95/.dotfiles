@@ -20,7 +20,6 @@
   };
   # Packager related to Networking
   environment.systemPackages = with pkgs; [
-    iwd
     dig
     nmap
     iwgtk
