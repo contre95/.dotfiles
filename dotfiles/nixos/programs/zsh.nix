@@ -74,10 +74,7 @@ in
       lt = "ls -ltFh";
       grep = "grep --color";
       ll = "ls -l";
-      pq = "pacman -Q | fzf";
-      ru = "sudo pacman -Ru \$(pacman -Q | fzf | awk -F\" \" '{print \$1}')";
       sine = "pass Canus/Sinenomine | grep -i -A2 $1";
-      startx = "Hyprland";
       containers = "podman container ls --format '{{.Names}}' | grep -v infra | fzf -1";
       pods = "podman pod ls --format '{{.Name}}' | fzf -1";
       pogs = "podman pod logs -f \`pods\`";
@@ -86,6 +83,7 @@ in
       cosh = "podman container exec -it \`containers\` sh";
       copy = "xclip -sel clip";
       here = "pcmanfm .";
+      tf = "terraform";
       ns = "kubectl get namespaces -o json | jq '.items[].metadata.name' | tr -d '\"' | fzf";
       ch = "cliphist list | fzf | cliphist decode";
       kns = "kubectl config set-context --current --namespace=\`ns\`";
