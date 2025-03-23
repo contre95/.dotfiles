@@ -97,7 +97,7 @@ in
             pkgs.blender
             pkgs.spotify
             unstable.telegram-desktop
-            pkgs.simplex-chat-desktop
+            unstable.simplex-chat-desktop
           ]
         else if "${whichMachine}" == "notebook" then
           commonPkgs

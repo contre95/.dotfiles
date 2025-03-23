@@ -51,9 +51,9 @@ local handlers = {
 }
 
 -- Apply the handlers
-for name, handler in pairs(handlers) do
-  vim.lsp.handlers[name] = handler
-end
+-- for name, handler in pairs(handlers) do
+--   vim.lsp.handlers[name] = handler
+-- end
 
 vim.diagnostic.config({
   float = {

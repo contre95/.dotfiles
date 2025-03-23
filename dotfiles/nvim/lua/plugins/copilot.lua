@@ -11,7 +11,7 @@ return {
         panel = { enabled = false },
       })
       require("copilot_cmp").setup({
-        fix_pairs = false,
+        fix_pairs = true,
       })
     end,
   },

@@ -6,7 +6,7 @@ in
   config =
     if
       lib.elem whichMachine [
-        # "desktop"
+        "desktop"
       ]
     then
       {
