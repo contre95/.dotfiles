@@ -17,6 +17,7 @@
   };
   networking.firewall = {
     allowedTCPPorts = [
+      37565
       3535
     ];
   };
