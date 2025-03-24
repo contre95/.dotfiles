@@ -71,14 +71,6 @@
     winetricks
   ];
 
-  programs.gamemode.enable = true;
-  programs.steam = {
-    enable = true;
-    remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
-    dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
-    gamescopeSession.enable = true;
-  };
-
   fileSystems."/mnt/HDD2" = {
     device = "/dev/disk/by-uuid/b0b93094-b438-458c-97fe-68d4e49bd007";
     fsType = "ext4"; # Replace with your filesystem type
