@@ -25,10 +25,10 @@ in
       zstyle ":completion:*" matcher-list "" "m:{a-zA-Z}={A-Za-z}" "r:|[._-]=* r:|=*" "l:|=* r:|=*"
       PS1="%F{#008000}%B%n@%m%b %1~:%f"
       ${pkgs.lib.optionalString (whichMachine == "macbook") ''
-      eval $(ocm handler init)'
-      export GPG_TTY=$(tty)
-      export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
-      gpgconf --launch gpg-agent
+        eval $(ocm handler init)'
+        export GPG_TTY=$(tty)
+        export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+        gpgconf --launch gpg-agent
       ''}
     '';
 
@@ -75,6 +75,9 @@ in
       grep = "grep --color";
       ll = "ls -l";
       sine = "pass Canus/Sinenomine | grep -i -A2 $1";
+      services = "systemctl list-units --type=service --all --no-legend | awk '{print \$1}' | sed 's/\.service$//' | fzf -1";
+      slogs = "journalctl -u \`services\` -f";
+      sosh = "systemctl status \`services\`";
       containers = "podman container ls --format '{{.Names}}' | grep -v infra | fzf -1";
       pods = "podman pod ls --format '{{.Name}}' | fzf -1";
       pogs = "podman pod logs -f \`pods\`";
