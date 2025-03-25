@@ -81,7 +81,7 @@ in
     biome
     nodePackages.jsonlint
     pkgs.nodePackages.typescript-language-server
-    nodejs-slim_23
+    unstable.nodejs-slim
     # js-debug-adapter
 
     # shell
