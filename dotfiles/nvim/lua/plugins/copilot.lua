@@ -27,7 +27,7 @@ return {
       debug = false,                -- Enable debugging
       show_help = false,
       -- system_prompt = prompts.COPILOT_INSTRUCTIONS, -- System prompt to use
-      model = 'gpt-4o',  -- GPT model to use, 'gpt-3.5-turbo', 'gpt-4', or 'gpt-4o'
+      -- model = 'gpt-4o',  -- GPT model to use, 'gpt-3.5-turbo', 'gpt-4', or 'gpt-4o'
       temperature = 0.1, -- GPT temperature
     }
     -- See Commands section for default commands if you want to lazy load on them
