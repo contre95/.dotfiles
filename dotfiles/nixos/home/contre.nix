@@ -31,8 +31,8 @@ let
     clipman
     gettext
     gparted
-    kubectl
     pcmanfm
+    kubectl
     cliphist
     wl-kbptr
     alacritty
