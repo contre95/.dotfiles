@@ -28,6 +28,7 @@ let
     smassh
     swappy
     tessen
+    ghostty
     clipman
     gettext
     gparted
@@ -189,6 +190,12 @@ in
           enable = true;
           target = ".config/alacritty";
           source = config.lib.file.mkOutOfStoreSymlink /home/canus/dotfiles/alacritty;
+        };
+        ghostty = {
+          # recursive = true;
+          enable = true;
+          target = ".config/ghostty";
+          source = config.lib.file.mkOutOfStoreSymlink /home/canus/dotfiles/ghostty;
         };
       };
       home.stateVersion = "24.11";
