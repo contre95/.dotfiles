@@ -11,136 +11,166 @@ in
     systemPath = [ "/opt/homebrew/bin" ];
     pathsToLink = [ "/Applications" ];
   };
-    services.aerospace = {
-      enable = true;
+  services.aerospace = {
+    enable = true;
 
-      settings = {
-        default-root-container-layout = "tiles";
-        after-startup-command = [ "layout tiles" ];
-        workspace-to-monitor-force-assignment = {
-          "1" = "secondary";
-          "2" = "secondary";
-          "3" = "secondary";
-          "4" = "secondary";
-          "5" = "secondary";
-          "6" = "main";
-          "7" = "main";
-        };
-
-        gaps = {
-          inner.horizontal = 8;
-          inner.vertical = 8;
-          outer.left = 7;
-          outer.bottom = 7;
-          outer.top = 7;
-          outer.right = 7;
-        };
-
-        # https://github.com/pop-os/cosmic-comp/blob/master/data/keybindings.ron
-        mode.main.binding = {
-          "${mod}-g" = ''
-            exec-and-forget open -b "com.google.Chrome"
-          '';
-
-          "${mod}-enter" = ''
-            exec-and-forget open -b "/System/Applications/Utilities/Terminal.app"
-          '';
-
-          "${mod}-j" = "focus left";
-          "${mod}-k" = "focus down";
-          "${mod}-i" = "focus up";
-          "${mod}-l" = "focus right";
-
-          "${mod}-up" = "focus up";
-          "${mod}-down" = "focus down";
-          "${mod}-left" = "focus left";
-          "${mod}-right" = "focus right";
-
-          "${mod}-shift-j" = "move left";
-          "${mod}-shift-k" = "move down";
-          "${mod}-shift-i" = "move up";
-          "${mod}-shift-l" = "move right";
-
-          "${mod}-shift-up" = "move up";
-          "${mod}-shift-down" = "move down";
-          "${mod}-shift-left" = "move left";
-          "${mod}-shift-right" = "move right";
-
-          # Toggle layouts
-          "${mod}-shift-q" = "close";
-          "${mod}-s" = "layout accordion tiles";
-          "${mod}-o" = "layout horizontal vertical";
-          "${mod}-y" = "layout tiles accordion";
-          "${mod}-shift-f" = "layout tiling floating";
-          # https://github.com/nikitabobko/AeroSpace/issues/8
-          # "${meh}-x" = "swap";
-
-          "${mod}-f" = "fullscreen";
-
-          "${mod}-1" = "workspace 1";
-          "${mod}-2" = "workspace 2";
-          "${mod}-3" = "workspace 3";
-          "${mod}-4" = "workspace 4";
-          "${mod}-5" = "workspace 5";
-          "${mod}-6" = "workspace 6";
-          "${mod}-7" = "workspace 7";
-          "${mod}-8" = "workspace 8";
-          "${mod}-9" = "workspace 9";
-          "${mod}-0" = "workspace 10";
-
-          "${mod}-shift-1" = [ "move-node-to-workspace 1" "workspace 1" ];
-          "${mod}-shift-2" = [ "move-node-to-workspace 2" "workspace 2" ];
-          "${mod}-shift-3" = [ "move-node-to-workspace 3" "workspace 3" ];
-          "${mod}-shift-4" = [ "move-node-to-workspace 4" "workspace 4" ];
-          "${mod}-shift-5" = [ "move-node-to-workspace 5" "workspace 5" ];
-          "${mod}-shift-6" = [ "move-node-to-workspace 6" "workspace 6" ];
-          "${mod}-shift-7" = [ "move-node-to-workspace 7" "workspace 7" ];
-          "${mod}-shift-8" = [ "move-node-to-workspace 8" "workspace 8" ];
-          "${mod}-shift-9" = [ "move-node-to-workspace 9" "workspace 9" ];
-          "${mod}-shift-0" = [ "move-node-to-workspace 10" "workspace 10" ];
-
-          "${mod}-shift-c" = "reload-config";
-          "${mod}-r" = "mode resize";
-        };
-
-        # mode.resize.binding = {
-        #   h = "resize width -50";
-        #   j = "resize height +50";
-        #   k = "resize height -50";
-        #   l = "resize width +50";
-        #
-        #   left = "resize width -50";
-        #   down = "resize height +50";
-        #   up = "resize height -50";
-        #   right = "resize width +50";
-        #
-        #   enter = "mode main";
-        #   esc = "mode main";
-        # };
-
-        # on-window-detected = [
-        #   {
-        #     "if".app-name-regex-substring = "chrome|firefox|safari";
-        #     run = [ "move-node-to-workspace 1" ];
-        #   }
-        #
-        #   {
-        #     "if".app-name-regex-substring = "code|wezterm|ghostty|terminal";
-        #     run = [ "move-node-to-workspace 2" ];
-        #   }
-        #
-        #   {
-        #     "if".app-name-regex-substring = "obsidian|slack";
-        #     run = [ "move-node-to-workspace 3" ];
-        #   }
-        #
-        #   {
-        #     "if".app-name-regex-substring = "zoom";
-        #     run = [ "move-node-to-workspace 10" ];
-        #   }
-        # ];
+    settings = {
+      default-root-container-layout = "tiles";
+      after-startup-command = [ "layout tiles" ];
+      workspace-to-monitor-force-assignment = {
+        "1" = "secondary";
+        "2" = "secondary";
+        "3" = "secondary";
+        "4" = "secondary";
+        "5" = "secondary";
+        "6" = "main";
+        "7" = "main";
       };
+
+      gaps = {
+        inner.horizontal = 8;
+        inner.vertical = 8;
+        outer.left = 7;
+        outer.bottom = 7;
+        outer.top = 7;
+        outer.right = 7;
+      };
+
+      # https://github.com/pop-os/cosmic-comp/blob/master/data/keybindings.ron
+      mode.main.binding = {
+        "${mod}-g" = ''
+          exec-and-forget open -b "com.google.Chrome"
+        '';
+
+        "${mod}-enter" = ''
+          exec-and-forget open -b "/System/Applications/Utilities/Terminal.app"
+        '';
+
+        "${mod}-j" = "focus left";
+        "${mod}-k" = "focus down";
+        "${mod}-i" = "focus up";
+        "${mod}-l" = "focus right";
+
+        "${mod}-up" = "focus up";
+        "${mod}-down" = "focus down";
+        "${mod}-left" = "focus left";
+        "${mod}-right" = "focus right";
+
+        "${mod}-shift-j" = "move left";
+        "${mod}-shift-k" = "move down";
+        "${mod}-shift-i" = "move up";
+        "${mod}-shift-l" = "move right";
+
+        "${mod}-shift-up" = "move up";
+        "${mod}-shift-down" = "move down";
+        "${mod}-shift-left" = "move left";
+        "${mod}-shift-right" = "move right";
+
+        # Toggle layouts
+        "${mod}-shift-q" = "close";
+        "${mod}-s" = "layout accordion tiles";
+        "${mod}-o" = "layout horizontal vertical";
+        "${mod}-y" = "layout tiles accordion";
+        "${mod}-shift-f" = "layout tiling floating";
+        # https://github.com/nikitabobko/AeroSpace/issues/8
+        # "${meh}-x" = "swap";
+
+        "${mod}-f" = "fullscreen";
+
+        "${mod}-1" = "workspace 1";
+        "${mod}-2" = "workspace 2";
+        "${mod}-3" = "workspace 3";
+        "${mod}-4" = "workspace 4";
+        "${mod}-5" = "workspace 5";
+        "${mod}-6" = "workspace 6";
+        "${mod}-7" = "workspace 7";
+        "${mod}-8" = "workspace 8";
+        "${mod}-9" = "workspace 9";
+        "${mod}-0" = "workspace 10";
+
+        "${mod}-shift-1" = [
+          "move-node-to-workspace 1"
+          "workspace 1"
+        ];
+        "${mod}-shift-2" = [
+          "move-node-to-workspace 2"
+          "workspace 2"
+        ];
+        "${mod}-shift-3" = [
+          "move-node-to-workspace 3"
+          "workspace 3"
+        ];
+        "${mod}-shift-4" = [
+          "move-node-to-workspace 4"
+          "workspace 4"
+        ];
+        "${mod}-shift-5" = [
+          "move-node-to-workspace 5"
+          "workspace 5"
+        ];
+        "${mod}-shift-6" = [
+          "move-node-to-workspace 6"
+          "workspace 6"
+        ];
+        "${mod}-shift-7" = [
+          "move-node-to-workspace 7"
+          "workspace 7"
+        ];
+        "${mod}-shift-8" = [
+          "move-node-to-workspace 8"
+          "workspace 8"
+        ];
+        "${mod}-shift-9" = [
+          "move-node-to-workspace 9"
+          "workspace 9"
+        ];
+        "${mod}-shift-0" = [
+          "move-node-to-workspace 10"
+          "workspace 10"
+        ];
+
+        "${mod}-shift-c" = "reload-config";
+        "${mod}-r" = "mode resize";
+      };
+
+      # mode.resize.binding = {
+      #   h = "resize width -50";
+      #   j = "resize height +50";
+      #   k = "resize height -50";
+      #   l = "resize width +50";
+      #
+      #   left = "resize width -50";
+      #   down = "resize height +50";
+      #   up = "resize height -50";
+      #   right = "resize width +50";
+      #
+      #   enter = "mode main";
+      #   esc = "mode main";
+      # };
+
+      # on-window-detected = [
+      #   {
+      #     "if".app-name-regex-substring = "chrome|firefox|safari";
+      #     run = [ "move-node-to-workspace 1" ];
+      #   }
+      #
+      #   {
+      #     "if".app-name-regex-substring = "code|wezterm|ghostty|terminal";
+      #     run = [ "move-node-to-workspace 2" ];
+      #   }
+      #
+      #   {
+      #     "if".app-name-regex-substring = "obsidian|slack";
+      #     run = [ "move-node-to-workspace 3" ];
+      #   }
+      #
+      #   {
+      #     "if".app-name-regex-substring = "zoom";
+      #     run = [ "move-node-to-workspace 10" ];
+      #   }
+      # ];
     };
+  };
   environment.systemPackages = [
     # Languages
     pkgs.go
@@ -198,6 +228,7 @@ in
     pkgs.neovim
     pkgs.coreutils
 
+    pkgs.ghostty
     pkgs.alacritty
     pkgs.alacritty-theme
 
@@ -247,6 +278,12 @@ in
         recursive = true;
         source = /Users/canus/dotfiles/alacritty;
         target = ".config/alacritty";
+      };
+      ghostty = {
+        # recursive = true;
+        enable = true;
+        target = ".config/ghostty";
+        source = config.lib.file.mkOutOfStoreSymlink /home/canus/dotfiles/ghostty;
       };
 
     };
