@@ -228,7 +228,7 @@ in
     pkgs.neovim
     pkgs.coreutils
 
-    pkgs.ghostty
+    # pkgs.ghostty # Broken on Nix Darwin
     pkgs.alacritty
     pkgs.alacritty-theme
 
@@ -283,7 +283,7 @@ in
         # recursive = true;
         enable = true;
         target = ".config/ghostty";
-        source = config.lib.file.mkOutOfStoreSymlink /home/canus/dotfiles/ghostty;
+        source = /Users/canus/dotfiles/ghostty;
       };
 
     };
