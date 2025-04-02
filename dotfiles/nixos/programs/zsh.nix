@@ -58,7 +58,6 @@ in
       gst = "git status";
       cdr = "cd $(git rev-parse --show-toplevel)";
       gd = "git diff";
-      ".." = "cd ..";
       ga = "git add";
       gap = "git add --patch";
       gr = "git remote";
