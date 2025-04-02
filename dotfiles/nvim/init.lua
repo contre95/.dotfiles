@@ -21,8 +21,8 @@ require("config.lazy")
 require("config.settings")
 require("config.commands")
 require("config.mappings")
+require("config.autocommands")
 
 vim.cmd("colorscheme kanagawa")
 --
 ---- Vim Imports
-vim.cmd("so ~/.config/nvim/autocomands.vim")
