@@ -17,4 +17,8 @@ keybind = ctrl+alt+left=unbind
 keybind = ctrl+alt+right=unbind
 keybind = ctrl+alt+up=unbind
 keybind = ctrl+alt+down=unbind
+keybind = ctrl+t=unbind
+keybind = ctrl+w=unbind
 
+keybind = ctrl+left=SendChars("\u001b[1;5D")
+keybind = ctrl+right=SendChars("\u001b[1;5C")
