@@ -63,7 +63,7 @@ in
             reader-port = "Yubico Yubi";
             pcsc-driver = "${lib.getLib pkgs.pcsclite}/lib/libpcsclite.so";
             pcsc-shared = true;
-            disable-ccid = true;
+            disable-ccid = false;
           };
           # settings.no-autostart = true; # don’t autostart gpg-agent if not started
           # settings = {

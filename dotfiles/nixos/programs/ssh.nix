@@ -28,6 +28,34 @@ in
         programs.ssh = {
           enable = true;
           matchBlocks = {
+            "notebook.home" = {
+              user = "contre";
+              forwardAgent = true;
+              remoteForwards = [
+                {
+                  bind.address = "${socketDir}/S.gpg-agent";
+                  host.address = "${socketDir}/S.gpg-agent.extra";
+                }
+                {
+                  bind.address = "${socketDir}/S.gpg-agent.ssh";
+                  host.address = "${socketDir}/S.gpg-agent.ssh";
+                }
+              ];
+            };
+            "desktop.home" = {
+              user = "contre";
+              forwardAgent = true;
+              remoteForwards = [
+                {
+                  bind.address = "${socketDir}/S.gpg-agent";
+                  host.address = "${socketDir}/S.gpg-agent.extra";
+                }
+                {
+                  bind.address = "${socketDir}/S.gpg-agent.ssh";
+                  host.address = "${socketDir}/S.gpg-agent.ssh";
+                }
+              ];
+            };
             "server.home" = {
               user = "contre";
               forwardAgent = true;
@@ -49,9 +77,6 @@ in
 
           extraConfig = ''
             PKCS11Provider ${pkgs.opensc}/lib/opensc-pkcs11.so
-            Host notebook.home, desktop.home
-              ForwardAgent yes
-              ExitOnForwardFailure yes
           '';
         };
       }

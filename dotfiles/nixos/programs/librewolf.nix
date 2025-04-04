@@ -54,7 +54,7 @@ in
       SearchBar = "unified"; # alternative: "separate"
       SecurityDevices = {
         Add = {
-          "OpenSC PKCS#11" = "${pkgs.opensc}/lib/opensc-pkcs11.so";
+          "OpenSC PKCS#11" = "${unstable.opensc}/lib/opensc-pkcs11.so";
         };
       };
     };

@@ -6,20 +6,20 @@
   ];
 
   security.rtkit.enable = true;
-# openssl s_client -connect server.home:443 </dev/null 2>/dev/null | openssl x509 -inform pem -text
+  # Leaf certificate # openssl s_client -connect server.home:443 </dev/null 2>/dev/null | openssl x509 -inform pem -text
+  # Root CA #  curl -s "http://server.home:2019/pki/ca/local" | jq -r '.root_certificate' > caddy-root.crt
   security.pki.certificates = [
     ''
-      -----BEGIN CERTIFICATE-----
-      MIIBwDCCAWagAwIBAgIRALGemIvgJcC1EZiaVt15HPYwCgYIKoZIzj0EAwIwMzEx
-      MC8GA1UEAxMoQ2FkZHkgTG9jYWwgQXV0aG9yaXR5IC0gRUNDIEludGVybWVkaWF0
-      ZTAeFw0yNTA0MDIyMjA2NTVaFw0yNTA0MDMxMDA2NTVaMAAwWTATBgcqhkjOPQIB
-      BggqhkjOPQMBBwNCAATsE18tx6sRq0o20UR5JFr4xjx1wij5TqUVJneiE8mb6uKR
-      6gUZ9ZYU1CjuJzlzJb8uKrC3s243EfUH1yM7/VE2o4GNMIGKMA4GA1UdDwEB/wQE
-      AwIHgDAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwHQYDVR0OBBYEFGEe
-      c0KBJ2GkJgvZtn7w3kXZ9ghaMB8GA1UdIwQYMBaAFA2XKRKTqZTxAvBc/sh4EoW/
-      ji3tMBkGA1UdEQEB/wQPMA2CC3NlcnZlci5ob21lMAoGCCqGSM49BAMCA0gAMEUC
-      IFghdRMEy1t2IXV00dlZIwWfn6Mdeuhm6RxiRHbQahZHAiEA4SfarpvhXGtvE/fA
-      3YbElMreWwZ9x4gtJtFhA3qrjHY=
+            -----BEGIN CERTIFICATE-----
+      MIIBpDCCAUqgAwIBAgIRAIp1NvndtzJakxQnNDmuCy0wCgYIKoZIzj0EAwIwMDEu
+      MCwGA1UEAxMlQ2FkZHkgTG9jYWwgQXV0aG9yaXR5IC0gMjAyNSBFQ0MgUm9vdDAe
+      Fw0yNTA0MDIyMjA2NTVaFw0zNTAyMDkyMjA2NTVaMDAxLjAsBgNVBAMTJUNhZGR5
+      IExvY2FsIEF1dGhvcml0eSAtIDIwMjUgRUNDIFJvb3QwWTATBgcqhkjOPQIBBggq
+      hkjOPQMBBwNCAATChJxbVjC+cLi+4hl3hTfo8yFSTWdRl3IGAYSicv+dlXAIQ4ZL
+      XxTlvIEkPxvWwRcIq7mYsVEO9VTzIIiE00XJo0UwQzAOBgNVHQ8BAf8EBAMCAQYw
+      EgYDVR0TAQH/BAgwBgEB/wIBATAdBgNVHQ4EFgQUk9zWGupf/ca5wOSuzos37LRa
+      790wCgYIKoZIzj0EAwIDSAAwRQIhAOIo695yzPcsviUko6k48lsYu/LvfSvQv21G
+      obb+QuBwAiAJmOGAop26OqVx3xsWurOThepCIxr5o1XF5uk/8uTqfQ==
       -----END CERTIFICATE-----
     ''
   ];
