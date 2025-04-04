@@ -6,7 +6,7 @@ background-blur = true
 split-divider-color = #98BB6C
 confirm-close-surface = false
 cursor-style-blink = true
-font-size = 11
+font-size = 14
 scrollback-limit = 10_000
 background = #1a1a19
 cursor-color = #d1d1d1
@@ -20,5 +20,3 @@ keybind = ctrl+alt+down=unbind
 keybind = ctrl+t=unbind
 keybind = ctrl+w=unbind
 
-keybind = ctrl+left=SendChars("\u001b[1;5D")
-keybind = ctrl+right=SendChars("\u001b[1;5C")
