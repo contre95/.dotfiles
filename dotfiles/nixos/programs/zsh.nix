@@ -25,6 +25,7 @@ in
       zstyle ":completion:*" matcher-list "" "m:{a-zA-Z}={A-Za-z}" "r:|[._-]=* r:|=*" "l:|=* r:|=*"
       PS1="%F{#008000}%B%n@%m%b %1~:%f"
       ${pkgs.lib.optionalString (whichMachine == "macbook") ''
+        source <(fzf --zsh)
         eval $(ocm handler init)'
         export GPG_TTY=$(tty)
         export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
@@ -56,7 +57,7 @@ in
       pu = "podman unshare";
       nsh = "nix-shell -p";
       gst = "git status";
-      cdr = "cd $(git rev-parse --show-toplevel)";
+      cdr = "cd \$(git rev-parse --show-toplevel)";
       gd = "git diff";
       ga = "git add";
       gap = "git add --patch";
