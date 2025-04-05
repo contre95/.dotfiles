@@ -10,7 +10,7 @@
   # Root CA #  curl -s "http://server.home:2019/pki/ca/local" | jq -r '.root_certificate' > caddy-root.crt
   security.pki.certificates = [
     ''
-            -----BEGIN CERTIFICATE-----
+      -----BEGIN CERTIFICATE-----
       MIIBpDCCAUqgAwIBAgIRAIp1NvndtzJakxQnNDmuCy0wCgYIKoZIzj0EAwIwMDEu
       MCwGA1UEAxMlQ2FkZHkgTG9jYWwgQXV0aG9yaXR5IC0gMjAyNSBFQ0MgUm9vdDAe
       Fw0yNTA0MDIyMjA2NTVaFw0zNTAyMDkyMjA2NTVaMDAxLjAsBgNVBAMTJUNhZGR5
