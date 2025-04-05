@@ -13,6 +13,8 @@ in
       {
         environment.systemPackages = with pkgs; [
           r2modman
+          mangohud
+          gamemode
           file
         ];
         programs.steam = {
@@ -23,7 +25,6 @@ in
           extraCompatPackages = with pkgs; [
             # proton-ge-bin
             # lutris
-            # mangohud
           ];
         };
       }
