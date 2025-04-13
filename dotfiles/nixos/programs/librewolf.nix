@@ -1,5 +1,7 @@
 { pkgs, ... }:
 let
+  zen-flake = builtins.getFlake "github:MarceColl/zen-browser-flake";
+  zenBrowser = zen-flake.packages.x86_64-linux.default;
   unstable = import <nixos-unstable> {
     config = {
       allowUnfree = true;
@@ -7,6 +9,7 @@ let
   };
 in
 {
+  home.packages = [ zenBrowser ];
   programs.librewolf = {
     # package = (pkgs.wrapFirefox (pkgs.firefox-devedition-unwrapped.override { pipewireSupport = true; }) { });
     package = unstable.librewolf;
@@ -200,7 +203,7 @@ in
           icon = "chill";
           color = "blue";
         };
-       biyuya  = {
+        biyuya = {
           id = 3;
           icon = "dollar";
           color = "green";
@@ -231,7 +234,7 @@ in
         "full-screen-api.ignore-widgets" = true; # fullscreen within window
         "browser.toolbars.bookmarks.visibility" = "never"; # hide bookmarks toolbar
         "browser.aboutConfig.showWarning" = false; # disable warning about about:config
-        "media.videocontrols.picture-in-picture.video-toggle.enabled" = true; # disable picture in picture button
+        "media.videocontrols.picture-in-picture.video-toggle.enabled" = false; # disable picture in picture button
 
         # Privacy
         "privacy.resistFingerprinting" = false;

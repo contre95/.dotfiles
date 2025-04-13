@@ -1,13 +1,35 @@
 -- Open help always vertical
 vim.api.nvim_create_autocmd("FileType", {
   pattern = "help",
-  command = "wincmd L"
+  command = "wincmd L",
 })
 
 -- Set Caddyfile
-vim.api.nvim_create_autocmd({"BufNewFile", "BufRead"}, {
-  pattern = {"Caddyfile", "*.Caddyfile", "Caddyfile.*"},
-  command = "set ft=caddyfile"
+vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead" }, {
+  pattern = { "Caddyfile", "*.Caddyfile", "Caddyfile.*" },
+  command = "set ft=caddyfile",
+})
+
+-- -- Set HTMX
+--  vim.api.nvim_create_autocmd("Filetype", {
+--  	pattern = { "html", "shtml", "htm" },
+--  	callback = function()
+--  		vim.lsp.start({
+--  			name = "superhtml",
+--  			cmd = { "superhtml", "lsp" },
+--  			root_dir = vim.fs.dirname(vim.fs.find({".git"}, { upward = true })[1])
+--  		})
+--  	end
+--  })
+
+-- Set Golang
+vim.api.nvim_create_autocmd("BufWritePre", {
+  pattern = "*.go",
+  callback = function(args)
+    vim.lsp.buf.format()
+    vim.lsp.buf.code_action({ context = { only = { "source.organizeImports" } }, apply = true })
+    vim.lsp.buf.code_action({ context = { only = { "source.fixAll" } }, apply = true })
+  end,
 })
 
 -- Set Markdown
@@ -20,13 +42,13 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.opt_local.relativenumber = false
     -- vim.opt_local.textwidth = 80
     -- vim.opt_local.colorcolumn = "-2"
-  end
+  end,
 })
 
 -- Set GraphQL
-vim.api.nvim_create_autocmd({"BufRead", "BufNewFile"}, {
-  pattern = {"*.graphql", "*.graphqls", "*.gql"},
-  command = "setfiletype graphql"
+vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
+  pattern = { "*.graphql", "*.graphqls", "*.gql" },
+  command = "setfiletype graphql",
 })
 
 -- Set GitCommits
@@ -35,40 +57,39 @@ vim.api.nvim_create_autocmd("FileType", {
   callback = function()
     vim.opt_local.spell = true
     vim.cmd("setlocal complete+=kspell")
-  end
+  end,
 })
 
 -- Set Dockerfile filetype
 vim.api.nvim_create_augroup("docker_ft_detection", { clear = true })
-vim.api.nvim_create_autocmd({"BufRead", "BufNewFile"}, {
+vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
   group = "docker_ft_detection",
   pattern = "Dockerfile.*",
-  command = "set filetype=dockerfile"
+  command = "set filetype=dockerfile",
 })
-
 
 -- Set Julia filetype
 vim.api.nvim_create_augroup("julia_ft_detection", { clear = true })
-vim.api.nvim_create_autocmd({"BufRead", "BufNewFile"}, {
+vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
   group = "julia_ft_detection",
   pattern = "*.jl",
-  command = "set filetype=julia"
+  command = "set filetype=julia",
 })
 
 -- Set Hyprland
 vim.api.nvim_create_augroup("hypr_ftdetect", { clear = true })
-vim.api.nvim_create_autocmd({"BufRead", "BufNewFile"}, {
+vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
   group = "hypr_ftdetect",
-  pattern = {"*hypr/*.conf", "*hypr/*/*.conf"},
-  command = "set ft=hypr"
+  pattern = { "*hypr/*.conf", "*hypr/*/*.conf" },
+  command = "set ft=hypr",
 })
 
 -- Set Rofi style filetype
 vim.api.nvim_create_augroup("roficss_ft_detection", { clear = true })
-vim.api.nvim_create_autocmd({"BufNewFile", "BufRead"}, {
+vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead" }, {
   group = "roficss_ft_detection",
   pattern = "*.rasi",
-  command = "set filetype=css"
+  command = "set filetype=css",
 })
 
 -- Sementary of filetypes autocommands
