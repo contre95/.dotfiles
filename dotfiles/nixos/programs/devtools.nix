@@ -94,6 +94,7 @@ in
     # html/x
     html-tidy
     htmx-lsp
+    templ
     hugo
     vscode-langservers-extracted # for html lsp
 
