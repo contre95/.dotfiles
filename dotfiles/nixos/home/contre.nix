@@ -40,7 +40,7 @@ let
     bandwhich
     coreutils
     grimblast
-    hyprpicker
+    unstable.hyprpicker
     util-linux
     xorg.xhost
     easyeffects

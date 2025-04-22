@@ -23,6 +23,7 @@ require("config.commands")
 require("config.mappings")
 require("config.autocommands")
 
-vim.cmd("colorscheme kanagawa")
+-- vim.cmd("colorscheme kanagawa")
+vim.cmd("colorscheme immortal")
 --
 ---- Vim Imports

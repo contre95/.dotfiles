@@ -9,8 +9,10 @@ in
 {
   # langs, linters, formatters, lsps, etc
   home.packages = with pkgs; [
+
     # Text editor
     unstable.neovim
+    unstable.code-cursor
 
     # Cloud
     awscli
@@ -80,6 +82,7 @@ in
     jq
     biome
     nodePackages.jsonlint
+    # pkgs.nodePackages.mcp-hub
     pkgs.nodePackages.typescript-language-server
     nodejs_20
     # unstable.nodejs-slim
