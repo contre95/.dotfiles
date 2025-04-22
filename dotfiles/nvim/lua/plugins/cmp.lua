@@ -27,7 +27,7 @@ return { -- Autocompletion
       },
     },
     "saadparwaiz1/cmp_luasnip",
-    "codeium.nvim",
+    -- "codeium.nvim",
     "hrsh7th/cmp-nvim-lsp",
     "onsails/lspkind.nvim",
     "hrsh7th/cmp-path",
@@ -150,7 +150,7 @@ return { -- Autocompletion
       sources = {
         { name = "nvim_lsp" },
         { name = "copilot" },
-        { name = "codeium" },
+        -- { name = "codeium" },
         { name = "buffer" },
         { name = "luasnip" },
         { name = "path" },
