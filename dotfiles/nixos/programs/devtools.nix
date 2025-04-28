@@ -102,7 +102,7 @@ in
     vscode-langservers-extracted # for html lsp
 
     # sql
-    # sqlite
+    sqlite
     sqlfluff
     mycli
 
