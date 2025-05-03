@@ -13,7 +13,7 @@ in
     then
       {
         environment.systemPackages = [
-          unstable.lmstudio
+          # unstable.lmstudio
         ];
         # # AI
         networking.firewall = {
@@ -22,16 +22,16 @@ in
           ];
         };
 
-        # services.ollama = {
-        #   host = "0.0.0.0";
-        #   # models = "/home/contre/games/models";
-        #   enable = true;
-        #   package = unstable.ollama-cuda;
-        #   acceleration = "cuda";
-        #   # loadModels = [
-        #   #   "deepseek-r1:8b"
-        #   # ];
-        # };
+        services.ollama = {
+          host = "0.0.0.0";
+          models = "/home/contre/games/models";
+          enable = true;
+          package = unstable.ollama-cuda;
+          acceleration = "cuda";
+          # loadModels = [
+          #   "deepseek-r1:8b"
+          # ];
+        };
         #
       #   services.open-webui = {
       #     enable = true;
