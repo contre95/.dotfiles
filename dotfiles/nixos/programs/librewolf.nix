@@ -22,6 +22,11 @@ in
           installation_mode = "force_installed";
         };
 
+        "enhancerforyoutube@maximerf.addons.mozilla.org" = {
+          installation_mode = "normal_installed";
+          install_url = "https://addons.mozilla.org/firefox/downloads/latest/enhancer-for-youtube/latest.xpi";
+        };
+
         "sponsorBlocker@ajay.app" = {
           install_url = "https://addons.mozilla.org/firefox/downloads/latest/sponsorblock/latest.xpi";
           installation_mode = "force_installed";
