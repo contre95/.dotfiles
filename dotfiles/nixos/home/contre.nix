@@ -94,6 +94,7 @@ in
           ++ [
             pkgs.lingot
             pkgs.picard
+            pkgs.kid3
             pkgs.scrcpy
             pkgs.blender
             pkgs.spotify
