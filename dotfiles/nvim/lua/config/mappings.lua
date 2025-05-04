@@ -64,3 +64,16 @@ vim.keymap.set("n", "<leader>r", ":so %<CR>")
 -- Encode/Decode selection to/from base64
 vim.keymap.set("v", "<leader>u", [[c<c-r>=system('base64 -w 0', @")<cr><esc>]])
 vim.keymap.set("v", "<leader>y", [[c<c-r>=system('base64 --decode', @")<cr><esc>]])
+
+local colorschemes = { "immortal", "emperor", "kanagawa-dragon", "github_dark_default"}
+local current_index = 0
+
+vim.keymap.set("n", "<C-n>", function()
+  current_index = current_index + 1
+  if current_index > #colorschemes then
+    current_index = 1
+  end
+  vim.cmd("colorscheme " .. colorschemes[current_index])
+  print("Colorscheme: " .. colorschemes[current_index])
+end)
+
