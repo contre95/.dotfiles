@@ -5,7 +5,7 @@ return {
 	opts = {
 		provider = "ollama",
 		ollama = {
-			model = "qwq:32b",
+			model = "deepseek-r1:8b",
 		},
 	},
 	-- if you want to build from source then do `make BUILD_FROM_SOURCE=true`

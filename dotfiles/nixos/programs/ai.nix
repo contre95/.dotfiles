@@ -9,8 +9,7 @@ let
 in
 {
   config =
-    if lib.elem whichMachine [ "desktop" ]
-    then
+    if lib.elem whichMachine [ "desktop" ] then
       {
         environment.systemPackages = [
           # unstable.lmstudio
@@ -21,28 +20,27 @@ in
             11434
           ];
         };
-
         services.ollama = {
           host = "0.0.0.0";
-          models = "/home/contre/games/models";
+          # models = "/home/heavy-assets/models";
           enable = true;
           package = unstable.ollama-cuda;
           acceleration = "cuda";
-          # loadModels = [
-          #   "deepseek-r1:8b"
-          # ];
+          loadModels = [
+            "deepseek-r1:8b"
+          ];
         };
         #
-      #   services.open-webui = {
-      #     enable = true;
-      #     environment = {
-      #       # ANONYMIZED_TELEMETRY = "False";
-      #       # BYPASS_MODEL_ACCESS_CONTROL = "True";
-      #       # DO_NOT_TRACK = "True";
-      #       # HOME = ".";
-      #       # SCARF_NO_ANALYTICS = "True";
-      #     };
-      #   };
+        #   services.open-webui = {
+        #     enable = true;
+        #     environment = {
+        #       # ANONYMIZED_TELEMETRY = "False";
+        #       # BYPASS_MODEL_ACCESS_CONTROL = "True";
+        #       # DO_NOT_TRACK = "True";
+        #       # HOME = ".";
+        #       # SCARF_NO_ANALYTICS = "True";
+        #     };
+        #   };
       }
     else
       { };
