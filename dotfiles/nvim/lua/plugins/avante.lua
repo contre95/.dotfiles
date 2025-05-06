@@ -8,7 +8,7 @@ return {
 		vendors = {
 			deepseek = {
 				__inherited_from = "openai",
-				api_key_name = "sk-86a1e5cb8b084337ae80d545e152f62b",
+				api_key_name = "API_KEY",
 				endpoint = "https://api.deepseek.com",
 				model = "deepseek-coder",
 				max_tokens = 8192,
