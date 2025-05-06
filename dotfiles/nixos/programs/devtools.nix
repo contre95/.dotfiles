@@ -12,7 +12,7 @@ in
 
     # Text editor
     unstable.neovim
-    unstable.code-cursor
+    # unstable.code-cursor
 
     # Cloud
     awscli
