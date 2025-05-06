@@ -48,6 +48,7 @@
   hardware.amdgpu.opencl.enable = true;
   hardware.enableRedistributableFirmware = true;
   environment.systemPackages = with pkgs; [
+    nvtopPackages.nvidia
     winetricks
     protonup
     vulkan-tools

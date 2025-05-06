@@ -64,6 +64,7 @@ vim.keymap.set("n", "<leader>r", ":so %<CR>")
 -- Encode/Decode selection to/from base64
 vim.keymap.set("v", "<leader>u", [[c<c-r>=system('base64 -w 0', @")<cr><esc>]])
 vim.keymap.set("v", "<leader>y", [[c<c-r>=system('base64 --decode', @")<cr><esc>]])
+vim.keymap.set("n", "<C-g>", function() require("avante").toggle() end)
 
 local colorschemes = { "immortal", "emperor", "kanagawa-dragon", "github_dark_default"}
 local current_index = 0
