@@ -1,7 +1,7 @@
 { pkgs, ... }:
 let
-  zen-flake = builtins.getFlake "github:MarceColl/zen-browser-flake";
-  zenBrowser = zen-flake.packages.x86_64-linux.default;
+  # zen-flake = builtins.getFlake "github:MarceColl/zen-browser-flake";
+  # zenBrowser = zen-flake.packages.x86_64-linux.default;
   unstable = import <nixos-unstable> {
     config = {
       allowUnfree = true;
@@ -9,10 +9,10 @@ let
   };
 in
 {
-  home.packages = [ zenBrowser ];
+  # home.packages = [ zenBrowser ];
   programs.librewolf = {
     # package = (pkgs.wrapFirefox (pkgs.firefox-devedition-unwrapped.override { pipewireSupport = true; }) { });
-    package = unstable.librewolf;
+    package = pkgs.librewolf;
     enable = true;
     policies = {
       ExtensionSettings = {
@@ -265,10 +265,13 @@ in
         "dom.private-attribution.submission.enabled" = false; # stop doing dumb stuff mozilla
         "browser.protections_panel.infoMessage.seen" = true; # disable tracking protection info
 
-        # Disable telemetry
-        "toolkit.telemetry.enabled" = false;
+        # Theme
         "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
         "svg.context-properties.content.enabled" = true;
+        "layout.css.color-mix.enabled" = true;
+
+        # Disable telemetry
+        "toolkit.telemetry.enabled" = false;
         "toolkit.telemetry.unified" = false;
         "browser.ping-centre.telemetry" = false;
         "toolkit.telemetry.archive.enabled" = false;
@@ -283,7 +286,6 @@ in
         "toolkit.telemetry.shutdownPingSender.enabled" = false;
         "browser.newtabpage.activity-stream.feeds.telemetry" = false;
 
-        # let me close and open tabs without confirmation
         "browser.tabs.loadInBackground" = true; # open new tab in background
         "browser.tabs.loadBookmarksInTabs" = true; # open bookmarks in new tab
         "browser.tabs.warnOnOpen" = false; # don't warn when opening multiple tabs
