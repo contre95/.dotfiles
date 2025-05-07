@@ -40,7 +40,6 @@ let
     bandwhich
     coreutils
     grimblast
-    unstable.hyprpicker
     util-linux
     xorg.xhost
     easyeffects
@@ -50,6 +49,7 @@ let
     android-tools
     yubikey-manager
     alacritty-theme
+    unstable.hyprpicker
     grim # For screenshots
     slurp # For screenshots
     tmuxPlugins.tmux-thumbs
@@ -97,7 +97,6 @@ in
             pkgs.kid3
             pkgs.scrcpy
             pkgs.blender
-            pkgs.spotify
             unstable.telegram-desktop
             unstable.simplex-chat-desktop
           ]
@@ -136,9 +135,9 @@ in
         librewolf = {
           target = ".librewolf/default/chrome";
           source = pkgs.fetchzip {
-            url = "https://github.com/datguypiko/Firefox-Mod-Blur/releases/latest/download/v2.14_ModBlur-Firefox_v133.zip";
+            url = "https://github.com/datguypiko/Firefox-Mod-Blur/archive/refs/heads/master.zip";
             hash = "sha256-eO0N96JjpmcQhhofDQ5zLA0Mz8/G/Uzh6/i4Tq59uUw=";
-            stripRoot = false;
+            # stripRoot = false;
           };
         };
         neovim = {
