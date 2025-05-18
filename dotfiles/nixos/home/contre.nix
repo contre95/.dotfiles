@@ -112,7 +112,7 @@ in
             unstable.simplex-chat-desktop
           ]
         else if "${whichMachine}" == "server" then
-          commonPkgs ++ [ ]
+          commonPkgs ++ [ pkgs.picard pkgs.beets ]
         else
           throw "Unknown OS";
 
