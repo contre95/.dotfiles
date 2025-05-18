@@ -33,6 +33,7 @@ let
     gettext
     gparted
     pcmanfm
+    ntfy-sh
     kubectl
     cliphist
     wl-kbptr
@@ -94,7 +95,7 @@ in
           ++ [
             pkgs.lingot
             pkgs.picard
-            pkgs.kid3
+            # pkgs.kid3
             pkgs.scrcpy
             pkgs.blender
             unstable.telegram-desktop
