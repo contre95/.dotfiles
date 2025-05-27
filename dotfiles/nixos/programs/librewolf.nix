@@ -73,10 +73,10 @@ in
         force = true;
         engines = {
           # don't need these default ones
-          "Amazon.com".metaData.hidden = true;
-          "Bing".metaData.hidden = true;
-          "eBay".metaData.hidden = true;
-          "DuckDuckGo" = {
+          "amazondotcom-es".metaData.hidden = true;
+          "bing".metaData.hidden = true;
+          "ebay".metaData.hidden = true;
+          "ddg" = {
             urls = [
               {
                 template = "https://duckduckgo.com";
@@ -90,7 +90,7 @@ in
             ];
             definedAliases = [ ",d" ];
           };
-          "Google" = {
+          "google" = {
             urls = [
               {
                 template = "https://google.com/search";
@@ -136,7 +136,7 @@ in
             ];
             definedAliases = [ "np" ];
           };
-          "YouTube" = {
+          "youtube" = {
             urls = [
               {
                 template = "https://www.youtube.com/results";
@@ -193,7 +193,7 @@ in
             definedAliases = [ "gh" ];
           };
         };
-        default = "DuckDuckGo";
+        default = "ddg";
       };
       id = 0;
       containersForce = true;

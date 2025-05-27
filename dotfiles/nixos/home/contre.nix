@@ -95,6 +95,7 @@ in
           ++ [
             pkgs.lingot
             pkgs.picard
+            unstable.puddletag
             # pkgs.kid3
             pkgs.scrcpy
             pkgs.blender
@@ -199,6 +200,6 @@ in
           source = config.lib.file.mkOutOfStoreSymlink /home/canus/dotfiles/ghostty;
         };
       };
-      home.stateVersion = "24.11";
+      home.stateVersion = "25.05";
     };
 }

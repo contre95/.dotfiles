@@ -27,7 +27,7 @@ in
           enableExtraSocket = true;
           grabKeyboardAndMouse = true;
           enableZshIntegration = true;
-          pinentryPackage = pkgs.pinentry-gnome3;
+          pinentry.package = pkgs.pinentry-gnome3;
           sshKeys = [ "B38C2E9A5402A38D13E510DADD0B71744684EA35" ]; # [A] Subkey with auth capabilities.
           # extraConfig = ''
           #   extra-socket /run/user/1000/gnupg/S.gpg-agent.extra

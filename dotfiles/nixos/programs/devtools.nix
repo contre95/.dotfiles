@@ -116,7 +116,7 @@ in
     gcc
     ccls
     gnumake
-    rocmPackages_5.llvm.clang-unwrapped
+    # rocmPackages_5.llvm.clang-unwrapped
 
     # yaml
     yamlfmt

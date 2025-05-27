@@ -17,7 +17,7 @@ in
   programs.zsh = {
     enable = true;
 
-    initExtra = ''
+    initContent = ''
       source $MY_FOLDER/dotfiles/zsh/.p10k.zsh
       eval "$(zoxide init zsh)"
       bindkey "^[[1;5C" forward-word
