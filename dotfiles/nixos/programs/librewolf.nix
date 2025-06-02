@@ -61,7 +61,10 @@ in
       DisplayMenuBar = "never"; # alternatives: "always", "never" or "default-on"
       SearchBar = "unified"; # alternative: "separate"
       SecurityDevices = {
-        # Use a proxy module rather than `nixpkgs.config.firefox.smartcardSupport = true`
+        Add = {
+          "OpenSC PKCS#11" = "${unstable.opensc}/lib/opensc-pkcs11.so";
+        };
+        # # Use a proxy module rather than `nixpkgs.config.firefox.smartcardSupport = true`
         "PKCS#11 Proxy Module" = "${pkgs.p11-kit}/lib/p11-kit-proxy.so";
       };
     };

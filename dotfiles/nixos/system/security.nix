@@ -8,6 +8,12 @@
   security.rtkit.enable = true;
   # Leaf certificate # openssl s_client -connect server.home:443 </dev/null 2>/dev/null | openssl x509 -inform pem -text
   # Root CA #  curl -s "http://server.home:2019/pki/ca/local" | jq -r '.root_certificate' > caddy-root.crt
+    environment.etc."pkcs11/modules/onepin-opensc-pkcs11".text = ''
+    module: ${pkgs.opensc}/lib/onepin-opensc-pkcs11.so
+    critical: yes
+  '';
+  
+
   security.pki.certificates = [
     ''
       -----BEGIN CERTIFICATE-----
