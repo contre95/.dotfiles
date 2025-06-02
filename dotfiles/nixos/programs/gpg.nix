@@ -27,7 +27,8 @@ in
           enableExtraSocket = true;
           grabKeyboardAndMouse = true;
           enableZshIntegration = true;
-          pinentry.package = pkgs.pinentry-gnome3;
+          pinentry.package =
+            if lib.elem whichMachine [ "desktop" ] then pkgs.pinentry-gnome3 else pkgs.pinentry-curses;
           sshKeys = [ "B38C2E9A5402A38D13E510DADD0B71744684EA35" ]; # [A] Subkey with auth capabilities.
           # extraConfig = ''
           #   extra-socket /run/user/1000/gnupg/S.gpg-agent.extra
@@ -59,10 +60,19 @@ in
       {
         programs.gpg = {
           enable = true;
+          homedir = "${config.xdg.dataHome}/gnupg";
+          settings = {
+            keyserver = "hkps://keys.openpgp.org";
+            use-agent = true;
+          };
           scdaemonSettings = {
-            reader-port = "Yubico Yubi";
-            pcsc-driver = "${lib.getLib pkgs.pcsclite}/lib/libpcsclite.so";
+            reader-port = "Yubico.com Yubikey 4/5 OTP+U2F+CCID";
+            # pcsc-driver = "${lib.getLib pkgs.pcsclite}/lib/libpcsclite.so";
+            pcsc-driver = "${pkgs.pcsclite.lib}/lib/libpcsclite.so";
             pcsc-shared = true;
+            ## with pcsc-shared the pin is asked every time, this fixes it
+            ## https://dev.gnupg.org/T5436
+            # disable-application = "piv";
             disable-ccid = false;
           };
           # settings.no-autostart = true; # don’t autostart gpg-agent if not started
@@ -71,7 +81,6 @@ in
           # };
           # mutableKeys = true;
           # mutableTrust = false;
-          # homedir = "${config.xdg.dataHome}/gnupg";
           publicKeys = [
             {
               source = ../contre.pub;

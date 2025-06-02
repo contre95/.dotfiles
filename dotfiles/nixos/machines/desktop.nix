@@ -45,6 +45,11 @@
   # System packages
   # imports = [ ../programs/ai.nix ];
 
+  hardware.opengl = {
+    enable = true;
+    driSupport32Bit = true; # Needed for 32-bit games
+  };
+
   hardware.amdgpu.opencl.enable = true;
   hardware.enableRedistributableFirmware = true;
   environment.systemPackages = with pkgs; [
