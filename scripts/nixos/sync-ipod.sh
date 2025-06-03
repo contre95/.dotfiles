@@ -1,36 +1,20 @@
-#!/nix/store/$(realpath $(which bash) | cut -d/ -f4-)/bin/bash
+#!/run/current-system/sw/bin/bash
 
-echo hi
-#
-# DISK_UUID="a55281ac"
-# MOUNT_POINT="/mnt/ipod-classic"
-# TARGET_FOLDER="/mnt/SSD/config/emby/data/userplaylists"
-#
-# exec >> /var/log/sync-disk.log 2>&1
-# echo "[$(date)] Disk sync triggered"
-#
-# sleep 2
-#
-# DEVICE=$(blkid -U "$DISK_UUID")
-#
-# if [ -z "$DEVICE" ]; then
-#   echo "Disk not found"
-#   curl -d "Disk $DISK_UUID not found" https://ntfy.contre.io/all
-#   exit 1
-# fi
-#
-# mkdir -p "$MOUNT_POINT"
-#
-# mount "$DEVICE" "$MOUNT_POINT"
-#
-# if [ $? -ne 0 ]; then
-#   curl -d "Mount failed for $DEVICE" https://ntfy.contre.io/all
-#   exit 1
-# fi
-#
-# rsync -av --delete "$MOUNT_POINT/" "$TARGET_FOLDER"
-#
-# curl -d "Disk sync completed successfully for $DEVICE" https://ntfy.contre.io/all
-#
-# umount "$MOUNT_POINT"
-#
+# Normalize filenames
+
+# Capture rsync output (stdout + stderr) and preserve line breaks
+CONVERT=$(
+  convmv -r -f utf-8 -t utf-8 --nfc --notest /mnt/HDD2/music/  2>&1
+)
+RSYNC=$(
+  rsync -avr --ignore-existing --include='*' --stats --exclude='*.lrc' /mnt/HDD2/music/ /mnt/ipod/Music/ 2>&1 |
+    sed '0,/^$/d' | grep -e "Number of" -e "File list size"
+)
+
+# Perform playlist sync and capture any errors (optional)
+/home/contre/.nix-profile/bin/rsync -av --inplace --info=progress2 /mnt/SSD/config/emby/data/userplaylists/ /mnt/ipod/Playlists 2>&1
+
+# Combine outputs
+
+# Send via curl using --data-urlencode to preserve formatting
+/run/current-system/sw/bin/curl -s -X POST --data "iPod Sync ✅ --- $CONVERT - $RSYNC" https://ntfy.contre.io/all

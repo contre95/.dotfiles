@@ -23,14 +23,13 @@
 
   # Podman /udev rules for dongles on server
 
-  systemd.services."sync-ipod" = {
+  systemd.services."ipod" = {
     description = "Sync files from iPod when mounted";
     wantedBy = [ "mnt-ipod.mount" ]; # Trigger after the mount is ready
     after = [ "mnt-ipod.mount" ];
     serviceConfig = {
       Type = "oneshot";
       ExecStart = ''/home/canus/scripts/nixos/sync-ipod.sh'';
-      # Adjust paths as needed
       User = "contre"; # Ensure this user has access
     };
   };
