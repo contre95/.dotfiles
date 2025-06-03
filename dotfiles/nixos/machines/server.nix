@@ -23,8 +23,32 @@
 
   # Podman /udev rules for dongles on server
 
+  systemd.services."sync-ipod" = {
+    description = "Sync files from iPod when mounted";
+    wantedBy = [ "mnt-ipod.mount" ]; # Trigger after the mount is ready
+    after = [ "mnt-ipod.mount" ];
+    serviceConfig = {
+      Type = "oneshot";
+      ExecStart = ''/home/canus/scripts/nixos/sync-ipod.sh'';
+      # Adjust paths as needed
+      User = "contre"; # Ensure this user has access
+    };
+  };
+
+  # Mount unit for the iPod
+  systemd.mounts = [
+    {
+      what = "/dev/disk/by-uuid/8722-166E"; # UUID for /dev/sdf1
+      where = "/mnt/ipod"; # Mount point
+      type = "vfat"; # Filesystem type
+      options = "nofail,x-systemd.automount,uid=1000,gid=100"; # Optional: adjust UID/GID
+    }
+  ];
+
+  # udev rule to trigger mount when device is plugged in
   services.udev.extraRules = ''
     KERNEL=="ttyUSB0", MODE:="666"
+    ACTION=="add", ENV{ID_FS_UUID}=="8722-166E", TAG+="systemd", ENV{SYSTEMD_WANTS}+="mnt-ipod.mount"
   '';
 
   # User process persist after sessions logout since it's a server.
