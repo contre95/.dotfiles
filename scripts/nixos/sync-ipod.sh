@@ -4,7 +4,7 @@
 
 # Capture rsync output (stdout + stderr) and preserve line breaks
 CONVERT=$(
-  convmv -r -f utf-8 -t utf-8 --nfc --notest /mnt/HDD2/music/  2>&1
+  /home/contre/.nix-profile/bin/convmv -r -f utf-8 -t utf-8 --nfc --notest /mnt/HDD2/music/  2>&1
 )
 RSYNC=$(
   rsync -avr --ignore-existing --include='*' --stats --exclude='*.lrc' /mnt/HDD2/music/ /mnt/ipod/Music/ 2>&1 |
