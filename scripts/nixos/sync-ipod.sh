@@ -7,8 +7,8 @@ CONVERT=$(
   /home/contre/.nix-profile/bin/convmv -r -f utf-8 -t utf-8 --nfc --notest /mnt/HDD2/music/  2>&1
 )
 RSYNC=$(
-  rsync -avr --ignore-existing --include='*' --stats --exclude='*.lrc' /mnt/HDD2/music/ /mnt/ipod/Music/ 2>&1 |
-    sed '0,/^$/d' | grep -e "Number of" -e "File list size"
+  /home/contre/.nix-profile/bin/rsync -avr --ignore-existing --include='*' --stats --exclude='*.lrc' /mnt/HDD2/music/ /mnt/ipod/Music/ 2>&1 |
+  sed '0,/^$/d' | grep -e "Number of" -e "File list size"
 )
 
 # Perform playlist sync and capture any errors (optional)
