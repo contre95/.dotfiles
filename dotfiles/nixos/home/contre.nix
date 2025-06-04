@@ -7,6 +7,7 @@ let
     };
   };
   commonPkgs = with pkgs; [
+    unstable.rockbox-utility
     fd
     feh
     imv
