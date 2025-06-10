@@ -25,6 +25,7 @@ let
     unzip
     ffmpeg
     mpg123
+    convmv # convmv -r -f utf-8 -t utf-8 --nfc --notest your_music_folder/ ;) 
     polkit
     smassh
     swappy
