@@ -67,6 +67,7 @@ in
   };
   hardware.graphics = {
     enable = true;
+    driSupport32Bit = true; # Needed for 32-bit games
     extraPackages = with pkgs; [
       intel-media-driver
       intel-vaapi-driver
