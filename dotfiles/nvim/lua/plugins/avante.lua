@@ -8,10 +8,9 @@ return {
 		vendors = {
 			deepseek = {
 				__inherited_from = "openai",
-				api_key_name = "API_KEY",
 				endpoint = "https://api.deepseek.com",
 				model = "deepseek-coder",
-				max_tokens = 8192,
+				-- max_tokens = 8192,
 			},
 			-- ollama = {
 			--   model = "codellama:7b-instruct",
@@ -84,9 +83,9 @@ return {
 			-- Make sure to set this up properly if you have lazy=true
 			"MeanderingProgrammer/render-markdown.nvim",
 			opts = {
-				file_types = { "Avante" },
+				file_types = { "markdown", "Avante" },
 			},
-			ft = { "Avante" },
+			ft = { "markdown", "Avante" },
 		},
 	},
 }

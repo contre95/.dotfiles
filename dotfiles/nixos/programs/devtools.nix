@@ -12,6 +12,7 @@ in
 
     # Text editor
     unstable.neovim
+    unstable.claude-code
     # unstable.code-cursor
 
     # Cloud
