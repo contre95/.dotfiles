@@ -35,8 +35,8 @@ PLAYLIST_SYNC=$(
 notify "iPod Sync ✅" "$CONVERT - $RSYNC"
 
 # Step 4: Unmount
-if /run/wrappers/bin/sudo /run/wrappers/bin/umount /mnt/ipod; then
-  notify "iPod Unmounted ☑️ " "Unmount failed"
+if /run/wrappers/bin/umount /mnt/ipod; then
+  notify "iPod Sync ☑️ " "iPod umounted"
 else
   notify "iPod Sync ⚠️" "Unmount failed"
 fi

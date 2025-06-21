@@ -7,7 +7,6 @@
     dates = "weekly";
     options = "--delete-older-than 30d";
   };
-
   # Cronjobs
 
   environment.variables = {
@@ -24,17 +23,17 @@
   # Podman /udev rules for dongles on server
 
   
-  security.sudo.extraRules = [
-    {
-      users = [ "contre" ];
-      commands = [
-        {
-          command = "/run/current-system/sw/bin/umount";
-          options = [ "NOPASSWD" ];
-        }
-      ];
-    }
-  ];
+  # security.sudo.extraRules = [
+  #   {
+  #     users = [ "contre" ];
+  #     commands = [
+  #       {
+  #         command = "/run/current-system/sw/bin/umount";
+  #         options = [ "NOPASSWD" ];
+  #       }
+  #     ];
+  #   }
+  # ];
 
   systemd.services."ipod" = {
     description = "Sync files from iPod when mounted";
@@ -43,7 +42,7 @@
     serviceConfig = {
       Type = "oneshot";
       ExecStart = "/home/canus/scripts/nixos/sync-ipod.sh";
-      User = "contre"; # Ensure this user has access
+      # User = ""; # Ensure this user has access
     };
   };
   # Mount unit for the iPod
