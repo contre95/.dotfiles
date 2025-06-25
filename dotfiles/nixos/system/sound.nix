@@ -3,8 +3,10 @@
 
   environment.systemPackages = with pkgs; [
     wireplumber
+    pamixer         # to detect volume changes (optional)
+    libnotify       # optional for notifications
+    pulseaudioFull
     pipewire
-    pamixer
     pavucontrol
     pw-volume
   ];

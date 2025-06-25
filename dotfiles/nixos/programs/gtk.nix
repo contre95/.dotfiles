@@ -13,7 +13,8 @@
     # hicolor-icon-theme # Base fallback icon theme
     # adwaita-icon-theme # Standard GNOME icons, excellent fallback
     # libsForQt5.breeze-icons # KDE's icon set, good for Qt apps
-    # dconf-editor # dconf editor
+    dconf-editor # dconf editor
+    dconf
     # gnome-tweaks # gnome tweaks
     # kdePackages.qt6gtk2
     # libsForQt5.qt5.qtwayland
