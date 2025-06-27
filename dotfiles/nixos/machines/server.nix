@@ -23,17 +23,17 @@
   # Podman /udev rules for dongles on server
 
   
-  # security.sudo.extraRules = [
-  #   {
-  #     users = [ "contre" ];
-  #     commands = [
-  #       {
-  #         command = "/run/current-system/sw/bin/umount";
-  #         options = [ "NOPASSWD" ];
-  #       }
-  #     ];
-  #   }
-  # ];
+  security.sudo.extraRules = [
+    {
+      users = [ "contre" ];
+      commands = [
+        {
+          command = "/run/current-system/sw/bin/umount";
+          options = [ "NOPASSWD" ];
+        }
+      ];
+    }
+  ];
 
   systemd.services."ipod" = {
     description = "Sync files from iPod when mounted";
