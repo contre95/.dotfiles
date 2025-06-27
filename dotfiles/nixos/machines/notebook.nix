@@ -67,7 +67,6 @@ in
   };
   hardware.graphics = {
     enable = true;
-    driSupport32Bit = true; # Needed for 32-bit games
     extraPackages = with pkgs; [
       intel-media-driver
       intel-vaapi-driver
@@ -75,13 +74,4 @@ in
       libvdpau-va-gl
     ];
   };
-
-  # # User specific
-  home-manager.users.contre =
-    { pkgs, ... }:
-    {
-      programs.git.signing.signByDefault = false;
-      home.packages = with pkgs; [ ];
-    };
-
 }
