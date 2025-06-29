@@ -7,6 +7,7 @@ let
     };
   };
   commonPkgs = with pkgs; [
+    unstable.rockbox-utility
     fd
     feh
     imv
@@ -36,6 +37,7 @@ let
     pcmanfm
     ntfy-sh
     kubectl
+    testdisk
     cliphist
     wl-kbptr
     alacritty
