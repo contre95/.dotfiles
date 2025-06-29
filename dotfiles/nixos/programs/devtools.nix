@@ -1,5 +1,6 @@
 { pkgs, ... }:
 let
+  # mcphub-nvim = builtins.getFlake "github:ravitemer/mcphub.nvim";
   unstable = import <nixos-unstable> {
     config = {
       allowUnfree = true;
@@ -12,7 +13,6 @@ in
 
     # Text editor
     unstable.neovim
-    unstable.claude-code
     # unstable.code-cursor
 
     # Cloud
@@ -100,7 +100,7 @@ in
     htmx-lsp
     templ
     hugo
-    vscode-langservers-extracted # for html lsp
+    # vscode-langservers-extracted # for html lsp
 
     # sql
     sqlite
