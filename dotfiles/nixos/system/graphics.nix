@@ -29,6 +29,7 @@ in
     unstable.inotify-tools # sudo inotifywait -m -r /path/to/disk/mountpoint
     unstable.hyprcursor
     unstable.xcur2png
+    unstable.v4l2-utils
     unstable.librsvg
     unstable.libnotify
     unstable.hyprland-protocols
