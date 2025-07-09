@@ -19,6 +19,7 @@ let
     tree
     wget
     iotop
+    gimp3
     p7zip
     rsync
     unrar

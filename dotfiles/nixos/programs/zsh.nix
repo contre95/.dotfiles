@@ -72,6 +72,7 @@ in
       la = "ls -lAFh";
       lr = "ls -tRFh";
       lt = "ls -ltFh";
+      mpvc = "mpv --no-config --vo=tct "; # mpv on the cli
       grep = "grep --color";
       ll = "ls -l";
       sine = "pass Canus/Sinenomine | grep -i -A2 $1";

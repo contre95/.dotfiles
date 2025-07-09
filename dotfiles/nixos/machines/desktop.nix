@@ -80,7 +80,7 @@
   hardware.nvidia.powerManagement.enable = true;
   hardware.nvidia.powerManagement.finegrained = false;
   services.xserver.displayManager.startx.enable = true; # No display manager
-  hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.stable;
+  hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.beta;
   # hardware.nvidia.package =
   #   let
   #     rcu_patch = pkgs.fetchpatch {
