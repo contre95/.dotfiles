@@ -31,7 +31,7 @@ let
     smassh
     swappy
     tessen
-    ghostty
+    unstable.ghostty
     clipman
     gettext
     gparted

@@ -19,7 +19,7 @@
           allowedIPs = [
             "0.0.0.0/0"
           ];
-          endpoint = "vpn.contre.io:51208";
+          endpoint = "vpn.contre.io:51802";
           persistentKeepalive = 25;
         }
       ];
