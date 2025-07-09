@@ -5,19 +5,21 @@
   networking.wg-quick.interfaces = {
     wg0 = {
       autostart = false;
-      address = [ "10.16.12.93/32" ];
-      dns = [ "10.16.12.1" ];
+      address = [ "10.95.95.3/32" ];
+      dns = [ "10.95.95.1" ];
       # privateKeyFile = "/root/wireguard-keys/privatekey";
       privateKeyFile = "/etc/wireguard/private.key";
+      # cat /etc/wireguard/private.key | wg pubkey 
+      # oALQ7rQgzqDgVZVOjTqUc7u1rpLUMFEE68UY0Flo5iM=
 
       peers = [
         {
-          publicKey = "TkzWsGsHIaWm7Cj9xw5J94q4rMm1unrEGJz6ep5NnRo=";
-          # presharedKeyFile = "/root/wireguard-keys/preshared_from_peer0_key";
+          publicKey = "Ql8XtFwJs1DJic3YXtj+1BlZHCmPn0Koh0TNQD8HLSY=";
+          presharedKeyFile = "/etc/wireguard/shared.key";
           allowedIPs = [
             "0.0.0.0/0"
           ];
-          endpoint = "vpn.contre.io:51028";
+          endpoint = "vpn.contre.io:51208";
           persistentKeepalive = 25;
         }
       ];
