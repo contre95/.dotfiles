@@ -26,7 +26,7 @@ Home,https://home.server.home
 Social,https://elk.zone/home https://youtube.com https://rss.server.home https://reddit.com https://x.com/home https://devox.me/ https://heramix.club/deemix-arl/
 Proton,http://account.proton.me/login
 Syncthings,http://localhost:8384 https://sync.server.home
-Torrent,https://mail.proton.me https://radarr.server.home/ http://torrents.server.home https://fearnopeer.com/ https://digitalcore.club/ https://upload.cx/ https://autobrr.server.home/ https://prowlarr.server.home/ https://cinemaz.to/torrents https://avistaz.to/ https://www.reddit.com/r/OpenSignups/ https://torrentleech.org
+Torrent,https://mail.proton.me https://radarr.server.home/ http://torrents.server.home https://fearnopeer.com/ https://digitalcore.club/ https://upload.cx/ https://autobrr.server.home/ https://prowlarr.server.home/https://avistaz.to/ https://www.reddit.com/r/OpenSignups/ https://torrentleech.org
 Music,http://music.server.home https://heramix.club/deemix-arl/
 Idealista,http://idealista.com/
 Maps,http://google.com/maps/
