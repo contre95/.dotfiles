@@ -17,7 +17,6 @@ in
 
     # Cloud
     awscli
-    unstable.gemini-cli
     gh 
 
     # nix
