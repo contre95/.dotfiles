@@ -52,7 +52,6 @@ in
       no = "nix store optimise";
       cg = "sudo nix-collect-garbage --delete-old && nix-collect-garbage -d --delete-old";
       mf = "cd $MY_FOLDER";
-      piu = "for image in $(docker images --format '{{.Repository}}:{{.Tag}}' | grep -v '<none>'); do docker pull $image; done;"; # Update all images
       vim = "nvim";
       pu = "podman unshare";
       nsh = "nix-shell -p";
@@ -81,6 +80,7 @@ in
       sosh = "systemctl status \`services\`";
       containers = "podman container ls --format '{{.Names}}' | grep -v infra | fzf -1";
       pods = "podman pod ls --format '{{.Name}}' | fzf -1";
+      piu = "for image in $(podman images --format '{{.Repository}}:{{.Tag}}' | grep -v '<none>'); do podman pull $image; done;"; # Update all images
       pogs = "podman pod logs -f \`pods\`";
       cogs = "podman container logs -f \`containers\`";
       pot = "podman top \`containers\` user huser group hgroup";
