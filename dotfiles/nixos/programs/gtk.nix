@@ -1,31 +1,8 @@
 { pkgs, ... }:
 {
   home.packages = with pkgs; [
-    # nwg-look # gtk configuration tool
-    # libsForQt5.qt5ct # qt5 configuration tool
-    # kdePackages.qt6ct # qt6 configuration tool
-    # libsForQt5.qtstyleplugin-kvantum # svg based qt6 theme engine
-    # kdePackages.qtstyleplugin-kvantum # svg based qt5 theme engine
-    # gtk3 # gtk3
-    # gtk4 # gtk4
-    # gsettings-desktop-schemas # gsettings schemas
-    # desktop-file-utils # for updating desktop database
-    # hicolor-icon-theme # Base fallback icon theme
-    # adwaita-icon-theme # Standard GNOME icons, excellent fallback
-    # libsForQt5.breeze-icons # KDE's icon set, good for Qt apps
     dconf-editor # dconf editor
     dconf
-    # gnome-tweaks # gnome tweaks
-    # kdePackages.qt6gtk2
-    # libsForQt5.qt5.qtwayland
-    #themes
-    # juno-theme
-    # zuki-themes
-    # ayu-theme-gtk
-    # nordic
-    # flat-remix-gtk
-    # maia-icon-theme
-    # flat-remix-icon-theme
   ];
 
   home.sessionVariables = {
@@ -54,13 +31,6 @@
   qt = {
     enable = true;
     platformTheme.name = "qt5ct";
-    # style = {
-    #   name = "Catppuccin-Frappe-Dark";
-    #   package = pkgs.catppuccin-kde.override {
-    #     flavour = [ "frappe" ];
-    #     accents = [ "pink" ];
-    #   };
-    # };
   };
 
   gtk = {
@@ -72,7 +42,8 @@
     };
 
     cursorTheme = {
-      name = "Elementary";
+      name = "macOS";
+      size = 24;
     };
 
     iconTheme = {
@@ -87,9 +58,39 @@
   };
   gtk.gtk3.extraConfig = {
     gtk-application-prefer-dark-theme = true;
+    gtk-toolbar-style = 3;
+    gtk-toolbar-icon-size = "GTK_ICON_SIZE_LARGE_TOOLBAR";
+    gtk-button-images = 0;
+    gtk-menu-images = 0;
+    gtk-enable-event-sounds = 1;
+    gtk-enable-input-feedback-sounds = 0;
+    gtk-xft-antialias = 1;
+    gtk-xft-hinting = 1;
+    gtk-cursor-blink = true;
+    gtk-cursor-blink-time = 1000;
+    gtk-decoration-layout = "icon:minimize,maximize,close";
+    gtk-enable-animations = true;
+    gtk-primary-button-warps-slider = true;
+    gtk-sound-theme-name = "ocean";
+    gtk-xft-dpi = 98304;
   };
   gtk.gtk4.extraConfig = {
     gtk-application-prefer-dark-theme = true;
+    gtk-cursor-blink = true;
+    gtk-toolbar-style = 3;
+    gtk-toolbar-icon-size = "GTK_ICON_SIZE_LARGE_TOOLBAR";
+    gtk-button-images = 0;
+    gtk-menu-images = 0;
+    gtk-enable-event-sounds = 1;
+    gtk-enable-input-feedback-sounds = 0;
+    gtk-xft-antialias = 1;
+    gtk-xft-hinting = 1;
+    gtk-cursor-blink-time = 1000;
+    gtk-decoration-layout = "icon:minimize,maximize,close";
+    gtk-enable-animations = true;
+    gtk-primary-button-warps-slider = true;
+    gtk-sound-theme-name = "ocean";
+    gtk-xft-dpi = 98304;
   };
   dconf.settings."org/gnome/desktop/interface" = {
     color-scheme = "prefer-dark";

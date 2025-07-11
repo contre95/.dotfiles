@@ -31,7 +31,7 @@ vim.keymap.set("n", "<C-h>", ":set relativenumber!<CR>") -- toggle
 
 -- Spelling
 vim.keymap.set("n", "<C-s>", ":set invspell<CR>") -- toggle
-vim.keymap.set("n", "<C-j>", "1z=") -- Fix spelling with first option
+vim.keymap.set("n", "<C-j>", "1z=")               -- Fix spelling with first option
 
 -- Select with Shift as a normal human being
 vim.keymap.set("v", "<S-Up>", "<Up>")
@@ -53,7 +53,6 @@ vim.keymap.set({ "n", "i" }, "<A-k>", "<C-E><C-E>")
 
 vim.keymap.set({ "n", "i" }, "<A-i>", "<C-Y><C-Y>")
 
-
 -- Switch tabs with Alt+Tab (Alt+Shift+Tab)
 vim.keymap.set("n", "<A-Tab>", "gt")
 vim.keymap.set("n", "<A-C-Tab>", "gT")
@@ -64,10 +63,23 @@ vim.keymap.set("n", "<leader>r", ":so %<CR>")
 -- Encode/Decode selection to/from base64
 vim.keymap.set("v", "<leader>u", [[c<c-r>=system('base64 -w 0', @")<cr><esc>]])
 vim.keymap.set("v", "<leader>y", [[c<c-r>=system('base64 --decode', @")<cr><esc>]])
-vim.keymap.set("n", "<C-g>", function() require("avante").toggle() end)
+vim.keymap.set("n", "<C-g>", function()
+  require("avante").toggle()
+end)
 
-local colorschemes = { "immortal", "emperor", "kanagawa-dragon", "github_dark_default"}
+local colorschemes = { "immortal", "dark-funeral", "emperor", "kanagawa-dragon", "github_dark_default", "nile"}
+local all_colorschemes = vim.fn.getcompletion("", "color")
+
 local current_index = 0
+
+vim.keymap.set("n", "<C-m>", function()
+  current_index = current_index + 1
+  if current_index > #all_colorschemes then
+    current_index = 1
+  end
+  vim.cmd("colorscheme " .. all_colorschemes[current_index])
+  print("Colorscheme: " .. all_colorschemes[current_index])
+end)
 
 vim.keymap.set("n", "<C-n>", function()
   current_index = current_index + 1
@@ -77,4 +89,3 @@ vim.keymap.set("n", "<C-n>", function()
   vim.cmd("colorscheme " .. colorschemes[current_index])
   print("Colorscheme: " .. colorschemes[current_index])
 end)
-

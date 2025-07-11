@@ -41,6 +41,10 @@ in
           install_url = "https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/latest.xpi";
           installation_mode = "force_installed";
         };
+        "{4b5f4e8e-5e4a-4f8f-8a8a-8e8e8e8e8e8e}" = {
+          install_url = "https://addons.mozilla.org/firefox/downloads/latest/nicothin-space/latest.xpi";
+          installation_mode = "force_installed";
+        };
       };
       DisableTelemetry = true;
       DisableFirefoxStudies = true;

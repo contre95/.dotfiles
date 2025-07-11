@@ -109,8 +109,7 @@ in
     mycli
 
     # css
-    # vscode-langservers-extracted # alternative?
-    # css-lsp not available
+    vscode-langservers-extracted # alternative?
     stylelint
 
     # c
