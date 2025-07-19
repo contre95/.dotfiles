@@ -51,6 +51,7 @@ return {
         "markdown",
         "terraform",
         "javascript",
+        "dockerfile",
         "typescript",
         "markdown_inline",
       },

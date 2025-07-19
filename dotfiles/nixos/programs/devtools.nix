@@ -42,7 +42,7 @@ in
     unstable.gofumpt
     unstable.golines
     unstable.gotests
-    # unstable.gopls # included in gotoolse 
+    unstable.gopls # included in gotoolse 
     unstable.gotools
     unstable.golangci-lint
     unstable.goimports-reviser

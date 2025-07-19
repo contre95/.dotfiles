@@ -5,16 +5,20 @@ return {
 	opts = {
 		provider = "deepseek",
 		use_absolute_path = true,
-		vendors = {
+		providers = {
 			deepseek = {
 				__inherited_from = "openai",
 				endpoint = "https://api.deepseek.com",
 				model = "deepseek-coder",
-				-- max_tokens = 8192,
+				extra_request_body = {
+					-- max_tokens = 8192, -- Moved to extra_request_body
+				},
 			},
 			-- ollama = {
+			--   endpoint = "http://127.0.0.1:11434", -- Note: no /v1 at the end
 			--   model = "codellama:7b-instruct",
 			--   -- model = "deepseek-r1:8b",
+			--   extra_request_body = {},
 			-- },
 		},
 		behaviour = {
