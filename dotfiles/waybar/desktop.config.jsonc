@@ -111,7 +111,7 @@
       "on-scroll-down": "wpctl set-volume @DEFAULT_SOURCE@ 0.025-",
       "tooltip": false,
       "signal": 1,
-      "interval": 2,
+      "interval": 1,
     },
     "wireplumber": {
       "format": "{volume}% {icon}",
