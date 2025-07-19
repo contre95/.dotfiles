@@ -81,7 +81,7 @@ vim.api.nvim_create_augroup("hypr_ftdetect", { clear = true })
 vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
   group = "hypr_ftdetect",
   pattern = { "*hypr/*.conf", "*hypr/*/*.conf" },
-  command = "set ft=hypr",
+  command = "set ft=hyprlang| set syntax=hyprlang",
 })
 
 -- Set Rofi style filetype

@@ -86,7 +86,7 @@
     "custom/audio": {
       "format": "<span color='#F8D987'></span> {}",
       "interval": 1,
-      "on-click": "~/.config/waybar/scripts/shuffle-source.sh",
+      "on-click": "$SCR_PATH/audio-scr/shuffle-sink.sh",
       "on-click-right": "hyprctl dispatch exec '[float;size 24% 35%;animation slide;move 39% 5%-50] pavucontrol'",
       "on-scroll-up": "wpctl set-volume @DEFAULT_SINK@ 0.025+",
       "on-scroll-down": "wpctl set-volume @DEFAULT_SINK@ 0.025-",
