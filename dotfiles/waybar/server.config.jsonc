@@ -131,7 +131,7 @@
       "format": "<span color='#F8D987'></span> {}",
       "interval": 1,
       "on-scroll-up": "wpctl set-volume @DEFAULT_SINK@ 0.02+",
-      "on-click-right": "~/.config/waybar/scripts/audio_changer.py",
+      "on-click": "~/.config/waybar/scripts/shuffle-source.sh",
       "on-scroll-down": "wpctl set-volume @DEFAULT_SINK@ 0.02-",
       // "on-click": "wpctl set-default $(pamixer --list-sinks | grep -v $(pamixer --get-default-sink | tail -n 1 | awk -F' ' '{print $2}' | tr -d '\"') | grep -v 'Sinks:' | shuf | head -n 1 | awk -F' ' '{print $2}' | tr -d '\"')",
       "exec": "pamixer --get-default-sink | tail -n 1 | awk -F'\".+\" ' '{print $2}' | tr -d '\"'",

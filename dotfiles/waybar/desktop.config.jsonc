@@ -68,7 +68,7 @@
     },
     "clock": {
       "format": "<span color='#b4befe'>  </span>{:%d | %H:%M}",
-      "on-click": "firefox https://db.server.home/dashboard/#/nc/p882zgn6hihp2j3/mu7toxmd7aloo25/vwil1ibd8kzkimid"
+      "on-click": "firefox https://db.server.home/dashboard/#/nc/p882zgn6hihp2j3/mu7toxmd7aloo25/vwil1ibd8kzkimid",
     },
     "custom/ip": {
       "format": "<span color='#b4befe'></span> {}",
@@ -86,8 +86,8 @@
     "custom/audio": {
       "format": "<span color='#F8D987'></span> {}",
       "interval": 1,
-      "on-click-right": "~/.config/waybar/scripts/audio_changer.py",
-      "on-click": "hyprctl dispatch exec '[float;size 24% 35%;animation slide;move 39% 5%-50] pavucontrol'",
+      "on-click": "~/.config/waybar/scripts/shuffle-source.sh",
+      "on-click-right": "hyprctl dispatch exec '[float;size 24% 35%;animation slide;move 39% 5%-50] pavucontrol'",
       "on-scroll-up": "wpctl set-volume @DEFAULT_SINK@ 0.025+",
       "on-scroll-down": "wpctl set-volume @DEFAULT_SINK@ 0.025-",
       "on-click-middle": "hyprctl dispatch exec  '[float;size 24% 35%;animation slide;move 39% 5%-50] easyeffects'",
