@@ -14,7 +14,6 @@ in
       lib.elem whichMachine [
         "notebook"
         "desktop"
-        "server"
       ]
     then
       {
