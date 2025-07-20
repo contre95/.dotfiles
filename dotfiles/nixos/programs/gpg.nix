@@ -14,6 +14,7 @@ in
       lib.elem whichMachine [
         "notebook"
         "desktop"
+        "server"
       ]
     then
       {
@@ -92,3 +93,4 @@ in
     else
       { };
 }
+
