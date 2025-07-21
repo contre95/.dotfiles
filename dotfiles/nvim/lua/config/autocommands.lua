@@ -8,7 +8,6 @@ vim.filetype.add({
 
 -- Set Terrafrom vars
 vim.api.nvim_create_autocmd("BufWritePre", {
-  group = "zachwuzhere",
   pattern = { "*.tf", "*.tfvars" },
   callback = function()
     vim.lsp.buf.format(nil, 10000)
