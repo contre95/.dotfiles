@@ -1,3 +1,20 @@
+
+vim.filetype.add({
+  filename = {
+    [".envrc"] = "sh",
+    ["%.?env.*"] = "config",
+  }
+})
+
+-- Set Terrafrom vars
+vim.api.nvim_create_autocmd("BufWritePre", {
+  group = "zachwuzhere",
+  pattern = { "*.tf", "*.tfvars" },
+  callback = function()
+    vim.lsp.buf.format(nil, 10000)
+  end
+})
+
 -- Open help always vertical
 vim.api.nvim_create_autocmd("FileType", {
   pattern = "help",
@@ -6,8 +23,8 @@ vim.api.nvim_create_autocmd("FileType", {
 
 -- Set Caddyfile
 vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead" }, {
-  pattern = { "Caddyfile", "*.Caddyfile", "Caddyfile.*" },
-  command = "set ft=caddyfile",
+  pattern = { "Caddyfile", "*.Caddyfile", "Caddyfile.*" , "caddy"},
+  command = "set ft=caddy",
 })
 
 -- -- Set HTMX
