@@ -26,7 +26,7 @@ let
     unzip
     ffmpeg
     mpg123
-    convmv # convmv -r -f utf-8 -t utf-8 --nfc --notest your_music_folder/ ;) 
+    convmv
     polkit
     smassh
     swappy
@@ -115,7 +115,6 @@ in
             pkgs.blender
             pkgs.spotify
             pkgs.telegram-desktop
-            unstable.simplex-chat-desktop
           ]
         else if "${whichMachine}" == "server" then
           commonPkgs ++ [ pkgs.picard pkgs.beets ]
@@ -142,7 +141,7 @@ in
           target = ".librewolf/default/chrome";
           source = pkgs.fetchzip {
             url = "https://github.com/datguypiko/Firefox-Mod-Blur/archive/refs/heads/master.zip";
-            hash = "sha256-eO0N96JjpmcQhhofDQ5zLA0Mz8/G/Uzh6/i4Tq59uUw=";
+            hash = "sha256-Nr8dCRjlSBBGmrvZr8TuK9XeO1sBrF/Be186ElzWkr4=";
             # stripRoot = false;
           };
         };

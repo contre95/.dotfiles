@@ -3,29 +3,25 @@ let
   # Machine and environemnt definition
   home-manager = builtins.fetchTarball "https://github.com/nix-community/home-manager/archive/release-25.05.tar.gz";
   whichMachine = builtins.getEnv "WHICH_MACHINE";
+  machinesDir = ./machines;
+  machineFiles = builtins.attrNames (builtins.readDir machinesDir);
+  machineNames = map (file: builtins.replaceStrings [".nix"] [""] file) machineFiles;
   machineConfig =
     if
-      lib.elem whichMachine [
-        "notebook"
-        "server"
-        "desktop"
-        "macbook"
-      ]
+      lib.elem whichMachine machineNames
     then
       "${whichMachine}.nix"
     else
-      throw "Please set the variable WHICH_MACHINE first";
+      throw "Please set the variable WHICH_MACHINE first. Valid options are: ${builtins.concatStringsSep ", " machineNames}";
   os =
     if
       lib.elem whichMachine [
-        "notebook"
-        "server"
-        "desktop"
+        "macbook"
       ]
     then
-      "linux"
+      "osx"
     else
-      "osx";
+      "linux";
 in
 {
   networking.hostName = "${whichMachine}";
