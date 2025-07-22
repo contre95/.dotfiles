@@ -105,10 +105,11 @@
     "custom/audio": {
       "format": "<span color='#F8D987'></span> {}",
       "interval": 1,
-      "on-scroll-up": "wpctl set-volume @DEFAULT_SINK@ 0.02+",
       "on-click": "$SCR_PATH/audio-scr/shuffle-sink.sh",
-      "on-scroll-down": "wpctl set-volume @DEFAULT_SINK@ 0.02-",
-      // "on-click": "wpctl set-default $(pamixer --list-sinks | grep -v $(pamixer --get-default-sink | tail -n 1 | awk -F' ' '{print $2}' | tr -d '\"') | grep -v 'Sinks:' | shuf | head -n 1 | awk -F' ' '{print $2}' | tr -d '\"')",
+      "on-click-right": "hyprctl dispatch exec '[float;size 24% 35%;animation slide;move 39% 5%-50] pavucontrol'",
+      "on-scroll-up": "wpctl set-volume @DEFAULT_SINK@ 0.025+",
+      "on-scroll-down": "wpctl set-volume @DEFAULT_SINK@ 0.025-",
+      "on-click-middle": "hyprctl dispatch exec  '[float;size 24% 35%;animation slide;move 39% 5%-50] easyeffects'",
       "exec": "pamixer --get-default-sink | tail -n 1 | awk -F'\".+\" ' '{print $2}' | tr -d '\"'",
     },
     "custom/notification": {

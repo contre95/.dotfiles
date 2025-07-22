@@ -129,6 +129,7 @@ in
           ++ [
             pkgs.slack
             pkgs.lingot
+            pkgs.balatro
             pkgs.spotify
             pkgs.telegram-desktop
           ]
