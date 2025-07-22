@@ -10,6 +10,7 @@ in
 {
   systemd.network.enable = true;
   networking.wireless.enable = false;
+  networking.wireless.scanOnLowSignal = false;
   networking.useDHCP = true;
   networking.useNetworkd = true;
   networking.networkmanager.enable = false;
