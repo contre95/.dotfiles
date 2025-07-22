@@ -57,15 +57,15 @@ in
     brightnessctl
   ];
 
-  hardware.asus.flow.gv302x = {
-    keyboard.autosuspend.enable = true;
-    ite-device.wakeup.enable = true;
-    amdgpu = {
-      recovery.enable = false;
-      sg_display.enable = true;
-      psr.enable = true;
-    };
-  };
+  # hardware.asus.flow.gv302x = {
+  #   keyboard.autosuspend.enable = true;
+  #   ite-device.wakeup.enable = true;
+  #   amdgpu = {
+  #     recovery.enable = false;
+  #     sg_display.enable = true;
+  #     psr.enable = true;
+  #   };
+  # };
   boot.initrd.availableKernelModules = [
     "nvme"
     "xhci_pci"
