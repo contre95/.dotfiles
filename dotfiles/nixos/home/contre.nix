@@ -99,12 +99,9 @@ in
           ++ [
             pkgs.lingot
             pkgs.picard
-            unstable.puddletag
-            # pkgs.kid3
             pkgs.scrcpy
             pkgs.blender
             unstable.telegram-desktop
-            unstable.simplex-chat-desktop
           ]
         else if "${whichMachine}" == "notebook" then
           commonPkgs
@@ -123,7 +120,7 @@ in
             pkgs.beets
           ]
         else
-          [ ];
+          commonPkgs [ ];
 
       imports = [
         ../programs/git.nix
@@ -141,14 +138,14 @@ in
       ];
       home.extraOutputsToInstall = [ "share/tmux-plugins" ];
       home.file = {
-        librewolf = {
-          target = ".librewolf/default/chrome";
-          source = pkgs.fetchzip {
-            url = "https://github.com/datguypiko/Firefox-Mod-Blur/archive/refs/heads/master.zip";
-            hash = "sha256-Nr8dCRjlSBBGmrvZr8TuK9XeO1sBrF/Be186ElzWkr4=";
-            # stripRoot = false;
-          };
-        };
+        # librewolf = {
+        #   target = ".librewolf/default/chrome";
+        #   source = pkgs.fetchzip {
+        #     url = "https://github.com/datguypiko/Firefox-Mod-Blur/archive/refs/heads/master.zip";
+        #     hash = "sha256-Nr8dCRjlSBBGmrvZr8TuK9XeO1sBrF/Be186ElzWkr4=";
+        #     # stripRoot = false;
+        #   };
+        # };
         neovim = {
           recursive = true;
           target = ".config/nvim";
