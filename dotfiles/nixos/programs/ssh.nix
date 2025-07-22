@@ -18,9 +18,6 @@ in
       ]
     then
       {
-        home.sessionVariablesExtra = ''
-          export SSH_AUTH_SOCK="$(${config.programs.gpg.package}/bin/gpgconf --list-dirs agent-ssh-socket)"
-        '';
         # Packager related to ssh
         home.packages = with pkgs; [
           sshfs
