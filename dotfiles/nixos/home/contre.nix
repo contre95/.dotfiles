@@ -123,7 +123,7 @@ in
             pkgs.beets
           ]
         else
-          { };
+          [ ];
 
       imports = [
         ../programs/git.nix
