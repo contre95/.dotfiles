@@ -117,9 +117,13 @@ in
             pkgs.telegram-desktop
           ]
         else if "${whichMachine}" == "server" then
-          commonPkgs ++ [ pkgs.picard pkgs.beets ]
+          commonPkgs
+          ++ [
+            pkgs.picard
+            pkgs.beets
+          ]
         else
-          throw "Unknown OS";
+          { };
 
       imports = [
         ../programs/git.nix
