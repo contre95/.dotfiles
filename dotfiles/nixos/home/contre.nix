@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ lib, pkgs, ... }:
 let
   whichMachine = builtins.getEnv "WHICH_MACHINE";
   unstable = import <nixos-unstable> {
@@ -70,14 +70,25 @@ in
 
   # System programs
   programs.nano.enable = false;
-  imports = [
-    ../system/gnupg.nix
-    ../system/openssh.nix
-    ../system/syncthings.nix
-    ../programs/steam.nix
-    ../programs/ai.nix
-  ] ++ (if whichMachine == "notebook" then [ ../system/wg-vpn.nix ] else [ ]);
-
+  imports =
+    [
+      ../system/gnupg.nix
+      ../system/openssh.nix
+      ../system/syncthings.nix
+      ../programs/steam.nix
+      ../programs/ai.nix
+    ]
+    ++ (
+      if
+        lib.elem whichMachine [
+          "notebook"
+          "tablet"
+        ]
+      then
+        [ ../system/wg-vpn.nix ]
+      else
+        [ ]
+    );
   # Home manager
   home-manager.users.contre =
     { pkgs, config, ... }:
@@ -113,6 +124,14 @@ in
             pkgs.spotify
             pkgs.telegram-desktop
           ]
+        else if "${whichMachine}" == "tablet" then
+          commonPkgs
+          ++ [
+            pkgs.slack
+            pkgs.lingot
+            pkgs.spotify
+            pkgs.telegram-desktop
+          ]
         else if "${whichMachine}" == "server" then
           commonPkgs
           ++ [
@@ -138,14 +157,14 @@ in
       ];
       home.extraOutputsToInstall = [ "share/tmux-plugins" ];
       home.file = {
-        # librewolf = {
-        #   target = ".librewolf/default/chrome";
-        #   source = pkgs.fetchzip {
-        #     url = "https://github.com/datguypiko/Firefox-Mod-Blur/archive/refs/heads/master.zip";
-        #     hash = "sha256-Nr8dCRjlSBBGmrvZr8TuK9XeO1sBrF/Be186ElzWkr4=";
-        #     # stripRoot = false;
-        #   };
-        # };
+        librewolf = {
+          target = ".librewolf/default/chrome";
+          source = pkgs.fetchzip {
+            url = "https://github.com/datguypiko/Firefox-Mod-Blur/archive/refs/heads/master.zip";
+            hash = "sha256-Lm6B9aYZO0JiUDiwD5WEDhOzgwxt3c1RF3NUpikyR3Y=";
+            # stripRoot = false;
+          };
+        };
         neovim = {
           recursive = true;
           target = ".config/nvim";

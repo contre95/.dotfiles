@@ -8,6 +8,7 @@ in
       lib.elem whichMachine [
         "desktop"
         "notebook"
+        "tablet"
       ]
     then
       {

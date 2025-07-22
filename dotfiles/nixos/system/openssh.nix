@@ -16,7 +16,25 @@
     extraConfig = ''StreamLocalBindUnlink yes'';
 
     banner =
-      if config.networking.hostName == "notebook" then
+      if config.networking.hostName == "table" then
+        "
+                       _,.---.---.---.--.._ 
+           _.-' `--.`---.`---'-. _,`--.._
+          /`--._ .'.     `.     `,`-.`-._\
+         ||   \  `.`---.__`__..-`. ,'`-._/
+    _  ,`\ `-._\   \    `.    `_.-`-._,``-.
+ ,`   `-_ \/ `-.`--.\    _\_.-'\__.-`-.`-._`.
+(_.o> ,--. `._/'--.-`,--`  \_.-'       \`-._ \
+ `---'    `._ `---._/__,----`           `-. `-\
+           /_, ,  _..-'                    `-._\
+           \_, \/ ._(
+            \_, \/ ._\
+             `._,\/ ._\
+               `._// ./`-._
+     tablet      `-._-_-_.-'
+
+  "
+      else if config.networking.hostName == "notebook" then
         "
                            .
                           | \/|

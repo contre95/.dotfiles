@@ -9,7 +9,7 @@ in
     bluez5-experimental
   ];
   hardware.bluetooth.enable = true;
-  hardware.bluetooth.powerOnBoot = if lib.elem whichMachine [ "desktop" "notebook" ] then true else false;
+  hardware.bluetooth.powerOnBoot = if lib.elem whichMachine [ "desktop" "notebook" "tablet"] then true else false;
   hardware.bluetooth.settings = {
     General = {
       # # make Xbox Series X controller work

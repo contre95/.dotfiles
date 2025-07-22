@@ -14,6 +14,7 @@ in
       lib.elem whichMachine [
         "notebook"
         "desktop"
+        "tablet"
         "server"
       ]
     then
@@ -54,6 +55,7 @@ in
       }
     else if
       lib.elem whichMachine [
+        "tablet"
         "notebook"
         "desktop"
       ]

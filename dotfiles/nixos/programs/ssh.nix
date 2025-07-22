@@ -13,6 +13,7 @@ in
     if
       lib.elem whichMachine [
         "notebook"
+        "tablet"
         "desktop"
       ]
     then
@@ -28,6 +29,20 @@ in
         programs.ssh = {
           enable = true;
           matchBlocks = {
+            "tablet.home" = {
+              user = "contre";
+              forwardAgent = true;
+              remoteForwards = [
+                {
+                  bind.address = "${socketDir}/S.gpg-agent";
+                  host.address = "${socketDir}/S.gpg-agent.extra";
+                }
+                {
+                  bind.address = "${socketDir}/S.gpg-agent.ssh";
+                  host.address = "${socketDir}/S.gpg-agent.ssh";
+                }
+              ];
+            };
             "notebook.home" = {
               user = "contre";
               forwardAgent = true;
