@@ -1,4 +1,9 @@
-{ pkgs, ... }:
+{
+  pkgs,
+  lib,
+  ...
+}:
+with lib;
 let
   whichMachine = builtins.getEnv "WHICH_MACHINE";
   unstable = import <nixos-unstable> {
@@ -8,8 +13,19 @@ let
   };
 in
 {
-  # Enable Graphics (Hyprland needs to be enable at a systems level)
+  environment.sessionVariables = {
+    HYPR_PLUGIN_DIR = pkgs.symlinkJoin {
+      name = "hyprland-plugins";
+      paths = with pkgs.hyprlandPlugins; [
+        hyprexpo
+        hyprgrass
+        hyprbars
+        #...plugins
+      ];
+    };
+  };
   environment.systemPackages = with pkgs; [
+    xorg.libxcb
     zenity
     gammastep
     dunst
@@ -28,6 +44,7 @@ in
     unstable.wayland-protocols
     # unstable.hyprgui
     unstable.inotify-tools # sudo inotifywait -m -r /path/to/disk/mountpoint
+    unstable.hyprlandPlugins.hyprgrass
     unstable.hyprcursor
     unstable.xcur2png
     unstable.v4l-utils
@@ -70,7 +87,7 @@ in
   };
 
   hardware.graphics.enable = true;
-  programs.hyprland = with pkgs; {
+  programs.hyprland = {
     enable = true;
     package =
       if
@@ -81,7 +98,7 @@ in
       then
         unstable.hyprland
       else
-        hyprland;
+        unstable.hyprland;
     portalPackage = unstable.xdg-desktop-portal-hyprland;
     withUWSM = true;
     xwayland.enable = true;

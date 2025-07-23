@@ -86,7 +86,7 @@ in
   # Set your time zone.
   time.timeZone = "Europe/Madrid";
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
+  # Define a user account. Don't forget to set a password with 'passwd'.
   users.users =
     if os == "linux" then
       {
@@ -106,3 +106,4 @@ in
     else
       { };
 }
+
