@@ -17,9 +17,9 @@ in
     HYPR_PLUGIN_DIR = pkgs.symlinkJoin {
       name = "hyprland-plugins";
       paths = with pkgs.hyprlandPlugins; [
-        hyprexpo
-        hyprgrass
-        hyprbars
+        # hyprexpo
+        # hyprgrass
+        # hyprbars
         #...plugins
       ];
     };
@@ -27,6 +27,7 @@ in
   environment.systemPackages = with pkgs; [
     xorg.libxcb
     zenity
+    # unstable.hyprlandPlugins.hyprgrass
     gammastep
     dunst
     unstable.swww
