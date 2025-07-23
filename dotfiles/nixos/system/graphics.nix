@@ -34,6 +34,8 @@ in
     unstable.libnotify
     unstable.hyprland-protocols
     unstable.wev
+    hyprlandPlugins.hyprgrass
+    unstable.wvkbd
     unstable.hyprland-workspaces
     # hyprdim
     unstable.hyprlock
@@ -68,9 +70,18 @@ in
   };
 
   hardware.graphics.enable = true;
-  programs.hyprland = with pkgs;{
+  programs.hyprland = with pkgs; {
     enable = true;
-    package = if whichMachine == "desktop" then unstable.hyprland else hyprland;
+    package =
+      if
+        lib.elem whichMachine [
+          "desktop"
+          "table"
+        ]
+      then
+        unstable.hyprland
+      else
+        hyprland;
     portalPackage = unstable.xdg-desktop-portal-hyprland;
     withUWSM = true;
     xwayland.enable = true;

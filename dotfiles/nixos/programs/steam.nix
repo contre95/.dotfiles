@@ -13,10 +13,13 @@ in
     then
       {
         environment.systemPackages = with pkgs; [
-          r2modman
-          mangohud
-          gamemode
           file
+          gamemode
+          goverlay
+          mangohud
+          mangohud
+          r2modman
+          protonup-qt
         ];
         programs.steam = {
           enable = true;
@@ -25,7 +28,6 @@ in
           gamescopeSession.enable = true;
           extraCompatPackages = with pkgs; [
             # proton-ge-bin
-            # lutris
           ];
         };
       }

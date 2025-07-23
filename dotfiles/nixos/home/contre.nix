@@ -127,9 +127,9 @@ in
         else if "${whichMachine}" == "tablet" then
           commonPkgs
           ++ [
+            pkgs.krita
             pkgs.slack
             pkgs.lingot
-            pkgs.balatro
             pkgs.spotify
             pkgs.telegram-desktop
           ]

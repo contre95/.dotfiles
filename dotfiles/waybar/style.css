@@ -13,7 +13,11 @@ window#waybar {
   /* border-bottom: 1px solid #4d6074; */
 }
 
-#custom-arch,
+#custom-kbd,
+#custom-hypr {
+  margin-left: 5px;
+  margin-right: 5px;
+}
 #workspaces {
   /* background-color: #292929; */
   color: #f1f1f1;
@@ -37,7 +41,7 @@ tooltip label {
 #custom-arch {
   font-size: 20px;
   margin-left: 15px;
-  color: #168eca;
+  color: #AAB4F0;
 }
 
 #workspaces button:hover {
