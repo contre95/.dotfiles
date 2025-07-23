@@ -7,6 +7,7 @@ in
     if
       lib.elem whichMachine [
         "desktop"
+        "tablet"
         "notebook"
       ]
     then

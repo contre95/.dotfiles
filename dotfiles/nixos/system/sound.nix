@@ -12,7 +12,7 @@
   ];
 
   services.pipewire = {
-    systemWide = true;
+    systemWide = false;
     audio.enable = true;
     enable = true;
     alsa.enable = true;

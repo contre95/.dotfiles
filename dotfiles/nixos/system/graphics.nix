@@ -17,8 +17,9 @@ in
     wofi
     rofi-wayland
     wdisplays
+    unstable.overskride
     unstable.wayland-scanner
-    # inputs.swww.packages.${pkgs.system}.swww
+    unstable.nwg-drawer
     unstable.hyprpaper
     hdrop
     unstable.hyprshade
@@ -34,7 +35,6 @@ in
     unstable.libnotify
     unstable.hyprland-protocols
     unstable.wev
-    hyprlandPlugins.hyprgrass
     unstable.wvkbd
     unstable.hyprland-workspaces
     # hyprdim

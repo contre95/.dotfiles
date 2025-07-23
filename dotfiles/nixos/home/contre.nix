@@ -74,6 +74,7 @@ in
     [
       ../system/gnupg.nix
       ../system/openssh.nix
+      # ../system/touch.nix
       ../system/syncthings.nix
       ../programs/steam.nix
       ../programs/ai.nix
@@ -216,6 +217,12 @@ in
           enable = true;
           target = ".config/alacritty";
           source = config.lib.file.mkOutOfStoreSymlink /home/canus/dotfiles/alacritty;
+        };
+        drawer = {
+          # recursive = true;
+          enable = true;
+          target = ".config/nwg-drawer";
+          source = config.lib.file.mkOutOfStoreSymlink /home/canus/dotfiles/nwg-drawer;
         };
         ghostty = {
           # recursive = true;

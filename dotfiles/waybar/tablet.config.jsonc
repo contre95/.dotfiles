@@ -8,7 +8,7 @@
     ],
     "modules-center": [
       "bluetooth",
-      // "network",
+      "network",
       "custom/recorder",
       "custom/wall",
       // "disk",
@@ -22,6 +22,7 @@
       "custom/mic",
     ],
     "modules-right": [
+      "custom/apps",
       "custom/kbd",
       "custom/hypr",
       "clock"
@@ -36,6 +37,11 @@
       "format": "  ",
       "tooltip": false,
       "on-click": "pkill -9 waybar && waybar -c ~/.config/waybar/$MYENV.config.jsonc",
+    },
+    "custom/apps": {
+      "format": " <span color='#BBBBBB'>  </span>",
+      "tooltip": false,
+      "on-click": "pkill nwg-drawer || nwg-drawer -wm hyprland -closebtn right -nocats -nofs -ovl",
     },
     "custom/kbd": {
       "format": " <span color='#8094B4'>  </span>",
@@ -200,7 +206,7 @@
     },
     "bluetooth": {
       "format": "<span color='#b4befe'></span> {status}",
-      "on-click": "bluetoothctl power on",
+      "on-click": "overskride",
       "on-click-right": "bluetoothctl power off",
       "format-disabled": "no",
       "format-connected": "<span color='#b4befe'></span> {device_alias} <span color='#474D56'>{device_battery_percentage}%</span>",
@@ -208,11 +214,11 @@
       "tooltip-format-enumerate-connected": "{device_address}",
     },
     "network": {
-      "interface": "enp89s0",
+      "interface": "wlan0",
       "format": "{ifname}",
-      "format-wifi": "<span color='#b4befe'>󰈀</span>{essid}",
+      "format-wifi": "<span color='#b4befe'>  </span>{essid}",
       "format-ethernet": "{ipaddr}/{cidr} ",
-      "on-click": "hyprctl dispatch exec '[float;size 24% 35%;animation slide; move 75%-20 60%-30] iwgtk'",
+      "on-click": "hyprctl dispatch exec '[float;size 35% 40%;animation slide; move 63% 5%-50] iwgtk'",
       "format-disconnected": "<span color='#b4befe'>󰖪 </span>No Network",
       "tooltip": true,
     },
