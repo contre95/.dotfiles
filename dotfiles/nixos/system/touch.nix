@@ -15,37 +15,24 @@ in
       ]
     then
       {
-        services.xserver = {
-          xkb = {
-            layout = "us";
-            variant = "";
-          };
-          enable = true;
-          desktopManager.gnome.enable = true;
-          displayManager.gdm.enable = true;
-          displayManager.gdm.wayland = true;
+        services = {
+          desktopManager.plasma6.enable = true;
+          displayManager.sddm.enable = true;
+          displayManager.sddm.wayland.enable = true;
         };
-        environment.gnome.excludePackages = (
-          with pkgs;
-          [
-            atomix # puzzle game
-            cheese # webcam tool
-            epiphany # web browser
-            evince # document viewer
-            geary # email reader
-            gedit # text editor
-            gnome-characters
-            gnome-music
-            gnome-photos
-            gnome-terminal
-            gnome-tour
-            hitori # sudoku game
-            iagno # go game
-            tali # poker game
-            totem # video player
-          ]
-        );
 
+        environment.systemPackages = with pkgs; [
+          kdePackages.kcalc # Calculator
+          kdePackages.kcharselect # Tool to select and copy special characters from all installed fonts
+          kdePackages.kcolorchooser # A small utility to select a color
+          kdePackages.kolourpaint # Easy-to-use paint program
+          kdePackages.ksystemlog # KDE SystemLog Application
+          kdePackages.sddm-kcm # Configuration module for SDDM
+          kdiff3 # Compares and merges 2 or 3 files or directories
+          kdePackages.isoimagewriter # Optional: Program to write hybrid ISO files onto USB disks
+          kdePackages.partitionmanager # Optional Manage the disk devices, partitions and file systems on your computer
+          hardinfo2 # System information and benchmarks for Linux systems
+        ];
       }
     else
       { };

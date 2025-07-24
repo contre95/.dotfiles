@@ -74,7 +74,7 @@ in
     [
       ../system/gnupg.nix
       ../system/openssh.nix
-      # ../system/touch.nix
+      ../system/touch.nix
       ../system/syncthings.nix
       ../programs/steam.nix
       ../programs/ai.nix
@@ -132,7 +132,7 @@ in
             pkgs.slack
             pkgs.lingot
             pkgs.spotify
-            pkgs.telegram-desktop
+            unstable.telegram-desktop
           ]
         else if "${whichMachine}" == "server" then
           commonPkgs
