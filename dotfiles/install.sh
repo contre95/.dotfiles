@@ -33,7 +33,7 @@ Remember to:
 2. Have your GPG smart card connected.
 3. Have internet connection
 ${NC}"
-echo 
+
 echo -e "${YELLOW}Please run this script like this -> bash <(curl -fsSL https://nixos.contre.io/)${NC}"
 
 read -rp "$(echo -e "${YELLOW}Enter machine name: ${NC}")" MACHINE &&

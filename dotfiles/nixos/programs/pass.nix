@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 {
   programs.password-store = {
     enable = true;
@@ -18,10 +18,10 @@
   # https://specifications.freedesktop.org/secret-service-spec/latest/
   # https://wiki.nixos.org/wiki/Secret_Service
   #
-  # services.pass-secret-service = {
-  #   enable = true;
-  #   storePath = "$MY_FOLDER/pass/";
-  #   extraArgs = [ "-e${config.programs.password-store.package}/bin/pass" ];
-  # };
+  # https://wiki.nixos.org/wiki/Secret_Service
+  services.pass-secret-service = {
+    enable = true;
+    storePath = "$MY_FOLDER/pass/";
+  };
 
 }

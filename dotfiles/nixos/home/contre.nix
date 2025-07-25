@@ -70,26 +70,15 @@ in
 
   # System programs
   programs.nano.enable = false;
-  imports =
-    [
-      ../system/gnupg.nix
-      ../system/openssh.nix
-      ../system/touch.nix
-      ../system/syncthings.nix
-      ../programs/steam.nix
-      ../programs/ai.nix
-    ]
-    ++ (
-      if
-        lib.elem whichMachine [
-          "notebook"
-          "tablet"
-        ]
-      then
-        [ ../system/wg-vpn.nix ]
-      else
-        [ ]
-    );
+  imports = [
+    ../system/gnupg.nix
+    ../system/openssh.nix
+    ../system/touch.nix
+    ../system/wg-vpn.nix
+    ../system/syncthings.nix
+    ../programs/steam.nix
+    ../programs/ai.nix
+  ];
   # Home manager
   home-manager.users.contre =
     { pkgs, config, ... }:
