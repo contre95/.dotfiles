@@ -55,7 +55,7 @@ let
     yubikey-manager
     alacritty-theme
     unstable.hyprpicker
-    grim # For screenshots
+    # unstable.grim # For screenshots
     slurp # For screenshots
     tmuxPlugins.tmux-thumbs
     stow # To create symlinks
