@@ -27,12 +27,13 @@ in
   environment.systemPackages = with pkgs; [
     xorg.libxcb
     zenity
-    # unstable.hyprlandPlugins.hyprgrass
     gammastep
+    sweet
     dunst
     unstable.swww
     wofi
     rofi-wayland
+    unstable.quick-webapps
     wdisplays
     unstable.overskride
     unstable.wayland-scanner

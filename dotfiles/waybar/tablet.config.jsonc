@@ -25,7 +25,8 @@
       "custom/apps",
       "custom/kbd",
       "custom/hypr",
-      "clock"
+      "clock",
+      "custom/logout",
     ],
     "backlight/slider": {
       "min": 10,
@@ -37,6 +38,11 @@
       "format": "  ",
       "tooltip": false,
       "on-click": "pkill -9 waybar && waybar -c ~/.config/waybar/$MYENV.config.jsonc",
+    },
+    "custom/logout": {
+      "format": " <span color='#ff474a'>   </span>",
+      "tooltip": false,
+      "on-click": "pkill -u $USER",
     },
     "custom/apps": {
       "format": " <span color='#BBBBBB'>  </span>",

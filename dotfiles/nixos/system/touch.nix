@@ -20,17 +20,19 @@ in
           displayManager.sddm.enable = true;
           displayManager.sddm.wayland.enable = true;
         };
-
+        environment.plasma6.excludePackages = with pkgs.kdePackages; [
+          konsole # Comment out this line if you use KDE's default terminal app
+        ];
         environment.systemPackages = with pkgs; [
-          kdePackages.kcalc # Calculator
-          kdePackages.kcharselect # Tool to select and copy special characters from all installed fonts
-          kdePackages.kcolorchooser # A small utility to select a color
-          kdePackages.kolourpaint # Easy-to-use paint program
-          kdePackages.ksystemlog # KDE SystemLog Application
-          kdePackages.sddm-kcm # Configuration module for SDDM
-          kdiff3 # Compares and merges 2 or 3 files or directories
-          kdePackages.isoimagewriter # Optional: Program to write hybrid ISO files onto USB disks
-          kdePackages.partitionmanager # Optional Manage the disk devices, partitions and file systems on your computer
+          unstable.kdePackages.qtvirtualkeyboard
+          unstable.kdePackages.isoimagewriter
+          # unstable.squeekboard
+          # unstable.onboard
+          # unstable.clickclack
+          unstable.libsForQt5.qt5.qtvirtualkeyboard
+          unstable.maliit-keyboard
+          unstable.maliit-framework
+          unstable.wayland-utils
           hardinfo2 # System information and benchmarks for Linux systems
         ];
       }

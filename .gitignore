@@ -1,4 +1,6 @@
 code/
+*.mp4
+.mp4
 exports/
 homelab/
 pass/
