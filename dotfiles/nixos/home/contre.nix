@@ -220,6 +220,11 @@ in
           target = ".config/ghostty";
           source = config.lib.file.mkOutOfStoreSymlink /home/canus/dotfiles/ghostty;
         };
+        lanmouse = {
+          recursive = false;
+          target = ".config/lan-mouse";
+          source = config.lib.file.mkOutOfStoreSymlink /home/canus/dotfiles/lan-mouse;
+        };
       };
       home.stateVersion = "25.05";
     };
