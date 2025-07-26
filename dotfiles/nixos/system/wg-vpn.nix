@@ -34,7 +34,7 @@ in
       address = [ wgAddress ];
       dns = [ "10.95.95.1" ];
       # wg genpsk | pass insert -e VPN/Wireguard/$(hostname)/wg0
-      # pass VPN/Wireguard/$(hostname)/wg0 > sudo /etc/wireguard/private.key
+      # sudo mkdir -p /etc/wireguard && pass "VPN/Wireguard/$(hostname)/wg0" | sudo tee /etc/wireguard/private.key > /dev/null && sudo chmod 600 /etc/wireguard/private.key
       privateKeyFile = "/etc/wireguard/private.key";
       # In the server -> pass VPN/Wireguard/$(hostname)/wg0 | wg pubkey 
 
