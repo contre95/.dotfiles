@@ -15,14 +15,14 @@ let
   wgAddress = machineIPs.${whichMachine} or (throw "Unknown WHICH_MACHINE: ${whichMachine}");
 in
 {
-  imports = [
-    # Make sure nixpkgs has sops-nix available
-    "${
-      builtins.fetchTarball {
-        url = "https://github.com/Mic92/sops-nix/archive/master.tar.gz";
-      }
-    }/modules/sops"
-  ];
+  # imports = [
+  #   # Make sure nixpkgs has sops-nix available
+  #   "${
+  #     builtins.fetchTarball {
+  #       url = "https://github.com/Mic92/sops-nix/archive/master.tar.gz";
+  #     }
+  #   }/modules/sops"
+  # ];
 
   networking.firewall.allowedUDPPorts = [ 51028 ];
 
