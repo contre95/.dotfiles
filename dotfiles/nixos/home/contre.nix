@@ -41,7 +41,7 @@ let
     testdisk
     cliphist
     wl-kbptr
-    mouse-lan
+    lan-mouse
     alacritty
     bandwhich
     coreutils
