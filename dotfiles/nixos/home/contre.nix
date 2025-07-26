@@ -222,8 +222,8 @@ in
         };
         lanmouse = {
           recursive = false;
-          target = ".config/lan-mouse/${whichMachine}";
-          source = config.lib.file.mkOutOfStoreSymlink /home/canus/dotfiles/lan-mouse;
+          target = ".config/lan-mouse";
+          source = config.lib.file.mkOutOfStoreSymlink /home/canus/dotfiles/lan-mouse/${whichMachine};
         };
       };
       home.stateVersion = "25.05";
