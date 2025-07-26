@@ -24,7 +24,7 @@ in
   #   }/modules/sops"
   # ];
 
-  networking.firewall.allowedUDPPorts = [ 51028 ];
+  networking.firewall.allowedUDPPorts = [ 51802 ];
 
   environment.systemPackages = with pkgs; [ wireguard-tools sops];
 
