@@ -19,7 +19,7 @@ hostname = "10.0.0.6"
 # activate this client immediately when lan-mouse is started
 activate_on_startup = true
 # optional list of (known) ip addresses
-# ips = ["10.0.0.6", "10.0.0.5", "10.0.0.4"]
+ips = ["10.0.0.6", "10.0.0.5", "10.0.0.4"]
 
 # [top]
 # # hostname
