@@ -11,23 +11,21 @@ port = 4242
 # "bc:05:ab:7a:a4:de:88:8c:2f:92:ac:bc:b8:49:b8:24:0d:44:b3:e6:a4:ef:d7:0b:6c:69:6d:77:53:0b:14:80" = "iridium"
 
 # define a client on the right side with host name "iridium"
-[[clients]]
+[bottom]
 # position (left | right | top | bottom)
-position = "bottom"
+# position = "bottom"
 # hostname
 hostname = "10.0.0.6"
 # activate this client immediately when lan-mouse is started
 activate_on_startup = true
 # optional list of (known) ip addresses
-ips = ["10.0.0.6", "10.0.0.5", "10.0.0.4"]
+# ips = ["10.0.0.6", "10.0.0.5", "10.0.0.4"]
 
-[[clients]]
-# position (left | right | top | bottom)
-position = "top"
-# hostname
-hostname = "10.0.0.5"
-# activate this client immediately when lan-mouse is started
-activate_on_startup = true
-# optional list of (known) ip addresses
-ips = ["10.0.0.6", "10.0.0.5", "10.0.0.4"]
+# [top]
+# # hostname
+# hostname = "10.0.0.5"
+# # activate this client immediately when lan-mouse is started
+# activate_on_startup = true
+# # optional list of (known) ip addresses
+# ips = ["10.0.0.6", "10.0.0.5", "10.0.0.4"]
 
