@@ -22,6 +22,7 @@
       "custom/mic",
     ],
     "modules-right": [
+      "custom/wg",
       "custom/apps",
       "custom/kbd",
       "custom/hypr",
@@ -33,6 +34,13 @@
       "max": 100,
       "orientation": "horizontal",
       "device": "intel_backlight",
+    },
+    "custom/wg": {
+      "format": "{} ",
+      "on-click": "sudo -n /usr/bin/env systemctl start wg-quick-wg0.service",
+      "on-click-right": "sudo -n /usr/bin/env systemctl stop wg-quick-wg0.service",
+      "interval": 1,
+      "exec": "bash -c 'systemctl is-active --quiet wg-quick-wg0.service && echo \"<span color=\\\"#8A9A7B\\\">󰌘</span>\" || echo \"<span color=\\\"#FD6262\\\">󰌙</span>\"'"
     },
     "custom/arch": {
       "format": "  ",
