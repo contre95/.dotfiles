@@ -13,6 +13,7 @@ let
   };
 in
 {
+  services.libinput.enable = true;
   environment.sessionVariables = {
     HYPR_PLUGIN_DIR = pkgs.symlinkJoin {
       name = "hyprland-plugins";
@@ -27,9 +28,12 @@ in
   environment.systemPackages = with pkgs; [
     xorg.libxcb
     zenity
+    lm_sensors
+    unstable.iio-sensor-proxy
+    unstable.iio-hyprland
     gammastep
-    sweet
     dunst
+    unstable.wtype
     unstable.swww
     wofi
     rofi-wayland
@@ -38,6 +42,8 @@ in
     unstable.overskride
     unstable.wayland-scanner
     unstable.nwg-drawer
+    unstable.clickclack
+    unstable.wvkbd
     unstable.hyprpaper
     hdrop
     unstable.hyprshade
@@ -54,7 +60,6 @@ in
     unstable.libnotify
     unstable.hyprland-protocols
     unstable.wev
-    unstable.wvkbd
     unstable.hyprland-workspaces
     # hyprdim
     unstable.hyprlock

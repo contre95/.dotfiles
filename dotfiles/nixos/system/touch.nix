@@ -20,6 +20,9 @@ in
           displayManager.sddm.enable = true;
           displayManager.sddm.wayland.enable = true;
         };
+        services.displayManager.sddm.setupScript = ''
+          ${pkgs.wvkbd}/bin/wvkdb-mobintl &
+        '';
         environment.plasma6.excludePackages = with pkgs.kdePackages; [
           konsole # Comment out this line if you use KDE's default terminal app
         ];
@@ -28,7 +31,7 @@ in
           unstable.kdePackages.isoimagewriter
           # unstable.squeekboard
           # unstable.onboard
-          # unstable.clickclack
+          unstable.kdePackages.qtvirtualkeyboard
           unstable.libsForQt5.qt5.qtvirtualkeyboard
           unstable.maliit-keyboard
           unstable.maliit-framework

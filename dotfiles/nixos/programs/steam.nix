@@ -17,7 +17,7 @@ in
           gamemode
           goverlay
           mangohud
-          mangohud
+          protontricks
           r2modman
           protonup-qt
         ];

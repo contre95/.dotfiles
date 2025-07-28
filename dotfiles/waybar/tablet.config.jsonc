@@ -60,7 +60,7 @@
     "custom/kbd": {
       "format": " <span color='#8094B4'>  </span>",
       "tooltip": false,
-      "on-click": "pkill wvkbd-mobintl || wvkbd-mobintl -H 320 -L 320",
+      "on-click": "pkill wvkbd-mobintl || wvkbd-mobintl -H 320 -L 320  -o | clickclack -V -f $MY_FOLDER/library/sounds/keyclick.wav",
       // "tooltip": true,
     },
     "custom/hypr": {

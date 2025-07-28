@@ -45,7 +45,7 @@ in
 
       #Optional helps save long term battery health
       START_CHARGE_THRESH_BAT0 = 40;
-      STOP_CHARGE_THRESH_BAT0 = 80;
+      STOP_CHARGE_THRESH_BAT0 = 90;
 
     };
   };
