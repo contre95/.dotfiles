@@ -58,10 +58,14 @@
   };
   # Environment Packages
   environment.systemPackages = with pkgs; [
-    acpi
+    unstable.acpi
     unstable.asusctl
+    unstable.fwupd
+    unstable.supergfxctl
     linuxKernel.packages.linux_6_15.asus-ec-sensors
+    mission-center
     upower
+    upower-notify
     brightnessctl
     nvtopPackages.amd
   ];
