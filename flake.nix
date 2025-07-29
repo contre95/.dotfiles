@@ -9,17 +9,14 @@
       url = "github:nix-community/home-manager/release-25.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    
-    nur.url = "github:nix-community/NUR";
-    
+    # nur.url = "github:nix-community/NUR";
     # Optional: Add other flake inputs you might need
     # hyprland.url = "github:hyprwm/Hyprland";
   };
 
-  outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, nur, ... }@inputs:
+  outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, ... }@inputs:
     let
       system = "x86_64-linux";
-      
       # Create an overlay for unstable packages
       unstableOverlay = final: prev: {
         unstable = import nixpkgs-unstable {
@@ -30,22 +27,22 @@
       
       # Common configuration shared across all machines
       commonModules = [
-        ./home/contre.nix
-        ./system/boot.nix
-        ./system/test.nix
-        ./system/fonts.nix
-        ./system/shell.nix
-        ./system/sound.nix
-        ./system/version.nix
-        ./system/graphics.nix
-        ./system/security.nix
-        ./system/bluetooth.nix
-        ./system/containers.nix
-        ./system/networking.nix
-        ./system/monitoring.nix
+        ./dotfiles/nixos/home/contre.nix
+        ./dotfiles/nixos/system/boot.nix
+        ./dotfiles/nixos/system/test.nix
+        ./dotfiles/nixos/system/fonts.nix
+        ./dotfiles/nixos/system/shell.nix
+        ./dotfiles/nixos/system/audio.nix
+        ./dotfiles/nixos/system/version.nix
+        ./dotfiles/nixos/system/graphics.nix
+        ./dotfiles/nixos/system/security.nix
+        ./dotfiles/nixos/system/bluetooth.nix
+        ./dotfiles/nixos/system/containers.nix
+        ./dotfiles/nixos/system/networking.nix
+        ./dotfiles/nixos/system/monitoring.nix
         home-manager.nixosModules.home-manager
         {
-          nixpkgs.overlays = [ unstableOverlay nur.overlay ];
+          nixpkgs.overlays = [ unstableOverlay ];
           nixpkgs.config.allowUnfree = true;
           
           # Home Manager configuration
@@ -98,7 +95,7 @@
             environment.variables.MYENV = hostname;
             environment.variables.WHICH_MACHINE = hostname;
           }
-          /etc/nixos/hardware-configuration.nix
+          ./dotfiles/nixos/machines/${hostname}-hardware.nix
         ];
       };
       
@@ -106,28 +103,28 @@
       nixosConfigurations = {
         desktop = mkSystem {
           hostname = "desktop";
-          extraModules = [ ./machines/desktop.nix ];
+          extraModules = [ ./dotfiles/nixos/machines/desktop.nix ];
         };
         
         notebook = mkSystem {
           hostname = "notebook";
           extraModules = [ 
-            ./machines/notebook.nix 
-            ./system/wg-vpn.nix
+            ./dotfiles/nixos/machines/notebook.nix 
+            ./dotfiles/nixos/system/wg-vpn.nix
           ];
         };
         
         tablet = mkSystem {
           hostname = "tablet";
           extraModules = [ 
-            ./machines/tablet.nix 
-            ./system/wg-vpn.nix
+            ./dotfiles/nixos/machines/tablet.nix 
+            ./dotfiles/nixos/system/wg-vpn.nix
           ];
         };
         
         server = mkSystem {
           hostname = "server";
-          extraModules = [ ./machines/server.nix ];
+          extraModules = [ ./dotfiles/nixos/machines/server.nix ];
         };
         
         # macbook = mkSystem {
@@ -137,6 +134,7 @@
         #     ./home/work.nix
         #   ];
         # };
+
       };
       
       # Development shell for working with the flake

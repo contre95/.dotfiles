@@ -55,8 +55,6 @@ let
     android-tools
     yubikey-manager
     alacritty-theme
-    unstable.hyprpicker
-    # unstable.grim # For screenshots
     slurp # For screenshots
     tmuxPlugins.tmux-thumbs
     stow # To create symlinks
@@ -119,6 +117,7 @@ in
           commonPkgs
           ++ [
             pkgs.krita
+            pkgs.picard
             pkgs.slack
             pkgs.lingot
             pkgs.spotify
@@ -131,7 +130,7 @@ in
             pkgs.beets
           ]
         else
-          commonPkgs [ ];
+          commonPkgs ++ [ ];
 
       imports = [
         ../programs/git.nix

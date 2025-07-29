@@ -21,7 +21,7 @@ in
           displayManager.sddm.wayland.enable = true;
         };
         services.displayManager.sddm.setupScript = ''
-          ${pkgs.wvkbd}/bin/wvkdb-mobintl &
+          ${pkgs.maliit-keyboard}/bin/maliit-keyboard &
         '';
         environment.plasma6.excludePackages = with pkgs.kdePackages; [
           konsole # Comment out this line if you use KDE's default terminal app

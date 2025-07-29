@@ -34,7 +34,7 @@ in
         ./system/test.nix
         ./system/fonts.nix
         ./system/shell.nix
-        ./system/sound.nix
+        ./system/audio.nix
         ./system/version.nix
         ./system/graphics.nix
         ./system/security.nix

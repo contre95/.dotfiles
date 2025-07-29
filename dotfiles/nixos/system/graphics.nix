@@ -35,9 +35,10 @@ in
     dunst
     unstable.wtype
     unstable.swww
+    unstable.hyprpicker
+    unstable.grim
     wofi
     rofi-wayland
-    unstable.quick-webapps
     wdisplays
     unstable.overskride
     unstable.wayland-scanner
@@ -83,6 +84,8 @@ in
     CLUTTER_BACKEND = "wayland";
     __GLX_VENDOR_LIBRARY_NAME = "nvidia";
     XDG_CURRENT_DESKTOP = "Hyprland";
+    QT_IM_MODULE = "ibus";
+    GTK_IM_MODULE = "ibus";
     XDG_SESSION_DESKTOP = "Hyprland";
     XDG_SESSION_TYPE = "wayland";
     NIXOS_XDG_OPEN_USE_PORTAL = "1";

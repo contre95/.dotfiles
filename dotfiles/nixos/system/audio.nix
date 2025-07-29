@@ -3,8 +3,8 @@
 
   environment.systemPackages = with pkgs; [
     wireplumber
-    pamixer         # to detect volume changes (optional)
-    libnotify       # optional for notifications
+    pamixer # to detect volume changes (optional)
+    libnotify # optional for notifications
     pulseaudioFull
     pipewire
     pavucontrol
@@ -16,6 +16,7 @@
     audio.enable = true;
     enable = true;
     alsa.enable = true;
+    jack.enable = true;
     socketActivation = true;
     pulse.enable = true;
     wireplumber.enable = true;

@@ -22,9 +22,14 @@ in
     options = "--delete-older-than 30d";
   };
 
-  services.power-profiles-daemon.enable = false;
+  # services.power-profiles-daemon.enable = false;
+  # services.asusd = {
+  #   enable = true;
+  #   enableUserService = false;
+  # };
+  #
   services.tlp = {
-    enable = true;
+    enable = false; # I'm trying asusd
     settings = {
       CPU_SCALING_GOVERNOR_ON_AC = "performance";
       CPU_SCALING_GOVERNOR_ON_BAT = "balanced";
@@ -61,24 +66,16 @@ in
   environment.systemPackages = with pkgs; [
     acpi
     unstable.asusctl
+    linuxKernel.packages.linux_6_15.asus-ec-sensors
     upower
     brightnessctl
     nvtopPackages.amd
   ];
 
   hardware.sensor.iio.enable = true;
-  # hardware.asus.flow.gv302x = {
-  #   keyboard.autosuspend.enable = true;
-  #   ite-device.wakeup.enable = true;
-  #   amdgpu = {
-  #     recovery.enable = false;
-  #     sg_display.enable = true;
-  #     psr.enable = true;
-  #   };
-  # };
-
   boot.initrd.availableKernelModules = [
     "nvme"
+    "nvme_core" # Core NVMe support
     "xhci_pci"
     "thunderbolt"
     "usbhid"
@@ -86,9 +83,32 @@ in
     "sd_mod"
     "sdhci_pci"
   ];
-  boot.initrd.kernelModules = [ ];
+
+  boot.initrd.kernelModules = [
+    "amdgpu" # AMD GPU driver
+    "nvme"
+    "nvme_core" # Core NVMe support
+    "xhci_pci"
+    "thunderbolt"
+    "usbhid"
+    "usb_storage"
+    "sd_mod"
+    "sdhci_pci"
+  ];
   boot.kernelModules = [ "kvm-amd" ];
   boot.extraModulePackages = [ ];
+  #hardware.graphics.package = lib.mkForce pkgs.unstable.mesa.drivers;
+  hardware.amdgpu.initrd.enable = true; # load amdgpu kernelModules in stage 1.
+  hardware.amdgpu.opencl.enable = true; # OpenCL support - general compute API for gpu
+  hardware.amdgpu.amdvlk.enable = true; # additional, alternative drivers
+
+  # Disable AMD GPU runtime power management (fixes SDDM context creation issues)
+  boot.kernelParams = [
+    "amdgpu.runpm=0" # Disable runtime power management (can cause issues with SDDM)
+    "amdgpu.dc=1" # Enable Display Core
+    "amdgpu.dpm=1" # Enable Dynamic Power Management
+  ];
+
   hardware.graphics = {
     enable = true;
   };
