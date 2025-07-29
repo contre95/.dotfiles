@@ -1,16 +1,10 @@
 {
   lib,
   config,
+  unstable,
   pkgs,
   ...
 }:
-let
-  unstable = import <nixos-unstable> {
-    config = {
-      allowUnfree = true;
-    };
-  };
-in
 {
   system.autoUpgrade.enable = true;
   system.autoUpgrade.allowReboot = true;

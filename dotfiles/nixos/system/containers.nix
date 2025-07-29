@@ -1,11 +1,4 @@
-{ pkgs, ... }:
-let
-  unstable = import <nixos-unstable> {
-    config = {
-      allowUnfree = true;
-    };
-  };
-in
+{ pkgs, unstable, ... }:
 {
 
   # home-manager.users.contre = {
@@ -49,7 +42,11 @@ in
 
     containers = {
       enable = true;
-      registries.search = [ "docker.io" "ghcr.io" "lscr.io" ];
+      registries.search = [
+        "docker.io"
+        "ghcr.io"
+        "lscr.io"
+      ];
       # storage.settings = {
       #   storage.driver = "zfs";
       #   storage.graphroot = "/var/lib/containers/storage";

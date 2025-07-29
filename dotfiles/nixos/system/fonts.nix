@@ -1,11 +1,4 @@
-{ pkgs, ... }:
-let
-  unstable = import <nixos-unstable> {
-    config = {
-      allowUnfree = true;
-    };
-  };
-in
+{ unstable, ... }:
 {
   # Fonts
   fonts.packages = [
