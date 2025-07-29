@@ -45,7 +45,6 @@ let
     alacritty
     bandwhich
     coreutils
-    grimblast
     util-linux
     xorg.xhost
     easyeffects
@@ -55,7 +54,6 @@ let
     android-tools
     yubikey-manager
     alacritty-theme
-    slurp
     tmuxPlugins.tmux-thumbs
     stow
     zbar

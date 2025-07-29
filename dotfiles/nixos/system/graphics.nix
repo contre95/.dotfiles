@@ -15,6 +15,8 @@
     unstable.swww
     unstable.hyprpicker
     unstable.grim
+    unstable.slurp
+    unstable.grimblast
     wofi
     rofi-wayland
     wdisplays

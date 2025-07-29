@@ -45,10 +45,9 @@
     };
 
     shellAliases = {
-      rebuild = "sudo WHICH_MACHINE=$(hostname) nixos-rebuild switch";
-      rebuild-boot = "sudo WHICH_MACHINE=$(hostname) nixos-rebuild boot";
+      rebuild = "sudo nixos-rebuild switch --flake /home/canus/#${hostname}";
+      update = "pushd $MY_FOLDER && git pull && sudo nixos-rebuild switch --flake /home/canus/#${hostname}";
       gparted = "sudo --preserve-env gparted";
-      update = "pushd $MY_FOLDER && git pull && sudo nix-channel --update && sudo WHICH_MACHINE=$(hostname) nixos-rebuild switch --upgrade-all && popd";
       iptr = "sudo iptables -t nat -L -v -n";
       gc = "sudo nix-store --gc";
       no = "nix store optimise";
