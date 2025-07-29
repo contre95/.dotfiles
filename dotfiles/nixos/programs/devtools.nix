@@ -20,7 +20,7 @@
     statix
 
     # terraform
-    unstable.terraform
+    # unstable.terraform
     unstable.terraform-ls
     unstable.tflint
     unstable.tfsec

@@ -42,6 +42,7 @@
         ./dotfiles/nixos/system/monitoring.nix
         home-manager.nixosModules.home-manager
         {
+          # Allow unfree packages globally
           nixpkgs.config.allowUnfree = true;
 
           # Home Manager configuration

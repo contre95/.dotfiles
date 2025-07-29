@@ -67,7 +67,7 @@ in
 
   users.users.contre.isNormalUser = true;
   home-manager.useGlobalPkgs = true;
-  home-manager.extraSpecialArgs = { inherit hostname; };
+  home-manager.extraSpecialArgs = { inherit hostname unstable; };
 
   programs.nano.enable = false;
   imports = [
