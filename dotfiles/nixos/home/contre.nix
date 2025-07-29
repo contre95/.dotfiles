@@ -64,9 +64,7 @@ let
   ];
 in
 {
-  _module.args = {
-    inherit lib pkgs unstable;
-  };
+
   users.users.contre.isNormalUser = true;
   home-manager.useGlobalPkgs = true;
   home-manager.extraSpecialArgs = { inherit hostname; };
@@ -83,7 +81,7 @@ in
   ];
 
   home-manager.users.contre =
-    { pkgs, config, ... }:
+    { pkgs, config, unstable, ... }:
     {
       wayland.windowManager.hyprland.systemd.enable = false;
       programs.home-manager.enable = true;
