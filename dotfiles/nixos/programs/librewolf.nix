@@ -1,13 +1,4 @@
-{ pkgs, ... }:
-let
-  # zen-flake = builtins.getFlake "github:MarceColl/zen-browser-flake";
-  # zenBrowser = zen-flake.packages.x86_64-linux.default;
-  unstable = import <nixos-unstable> {
-    config = {
-      allowUnfree = true;
-    };
-  };
-in
+{ pkgs, unstable, ... }:
 {
   # home.packages = [ zenBrowser ];
   programs.librewolf = {

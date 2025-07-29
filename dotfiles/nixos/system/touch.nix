@@ -1,16 +1,14 @@
-{ lib, pkgs, ... }:
-let
-  whichMachine = builtins.getEnv "WHICH_MACHINE";
-  unstable = import <nixos-unstable> {
-    config = {
-      allowUnfree = true;
-    };
-  };
-in
+{
+  lib,
+  pkgs,
+  unstable,
+  hostname,
+  ...
+}:
 {
   config =
     if
-      lib.elem whichMachine [
+      lib.elem hostname [
         "tablet"
       ]
     then

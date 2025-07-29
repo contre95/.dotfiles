@@ -1,17 +1,16 @@
 {
   lib,
-  config,
   pkgs,
+  hostname,
   ...
 }:
 let
-  whichMachine = builtins.getEnv "WHICH_MACHINE";
   socketDir = "/run/user/1000/gnupg";
 in
 {
   config =
     if
-      lib.elem whichMachine [
+      lib.elem hostname [
         "notebook"
         "tablet"
         "desktop"
@@ -95,4 +94,3 @@ in
     else
       { };
 }
-

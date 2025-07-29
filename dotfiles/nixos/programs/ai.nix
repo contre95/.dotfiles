@@ -1,15 +1,8 @@
-{ lib, ... }:
-let
-  whichMachine = builtins.getEnv "WHICH_MACHINE";
-  unstable = import <nixos-unstable> {
-    config = {
-      allowUnfree = true;
-    };
-  };
-in
+{ lib, unstable, hostname, ... }:
+
 {
   config =
-    if lib.elem whichMachine [ "desktop" ] then
+    if lib.elem hostname [ "desktop" ] then
       {
         environment.systemPackages = [
           # unstable.lmstudio

@@ -1,11 +1,8 @@
-{ lib, pkgs, ... }:
-let
-  whichMachine = builtins.getEnv "WHICH_MACHINE";
-in
+{ lib,hostname, pkgs, ... }:
 {
   config =
     if
-      lib.elem whichMachine [
+      lib.elem hostname [
         "desktop"
       ]
     then

@@ -1,18 +1,11 @@
-{ pkgs, ... }:
-let
-  # mcphub-nvim = builtins.getFlake "github:ravitemer/mcphub.nvim";
-  unstable = import <nixos-unstable> {
-    config = {
-      allowUnfree = true;
-    };
-  };
-in
+{ pkgs, unstable, ... }:
 {
   # langs, linters, formatters, lsps, etc
   home.packages = with pkgs; [
 
     # Text editor
     unstable.neovim
+    unstable.opencode
     # unstable.code-cursor
 
     # Cloud

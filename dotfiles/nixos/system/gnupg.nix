@@ -1,31 +1,15 @@
-{
-  pkgs,
-  lib,
-  ...
-}:
-let
-  whichMachine = builtins.getEnv "WHICH_MACHINE";
-in
+{ lib, pkgs, hostname, ... }:
 {
   config =
-    if
-      lib.elem whichMachine [
-        "notebook"
-        "tablet"
-        "desktop"
-      ]
-    then
-      {
-        environment.systemPackages = with pkgs; [ gnupg ];
-        services.pcscd.enable = true;
-        services.dbus.packages = [ pkgs.gcr ];
-        # Enable GPG at a system level
-        services.yubikey-agent.enable = true;
-        # Enable GPG Smartcards (Like Yubikeys)
-        hardware.gpgSmartcards.enable = true;
-      }
-    else
-      {
-        environment.systemPackages = with pkgs; [ gnupg ];
-      };
+    if lib.elem hostname [ "notebook" "tablet" "desktop" ]
+    then {
+      environment.systemPackages = with pkgs; [ gnupg ];
+      services.pcscd.enable = true;
+      services.dbus.packages = [ pkgs.gcr ];
+      services.yubikey-agent.enable = true;
+      hardware.gpgSmartcards.enable = true;
+    }
+    else {
+      environment.systemPackages = with pkgs; [ gnupg ];
+    };
 }

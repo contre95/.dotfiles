@@ -1,18 +1,19 @@
-{ lib, pkgs, ... }:
+{
+  lib,
+  pkgs,
+  hostname,
+  ...
+}:
 
 let
-  whichMachine = builtins.getEnv "WHICH_MACHINE";
-  # Mapping of machine name to its WireGuard IP address
   machineIPs = {
     tablet = "10.95.95.10/32";
     notebook = "10.95.95.20/32";
     desktop = "10.95.95.30/32";
   };
-
   allowedMachines = builtins.attrNames machineIPs;
-  isClientMachine = lib.elem whichMachine allowedMachines;
-
-  wgAddress = machineIPs.${whichMachine} or (throw "Unknown WHICH_MACHINE: ${whichMachine}");
+  isClientMachine = lib.elem hostname allowedMachines;
+  wgAddress = machineIPs.${hostname} or (throw "Unknown WHICH_MACHINE: ${hostname}");
 in
 {
   # imports = [
@@ -26,7 +27,10 @@ in
 
   networking.firewall.allowedUDPPorts = [ 51802 ];
 
-  environment.systemPackages = with pkgs; [ wireguard-tools sops];
+  environment.systemPackages = with pkgs; [
+    wireguard-tools
+    sops
+  ];
 
   networking.wg-quick.interfaces = lib.mkIf isClientMachine {
     wg0 = {
@@ -36,7 +40,7 @@ in
       # wg genpsk | pass insert -e VPN/Wireguard/$(hostname)/wg0
       # sudo mkdir -p /etc/wireguard && pass "VPN/Wireguard/$(hostname)/wg0" | sudo tee /etc/wireguard/private.key > /dev/null && sudo chmod 600 /etc/wireguard/private.key
       privateKeyFile = "/etc/wireguard/private.key";
-      # In the server -> pass VPN/Wireguard/$(hostname)/wg0 | wg pubkey 
+      # In the server -> pass VPN/Wireguard/$(hostname)/wg0 | wg pubkey
 
       peers = [
         {

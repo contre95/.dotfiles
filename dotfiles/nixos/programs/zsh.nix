@@ -1,7 +1,9 @@
-{ config, pkgs, ... }:
-let
-  whichMachine = builtins.getEnv "WHICH_MACHINE";
-in
+{
+  config,
+  pkgs,
+  hostname,
+  ...
+}:
 {
   home.packages = with pkgs; [
     zsh-autosuggestions
@@ -25,7 +27,7 @@ in
       zstyle ":completion:*" matcher-list "" "m:{a-zA-Z}={A-Za-z}" "r:|[._-]=* r:|=*" "l:|=* r:|=*"
       PS1="%F{#008000}%B%n@%m%b %1~:%f"
       export SSH_AUTH_SOCK="$(${config.programs.gpg.package}/bin/gpgconf --list-dirs agent-ssh-socket)"
-      ${pkgs.lib.optionalString (whichMachine == "macbook") ''
+      ${pkgs.lib.optionalString (hostname == "macbook") ''
         source <(fzf --zsh)
         eval $(ocm handler init)'
         export GPG_TTY=$(tty)

@@ -1,11 +1,12 @@
-{ lib, pkgs, ... }:
+{
+  pkgs,
+  lib,
+  unstable,
+  hostname,
+  ...
+}:
+
 let
-  whichMachine = builtins.getEnv "WHICH_MACHINE";
-  unstable = import <nixos-unstable> {
-    config = {
-      allowUnfree = true;
-    };
-  };
   commonPkgs = with pkgs; [
     unstable.rockbox-utility
     fd
@@ -41,7 +42,6 @@ let
     testdisk
     cliphist
     wl-kbptr
-    # lan-mouse
     alacritty
     bandwhich
     coreutils
@@ -55,19 +55,22 @@ let
     android-tools
     yubikey-manager
     alacritty-theme
-    slurp # For screenshots
+    slurp
     tmuxPlugins.tmux-thumbs
-    stow # To create symlinks
-    zbar # For scanning QR codes
-    ripgrep # Like grep but in Rust
-    zoxide # Like autojump but in Rust
+    stow
+    zbar
+    ripgrep
+    zoxide
   ];
 in
 {
+  _module.args = {
+    inherit lib pkgs unstable;
+  };
   users.users.contre.isNormalUser = true;
   home-manager.useGlobalPkgs = true;
+  home-manager.extraSpecialArgs = { inherit hostname; };
 
-  # System programs
   programs.nano.enable = false;
   imports = [
     ../system/gnupg.nix
@@ -78,7 +81,7 @@ in
     ../programs/steam.nix
     ../programs/ai.nix
   ];
-  # Home manager
+
   home-manager.users.contre =
     { pkgs, config, ... }:
     {
@@ -88,13 +91,13 @@ in
       home.homeDirectory = "/home/contre";
       home.sessionVariables = {
         MY_FOLDER = "/home/canus";
-        # LD_LIBRARY_PATH = "${pkgs.stdenv.cc.cc.lib}/lib";
         SCR_PATH = "$MY_FOLDER/scripts";
         PATH = "$PATH:$MY_FOLDER/scripts/bin-scr:/Users/lucas.contreras/.nix-profile/bin:/run/current-system/sw/bin:/nix/var/nix/profiles/default/bin:$HOME/.pyenv/bin:/go/bin/:$HOME/.cargo/bin";
         EDITOR = "nvim";
       };
+
       home.packages =
-        if "${whichMachine}" == "desktop" then
+        if "${hostname}" == "desktop" then
           commonPkgs
           ++ [
             pkgs.lingot
@@ -103,7 +106,7 @@ in
             pkgs.blender
             unstable.telegram-desktop
           ]
-        else if "${whichMachine}" == "notebook" then
+        else if "${hostname}" == "notebook" then
           commonPkgs
           ++ [
             pkgs.slack
@@ -113,7 +116,7 @@ in
             pkgs.spotify
             pkgs.telegram-desktop
           ]
-        else if "${whichMachine}" == "tablet" then
+        else if "${hostname}" == "tablet" then
           commonPkgs
           ++ [
             pkgs.krita
@@ -123,7 +126,7 @@ in
             pkgs.spotify
             unstable.telegram-desktop
           ]
-        else if "${whichMachine}" == "server" then
+        else if "${hostname}" == "server" then
           commonPkgs
           ++ [
             pkgs.picard
@@ -146,6 +149,7 @@ in
         ../programs/librewolf.nix
         ../programs/devtools.nix
       ];
+
       home.extraOutputsToInstall = [ "share/tmux-plugins" ];
       home.file = {
         librewolf = {
@@ -153,7 +157,6 @@ in
           source = pkgs.fetchzip {
             url = "https://github.com/datguypiko/Firefox-Mod-Blur/archive/refs/heads/master.zip";
             hash = "sha256-Lm6B9aYZO0JiUDiwD5WEDhOzgwxt3c1RF3NUpikyR3Y=";
-            # stripRoot = false;
           };
         };
         neovim = {
@@ -202,19 +205,16 @@ in
           source = /home/canus/dotfiles/zsh/.p10k.zsh;
         };
         alacritty = {
-          # recursive = true;
           enable = true;
           target = ".config/alacritty";
           source = config.lib.file.mkOutOfStoreSymlink /home/canus/dotfiles/alacritty;
         };
         drawer = {
-          # recursive = true;
           enable = true;
           target = ".config/nwg-drawer";
           source = config.lib.file.mkOutOfStoreSymlink /home/canus/dotfiles/nwg-drawer;
         };
         ghostty = {
-          # recursive = true;
           enable = true;
           target = ".config/ghostty";
           source = config.lib.file.mkOutOfStoreSymlink /home/canus/dotfiles/ghostty;
@@ -222,7 +222,7 @@ in
         lanmouse = {
           recursive = false;
           target = ".config/lan-mouse";
-          source = config.lib.file.mkOutOfStoreSymlink /home/canus/dotfiles/lan-mouse/${whichMachine};
+          source = config.lib.file.mkOutOfStoreSymlink /home/canus/dotfiles/lan-mouse/${hostname};
         };
       };
       home.stateVersion = "25.05";

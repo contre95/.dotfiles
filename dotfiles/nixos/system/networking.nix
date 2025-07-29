@@ -4,9 +4,6 @@
   pkgs,
   ...
 }:
-let
-  whichMachine = builtins.getEnv "WHICH_MACHINE";
-in
 {
   systemd.network.enable = true;
   networking.wireless.enable = false;

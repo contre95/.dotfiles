@@ -1,30 +1,8 @@
+{ pkgs, unstable, ... }:
 {
-  pkgs,
-  lib,
-  ...
-}:
-with lib;
-let
-  whichMachine = builtins.getEnv "WHICH_MACHINE";
-  unstable = import <nixos-unstable> {
-    config = {
-      allowUnfree = true;
-    };
-  };
-in
-{
+
   services.libinput.enable = true;
-  environment.sessionVariables = {
-    HYPR_PLUGIN_DIR = pkgs.symlinkJoin {
-      name = "hyprland-plugins";
-      paths = with pkgs.hyprlandPlugins; [
-        # hyprexpo
-        # hyprgrass
-        # hyprbars
-        #...plugins
-      ];
-    };
-  };
+
   environment.systemPackages = with pkgs; [
     xorg.libxcb
     zenity
@@ -99,16 +77,7 @@ in
   hardware.graphics.enable = true;
   programs.hyprland = {
     enable = true;
-    package =
-      if
-        lib.elem whichMachine [
-          "desktop"
-          "table"
-        ]
-      then
-        unstable.hyprland
-      else
-        unstable.hyprland;
+    package = unstable.hyprland;
     portalPackage = unstable.xdg-desktop-portal-hyprland;
     withUWSM = true;
     xwayland.enable = true;

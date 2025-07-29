@@ -16,7 +16,7 @@
     extraConfig = ''StreamLocalBindUnlink yes'';
 
     banner =
-      if config.networking.hostName == "table" then
+      if config.networking.hostName == "tablet" then
         "
                        _,.---.---.---.--.._ 
            _.-' `--.`---.`---'-. _,`--.._
