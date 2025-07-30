@@ -1,6 +1,5 @@
 {
   pkgs,
-  lib,
   unstable,
   hostname,
   ...
