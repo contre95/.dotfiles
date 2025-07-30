@@ -90,8 +90,12 @@ tooltip label {
 #custom-recorder,
 #custom-music,
 #custom-pacman,
+#custom-power_profile,
+#backlight,
+#backlight-slider,
 #clock,
 #wireplumber,
+#custom-notification
 #bluetooth,
 #network,
 #battery,
@@ -104,9 +108,9 @@ tooltip label {
   /* background: #11111b; */
   color: #ffffff;
   /* border-radius: 10px; */
-  padding-left: 10px;
-  padding-right: 10px;
-  margin-right: 15px;
+  padding-left: 7px;
+  padding-right: 7px;
+  margin: 5px;
 }
 
 #clock {

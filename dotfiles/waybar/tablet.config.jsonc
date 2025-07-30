@@ -2,48 +2,62 @@
   {
     "layer": "top",
     "position": "top",
-    "modules-left": [
-      "custom/arch",
-      "hyprland/workspaces"
-    ],
+    "modules-left": ["custom/arch", "hyprland/workspaces"],
     "modules-center": [
       "bluetooth",
       "network",
       "custom/recorder",
       "custom/wall",
-      // "disk",
       "custom/ip",
       // "memory",
+      // "disk",
       // "cpu",
-      "wireplumber",
       "battery",
-      "custom/btc",
+      "custom/power_profile",
+      "temperature",
+      // "custom/btc",
       "custom/notification",
+      "wireplumber",
       "custom/mic",
     ],
     "modules-right": [
-      "custom/wg",
+      "backlight/slider",
+      "backlight",
       "custom/apps",
       "custom/kbd",
       "custom/hypr",
+      "custom/wireguard",
       "clock",
       "custom/logout",
     ],
     "backlight/slider": {
-      "min": 10,
+      "min": 5,
       "max": 100,
       "orientation": "horizontal",
       "device": "intel_backlight",
     },
-    "custom/wg": {
-      "format": "{} ",
+    "backlight": {
+      "device": "intel_backlight",
+      "format": "{icon}",
+      "format-icons": ["🌑", "🌒", "🌓", "🌔", "🌕", "🌞", "☀️"],
+    },
+    "custom/wireguard": {
+      "format": " {} ",
       "on-click": "sudo -n /usr/bin/env systemctl start wg-quick-wg0.service",
       "on-click-right": "sudo -n /usr/bin/env systemctl stop wg-quick-wg0.service",
       "interval": 1,
-      "exec": "bash -c 'systemctl is-active --quiet wg-quick-wg0.service && echo \"<span color=\\\"#8A9A7B\\\">󰌘</span>\" || echo \"<span color=\\\"#FD6262\\\">󰌙</span>\"'"
+      "exec": "bash -c 'systemctl is-active --quiet wg-quick-wg0.service && echo \"<span color=\\\"#8A9A7B\\\"> 󰌘 </span>\" || echo \"<span color=\\\"#FD6262\\\">󰌙</span>\"'",
+    },
+    "custom/power_profile": {
+      //shows the current power profile and switches to next on click
+      "exec": "asusctl profile -p | awk '/profile/ {print $NF}'",
+      "interval": 30,
+      "format": "<span color='#0AE7A0'>󰈐 </span>{}",
+      "on-click": "asusctl profile -n; pkill -SIGRTMIN+8 waybar",
+      "signal": 8,
     },
     "custom/arch": {
-      "format": "  ",
+      "format": " ",
       "tooltip": false,
       "on-click": "pkill -9 waybar && waybar -c ~/.config/waybar/$MYENV.config.jsonc",
     },
@@ -71,13 +85,7 @@
     },
     "hyprland/workspaces": {
       "persistent_workspaces": {
-        "eDP-1": [
-          1,
-          2,
-          3,
-          4,
-          5
-        ],
+        "eDP-1": [1, 2, 3, 4, 5],
       },
       "format": "{icon}",
       "format-icons": {
@@ -104,7 +112,7 @@
       "on-click": "curl ifconfig.io | wl-copy",
     },
     "custom/recorder": {
-      "format": "<span color='#FF0000'>󰑋</span> Rec.",
+      "format": "<span color='#FF0000'>󰑋 </span> Rec.",
       "return-type": "json",
       "on-click": "pkill -SIGINT wf-recorder",
       "interval": 1,
@@ -116,17 +124,13 @@
         "warning": 30,
         "critical": 15,
       },
-      "format": "{icon} {capacity}%",
-      "format-charging": "<span color='#168ECA'>󰂄</span> {capacity}%",
-      "format-plugged": "<span color='#32CE42'>󰂄</span> {capacity}%",
+      "format": "  {icon} {capacity}% - ",
+      "format-charging": "<span color='#168ECA'> 󰂄</span> {capacity}%",
+      "format-plugged": "<span color='#32CE42'> 󰂄</span> {capacity}%",
       "on-click": "zenity --question --text='Disable charge limit to 100% ?' --icon=battery  && echo $(zenity --password) | sudo -S tlp fullcharge",
       "format-alt": "{icon} {time}",
-      "format-full": "󰁹 {capacity}%",
-      "format-icons": [
-        "󰁻",
-        "󰁿",
-        "󰂁"
-      ],
+      "format-full": " 󰁹{capacity}%",
+      "format-icons": ["󰁻", "󰁿", "󰂁"],
     },
     "custom/audio": {
       "format": "<span color='#F8D987'></span> {}",
@@ -156,22 +160,17 @@
       "on-scroll-down": "wpctl set-volume @DEFAULT_SOURCE@ 0.02-",
       "tooltip": false,
       "signal": 1,
-      "interval": 2,
     },
     "wireplumber": {
-      "format": "{volume}% {icon}",
-      "format-muted": " -- <span color='#C57070'></span>",
+      "format": "<span color='#6D6D6D'>{icon} </span> {volume}% ",
+      "format-muted": "<span color='#C57070'></span> -- ",
       "on-click": "pavucontrol",
       "scroll-step": 1,
       "max-volume": 100,
       "on-click-middle": "wpctl set-mute @DEFAULT_SINK@ toggle",
       // "on-scroll-up": "wpctl set-volume @DEFAULT_SINK@ 0.02+",
       // "on-scroll-down": "wpctl set-volume @DEFAULT_SINK@ 0.02-",
-      "format-icons": [
-        "",
-        "",
-        ""
-      ],
+      "format-icons": ["", "", ""],
     },
     "custom/btc": {
       "format": "<span color='#EF8E19'></span> {}",
@@ -207,12 +206,8 @@
       "critical-threshold": 90,
       "format-critical": "{temperatureC}°C {icon}",
       "format": "{temperatureC}°C {icon}",
-      "format-icons": [
-        "",
-        "",
-        ""
-      ],
-      "interval": 2,
+      "format-icons": [""],
+      "interval": 1,
     },
     "hyprland/window": {
       "format": "{}",
