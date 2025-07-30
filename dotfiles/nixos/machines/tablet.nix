@@ -22,6 +22,13 @@
   #   enableUserService = false;
   # };
   #
+  services.supergfxd.enable = true;
+  systemd.services.supergfxd.path = [ pkgs.pciutils ];
+
+  services.asusd = {
+    enable = true;
+    enableUserService = true;
+  };
   services.tlp = {
     enable = false; # I'm trying asusd
     settings = {
