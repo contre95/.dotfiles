@@ -1,13 +1,21 @@
-{ config, ... }:
+{ config, pkgs, ... }:
 let
   dotfiles = "/home/canus/dotfiles";
   symlink = config.lib.file.mkOutOfStoreSymlink;
 in
 {
+  # ".librewolf/default/chrome".source = config.lib.file.mkOutOfStoreSymlink (
+  #   builtins.fetchzip {
+  #     url = "https://github.com/datguypiko/Firefox-Mod-Blur/archive/refs/heads/master.zip";
+  #     hash = "sha256-Lm6B9aYZO0JiUDiwD5WEDhOzgwxt3c1RF3NUpikyR3Y=";
+  #   }
+  # );
   ".librewolf/default/chrome".source = config.lib.file.mkOutOfStoreSymlink (
-    builtins.fetchzip {
-      url = "https://github.com/datguypiko/Firefox-Mod-Blur/archive/refs/heads/master.zip";
-      hash = "sha256-Lm6B9aYZO0JiUDiwD5WEDhOzgwxt3c1RF3NUpikyR3Y=";
+    pkgs.fetchFromGitHub {
+      owner = "datguypiko";
+      repo = "Firefox-Mod-Blur";
+      rev = "master";
+      sha256 = "Lm6B9aYZO0JiUDiwD5WEDhOzgwxt3c1RF3NUpikyR3Y=";
     }
   );
 

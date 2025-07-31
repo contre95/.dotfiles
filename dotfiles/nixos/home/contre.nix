@@ -1,6 +1,5 @@
 {
   pkgs,
-  config,
   unstable,
   hostname,
   ...
@@ -152,8 +151,8 @@ in
       ];
 
       # home.extraOutputsToInstall = [ "share/tmux-plugins" ];
-      # home.file = import ./dotfiles.nix { inherit config; };
-      home.file = import (builtins.toPath ./dotfiles.nix) { inherit config; };
+
+      home.file = import ./dotfiles.nix { inherit config pkgs; };
 
       home.stateVersion = "25.05";
     };
