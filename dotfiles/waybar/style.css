@@ -7,10 +7,14 @@
 }
 
 window#waybar {
-  /* -webkit-border-radius: 0px 0px 10px 9px; */
-  /* -moz-border-radius: 0px 0px 10px 9px; */
-  background-color: rgba(22, 22, 22, 0.8)
-  /* border-bottom: 1px solid #4d6074; */
+    background: transparent;
+}
+
+window > box {
+	margin: 10px;
+    background: rgba(43, 48, 59, 0.5);
+    border-bottom: 3px solid rgba(100, 114, 125, 0.5);
+    color: white;
 }
 
 #custom-kbd,
@@ -99,7 +103,6 @@ tooltip label {
 #bluetooth,
 #network,
 #battery,
-#window,
 #disk,
 #memory,
 #cpu,

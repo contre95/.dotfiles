@@ -1,4 +1,5 @@
 White,https://blankwhitescreen.com/
+Proton DB,https://www.protondb.com/
 One Piece,https://tcbonepiecechapters.com/mangas/5/one-piece
 Nerd Fonts,https://www.nerdfonts.com/cheat-sheet
 Notes,https://db.server.home/

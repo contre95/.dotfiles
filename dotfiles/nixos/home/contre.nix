@@ -1,5 +1,6 @@
 {
   pkgs,
+  config,
   unstable,
   hostname,
   ...
@@ -78,7 +79,12 @@ in
   ];
 
   home-manager.users.contre =
-    { pkgs, config, unstable, ... }:
+    {
+      pkgs,
+      config,
+      unstable,
+      ...
+    }:
     {
       wayland.windowManager.hyprland.systemd.enable = false;
       programs.home-manager.enable = true;
@@ -145,81 +151,10 @@ in
         ../programs/devtools.nix
       ];
 
-      home.extraOutputsToInstall = [ "share/tmux-plugins" ];
-      home.file = {
-        librewolf = {
-          target = ".librewolf/default/chrome";
-          source = pkgs.fetchzip {
-            url = "https://github.com/datguypiko/Firefox-Mod-Blur/archive/refs/heads/master.zip";
-            hash = "sha256-Lm6B9aYZO0JiUDiwD5WEDhOzgwxt3c1RF3NUpikyR3Y=";
-          };
-        };
-        neovim = {
-          recursive = true;
-          target = ".config/nvim";
-          source = config.lib.file.mkOutOfStoreSymlink ../../nvim;
-        };
-        rofi = {
-          recursive = true;
-          target = ".config/rofi";
-          source = ../../rofi;
-        };
-        tmux = {
-          recursive = false;
-          target = "./.tmux.conf";
-          source = config.lib.file.mkOutOfStoreSymlink ../../tmux/.tmux.conf;
-        };
-        wireplumber = {
-          recursive = true;
-          target = ".config/wireplumber";
-          source = ../../wireplumber;
-        };
-        waybar = {
-          recursive = true;
-          target = ".config/waybar";
-          source = config.lib.file.mkOutOfStoreSymlink ../../waybar;
-        };
-        hyprland = {
-          recursive = true;
-          target = ".config/hypr";
-          source = config.lib.file.mkOutOfStoreSymlink ../../hypr;
-        };
-        keyboard = {
-          recursive = true;
-          target = ".config/xkb";
-          source = ../../keybaord;
-        };
-        dunst = {
-          recursive = true;
-          target = ".config/dunst";
-          source = ../../dunst;
-        };
-        p10k = {
-          recursive = false;
-          target = ".config/.p10k.zsh";
-          source = ../../zsh/.p10k.zsh;
-        };
-        alacritty = {
-          enable = true;
-          target = ".config/alacritty";
-          source = config.lib.file.mkOutOfStoreSymlink ../../alacritty;
-        };
-        drawer = {
-          enable = true;
-          target = ".config/nwg-drawer";
-          source = config.lib.file.mkOutOfStoreSymlink ../../nwg-drawer;
-        };
-        ghostty = {
-          enable = true;
-          target = ".config/ghostty";
-          source = config.lib.file.mkOutOfStoreSymlink ../../ghostty;
-        };
-        # lanmouse = {
-        #   recursive = false;
-        #   target = ".config/lan-mouse";
-        #   source = config.lib.file.mkOutOfStoreSymlink ../lan-mouse/${hostname};
-        # };
-      };
+      # home.extraOutputsToInstall = [ "share/tmux-plugins" ];
+      # home.file = import ./dotfiles.nix { inherit config; };
+      home.file = import (builtins.toPath ./dotfiles.nix) { inherit config; };
+
       home.stateVersion = "25.05";
     };
 }
