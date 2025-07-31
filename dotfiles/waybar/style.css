@@ -6,27 +6,55 @@
   /* min-height: 8px; */
 }
 
-window#waybar {
-    background: transparent;
+.modules-left,
+.modules-center,
+.modules-right {
+  /* background: rgba(0, 0, 0, 0.5); */
+  padding: 0 5px;
+  margin: 0 10px;
+  border-radius: 15px;
 }
 
-window > box {
-	margin: 10px;
-    background: rgba(43, 48, 59, 0.5);
-    border-bottom: 3px solid rgba(100, 114, 125, 0.5);
-    color: white;
+.modules-left {
+  padding: 0;
+}
+
+window>box {
+  margin: 5px 5px;
+
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  margin-bottom: 0px;
+  padding:0px;
+  color: white;
+}
+#custom-kbd,
+#custom-hypr {
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 0px;
+}
+
+.modules-center {
+  padding: 0 10px;
+}
+
+window#waybar {
+  background: transparent;
+  margin:0;
 }
 
 #custom-kbd,
 #custom-hypr {
   margin-left: 5px;
   margin-right: 5px;
+  margin-bottom: 0px;
 }
+
 #workspaces {
   /* background-color: #292929; */
   color: #f1f1f1;
   /* padding-right: 10px; */
-  /* margin: 2px; */
 }
 
 tooltip {
@@ -44,25 +72,24 @@ tooltip label {
 
 #custom-arch {
   font-size: 20px;
-  margin-left: 15px;
-  color: #AAB4F0;
+  color: #aab4f0;
 }
 
 #workspaces button:hover {
   background: rgba(255, 255, 255, 0.1);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
+  border-radius: 15px;
 }
 
 #workspaces {
-  margin-left: 20px;
+  /* margin-left: 20px; */
 }
 
 #workspaces button {
   background-color: transparent;
   color: rgba(255, 255, 255, 0.5);
-  border-radius: 5px;
-  margin: 5px 10px;
+  border-radius: 10px;
+  margin: 4px 4px;
 }
 
 #workspaces button.empty {
@@ -99,8 +126,7 @@ tooltip label {
 #backlight-slider,
 #clock,
 #wireplumber,
-#custom-notification
-#bluetooth,
+#custom-notification #bluetooth,
 #network,
 #battery,
 #disk,
@@ -140,9 +166,11 @@ tooltip label {
   border-radius: 5px;
   background-color: red;
 }
+
 /* #custom-wg { */
 /*   background-image: url('/home/canus/library/icons/wg.svg'); */
 /*   background-position: center; */
 /*   background-repeat: no-repeat; */
 /*   background-size: 25px;  */
 /* } */
+

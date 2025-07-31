@@ -2,7 +2,7 @@
 
 {
   config =
-    if lib.elem hostname [ "desktop" ] then
+    if lib.elem hostname [ "desktop" "tablet"] then
       {
         environment.systemPackages = [
           # unstable.lmstudio
@@ -18,7 +18,7 @@
           # models = "/home/heavy-assets/models";
           enable = true;
           package = unstable.ollama-cuda;
-          acceleration = "cuda";
+          acceleration = "rocm";
           loadModels = [
             "deepseek-r1:8b"
           ];

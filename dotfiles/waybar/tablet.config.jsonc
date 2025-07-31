@@ -46,7 +46,7 @@
       "on-click": "sudo -n /usr/bin/env systemctl start wg-quick-wg0.service",
       "on-click-right": "sudo -n /usr/bin/env systemctl stop wg-quick-wg0.service",
       "interval": 1,
-      "exec": "bash -c 'systemctl is-active --quiet wg-quick-wg0.service && echo \"<span color=\\\"#8A9A7B\\\"> 󰌘 </span>\" || echo \"<span color=\\\"#FD6262\\\">󰌙</span>\"'",
+      "exec": "bash -c 'systemctl is-active --quiet wg-quick-wg0.service && echo \"<span color=\\\"#8A9A7B\\\"> 󰌘 </span>\" || echo \"<span color=\\\"#FD6262\\\"> 󰌙 </span>\"'",
     },
     "custom/power_profile": {
       //shows the current power profile and switches to next on click
@@ -57,7 +57,7 @@
       "signal": 8,
     },
     "custom/arch": {
-      "format": " ",
+      "format": "  ",
       "tooltip": false,
       "on-click": "pkill -9 waybar && waybar -c ~/.config/waybar/$MYENV.config.jsonc",
     },
@@ -159,6 +159,7 @@
       "on-scroll-up": "wpctl set-volume @DEFAULT_SOURCE@ 0.02+",
       "on-scroll-down": "wpctl set-volume @DEFAULT_SOURCE@ 0.02-",
       "tooltip": false,
+      "interval": 1,
       "signal": 1,
     },
     "wireplumber": {
