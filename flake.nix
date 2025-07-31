@@ -9,11 +9,6 @@
       url = "github:nix-community/home-manager/release-25.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-      hyprland.url = "github:hyprwm/Hyprland";
-      hyprgrass = {
-         url = "github:horriblename/hyprgrass";
-         inputs.hyprland.follows = "hyprland"; # IMPORTANT
-      };
     # nur.url = "github:nix-community/NUR";
     # Optional: Add other flake inputs you might need
     # hyprland.url = "github:hyprwm/Hyprland";
