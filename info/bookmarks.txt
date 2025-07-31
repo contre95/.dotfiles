@@ -1,5 +1,6 @@
 White,https://blankwhitescreen.com/
 One Piece,https://tcbonepiecechapters.com/mangas/5/one-piece
+Nerd Fonts,https://www.nerdfonts.com/cheat-sheet
 Notes,https://db.server.home/
 AliExpress,https://es.aliexpress.com
 RSS,http://rss.server.home
