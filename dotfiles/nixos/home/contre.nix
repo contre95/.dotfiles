@@ -131,6 +131,7 @@ in
             pkgs.krita
             pkgs.picard
             pkgs.slack
+            pkgs.beets
             pkgs.lingot
             pkgs.spotify
             unstable.telegram-desktop
