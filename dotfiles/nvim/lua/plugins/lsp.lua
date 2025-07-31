@@ -126,9 +126,6 @@ return {
 				filetypes = { "shell", "bash", "zsh", "sh" },
 			})
 
-            -- Gopls hyprls
-			lspconfig.hyprls.setup({})
-
             -- Gopls setup
 			lspconfig.gopls.setup({
 				capabilities = capabilities,
