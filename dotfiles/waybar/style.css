@@ -19,15 +19,15 @@
   padding: 0;
 }
 
-window>box {
+window > box {
   margin: 5px 5px;
-
   border-radius: 10px;
   background: rgba(0, 0, 0, 0.5);
   margin-bottom: 0px;
-  padding:0px;
+  padding: 0px;
   color: white;
 }
+
 #custom-kbd,
 #custom-hypr {
   margin-left: 5px;
@@ -41,7 +41,7 @@ window>box {
 
 window#waybar {
   background: transparent;
-  margin:0;
+  margin: 0;
 }
 
 #custom-kbd,
@@ -54,6 +54,7 @@ window#waybar {
 #workspaces {
   /* background-color: #292929; */
   color: #f1f1f1;
+  margin-left: 5px;
   /* padding-right: 10px; */
 }
 
@@ -79,10 +80,6 @@ tooltip label {
   background: rgba(255, 255, 255, 0.1);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
-}
-
-#workspaces {
-  /* margin-left: 20px; */
 }
 
 #workspaces button {
@@ -173,4 +170,3 @@ tooltip label {
 /*   background-repeat: no-repeat; */
 /*   background-size: 25px;  */
 /* } */
-

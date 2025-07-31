@@ -57,7 +57,7 @@
       "signal": 8,
     },
     "custom/arch": {
-      "format": "  ",
+      "format": " ",
       "tooltip": false,
       "on-click": "pkill -9 waybar && waybar -c ~/.config/waybar/$MYENV.config.jsonc",
     },
