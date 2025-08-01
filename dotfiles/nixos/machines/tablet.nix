@@ -15,45 +15,10 @@
     dates = "weekly";
     options = "--delete-older-than 30d";
   };
-
-  # services.power-profiles-daemon.enable = false;
-  # services.asusd = {
-  #   enable = true;
-  #   enableUserService = false;
-  # };
-  #
-  services.supergfxd.enable = true;
-  systemd.services.supergfxd.path = [ pkgs.pciutils ];
-
+  services.power-profiles-daemon.enable = true;
   services.asusd = {
     enable = true;
     enableUserService = true;
-  };
-  services.tlp = {
-    enable = false; # I'm trying asusd
-    settings = {
-      CPU_SCALING_GOVERNOR_ON_AC = "performance";
-      CPU_SCALING_GOVERNOR_ON_BAT = "balanced";
-
-      CPU_ENERGY_PERF_POLICY_ON_AC = "performance";
-      CPU_ENERGY_PERF_POLICY_ON_BAT = "balance_performance";
-
-      CPU_BOOST_ON_AC = 1;
-      CPU_BOOST_ON_BAT = 0;
-
-      PLATFORM_PROFILE_ON_AC = "performance";
-      PLATFORM_PROFILE_ON_BAT = "balanced";
-
-      # CPU_MIN_PERF_ON_AC = 0;
-      # CPU_MAX_PERF_ON_AC = 100;
-      # CPU_MIN_PERF_ON_BAT = 0;
-      # CPU_MAX_PERF_ON_BAT = 80;
-
-      #Optional helps save long term battery health
-      START_CHARGE_THRESH_BAT0 = 40;
-      STOP_CHARGE_THRESH_BAT0 = 90;
-
-    };
   };
 
   boot = {
@@ -68,11 +33,8 @@
     unstable.acpi
     unstable.asusctl
     unstable.fwupd
-    unstable.supergfxctl
+    # unstable.supergfxctl
     linuxKernel.packages.linux_6_15.asus-ec-sensors
-    mission-center
-    upower
-    upower-notify
     brightnessctl
     nvtopPackages.amd
   ];

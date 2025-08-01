@@ -2,23 +2,28 @@
   {
     "layer": "top",
     "position": "top",
-    "modules-left": ["custom/arch", "hyprland/workspaces"],
+    "modules-left": [
+      "custom/arch",
+      "hyprland/workspaces"
+    ],
     "modules-center": [
-      "bluetooth",
+      "custom/ip",
       "network",
+      "bluetooth",
       "custom/recorder",
       "custom/wall",
-      "custom/ip",
       // "memory",
       // "disk",
-      // "cpu",
-      "battery",
+      "cpu",
+      "custom/amd_gpu",
       "temperature",
-      "custom/power_profile",
+      "battery",
+      "power-profiles-daemon",
+      // "custom/power_profile",
       // "custom/btc",
-      "custom/notification",
       "wireplumber",
       "custom/mic",
+      "custom/notification",
     ],
     "modules-right": [
       "backlight/slider",
@@ -39,7 +44,15 @@
     "backlight": {
       "device": "intel_backlight",
       "format": "{icon}",
-      "format-icons": ["🌑", "🌒", "🌓", "🌔", "🌕", "🌞", "☀️"],
+      "format-icons": [
+        "🌑",
+        "🌒",
+        "🌓",
+        "🌔",
+        "🌕",
+        "🌞",
+        "☀️"
+      ],
     },
     "custom/wireguard": {
       "format": " {} ",
@@ -47,6 +60,17 @@
       "on-click-right": "sudo -n /usr/bin/env systemctl stop wg-quick-wg0.service",
       "interval": 1,
       "exec": "bash -c 'systemctl is-active --quiet wg-quick-wg0.service && echo \"<span color=\\\"#8A9A7B\\\"> 󰌘 </span>\" || echo \"<span color=\\\"#FD6262\\\"> 󰌙 </span>\"'",
+    },
+    "power-profiles-daemon": {
+      "format": "<span color='#0AE7A0'> {icon} </span>",
+      "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+      "tooltip": true,
+      "format-icons": {
+        "default": "",
+        "performance": "",
+        "balanced": "",
+        "power-saver": "",
+      },
     },
     "custom/power_profile": {
       //shows the current power profile and switches to next on click
@@ -85,7 +109,13 @@
     },
     "hyprland/workspaces": {
       "persistent_workspaces": {
-        "eDP-1": [1, 2, 3, 4, 5],
+        "eDP-1": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
       },
       "format": "{icon}",
       "format-icons": {
@@ -107,7 +137,8 @@
       "on-click": "firefox https://db.server.home/dashboard/#/nc/p882zgn6hihp2j3/mu7toxmd7aloo25/vwil1ibd8kzkimid",
     },
     "custom/ip": {
-      "format": "<span color='#b4befe'></span> {}",
+      "format": "<span color='#b4befe'>󰩟</span>",
+      "tooltip-format": "{}",
       "exec": "curl ifconfig.io | cut -c -16",
       "on-click": "curl ifconfig.io | wl-copy",
     },
@@ -120,17 +151,38 @@
       "exec-if": "pgrep wf-recorder",
     },
     "battery": {
+      //"interval": 5,
+      "align": 0,
+      "rotate": 0,
+      "full-at": 100,
+      "design-capacity": false,
       "states": {
+        "good": 95,
         "warning": 30,
         "critical": 15,
       },
-      "format": "  {icon} {capacity}% - ",
-      "format-charging": "<span color='#168ECA'> 󰂄</span> {capacity}%",
-      "format-plugged": "<span color='#32CE42'> 󰂄</span> {capacity}%",
-      "on-click": "zenity --question --text='Disable charge limit to 100% ?' --icon=battery  && echo $(zenity --password) | sudo -S tlp fullcharge",
+      "format": "{icon} {capacity}%",
+      "format-charging": "<span color='#F8D987'></span> {capacity}%",
+      "format-plugged": "󱘖 {capacity}%",
+      "format-alt-click": "click",
+      "format-full": "{icon} Full",
       "format-alt": "{icon} {time}",
-      "format-full": " 󰁹 {capacity}%",
-      "format-icons": ["󰁻", "󰁿", "󰂁"],
+      "format-icons": [
+        "󰂎",
+        "󰁺",
+        "󰁻",
+        "󰁼",
+        "󰁽",
+        "󰁾",
+        "󰁿",
+        "󰂀",
+        "󰂁",
+        "󰂂",
+        "󰁹"
+      ],
+      "format-time": "{H}h {M}min",
+      "tooltip": true,
+      "tooltip-format": "{timeTo} {power}w",
     },
     "custom/audio": {
       "format": "<span color='#F8D987'></span> {}",
@@ -146,7 +198,7 @@
       "on-click": "$SCR_PATH/notification-scr/notify-toggle-mute.sh",
       "exec": "$SCR_PATH/waybar-scr/notify-status.sh",
       "exec-if": "true",
-      "format": "{}",
+      "format": "  {} ",
       "tooltip": false,
       "signal": 1,
       "interval": 2,
@@ -171,7 +223,11 @@
       "on-click-middle": "wpctl set-mute @DEFAULT_SINK@ toggle",
       // "on-scroll-up": "wpctl set-volume @DEFAULT_SINK@ 0.02+",
       // "on-scroll-down": "wpctl set-volume @DEFAULT_SINK@ 0.02-",
-      "format-icons": ["", "", " "],
+      "format-icons": [
+        "",
+        "",
+        " "
+      ],
     },
     "custom/btc": {
       "format": "<span color='#EF8E19'></span> {}",
@@ -191,6 +247,13 @@
       "format": "<span color='#b4befe'> </span> {free}",
       "path": "/",
     },
+    "custom/amd_gpu": {
+      "exec": "cat /sys/class/hwmon/hwmon0/device/gpu_busy_percent 2>/dev/null || echo '0'",
+      "format": "<span color='#FF7F00'> </span> {}%",
+      "return-type": "",
+      "interval": 2,
+      "tooltip-format": "AMD GPU Usage",
+    },
     "cpu": {
       "format": "<span color='#b4befe'> </span> {usage}%",
       "interval": 2,
@@ -205,9 +268,11 @@
       // "thermal-zone": 2,
       "hwmon-path": "/sys/class/hwmon/hwmon1/temp7_input",
       "critical-threshold": 90,
-      "format-critical": "{temperatureC}°C {icon}",
-      "format": "{temperatureC}°C {icon}",
-      "format-icons": [""],
+      "format-critical": "<span color='#FF0000'>{icon}</span> {temperatureC}°C",
+      "format": " {icon} {temperatureC}°C",
+      "format-icons": [
+        ""
+      ],
       "interval": 1,
     },
     "hyprland/window": {
@@ -219,17 +284,17 @@
       "on-click": "overskride",
       "on-click-right": "bluetoothctl power off",
       "format-disabled": "no",
-      "format-connected": "<span color='#b4befe'></span> {device_alias} <span color='#474D56'>{device_battery_percentage}%</span>",
+      "format-connected": "<span color='#b4befe'></span> {num_connections}",
       "tooltip-format": "{device_enumerate}",
-      "tooltip-format-enumerate-connected": "{device_address}",
+      "tooltip-format-enumerate-connected": " {device_alias} - 󰥈 {device_battery_percentage}% - {device_address}",
     },
     "network": {
       "interface": "wlan0",
-      "format": "{ifname}",
-      "format-wifi": "<span color='#b4befe'>  </span>{essid}",
-      "format-ethernet": "{ipaddr}/{cidr} ",
+      "format-wifi": "<span color='#b4befe'> </span> {essid} <span color='#6D6D6D'>({signalStrength}%)</span>",
+      "format-ethernet": "{ipaddr}/{cidr} 󰈀 ",
+      "tooltip-format": "󰩟 {ipaddr}/{cidr}\n  {essid}\nFreq: {frequency}",
       "on-click": "hyprctl dispatch exec '[float;size 35% 40%;animation slide; move 63% 5%-50] iwgtk'",
-      "format-disconnected": "<span color='#b4befe'>󰖪 </span>No Network",
+      "format-disconnected": "<span color='#C57070'>󰖪 </span>No Network",
       "tooltip": true,
     },
   },
