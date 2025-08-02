@@ -1,26 +1,7 @@
-/mnt/HDD2/music
-├── 01  Mr. Blue Sky.flac
-├── 01  Mr. Blue Sky.lrc
-├── 01  The Revolution Will Not Be Televised.flac
-├── 02  Evil Woman.flac
-├── 02  Evil Woman.lrc
-├── 02  Save the Children.flac
-├── 03  Don't Bring Me Down.flac
-├── 03  Don't Bring Me Down.lrc
-├── 03  Lady Day and John Coltrane.flac
-├── 04  Home Is Where the Hatred Is.flac
-├── 04  Sweet Talkin' Woman.lrc
-├── 05  When You Are Who You Are.flac
-├── 05  When You Are Who You Are.lrc
-├── 06  I Think I'll Call It Morning.flac
-├── 07  Pieces of a Man.flac
-├── 08  A Sign of the Ages.flac
-├── 09  Or Down You Fall.flac
+/mnt/HDD2/music/
 ├── 10cc
 │   └── The Original Soundtrack
 │       └── 02 I’m Not in Love.flac
-├── 10  The Needle's Eye.flac
-├── 11  The Prisoner.flac
 ├── 1915
 │   ├── Bandera
 │   │   ├── 01 Policía.flac
@@ -360,6 +341,9 @@
 │   │   └── 01 Abbebe.mp3
 │   └── BLD Remixes A
 │       └── 01 Abbebe (Sainte Vie remix).mp3
+├── A Cor do Som
+│   └── Magia tropical
+│       └── 08 Razão.flac
 ├── ACRAZE
 │   ├── Do It To It
 │   │   └── 01 Do It to It.mp3
@@ -450,6 +434,10 @@
 │   │   └── 4. Che cosa ti farei.flac
 │   └── Geppo Il Folle (2011 Remaster)
 │       └── cover.jpg
+├── Adriano Ribeiro
+│   └── Brasilian Fiesta
+│       ├── 01 Reza vela.flac
+│       └── 28 Tocador.flac
 ├── Aerosmith
 │   ├── Big Ones
 │   │   ├── 05 Dude (Looks Like a Lady).flac
@@ -579,6 +567,9 @@
 │       ├── 05 No Vengas.flac
 │       ├── 06 Chocar.flac
 │       └── 07 Traición.flac
+├── Agepê
+│   └── Brasilian Fiesta
+│       └── 21 Nunca mais chorar.flac
 ├── Ago
 │   └── The Very Best of Full Time, Vol. 2
 │       └── 10 Only One (Italian Version).flac
@@ -769,6 +760,19 @@
 │       ├── 129 - Air Supply - Lonely Is the Night.lrc
 │       ├── 12 Now and Forever.flac
 │       ├── 213 - Air Supply - Making Love Out of Nothing at All.lrc
+│       └── cover.jpg
+├── Airto Moreira
+│   └── Touching You, Touching Me
+│       ├── 01 Amajour.flac
+│       ├── 02 Partido alto.flac
+│       ├── 03 Open space.flac
+│       ├── 04 Heartbeat.flac
+│       ├── 05 Toque de cuica.flac
+│       ├── 06 Move It on Up.flac
+│       ├── 07 And Then We Touched the Sky.flac
+│       ├── 08 Tempos atras (Dreams Are Real).flac
+│       ├── 09 It's Not a Ballad.flac
+│       ├── 10 Introduction to the End.flac
 │       └── cover.jpg
 ├── Aitana
 │   ├── 6 DE FEBRERO.flac
@@ -1082,6 +1086,9 @@
 ├── Alico; Migrantes; Nico Valdi
 │   └── Si Me Tomo una Cerveza
 │       └── 01 Si Me Tomo Una Cerveza.mp3
+├── Aline Calixto
+│   └── Brasilian Fiesta
+│       └── 03 Cara de Jiló.flac
 ├── Alison Moyet
 │   └── The Best Of_ 25 Years Revisited
 │       └── 1-07 Weak in the Presence of Beauty.mp3
@@ -1171,6 +1178,17 @@
 ├── Almighty, Ozuna, Bad Bunny & Wisin
 │   └── Solita
 │       └── 01 Solita.mp3
+├── Almir Ricardi
+│   └── Festa Funk
+│       ├── 01 Festa Funk.flac
+│       ├── 02 Super Man.flac
+│       ├── 03 Tô Parado Na Tua.flac
+│       ├── 04 Pura.flac
+│       ├── 05 Raça.flac
+│       ├── 06 Se Você Quer Brigar.flac
+│       ├── 07 Rebola Bola.flac
+│       ├── 08 São Paulo High Society.flac
+│       └── cover.jpg
 ├── Alphabot
 │   ├── Flashdancer
 │   │   └── 01 Flashdancer.mp3
@@ -1546,6 +1564,21 @@
 │   └── Medusa
 │       ├── 334 - Annie Lennox - No More _I Love You's_.flac
 │       └── cover.jpg
+├── Antonio Adolfo
+│   └── Viralata
+│       ├── 01 Cascavel.flac
+│       ├── 02 Diana E Paulo.flac
+│       ├── 03 Paraiba Do Sul.flac
+│       ├── 04 Brincadeira em Mi Bemol.flac
+│       ├── 05 Caminhada.flac
+│       ├── 06 Vermelhinho.flac
+│       ├── 07 Nordeste.flac
+│       ├── 08 Alegria de Carnaval.flac
+│       ├── 08 Alegria de Carnaval.lrc
+│       ├── 09 Viralata.flac
+│       ├── 10 Assanhada.flac
+│       ├── 11 A Marcha.flac
+│       └── cover.jpg
 ├── Antonio Sorrentino
 │   ├── Napoli Segreta
 │   │   └── 05 E' Prumesse.flac
@@ -1678,6 +1711,30 @@
 │       ├── 11 Old Yellow Bricks.mp3
 │       └── 12 505.mp3
 ├── Aretha Franklin
+│   ├── A Bit Of Soul
+│   │   ├── 01 Follow Your Heart.flac
+│   │   ├── 02 Only the One You Love.flac
+│   │   ├── 03 One Step Ahead.flac
+│   │   ├── 04 Can't You Just See Me.flac
+│   │   ├── 05 How to Murder Your Wife.flac
+│   │   ├── 06 A Little Bit of Soul.flac
+│   │   ├── 07 Cry Like a Baby.flac
+│   │   ├── 08 Her Little Heart Went to Loveland.flac
+│   │   ├── 09 Remember Me.flac
+│   │   ├── 10 Land of Dreams.flac
+│   │   ├── 11 Little Miss Raggedy Ann.flac
+│   │   ├── 12 Deeper.flac
+│   │   ├── 13 I Still Can't Forget.flac
+│   │   ├── 14 Rose of Washington Square.flac
+│   │   ├── 15 Take It Like You Give It (Mono Mix).flac
+│   │   ├── 16 Follow Your Heart (Mono Mix).flac
+│   │   ├── 17 Only the One You Love (Mono Mix).flac
+│   │   ├── 18 One Step Ahead (Mono Mix).flac
+│   │   ├── 19 How to Murder Your Wife (Mono Mix).flac
+│   │   ├── 20 A Little Bit of Soul (Mono Mix).flac
+│   │   ├── 21 Cry Like a Baby (Mono Mix).flac
+│   │   ├── 22 Her Little Heart Went to Loveland (Mono Mix).flac
+│   │   └── cover.jpg
 │   └── Soul Queen
 │       └── 25 I Say a Little Prayer.mp3
 ├── Ariana Grande
@@ -1703,6 +1760,9 @@
 ├── Ark Patrol; Veronika Redd
 │   └── Let Go
 │       └── 01 Let Go.mp3
+├── Arlindo Cruz & Rogê
+│   └── Na Veia
+│       └── 02 O brasil é isso aí.flac
 ├── Armand Amar
 │   └── Bab' Azîz_ Le prince qui contemplait son âme
 │       └── 10 Poem of the Atoms.flac
@@ -1959,6 +2019,9 @@
 ├── Ayasa
 │   └── CHRONICLE Ⅴ
 │       └── 03 告白の夜.mp3
+├── Azymuth
+│   └── Águia Não Come Mosca
+│       └── 08 A caça.flac
 ├── Baauer
 │   └── Harlem Shake
 │       └── 01 Harlem Shake.mp3
@@ -2009,6 +2072,9 @@
 │   └── Axel
 │       ├── 02 Tu Amor por Siempre.mp3
 │       └── 09 Que Estás Buscando.mp3
+├── Baby Consuelo
+│   └── O Que Vier Eu Traço
+│       └── 09 Samba fenomenal.flac
 ├── Bachelor Girl
 │   └── Loved & Lost_ The Best of Bachelor Girl
 │       └── 16 No Ordinary Day.mp3
@@ -2112,6 +2178,33 @@
 │       ├── 07 - Ed ora io domando tempo al tempo ed egli mi risponde...non ne ho!.flac
 │       ├── 07 - Ed ora io domando tempo al tempo ed egli mi risponde...non ne ho!.lrc
 │       └── cover.jpg
+├── Banda Black Rio
+│   ├── Gafieira Universal
+│   │   ├── 01 Chega Mais (Imaginei Você Dançando).flac
+│   │   ├── 02 Vidigal.flac
+│   │   ├── 03 Gafieira Universal.flac
+│   │   ├── 04 Tico Tico no Fubá.flac
+│   │   ├── 05 Ibeijada.flac
+│   │   ├── 06 Rio de Fevereiro.flac
+│   │   ├── 07 Dança do Dia.flac
+│   │   ├── 08 Samboreando.flac
+│   │   ├── 09 Cravo e Canela.flac
+│   │   ├── 10 Expresso Madureira.flac
+│   │   └── cover.jpg
+│   ├── Maria Fumaça
+│   │   └── 03 Mr. Funky Samba.flac
+│   └── Maria Fumaça (Remasterizado)
+│       ├── 01 Maria fumaça.flac
+│       ├── 02 Na baixa do sapateiro.flac
+│       ├── 03 Mr. Funky samba.flac
+│       ├── 04 Caminho da roça.flac
+│       ├── 05 Metalúrgica.flac
+│       ├── 06 Baião.flac
+│       ├── 07 Casa forte.flac
+│       ├── 08 Leblon via Vaz Lobo.flac
+│       ├── 09 Urubu malandro.flac
+│       ├── 10 Junia.flac
+│       └── cover.jpg
 ├── Banda de Turistas
 │   └── Lo que más querés
 │       └── 03 Química.mp3
@@ -2149,6 +2242,9 @@
 ├── Banda Maravilha
 │   └── Putumayo Presents African Rumba
 │       └── 10 Sin Murri Gossi.flac
+├── Banda Mel
+│   └── Banda Mel
+│       └── 16 Conversa fiada.flac
 ├── Band of Jocks
 │   └── The Very Best of Full Time, Vol. 2
 │       └── 02 Let's All Dance (Italian Version).flac
@@ -2296,6 +2392,9 @@
 ├── Belanova
 │   └── We Love Disney (Latino)
 │       └── 04 Cuando Ella Me Amaba.flac
+├── Belchior
+│   └── Coracão Selvagem
+│       └── 09 Carisma.flac
 ├── Belinda Carlisle
 │   ├── 1-Heaven Is a Place On Earth.flac
 │   └── Heaven on Earth
@@ -2453,6 +2552,36 @@
 │   │   └── 01 Crazy in Love (remix).flac
 │   └── HOMECOMING - THE LIVE ALBUM
 │       └── 2-12 Beyoncé - Single Ladies (Put a Ring on It) - Homecoming Live.flac
+├── Bezerra Da Silva
+│   ├── A Fumaça Já Subiu Pra Cuca.flac
+│   ├── Eu Não Sou Santo
+│   │   ├── 01 Quando o Morcego Doar Sangue.flac
+│   │   ├── 02 O Preto e o Branco.flac
+│   │   ├── 03 Mudo Caguete.flac
+│   │   ├── 04 Vovô Tira-Tira.flac
+│   │   ├── 05 Boca de Radar.flac
+│   │   ├── 06 Eu Não Sou Santo.flac
+│   │   ├── 07 Se Não Avisar o Bicho Pega.flac
+│   │   ├── 08 Passa o Rodo Nele.flac
+│   │   ├── 09 Divino Mestre.flac
+│   │   ├── 10 O Filho da Jurema.flac
+│   │   ├── 11 Cachorrinho de Polícia.flac
+│   │   ├── 12 O Poeta Operário.flac
+│   │   └── cover.jpg
+│   └── Produto do Morro
+│       ├── 01 Pai Véio 171.flac
+│       ├── 02 Fui Obrigado a Chorar.flac
+│       ├── 03 Lei do Morro.flac
+│       ├── 04 Eu Não Tenho Culpa.flac
+│       ├── 05 Nunca Vi Ninguém Dar Dois em Nada.flac
+│       ├── 06 Produto do Morro.flac
+│       ├── 07 Minha Sogra Parece Sapatão.flac
+│       ├── 08 Todo Errado.flac
+│       ├── 09 É Rabo de Saia.flac
+│       ├── 10 O Preço da Glória.flac
+│       ├── 11 Vou Lhe Dar uma Colher.flac
+│       ├── 12 Empregado do Mar.flac
+│       └── cover.jpg
 ├── Bibio
 │   ├── Ambivalence Avenue
 │   │   └── 07 Lovers’ Carvings.mp3
@@ -2486,7 +2615,24 @@
 │       └── 02 He Ain't Heavy... He's My Brother.mp3
 ├── Bill Withers
 │   ├── Just As I Am
-│   │   └── 02 Ain't No Sunshine.flac
+│   │   ├── 01 Harlem.flac
+│   │   ├── 01 Harlem.lrc
+│   │   ├── 02 Ain't No Sunshine.flac
+│   │   ├── 02 Ain't No Sunshine.lrc
+│   │   ├── 03 Grandma's Hands.flac
+│   │   ├── 03 Grandma's Hands.lrc
+│   │   ├── 04 Sweet Wanomi.flac
+│   │   ├── 05 Everybody's Talkin'.flac
+│   │   ├── 06 Do It Good.flac
+│   │   ├── 07 Hope She'll Be Happier.flac
+│   │   ├── 07 Hope She'll Be Happier.lrc
+│   │   ├── 08 Let It Be.flac
+│   │   ├── 09 I'm Her Daddy.flac
+│   │   ├── 10 In My Heart.flac
+│   │   ├── 11 Moanin' and Groanin'.flac
+│   │   ├── 12 Better off Dead.flac
+│   │   ├── 12 Better off Dead.lrc
+│   │   └── cover.jpg
 │   ├── The Essential Bill Withers
 │   │   ├── 08 Lovely Day.flac
 │   │   └── 10 Use Me.flac
@@ -3227,6 +3373,19 @@
 ├── Bryce feat. Carlprit
 │   └── Dance With Me
 │       └── 07 Dance With Me (Paramond remix edit).mp3
+├── Brylho
+│   └── Brylho
+│       ├── 01 Destrava Maria.flac
+│       ├── 02 Jóia rara.flac
+│       ├── 03 Pé de guerra.flac
+│       ├── 04 Meditando.flac
+│       ├── 05 Cheque sem fundos.flac
+│       ├── 06 Noite do prazer.flac
+│       ├── 07 Se você for a salvador.flac
+│       ├── 08 Cento e setenta e um.flac
+│       ├── 09 Pantomina.flac
+│       ├── 10 Jane e julia.flac
+│       └── cover.jpg
 ├── Buddy Guy
 │   ├── Blues Singer
 │   │   └── 01 Hard Time Killing Floor.flac
@@ -3386,6 +3545,10 @@
 │   └── Voices & Images
 │       ├── 04 The Great Commandment.flac
 │       └── cover.jpg
+├── Candeia
+│   └── Brasilian Fiesta
+│       ├── 13 Já curei minha dor.flac
+│       └── 44 Olha o samba sinhá (Samba de Roda).flac
 ├── Candlelight Red
 │   └── The Wreckage
 │       └── 10 She's Got the Look.flac
@@ -3428,6 +3591,8 @@
 ├── Capital Cities
 │   └── Best of 2010s
 │       └── 07 Capital Cities - Safe and Sound.flac
+├── Captain Planet
+│   └── Moqueca.flac
 ├── Captain & Tennille
 │   ├── '80s Pop #1's
 │   │   └── 01 Do That To Me One More Time.flac
@@ -3474,6 +3639,18 @@
 ├── Carlos Cipa
 │   └── The Monarch and the Viceroy
 │       ├── 02 The Whole Truth.flac
+│       └── cover.jpg
+├── Carlos Dafé
+│   └── Pra que vou recordar
+│       ├── 01 De alegria raiou o dia.flac
+│       ├── 02 Tudo era lindo.flac
+│       ├── 03 A cruz.flac
+│       ├── 04 Hello Mr. Wonder.flac
+│       ├── 05 Bem querer.flac
+│       ├── 06 Prá que vou recordar o que chorei.flac
+│       ├── 07 Zé marmita.flac
+│       ├── 08 Bichos e crianças.flac
+│       ├── 09 O metrô.flac
 │       └── cover.jpg
 ├── Carlos Vives + Ricky Martin
 │   └── Canción bonita
@@ -3529,6 +3706,18 @@
 ├── Cassian; ICEHOUSE
 │   └── Great Southern Land
 │       └── 01 Great Southern Land.mp3
+├── Cassiano
+│   └── Cuban Soul_ 18 Kilates
+│       ├── 01 Hoje É Natal.flac
+│       ├── 02 Coleção.flac
+│       ├── 03 Ana Luiza.flac
+│       ├── 04 Onda.flac
+│       ├── 05 Central Do Brasil.flac
+│       ├── 06 Saia Dessa Fossa.flac
+│       ├── 07 De Bar Em Bar.flac
+│       ├── 08 Salve Essa Flor.flac
+│       ├── 09 A Lua E Eu.flac
+│       └── cover.jpg
 ├── Cassidy Place
 │   └── Sweet
 ├── Cassius
@@ -3594,6 +3783,34 @@
 │   │   └── 05 Celeste Carballo - En la ciudad de la furia.mp3
 │   └── Se Vuelve Cada Día Mas Loca por Amor al Blues (En Vivo)
 │       └── 08 Desconfío (En Vivo).mp3
+├── Celia
+│   ├── Brasilian Fiesta
+│   │   └── 32 Como é que é.flac
+│   └── Dose Dupla Célia
+│       ├── 01 A hora é essa.flac
+│       ├── 01 No clarão da lua cheia.flac
+│       ├── 02 Durango Kid.flac
+│       ├── 02 Toda quarta feira depois do amor.flac
+│       ├── 03 David.flac
+│       ├── 03 O beato.flac
+│       ├── 04 To Be.flac
+│       ├── 04 Vida de artista.flac
+│       ├── 05 Abrace Paul Mccartney por mim.flac
+│       ├── 05 Mia.flac
+│       ├── 06 Na boca do sol.flac
+│       ├── 06 Pelo teletipo.flac
+│       ├── 07 Adeus batucada.flac
+│       ├── 07 Em família.flac
+│       ├── 08 Detalhes.flac
+│       ├── 08 Para Lennon e Mcartney.flac
+│       ├── 09 Como é que é.flac
+│       ├── 09 É preciso dizer Adeus.flac
+│       ├── 10 Badalação (Bahia volume dois).flac
+│       ├── 10 Fotograma.flac
+│       └── cover.jpg
+├── Célia
+│   └── Célia
+│       └── 12 Badalação (Bahia, Volume 2).flac
 ├── Céline Dion
 │   ├── Loved Me Back to Life
 │   │   └── 01 Loved Me Back To Life (Album Version).mp3
@@ -3699,6 +3916,9 @@
 │   │   └── cover.jpg
 │   └── Salteño viejo
 │       └── 09 Chaqueño Palavecino - Amor salvaje.flac
+├── Charlie
+│   └── Spacer Woman
+│       └── 01 Spacer Woman (vocal).flac
 ├── Charlie Puth
 │   ├── Attention
 │   │   └── 01 Attention.mp3
@@ -4060,6 +4280,9 @@
 │       ├── 03 Pa' Otro La 'O.mp3
 │       ├── 07 Procura.mp3
 │       └── 09 Me Enamoré.mp3
+├── Chiclete com Banana
+│   └── Fé Brasileira
+│       └── 01 Fé brasileira.flac
 ├── Childish Gambino
 │   ├── _Awaken, My Love!_
 │   │   ├── 01 Me and Your Mama.mp3
@@ -4535,6 +4758,24 @@
 │   └── I LOVE 80's - Remix Club House-Electro
 │       ├── 123 - Compilation 80's - Tell Me Why.flac
 │       └── cover.jpg
+├── Compilations
+│   └── Halloween Classics_ Hellbent For Halloween
+│       ├── 01 Ace of Spades.flac
+│       ├── 01 American Woman (2024 Remaster).flac
+│       ├── 01 Barracuda.flac
+│       ├── 01 Black Dog (Remaster).flac
+│       ├── 01 Break on Through (To the Other Side).flac
+│       ├── 01 Brown Sugar (Remastered 2009).flac
+│       ├── 01 Cherry Pie.flac
+│       ├── 01 Civil War.flac
+│       ├── 01 Crazy Train.flac
+│       ├── 01 Cum on Feel the Noize.mp3
+│       ├── 01 Dirty Deeds Done Dirt Cheap.flac
+│       ├── 01 (Don't Fear) The Reaper.flac
+│       ├── 01 Good Times Bad Times.flac
+│       ├── 01 Highway Star (Remastered 2012).flac
+│       ├── 01 Immigrant Song (Remaster).flac
+│       └── 01 It's a Long Way to the Top (If You Wanna Rock 'N' Roll).flac
 ├── Conociendo Rusia
 │   ├── A la vez
 │   │   └── 01 A la vez.mp3
@@ -5100,6 +5341,19 @@
 ├── Dario G
 │   └── Sunmachine
 │       └── 01 Sunchyme.flac
+├── Darondo
+│   └── Let My People Go
+│       ├── 01 Let My People Go.flac
+│       ├── 02 Legs.flac
+│       ├── 03 Didn't I.flac
+│       ├── 03 Didn't I.lrc
+│       ├── 04 I Want Your Love so Bad.flac
+│       ├── 05 How I Got Over.flac
+│       ├── 06 My Momma and My Poppa.flac
+│       ├── 07 Sure Know How to Love Me.flac
+│       ├── 08 Listen to My Song.flac
+│       ├── 09 True.flac
+│       └── cover.jpg
 ├── Darude
 │   └── Before the Storm
 │       └── 01 Sandstorm.flac
@@ -5565,6 +5819,11 @@
 ├── Demi Lovato
 │   └── Demi
 │       └── 01 Demi Lovato - Heart Attack.flac
+├── Demônios da Garoa
+│   ├── 50 Anos
+│   │   └── 14 Saudosa Maloca.flac
+│   └── Trem Das 11
+│       └── 09 Conselho De Mulher _Progréssio_.flac
 ├── Dennis Russell Davies
 │   └── Glass_ Akhnaten
 │       ├── 01 Akhnaten _ Act II, Scene 3_ The City - Dance.flac
@@ -5741,6 +6000,31 @@
 │   │   └── 18 AMIGOS NUEVOS.flac
 │   └── Sauce
 │       └── 01 Sauce.flac
+├── Di Melo
+│   ├── A.E.I.O.U
+│   │   ├── 01 A.E.I.O.U.flac
+│   │   ├── 02 A.E.I.O.U. (Dub Version).flac
+│   │   └── cover.jpg
+│   └── Di Melo
+│       ├── 01 Kilario.flac
+│       ├── 01 Kilario.lrc
+│       ├── 02 A Vida Em Seus Métodos Diz Calma.flac
+│       ├── 02 A Vida Em Seus Métodos Diz Calma.lrc
+│       ├── 03 Aceito Tudo.flac
+│       ├── 03 Aceito Tudo.lrc
+│       ├── 04 Conformopolis.flac
+│       ├── 05 Ma-Lida.flac
+│       ├── 05 Ma-Lida.lrc
+│       ├── 06 Sementes.flac
+│       ├── 07 Pernalonga.flac
+│       ├── 08 Minha Estrela.flac
+│       ├── 08 Minha Estrela.lrc
+│       ├── 09 Se O Mundo Acabasse Em Mel.flac
+│       ├── 10 Alma Gêmea.flac
+│       ├── 11 João.flac
+│       ├── 11 João.lrc
+│       ├── 12 Indecisão.flac
+│       └── cover.jpg
 ├── Dimitri Vangelis & Wyman & Mike Perry
 │   └── In The Sky
 │       └── 01 In the Sky.flac
@@ -5994,6 +6278,9 @@
 │       ├── 10 Accept Things.flac
 │       ├── 11 Angel Fire.flac
 │       └── 12 Ecstasy.flac
+├── Dominguinhos
+│   └── Brasilian Fiesta
+│       └── 25 Remelexo.flac
 ├── Don Burnham; Jerry Burnham
 │   └── Swingin' out West
 │       ├── 06 In the Shadow of the Valley.mp3
@@ -6265,6 +6552,25 @@
 ├── Dusty Springfield
 │   ├── Dusty… Definitely
 │   │   └── 16 Spooky.mp3
+│   ├── Dusty... Definitely (Expanded Edtion)
+│   │   ├── 01 Ain't No Sun Since You've Been Gone.flac
+│   │   ├── 02 Take Another Little Piece Of My Heart.flac
+│   │   ├── 03 Another Night.flac
+│   │   ├── 04 Mr. Dream Merchant.flac
+│   │   ├── 05 I Can't Give Back The Love I Feel For You.flac
+│   │   ├── 06 Love Power.flac
+│   │   ├── 07 This Girl's In Love With You.flac
+│   │   ├── 08 I Only Wanna Laugh.flac
+│   │   ├── 09 Who (Will Take My Place)_.flac
+│   │   ├── 10 I Think It's Gonna Rain Today.flac
+│   │   ├── 11 Morning (Bom Dia).flac
+│   │   ├── 12 Second Time Around.flac
+│   │   ├── 13 No Stranger Am I (Remix).flac
+│   │   ├── 14 Meditation (Remix).flac
+│   │   ├── 15 The Colour Of Your Eyes (Remix).flac
+│   │   ├── 16 Spooky.flac
+│   │   ├── 16 Spooky.lrc
+│   │   └── cover.jpg
 │   ├── Dusty In Memphis
 │   │   ├── 03 Son Of A Preacher Man.mp3
 │   │   └── 08 The Windmills Of Your Mind.mp3
@@ -6282,6 +6588,9 @@
 │   └── Motion
 │       ├── 1. Motion.flac
 │       └── cover.jpg
+├── D. Yvonne Lara
+│   └── Brasilian Fiesta
+│       └── 42 O samba não pode parar.flac
 ├── Eagles
 │   ├── Hotel California
 │   │   └── 03 Life in the Fast Lane.flac
@@ -6624,22 +6933,22 @@
 │   │   ├── 08 - Camello patagónico.flac
 │   │   └── cover.jpg
 │   ├── Raro
-│   │   ├── 01 - Nada Es Gratis en la Vida.flac
-│   │   ├── 01 - Nada Es Gratis En La Vida.flac
-│   │   ├── 02 - Hoy Estoy Raro.flac
-│   │   ├── 03 - Así Soy Yo.flac
-│   │   ├── 04 - Yendo a la Casa de Damián.flac
-│   │   ├── 04 - Yendo A La Casa De Damián.flac
-│   │   ├── 05 - Pobre Papá.flac
-│   │   ├── 06 - Ya No Se Que Hacer Conmigo.flac
-│   │   ├── 07 - Natural.flac
-│   │   ├── 08 - Invierno del 92.flac
-│   │   ├── 08 - Invierno Del 92.flac
-│   │   ├── 09 - El Karaoke de Mi Noviecita.flac
-│   │   ├── 09 - El Karaoke De Mi Noviecita.flac
-│   │   ├── 10 - Me Hace Bien, Me Hace Mal.flac
-│   │   ├── 11 - Pueblo Podrido.flac
-│   │   ├── 12 - Autos Nuevos.flac
+│   │   ├── 01 Nada Es Gratis en la Vida.flac
+│   │   ├── 01 Nada Es Gratis en la Vida.lrc
+│   │   ├── 02 Hoy Estoy Raro.flac
+│   │   ├── 03 Así Soy Yo.flac
+│   │   ├── 04 Yendo a la Casa de Damián.flac
+│   │   ├── 04 Yendo a la Casa de Damián.lrc
+│   │   ├── 05 Pobre Papá.flac
+│   │   ├── 06 Ya No Sé Que Hacer Conmigo.flac
+│   │   ├── 06 Ya No Sé Que Hacer Conmigo.lrc
+│   │   ├── 07 Natural.flac
+│   │   ├── 08 Invierno del 92.flac
+│   │   ├── 08 Invierno del 92.lrc
+│   │   ├── 09 El Karaoke de Mi Noviecita.flac
+│   │   ├── 10 Me Hace Bien, Me Hace Mal.flac
+│   │   ├── 11 Pueblo Podrido.flac
+│   │   ├── 12 Autos Nuevos.flac
 │   │   └── cover.jpg
 │   ├── Revista ¡Ésta!
 │   │   ├── 01 - Como Ha Cambiado Mi Barrio.flac
@@ -6719,6 +7028,9 @@
 ├── Electro Swing Invasion
 │   └── Cirque du Steampunk
 │       └── 02 In the Sci-Fi Mood -.mp3
+├── Elis Regina
+│   └── Um dia
+│       └── 01 Cobra criada.flac
 ├── El Kuelgue
 │   ├── Beatriz
 │   │   └── 05 Bossa & People.mp3
@@ -6965,6 +7277,32 @@
 │   ├── blackout _.flac
 │   └── _mp3
 │       └── 05 Emilia & TINI - La_Original.mp3.flac
+├── Emílio Santiago
+│   ├── Emilio Santiago (Remastered)
+│   │   ├── 01 Bananeira (Remastered).flac
+│   │   ├── 02 Quero Alegria (Remastered).flac
+│   │   ├── 03 Porque Somos Iguais (Remastered).flac
+│   │   ├── 04 Batendo a Porta (Remastered).flac
+│   │   ├── 05 Depois (Remastered).flac
+│   │   ├── 06 Brother (Remastered).flac
+│   │   ├── 07 La Mulata (Remastered).flac
+│   │   ├── 08 Nega Dina (Remastered).flac
+│   │   ├── 09 Doa a Quem Doer (Remastered).flac
+│   │   ├── 10 Sessão das Dez (Remastered).flac
+│   │   └── cover.jpg
+│   └── Mais Que Um Momento
+│       ├── 01 O Amigo De Nova York.flac
+│       ├── 02 Ardume.flac
+│       ├── 03 Quebra Mar.flac
+│       ├── 04 Coragem Pra Se Separar.flac
+│       ├── 06 Nego John.flac
+│       ├── 07 Mais Que Um Momento.flac
+│       ├── 08 Carícia E Sedução.flac
+│       ├── 09 Desfigurado.flac
+│       ├── 10 Todos Os Tons.flac
+│       ├── 11 Um Homem E Uma Mulher.flac
+│       ├── cover.jpg
+│       └── errors.txt
 ├── Emil Rottmayer
 │   └── Descend (EP)
 │       └── 05 Mega.mp3
@@ -7338,6 +7676,9 @@
 │   └── The Groovy Heart of Naples (A Funk Jazz & World Collection)
 │       ├── 111 - Tony Esposito - Danza dell'acqua.flac
 │       └── cover.jpg
+├── Eumir Deodato
+│   └── Love Island
+│       └── 07 Piña Colada.flac
 ├── Europe
 │   ├── Dig'Hits All 80'S
 │   │   └── 1-09 The Final Countdown.flac
@@ -7505,6 +7846,9 @@
 │       ├── 04 L'Estate, RV 315_ I. Allegro.mp3
 │       ├── 05 L'Estate, RV 315_ II. Adagio.mp3
 │       └── 06 L'Estate, RV 315_ III. Tempo impetuoso d'Estate.mp3
+├── Fafá de Belém
+│   └── Coração brasileiro
+│       └── 04 Pirilampo.flac
 ├── Faidra
 │   └── Militant _ Penitent _ Triumphant
 │       ├── 01 The Leavening Rot.mp3
@@ -7644,6 +7988,9 @@
 ├── Fergie
 │   └── The Dutchess_ Deluxe
 │       └── 10 Fergie - Big Girls Don’t Cry.mp3
+├── Ferrugem
+│   └── Climatizar
+│       └── 03 Locomotiva.flac
 ├── Ferry Corsten
 │   └── Check It Out
 │       └── 01 Check It Out (radio edit).mp3
@@ -7735,6 +8082,26 @@
 │   │   └── 11 Dar es dar.mp3
 │   └── Giros
 │       └── 04 11 y 6.mp3
+├── FKJ
+│   └── French Kiwi Juice
+│       ├── 01 We Ain't Feeling Time.flac
+│       ├── 01 We Ain't Feeling Time.lrc
+│       ├── 02 Skyline.flac
+│       ├── 02 Skyline.lrc
+│       ├── 03 Better Give U Up.flac
+│       ├── 04 Go Back Home.flac
+│       ├── 05 Vibin' Out.flac
+│       ├── 05 Vibin' Out.lrc
+│       ├── 06 Canggu.flac
+│       ├── 07 Blessed.flac
+│       ├── 08 Die with a Smile.flac
+│       ├── 09 Lying Together (Interlude).flac
+│       ├── 09 Lying Together (Interlude).lrc
+│       ├── 10 Lying Together.flac
+│       ├── 10 Lying Together.lrc
+│       ├── 11 Joy.flac
+│       ├── 12 Why Are There Boundaries.flac
+│       └── cover.jpg
 ├── Flamingosis
 │   ├── Bright Moments
 │   │   ├── 05 Believe In Me.mp3
@@ -7838,6 +8205,9 @@
 │   │   └── 01 You’re Somebody Else.mp3
 │   └── You’re Somebody Else (Nikodem Milewski remix)
 │       └── 01 You’re Somebody Else (Nikodem Milewski remix).mp3
+├── Flora Purim
+│   └── Everyday Everynight
+│       └── 02 Samba Michel.flac
 ├── Florence + the Machine
 │   ├── Ceremonials
 │   │   └── 14 Strangeness and Charm.mp3
@@ -8009,6 +8379,25 @@
 ├── Fractal Man
 │   └── Mosaic
 │       └── 02 Dreams of the Desert.mp3
+├── Frail Whale
+│   └── found
+│       ├── 01 To what degree.flac
+│       ├── 02 No place like home.flac
+│       ├── 03 Off-course.flac
+│       ├── 04 Long trek ahead.flac
+│       ├── 05 Cold nights in Cologne.flac
+│       ├── 06 Terrace in Kolkata.flac
+│       ├── 07 Kaleido Kodai.flac
+│       ├── 08 Eye-opener.flac
+│       ├── 09 Jelly legs.flac
+│       ├── 10 Mission is a go.flac
+│       ├── 11 Sustainability.flac
+│       ├── 12 1000 Hours.flac
+│       ├── 13 Sargent Studious & Mister Macaron.flac
+│       ├── 14 Lucky break.flac
+│       ├── 15 Chopping around.flac
+│       ├── 16 Here we go again.flac
+│       └── cover.jpg
 ├── France Gall
 │   └── Evidemment (version standard)
 │       ├── 348 - France Gall - Ella, elle l'a.flac
@@ -8100,6 +8489,34 @@
 ├── Fred again.. & The Blessed Madonna
 │   └── Marea (we’ve lost dancing)
 │       └── 1. Marea (we’ve lost dancing).flac
+├── Free Nationals
+│   └── Free Nationals
+│       ├── 01 Obituaries.flac
+│       ├── 01 Obituaries.lrc
+│       ├── 02 Beauty & Essex.flac
+│       ├── 02 Beauty & Essex.lrc
+│       ├── 03 On Sight.flac
+│       ├── 03 On Sight.lrc
+│       ├── 04 Shibuya.flac
+│       ├── 04 Shibuya.lrc
+│       ├── 05 Apartment.flac
+│       ├── 05 Apartment.lrc
+│       ├── 06 Gidget.flac
+│       ├── 06 Gidget.lrc
+│       ├── 07 RENE.flac
+│       ├── 07 RENE.lrc
+│       ├── 08 Time.flac
+│       ├── 08 Time.lrc
+│       ├── 09 Cut Me a Break.flac
+│       ├── 09 Cut Me a Break.lrc
+│       ├── 10 Eternal Light.flac
+│       ├── 10 Eternal Light.lrc
+│       ├── 11 Oslo.flac
+│       ├── 11 Oslo.lrc
+│       ├── 12 Lester Diamond.flac
+│       ├── 13 The Rivington.flac
+│       ├── 13 The Rivington.lrc
+│       └── cover.jpg
 ├── French 79
 │   ├── Joshua
 │   │   ├── 02 Hold On.mp3
@@ -8129,6 +8546,83 @@
 ├── French Montana & J Balvin featuring Swae Lee
 │   └── Unforgettable (latin remix)
 │       └── 01 Unforgettable (latin remix).mp3
+├── Frenéticas
+│   ├── As Frenéticas - 40 Anos de Dancin'd Days
+│   │   ├── 01 Ai, se eles me pegam agora.flac
+│   │   ├── 01 A noite da lua cheia.flac
+│   │   ├── 01 Jou jou e balangandans.flac
+│   │   ├── 01 Perigosa.flac
+│   │   ├── 02 Agito e uso.flac
+│   │   ├── 02 La canga.flac
+│   │   ├── 02 Lesma lerda.flac
+│   │   ├── 02 Quem é_.flac
+│   │   ├── 03 A marcha do povo doido.flac
+│   │   ├── 03 Canção pra inglês ver.flac
+│   │   ├── 03 O que não mata engorda.flac
+│   │   ├── 03 Vingativa.flac
+│   │   ├── 04 Babo... Zeira.flac
+│   │   ├── 04 Baby Face.flac
+│   │   ├── 04 Não levo nada a sério.flac
+│   │   ├── 04 Vida frenética.flac
+│   │   ├── 05 Dancin' Days.flac
+│   │   ├── 05 Exército do surf _ Let me Sing, Let me Sing _ O gênio _ Bye, Bye Love.flac
+│   │   ├── 05 Ouça bem.flac
+│   │   ├── 05 Rasguei a minha fantasia.flac
+│   │   ├── 06 Mambordel.flac
+│   │   ├── 06 Maria da Luz.flac
+│   │   ├── 06 O preto que satisfaz (Feijão maravilha).flac
+│   │   ├── 06 Pessoal e intransferível.flac
+│   │   ├── 07 Aí, hein!.flac
+│   │   ├── 07 Fonte da juventude.flac
+│   │   ├── 07 Macho.flac
+│   │   ├── 07 Sonho molhado.flac
+│   │   ├── 08 Cantores do rádio.flac
+│   │   ├── 08 Gema clara.flac
+│   │   ├── 08 O teu cabelo não nega.flac
+│   │   ├── 08 Perigosíssima.flac
+│   │   ├── 09 Crisi Darling.flac
+│   │   ├── 09 Infelizmente.flac
+│   │   ├── 09 Pára de parar.flac
+│   │   ├── 09 Tudo bem, tudo bom____ Ou mesmo até.flac
+│   │   ├── 10 A felicidade bate a sua porta.flac
+│   │   ├── 10 É que nesta encarnação eu nasci manga.flac
+│   │   ├── 10 Linda morena.flac
+│   │   ├── 10 Vesúvio.flac
+│   │   ├── 11 Mensagem A.flac
+│   │   ├── 11 Mensagem B.flac
+│   │   ├── 11 Mensagem C.flac
+│   │   ├── 11 Mensagem de abertura.flac
+│   │   ├── 12 Açúcar Candy.flac
+│   │   ├── 12 Aula de piano.flac
+│   │   ├── 12 Bye Bye My Baby.flac
+│   │   ├── 12 Le fudez vouz.flac
+│   │   ├── 13 Corpos terrestres.flac
+│   │   ├── 13 Oh Boy!.flac
+│   │   ├── 13 O pintinho.flac
+│   │   ├── 13 Tutti-frutti (Participação especial das Frenéticas).flac
+│   │   ├── 14 A Marcha Do Povo Doido.flac
+│   │   ├── 14 Perigosas peruas.flac
+│   │   ├── 14 Se você pensa (Participação especial de Frenéticas).flac
+│   │   ├── 15 Dancing Days (Versão em espanhol).flac
+│   │   ├── 15 Peligrosas (Versão em espanhol da obra _Perigosa_).flac
+│   │   └── cover.jpg
+│   └── Caia na gandaia
+│       ├── 01 A noite da lua cheia.flac
+│       ├── 02 Lesma lerda.flac
+│       ├── 03 O que não mata engorda.flac
+│       ├── 04 Não levo nada a sério.flac
+│       ├── 05 Dancin' Days.flac
+│       ├── 06 O preto que satisfaz (Feijão maravilha).flac
+│       ├── 07 Macho.flac
+│       ├── 08 Gema clara.flac
+│       ├── 09 Crisi Darling.flac
+│       ├── 10 Vesúvio.flac
+│       ├── 11 Mensagem de abertura.flac
+│       ├── 12 Aula de piano.flac
+│       ├── 13 O pintinho.flac
+│       ├── 14 Se você pensa (Participação especial de Frenéticas).flac
+│       ├── 15 Dancing Days (Versão em espanhol).flac
+│       └── cover.jpg
 ├── Frente!
 │   └── Marvin The Album
 │       └── 14 Bizarre Love Triangle.mp3
@@ -8461,6 +8955,13 @@
 ├── Geraldine Hunt
 │   └── Can’t Fake the Feeling
 │       └── 01 Can’t Fake the Feeling.mp3
+├── Germannu
+│   └── NOAJ Edits 01 – Mendel & Delfonic
+│       ├── 01 Fale De Mim (Delfonic Edit).flac
+│       ├── 02 Fale De Mim (Mendel Edit).flac
+│       ├── 03 Marcação (Delfonic Edit).flac
+│       ├── 04 Pé na estrada (Mendel Edit).flac
+│       └── cover.jpg
 ├── Gerry Rafferty
 │   └── City to City
 │       ├── 03 Right Down the Line.mp3
@@ -8520,19 +9021,51 @@
 │   └── The Essential Gigi D'Agostino
 │       └── 1-09 Bla bla bla.mp3
 ├── Gilberto Gil
-│   └── Gilbertos Samba
-│       ├── 01 Aos Pés da Cruz.flac
-│       ├── 02 Eu Sambo Mesmo.flac
-│       ├── 03 O Pato.flac
-│       ├── 04 Tim Tim por Tim Tim.flac
-│       ├── 05 Desde Que o Samba É Samba.flac
-│       ├── 06 Desafinado.flac
-│       ├── 07 Milagre.flac
-│       ├── 08 Um Abraço no João.flac
-│       ├── 09 Doralice.flac
-│       ├── 10 Você e Eu.flac
-│       ├── 11 Eu Vim da Bahia.flac
-│       └── 12 Gilbertos.flac
+│   ├── Extra
+│   │   ├── 01 Extra.flac
+│   │   ├── 01 Extra.lrc
+│   │   ├── 02 Elá, poeira.flac
+│   │   ├── 03 Mar de Copacabana.flac
+│   │   ├── 04 A linha e o linho.flac
+│   │   ├── 04 A linha e o linho.lrc
+│   │   ├── 05 Preciso de você.flac
+│   │   ├── 06 Punk da periferia.flac
+│   │   ├── 07 Funk-se quem puder.flac
+│   │   ├── 08 Dono do pedaço.flac
+│   │   ├── 09 Lady Neyde.flac
+│   │   ├── 10 O veado.flac
+│   │   ├── 11 Elá poeira (Remix).flac
+│   │   ├── 12 Punk da periferia (Instrumental).flac
+│   │   ├── 13 Punk da periferia (Primeira versão).flac
+│   │   ├── 14 Funk-se quem puder (Primeira versão).flac
+│   │   ├── 15 O veado (Primeira versão).flac
+│   │   └── cover.jpg
+│   ├── Gilbertos Samba
+│   │   ├── 01 Aos Pés da Cruz.flac
+│   │   ├── 02 Eu Sambo Mesmo.flac
+│   │   ├── 03 O Pato.flac
+│   │   ├── 04 Tim Tim por Tim Tim.flac
+│   │   ├── 05 Desde Que o Samba É Samba.flac
+│   │   ├── 06 Desafinado.flac
+│   │   ├── 07 Milagre.flac
+│   │   ├── 08 Um Abraço no João.flac
+│   │   ├── 09 Doralice.flac
+│   │   ├── 10 Você e Eu.flac
+│   │   ├── 11 Eu Vim da Bahia.flac
+│   │   └── 12 Gilbertos.flac
+│   └── Nightingale
+│       ├── 01 Sarará Miolo.flac
+│       ├── 01 Sarará Miolo.lrc
+│       ├── 02 Goodbye My Girl.flac
+│       ├── 03 Ella.flac
+│       ├── 04 Here And Now.flac
+│       ├── 05 Balafon.flac
+│       ├── 06 Alapalá (The Myth Of Shango).flac
+│       ├── 07 Maracatu Atômico.flac
+│       ├── 08 Move Along With Me.flac
+│       ├── 09 Nightingale.flac
+│       ├── 10 Samba de Los Angeles.flac
+│       └── cover.jpg
 ├── Gilbert O'Sullivan
 │   └── Back to Front (Deluxe Edition)
 │       ├── 180 - Gilbert O'Sullivan - Alone Again (Naturally).flac
@@ -8871,6 +9404,8 @@
 │   │   └── 01 Call It What You Want.mp3
 │   └── I Don’t Know My Name
 │       └── 01 I Don’t Know My Name.mp3
+├── Grag Queen
+│   └── Boogie Brasil.flac
 ├── Gramatik
 │   └── Coffee Shop Selection
 │       ├── 01 In My City.mp3
@@ -8895,6 +9430,16 @@
 │       ├── 20 Faraway (Instrumental).mp3
 │       ├── 21 Obviously (Instrumental).mp3
 │       └── 22 The Anthem (Instrumental).mp3
+├── Grant Green
+│   ├── Django (Rudy Van Gelder Edition _ Remastered 1999).flac
+│   └── Idle Moments
+│       ├── 01 Idle Moments (Rudy Van Gelder Edition _ Remastered 1999).flac
+│       ├── 02 Jean De Fleur (Rudy Van Gelder Edition _ Remastered 1999).flac
+│       ├── 03 Django (Rudy Van Gelder Edition _ Remastered 1999).flac
+│       ├── 04 Nomad (Rudy Van Gelder Edition _ Remastered 1999).flac
+│       ├── 05 Jean De Fleur (Alternate Version _ Rudy Van Gelder Edition _ Remastered 1999).flac
+│       ├── 06 Django (Alternate Version _ Rudy Van Gelder Edition _ Remastered 1999).flac
+│       └── cover.jpg
 ├── Grateful Dead
 │   ├── American Beauty
 │   │   ├── 02 Friend of the Devil.mp3
@@ -9380,12 +9925,26 @@
 ├── Herbert von Karajan
 │   └── Karajan Gold
 │       └── 1-06 Johann Strauss - An der schönen, blauen Donau.mp3
+├── Hermeto Pascoal
+│   └── Zabumbê‐bum‐á
+│       └── 03 Pimenteira.flac
 ├── Hipbone Slim
 │   └── Hipbone Slim vs Sir Bald
 │       └── 15 Legless.mp3
 ├── Hip Hop Rappers & DJs
 │   └── Vocal Hip Hop Hits
 │       └── 19 Homecoming (as made famous by Kanye West feat. Chris Martin.flac
+├── Hiroshi Yoshimura
+│   └── Green
+│       ├── 01 CREEK.flac
+│       ├── 02 FEEL.flac
+│       ├── 03 SHEEP.flac
+│       ├── 04 SLEEP.flac
+│       ├── 05 GREEN.flac
+│       ├── 06 FEET.flac
+│       ├── 07 STREET.flac
+│       ├── 08 TEEVEE.flac
+│       └── cover.jpg
 ├── Hi-Tone
 │   └── TFC, Vol. 2_ Field of Dreams
 │       └── 01 Mt. Eden Sierra Leone.flac
@@ -9821,6 +10380,9 @@
 ├── Jackson Browne
 │   └── Running on Empty
 │       └── 10 Stay.mp3
+├── Jackson do Pandeiro
+│   └── Brasilian Fiesta
+│       └── 26 Forró quentinho.flac
 ├── Jackson Lundy
 │   └── Calypso
 ├── Jack Strachey; Geoffrey Henman
@@ -9868,6 +10430,9 @@
 ├── Jakubi
 │   └── Couch Potato
 │       └── 01 Couch Potato.mp3
+├── Jamelão
+│   └── A voz do samba
+│       └── 09 Zaquia Jorge, a estrela do subúrbio, vedete de Madureira.flac
 ├── James Arthur
 │   └── Back From the Edge
 │       └── 06 James Arthur - Train Wreck.flac
@@ -10683,6 +11248,9 @@
 ├── Joan Osborne
 │   └── Relish
 │       └── 06 One of Us.mp3
+├── João Gilberto
+│   └── Chill Brazil
+│       └── 16 Wave.flac
 ├── João Selva
 │   └── Onda
 ├── Joaquín Sabina
@@ -10885,6 +11453,19 @@
 │   └── Pocahontas Original Soundtrack (English Version)
 │       └── 28 If I Never Knew You.mp3
 ├── Jorge Ben Jor
+│   ├── Dádiva
+│   │   ├── 01 Eu Quero Ver a Rainha (feat. Tim Maia).flac
+│   │   ├── 02 Conquero.flac
+│   │   ├── 03 Dádiva da Da.flac
+│   │   ├── 04 Pout-Pourri_ Taj Mahal _ Filho Maravilha (Fio Maravilha) _ País Tropical.flac
+│   │   ├── 04 Pout-Pourri_ Taj Mahal _ Filho Maravilha (Fio Maravilha) _ País Tropical.lrc
+│   │   ├── 05 A Loba Comeu o Canário.flac
+│   │   ├── 06 Ana Tropicana.flac
+│   │   ├── 07 Energia Bom Bom.flac
+│   │   ├── 08 Rio Babilônia.flac
+│   │   ├── 09 No Reino Encantado do Amor.flac
+│   │   ├── 10 Waimea 55.000.flac
+│   │   └── cover.jpg
 │   └── Samba Esquema Novo
 │       ├── 01 Mas, Que Nada!.flac
 │       ├── 05 Chove Chuva.flac
@@ -10989,6 +11570,21 @@
 │       ├── 01 A Dios Le Pido.mp3
 │       ├── 02 Es Por Ti.mp3
 │       └── 08 Mala Gente.mp3
+├── Judas Priest
+│   └── Sad Wings of Destiny
+│       ├── 1 Victim of Changes.flac
+│       ├── 1 Victim of Changes.lrc
+│       ├── 2 The Ripper.flac
+│       ├── 2 The Ripper.lrc
+│       ├── 3 Dreamer Deceiver.flac
+│       ├── 3 Dreamer Deceiver.lrc
+│       ├── 4 Deceiver.flac
+│       ├── 5 Prelude.flac
+│       ├── 6 Tyrant.flac
+│       ├── 7 Genocide.flac
+│       ├── 8 Epitaph.flac
+│       ├── 9 Island of Domination.flac
+│       └── cover.jpg
 ├── Jude Cole
 │   └── A View From 3rd Street
 │       └── 05 Time for Letting Go.mp3
@@ -11017,6 +11613,20 @@
 │   │   └── 10 The World Spins.mp3
 │   └── Three Demos
 │       └── 03 The World Spins (demo).mp3
+├── Julia Mestre
+│   └── MARAVILHOSAMENTE BEM
+│       ├── 01 Maravilhosamente Bem.flac
+│       ├── 02 Sou Fera.flac
+│       ├── 03 Vampira.flac
+│       ├── 04 Pra Lua.flac
+│       ├── 05 Veneno da Serpente.flac
+│       ├── 06 Canto da Sereia.flac
+│       ├── 07 Sentimento Blues.flac
+│       ├── 08 Interlúdio dos Amantes.flac
+│       ├── 09 Seu Romance.flac
+│       ├── 10 Marinou, Limou.flac
+│       ├── 11 Cariñito.flac
+│       └── cover.jpg
 ├── Julian Lamadrid
 │   └── Untouched - EP
 │       ├── 01 Untouched.mp3
@@ -11146,6 +11756,19 @@
 │       ├── 18 The Sugar Plum Fairy.flac
 │       ├── 19 Pavane Pour Une Infante Défunte.flac
 │       └── 20 Träumerei.flac
+├── Junior Mendes
+│   └── Copacabana Sadia
+│       ├── 01 Copacabana Sadia.flac
+│       ├── 02 Óbvio.flac
+│       ├── 03 Que Signo Você é_.flac
+│       ├── 04 Agre Doce.flac
+│       ├── 05 Rio Sinal Verde.flac
+│       ├── 06 Super Sensível.flac
+│       ├── 07 Hora H.flac
+│       ├── 08 Pedras de Cristal.flac
+│       ├── 09 Via Aérea.flac
+│       ├── 10 Entrego a Deus.flac
+│       └── cover.jpg
 ├── Justice
 │   ├── D.A.N.C.E
 │   │   └── 03 D.A.N.C.E (radio edit).mp3
@@ -11799,6 +12422,20 @@
 │   └── Cacho de Buenos Aires
 │       └── 01 Cacho de Buenos Aires.mp3
 ├── Labi Siffre
+│   ├── Remember My Song
+│   │   ├── 01 I Got The... (2006 Remaster).flac
+│   │   ├── 02 Another Year (2006 Remaster).flac
+│   │   ├── 03 Down (2006 Remaster).flac
+│   │   ├── 04 Old Time Song (2006 Remaster).flac
+│   │   ├── 05 The Vulture (2006 Remaster).flac
+│   │   ├── 06 Dreamer (2006 Remaster).flac
+│   │   ├── 07 Sadie and the Devil (2006 Remaster).flac
+│   │   ├── 08 Turn on Your Love (2006 Remaster).flac
+│   │   ├── 09 Remember My Song (2006 Remaster).flac
+│   │   ├── 10 You've Got a Hold on Me (2006 Remaster).flac
+│   │   ├── 11 Hot and Dirty in the City (2006 Remaster).flac
+│   │   ├── 12 Solid Love (2006 Remaster).flac
+│   │   └── cover.jpg
 │   └── Ultimate Seventies_ The Classics
 │       └── 1-14 I Got The….flac
 ├── Labyrinthus Stellarum
@@ -11843,6 +12480,35 @@
 ├── Lady Gaga & Ariana Grande
 │   └── Rain on Me (Ralphi Rosario remix)
 │       └── 01 Rain on Me (Ralphi Rosario remix - edit).flac
+├── Lady Zu
+│   ├── A Noite Vai Chegar
+│   │   ├── 01 Novidades.flac
+│   │   ├── 02 Amando Você.flac
+│   │   ├── 03 Esqueça-Me.flac
+│   │   ├── 04 Não Deu Em Nada.flac
+│   │   ├── 05 Não Fique Preocupado.flac
+│   │   ├── 06 A Noite Vai Chegar.flac
+│   │   ├── 07 Com Sabor.flac
+│   │   ├── 08 Dê-Me Mais Carinho.flac
+│   │   ├── 09 Só Você (Por Você, Sem Você).flac
+│   │   ├── 10 Eu Queria Falar Com Você.flac
+│   │   ├── 11 Lady É Meu Nome.flac
+│   │   ├── 12 Solução.flac
+│   │   └── cover.jpg
+│   └── Fêmea Brasileira
+│       ├── 01 Dança Louca.flac
+│       ├── 02 Disco Dance.flac
+│       ├── 03 Pantera.flac
+│       ├── 04 Força Do Pensamento.flac
+│       ├── 05 Valeu A Pena.flac
+│       ├── 06 Boneca De Pixe.flac
+│       ├── 07 Fêmea Brasileira.flac
+│       ├── 08 Vem Comigo.flac
+│       ├── 09 Um Pra Lá, Dois Pra Cá.flac
+│       ├── 10 Hora De União.flac
+│       ├── 11 Esperança.flac
+│       ├── 12 A Banda.flac
+│       └── cover.jpg
 ├── La Franela
 │   ├── Después de ver
 │   │   └── 02 Lo que me mata.flac
@@ -12184,6 +12850,9 @@
 ├── Lazerhawk
 │   └── Dreamrider
 │       └── 07 Lazerhawk - Cool Breeze.flac
+├── Leandro Sapucahy
+│   └── Brasilian Fiesta
+│       └── 04 Acreditar.flac
 ├── Lecrae
 │   └── Rehab
 │       ├── 04 Just Like You.flac
@@ -12262,6 +12931,21 @@
 │       └── 2-13 The Long Black Veil.flac
 ├── Lego
 │   └── Papiroflexia.flac
+├── Leila Pinheiro
+│   └── Leila Pinheiro
+│       ├── 01 Tudo Em cima.flac
+│       ├── 02 Bons Amigos.flac
+│       ├── 03 Vai Ficar No Ar.flac
+│       ├── 04 Coração Vagabundo.flac
+│       ├── 05 Falando De Amor.flac
+│       ├── 06 A Porta.flac
+│       ├── 07 Lua De Cetim.flac
+│       ├── 08 Espelho Das Águas.flac
+│       ├── 09 Mãos De Afeto.flac
+│       ├── 10 Passarinha.flac
+│       ├── 11 Cão Sem Dono.flac
+│       ├── 12 Nossa Rua.flac
+│       └── cover.jpg
 ├── Lemaitre
 │   └── 1749
 │       └── 03 Lemaitre feat. Jennie Abrahamson - Closer.flac
@@ -12293,6 +12977,9 @@
 │       ├── 03 Symphony No. 9 in D Minor, Op. 125 _Choral_ _ III. Adagio molto e cantabile - Andante moderato.flac
 │       ├── 04 Symphony No. 9 in D Minor, Op. 125 _Choral_ _ IVa. Finale. Presto - Allegro assai.flac
 │       └── 05 Symphony No. 9 in D Minor, Op. 125 _Choral_ _ IVb. Recitativo. O Freunde, nicht diese Töne!.flac
+├── Leon Bridges
+│   ├── Bad Bad News.flac
+│   └── Bad Bad News.lrc
 ├── Leonel García
 │   └── Acústico desde la Sala Telefónica Centro Cultural Roberto Cantoral
 │       └── 2-04 Leonel García - Te vi venir.flac
@@ -12915,6 +13602,8 @@
 │   │   └── 06 Los Fabulosos Cadillacs - El satánico Dr. Cadillac (versión '93).mp3
 │   └── Yo te avisé!
 │       └── 07 Yo te avisé.flac
+├── Los Gatos
+│   └── La Balsa.flac
 ├── Los Hijos del Sol
 │   ├── The Roots of Chicha
 │   │   ├── 03 Los Hijos del Sol - Cariñito.flac
@@ -13253,18 +13942,44 @@
 │   └── Quereme
 │       └── 01 Quereme.mp3
 ├── Love
-│   └── Forever Changes (2015 Remaster)
-│       ├── 01 Alone Again Or (2015 Remaster).flac
-│       ├── 02 A House Is Not a Motel (2015 Remaster).flac
-│       ├── 03 Andmoreagain (2015 Remaster).flac
-│       ├── 04 The Daily Planet (2015 Remaster).flac
-│       ├── 05 Old Man (2015 Remaster).flac
-│       ├── 06 The Red Telephone (2015 Remaster).flac
-│       ├── 07 Maybe the People Would Be the Times or Between Clark and Hilldale (2015 Remaster).flac
-│       ├── 08 Live and Let Live (2015 Remaster).flac
-│       ├── 09 The Good Humor Man He Sees Everything Like This (2015 Remaster).flac
-│       ├── 10 Bummer in the Summer (2015 Remaster).flac
-│       └── 11 You Set the Scene (2015 Remaster).flac
+│   ├── Forever Changes (2015 Remaster)
+│   │   ├── 01 Alone Again Or (2015 Remaster).flac
+│   │   ├── 02 A House Is Not a Motel (2015 Remaster).flac
+│   │   ├── 03 Andmoreagain (2015 Remaster).flac
+│   │   ├── 04 The Daily Planet (2015 Remaster).flac
+│   │   ├── 05 Old Man (2015 Remaster).flac
+│   │   ├── 06 The Red Telephone (2015 Remaster).flac
+│   │   ├── 07 Maybe the People Would Be the Times or Between Clark and Hilldale (2015 Remaster).flac
+│   │   ├── 08 Live and Let Live (2015 Remaster).flac
+│   │   ├── 09 The Good Humor Man He Sees Everything Like This (2015 Remaster).flac
+│   │   ├── 10 Bummer in the Summer (2015 Remaster).flac
+│   │   └── 11 You Set the Scene (2015 Remaster).flac
+│   └── Reel to Real (Deluxe Version)
+│       ├── 01 Time Is Like a River.flac
+│       ├── 02 Stop the Music.flac
+│       ├── 03 Who Are You_.flac
+│       ├── 04 Good Old Fashion Dream.flac
+│       ├── 05 Which Witch Is Which.flac
+│       ├── 06 With a Little Energy.flac
+│       ├── 07 Singing Cowboy.flac
+│       ├── 08 Be Thankful for What You Got.flac
+│       ├── 09 You Said You Would.flac
+│       ├── 10 Busted Feet.flac
+│       ├── 11 Everybody's Gotta Live.flac
+│       ├── 11 Everybody's Gotta Live.lrc
+│       ├── 12 Do It Yourself (Outtake).flac
+│       ├── 13 I Gotta Remember (Outtake).flac
+│       ├── 14 Somebody (Outtake).flac
+│       ├── 15 You Gotta Feel It (Outtake).flac
+│       ├── 16 With a Little Energy (Alternate Mix).flac
+│       ├── 17 Busted Feet (Alternate Mix).flac
+│       ├── 18 You Said You Would (Single Mix).flac
+│       ├── 19 Stop the Music (Alternate Take).flac
+│       ├── 20 Graveyard Hop (Studio Rehearsal).flac
+│       ├── 21 Singing Cowboy (Alternate Take).flac
+│       ├── 22 Everybody's Gotta Live (Electric Version).flac
+│       ├── 23 Wonder People (I Do Wonder) (Studio Rehearsal).flac
+│       └── cover.jpg
 ├── Loverboy
 │   └── Get Lucky
 │       └── 01 Working for the Weekend.mp3
@@ -13511,6 +14226,21 @@
 │       ├── 15 Somos Novios.flac
 │       ├── 16 La Media Vuelta.flac
 │       └── 16 Si Te Perdiera.flac
+├── Luiz Melodia
+│   ├── Brasilian Fiesta
+│   │   └── 35 Que loucura.flac
+│   └── Nós
+│       ├── 01 Ilha de Cuba.flac
+│       ├── 02 Segredo.flac
+│       ├── 03 Surra de chicote.flac
+│       ├── 04 Hoje e amanhã não saio de casa.flac
+│       ├── 05 Negro gato.flac
+│       ├── 05 Negro gato.lrc
+│       ├── 06 Passarinho viu.flac
+│       ├── 07 Mistério da raça.flac
+│       ├── 08 Dias de esperança.flac
+│       ├── 09 Feras que virão.flac
+│       └── cover.jpg
 ├── Lukas Graham
 │   └── Lukas Graham
 │       ├── 01 7 Years.flac
@@ -13577,6 +14307,35 @@
 │       ├── 11 Las llaves robadas.flac
 │       ├── 12 Seguiremos.flac
 │       └── 13 La ley del uno.flac
+├── Mac DeMarco
+│   └── This Old Dog
+│       ├── 01 My Old Man.flac
+│       ├── 01 My Old Man.lrc
+│       ├── 02 This Old Dog.flac
+│       ├── 02 This Old Dog.lrc
+│       ├── 03 Baby You're Out.flac
+│       ├── 03 Baby You're Out.lrc
+│       ├── 04 For the First Time.flac
+│       ├── 04 For the First Time.lrc
+│       ├── 05 One Another.flac
+│       ├── 05 One Another.lrc
+│       ├── 06 Still Beating.flac
+│       ├── 06 Still Beating.lrc
+│       ├── 07 Sister.flac
+│       ├── 07 Sister.lrc
+│       ├── 08 Dreams from Yesterday.flac
+│       ├── 08 Dreams from Yesterday.lrc
+│       ├── 09 A Wolf Who Wears Sheeps Clothes.flac
+│       ├── 09 A Wolf Who Wears Sheeps Clothes.lrc
+│       ├── 10 One More Love Song.flac
+│       ├── 10 One More Love Song.lrc
+│       ├── 11 On the Level.flac
+│       ├── 11 On the Level.lrc
+│       ├── 12 Moonlight on the River.flac
+│       ├── 12 Moonlight on the River.lrc
+│       ├── 13 Watching Him Fade Away.flac
+│       ├── 13 Watching Him Fade Away.lrc
+│       └── cover.jpg
 ├── Macklemore
 │   ├── Gemini
 │   │   └── 13 Macklemore feat. Dave B & Travis Thompson - Corner Store.flac
@@ -13917,6 +14676,48 @@
 │       ├── 08 - Silence Is Gliding.flac
 │       ├── 09 - Cloud Surfing.flac
 │       └── cover.jpg
+├── Marcos Valle
+│   ├── Bicicleta _ Beta Menina - Single
+│   │   ├── 01 Bicicleta.flac
+│   │   ├── 02 Beta Menina.flac
+│   │   └── cover.jpg
+│   ├── Marcos Valle
+│   │   ├── 01 Estrelar.flac
+│   │   ├── 02 Fogo do Sol.flac
+│   │   ├── 03 Samba de Verão.flac
+│   │   ├── 03 Samba de Verão.lrc
+│   │   ├── 04 Para Os Filhos de Abraão.flac
+│   │   ├── 05 Naturalmente.flac
+│   │   ├── 06 Tapa No Real.flac
+│   │   ├── 07 Tapetes, Guardanapos, Cetins.flac
+│   │   ├── 08 Dia D.flac
+│   │   ├── 09 Mais Que Amor.flac
+│   │   ├── 10 Viola Enluarada.flac
+│   │   ├── 10 Viola Enluarada.lrc
+│   │   └── cover.jpg
+│   ├── Sempre
+│   │   ├── 01 Olha Quem Tá Chegando.flac
+│   │   ├── 02 Minha Romã.flac
+│   │   ├── 03 Odisséia.flac
+│   │   ├── 04 Alma.flac
+│   │   ├── 05 É Você.flac
+│   │   ├── 06 Vou Amanhã Saber.flac
+│   │   ├── 07 Distância.flac
+│   │   ├── 08 Aviso aos Navegantes.flac
+│   │   ├── 09 Sempre.flac
+│   │   ├── 10 Alma (Instrumental).flac
+│   │   ├── 11 Minha Romã (Instrumental).flac
+│   │   └── cover.jpg
+│   └── Vontade de Rever Você
+│       ├── 01 A Paraíba Não é Chicago.flac
+│       ├── 02 Bicho No Cio.flac
+│       ├── 03 Velhos Surfistas Querendo Voar.flac
+│       ├── 04 Campina Grande.flac
+│       ├── 05 Sei Lá.flac
+│       ├── 06 Pecados de Amor.flac
+│       ├── 07 Garimpando.flac
+│       ├── 08 Não Pode Ser Qualquer Mulher.flac
+│       └── cover.jpg
 ├── Marc Streitenfeld
 │   ├── Prometheus
 │   │   ├── 01 A Planet.flac
@@ -13986,6 +14787,10 @@
 ├── Maria McKee
 │   └── Streets of Fire
 │       └── 07 Maria McKee - Never Be You.flac
+├── Maria Rita
+│   └── Samba meu
+│       ├── 02 O homem falou.flac
+│       └── 06 Tá perdoado.flac
 ├── Maribou State
 │   ├── Portraits
 │   │   └── 08 Maribou State feat. Holly Walker - Midas.flac
@@ -14915,6 +15720,22 @@
 ├── Mili
 │   └── Intrauterine Education
 │       └── 01 sustain++;.flac
+├── Militantes del Climax
+│   └── NUEVA SANGRE
+│       ├── 01 SAME.flac
+│       ├── 02 CAFE NEGRO.flac
+│       ├── 03 NUEVA SANGRE.flac
+│       ├── 04 LAGARTIJAS.flac
+│       ├── 05 MANSION CLIMAX.flac
+│       ├── 06 FORTEX.flac
+│       ├── 07 TICKET.flac
+│       ├── 08 PARA QUE.flac
+│       ├── 09 SUPERFLUO.flac
+│       ├── 10 DIBU MARTINEZ.flac
+│       ├── 11 LATEX.flac
+│       ├── 12 CASIO.flac
+│       ├── 13 LAPISLAZULI.flac
+│       └── cover.jpg
 ├── Milky Chance
 │   └── Sadnecessary
 │       └── 11 Stolen Dance.mp3
@@ -14925,6 +15746,56 @@
 │   │   └── 01 No Time to Cast Anchor.flac
 │   └── Secret Ceremony
 │       └── 01 Secret Ceremony.flac
+├── Milo j
+│   ├── 166
+│   │   ├── 01 3 PECADOS DESPUES….flac
+│   │   ├── 02 ANTES DE LOS 20.flac
+│   │   ├── 03 NI CARLOS NI JOSE.flac
+│   │   ├── 04 LA TOLA Y EL VELERO.flac
+│   │   ├── 05 A VOS.flac
+│   │   ├── 06 PARAISO (daña).flac
+│   │   ├── 07 ALIOLI.flac
+│   │   ├── 08 DIGAN.flac
+│   │   ├── 09 NO HAGO TRAP.flac
+│   │   ├── 10 I' AM.flac
+│   │   ├── 11 SANGRE PARA DERRAMAR.flac
+│   │   ├── 12 HIPPIE.flac
+│   │   └── cover.jpg
+│   ├── 166 (DELUXE) retirada
+│   │   ├── 01 3 PECADOS DESPUES….flac
+│   │   ├── 01 LO QUE ME CAUSA.flac
+│   │   ├── 01 RETIRADA.flac
+│   │   ├── 02 ANTES DE LOS 20.flac
+│   │   ├── 02 LA TORTURA.flac
+│   │   ├── 03 BUEN DÍA PORTACIÓN DE ROSTRO.flac
+│   │   ├── 03 NI CARLOS NI JOSE.flac
+│   │   ├── 04 DAÑA (ELVIRA).flac
+│   │   ├── 04 LA TOLA Y EL VELERO.flac
+│   │   ├── 05 A VOS.flac
+│   │   ├── 05 NO NO.flac
+│   │   ├── 06 OLIMPO.flac
+│   │   ├── 06 PARAISO (daña).flac
+│   │   ├── 07 ALIOLI.flac
+│   │   ├── 07 OJALA.flac
+│   │   ├── 08 DIGAN.flac
+│   │   ├── 09 NO HAGO TRAP.flac
+│   │   ├── 10 I' AM.flac
+│   │   ├── 11 SANGRE PARA DERRAMAR.flac
+│   │   ├── 12 HIPPIE.flac
+│   │   └── cover.jpg
+│   ├── 511
+│   │   ├── 01 FLA.flac
+│   │   ├── 01 FLA.lrc
+│   │   ├── 02 NO MUCHO.flac
+│   │   ├── 02 NO MUCHO.lrc
+│   │   ├── 03 AL BORDE.flac
+│   │   ├── 03 AL BORDE.lrc
+│   │   ├── 04 511 (INTERLUDIO).flac
+│   │   ├── 05 TOI HECHO.flac
+│   │   ├── 05 TOI HECHO.lrc
+│   │   └── cover.jpg
+│   ├── M.A.I.flac
+│   └── OLIMPO.flac
 ├── Milton Nascimento
 │   └── Clube Da Esquina
 │       ├── 12 - Paisagem Da Janela.flac
@@ -15029,6 +15900,9 @@
 │   │   └── cover.jpg
 │   └── Original 80’s
 │       └── 1. Cheri Cheri Lady.flac
+├── Modest by Default
+│   ├── 关于暴力的论文 (DEMOS LOGIKE).flac
+│   └── 游击爵士乐.flac
 ├── Modjo
 │   └── Modjo (Remastered)
 │       ├── 03 Lady (Hear Me Tonight).flac
@@ -15405,6 +16279,9 @@
 ├── Natalia Oreiro
 │   └── Natalia Oreiro
 │       └── 04 Me muero de amor.flac
+├── Natiruts
+│   └── Qu4tro
+│       └── 10 Soul de BSB.flac
 ├── Nat King Cole
 │   └── L-O-V-E
 │       └── 01 L-O-V-E.mp3
@@ -15812,6 +16689,9 @@
 │       ├── 14 Pirate Love.flac
 │       ├── 15 That's Poison.flac
 │       └── 16 I Am Confronted.flac
+├── Ney Matogrosso
+│   └── Brasilian Fiesta
+│       └── 29 Com a boca no mundo.flac
 ├── Nickelback
 │   └── The Best of Nickelback, Vol. 1
 │       ├── 02 How You Remind Me.mp3
@@ -16103,6 +16983,19 @@
 │   │   └── 01 Pop.mp3
 │   └── No Strings Attached
 │       └── 01 _NSYNC - Bye Bye Bye.mp3
+├── Nu Azeite
+│   └── Vem pro Mar
+│       ├── 01 Vem pro Mar.flac
+│       ├── 02 Bate Macumba.flac
+│       ├── 03 Água de Coco.flac
+│       ├── 04 Saudade.flac
+│       ├── 05 Na Salineira.flac
+│       ├── 06 Amor sem fim.flac
+│       ├── 07 Te trazer pra mim.flac
+│       ├── 08 Tudo que eu queria.flac
+│       ├── 09 Mamåe passou no azeite.flac
+│       ├── 10 Aleluia.flac
+│       └── cover.jpg
 ├── Nu Genea
 │   ├── Bar Mediterraneo
 │   │   ├── 009 - Nu Genea - Tienaté.lrc
@@ -16250,6 +17143,12 @@
 │       ├── 22 Sensia.mp3
 │       ├── 23 Tanbouye.mp3
 │       └── 24 Yo Fe.mp3
+├── Olodum
+│   └── Brasilian Fiesta
+│       └── 24 Nossa gente (Avisa lá).flac
+├── Oma
+│   ├── Rapp Snitch Knishes (Live Instrumental) (Cover).flac
+│   └── Rapp Snitch Knishes (Sitar Edition).flac
 ├── Omar Rodriguez-Lopez
 │   └── Solar Gambling
 │       ├── 01 Locomocion Capilar.mp3
@@ -16340,6 +17239,9 @@
 │   └── Millennium Edition
 │       ├── 276 - Opus - Live Is Life (Live).flac
 │       └── cover.jpg
+├── O Rappa
+│   └── O Rappa
+│       └── 04 Take It Easy My Brother Charles.flac
 ├── Orbiter
 │   └── Hollow World
 │       ├── 01 Silence Breaks.mp3
@@ -16407,6 +17309,7 @@
 │   ├── Os Tincoãs
 │   │   ├── 01 Atabaque Chora.flac
 │   │   ├── 01 Cordeiro de Nanã.mp3
+│   │   ├── 01 Deixa A Gira Gira.flac
 │   │   ├── 02 Lamento às Águas.flac
 │   │   ├── 03 Canto de Dor.flac
 │   │   ├── 04 Chão da Verdade.flac
@@ -16421,6 +17324,9 @@
 │   │   └── cover.jpg
 │   └── Welcome To The Orishas Homeland (In The Rhythm Of Nature And Faith)
 │       └── 14 Os Tincoãs - Deixa A Gira Girar.mp3
+├── Os Travessos part. Harmonia do Samba
+│   └── Dito e Feito
+│       └── 09 Travessura.flac
 ├── Other Lives
 │   └── Other Lives
 │       └── 03 Black Tables.mp3
@@ -16775,6 +17681,9 @@
 │       ├── 07 Equatorial Sunrise.mp3
 │       ├── 08 Small Reptiles on the Forest Floor.mp3
 │       └── 09 Tropical Rainforest.mp3
+├── Paulinho Da Viola
+│   └── Brasilian Fiesta
+│       └── 05 Prisma luminoso.flac
 ├── Paul Kalkbrenner
 │   ├── 7
 │   │   ├── 03 Cloud Rider.mp3
@@ -16939,6 +17848,9 @@
 ├── Pedro de la Cueva; Moli
 │   └── El Toro Enamorado de la Luna
 │       └── 01 El Toro Enamorado de la Luna.mp3
+├── Pedro Luis E A Parede
+│   └── Brasilian Fiesta
+│       └── 40 Máquina de escrever.flac
 ├── Pegboard Nerds
 │   ├── Monstercat 009 – Reunion
 │   │   └── 11 Pegboard Nerds - Fire in the Hole.mp3
@@ -16978,6 +17890,9 @@
 ├── Pellegrino & Zodyaco
 │   └── Koinè
 │       └── 9. Malìa.flac
+├── Pepeu Gomes
+│   └── Um Raio Laser
+│       └── 02 Um raio laser.flac
 ├── Peppino Brio
 │   └── Le origini
 │       ├── 079 - Peppino Brio - E va buone, nun fa niente.flac
@@ -17603,6 +18518,7 @@
 ├── Playing For Change; Gilberto Gil; Stephen Marley; Mermans Mosengo
 │   └── No Woman No Cry
 │       └── 01 No Woman No Cry.mp3
+├── playlists
 ├── P.lion
 │   └── ZYX Italo Disco Collection
 │       └── 02 Happy Children.flac
@@ -18114,15 +19030,20 @@
 │   │   ├── 03 Back Chat (Remastered 2011).flac
 │   │   ├── 03 Back Chat (Single Remix).flac
 │   │   ├── 04 Action This Day (Live In Tokyo _ November 1982).flac
+│   │   ├── 04 Action This Day (Live In Tokyo _ November 1982).lrc
 │   │   ├── 04 Body Language (Remastered 2011).flac
 │   │   ├── 05 Action This Day (Remastered 2011).flac
+│   │   ├── 05 Action This Day (Remastered 2011).lrc
 │   │   ├── 05 Calling All Girls (Live In Tokyo _ November 1982).flac
 │   │   ├── 06 Put Out The Fire (Remastered 2011).flac
 │   │   ├── 07 Life Is Real (Song For Lennon) (Remastered 2011).flac
 │   │   ├── 08 Calling All Girls (Remastered 2011).flac
 │   │   ├── 09 Las Palabras De Amor (The Words Of Love) (Remastered 2011).flac
+│   │   ├── 09 Las Palabras De Amor (The Words Of Love) (Remastered 2011).lrc
 │   │   ├── 10 Cool Cat (Remastered 2011).flac
-│   │   └── 11 Under Pressure (Remastered 2011).flac
+│   │   ├── 11 Under Pressure (Remastered 2011).flac
+│   │   ├── 11 Under Pressure (Remastered 2011).lrc
+│   │   └── cover.jpg
 │   ├── Jazz (2011 Remaster)
 │   │   ├── 309 - Queen - Don't Stop Me Now (Remastered 2011).flac
 │   │   ├── 309 - Queen - Don't Stop Me Now (Remastered 2011).lrc
@@ -18174,6 +19095,21 @@
 │   └── Super Hits
 │       ├── 021 - Quiet Riot - Cum on Feel the Noize.lrc
 │       ├── 021 - Quiet Riot - Cum on Feel the Noize.mp3
+│       └── cover.jpg
+├── Quinteto Ternura
+│   └── Quinteto Ternura
+│       ├── 01 Quando Gosto É Prá Valer.flac
+│       ├── 02 O Amigo.flac
+│       ├── 03 Leão De Bronze.flac
+│       ├── 04 Baby.flac
+│       ├── 05 Consegui Concluir (Jogo de Azar).flac
+│       ├── 06 Ele E Ela.flac
+│       ├── 07 Eu Preciso Te Encontrar.flac
+│       ├── 08 Velha Amizade.flac
+│       ├── 09 Come To Me Together.flac
+│       ├── 10 Chegando.flac
+│       ├── 11 Logo Cedo.flac
+│       ├── 12 Falsos Caprichos.flac
 │       └── cover.jpg
 ├── Qvark
 │   └── Qvark
@@ -18771,6 +19707,19 @@
 │   │   └── 1-12 After the Love.flac
 │   └── Like I Love You
 │       └── 02 Like I Love You (Money G Radio Edit).flac
+├── Rita Lee
+│   └── Rita Lee
+│       ├── 01 Chega Mais.flac
+│       ├── 02 Papai Me Empresta O Carro.flac
+│       ├── 03 Doce Vampiro.flac
+│       ├── 03 Doce Vampiro.lrc
+│       ├── 04 Corre-Corre.flac
+│       ├── 05 Mania De Você.flac
+│       ├── 05 Mania De Você.lrc
+│       ├── 06 Elvira Paga.flac
+│       ├── 07 Maria Mole.flac
+│       ├── 08 Arrombou A Festa Número 2.flac
+│       └── cover.jpg
 ├── Rivers Of Nihil
 │   ├── The Conscious Seed of Light
 │   │   ├── 01 Terrestria I_ Thaw.flac
@@ -18858,6 +19807,29 @@
 ├── Robin Thicke feat. T.I. + Pharrell Williams
 │   └── Blurred Lines
 │       └── 01 Blurred Lines.flac
+├── Robson Jorge
+│   └── Robson Jorge e Lincoln Olivetti
+│       ├── 01 Jorgea Corisco.flac
+│       ├── 02 No Bom Sentido.flac
+│       ├── 03 Aleluia.flac
+│       ├── 04 Raton.flac
+│       ├── 05 Pret-À-Porter.flac
+│       ├── 06 Squash.flac
+│       ├── 07 Eva.flac
+│       ├── 08 Fá Sustenido.flac
+│       ├── 09 Zé Piolho.flac
+│       ├── 10 Baila Comigo _ Festa Brava.flac
+│       ├── 11 Ginga.flac
+│       ├── 12 Alegrias.flac
+│       └── cover.jpg
+├── Robson Jorge & Lincoln Olivetti
+│   └── Déjà Vu
+│       ├── 01 Suspira.flac
+│       ├── 02 Dance Baby.flac
+│       ├── 03 You.flac
+│       ├── 04 Sem Essa.flac
+│       ├── 05 Batebca.flac
+│       └── cover.jpg
 ├── Rocío Garcel; Vicky Cordova
 │   └── Pocahontas (Banda Sonora Original en Español)
 │       ├── 08 Con El Corazón I.mp3
@@ -19114,6 +20086,21 @@
 ├── Roscoe Robinson
 │   └── So Fine_ '60s One Hit Wonders
 │       └── 09 I'm Burning and Yearning (For You).mp3
+├── Roupa Nova
+│   └── Roupa Nova (1981)
+│       ├── 01 Sapato Velho.flac
+│       ├── 01 Sapato Velho.lrc
+│       ├── 02 Pra Sempre.flac
+│       ├── 03 Bem Simples.flac
+│       ├── 03 Bem Simples.lrc
+│       ├── 04 Um Pouco De Amor.flac
+│       ├── 05 E O Espetáculo Continua.flac
+│       ├── 06 Recomeçar.flac
+│       ├── 07 Tanto Faz.flac
+│       ├── 08 Canção De Verão.flac
+│       ├── 09 Quem Virá.flac
+│       ├── 10 Roupa Nova.flac
+│       └── cover.jpg
 ├── Route 94
 │   └── Fly 4 Life EP
 │       └── 01 Tell You Why.flac
@@ -19209,9 +20196,37 @@
 ├── San Cisco
 │   └── Get Lucky (triple j Like a Version)
 │       └── 01 Get Lucky (triple j Like a Version).flac
+├── Sandra De Sá
+│   └── Vale Tudo
+│       ├── 01 Trem da Central.flac
+│       ├── 02 Candura.flac
+│       ├── 03 Pela Cidade.flac
+│       ├── 04 Onda Negra.flac
+│       ├── 05 Gamação.flac
+│       ├── 06 Vale Tudo.flac
+│       ├── 07 Guarde Minha Voz.flac
+│       ├── 08 Terra Azul.flac
+│       ├── 09 Musa.flac
+│       ├── 10 Só Estrelas.flac
+│       └── cover.jpg
 ├── Sandra Mondaini
 │   └── Le più belle canzoni di Sandra Mondaini
 │       ├── 071 - Sandra Mondaini - Cerco un uomo.flac
+│       └── cover.jpg
+├── Sandro Becker
+│   └── Sandro Becker
+│       ├── 01 Severino Macarteney.flac
+│       ├── 02 I Love You.flac
+│       ├── 03 Mais Um na Cidade.flac
+│       ├── 04 Meu Filho.flac
+│       ├── 05 Se Eu Te Pegar Te Laço.flac
+│       ├── 06 Tatu-galinha.flac
+│       ├── 07 De Beethoven a Soriano.flac
+│       ├── 08 Uma Palavra de Consolo.flac
+│       ├── 09 O Pai de Santo.flac
+│       ├── 10 O Dia a Dia da Vida.flac
+│       ├── 11 Uma Prece Para os Homens Sem Deus.flac
+│       ├── 12 Maria Bandida.flac
 │       └── cover.jpg
 ├── Santaflow
 │   └── Ave Fénix Instrumentales
@@ -19235,6 +20250,9 @@
 ├── Santos Santana & Sinizter
 │   └── Downforce Overdrive
 │       └── 02 Ghost in the Shell.flac
+├── Sapucahy
+│   └── Brasilian Fiesta
+│       └── 07 Numa cidade muito longe daqui (Polícia e Bandido).flac
 ├── Sarah Carlsson
 │   └── House Relax, Vol. 3 (Deep House Session)
 │       └── 15 When You Talk to Me.flac
@@ -19625,6 +20643,34 @@
 ├── Shakira & Rauw Alejandro
 │   └── Te felicito
 │       └── 01 Te felicito.flac
+├── Sharon Jones & The Dap-Kings
+│   ├── Dap Dippin' With Sharon Jones & The Dap-Kings
+│   │   ├── 01 (Introduction).flac
+│   │   ├── 02 Got a Thing on My Mind.flac
+│   │   ├── 03 What Have You Done for Me Lately_.flac
+│   │   ├── 04 The Dap Dip.flac
+│   │   ├── 05 Give Me a Chance.flac
+│   │   ├── 06 Cut That Line.flac
+│   │   ├── 07 Got to Be the Way It Is.flac
+│   │   ├── 08 Make It Good to Me.flac
+│   │   ├── 09 Ain't It Hard.flac
+│   │   ├── 10 Pick It Up, Lay It in the Cut.flac
+│   │   ├── 11 Casella Walk.flac
+│   │   └── cover.jpg
+│   └── Naturally
+│       ├── 01 How Do I Let a Good Man Down_.flac
+│       ├── 02 Natural Born Lover.flac
+│       ├── 03 Stranded in Your Love.flac
+│       ├── 04 My Man Is a Mean Man.flac
+│       ├── 05 You're Gonna Get It.flac
+│       ├── 06 How Long Do I Have to Wait for You_.flac
+│       ├── 06 How Long Do I Have to Wait for You_.lrc
+│       ├── 07 This Land Is Your Land.flac
+│       ├── 07 This Land Is Your Land.lrc
+│       ├── 08 Your Thing Is a Drag.flac
+│       ├── 09 Fish in the Dish.flac
+│       ├── 10 All Over Again.flac
+│       └── cover.jpg
 ├── Shawn Mendes
 │   ├── Handwritten (Revisited)
 │   │   ├── 02 Stitches.flac
@@ -19752,6 +20798,9 @@
 ├── Sinmara
 │   └── Hvísl stjarnanna
 │       └── 01 Apparitions.flac
+├── Siouxsie and the Banshees
+│   └── Marie Antoinette
+│       └── 01 Hong Kong Garden.flac
 ├── Siouxsie And The Banshees
 │   ├── Cities In Dust (Apollo Theatre, Oxford In Concert - Recorded 14.11.85).flac
 │   ├── Cities In Dust (Apollo Theatre, Oxford In Concert - Recorded 14.11.85).lrc
@@ -20220,6 +21269,20 @@
 ├── Somewhere Over England
 │   └── Somewhere Over England
 │       └── 01 If I Ever Fall in Love.flac
+├── Som Nosso De Cada Dia
+│   └── Som Nosso
+│       ├── 01 Pra Swingar.flac
+│       ├── 02 Levante A Cabeca.flac
+│       ├── 03 Francois.flac
+│       ├── 04 Pra Segurar.flac
+│       ├── 05 Estacao Da Luz.flac
+│       ├── 06 Vida De Artista.flac
+│       ├── 07 Bem No Fim.flac
+│       ├── 08 Mountanhas.flac
+│       ├── 09 Neblina.flac
+│       ├── 10 Agua Limpa.flac
+│       ├── 11 Rara Confluencia.flac
+│       └── cover.jpg
 ├── Son by Four
 │   └── Son by Four
 │       └── 13 A puro dolor (versión balada).flac
@@ -20497,19 +21560,6 @@
 ├── Steve Conte, SHANTI
 │   └── 攻殻機動隊 superb music high resolution USB
 │       └── 26 Steve Conte, SHANTI - living inside shell.flac
-├── Steve Hackett
-│   └── Cured
-│       ├── 01 Hope I Don't Wake (Remastered 2007).flac
-│       ├── 02 Picture Postcard (Remastered 2007).flac
-│       ├── 03 Can't Let Go (Remastered 2007).flac
-│       ├── 04 The Air Conditioned Nightmare (Remastered 2007).flac
-│       ├── 05 Funny Feeling (Remastered 2007).flac
-│       ├── 06 A Cradle Of Swans (Remastered 2007).flac
-│       ├── 07 Overnight Sleeper (Remastered 2007).flac
-│       ├── 08 Turn Back Time (Remastered 2007).flac
-│       ├── 09 Tales Of The Riverbank (Remastered 2007).flac
-│       ├── 10 Second Chance (Remastered 2007).flac
-│       └── 11 The Air-Conditioned Nightmare (2007 Digital Remaster).flac
 ├── Steve Hillage
 │   ├── Fish Rising
 │   │   ├── 01 Solar Musick Suite (2006 Digital Remaster).flac
@@ -21058,8 +22108,46 @@
 │   └── The World’s Greatest
 │       └── 2-09 Take That - Back for Good.mp3
 ├── Talking Heads
-│   └── 80s Gold
-│       └── 43 Talking Heads - Psycho Killer - 2005 Remaster.flac
+│   ├── 80s Gold
+│   │   └── 43 Talking Heads - Psycho Killer - 2005 Remaster.flac
+│   ├── Speaking in Tongues (Deluxe Version)
+│   │   ├── 01 Burning Down the House (2005 Remaster).flac
+│   │   ├── 01 Burning Down the House (2005 Remaster).lrc
+│   │   ├── 02 Making Flippy Floppy (2005 Remaster).flac
+│   │   ├── 03 Girlfriend Is Better (2005 Remaster).flac
+│   │   ├── 03 Girlfriend Is Better (2005 Remaster).lrc
+│   │   ├── 04 Slippery People (2005 Remaster).flac
+│   │   ├── 05 I Get Wild _ Wild Gravity (2005 Remaster).flac
+│   │   ├── 06 Swamp (2005 Remaster).flac
+│   │   ├── 07 Moon Rocks (2005 Remaster).flac
+│   │   ├── 08 Pull up the Roots (2005 Remaster).flac
+│   │   ├── 09 This Must Be the Place (Naive Melody) (2005 Remaster).flac
+│   │   ├── 09 This Must Be the Place (Naive Melody) (2005 Remaster).lrc
+│   │   ├── 10 Two Note Swivel (Unfinished Outtake).flac
+│   │   ├── 11 Burning Down the House (Alternate Version).flac
+│   │   └── cover.jpg
+│   └── Stop Making Sense 1984 (Live)
+│       ├── 10 Big Business (Live).flac
+│       ├── 11 Swamp (Live).flac
+│       ├── 12 Psycho Killer (Live).flac
+│       ├── 12 Psycho Killer (Live).lrc
+│       ├── 13 Cross Eyed And Painless (Live).flac
+│       ├── 13 Cross Eyed And Painless (Live).lrc
+│       ├── 14 Take Me To The River (Live).flac
+│       ├── 14 Take Me To The River (Live).lrc
+│       ├── 1 Thank You For Sending Me An Angel (Live).flac
+│       ├── 2 Burning Down The House (Live).flac
+│       ├── 2 Burning Down The House (Live).lrc
+│       ├── 3 Making Flippy Floppy (Live).flac
+│       ├── 4 Once In A Lifetime (Live).flac
+│       ├── 4 Once In A Lifetime (Live).lrc
+│       ├── 5 Found A Job (Live).flac
+│       ├── 6 Slippery People (Live).flac
+│       ├── 7 What A Day That Was (Live).flac
+│       ├── 8 This Must Be The Place (Live).flac
+│       ├── 9 Life During Wartime (Live).flac
+│       ├── 9 Life During Wartime (Live).lrc
+│       └── cover.jpg
 ├── Talk Talk
 │   └── It's My Life
 │       ├── 225 - Talk Talk - It's My Life (1997 Remaster).flac
@@ -21092,6 +22180,16 @@
 ├── T.A.N.G_
 │   └── Libre Soy-Y si hacemos un Muñeco (Live)
 │       └── 01 Libre Soy-Y si hacemos un Muñeco (Live).flac
+├── Tania Maria
+│   └── Europe
+│       ├── 01 Funky Tambourine.flac
+│       ├── 02 Senso Unico.flac
+│       ├── 03 I Can Do It.flac
+│       ├── 04 Chuleta.flac
+│       ├── 05 O Bom E.flac
+│       ├── 06 She's Outrageous.flac
+│       ├── 07 Bom Bom Bom (Chi Chi Chi).flac
+│       └── cover.jpg
 ├── Tape Five
 │   └── Tonight Josephine!
 │       └── 05 Tape Five feat. Henrik Wager - Dixie Biscuit.mp3
@@ -22708,6 +23806,13 @@
 ├── Third Eye Blind
 │   └── Third Eye Blind
 │       └── 03 Semi-Charmed Life.flac
+├── Thomas Heredia
+│   ├── Amor Clasificado.flac
+│   ├── Báilame (feat. Dylan Yeri).flac
+│   ├── Déjame Enseñarte.flac
+│   ├── Diabla (feat. Hector Heredia).flac
+│   ├── Olvidarte.flac
+│   └── Por el Obelisco.flac
 ├── Thomas Klein; Jerry Burnham; Kip Kuepper; Wayne Cook; Scott Roche; Martin Busca
 │   └── Surf's Up
 │       └── 05 California Baby.mp3
@@ -22732,6 +23837,8 @@
 │   └── Life Starts Now
 │       └── 12 Life Starts Now.flac
 ├── Thundercat
+│   ├── Dragonball Durag.flac
+│   ├── Dragonball Durag.lrc
 │   └── Drunk
 │       ├── 01 Rabbot Ho.flac
 │       ├── 02 Captain Stupido.flac
@@ -22780,6 +23887,22 @@
 │   └── The Penguin- The Gotham City Top Twenty Bangers
 │       └── 06 Tim Barton - Babylon's Burning.flac
 ├── Tim Maia
+│   ├── Dance Bem
+│   │   ├── 01 Dance Bem.flac
+│   │   ├── 02 Rodésia (Zimbabwe).flac
+│   │   ├── 03 Acenda o Farol.flac
+│   │   ├── 04 Eu Te Amo Muito Mais.flac
+│   │   ├── 05 Vale Tudo.flac
+│   │   ├── 05 Vale Tudo.lrc
+│   │   ├── 06 O Descobridor dos Sete Mares.flac
+│   │   ├── 06 O Descobridor dos Sete Mares.lrc
+│   │   ├── 07 Paixão Antiga.flac
+│   │   ├── 08 I've Never Felt Like This Before.flac
+│   │   ├── 09 Amizade Não Tem Preço.flac
+│   │   ├── 10 Mãe Natureza.flac
+│   │   └── cover.jpg
+│   ├── Disco Club
+│   │   └── 03 Sossego.flac
 │   └── World Psychedelic Classics 4_ Nobody Can Live Forever_ The Existential Soul of Tim Maia
 │       ├── 01 Que Beleza.flac
 │       ├── 02 Let's Have a Ball Tonight.flac
@@ -22946,6 +24069,9 @@
 │   └── Into The Great Wide Open
 │       ├── 01 Learning To Fly.flac
 │       └── 03 Into The Great Wide Open.flac
+├── Tom Zé
+│   └── Se o Caso É Chorar
+│       └── 03 A Babá.flac
 ├── Tonebox
 │   ├── Cloud Highway
 │   │   ├── 01 Run (Extended).flac
@@ -22988,6 +24114,8 @@
 ├── Tonica; Dominante
 │   └── Napoli Segreta
 │       └── 03 Cicogna.flac
+├── Tony Bizarro
+│   └── Estou Livre.flac
 ├── Tony Iglio
 │   └── Napoli Segreta Vol.2
 │       └── 09 Luci A New York.flac
@@ -23592,10 +24720,6 @@
 ├── Vargo
 │   └── Beauty
 │       └── 1. Get Back to Serenity (Beach mix).flac
-├── Various Artists
-│   ├── Deixa A Gira Girar.flac
-│   ├── Hong Kong Garden.flac
-│   └── Spacer Woman (Vocal, Remastered 2024).flac
 ├── Various Musique
 │   └── I Live For Dance Vol. 1
 │       └── 15 Better Off Alone (Originally By Alice Deejay).mp3
@@ -23626,12 +24750,32 @@
 ├── Velvet Revolver
 │   └── Contraband
 │       └── 11 Slither.flac
+├── Venetian Snares
+│   └── My Love Is A Bulldozer
+│       ├── 01 10th Circle of Winnipeg.flac
+│       ├── 02 Deleted Poems.flac
+│       ├── 03 1000 Years.flac
+│       ├── 04 Your Smiling Face.flac
+│       ├── 05 Amazon.flac
+│       ├── 06 My Love Is A Bulldozer.flac
+│       ├── 07 She Runs.flac
+│       ├── 08 8am Union Station.flac
+│       ├── 09 Shaky Sometimes.flac
+│       ├── 10 Too Far Across.flac
+│       ├── 11 Dear Poet.flac
+│       ├── 12 Your Blanket.flac
+│       └── cover.jpg
 ├── Vengaboys
 │   ├── The Platinum Album
 │   │   └── 01 Shalala Lala.flac
 │   └── Up & Down
 │       └── 08 Up & Down.flac
+├── Vicente Barreto
+│   └── Brasilian Fiesta
+│       └── 30 A força da raça.flac
 ├── Vicentico
+│   ├── Creo Que Me Enamoré.flac
+│   ├── Creo Que Me Enamoré.lrc
 │   ├── Los pájaros
 │   │   └── 1-01 Vicentico - El árbol de la plaza.flac
 │   ├── Los rayos
@@ -23728,6 +24872,14 @@
 │   └── Watsky Live! from the Metro
 │       └── 07 Watsky - Wounded Healer - Live.flac
 ├── We Lost The Sea
+│   ├── A Single Flower
+│   │   ├── 01 If They Had Hearts.flac
+│   │   ├── 02 A Dance with Death.flac
+│   │   ├── 03 Everything Here Is Black and Blinding.flac
+│   │   ├── 04 Bloom (Murmurations at First Light).flac
+│   │   ├── 05 The Gloaming.flac
+│   │   ├── 06 Blood Will Have Blood.flac
+│   │   └── cover.jpg
 │   └── Departure Songs
 │       ├── 01 A Gallant Gentleman.flac
 │       └── 02 Bogatyri.flac
@@ -24314,10 +25466,14 @@
 ├── Zeds Dead & Oliver Heldens
 │   └── You Know
 │       └── 01 You Know.flac
+├── Zélia Duncan
+│   └── Intimidade
+│       └── 02 Intimidade.flac
 ├── Ze Roberto
 │   └── Lotus 72 D
 │       ├── 01 Lotus 72 D.flac
-│       └── 02 Lotus 72 D (Fast Version).flac
+│       ├── 02 Lotus 72 D (Fast Version).flac
+│       └── cover.jpg
 ├── ZHU
 │   ├── Generationwhy
 │   │   └── 03 ZHU - In the Morning.flac
@@ -24433,4 +25589,4 @@
     └── 攻殻機動隊 superb music high resolution USB
         └── 46 青葉市子 Cornelius - 外は戦場だよ.flac
 
-7471 directories, 16963 files
+7669 directories, 17921 files
