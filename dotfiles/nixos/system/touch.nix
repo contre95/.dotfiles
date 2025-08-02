@@ -18,9 +18,6 @@
           displayManager.sddm.enable = true;
           displayManager.sddm.wayland.enable = true;
         };
-        services.displayManager.sddm.setupScript = ''
-          ${pkgs.maliit-keyboard}/bin/maliit-keyboard &
-        '';
         environment.plasma6.excludePackages = with pkgs.kdePackages; [
           konsole # Comment out this line if you use KDE's default terminal app
         ];
