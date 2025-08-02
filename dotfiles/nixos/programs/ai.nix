@@ -1,15 +1,8 @@
-{ lib, ... }:
-let
-  whichMachine = builtins.getEnv "WHICH_MACHINE";
-  unstable = import <nixos-unstable> {
-    config = {
-      allowUnfree = true;
-    };
-  };
-in
+{ lib, unstable, hostname, ... }:
+
 {
   config =
-    if lib.elem whichMachine [ "desktop" ] then
+    if lib.elem hostname [ "desktop" "tablet"] then
       {
         environment.systemPackages = [
           # unstable.lmstudio
@@ -25,7 +18,7 @@ in
           # models = "/home/heavy-assets/models";
           enable = true;
           package = unstable.ollama-cuda;
-          acceleration = "cuda";
+          acceleration = "rocm";
           loadModels = [
             "deepseek-r1:8b"
           ];

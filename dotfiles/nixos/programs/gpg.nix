@@ -1,19 +1,20 @@
 {
   lib,
   pkgs,
+hostname,
   config,
   ...
 }:
 let
-  whichMachine = builtins.getEnv "WHICH_MACHINE";
   cfg = config.services.gpg-agent;
 in
 {
   config =
     if
-      lib.elem whichMachine [
+      lib.elem hostname [
         "notebook"
         "desktop"
+        "tablet"
         "server"
       ]
     then
@@ -28,7 +29,7 @@ in
           grabKeyboardAndMouse = true;
           enableZshIntegration = true;
           pinentry.package =
-            if lib.elem whichMachine [ "server" ] then pkgs.pinentry-curses else pkgs.pinentry-gnome3;
+            if lib.elem hostname [ "server" ] then pkgs.pinentry-curses else pkgs.pinentry-gnome3;
           # pinentry.package = pkgs.pinentry-curses;
           sshKeys = [ "B38C2E9A5402A38D13E510DADD0B71744684EA35" ]; # [A] Subkey with auth capabilities.
           extraConfig = ''
@@ -53,7 +54,8 @@ in
         };
       }
     else if
-      lib.elem whichMachine [
+      lib.elem hostname [
+        "tablet"
         "notebook"
         "desktop"
       ]

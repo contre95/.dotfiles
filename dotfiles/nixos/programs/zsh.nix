@@ -1,7 +1,9 @@
-{ config, pkgs, ... }:
-let
-  whichMachine = builtins.getEnv "WHICH_MACHINE";
-in
+{
+  config,
+  pkgs,
+  hostname,
+  ...
+}:
 {
   home.packages = with pkgs; [
     zsh-autosuggestions
@@ -24,11 +26,11 @@ in
       bindkey "^[[1;5D" backward-word
       zstyle ":completion:*" matcher-list "" "m:{a-zA-Z}={A-Za-z}" "r:|[._-]=* r:|=*" "l:|=* r:|=*"
       PS1="%F{#008000}%B%n@%m%b %1~:%f"
-      ${pkgs.lib.optionalString (whichMachine == "macbook") ''
+      export SSH_AUTH_SOCK="$(${config.programs.gpg.package}/bin/gpgconf --list-dirs agent-ssh-socket)"
+      ${pkgs.lib.optionalString (hostname == "macbook") ''
         source <(fzf --zsh)
         eval $(ocm handler init)'
         export GPG_TTY=$(tty)
-        export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
         gpgconf --launch gpg-agent
       ''}
     '';
@@ -43,10 +45,9 @@ in
     };
 
     shellAliases = {
-      rebuild = "sudo WHICH_MACHINE=$(hostname) nixos-rebuild switch";
-      rebuild-boot = "sudo WHICH_MACHINE=$(hostname) nixos-rebuild boot";
+      rebuild = "sudo nixos-rebuild switch --flake /home/canus/#${hostname}";
+      update = "pushd $MY_FOLDER && git pull && sudo nixos-rebuild switch --flake /home/canus/#${hostname}";
       gparted = "sudo --preserve-env gparted";
-      update = "pushd $MY_FOLDER && git pull && sudo nix-channel --update && sudo WHICH_MACHINE=$(hostname) nixos-rebuild switch && popd";
       iptr = "sudo iptables -t nat -L -v -n";
       gc = "sudo nix-store --gc";
       no = "nix store optimise";

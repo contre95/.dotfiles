@@ -13,6 +13,7 @@ require("lazy").setup({
   },
   -- Configure any other settings here. See the documentation for more details.
   -- colorscheme that will be used when installing plugins.
+  lockfile = "~/.config/lazy-lock.json", -- I'm moving this cause I'm symlinking the ~/.config/nvim with home-manager. This results in the file being read-only 
   install = { colorscheme = { "kanagawa" } },
   -- automatically check for plugin updates
   checker = { enabled = false },

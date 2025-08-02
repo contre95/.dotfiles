@@ -1,7 +1,9 @@
-{ pkgs, lib, ... }:
-let
-  whichMachine = builtins.getEnv "WHICH_MACHINE";
-in
+{
+  pkgs,
+  lib,
+  hostname,
+  ...
+}:
 {
   environment.systemPackages = with pkgs; [
     # blueman
@@ -9,7 +11,17 @@ in
     bluez5-experimental
   ];
   hardware.bluetooth.enable = true;
-  hardware.bluetooth.powerOnBoot = if lib.elem whichMachine [ "desktop" "notebook" ] then true else false;
+  hardware.bluetooth.powerOnBoot =
+    if
+      lib.elem hostname [
+        "desktop"
+        "notebook"
+        "tablet"
+      ]
+    then
+      true
+    else
+      false;
   hardware.bluetooth.settings = {
     General = {
       # # make Xbox Series X controller work

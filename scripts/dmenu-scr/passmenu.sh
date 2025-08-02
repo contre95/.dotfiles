@@ -13,7 +13,7 @@ password_files=( "$prefix"/**/*.gpg )
 password_files=( "${password_files[@]#"$prefix"/}" )
 password_files=( "${password_files[@]%.gpg}" )
 
-password=$(printf '%s\n' "${password_files[@]}" | rofi -dmenu -theme $HOME/.config/rofi/dmenu.style.rasi  -i -p "Pass  : " "$@" -sb "#34495E" -fn "JetBrainsMono Nerd Font")
+password=$(printf '%s\n' "${password_files[@]}" | rofi -dmenu -theme $HOME/.config/rofi/dmenu.style.rasi  -i -p "Pass  " "$@" -sb "#34495E" -fn "JetBrainsMono Nerd Font")
 
 [[ -n $password ]] || exit
 

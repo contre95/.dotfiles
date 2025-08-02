@@ -51,7 +51,7 @@ local handlers = {
 }
 
 vim.diagnostic.config({
-  virtual_text = true,
+	virtual_text = true,
 	float = {
 		border = "rounded",
 	},
@@ -126,7 +126,7 @@ return {
 				filetypes = { "shell", "bash", "zsh", "sh" },
 			})
 
-			-- Gopls setup
+            -- Gopls setup
 			lspconfig.gopls.setup({
 				capabilities = capabilities,
 				handlers = handlers,

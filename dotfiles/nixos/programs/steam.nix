@@ -1,30 +1,36 @@
-{ lib, pkgs, ... }:
-let
-  whichMachine = builtins.getEnv "WHICH_MACHINE";
-in
+{
+  lib,
+  hostname,
+  pkgs,
+  ...
+}:
 {
   config =
     if
-      lib.elem whichMachine [
+      lib.elem hostname [
         "desktop"
         "notebook"
+        "tablet"
       ]
     then
       {
         environment.systemPackages = with pkgs; [
-          r2modman
-          mangohud
-          gamemode
           file
+          gamemode
+          goverlay
+          mangohud
+          protontricks
+          r2modman
+          protonup-qt
         ];
         programs.steam = {
           enable = true;
-          remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
-          dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
+          remotePlay.openFirewall = true;
+          dedicatedServer.openFirewall = true;
+          localNetworkGameTransfers.openFirewall = true;
           gamescopeSession.enable = true;
           extraCompatPackages = with pkgs; [
-            # proton-ge-bin
-            # lutris
+            proton-ge-bin
           ];
         };
       }

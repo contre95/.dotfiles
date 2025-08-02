@@ -16,6 +16,7 @@
       "custom/mic",
     ],
     "modules-right": [
+      // "custom/mouse",
       "custom/hypr",
       "custom/recorder",
       "wallpaper",
@@ -74,6 +75,13 @@
       "format": "<span color='#b4befe'></span> {}",
       "exec": "curl ifconfig.io",
       "on-click": "curl ifconfig.io | wl-copy",
+    },
+    "custom/mouse": {
+      "format": "<span color='#a2d2ff'>󰍽 󰌚</span> ",
+      "return-type": "json",
+      "on-click": "lan-mouse --daemon",
+      "on-click-right": "pkill -9 lan-mouse",
+      "interval": 1,
     },
     "custom/recorder": {
       "format": "<span color='#FF0000'>󰑋</span> Rec.",

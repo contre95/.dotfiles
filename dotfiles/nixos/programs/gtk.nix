@@ -8,16 +8,14 @@
   home.sessionVariables = {
     QT_QPA_PLATFORM = "wayland;xcb";
     LIBVA_DRIVER_NAME = "nvidia";
+    MOZ_ENABLE_WAYLAND = 1;
     XMODIFIERS = "@im=ibus";
     MOZ_DBUS_REMOTE = "1";
-    GTK_IM_MODULE = "ibus";
-    QT_IM_MODULE = "ibus";
     QT_SCALE_FACTOR = "1";
     GTK_USE_PORTAL = "1";
     QT_AUTO_SCREEN_SCALE_FACTOR = 1;
-    # QT_QPA_PLATFORMTHEME = "qt5ct";
+    QT_QUICK_CONTROLS_STYLE="org.kde.breeze";
     XCURSOR_SIZE = "16";
-    # QT_WAYLAND_DISABLE_WINDOWDECORATION = "1";
   };
 
   home.pointerCursor = {
@@ -42,7 +40,7 @@
     };
 
     cursorTheme = {
-      name = "macOS";
+      name = "breeze_cursors";
       size = 24;
     };
 
@@ -62,6 +60,7 @@
     gtk-toolbar-icon-size = "GTK_ICON_SIZE_LARGE_TOOLBAR";
     gtk-button-images = 0;
     gtk-menu-images = 0;
+    QT_QPA_PLATFORMTHEME = "qt5ct";
     gtk-enable-event-sounds = 1;
     gtk-enable-input-feedback-sounds = 0;
     gtk-xft-antialias = 1;
@@ -92,7 +91,8 @@
     gtk-sound-theme-name = "ocean";
     gtk-xft-dpi = 98304;
   };
-  dconf.settings."org/gnome/desktop/interface" = {
-    color-scheme = "prefer-dark";
+  dconf.settings."org.maliit.keyboard.maliit" = {
+    key-press-haptic-feedback = true;
+    theme = "Sweet";
   };
 }

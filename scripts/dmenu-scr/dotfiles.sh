@@ -21,7 +21,7 @@ case $var in
   choice="$MY_FOLDER/dotfiles/waybar/style.css"
   ;;
 'nixos')
-  choice="$MY_FOLDER/dotfiles/nixos/configuration.nix"
+  choice="$MY_FOLDER/flake.nix"
   ;;
 'scripts')
   choice=$SCR_PATH/$(find $SCR_PATH -type f | sed "s|$SCR_PATH/||" | rofi -dmenu -theme $MY_FOLDER/dotfiles/rofi/dmenu.style.rasi -i -p "Scripts" -sb "#40444B" -fn "JetBrainsMono Nerd Font")

@@ -1,24 +1,30 @@
-{ pkgs, ... }:
-let
-  whichMachine = builtins.getEnv "WHICH_MACHINE";
-  unstable = import <nixos-unstable> {
-    config = {
-      allowUnfree = true;
-    };
-  };
-in
+{ pkgs, unstable, ... }:
 {
-  # Enable Graphics (Hyprland needs to be enable at a systems level)
+
+  services.libinput.enable = true;
+
   environment.systemPackages = with pkgs; [
+    xorg.libxcb
     zenity
+    lm_sensors
+    unstable.iio-sensor-proxy
+    unstable.iio-hyprland
     gammastep
     dunst
+    unstable.wtype
     unstable.swww
+    unstable.hyprpicker
+    unstable.grim
+    unstable.slurp
+    unstable.grimblast
     wofi
     rofi-wayland
     wdisplays
+    unstable.overskride
     unstable.wayland-scanner
-    # inputs.swww.packages.${pkgs.system}.swww
+    unstable.nwg-drawer
+    unstable.clickclack
+    unstable.wvkbd
     unstable.hyprpaper
     hdrop
     unstable.hyprshade
@@ -27,6 +33,7 @@ in
     unstable.wayland-protocols
     # unstable.hyprgui
     unstable.inotify-tools # sudo inotifywait -m -r /path/to/disk/mountpoint
+    unstable.hyprlandPlugins.hyprgrass
     unstable.hyprcursor
     unstable.xcur2png
     unstable.v4l-utils
@@ -57,6 +64,8 @@ in
     CLUTTER_BACKEND = "wayland";
     __GLX_VENDOR_LIBRARY_NAME = "nvidia";
     XDG_CURRENT_DESKTOP = "Hyprland";
+    QT_IM_MODULE = "ibus";
+    GTK_IM_MODULE = "ibus";
     XDG_SESSION_DESKTOP = "Hyprland";
     XDG_SESSION_TYPE = "wayland";
     NIXOS_XDG_OPEN_USE_PORTAL = "1";
@@ -68,9 +77,9 @@ in
   };
 
   hardware.graphics.enable = true;
-  programs.hyprland = with pkgs;{
+  programs.hyprland = {
     enable = true;
-    package = if whichMachine == "desktop" then unstable.hyprland else hyprland;
+    package = unstable.hyprland;
     portalPackage = unstable.xdg-desktop-portal-hyprland;
     withUWSM = true;
     xwayland.enable = true;

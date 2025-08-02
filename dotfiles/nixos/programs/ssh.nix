@@ -1,25 +1,22 @@
 {
   lib,
-  config,
   pkgs,
+  hostname,
   ...
 }:
 let
-  whichMachine = builtins.getEnv "WHICH_MACHINE";
   socketDir = "/run/user/1000/gnupg";
 in
 {
   config =
     if
-      lib.elem whichMachine [
+      lib.elem hostname [
         "notebook"
+        "tablet"
         "desktop"
       ]
     then
       {
-        home.sessionVariablesExtra = ''
-          export SSH_AUTH_SOCK="$(${config.programs.gpg.package}/bin/gpgconf --list-dirs agent-ssh-socket)"
-        '';
         # Packager related to ssh
         home.packages = with pkgs; [
           sshfs
@@ -28,6 +25,20 @@ in
         programs.ssh = {
           enable = true;
           matchBlocks = {
+            "tablet.home" = {
+              user = "contre";
+              forwardAgent = true;
+              remoteForwards = [
+                {
+                  bind.address = "${socketDir}/S.gpg-agent";
+                  host.address = "${socketDir}/S.gpg-agent.extra";
+                }
+                {
+                  bind.address = "${socketDir}/S.gpg-agent.ssh";
+                  host.address = "${socketDir}/S.gpg-agent.ssh";
+                }
+              ];
+            };
             "notebook.home" = {
               user = "contre";
               forwardAgent = true;
@@ -83,4 +94,3 @@ in
     else
       { };
 }
-

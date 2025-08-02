@@ -1,11 +1,12 @@
-{ pkgs, ... }:
+{
+  pkgs,
+  inputs,
+  unstable,
+  hostname,
+  ...
+}:
+
 let
-  whichMachine = builtins.getEnv "WHICH_MACHINE";
-  unstable = import <nixos-unstable> {
-    config = {
-      allowUnfree = true;
-    };
-  };
   commonPkgs = with pkgs; [
     unstable.rockbox-utility
     fd
@@ -26,7 +27,7 @@ let
     unzip
     ffmpeg
     mpg123
-    convmv # convmv -r -f utf-8 -t utf-8 --nfc --notest your_music_folder/ ;) 
+    convmv
     polkit
     smassh
     swappy
@@ -44,7 +45,6 @@ let
     alacritty
     bandwhich
     coreutils
-    grimblast
     util-linux
     xorg.xhost
     easyeffects
@@ -54,59 +54,68 @@ let
     android-tools
     yubikey-manager
     alacritty-theme
-    unstable.hyprpicker
-    grim # For screenshots
-    slurp # For screenshots
     tmuxPlugins.tmux-thumbs
-    stow # To create symlinks
-    zbar # For scanning QR codes
-    ripgrep # Like grep but in Rust
-    zoxide # Like autojump but in Rust
+    stow
+    zbar
+    ripgrep
+    zoxide
   ];
 in
 {
+
   users.users.contre.isNormalUser = true;
   home-manager.useGlobalPkgs = true;
+  home-manager.extraSpecialArgs = { inherit hostname unstable; };
 
-  # System programs
   programs.nano.enable = false;
   imports = [
     ../system/gnupg.nix
     ../system/openssh.nix
+    ../system/touch.nix
+    ../system/wg-vpn.nix
     ../system/syncthings.nix
     ../programs/steam.nix
     ../programs/ai.nix
-  ] ++ (if whichMachine == "notebook" then [ ../system/wgvpn.nix ] else [ ]);
+  ];
 
-  # Home manager
   home-manager.users.contre =
-    { pkgs, config, ... }:
+    {
+      pkgs,
+      config,
+      unstable,
+      ...
+    }:
     {
       wayland.windowManager.hyprland.systemd.enable = false;
+      wayland.windowManager.hyprland = {
+        plugins = [
+          inputs.hyprgrass.packages.${pkgs.system}.default
+
+          # optional integration with pulse-audio, see examples/hyprgrass-pulse/README.md
+          inputs.hyprgrass.packages.${pkgs.system}.hyprgrass-pulse
+        ];
+      };
       programs.home-manager.enable = true;
       home.username = "contre";
       home.homeDirectory = "/home/contre";
       home.sessionVariables = {
         MY_FOLDER = "/home/canus";
-        # LD_LIBRARY_PATH = "${pkgs.stdenv.cc.cc.lib}/lib";
         SCR_PATH = "$MY_FOLDER/scripts";
         PATH = "$PATH:$MY_FOLDER/scripts/bin-scr:/Users/lucas.contreras/.nix-profile/bin:/run/current-system/sw/bin:/nix/var/nix/profiles/default/bin:$HOME/.pyenv/bin:/go/bin/:$HOME/.cargo/bin";
         EDITOR = "nvim";
       };
+
       home.packages =
-        if "${whichMachine}" == "desktop" then
+        if "${hostname}" == "desktop" then
           commonPkgs
           ++ [
             pkgs.lingot
             pkgs.picard
-            unstable.puddletag
-            # pkgs.kid3
             pkgs.scrcpy
             pkgs.blender
             unstable.telegram-desktop
-            unstable.simplex-chat-desktop
           ]
-        else if "${whichMachine}" == "notebook" then
+        else if "${hostname}" == "notebook" then
           commonPkgs
           ++ [
             pkgs.slack
@@ -115,12 +124,26 @@ in
             pkgs.blender
             pkgs.spotify
             pkgs.telegram-desktop
-            unstable.simplex-chat-desktop
           ]
-        else if "${whichMachine}" == "server" then
-          commonPkgs ++ [ pkgs.picard pkgs.beets ]
+        else if "${hostname}" == "tablet" then
+          commonPkgs
+          ++ [
+            pkgs.krita
+            pkgs.picard
+            pkgs.slack
+            pkgs.beets
+            pkgs.lingot
+            pkgs.spotify
+            unstable.telegram-desktop
+          ]
+        else if "${hostname}" == "server" then
+          commonPkgs
+          ++ [
+            pkgs.picard
+            pkgs.beets
+          ]
         else
-          throw "Unknown OS";
+          commonPkgs ++ [ ];
 
       imports = [
         ../programs/git.nix
@@ -136,74 +159,11 @@ in
         ../programs/librewolf.nix
         ../programs/devtools.nix
       ];
-      home.extraOutputsToInstall = [ "share/tmux-plugins" ];
-      home.file = {
-        librewolf = {
-          target = ".librewolf/default/chrome";
-          source = pkgs.fetchzip {
-            url = "https://github.com/datguypiko/Firefox-Mod-Blur/archive/refs/heads/master.zip";
-            hash = "sha256-eO0N96JjpmcQhhofDQ5zLA0Mz8/G/Uzh6/i4Tq59uUw=";
-            # stripRoot = false;
-          };
-        };
-        neovim = {
-          recursive = true;
-          target = ".config/nvim";
-          source = config.lib.file.mkOutOfStoreSymlink /home/canus/dotfiles/nvim;
-        };
-        rofi = {
-          recursive = true;
-          target = ".config/rofi";
-          source = /home/canus/dotfiles/rofi;
-        };
-        tmux = {
-          recursive = false;
-          target = "./.tmux.conf";
-          source = config.lib.file.mkOutOfStoreSymlink /home/canus/dotfiles/tmux/.tmux.conf;
-        };
-        wireplumber = {
-          recursive = true;
-          target = ".config/wireplumber";
-          source = /home/canus/dotfiles/wireplumber;
-        };
-        waybar = {
-          recursive = true;
-          target = ".config/waybar";
-          source = config.lib.file.mkOutOfStoreSymlink /home/canus/dotfiles/waybar;
-        };
-        hyprland = {
-          recursive = true;
-          target = ".config/hypr";
-          source = config.lib.file.mkOutOfStoreSymlink /home/canus/dotfiles/hypr;
-        };
-        keyboard = {
-          recursive = true;
-          target = ".config/xkb";
-          source = /home/canus/dotfiles/keybaord;
-        };
-        dunst = {
-          recursive = true;
-          target = ".config/dunst";
-          source = /home/canus/dotfiles/dunst;
-        };
-        p10k = {
-          recursive = false;
-          target = ".config/.p10k.zsh";
-          source = /home/canus/dotfiles/zsh/.p10k.zsh;
-        };
-        alacritty = {
-          # recursive = true;
-          enable = true;
-          target = ".config/alacritty";
-          source = config.lib.file.mkOutOfStoreSymlink /home/canus/dotfiles/alacritty;
-        };
-        ghostty = {
-          # recursive = true;
-          enable = true;
-          target = ".config/ghostty";
-          source = config.lib.file.mkOutOfStoreSymlink /home/canus/dotfiles/ghostty;
-        };
-      };
+
+      # home.extraOutputsToInstall = [ "share/tmux-plugins" ];
+
+      home.file = import ./dotfiles.nix { inherit config pkgs; };
+
       home.stateVersion = "25.05";
     };
 }

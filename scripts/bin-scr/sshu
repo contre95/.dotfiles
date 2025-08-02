@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Define the hosts
-hosts=("desktop" "notebook" "server")
+hosts=("desktop" "notebook" "server" "tablet")
 
 # Define the command to run
 command="pushd \$MY_FOLDER && git pull && update"

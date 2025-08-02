@@ -183,7 +183,7 @@ in
     pkgs.cargo
     pkgs.python3
     pkgs.nodejs_22
-    pkgs.terraform
+    # pkgs.terraform
     pkgs.terraform-docs
     pkgs.terragrunt
 
