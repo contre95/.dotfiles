@@ -67,6 +67,7 @@
     ruff
     black
     pyright
+    unstable.uv
     unstable.python3
     unstable.python311Packages.pip
     # python311Packages.numpy
