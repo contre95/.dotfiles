@@ -10,10 +10,10 @@ typeset -g POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(I
 	# =========================[ Line #1 ]=========================
     time
 	status          # exit code of the last command
-	virtualenv      # python virtual environment (https://docs.python.org/3/library/venv.html)
 	goenv           # go environment (https://github.com/syndbg/goenv)
     direnv
     luaenv
+	virtualenv      # python virtual environment (https://docs.python.org/3/library/venv.html)
     pyenv           # python environment (https://github.com/pyenv/pyenv)
 	luaenv          # lua version from luaenv (https://github.com/cehoffman/luaenv)
 	terraform       # terraform workspace (https://www.terraform.io)
@@ -31,6 +31,7 @@ POWERLEVEL9K_AWS_SHOW_ON_COMMAND='aws|awless|terraform|pulumi|'
 POWERLEVEL9K_GCLOUD_SHOW_ON_COMMAND='gcloud|gcs'
 POWERLEVEL9K_PYENV_SHOW_ON_COMMAND='python'
 POWERLEVEL9K_KUBECONTEXT_SHOW_ON_COMMAND='kubectl'
+POWERLEVEL9K_VIRTUALENV_FOREGROUND="yellow"
 POWERLEVEL9K_NIX_SHELL_CONTENT_EXPANSION=
 POWERLEVEL9K_NIX_SHELL_FOREGROUND='blue'
 POWERLEVEL9K_PHPENV_SHOW_SYSTEM=true
@@ -129,7 +130,7 @@ POWERLEVEL9K_STATUS_BACKGROUND="clear"
 POWERLEVEL9K_CARRIAGE_RETURN_ICON="\uf071"
 
 POWERLEVEL9K_TIME_FORMAT="%D{%H:%M}"
-POWERLEVEL9K_TIME_FOREGROUND="cyan"
+POWERLEVEL9K_TIME_FOREGROUND="white"
 
 POWERLEVEL9K_VCS_CLEAN_BACKGROUND='clear'
 POWERLEVEL9K_VCS_CLEAN_FOREGROUND='green'
