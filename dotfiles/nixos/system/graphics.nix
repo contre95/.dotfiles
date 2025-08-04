@@ -55,7 +55,7 @@
     MOZ_ENABLE_WAYLAND = "1";
     MOZ_USE_XINPUT2 = "1";
     GDK_SCALE = "1";
-    GBM_BACKEND = "nvidia-drm";
+    # GBM_BACKEND = "nvidia-drm";
     TERMINAL = "alacritty";
     SDL_VIDEODRIVER = "wayland";
     _JAVA_AWT_WM_NONREPARENTING = "1";

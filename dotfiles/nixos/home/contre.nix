@@ -86,15 +86,15 @@ in
       ...
     }:
     {
-      wayland.windowManager.hyprland.systemd.enable = false;
-      wayland.windowManager.hyprland = {
-        plugins = [
-          inputs.hyprgrass.packages.${pkgs.system}.default
-
-          # optional integration with pulse-audio, see examples/hyprgrass-pulse/README.md
-          inputs.hyprgrass.packages.${pkgs.system}.hyprgrass-pulse
-        ];
-      };
+      wayland.windowManager.hyprland.systemd.enable = true;
+      # wayland.windowManager.hyprland = {
+      #   plugins = [
+      #     inputs.hyprgrass.packages.${pkgs.system}.default
+      #
+      #     # optional integration with pulse-audio, see examples/hyprgrass-pulse/README.md
+      #     inputs.hyprgrass.packages.${pkgs.system}.hyprgrass-pulse
+      #   ];
+      # };
       programs.home-manager.enable = true;
       home.username = "contre";
       home.homeDirectory = "/home/contre";
