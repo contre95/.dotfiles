@@ -30,8 +30,8 @@
       "backlight",
       "custom/apps",
       "custom/kbd",
-      "custom/hypr",
       "custom/wireguard",
+      "custom/hypr",
       "clock",
       "custom/logout",
     ],
@@ -182,6 +182,7 @@
         "󰁹"
       ],
       "format-time": "{H}h {M}min",
+      "on-click" :"asusctl -o",
       "tooltip": true,
       "tooltip-format": "{timeTo} {power}w",
     },

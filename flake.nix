@@ -110,7 +110,7 @@
                 environment.variables.MYENV = hostname;
                 environment.variables.WHICH_MACHINE = hostname;
               }
-              ./dotfiles/nixos/machines/${hostname}-hardware.nix
+              ./dotfiles/nixos/machines/${hostname}/hardware.nix
             ];
         };
 
@@ -119,13 +119,16 @@
       nixosConfigurations = {
         desktop = mkSystem {
           hostname = "desktop";
-          extraModules = [ ./dotfiles/nixos/machines/desktop.nix ];
+          extraModules = [
+            ./dotfiles/nixos/machines/desktop/default.nix
+            ./dotfiles/nixos/system/wg-vpn.nix
+          ];
         };
 
         notebook = mkSystem {
           hostname = "notebook";
           extraModules = [
-            ./dotfiles/nixos/machines/notebook.nix
+            ./dotfiles/nixos/machines/notebook/default.nix
             ./dotfiles/nixos/system/wg-vpn.nix
           ];
         };
@@ -133,14 +136,14 @@
         tablet = mkSystem {
           hostname = "tablet";
           extraModules = [
-            ./dotfiles/nixos/machines/tablet.nix
+            ./dotfiles/nixos/machines/tablet/default.nix
             ./dotfiles/nixos/system/wg-vpn.nix
           ];
         };
 
         server = mkSystem {
           hostname = "server";
-          extraModules = [ ./dotfiles/nixos/machines/server.nix ];
+          extraModules = [ ./dotfiles/nixos/machines/server/default.nix ];
         };
 
         # macbook = mkSystem {
