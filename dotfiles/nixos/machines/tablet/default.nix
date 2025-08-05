@@ -35,116 +35,8 @@
   services.asusd = {
     enable = true;
     enableUserService = false;
-    # TODO: Cleaner
-    # fanCurvesConfig.source = ./fanCurvesConfig.text;
-    # asusdConfig.source = ./asusdConfig.text;
-    fanCurvesConfig.text = ''
-      (
-          profiles: (
-              balanced: [
-                  (
-                      fan: CPU,
-                      pwm: (2, 22, 30, 43, 56, 68, 89, 102),
-                      temp: (48, 53, 57, 60, 63, 65, 70, 76),
-                      enabled: true,
-                  ),
-                  (
-                      fan: GPU,
-                      pwm: (2, 22, 33, 45, 58, 71, 94, 107),
-                      temp: (48, 53, 57, 60, 63, 65, 70, 76),
-                      enabled: false,
-                  ),
-              ],
-              performance: [
-                  (
-                      fan: CPU,
-                      pwm: (26, 51, 89, 140, 166, 191, 217, 242),
-                      temp: (30, 40, 50, 60, 70, 80, 90, 100),
-                      enabled: true,
-                  ),
-                  (
-                      fan: GPU,
-                      pwm: (26, 51, 89, 140, 166, 191, 217, 242),
-                      temp: (30, 40, 50, 60, 70, 80, 90, 100),
-                      enabled: true,
-                  ),
-              ],
-              quiet: [
-                  (
-                      fan: CPU,
-                      pwm: (0, 13, 26, 51, 89, 140, 191, 217),
-                      temp: (30, 40, 50, 60, 70, 80, 90, 100),
-                      enabled: true,
-                  ),
-                  (
-                      fan: GPU,
-                      pwm: (0, 13, 26, 51, 89, 140, 191, 217),
-                      temp: (30, 40, 50, 60, 70, 80, 90, 100),
-                      enabled: true,
-                  ),
-              ],
-              custom: [],
-          ),
-      )
-    '';
-    asusdConfig.text = ''
-      (
-          charge_control_end_threshold: 83,
-          disable_nvidia_powerd_on_battery: true,
-          ac_command: "",
-          bat_command: "",
-          platform_profile_linked_epp: true,
-          platform_profile_on_battery: Quiet,
-          change_platform_profile_on_battery: false,
-          platform_profile_on_ac: Quiet,
-          change_platform_profile_on_ac: true,
-          profile_quiet_epp: BalancePower, // Change to a less aggressive EPP
-          profile_balanced_epp: BalancePower,
-          profile_custom_epp: Performance,
-          profile_performance_epp: Performance,
-          ac_profile_tunings: {
-              Quiet: (
-                  enabled: true,
-                  group: {
-                      PptPl1Spl: 55,
-                      PptPl2Sppt: 65,
-                      PptPl3Fppt: 65,
-                  },
-              ),
-              Performance: (
-                  enabled: false,
-                  group: {},
-              ),
-              Balanced: (
-                  enabled: false,
-                  group: {},
-              ),
-          },
-          dc_profile_tunings: {
-              Quiet: (
-                  enabled: true,
-                  group: {
-                      PptPl1Spl: 55,
-                      PptPl2Sppt: 65,
-                      PptPl3Fppt: 65,
-                  },
-              ),
-              Performance: (
-                  enabled: false,
-                  group: {},
-              ),
-              Balanced: (
-                  enabled: false,
-                  group: {},
-              ),
-          },
-          armoury_settings: {
-              NvDynamicBoost: 25,
-              PanelOverdrive: 1,
-              NvTempTarget: 87,
-          },
-      )
-    '';
+    fanCurvesConfig.source = ./fanCurvesConfig.text;
+    asusdConfig.source = ./asusdConfig.text;
   };
 
   boot = {
@@ -209,4 +101,3 @@
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 }
-
