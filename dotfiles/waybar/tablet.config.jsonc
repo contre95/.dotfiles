@@ -244,17 +244,17 @@
       "on-scroll-up": "playerctl next",
       "on-scroll-down": "playerctl previous",
     },
-    "disk": {
-      "interval": 30,
-      "format": "<span color='#b4befe'> </span> {free}",
-      "path": "/",
-    },
     "custom/amd_gpu": {
       "exec": "cat /sys/class/hwmon/hwmon0/device/gpu_busy_percent 2>/dev/null || echo '0'",
       "format": "<span color='#FF7F00'> </span> {}%",
       "return-type": "",
       "interval": 2,
       "tooltip-format": "AMD GPU Usage",
+    },
+    "disk": {
+      "interval": 30,
+      "format": "<span color='#b4befe'> </span> {free}",
+      "path": "/",
     },
     "cpu": {
       "format": "<span color='#b4befe'> </span> {usage}%",
