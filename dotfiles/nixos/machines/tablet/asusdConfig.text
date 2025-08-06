@@ -22,11 +22,11 @@
             },
         ),
         Performance: (
-            enabled: false,
+            enabled: true,
             group: {},
         ),
         Balanced: (
-            enabled: false,
+            enabled: true,
             group: {},
         ),
     },
@@ -40,11 +40,11 @@
             },
         ),
         Performance: (
-            enabled: false,
+            enabled: true,
             group: {},
         ),
         Balanced: (
-            enabled: false,
+            enabled: true,
             group: {},
         ),
     },

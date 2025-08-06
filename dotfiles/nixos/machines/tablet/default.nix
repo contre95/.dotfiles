@@ -38,6 +38,7 @@
     fanCurvesConfig.source = ./fanCurvesConfig.text;
     asusdConfig.source = ./asusdConfig.text;
   };
+  services.tlp.enable = false;
 
   boot = {
     kernelPackages = pkgs.linuxPackages_latest;

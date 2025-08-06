@@ -11,7 +11,7 @@
                 fan: GPU,
                 pwm: (2, 22, 33, 45, 58, 71, 94, 107),
                 temp: (48, 53, 57, 60, 63, 65, 70, 76),
-                enabled: false,
+                enabled: true,
             ),
         ],
         performance: [
