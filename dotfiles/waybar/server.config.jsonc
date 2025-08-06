@@ -7,35 +7,82 @@
       "hyprland/workspaces"
     ],
     "modules-center": [
-      "bluetooth",
+      "custom/ip",
       // "network",
+      "bluetooth",
       "custom/recorder",
       "custom/wall",
-      // "disk",
-      "custom/ip",
-      // "custom/audio",
       // "memory",
-      // "cpu",
+      // "disk",
+      "cpu",
+      // "custom/amd_gpu",
+      // "temperature",
+      // "custom/wireguard",
+      // "power-profiles-daemon",
+      // "custom/power_profile",
+      // "battery",
+      // "custom/btc",
       "wireplumber",
-      "battery",
-      "custom/btc",
-      "custom/notification",
       "custom/mic",
+      "custom/notification",
     ],
     "modules-right": [
+      "backlight/slider",
+      "backlight",
+      "custom/apps",
+      "custom/kbd",
       "custom/hypr",
-      "clock"
+      "clock",
+      "custom/logout",
     ],
     "backlight/slider": {
-      "min": 10,
+      "min": 5,
       "max": 100,
       "orientation": "horizontal",
       "device": "intel_backlight",
     },
+    "backlight": {
+      "device": "intel_backlight",
+      "format": "{icon}",
+      "format-icons": [
+        "🌑",
+        "🌒",
+        "🌓",
+        "🌔",
+        "🌕",
+        "🌞",
+        "☀️"
+      ],
+    },
+    // "custom/power_profile": {
+    //   //shows the current power profile and switches to next on click
+    //   // "exec": "asusctl profile -p | awk '/profile/ {print $NF}'",
+    //   "exec": "case $(asusctl profile -p | awk '/profile/ {print $NF}') in Performance) echo \"<span color='#f75959'></span>\";; Balanced) echo \"<span color='#f7b059'></span>\";; Quiet) echo \"<span color='#0AE7A0'></span>\";; *) echo '?';; esac",
+    //   "interval": 30,
+    //   "format": "{}",
+    //   "on-click": "asusctl profile -n; pkill -SIGRTMIN+8 waybar",
+    //   "signal": 8,
+    // },
     "custom/arch": {
-      "format": "  ",
+      "format": " ",
       "tooltip": false,
       "on-click": "pkill -9 waybar && waybar -c ~/.config/waybar/$MYENV.config.jsonc",
+    },
+    "custom/logout": {
+      "format": " <span color='#ff474a'>   </span>",
+      "tooltip": false,
+      "on-click": "pkill -u $USER",
+    },
+    "custom/apps": {
+      "format": " <span color='#BBBBBB'>  </span>",
+      "tooltip": false,
+      "on-click": "pkill nwg-drawer || nwg-drawer -wm hyprland -closebtn right -nocats -nofs -ovl",
+    },
+    "custom/kbd": {
+      "format": " <span color='#8094B4'>  </span>",
+      "tooltip": false,
+      "on-click": "pkill wvkbd-mobintl || wvkbd-mobintl -H 320 -L 320  -o | clickclack -V -f $MY_FOLDER/library/sounds/keyclick.wav",
+      // "tooltip": true,
     },
     "custom/hypr": {
       "format": " <span color='#00CDDE'>  </span>",
@@ -45,7 +92,7 @@
     },
     "hyprland/workspaces": {
       "persistent_workspaces": {
-        "DP-2": [
+        "eDP-1": [
           1,
           2,
           3,
@@ -53,31 +100,6 @@
           5
         ],
       },
-      //   "2": [
-      //     "eDP-1"
-      //   ],
-      //   "3": [
-      //     "eDP-1"
-      //   ],
-      //   "4": [
-      //     "eDP-1"
-      //   ],
-      //   "5": [
-      //     "eDP-1"
-      //   ],
-      //   "6": [
-      //     "HDMI-A-1"
-      //   ],
-      //   "7": [
-      //     "HDMI-A-1"
-      //   ],
-      //   "8": [
-      //     "HDMI-A-1"
-      //   ],
-      //   "9": [
-      //     "HDMI-A-1"
-      //   ]
-      // },
       "format": "{icon}",
       "format-icons": {
         "1": "1",
@@ -94,53 +116,73 @@
       "all-outputs": false,
     },
     "clock": {
-      "format": "<span color='#b4befe'> </span>{:%d/%m/%y | %H:%M}",
-      "on-click": "firefox https://calendar.google.com/",
+      "format": "<span color='#b4befe'>  </span>{:%d | %H:%M}",
+      "on-click": "firefox https://db.server.home/dashboard/#/nc/p882zgn6hihp2j3/mu7toxmd7aloo25/vwil1ibd8kzkimid",
     },
     "custom/ip": {
-      "format": "<span color='#b4befe'></span> {}",
+      "format": "<span color='#b4befe'>󰩟 {} </span>",
+      "tooltip-format": "{}",
       "exec": "curl ifconfig.io | cut -c -16",
       "on-click": "curl ifconfig.io | wl-copy",
     },
     "custom/recorder": {
-      "format": "<span color='#FF0000'>󰑋</span> Rec.",
+      "format": "<span color='#FF0000'>󰑋 </span> Rec.",
       "return-type": "json",
       "on-click": "pkill -SIGINT wf-recorder",
       "interval": 1,
       "exec": "echo '{\"class\": \"recording\"}'",
       "exec-if": "pgrep wf-recorder",
     },
-    "battery": {
-      "states": {
-        "warning": 30,
-        "critical": 15,
-      },
-      "format": "{icon} {capacity}%",
-      "format-charging": "<span color='#168ECA'>󰂄</span> {capacity}%",
-      "format-plugged": "<span color='#32CE42'>󰂄</span> {capacity}%",
-      "on-click": "zenity --question --text='Disable charge limit to 100% ?' --icon=battery  && echo $(zenity --password) | sudo -S tlp fullcharge",
-      "format-alt": "{icon} {time}",
-      "format-full": "󰁹 {capacity}%",
-      "format-icons": [
-        "󰁻",
-        "󰁿",
-        "󰂁"
-      ],
-    },
+    // "battery": {
+    //   //"interval": 5,
+    //   "align": 0,
+    //   "rotate": 0,
+    //   "full-at": 100,
+    //   "design-capacity": false,
+    //   "states": {
+    //     "good": 95,
+    //     "warning": 30,
+    //     "critical": 15,
+    //   },
+    //   "format": "{icon} {capacity}%",
+    //   "format-charging": "<span color='#F8D987'></span> {capacity}%",
+    //   "format-plugged": "󱘖 {capacity}%",
+    //   "format-alt-click": "click",
+    //   "format-full": "{icon} Full",
+    //   "format-alt": "{icon} {time}",
+    //   "format-icons": [
+    //     "󰂎",
+    //     "󰁺",
+    //     "󰁻",
+    //     "󰁼",
+    //     "󰁽",
+    //     "󰁾",
+    //     "󰁿",
+    //     "󰂀",
+    //     "󰂁",
+    //     "󰂂",
+    //     "󰁹"
+    //   ],
+    //   "format-time": "{H}h {M}min",
+    //   "on-click" :"asusctl -o",
+    //   "tooltip": true,
+    //   "tooltip-format": "{timeTo} {power}w",
+    // },
     "custom/audio": {
       "format": "<span color='#F8D987'></span> {}",
       "interval": 1,
-      "on-scroll-up": "wpctl set-volume @DEFAULT_SINK@ 0.02+",
       "on-click": "$SCR_PATH/audio-scr/shuffle-sink.sh",
-      "on-scroll-down": "wpctl set-volume @DEFAULT_SINK@ 0.02-",
-      // "on-click": "wpctl set-default $(pamixer --list-sinks | grep -v $(pamixer --get-default-sink | tail -n 1 | awk -F' ' '{print $2}' | tr -d '\"') | grep -v 'Sinks:' | shuf | head -n 1 | awk -F' ' '{print $2}' | tr -d '\"')",
+      "on-click-right": "hyprctl dispatch exec '[float;size 24% 35%;animation slide;move 39% 5%-50] pavucontrol'",
+      "on-scroll-up": "wpctl set-volume @DEFAULT_SINK@ 0.025+",
+      "on-scroll-down": "wpctl set-volume @DEFAULT_SINK@ 0.025-",
+      "on-click-middle": "hyprctl dispatch exec  '[float;size 24% 35%;animation slide;move 39% 5%-50] easyeffects'",
       "exec": "pamixer --get-default-sink | tail -n 1 | awk -F'\".+\" ' '{print $2}' | tr -d '\"'",
     },
     "custom/notification": {
       "on-click": "$SCR_PATH/notification-scr/notify-toggle-mute.sh",
       "exec": "$SCR_PATH/waybar-scr/notify-status.sh",
       "exec-if": "true",
-      "format": "{}",
+      "format": "  {} ",
       "tooltip": false,
       "signal": 1,
       "interval": 2,
@@ -153,12 +195,12 @@
       "on-scroll-up": "wpctl set-volume @DEFAULT_SOURCE@ 0.02+",
       "on-scroll-down": "wpctl set-volume @DEFAULT_SOURCE@ 0.02-",
       "tooltip": false,
+      "interval": 1,
       "signal": 1,
-      "interval": 2,
     },
     "wireplumber": {
-      "format": "{volume}% {icon}",
-      "format-muted": " -- <span color='#C57070'></span>",
+      "format": "<span color='#6D6D6D'>{icon}</span> {volume}% ",
+      "format-muted": "<span color='#C57070'> </span> -- ",
       "on-click": "pavucontrol",
       "scroll-step": 1,
       "max-volume": 100,
@@ -168,7 +210,7 @@
       "format-icons": [
         "",
         "",
-        ""
+        " "
       ],
     },
     "custom/btc": {
@@ -184,6 +226,13 @@
       "on-scroll-up": "playerctl next",
       "on-scroll-down": "playerctl previous",
     },
+    // "custom/amd_gpu": {
+    //   "exec": "cat /sys/class/hwmon/hwmon0/device/gpu_busy_percent 2>/dev/null || echo '0'",
+    //   "format": "<span color='#FF7F00'> </span> {}%",
+    //   "return-type": "",
+    //   "interval": 2,
+    //   "tooltip-format": "AMD GPU Usage",
+    // },
     "disk": {
       "interval": 30,
       "format": "<span color='#b4befe'> </span> {free}",
@@ -199,40 +248,39 @@
       "on-click": "htop",
       "interval": 2,
     },
-    "temperature": {
-      // "thermal-zone": 2,
-      "hwmon-path": "/sys/class/hwmon/hwmon1/temp7_input",
-      "critical-threshold": 90,
-      "format-critical": "{temperatureC}°C {icon}",
-      "format": "{temperatureC}°C {icon}",
-      "format-icons": [
-        "",
-        "",
-        ""
-      ],
-      "interval": 2,
-    },
+    // "temperature": {
+    //   // "thermal-zone": 2,
+    //   "hwmon-path": "/sys/class/hwmon/hwmon1/temp7_input",
+    //   "critical-threshold": 90,
+    //   "format-critical": "<span color='#FF0000'>{icon}</span> {temperatureC}°C",
+    //   "format": " {icon} {temperatureC}°C",
+    //   "format-icons": [
+    //     ""
+    //   ],
+    //   "interval": 1,
+    // },
     "hyprland/window": {
       "format": "{}",
       "separate-outputs": true,
     },
     "bluetooth": {
       "format": "<span color='#b4befe'></span> {status}",
-      "on-click": "bluetoothctl power on",
+      "on-click": "overskride",
       "on-click-right": "bluetoothctl power off",
       "format-disabled": "no",
-      "format-connected": "<span color='#b4befe'></span> {device_alias} <span color='#474D56'>{device_battery_percentage}%</span>",
+      "format-connected": "<span color='#b4befe'></span> {num_connections}",
       "tooltip-format": "{device_enumerate}",
-      "tooltip-format-enumerate-connected": "{device_address}",
+      "tooltip-format-enumerate-connected": " {device_alias} - 󰥈 {device_battery_percentage}% - {device_address}",
     },
-    "network": {
-      "interface": "enp89s0",
-      "format": "{ifname}",
-      "format-wifi": "<span color='#b4befe'>󰈀</span>{essid}",
-      "format-ethernet": "{ipaddr}/{cidr} ",
-      "on-click": "hyprctl dispatch exec '[float;size 24% 35%;animation slide; move 75%-20 60%-30] iwgtk'",
-      "format-disconnected": "<span color='#b4befe'>󰖪 </span>No Network",
-      "tooltip": true,
-    },
+    // "network": {
+    //   "interface": "wlan0",
+    //   "format-wifi": "<span color='#b4befe'> </span> {essid} <span color='#6D6D6D'>({signalStrength}%)</span>",
+    //   "format-ethernet": "{ipaddr}/{cidr} 󰈀 ",
+    //   "tooltip-format": "󰩟 {ipaddr}/{cidr}\n  {essid}\nFreq: {frequency}",
+    //   "on-click": "hyprctl dispatch exec '[float;size 35% 40%;animation slide; move 63% 5%-50] iwgtk'",
+    //   "format-disconnected": "<span color='#C57070'>󰖪 </span>No Network",
+    //   "tooltip": true,
+    // },
   },
 ]
+
