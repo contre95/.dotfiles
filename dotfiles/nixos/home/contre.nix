@@ -8,7 +8,6 @@
 
 let
   commonPkgs = with pkgs; [
-    unstable.rockbox-utility
     fd
     feh
     imv
@@ -16,31 +15,35 @@ let
     vlc
     gawk
     less
+    stow
     tmux
     tree
     wget
-    iotop
+    zbar
     gimp3
+    iotop
     p7zip
     rsync
     unrar
     unzip
+    convmv
     ffmpeg
     mpg123
-    convmv
+    picard
     polkit
     smassh
     swappy
     tessen
-    unstable.ghostty
+    zoxide
     clipman
     gettext
     gparted
-    pcmanfm
-    ntfy-sh
     kubectl
-    testdisk
+    ntfy-sh
+    pcmanfm
+    ripgrep
     cliphist
+    testdisk
     wl-kbptr
     alacritty
     bandwhich
@@ -52,13 +55,11 @@ let
     wf-recorder
     wl-clipboard
     android-tools
-    yubikey-manager
     alacritty-theme
+    yubikey-manager
+    unstable.ghostty
     tmuxPlugins.tmux-thumbs
-    stow
-    zbar
-    ripgrep
-    zoxide
+    unstable.rockbox-utility
   ];
 in
 {
@@ -110,7 +111,6 @@ in
           commonPkgs
           ++ [
             pkgs.lingot
-            pkgs.picard
             pkgs.scrcpy
             pkgs.blender
             unstable.telegram-desktop
@@ -129,7 +129,7 @@ in
           commonPkgs
           ++ [
             pkgs.krita
-            pkgs.picard
+            pkgs.koreader
             pkgs.slack
             pkgs.beets
             pkgs.lingot
@@ -139,7 +139,6 @@ in
         else if "${hostname}" == "server" then
           commonPkgs
           ++ [
-            pkgs.picard
             pkgs.beets
           ]
         else
