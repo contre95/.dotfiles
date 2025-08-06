@@ -1,4 +1,4 @@
-/mnt/HDD2/music/
+/mnt/HDD2/music
 ├── 10cc
 │   └── The Original Soundtrack
 │       └── 02 I’m Not in Love.flac
@@ -98,42 +98,6 @@
 │       ├── 04 Many Men (Wish Death).flac
 │       ├── 05 In Da Club.flac
 │       └── 11 P.I.M.P..flac
-├── 8-Bit Arcade
-│   └── The Ultimate Daft Punk
-│       ├── 01 - One More Time Computer Game Version.flac
-│       ├── 02 - Around the World Computer Game Version.flac
-│       ├── 03 - Get Lucky Computer Game Version.flac
-│       ├── 04 - Harder Better Faster Stronger Computer Game Version.flac
-│       ├── 05 - Lose Yourself to Dance Computer Game Version.flac
-│       ├── 06 - Instant Crush Computer Game Version.flac
-│       ├── 07 - Doin' It Right Computer Game Version.flac
-│       ├── 08 - Da Funk Computer Game Version.flac
-│       ├── 09 - Give Life Back to Music Computer Game Version.flac
-│       ├── 10 - Giorgio by Moroder Computer Game Version.flac
-│       ├── 11 - Contact Computer Game Version.flac
-│       ├── 12 - Digital Love Computer Game Version.flac
-│       ├── 13 - Something About Us Computer Game Version.flac
-│       ├── 14 - Robot Rock Computer Game Version.flac
-│       ├── 15 - Derezzed Computer Game Version.flac
-│       ├── 16 - Veridis Quo Computer Game Version.flac
-│       ├── 17 - Superheroes Computer Game Version.flac
-│       ├── 18 - The Son of Flynn Computer Game Version.flac
-│       ├── 19 - Voyager Computer Game Version.flac
-│       ├── 20 - Flynn Lives Computer Game Version.flac
-│       ├── 21 - Nightvision Computer Game Version.flac
-│       ├── 22 - Crescendolls Computer Game Version.flac
-│       ├── 23 - Recognizer Computer Game Version.flac
-│       ├── 24 - Aerodynamic Computer Game Version.flac
-│       ├── 25 - Human After All Computer Game Version.flac
-│       ├── 26 - Television Rules the Nation Computer Game Version.flac
-│       ├── 27 - The Grid Computer Game Version.flac
-│       ├── 28 - Encom, Pt. 2 Computer Game Version.flac
-│       ├── 29 - Outlands Computer Game Version.flac
-│       ├── 30 - Short Circuit Computer Game Version.flac
-│       ├── 31 - Tron Legacy (End Titles) Computer Game Version.flac
-│       ├── 32 - Da Funk Extended Computer Game Version.flac
-│       ├── 33 - Around the World Extended Computer Game Version.flac
-│       └── cover.jpg
 ├── 98º; Stevie Wonder
 │   └── Mulan (Bande originale française du Film)
 │       └── 14 True To Your Heart (From _Mulan__Soundtrack Version).mp3
@@ -2764,7 +2728,8 @@
 │       └── 08 The misty veil of May.mp3
 ├── Blackmill
 │   └── Miracle
-│       └── 07 Blackmill - The Drift.mp3
+│       ├── 7  The Drift.flac
+│       └── cover.jpg
 ├── Black Oak Arkansas
 │   └── Hot and Nasty_ The Best of Black Oak Arkansas
 │       └── 11 Jim Dandy.mp3
@@ -4993,6 +4958,28 @@
 ├── Culture Club curated by Blank & Jones
 │   └── So80s (SoEighties) Presents Culture Club
 │       └── 03 Miss Me Blind (extended version).mp3
+├── Cumbieton
+│   └── Tu Príncipe
+│       ├── 10 Nadie Sabe.flac
+│       ├── 11 Sentenciados.flac
+│       ├── 12 Rakatan.flac
+│       ├── 13 Ando Buscando.flac
+│       ├── 14 Bailalo.flac
+│       ├── 15 Dame Una Oportunidad.flac
+│       ├── 16 Tu Príncipe (Remix).flac
+│       ├── 17 La Luna y Las Estrellas (Remix).flac
+│       ├── 18 Doncella (Remix).flac
+│       ├── 19 El Cuchulum (Remix).flac
+│       ├── 1 La Luna y Las Estrellas.flac
+│       ├── 2 Tu Príncipe.flac
+│       ├── 3 El Cuchulum.flac
+│       ├── 4 Hasta Cuando.flac
+│       ├── 5 Doncella.flac
+│       ├── 6 Como Kema.flac
+│       ├── 7 No Kiero Verte.flac
+│       ├── 8 Sin Tu Amor.flac
+│       ├── 9 Como Le Gusta.flac
+│       └── cover.jpg
 ├── Curtis Mayfield
 │   ├── Move on Up (Single Edit)
 │   │   └── cover.jpg
@@ -10430,6 +10417,22 @@
 ├── Jakubi
 │   └── Couch Potato
 │       └── 01 Couch Potato.mp3
+├── Jambao
+│   └── Separece A Ti
+│       ├── 10 Ten Compación.flac
+│       ├── 11 Estoy A Punto De Olvidarte.flac
+│       ├── 12 Mi Muñeca.flac
+│       ├── 1 Se Parece Más A Ti.flac
+│       ├── 1 Se Parece Más A Ti.lrc
+│       ├── 2 Yo Quiero Besarte.flac
+│       ├── 3 Yo Sin Ti.flac
+│       ├── 4 Ya No Siento Nada Por Ti.flac
+│       ├── 5 Cara Dura.flac
+│       ├── 6 Hoy Puedes.flac
+│       ├── 7 Nena Dame Tu Amor.flac
+│       ├── 8 Lágrimas Que Hablan Por Mí.flac
+│       ├── 9 Más Nada.flac
+│       └── cover.jpg
 ├── Jamelão
 │   └── A voz do samba
 │       └── 09 Zaquia Jorge, a estrela do subúrbio, vedete de Madureira.flac
@@ -10855,7 +10858,8 @@
 │   ├── Control
 │   │   └── 01 Control.mp3
 │   └── Damon EP
-│       └── 02 Billinghurst.mp3
+│       ├── 1  Billinghurst.flac
+│       └── cover.jpg
 ├── Jerry Burnham
 │   └── Burnham Would
 │       └── 09 California Baby.mp3
@@ -16176,6 +16180,7 @@
 │   └── The Resistance
 │       ├── 01 Uprising.flac
 │       └── 02 Resistance.flac
+├── music
 ├── Musical Youth
 │   ├── Classic 80's
 │   │   └── 04 Pass The Dutchie.flac
@@ -16928,7 +16933,6 @@
 │   │   └── 04 Baby I Was Made for Loving You.mp3
 │   └── My Promise
 │       └── 01 Where Do You Go.mp3
-├── Non-Album
 ├── Nora en Pure
 │   ├── Come With Me
 │   │   └── 04 Come With Me (radio mix).mp3
@@ -20955,9 +20959,13 @@
 │       ├── 18 Juan Sin Tierra.flac
 │       └── 19 Wild Spain.flac
 ├── Skrillex
-│   └── Bangarang EP
-│       ├── 02 Bangarang (feat. Sirah).flac
-│       └── 03 Breakn' a Sweat.flac
+│   ├── Bangarang EP
+│   │   ├── 02 Bangarang (feat. Sirah).flac
+│   │   └── 03 Breakn' a Sweat.flac
+│   └── Scary Monsters and Nice Sprites (Deluxe Tour Edition)
+│       ├── 2  Scary Monsters and Nice Sprites.flac
+│       ├── 2  Scary Monsters and Nice Sprites.lrc
+│       └── cover.jpg
 ├── Sky Rey
 │   └── HUNGRY 4
 │       ├── 01 - GAZPACHO FREESTYLE.flac
@@ -23033,9 +23041,15 @@
 ├── The Glitch Mob
 │   ├── Drink the Sea
 │   │   ├── 01 Animus Vox.flac
-│   │   └── 08 Drive It Like You Stole It.flac
-│   └── We Can Make the World Stop
-│       └── 01 We Can Make the World Stop.flac
+│   │   ├── 08 Drive It Like You Stole It.flac
+│   │   ├── 1  Animus Vox.flac
+│   │   ├── 4  A Dream Within A Dream.flac
+│   │   └── cover.jpg
+│   ├── We Can Make the World Stop
+│   │   └── 01 We Can Make the World Stop.flac
+│   └── We Can Make the World Stop - EP
+│       ├── 1  We Can Make The World Stop.flac
+│       └── cover.jpg
 ├── The Grass Roots
 │   └── 20th Century Masters_ The Millennium Collection_ The Best of The Grass Roots
 │       └── 04 Midnight Confessions.flac
@@ -24476,7 +24490,8 @@
 │   │   ├── 12 Fortunate Son.flac
 │   │   ├── 12 Love Is Blindness.flac
 │   │   ├── 13 Alex Descends Into Hell For A Bottle Of Milk _ Korova 1.flac
-│   │   └── 14 Where Did It All Go Wrong_.flac
+│   │   ├── 14 Where Did It All Go Wrong_.flac
+│   │   └── cover.jpg
 │   ├── The Best Of 1980-1990 & B-Sides
 │   │   ├── 01 Pride (In The Name Of Love).flac
 │   │   ├── 01 The Three Sunrises.flac
@@ -24508,35 +24523,37 @@
 │   │   ├── 14 A Room At The Heartbreak Hotel (Edit).flac
 │   │   ├── 15 October.flac
 │   │   ├── 15 Trash, Trampoline And The Party Girl.flac
-│   │   ├── CD1
-│   │   │   └── 275 - U2 - New Year's Day.flac
 │   │   └── cover.jpg
-│   └── The Joshua Tree
-│       ├── 01 Luminous Times (Hold On To Love) (Remastered 2007).flac
-│       ├── 01 Where The Streets Have No Name (Remastered).flac
-│       ├── 02 I Still Haven't Found What I'm Looking For (Remastered 2007).flac
-│       ├── 02 Walk To The Water (Remastered 2007).flac
-│       ├── 03 Spanish Eyes (Remastered 2007).flac
-│       ├── 03 With Or Without You (Remastered 2007).flac
-│       ├── 04 Bullet The Blue Sky (Remastered 2007).flac
-│       ├── 04 Deep In The Heart (Remastered 2007).flac
-│       ├── 05 Running To Stand Still (Remastered 2007).flac
-│       ├── 05 Silver And Gold (Remastered 2007).flac
-│       ├── 06 Red Hill Mining Town (Remastered 2007).flac
-│       ├── 06 Sweetest Thing (Remastered 2007).flac
-│       ├── 07 In God's Country (Remastered 2007).flac
-│       ├── 07 Race Against Time (Remastered 2007).flac
-│       ├── 08 Trip Through Your Wires (Remastered 2007).flac
-│       ├── 08 Where The Streets Have No Name (Single Edit _ Remastered 2007).flac
-│       ├── 09 One Tree Hill (Remastered 2007).flac
-│       ├── 09 Silver And Gold.flac
-│       ├── 10 Beautiful Ghost _ Introduction To Songs Of Experience.flac
-│       ├── 10 Exit (Remastered 2007).flac
-│       ├── 11 Mothers Of The Disappeared (Remastered 2007).flac
-│       ├── 11 Wave Of Sorrow (Birdland).flac
-│       ├── 12 Desert Of Our Love.flac
-│       ├── 13 Rise Up.flac
-│       └── 14 Drunk Chicken _ America.flac
+│   ├── The Joshua Tree
+│   │   ├── 01 Luminous Times (Hold On To Love) (Remastered 2007).flac
+│   │   ├── 01 Where The Streets Have No Name (Remastered).flac
+│   │   ├── 02 I Still Haven't Found What I'm Looking For (Remastered 2007).flac
+│   │   ├── 02 Walk To The Water (Remastered 2007).flac
+│   │   ├── 03 Spanish Eyes (Remastered 2007).flac
+│   │   ├── 03 With Or Without You (Remastered 2007).flac
+│   │   ├── 04 Bullet The Blue Sky (Remastered 2007).flac
+│   │   ├── 04 Deep In The Heart (Remastered 2007).flac
+│   │   ├── 05 Running To Stand Still (Remastered 2007).flac
+│   │   ├── 05 Silver And Gold (Remastered 2007).flac
+│   │   ├── 06 Red Hill Mining Town (Remastered 2007).flac
+│   │   ├── 06 Sweetest Thing (Remastered 2007).flac
+│   │   ├── 07 In God's Country (Remastered 2007).flac
+│   │   ├── 07 Race Against Time (Remastered 2007).flac
+│   │   ├── 08 Trip Through Your Wires (Remastered 2007).flac
+│   │   ├── 08 Where The Streets Have No Name (Single Edit _ Remastered 2007).flac
+│   │   ├── 09 One Tree Hill (Remastered 2007).flac
+│   │   ├── 09 Silver And Gold.flac
+│   │   ├── 10 Beautiful Ghost _ Introduction To Songs Of Experience.flac
+│   │   ├── 10 Exit (Remastered 2007).flac
+│   │   ├── 11 Mothers Of The Disappeared (Remastered 2007).flac
+│   │   ├── 11 Wave Of Sorrow (Birdland).flac
+│   │   ├── 12 Desert Of Our Love.flac
+│   │   ├── 13 Rise Up.flac
+│   │   └── 14 Drunk Chicken _ America.flac
+│   └── U218 Singles (Deluxe Version)
+│       ├── 3  Pride (In The Name Of Love).flac
+│       ├── 3  Pride (In The Name Of Love).lrc
+│       └── cover.jpg
 ├── UB40
 │   └── The Very Best Of UB40
 │       ├── 01 Red Red Wine.flac
@@ -24720,9 +24737,6 @@
 ├── Vargo
 │   └── Beauty
 │       └── 1. Get Back to Serenity (Beach mix).flac
-├── Various Musique
-│   └── I Live For Dance Vol. 1
-│       └── 15 Better Off Alone (Originally By Alice Deejay).mp3
 ├── Vasco Rossi
 │   ├── Vado al massimo
 │   │   └── 6. Amore!_!.flac
@@ -25589,4 +25603,4 @@
     └── 攻殻機動隊 superb music high resolution USB
         └── 46 青葉市子 Cornelius - 外は戦場だよ.flac
 
-7669 directories, 17921 files
+7671 directories, 17933 files
