@@ -140,7 +140,7 @@ in
           commonPkgs
           ++ [
             pkgs.picard
-            pkgs.beets
+            unstable.beets
           ]
         else
           commonPkgs ++ [ ];
