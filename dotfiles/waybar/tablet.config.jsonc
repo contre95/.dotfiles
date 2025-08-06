@@ -17,7 +17,7 @@
       "cpu",
       "custom/amd_gpu",
       "temperature",
-      // "power-profiles-daemon",
+      "power-profiles-daemon",
       "custom/power_profile",
       "battery",
       // "custom/btc",

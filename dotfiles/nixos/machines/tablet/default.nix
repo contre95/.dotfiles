@@ -30,14 +30,16 @@
     dates = "weekly";
     options = "--delete-older-than 30d";
   };
-  services.power-profiles-daemon.enable = false;
+  services.power-profiles-daemon.enable = true;
   services.supergfxd.enable = true;
   services.asusd = {
     enable = true;
-    enableUserService = false;
+    enableUserService = true;
     fanCurvesConfig.source = ./fanCurvesConfig.text;
     asusdConfig.source = ./asusdConfig.text;
   };
+  # services.power-profiles-daemon.enable = true;
+  services.tlp.enable = false;
 
   boot = {
     kernelPackages = pkgs.linuxPackages_latest;
