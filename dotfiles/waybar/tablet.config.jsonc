@@ -2,10 +2,7 @@
   {
     "layer": "top",
     "position": "top",
-    "modules-left": [
-      "custom/arch",
-      "hyprland/workspaces"
-    ],
+    "modules-left": ["custom/arch", "hyprland/workspaces"],
     "modules-center": [
       "custom/ip",
       "network",
@@ -17,7 +14,7 @@
       "cpu",
       "custom/amd_gpu",
       "temperature",
-      "power-profiles-daemon",
+      // "power-profiles-daemon",
       "custom/power_profile",
       "battery",
       // "custom/btc",
@@ -44,15 +41,7 @@
     "backlight": {
       "device": "intel_backlight",
       "format": "{icon}",
-      "format-icons": [
-        "🌑",
-        "🌒",
-        "🌓",
-        "🌔",
-        "🌕",
-        "🌞",
-        "☀️"
-      ],
+      "format-icons": ["🌑", "🌒", "🌓", "🌔", "🌕", "🌞", "☀️"],
     },
     "custom/wireguard": {
       "format": " {} ",
@@ -73,8 +62,6 @@
       },
     },
     "custom/power_profile": {
-      //shows the current power profile and switches to next on click
-      // "exec": "asusctl profile -p | awk '/profile/ {print $NF}'",
       "exec": "case $(asusctl profile -p | awk '/profile/ {print $NF}') in Performance) echo \"<span color='#f75959'></span>\";; Balanced) echo \"<span color='#f7b059'></span>\";; Quiet) echo \"<span color='#0AE7A0'></span>\";; *) echo '?';; esac",
       "interval": 30,
       "format": "{}",
@@ -110,13 +97,7 @@
     },
     "hyprland/workspaces": {
       "persistent_workspaces": {
-        "eDP-1": [
-          1,
-          2,
-          3,
-          4,
-          5
-        ],
+        "eDP-1": [1, 2, 3, 4, 5],
       },
       "format": "{icon}",
       "format-icons": {
@@ -168,21 +149,9 @@
       "format-alt-click": "click",
       "format-full": "{icon} Full",
       "format-alt": "{icon} {time}",
-      "format-icons": [
-        "󰂎",
-        "󰁺",
-        "󰁻",
-        "󰁼",
-        "󰁽",
-        "󰁾",
-        "󰁿",
-        "󰂀",
-        "󰂁",
-        "󰂂",
-        "󰁹"
-      ],
+      "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
       "format-time": "{H}h {M}min",
-      "on-click" :"asusctl -o",
+      "on-click": "asusctl -o",
       "tooltip": true,
       "tooltip-format": "{timeTo} {power}w",
     },
@@ -225,11 +194,7 @@
       "on-click-middle": "wpctl set-mute @DEFAULT_SINK@ toggle",
       // "on-scroll-up": "wpctl set-volume @DEFAULT_SINK@ 0.02+",
       // "on-scroll-down": "wpctl set-volume @DEFAULT_SINK@ 0.02-",
-      "format-icons": [
-        "",
-        "",
-        " "
-      ],
+      "format-icons": ["", "", " "],
     },
     "custom/btc": {
       "format": "<span color='#EF8E19'></span> {}",
@@ -268,14 +233,15 @@
     },
     "temperature": {
       // "thermal-zone": 2,
-      "hwmon-path": "/sys/class/hwmon/hwmon1/temp7_input",
+      "hwmon-path": [
+        "/sys/class/hwmon/hwmon0/temp1_input",
+        "/sys/class/hwmon/hwmon4/temp2_input",
+      ],
       "critical-threshold": 90,
       "format-critical": "<span color='#FF0000'>{icon}</span> {temperatureC}°C",
       "format": " {icon} {temperatureC}°C",
-      "format-icons": [
-        ""
-      ],
-      "interval": 1,
+      "format-icons": [""],
+      // "interval": 5,
     },
     "hyprland/window": {
       "format": "{}",
