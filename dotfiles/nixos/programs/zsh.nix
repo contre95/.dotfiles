@@ -61,6 +61,7 @@
       gd = "git diff";
       ga = "git add";
       gap = "git add --patch";
+      g-deleted = "git log --diff-filter=D --summary | grep delete"; # Check deletes files from repo
       gr = "git remote";
       gcm = "git commit -S -m";
       gl = "git pull";

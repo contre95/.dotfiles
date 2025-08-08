@@ -11,6 +11,7 @@ let
     fd
     feh
     imv
+    moc
     mpv
     vlc
     gawk
@@ -18,7 +19,6 @@ let
     stow
     tmux
     tree
-    mocp
     wget
     zbar
     gimp3
