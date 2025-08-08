@@ -114,6 +114,7 @@ in
             pkgs.lingot
             pkgs.scrcpy
             pkgs.blender
+            pkgs.koreader
             unstable.telegram-desktop
           ]
         else if "${hostname}" == "notebook" then
@@ -130,15 +131,16 @@ in
           commonPkgs
           ++ [
             pkgs.krita
-            pkgs.koreader
             pkgs.slack
             pkgs.lingot
             pkgs.spotify
+            pkgs.koreader
             unstable.telegram-desktop
           ]
         else if "${hostname}" == "server" then
           commonPkgs
           ++ [
+            unstable.beets
             pkgs.beets
           ]
         else
