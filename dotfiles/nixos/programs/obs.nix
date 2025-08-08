@@ -9,6 +9,7 @@
     if
       lib.elem hostname [
         "desktop"
+        "tablet"
       ]
     then
       {

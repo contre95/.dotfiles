@@ -1,6 +1,7 @@
 {
   description = "NixOS configuration flake";
 
+  inputs.dmx.url = "github:cargaona/dmx";
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
@@ -63,7 +64,6 @@
             PAGER = "";
             EDITOR = "nvim";
             KEYTIMEOUT = "10";
-            NIXOS_OZONE_WL = "1";
             LANG = "en_US.UTF-8";
             LC_ALL = "en_US.UTF-8";
             XDG_SESSION_TYPE = "wayland";

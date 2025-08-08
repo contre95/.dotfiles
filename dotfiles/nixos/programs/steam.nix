@@ -15,6 +15,7 @@
     then
       {
         environment.systemPackages = with pkgs; [
+          itch # Play itch.io games
           file
           gamemode
           goverlay

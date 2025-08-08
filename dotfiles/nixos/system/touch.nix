@@ -15,8 +15,11 @@
       {
         services = {
           desktopManager.plasma6.enable = true;
-          displayManager.sddm.enable = true;
-          displayManager.sddm.wayland.enable = true;
+        };
+        services.displayManager.sddm = {
+          enable = true;
+          # package = pkgs.kdePackages.sddm;
+          wayland.enable = true;
         };
         environment.plasma6.excludePackages = with pkgs.kdePackages; [
           konsole # Comment out this line if you use KDE's default terminal app

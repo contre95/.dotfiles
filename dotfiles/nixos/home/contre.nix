@@ -18,6 +18,7 @@ let
     stow
     tmux
     tree
+    mocp
     wget
     zbar
     gimp3
@@ -45,6 +46,7 @@ let
     cliphist
     testdisk
     wl-kbptr
+    exiftool
     alacritty
     bandwhich
     coreutils
@@ -67,7 +69,6 @@ in
   users.users.contre.isNormalUser = true;
   home-manager.useGlobalPkgs = true;
   home-manager.extraSpecialArgs = { inherit hostname unstable; };
-
   programs.nano.enable = false;
   imports = [
     ../system/gnupg.nix
@@ -131,7 +132,6 @@ in
             pkgs.krita
             pkgs.koreader
             pkgs.slack
-            pkgs.beets
             pkgs.lingot
             pkgs.spotify
             unstable.telegram-desktop
