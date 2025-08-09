@@ -7,10 +7,7 @@
 
   home.sessionVariables = {
     QT_QPA_PLATFORM = "wayland;xcb";
-    LIBVA_DRIVER_NAME = "nvidia";
-    MOZ_ENABLE_WAYLAND = 1;
     XMODIFIERS = "@im=ibus";
-    MOZ_DBUS_REMOTE = "1";
     QT_SCALE_FACTOR = "1";
     GTK_USE_PORTAL = "1";
     QT_AUTO_SCREEN_SCALE_FACTOR = 1;

@@ -141,7 +141,6 @@ in
           commonPkgs
           ++ [
             unstable.beets
-            pkgs.beets
           ]
         else
           commonPkgs ++ [ ];

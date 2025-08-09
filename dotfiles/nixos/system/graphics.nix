@@ -7,46 +7,42 @@
     xorg.libxcb
     zenity
     lm_sensors
-    unstable.iio-sensor-proxy
-    unstable.iio-hyprland
     gammastep
     dunst
-    unstable.wtype
-    unstable.swww
-    unstable.hyprpicker
-    unstable.grim
-    unstable.slurp
-    unstable.grimblast
+    iio-sensor-proxy
+    iio-hyprland
+    wtype
+    swww
+    hyprpicker
+    grim
+    slurp
     wofi
     rofi-wayland
     wdisplays
-    unstable.overskride
-    unstable.wayland-scanner
-    unstable.nwg-drawer
-    unstable.clickclack
-    unstable.wvkbd
-    unstable.hyprpaper
     hdrop
-    unstable.hyprshade
-    unstable.waybar
-    unstable.wayland-utils
-    unstable.wayland-protocols
-    # unstable.hyprgui
-    unstable.inotify-tools # sudo inotifywait -m -r /path/to/disk/mountpoint
-    unstable.hyprlandPlugins.hyprgrass
-    unstable.hyprcursor
-    unstable.xcur2png
-    unstable.v4l-utils
-    unstable.librsvg
-    unstable.libnotify
-    unstable.hyprland-protocols
-    unstable.wev
-    unstable.hyprland-workspaces
-    # hyprdim
-    unstable.hyprlock
-    unstable.xwayland
-    unstable.aquamarine
-    unstable.wlroots
+    wayland-scanner
+    nwg-drawer
+    clickclack
+    wvkbd
+    hyprpaper
+    hyprshade
+    waybar
+    wayland-utils
+    wayland-protocols
+    inotify-tools # sudo inotifywait -m -r /path/to/disk/mountpoint
+    hyprlandPlugins.hyprgrass
+    hyprcursor
+    xcur2png
+    v4l-utils
+    librsvg
+    libnotify
+    hyprland-protocols
+    wev
+    hyprland-workspaces
+    hyprlock
+    xwayland
+    aquamarine
+    wlroots
   ];
 
   environment.variables = {

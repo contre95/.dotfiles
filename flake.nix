@@ -63,10 +63,8 @@
             PAGER = "";
             EDITOR = "nvim";
             KEYTIMEOUT = "10";
-            NIXOS_OZONE_WL = "1";
             LANG = "en_US.UTF-8";
             LC_ALL = "en_US.UTF-8";
-            XDG_SESSION_TYPE = "wayland";
           };
 
           # Set time zone
