@@ -34,7 +34,7 @@
   services.supergfxd.enable = true;
   services.asusd = {
     enable = true;
-    enableUserService = true;
+    enableUserService = false;
     fanCurvesConfig.source = ./fanCurvesConfig.text;
     asusdConfig.source = ./asusdConfig.text;
   };
@@ -52,7 +52,11 @@
   environment.systemPackages = with pkgs; [
     unstable.acpi
     unstable.asusctl
-    # unstable.fwupd
+    unstable.bolt
+    unstable.ryzenadj
+    unstable.upower
+    unstable.powercap
+    unstable.s-tui
     # unstable.supergfxctl
     linuxKernel.packages.linux_6_15.asus-ec-sensors
     brightnessctl
@@ -60,15 +64,16 @@
   ];
 
   hardware.sensor.iio.enable = true;
+
   boot.initrd.availableKernelModules = [
     "nvme"
     "nvme_core" # Core NVMe support
-    "xhci_pci"
-    "thunderbolt"
-    "usbhid"
-    "usb_storage"
     "sd_mod"
     "sdhci_pci"
+    "thunderbolt"
+    "usb_storage"
+    "usbhid"
+    "xhci_pci"
   ];
 
   boot.initrd.kernelModules = [
@@ -82,22 +87,30 @@
     "sd_mod"
     "sdhci_pci"
   ];
+
   boot.kernelModules = [ "kvm-amd" ];
   boot.extraModulePackages = [ ];
-  #hardware.graphics.package = lib.mkForce pkgs.unstable.mesa.drivers;
+
+  systemd.services.fprintd = {
+    wantedBy = [ "multi-user.target" ];
+    serviceConfig.Type = "simple";
+  };
+
   hardware.amdgpu.initrd.enable = true; # load amdgpu kernelModules in stage 1.
   hardware.amdgpu.opencl.enable = true; # OpenCL support - general compute API for gpu
   hardware.amdgpu.amdvlk.enable = true; # additional, alternative drivers
 
   # Disable AMD GPU runtime power management (fixes SDDM context creation issues)
   boot.kernelParams = [
-    "amdgpu.runpm=0" # Disable runtime power management (can cause issues with SDDM)
+    "amdgpu.gpu_recovery=1" # fix kernel hang on suspend
+    "amdgpu.runpm=1" # Disable runtime power management if it causes issues with SDDM)
     "amdgpu.dc=1" # Enable Display Core
     "amdgpu.dpm=1" # Enable Dynamic Power Management
   ];
 
   hardware.graphics = {
     enable = true;
+    enable32Bit = true; # Let's 32Bit GPU accelrated aplications run
   };
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";

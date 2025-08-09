@@ -1,6 +1,7 @@
 {
   description = "NixOS configuration flake";
 
+  inputs.dmx.url = "github:cargaona/dmx";
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";

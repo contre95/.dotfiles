@@ -11,6 +11,7 @@ let
     fd
     feh
     imv
+    moc
     mpv
     vlc
     gawk
@@ -45,6 +46,7 @@ let
     cliphist
     testdisk
     wl-kbptr
+    exiftool
     alacritty
     bandwhich
     coreutils
@@ -67,7 +69,6 @@ in
   users.users.contre.isNormalUser = true;
   home-manager.useGlobalPkgs = true;
   home-manager.extraSpecialArgs = { inherit hostname unstable; };
-
   programs.nano.enable = false;
   imports = [
     ../system/gnupg.nix
@@ -131,7 +132,6 @@ in
           ++ [
             pkgs.krita
             pkgs.slack
-            pkgs.beets
             pkgs.lingot
             pkgs.spotify
             pkgs.koreader

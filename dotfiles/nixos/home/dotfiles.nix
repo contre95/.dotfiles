@@ -31,6 +31,7 @@ in
   ".config/alacritty".source = symlink "${dotfiles}/alacritty";
   ".config/nwg-drawer".source = symlink "${dotfiles}/nwg-drawer";
   ".config/ghostty".source = symlink "${dotfiles}/ghostty";
+  ".moc/config".source = symlink "${dotfiles}/moc/config";
 
   # Uncomment and customize the hostname if needed
   # ".config/lan-mouse".source = symlink ../lan-mouse/${hostname};
