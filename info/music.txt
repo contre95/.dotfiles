@@ -10,9 +10,30 @@
 │   │   ├── 04 Prisma.flac
 │   │   ├── 05 Olas.flac
 │   │   ├── 06 Dame una bandera.flac
-│   │   └── 07 Invencible.flac
-│   └── Fuera de lugar (2022)
-│       └── 03 La llave.flac
+│   │   ├── 07 Invencible.flac
+│   │   └── 08 Ya no se que hacer 2.0.flac
+│   ├── Fuera de lugar (2022)
+│   │   ├── 01 Fuera de lugar.flac
+│   │   ├── 02 Haiku.flac
+│   │   ├── 03 La llave.flac
+│   │   ├── 04 La musica que esta por nacer.flac
+│   │   ├── 05 Solo por hoy.flac
+│   │   ├── 06 La flecha.flac
+│   │   ├── 07 Consecuencia.flac
+│   │   ├── 08 No me miren a los ojos.flac
+│   │   ├── 09 Estoy aqui.flac
+│   │   ├── 10 Todo a su tiempo.flac
+│   │   └── cover.jpg
+│   └── Los anos futuros (2020)
+│       ├── 01 Los anos futuros.flac
+│       ├── 02 Extranjero.flac
+│       ├── 03 Omm.flac
+│       ├── 04 Llamando.flac
+│       ├── 05 No les creo.flac
+│       ├── 06 Extasis.flac
+│       ├── 07 Balsa.flac
+│       ├── 08 Paranoico.flac
+│       └── cover.jpg
 ├── 2 Minutos
 │   └── Valentin Alsina (1994)
 │       └── 15 Ya no sos igual.flac
@@ -22537,4 +22558,4 @@
         ├── 08 La Grange.flac
         └── cover.jpg
 
-5933 directories, 16605 files
+5934 directories, 16625 files
