@@ -3,7 +3,7 @@
   # home.packages = [ zenBrowser ];
   home.sessionVariables = {
     MOZ_ENABLE_WAYLAND = 1;
-    MOZ_DBUS_REMOTE = "1";
+    MOZ_DBUS_REMOTE = 1;
   };
   programs.librewolf = {
     # package = (pkgs.wrapFirefox (pkgs.firefox-devedition-unwrapped.override { pipewireSupport = true; }) { });
@@ -315,6 +315,7 @@
 
         "browser.fixup.domainsuffixwhitelist.home" = true;
         "browser.fixup.domainwhitelist.server.home" = true;
+        "extensions.activeThemeID" = "firefox-compact-dark@mozilla.org";
         # "keyword.enable" = false; # Disable search when typing unexistent TLD
       };
     };
