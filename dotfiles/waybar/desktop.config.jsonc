@@ -14,6 +14,7 @@
       "custom/audio",
       "wireplumber",
       "custom/mic",
+      "custom/music",
     ],
     "modules-right": [
       // "custom/mouse",
@@ -40,6 +41,23 @@
       "format": " <span color='#85AFD8'> </span>",
       "on-click": "pkill -9 waybar && waybar -c ~/.config/waybar/$MYENV.config.jsonc",
       "tooltip": true,
+    },
+    "custom/music": {
+      "format": "{icon}{}",
+      "format-icons": {
+        // "Playing": " ", // Uncomment if not using caway
+        "Paused": " ",
+        "Stopped": "&#x202d;ﭥ " // This stop symbol is RTL. So &#x202d; is left-to-right override.
+      },
+      "escape": true,
+      "tooltip": true,
+      "exec": "$SCR_PATH/waybar-scr/music.sh",
+      "return-type": "json",
+      "on-click": "playerctl play-pause",
+      "on-scroll-up": "playerctl previous",
+      "on-scroll-down": "playerctl next",
+      "on-click-right": "g4music",
+      "max-length": 35
     },
     "hyprland/workspaces": {
       "persistent-workspaces": {
@@ -149,14 +167,6 @@
       "format": "<span color='#EF8E19'></span> {}",
       "on-click": "librewolf --new-window 'https://www.tradingview.com/chart/rH3IToRa/?symbol=BITSTAMP%3ABTCUSD'\"",
       "exec": "curl -X GET 'https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd' -s | jq '.[] .usd'",
-    },
-    "custom/music": {
-      "exec": "echo $(playerctl metadata title) - $(playerctl metadata artist)",
-      "format": "<span color='#0AE7A0'></span> {}",
-      "on-click": "playerctl play-pause",
-      "interval": 5,
-      "on-scroll-up": "playerctl next",
-      "on-scroll-down": "playerctl previous",
     },
     "disk": {
       "interval": 30,

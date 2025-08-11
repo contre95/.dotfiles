@@ -26,6 +26,7 @@
     libnotify
     v4l-utils
     wdisplays
+    playerctl
     aquamarine
     clickclack
     hyprcursor
