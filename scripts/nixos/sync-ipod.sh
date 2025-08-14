@@ -12,28 +12,22 @@ fail_and_notify() {
   echo "[ERROR] Step '$step' failed. Exiting."
   exit 1
 }
-
-echo "[INFO] Starting iPod Sync process..."
-
-# Step 1: Normalize filenames
-echo "[INFO] Step 1: Normalize filenames (convmv)"
-notify "iPod Sync ⏳" "Starting filename normalization"
-CONVERT_OUTPUT=$(/home/contre/.nix-profile/bin/convmv -r -f utf-8 -t utf-8 --nfc --notest /mnt/HDD2/music/ 2>&1)
-CONVERT_EXIT=$?
-
-echo "[DEBUG] convmv output:"
-echo "$CONVERT_OUTPUT"
-
-if [ $CONVERT_EXIT -ne 0 ]; then
-  fail_and_notify "convmv"
+# Step 1: Check Nix environment
+echo "[INFO] Checking Nix env"
+if [ "$(hostname)" != "server" ]; then
+  printf "Be sure to: \n 1. Be connected to the VPN.\n 2. Have your yubikey connected.\n";
+  mkdir -p /mnt/HDD2/music-beets-tag;
+  mkdir -p /mnt/HDD2/playlists;
+  printf "Mounting Server Music:"
+  sshfs server.home:/mnt/HDD2/music-beets-tag /mnt/HDD2/music-beets-tag || { echo "sshfs mount failed. Exiting."; exit 1; }
+  printf "Mounting Emby Playlists:"
+  sshfs server.home:/mnt/SSD/config/emby/data/userplaylists/ /mnt/HDD2/playlists || { echo "sshfs mount failed. Exiting."; exit 1; }
 fi
-
-notify "iPod Sync ✔️" "Filename normalization completed"
 
 # Step 2: Sync music
 echo "[INFO] Step 2: Sync music (rsync)"
 notify "iPod Sync ⏳" "Starting music sync"
-RSYNC_OUTPUT=$(/home/contre/.nix-profile/bin/rsync -avr --ignore-existing --include='*' --stats --exclude='*.lrc' /mnt/HDD2/music/ /mnt/ipod/Music/ 2>&1)
+RSYNC_OUTPUT=$(/home/contre/.nix-profile/bin/rsync -avr --ignore-existing --include='*' --stats --exclude='*.lrc' /mnt/HDD2/music-beets-tag/ /mnt/ipod/Music/ 2>&1)
 RSYNC_EXIT=$?
 
 echo "[DEBUG] rsync output:"
@@ -64,14 +58,14 @@ notify "iPod Sync ✔️" "Playlists sync completed"
 notify "iPod Sync ✅" "Filename normalization done; Music synced; Playlists synced."
 
 # Step 4: Unmount
-echo "[INFO] Step 4: Unmount iPod"
-if /run/wrappers/bin/umount /mnt/ipod; then
-  echo "[INFO] Unmounted /mnt/ipod successfully."
-  notify "iPod Sync ☑️" "iPod unmounted successfully"
-else
-  echo "[WARN] Failed to unmount /mnt/ipod."
-  notify "iPod Sync ⚠️" "Unmount failed"
-fi
+# echo "[INFO] Step 4: Unmount iPod"
+# if /run/wrappers/bin/umount /mnt/ipod; then
+#   echo "[INFO] Unmounted /mnt/ipod successfully."
+#   notify "iPod Sync ☑️" "iPod unmounted successfully"
+# else
+#   echo "[WARN] Failed to unmount /mnt/ipod."
+#   notify "iPod Sync ⚠️" "Unmount failed"
+# fi
 
 echo "[INFO] iPod Sync process completed."
 

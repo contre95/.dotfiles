@@ -2,8 +2,12 @@
   {
     "layer": "top",
     "position": "top",
-    "modules-left": ["custom/arch", "hyprland/workspaces"],
+    "modules-left": [
+      "custom/arch",
+      "hyprland/workspaces"
+    ],
     "modules-center": [
+      "custom/ipod",
       "custom/ip",
       "network",
       "bluetooth",
@@ -41,7 +45,15 @@
     "backlight": {
       "device": "intel_backlight",
       "format": "{icon}",
-      "format-icons": ["🌑", "🌒", "🌓", "🌔", "🌕", "🌞", "☀️"],
+      "format-icons": [
+        "🌑",
+        "🌒",
+        "🌓",
+        "🌔",
+        "🌕",
+        "🌞",
+        "☀️"
+      ],
     },
     "custom/wireguard": {
       "format": " {} ",
@@ -58,8 +70,14 @@
         "default": "",
         "performance": "",
         "balanced": "",
-        "power-saver": "",
+        "powr-saver": "",
       },
+    },
+    "custom/ipod": {
+      "exec": "[ $(mount | grep -q 'on /mnt/ipod ' && echo 1 || echo 0) -eq 1 ] && echo '<span color=\"#ffffff\">󰲑</span>' || echo ''",
+      "interval": 10,
+      "format": "{}",
+      "on-click-right": " sudo /run/current-system/sw/bin/umount /mnt/ipod && notify-send '󰲑 iPod unmounted'",
     },
     "custom/power_profile": {
       "exec": "case $(asusctl profile -p | awk '/profile/ {print $NF}') in Performance) echo \"<span color='#f75959'></span>\";; Balanced) echo \"<span color='#f7b059'></span>\";; Quiet) echo \"<span color='#0AE7A0'></span>\";; *) echo '?';; esac",
@@ -97,7 +115,13 @@
     },
     "hyprland/workspaces": {
       "persistent_workspaces": {
-        "eDP-1": [1, 2, 3, 4, 5],
+        "eDP-1": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
       },
       "format": "{icon}",
       "format-icons": {
@@ -149,7 +173,19 @@
       "format-alt-click": "click",
       "format-full": "{icon} Full",
       "format-alt": "{icon} {time}",
-      "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+      "format-icons": [
+        "󰂎",
+        "󰁺",
+        "󰁻",
+        "󰁼",
+        "󰁽",
+        "󰁾",
+        "󰁿",
+        "󰂀",
+        "󰂁",
+        "󰂂",
+        "󰁹"
+      ],
       "format-time": "{H}h {M}min",
       "on-click": "asusctl -o",
       "tooltip": true,
@@ -194,7 +230,11 @@
       "on-click-middle": "wpctl set-mute @DEFAULT_SINK@ toggle",
       // "on-scroll-up": "wpctl set-volume @DEFAULT_SINK@ 0.02+",
       // "on-scroll-down": "wpctl set-volume @DEFAULT_SINK@ 0.02-",
-      "format-icons": ["", "", " "],
+      "format-icons": [
+        "",
+        "",
+        " "
+      ],
     },
     "custom/btc": {
       "format": "<span color='#EF8E19'></span> {}",
@@ -240,7 +280,9 @@
       "critical-threshold": 90,
       "format-critical": "<span color='#FF0000'>{icon}</span> {temperatureC}°C",
       "format": " {icon} {temperatureC}°C",
-      "format-icons": [""],
+      "format-icons": [
+        ""
+      ],
       // "interval": 5,
     },
     "hyprland/window": {

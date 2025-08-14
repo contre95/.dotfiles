@@ -24,12 +24,39 @@
     };
   };
 
+  # Mount unit for the iPod
+  systemd.mounts = [
+    {
+      what = "/dev/disk/by-uuid/8722-166E"; # UUID for /dev/sdf1
+      where = "/mnt/ipod"; # Mount point
+      type = "vfat"; # Filesystem type
+      options = "nofail,x-systemd.automount,uid=1000,gid=100"; # Optional: adjust UID/GID
+    }
+  ];
+  services.udev.extraRules = ''
+    KERNEL=="ttyUSB0", MODE:="666"
+    ACTION=="add", ENV{ID_FS_UUID}=="8722-166E", TAG+="systemd", ENV{SYSTEMD_WANTS}+="mnt-ipod.mount"
+  '';
+
   # Garbace collector
   nix.gc = {
     automatic = true;
     dates = "weekly";
     options = "--delete-older-than 30d";
   };
+
+  security.sudo.extraRules = [
+    {
+      users = [ "contre" ];
+      commands = [
+        {
+          command = "/run/current-system/sw/bin/umount";
+          options = [ "NOPASSWD" ];
+        }
+      ];
+    }
+  ];
+
   services.power-profiles-daemon.enable = true;
   services.supergfxd.enable = true;
   services.asusd = {
