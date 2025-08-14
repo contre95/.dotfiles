@@ -316,6 +316,7 @@
 
         "browser.fixup.domainsuffixwhitelist.home" = true;
         "browser.fixup.domainwhitelist.server.home" = true;
+        "extensions.activeThemeID" = "firefox-compact-dark@mozilla.org";
         # "keyword.enable" = false; # Disable search when typing unexistent TLD
       };
     };

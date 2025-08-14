@@ -4,48 +4,46 @@
   services.libinput.enable = true;
 
   environment.systemPackages = with pkgs; [
-    xorg.libxcb
-    zenity
-    lm_sensors
-    unstable.iio-sensor-proxy
-    unstable.iio-hyprland
-    gammastep
-    dunst
-    unstable.wtype
-    unstable.swww
-    unstable.hyprpicker
-    unstable.grim
-    unstable.slurp
-    unstable.grimblast
+    wev
+    grim
+    swww
     wofi
-    rofi-wayland
-    wdisplays
-    unstable.wayland-scanner
-    unstable.nwg-drawer
-    unstable.clickclack
-    unstable.wvkbd
-    unstable.hyprpaper
+    dunst
     hdrop
-    unstable.hyprshade
-    unstable.waybar
-    unstable.wayland-utils
-    unstable.wayland-protocols
-    # unstable.hyprgui
-    unstable.inotify-tools # sudo inotifywait -m -r /path/to/disk/mountpoint
-    unstable.hyprlandPlugins.hyprgrass
-    unstable.hyprcursor
-    unstable.xcur2png
-    unstable.v4l-utils
-    unstable.librsvg
-    unstable.libnotify
-    unstable.hyprland-protocols
-    unstable.wev
-    unstable.hyprland-workspaces
-    # hyprdim
-    unstable.hyprlock
-    unstable.xwayland
-    unstable.aquamarine
-    unstable.wlroots
+    slurp
+    wtype
+    wvkbd
+    waybar
+    zenity
+    librsvg
+    wlroots
+    hyprlock
+    xcur2png
+    xwayland
+    gammastep
+    hyprpaper
+    hyprshade
+    libnotify
+    v4l-utils
+    wdisplays
+    playerctl
+    aquamarine
+    clickclack
+    hyprcursor
+    hyprpicker
+    lm_sensors
+    nwg-drawer
+    xorg.libxcb
+    iio-hyprland
+    rofi-wayland
+    wayland-utils
+    inotify-tools # sudo inotifywait -m -r /path/to/disk/mountpoint
+    wayland-scanner
+    iio-sensor-proxy
+    wayland-protocols
+    hyprland-protocols
+    hyprland-workspaces
+    hyprlandPlugins.hyprgrass
   ];
 
   environment.variables = {

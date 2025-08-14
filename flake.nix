@@ -66,7 +66,6 @@
             KEYTIMEOUT = "10";
             LANG = "en_US.UTF-8";
             LC_ALL = "en_US.UTF-8";
-            XDG_SESSION_TYPE = "wayland";
           };
 
           # Set time zone
