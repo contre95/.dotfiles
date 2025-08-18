@@ -12,6 +12,7 @@ fail_and_notify() {
 	echo "[ERROR] Step '$step' failed. Exiting."
 	exit 1
 }
+#
 # Step 1: Check Nix environment
 echo "[INFO] Checking Nix env"
 if [ "$(hostname)" != "server" ]; then

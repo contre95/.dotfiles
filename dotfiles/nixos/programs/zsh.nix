@@ -46,7 +46,7 @@
 
     shellAliases = {
       rebuild = "sudo nixos-rebuild switch --flake /home/canus/#${hostname}";
-      update = "pushd $MY_FOLDER && git pull && sudo nixos-rebuild switch --flake /home/canus/#${hostname}";
+      update = "pushd $MY_FOLDER && git pull && nix flake update && sudo nixos-rebuild switch --flake /home/canus/#${hostname}";
       gparted = "sudo --preserve-env gparted";
       iptr = "sudo iptables -t nat -L -v -n";
       gc = "sudo nix-store --gc";
