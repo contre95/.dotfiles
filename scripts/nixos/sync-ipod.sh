@@ -1,40 +1,60 @@
 #!/run/current-system/sw/bin/bash
 
 notify() {
-  local status="$1"
-  local message="$2"
-  /run/current-system/sw/bin/curl -s -X POST --data "$status --- $message" https://ntfy.contre.io/all
+	local status="$1"
+	local message="$2"
+	/run/current-system/sw/bin/curl -s -X POST --data "$status --- $message" https://ntfy.contre.io/all
 }
 
 fail_and_notify() {
-  local step="$1"
-  notify "iPod Sync ❌" "$step failed"
-  echo "[ERROR] Step '$step' failed. Exiting."
-  exit 1
+	local step="$1"
+	notify "iPod Sync ❌" "$step failed"
+	echo "[ERROR] Step '$step' failed. Exiting."
+	exit 1
 }
 # Step 1: Check Nix environment
 echo "[INFO] Checking Nix env"
 if [ "$(hostname)" != "server" ]; then
-  printf "Be sure to: \n 1. Be connected to the VPN.\n 2. Have your yubikey connected.\n";
-  mkdir -p /mnt/HDD2/music-beets-tag;
-  mkdir -p /mnt/HDD2/playlists;
-  printf "Mounting Server Music:"
-  sshfs server.home:/mnt/HDD2/music-beets-tag /mnt/HDD2/music-beets-tag || { echo "sshfs mount failed. Exiting."; exit 1; }
-  printf "Mounting Emby Playlists:"
-  sshfs server.home:/mnt/SSD/config/emby/data/userplaylists/ /mnt/HDD2/playlists || { echo "sshfs mount failed. Exiting."; exit 1; }
+	printf "Be sure to: \n 1. Be connected to the VPN.\n 2. Have your yubikey connected.\n"
+	if [ ! -d /mnt/HDD2/music-beets-tag ]; then
+		mkdir -p /mnt/HDD2/music-beets-tag
+	fi
+	if [ ! -d /mnt/HDD2/playlists ]; then
+		mkdir -p /mnt/HDD2/playlists
+	fi
+	printf "Mounting Server Music.\n"
+	if ! mountpoint -q /mnt/HDD2/music-beets-tag; then
+		sshfs server.home:/mnt/HDD2/music-beets-tag /mnt/HDD2/music-beets-tag || {
+			echo "sshfs mount failed. Exiting."
+			exit 1
+		}
+	else
+		echo "/mnt/HDD2/music-beets-tag already mounted."
+	fi
+	printf "Mounting Emby Playlists.\n"
+	if ! mountpoint -q /mnt/HDD2/playlists; then
+		sshfs server.home:/mnt/SSD/config/emby/data/userplaylists/ /mnt/HDD2/playlists || {
+			echo "sshfs mount failed. Exiting."
+			exit 1
+		}
+	else
+		echo "/mnt/HDD2/playlists already mounted."
+	fi
+
 fi
 
 # Step 2: Sync music
 echo "[INFO] Step 2: Sync music (rsync)"
 notify "iPod Sync ⏳" "Starting music sync"
-RSYNC_OUTPUT=$(/home/contre/.nix-profile/bin/rsync -avr --ignore-existing --include='*' --stats --exclude='*.lrc' /mnt/HDD2/music-beets-tag/ /mnt/ipod/Music/ 2>&1)
+# RSYNC_OUTPUT=$(/usr/bin/env rsync -avr --ignore-existing --include='*' --stats --exclude='*.lrc' /mnt/HDD2/music-beets-tag/ /mnt/ipod/Music/ 2>&1)
+/usr/bin/env rsync -avr --ignore-existing --include='*' --stats --exclude='*.lrc' --exclude='*.jpg' /mnt/HDD2/music-beets-tag/ /mnt/ipod/Music/ 
 RSYNC_EXIT=$?
 
 echo "[DEBUG] rsync output:"
 echo "$RSYNC_OUTPUT" | sed '0,/^$/d' | tee /dev/stderr | grep -e "Number of" -e "File list size"
 
 if [ $RSYNC_EXIT -ne 0 ]; then
-  fail_and_notify "rsync music"
+	fail_and_notify "rsync music"
 fi
 
 notify "iPod Sync ✔️" "Music sync completed"
@@ -49,7 +69,7 @@ echo "[DEBUG] playlists rsync output:"
 echo "$PLAYLIST_OUTPUT"
 
 if [ $PLAYLIST_EXIT -ne 0 ]; then
-  fail_and_notify "rsync playlists"
+	fail_and_notify "rsync playlists"
 fi
 
 notify "iPod Sync ✔️" "Playlists sync completed"
@@ -68,4 +88,3 @@ notify "iPod Sync ✅" "Filename normalization done; Music synced; Playlists syn
 # fi
 
 echo "[INFO] iPod Sync process completed."
-

@@ -74,9 +74,10 @@
       },
     },
     "custom/ipod": {
-      "exec": "[ $(mount | grep -q 'on /mnt/ipod ' && echo 1 || echo 0) -eq 1 ] && echo '<span color=\"#ffffff\">󰲑</span>' || echo ''",
-      "interval": 10,
+      "exec": "[ $(mount | grep -q 'on /mnt/ipod ' && echo 1 || echo 0) -eq 1 ] && echo '<span color=\"#ffffff\"> 󰲑 </span>' || echo ''",
+      "interval": 5,
       "format": "{}",
+      "tooltip": false,
       "on-click-right": " sudo /run/current-system/sw/bin/umount /mnt/ipod && notify-send '󰲑 iPod unmounted'",
     },
     "custom/power_profile": {
