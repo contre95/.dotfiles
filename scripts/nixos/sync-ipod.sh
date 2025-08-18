@@ -13,40 +13,10 @@ fail_and_notify() {
 	exit 1
 }
 
-# Step 1: Check Nix environment
-echo "[INFO] Checking Nix env"
-if [ "$(hostname)" != "server" ]; then
-	printf "Be sure to: \n 1. Be connected to the VPN.\n 2. Have your yubikey connected.\n"
-	if [ ! -d /mnt/HDD2/music-beets-tag ]; then
-		mkdir -p /mnt/HDD2/music-beets-tag
-	fi
-	if [ ! -d /mnt/HDD2/playlists ]; then
-		mkdir -p /mnt/HDD2/playlists
-	fi
-	printf "Mounting Server Music.\n"
-	if ! mountpoint -q /mnt/HDD2/music-beets-tag; then
-		sshfs server.home:/mnt/HDD2/music-beets-tag /mnt/HDD2/music-beets-tag || {
-			echo "sshfs mount failed. Exiting."
-			exit 1
-		}
-	else
-		echo "/mnt/HDD2/music-beets-tag already mounted."
-	fi
-	printf "Mounting Emby Playlists.\n"
-	if ! mountpoint -q /mnt/HDD2/playlists; then
-		sshfs server.home:/mnt/SSD/config/emby/data/userplaylists/ /mnt/HDD2/playlists || {
-			echo "sshfs mount failed. Exiting."
-			exit 1
-		}
-	else
-		echo "/mnt/HDD2/playlists already mounted."
-	fi
-fi
-
 # Step 2: Sync music
 echo "[INFO] Step 2: Sync music (rsync)"
 notify "iPod Sync ⏳" "Starting music sync"
-RSYNC_OUTPUT=$(/usr/bin/env rsync -avr --ignore-existing --include='*' --stats --exclude='*.lrc' /mnt/HDD2/music-beets-tag/ /mnt/ipod/Music/ 2>&1 | tee /dev/tty)
+RSYNC_OUTPUT=$(/usr/bin/env rsync -avr --ignore-existing --include='*' --stats --exclude='*.lrc' /mnt/HDD2/music-beets-tag/ /mnt/ipod/Music/ 2>&1)
 RSYNC_EXIT=$?
 
 echo "[DEBUG] rsync output:"
@@ -61,7 +31,7 @@ notify "iPod Sync ✔️" "Music sync completed"
 # Step 3: Sync playlists
 echo "[INFO] Step 3: Sync playlists (rsync)"
 notify "iPod Sync ⏳" "Starting playlists sync"
-PLAYLIST_OUTPUT=$(/usr/bin/env rsync -av --inplace --info=progress2 /mnt/SSD/config/emby/data/userplaylists/ /mnt/ipod/Playlists 2>&1 | tee /dev/tty)
+PLAYLIST_OUTPUT=$(/usr/bin/env rsync -av --inplace --info=progress2 /mnt/SSD/config/emby/data/userplaylists/ /mnt/ipod/Playlists 2>&1)
 PLAYLIST_EXIT=$?
 
 echo "[DEBUG] playlists rsync output:"
