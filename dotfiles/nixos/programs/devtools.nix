@@ -6,6 +6,7 @@
     # Text editor
     unstable.neovim
     unstable.opencode
+    unstable.gemini-cli
     # unstable.code-cursor
 
     # Cloud
