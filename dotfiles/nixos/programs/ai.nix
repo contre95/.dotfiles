@@ -1,4 +1,4 @@
-{ lib, unstable, hostname, ... }:
+{ lib, unstable, pkgs, hostname, ... }:
 
 {
   config =
@@ -17,7 +17,7 @@
           host = "0.0.0.0";
           # models = "/home/heavy-assets/models";
           enable = true;
-          package = unstable.ollama-cuda;
+          package = pkgs.ollama-cuda;
           acceleration = "rocm";
           loadModels = [
             "deepseek-r1:8b"
