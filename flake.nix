@@ -72,7 +72,7 @@
           # Enable flakes system-wide
           
 
-          nix.settings.download-buffer-size = 524288000;
+          nix.settings.download-buffer-size = 1048576000;
           nix.settings.experimental-features = [
             "nix-command"
             "flakes"

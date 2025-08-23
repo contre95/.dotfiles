@@ -32,7 +32,6 @@
 
   # xdg.portal.wlr.enable = true;desktop
   services.dbus.enable = true;
-
   networking.firewall = {
     enable = false;
   };
@@ -41,10 +40,6 @@
   services.udev.packages = [
     pkgs.android-udev-rules
   ];
-
-  # System packages
-  # imports = [ ../programs/ai.nix ];
-
 
   hardware.amdgpu.opencl.enable = true;
   hardware.enableRedistributableFirmware = true;
