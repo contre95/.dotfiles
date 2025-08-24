@@ -10,14 +10,14 @@ in
   #     hash = "sha256-Lm6B9aYZO0JiUDiwD5WEDhOzgwxt3c1RF3NUpikyR3Y=";
   #   }
   # );
-".librewolf/default/chrome".source = config.lib.file.mkOutOfStoreSymlink (
-   pkgs.fetchFromGitHub {
-     owner = "datguypiko";
-     repo = "Firefox-Mod-Blur";
-     rev = "master";
-     sha256 = "sha256-W82y0qKR8yPdS6Fj6Ngw07qdNmswD7Od73qbc0x0gPE=";
-   }
- );
+# ".librewolf/default/chrome".source = config.lib.file.mkOutOfStoreSymlink (
+#    pkgs.fetchFromGitHub {
+#      owner = "datguypiko";
+#      repo = "Firefox-Mod-Blur";
+#      rev = "master";
+#      sha256 = "sha256-W82y0qKR8yPdS6Fj6Ngw07qdNmswD7Od73qbc0x0gPE=";
+#    }
+#  );
 
   ".config/nvim".source = symlink "${dotfiles}/nvim";
   ".config/rofi".source = symlink "${dotfiles}/rofi";

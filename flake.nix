@@ -70,9 +70,8 @@
           };
 
           # Enable flakes system-wide
-          
 
-          nix.settings.download-buffer-size = 1048576000;
+          nix.settings.download-buffer-size = 2097152000;
           nix.settings.experimental-features = [
             "nix-command"
             "flakes"
@@ -105,7 +104,6 @@
           };
         }
       ];
-
 
       # Function to create a system configuration
       mkSystem =
