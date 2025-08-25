@@ -5,9 +5,9 @@
 
     # Text editor
     unstable.neovim
+    unstable.claude-code
     unstable.opencode
     unstable.gemini-cli
-    # unstable.code-cursor
 
     # Cloud
     awscli
