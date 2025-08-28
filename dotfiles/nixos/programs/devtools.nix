@@ -12,6 +12,7 @@
     # Cloud
     awscli
     gh 
+    gh-dash
 
     # nix
     nil
