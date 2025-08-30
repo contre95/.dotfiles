@@ -11,9 +11,12 @@
 
     # Cloud
     awscli
+ 
+    # Git
     gh 
+    gh-dash
 
-    # nix
+    # Nix
     nil
     alejandra
     nixpkgs-fmt
