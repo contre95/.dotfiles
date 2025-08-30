@@ -1,4 +1,4 @@
-/mnt/HDD2/music-beets-tag/
+/mnt/HDD2/music-beets-tag
 ├── 10cc
 │   └── The Original Soundtrack (1975)
 │       ├── 02 I'm Not in Love.flac
@@ -5479,7 +5479,6 @@
 │   │   ├── 03 Revolution 909.flac
 │   │   ├── 04 Da Funk.flac
 │   │   ├── 05 Phoenix.flac
-│   │   ├── 06 Fresh.2.flac
 │   │   ├── 06 Fresh.flac
 │   │   ├── 07 Around the World.flac
 │   │   ├── 08 Rollin' & Scratchin'.flac
@@ -12298,13 +12297,14 @@
 │   │   ├── 08 Ladies of the Road (Robert Fripp _ David Singleton remix).flac
 │   │   └── cover.jpg
 │   ├── Larks' Tongues in Aspic (1973)
-│   │   ├── 02 Book of Saturday.flac
-│   │   ├── 03 Exiles.flac
-│   │   ├── 04 Easy Money.flac
-│   │   ├── 05 The Talking Drum.flac
+│   │   ├── 01 Larks' Tongues in Aspic, Pt. 1.flac
+│   │   ├── 02 Book of Saturday.1.flac
+│   │   ├── 03 Exiles.1.flac
+│   │   ├── 04 Easy Money.1.flac
+│   │   ├── 05 The Talking Drum.1.flac
 │   │   ├── 06 Larks' Tongues in Aspic, Pt. 2.flac
 │   │   ├── 07 Recording Session Extract, Pt. 1.flac
-│   │   └── cover.jpg
+│   │   └── 08 Recording Session Extract, Pt. 2.flac
 │   ├── Red (1974)
 │   │   ├── 01 Red.flac
 │   │   ├── 02 Fallen Angel.flac
@@ -12664,6 +12664,10 @@
 ├── Lady Gaga & Ariana Grande
 │   └── Rain on Me (Ralphi Rosario remix) [Single] (2020)
 │       ├── 01 Rain on Me (Ralphi Rosario remix - edit).flac
+│       └── cover.jpg
+├── Lady Gaga & Bruno Mars
+│   └── Die With a Smile [Single] (2024)
+│       ├── 01 Die With a Smile.flac
 │       └── cover.jpg
 ├── Lady Zu
 │   ├── A noite vai chegar (1978)
@@ -15230,8 +15234,23 @@
 │   ├── Seven [Single] (2018)
 │   │   ├── 01 Seven.flac
 │   │   └── cover.jpg
-│   └── Show Me How [Single] (2018)
-│       ├── 01 Show Me How.flac
+│   ├── Show Me How [Single] (2018)
+│   │   ├── 01 Show Me How.flac
+│   │   └── cover.jpg
+│   └── Untourable Album (2021)
+│       ├── 01 Organon.flac
+│       ├── 02 Oh Dove.flac
+│       ├── 03 Sugar.flac
+│       ├── 04 Sorbitol.flac
+│       ├── 05 Tree Among Shrubs.flac
+│       ├── 06 Before Dawn.flac
+│       ├── 07 Serenade of Water.flac
+│       ├── 08 5AM Waltz.flac
+│       ├── 09 Always Lone.flac
+│       ├── 10 Ante Meridiem.flac
+│       ├── 11 Lifelong Song.flac
+│       ├── 12 Shoulders.flac
+│       ├── 13 Beluga.flac
 │       └── cover.jpg
 ├── Men Without Hats
 │   ├── Pop Goes the World (1987)
@@ -16554,6 +16573,21 @@
 │   └── Greatest Hits (2002)
 │       ├── 13 Concerto No. 2 in G minor, RV 315  -Summer - - III. Presto.flac
 │       └── cover.jpg
+├── Nightmares on Wax
+│   └── Carboot Soul (Deluxe Edition) (1999)
+│       ├── 01 Les Nuits.flac
+│       ├── 02 Morse.flac
+│       ├── 03 Ethnic Majority.flac
+│       ├── 04 Jorge.flac
+│       ├── 05 Finer.flac
+│       ├── 06 Ease Jimi.flac
+│       ├── 07 Argha Noah.flac
+│       ├── 08 Fire in the Middle.flac
+│       ├── 09 Survival.flac
+│       ├── 10 Capumcap.flac
+│       ├── 11 Les Nuits (Hip Hop reprise).flac
+│       ├── 12 Keep On (Chill mix) ft De La Soul.flac
+│       └── cover.jpg
 ├── Nik Kershaw
 │   └── Human Racing (1984)
 │       ├── 02 Wouldn't It Be Good.mp3
@@ -16847,6 +16881,34 @@
 │       ├── 07 Parev' Ajere.flac
 │       └── cover.jpg
 ├── Nujabes
+│   ├── Luv(sic) Hexalogy (2015)
+│   │   ├── 01 Luv(sic).flac
+│   │   ├── 02 Luv(sic), Pt. 2.flac
+│   │   ├── 03 Luv(sic), Pt. 3 ft Shing02.flac
+│   │   ├── 04 Luv(sic), Pt. 4 ft Shing02.flac
+│   │   ├── 05 Luv(sic), Pt. 5 ft Shing02.flac
+│   │   ├── 06 Luv(sic) Grand Finale ft Shing02.flac
+│   │   ├── 07 Luv(sic) (12'' remix).flac
+│   │   ├── 08 Luv(sic), Pt. 2 (Acoustica).flac
+│   │   ├── 09 Luv(sic), Pt. 3 (Ta-ku remix) ft Ta-ku.flac
+│   │   ├── 10 Luv(sic), Pt. 4 (LASTorder remix) ft LASTorder.flac
+│   │   ├── 11 Luv(sic), Pt. 5 (Jumpster remix) ft Jumpster.flac
+│   │   ├── 12 Luv(sic), Pt. 6 (Uyama Hiroto remix) ft Uyama Hiroto.flac
+│   │   ├── 13 Perfect Circle.flac
+│   │   ├── 14 Luv(sic) (instrumentals).flac
+│   │   ├── 15 Luv(sic), Pt. 2 (instrumentals).flac
+│   │   ├── 16 Luv(sic), Pt. 3 (instrumentals).flac
+│   │   ├── 17 Luv(sic), Pt. 4 (instrumentals).flac
+│   │   ├── 18 Luv(sic), Pt. 5 (instrumentals).flac
+│   │   ├── 19 Luv(sic) (Grand Finale instrumentals).flac
+│   │   ├── 20 Luv(sic) (12'' remix instrumentals).flac
+│   │   ├── 21 Luv(sic), Pt. 2 (Acoustica instrumentals).flac
+│   │   ├── 22 Luv(sic), Pt. 3 (Ta-ku remix instrumentals) ft Ta-ku.flac
+│   │   ├── 23 Luv(sic), Pt. 4 (LASTorder remix instrumentals) ft LASTorder.flac
+│   │   ├── 24 Luv(sic), Pt. 5 (Jumpster remix instrumentals) ft Jumpster.flac
+│   │   ├── 25 Luv(sic), Pt. 6 (Uyama Hiroto remix instrumentals) ft Uyama Hiroto.flac
+│   │   ├── 26 Perfect Circle (instrumentals).flac
+│   │   └── cover.jpg
 │   ├── Metaphorical Music (2003)
 │   │   ├── 01 Blessing It -remix ft Substantial & Pase Rock.flac
 │   │   ├── 02 Horn in the Middle.flac
@@ -16865,20 +16927,40 @@
 │   │   ├── 15 Peaceland.flac
 │   │   └── cover.jpg
 │   └── Modal Soul (2005)
-│       ├── 01 Feather ft Cise Star & Akin Yai.flac
-│       ├── 02 Ordinary Joe ft Terry Callier.flac
-│       ├── 03 Reflection Eternal.flac
+│       ├── 01 Feather ft Cise Star & Akin Yai.1.flac
+│       ├── 02 Ordinary Joe ft Terry Callier.1.flac
+│       ├── 03 Reflection Eternal.1.flac
 │       ├── 04 Luv (sic.), Part 3 ft Shing02.flac
-│       ├── 05 Music Is Mine.flac
-│       ├── 06 Eclipse ft Substantial.flac
-│       ├── 07 The Sign ft Pase Rock.flac
-│       ├── 08 Thank You ft Apani B. Fly.flac
-│       ├── 09 World's End Rhapsody.flac
-│       ├── 10 Modal Soul ft Uyama Hiroto.flac
-│       ├── 11 Flowers.flac
-│       ├── 12 Sea of Cloud.flac
-│       ├── 13 Light on the Land.flac
-│       ├── 14 Horizon.flac
+│       ├── 05 Music Is Mine.1.flac
+│       ├── 06 Eclipse ft Substantial.1.flac
+│       ├── 07 The Sign ft Pase Rock.1.flac
+│       ├── 08 Thank You ft Apani B. Fly.1.flac
+│       ├── 09 World's End Rhapsody.1.flac
+│       ├── 10 Modal Soul ft Uyama Hiroto.1.flac
+│       ├── 11 Flowers.1.flac
+│       ├── 12 Sea of Cloud.1.flac
+│       ├── 13 Light on the Land.1.flac
+│       ├── 14 Horizon.1.flac
+│       └── cover.jpg
+├── Nujabes & Fat Jon the Ample Soul Physician
+│   └── samurai champloo music record departure [OST] (2004)
+│       ├── 01 battlecry.flac
+│       ├── 02 the space between two world.flac
+│       ├── 03 aruarian dance.flac
+│       ├── 04 transcendence.flac
+│       ├── 05 mystline.flac
+│       ├── 06 1st samurai.flac
+│       ├── 07 ole.flac
+│       ├── 08 624 part2.flac
+│       ├── 09 genome.flac
+│       ├── 10 no way back.flac
+│       ├── 11 funkin.flac
+│       ├── 12 stay.flac
+│       ├── 13 chambers.flac
+│       ├── 14 ask.flac
+│       ├── 15 how you feel.flac
+│       ├── 16 624 part1.flac
+│       ├── 17 Si Ji noBai.flac
 │       └── cover.jpg
 ├── Nuovo Testamento
 │   └── New Earth (2021)
@@ -18487,6 +18569,15 @@
 │       ├── 14 Between Dreams.mp3
 │       ├── 15 Without You.mp3
 │       ├── 16 Take Me Home.mp3
+│       └── cover.jpg
+├── Porcupine Tree
+│   └── Fear of a Blank Planet (2007)
+│       ├── 01 Fear of a Blank Planet.flac
+│       ├── 02 My Ashes.flac
+│       ├── 03 Anesthetize.flac
+│       ├── 04 Sentimental.flac
+│       ├── 05 Way Out of Here.flac
+│       ├── 06 Sleep Together.flac
 │       └── cover.jpg
 ├── PorSuiGieco
 │   └── PorSuiGieco (1976)
@@ -20236,6 +20327,35 @@
 │   └── A Narnia Lullaby (From  -The Chronicles of Narnia -) (Piano Version) [Single] (2022)
 │       ├── 01 A Narnia Lullaby (From  -The Chronicles of Narnia -) (Piano Version).mp3
 │       └── cover.jpg
+├── Serial Experiments
+│   └── Lain - The Wired World (Remastered) (2021)
+│       ├── 01 Lain - The Wired World (REMASTERED).flac
+│       ├── 02 Dust Of Harmonies (REMASTERED).flac
+│       ├── 03 Scum's Wish (REMASTERED).flac
+│       ├── 04 Crimson Butterflies (REMASTERED).flac
+│       ├── 05 Magneto (REMASTERED).flac
+│       ├── 06 Faye Valentine's Cyberblues (REMASTERED).flac
+│       ├── 07 Space Odissey (REMASTERED).flac
+│       ├── 08 Cyberia (REMASTERED).flac
+│       ├── 09 Agoraphilia (REMASTERED).flac
+│       ├── 10 Lain (REMASTERED).flac
+│       ├── 11 Akira (REMASTERED).flac
+│       ├── 12 Stranger Dreams (REMASTERED).flac
+│       ├── 13 Salty Dew (REMASTERED).flac
+│       ├── 14 Borealis (REMASTERED).flac
+│       ├── 15 Memories (REMASTERED).flac
+│       ├── 16 Serial 2020 (REMASTERED).flac
+│       ├── 17 PURE (REMASTERED).flac
+│       ├── 18 Nostalgia (REMASTERED).flac
+│       ├── 19 Evolving Shades (REMASTERED).flac
+│       ├── 20 Ergo Proxy (REMASTERED).flac
+│       ├── 21 Fooly Cooly (REMASTERED).flac
+│       ├── 22 Witching Hour (REMASTERED).flac
+│       ├── 23 String Of Memories (REMASTERED).flac
+│       ├── 24 Iwakura Rein (REMASTERED).flac
+│       ├── 25 Drops (REMASTERED).flac
+│       ├── 26 The battle Of Kaer Morhen (REMASTERED).flac
+│       └── cover.jpg
 ├── Seru Giran
 │   ├── Bicicleta (1980)
 │   │   ├── 01 A los jovenes de ayer.flac
@@ -21047,6 +21167,10 @@
 │       ├── 11 Be With Me Now.flac
 │       ├── 12 When We Were Younger.flac
 │       ├── 13 Gone Today (acoustic 2010).flac
+│       └── cover.jpg
+├── sombr
+│   └── undressed [Single] (2025)
+│       ├── 01 undressed.flac
 │       └── cover.jpg
 ├── Somewhere Over England
 │   └── Somewhere Over England (1992)
@@ -22083,6 +22207,36 @@
 │   │   ├── 25 Fun, Fun, Fun.flac
 │   │   ├── 49 Wouldn't It Be Nice.flac
 │   │   └── cover.jpg
+│   ├── Friends (1968)
+│   │   ├── 01 Meant for You.flac
+│   │   ├── 02 Friends.flac
+│   │   ├── 03 Wake the World.flac
+│   │   ├── 04 Be Here in the Mornin'.flac
+│   │   ├── 05 When a Man Needs a Woman.flac
+│   │   ├── 06 Passing By.flac
+│   │   ├── 07 Anna Lee, the Healer.flac
+│   │   ├── 08 Little Bird.flac
+│   │   ├── 09 Be Still.flac
+│   │   ├── 10 Busy Doin' Nothing.flac
+│   │   ├── 11 Diamond Head.flac
+│   │   ├── 12 Transcendental Meditation.flac
+│   │   └── cover.jpg
+│   ├── Love You (1977)
+│   │   ├── 01 Let Us Go On This Way.flac
+│   │   ├── 02 Roller Skating Child.flac
+│   │   ├── 03 Mona.flac
+│   │   ├── 04 Johnny Carson.flac
+│   │   ├── 05 Good Time.flac
+│   │   ├── 06 Honkin' Down the Highway.flac
+│   │   ├── 07 Ding Dang.flac
+│   │   ├── 08 Solar System.flac
+│   │   ├── 09 The Night Was So Young.flac
+│   │   ├── 10 I'll Bet He's Nice.flac
+│   │   ├── 11 Let's Put Our Hearts Together.flac
+│   │   ├── 12 I Wanna Pick You Up.flac
+│   │   ├── 13 Airplane.flac
+│   │   ├── 14 Love Is a Woman.flac
+│   │   └── cover.jpg
 │   ├── Made in California (2013)
 │   │   ├── 123 California Dreamin'.flac
 │   │   └── cover.jpg
@@ -22092,6 +22246,20 @@
 │   ├── Sounds of Summer - The Very Best of the Beach Boys (2003)
 │   │   ├── 17 Getcha Back.flac
 │   │   ├── 25 Kokomo.flac
+│   │   └── cover.jpg
+│   ├── Sunflower (1970)
+│   │   ├── 01 Slip On Through.flac
+│   │   ├── 02 This Whole World.flac
+│   │   ├── 03 Add Some Music to Your Day.flac
+│   │   ├── 04 Got to Know the Woman.flac
+│   │   ├── 05 Deirdre.flac
+│   │   ├── 06 It's About Time.flac
+│   │   ├── 07 Tears in the Morning.flac
+│   │   ├── 08 All I Wanna Do.flac
+│   │   ├── 09 Forever.flac
+│   │   ├── 10 Our Sweet Love.flac
+│   │   ├── 11 At My Window.flac
+│   │   ├── 12 Cool, Cool Water.flac
 │   │   └── cover.jpg
 │   ├── Surfin' USA (1963)
 │   │   ├── 13 Surfin' U.S.A-.flac
@@ -24235,6 +24403,49 @@
 │   └── Mutuashi (2003)
 │       ├── 09 Lekela Muadi.flac
 │       └── cover.jpg
+├── Tsutchie
+│   └── samurai champloo music record - playlist [OST] (2004)
+│       ├── 01 thank you.flac
+│       ├── 02 yet - why not -.flac
+│       ├── 03 strike back.flac
+│       ├── 04 let me know what U think.flac
+│       ├── 05 mists.flac
+│       ├── 06 flip.flac
+│       ├── 07 absolute.flac
+│       ├── 08 adapt myself.flac
+│       ├── 09 tuned.flac
+│       ├── 10 no icon.flac
+│       ├── 11 stretch out.flac
+│       ├── 12 process.flac
+│       ├── 13 reflective.flac
+│       ├── 14 deeper than words.flac
+│       ├── 15 2 messages.flac
+│       ├── 16 the updater.flac
+│       ├── 17 offers.flac
+│       ├── 18 FLY ft Azuma Riki.flac
+│       └── cover.jpg
+├── Tsutchie _ Force of Nature
+│   └── samurai champloo music record - masta [OST] (2004)
+│       ├── 01 vagrancy.flac
+│       ├── 02 mist.flac
+│       ├── 03 judgment on.flac
+│       ├── 04 loading zone.flac
+│       ├── 05 paranoid.flac
+│       ├── 06 silver children.flac
+│       ├── 07 the long way of drums.flac
+│       ├── 08 sneak chamber.flac
+│       ├── 09 new dimension.flac
+│       ├── 10 raw material.flac
+│       ├── 11 dry.flac
+│       ├── 12 breeezin'.flac
+│       ├── 13 tubed [drum please!!!].flac
+│       ├── 14 pretending to..-.flac
+│       ├── 15 seventythree.flac
+│       ├── 16 I sighed.flac
+│       ├── 17 sincerely.flac
+│       ├── 18 numbernine [back in TYO].flac
+│       ├── 19 YOU.flac
+│       └── cover.jpg
 ├── Tujamo & Danny Avila
 │   └── Cream [Single] (2015)
 │       ├── 01 Cream (radio edit).flac
@@ -25259,6 +25470,10 @@
 │       ├── 03 40.flac
 │       ├── 04 Algo del vacio.flac
 │       └── cover.jpg
+├── W Sound, Beele & Ovy on the Drums
+│   └── La Plena (W Sound 05) [Single] (2025)
+│       ├── 01 La Plena (W Sound 05).flac
+│       └── cover.jpg
 ├── Wu-Tang Clan
 │   └── Enter the Wu-Tang (36 Chambers) (1993)
 │       ├── 01 Bring da Ruckus.flac
@@ -25551,4 +25766,4 @@
         ├── 08 La Grange.flac
         └── cover.jpg
 
-6490 directories, 19062 files
+6513 directories, 19254 files
