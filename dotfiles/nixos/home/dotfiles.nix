@@ -4,20 +4,12 @@ let
   symlink = config.lib.file.mkOutOfStoreSymlink;
 in
 {
-  # ".librewolf/default/chrome".source = config.lib.file.mkOutOfStoreSymlink (
-  #   builtins.fetchzip {
-  #     url = "https://github.com/datguypiko/Firefox-Mod-Blur/archive/refs/heads/master.zip";
-  #     hash = "sha256-Lm6B9aYZO0JiUDiwD5WEDhOzgwxt3c1RF3NUpikyR3Y=";
-  #   }
-  # );
-# ".librewolf/default/chrome".source = config.lib.file.mkOutOfStoreSymlink (
-#    pkgs.fetchFromGitHub {
-#      owner = "datguypiko";
-#      repo = "Firefox-Mod-Blur";
-#      rev = "master";
-#      sha256 = "sha256-W82y0qKR8yPdS6Fj6Ngw07qdNmswD7Od73qbc0x0gPE=";
-#    }
-#  );
+  ".librewolf/default/chrome".source = config.lib.file.mkOutOfStoreSymlink (
+    pkgs.fetchzip {
+      url = "https://github.com/datguypiko/Firefox-Mod-Blur/archive/refs/heads/master.zip";
+      hash = "sha256-YcADnfZSs4Tv99NHyvwip8sE6tXh5sQHj/SXgC/Nxc4=";
+    }
+  );
 
   ".config/nvim".source = symlink "${dotfiles}/nvim";
   ".config/rofi".source = symlink "${dotfiles}/rofi";
