@@ -58,7 +58,7 @@ vim.keymap.set("n", "<A-Tab>", "gt")
 vim.keymap.set("n", "<A-C-Tab>", "gT")
 
 -- Source current buffer
-vim.keymap.set("n", "<leader>r", ":so %<CR>")
+vim.keymap.set("n", "<leader>l", ":so %<CR>")
 
 -- Encode/Decode selection to/from base64
 vim.keymap.set("v", "<leader>u", [[c<c-r>=system('base64 -w 0', @")<cr><esc>]])
