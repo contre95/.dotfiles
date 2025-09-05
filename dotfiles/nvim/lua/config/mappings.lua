@@ -1,3 +1,7 @@
+-- Folding with Treesitter
+vim.keymap.set("n", "faf", "zfaf", { remap = true, desc = "Fold around function" })
+vim.keymap.set("n", "fif", "zfif", { remap = true, desc = "Fold inside function" })
+
 -- Move lines with Ctrl+arrow (To move selection check zirrostig/vim-schlep)
 vim.keymap.set("n", "<C-Down>", ":m+<CR>")
 vim.keymap.set("n", "<C-Up>", ":m-2<CR>")
