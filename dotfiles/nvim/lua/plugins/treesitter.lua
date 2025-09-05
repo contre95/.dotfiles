@@ -5,7 +5,10 @@ return {
     cmd = { "TSInstall", "TSBufEnable", "TSBufDisable", "TSModuleInfo" },
     lazy = true,
     build = ":TSUpdate",
-    dependencies = "windwp/nvim-ts-autotag",
+    dependencies = {
+      "windwp/nvim-ts-autotag",
+      "nvim-treesitter/nvim-treesitter-textobjects",
+    },
     config = function(_, opts)
       require("nvim-treesitter.configs").setup(opts)
     end,
@@ -74,6 +77,18 @@ return {
         },
       },
       textobjects = {
+        select = {
+          enable = true,
+          lookahead = true, -- jump forward to textobj automatically
+          keymaps = {
+            ["af"] = "@function.outer", -- around function
+            ["if"] = "@function.inner", -- inside function
+            ["ac"] = "@class.outer",
+            ["ic"] = "@class.inner",
+            ["aa"] = "@parameter.outer",
+            ["ia"] = "@parameter.inner",
+          },
+        },
         move = {
           enable = true,
           goto_next_start = {
@@ -81,7 +96,11 @@ return {
             ["]c"] = "@class.outer",
             ["]a"] = "@parameter.inner",
           },
-          goto_next_end = { ["]F"] = "@function.outer", ["]C"] = "@class.outer", ["]A"] = "@parameter.inner" },
+          goto_next_end = {
+            ["]F"] = "@function.outer",
+            ["]C"] = "@class.outer",
+            ["]A"] = "@parameter.inner",
+          },
           goto_previous_start = {
             ["[f"] = "@function.outer",
             ["[c"] = "@class.outer",
@@ -97,3 +116,4 @@ return {
     },
   },
 }
+
