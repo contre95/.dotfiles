@@ -36,7 +36,6 @@ let
     tessen
     zoxide
     picard
-    feishin
     clipman
     gettext
     gparted
