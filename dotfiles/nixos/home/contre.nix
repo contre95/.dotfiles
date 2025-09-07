@@ -30,12 +30,13 @@ let
     convmv
     ffmpeg
     mpg123
-    picard
     polkit
     smassh
     swappy
     tessen
     zoxide
+    picard
+    feishin
     clipman
     gettext
     gparted
