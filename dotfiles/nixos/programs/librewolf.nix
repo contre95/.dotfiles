@@ -7,7 +7,6 @@
     MOZ_DBUS_REMOTE = 1;
   };
   programs.librewolf = {
-    # package = (pkgs.wrapFirefox (pkgs.firefox-devedition-unwrapped.override { pipewireSupport = true; }) { });
     package = pkgs.librewolf;
     enable = true;
     policies = {

@@ -20,7 +20,6 @@
           package = pkgs.ollama-cuda;
           acceleration = "rocm";
           loadModels = [
-            "deepseek-r1:8b"
           ];
         };
         #
