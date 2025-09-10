@@ -85,7 +85,7 @@
     unstable.powercap
     unstable.s-tui
     # unstable.supergfxctl
-    linuxKernel.packages.linux_6_15.asus-ec-sensors
+    linuxKernel.packages.linux_6_16.asus-ec-sensors
     brightnessctl
     nvtopPackages.amd
   ];

@@ -30,6 +30,9 @@ vim.keymap.set("n", "J", "mzJ`z")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
+-- Rename LSP
+vim.keymap.set("n", "<C-A-r>", function() vim.lsp.buf.rename() end)
+--
 -- Change number when sharing screen
 vim.keymap.set("n", "<C-h>", ":set relativenumber!<CR>") -- toggle
 
@@ -61,8 +64,9 @@ vim.keymap.set({ "n", "i" }, "<A-i>", "<C-Y><C-Y>")
 vim.keymap.set("n", "<A-Tab>", "gt")
 vim.keymap.set("n", "<A-C-Tab>", "gT")
 
--- Source current buffer
-vim.keymap.set("n", "<leader>l", ":so %<CR>")
+-- Source current buffer (lua)
+vim.keymap.set("n", "<leader>s", function() vim.cmd("luafile " .. vim.fn.expand("%")) end)
+
 
 -- Encode/Decode selection to/from base64
 vim.keymap.set("v", "<leader>u", [[c<c-r>=system('base64 -w 0', @")<cr><esc>]])
