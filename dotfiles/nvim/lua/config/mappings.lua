@@ -55,6 +55,14 @@ vim.keymap.set("i", "<S-Down>", "<Esc>V<Down>")
 vim.keymap.set("i", "<S-Left>", "<Esc>V<Left>")
 vim.keymap.set("i", "<S-Right>", "<Esc>V<Right>")
 
+-- Delete empty lines in visual selection with <leader>d
+vim.api.nvim_set_keymap(
+  'v', -- visual mode
+  '<leader>c', -- key combo
+  ':g/^$/d<CR>', -- command to execute
+  { noremap = true, silent = true }
+)
+
 -- Scroll Alt + Shift + Arrows
 vim.keymap.set({ "n", "i" }, "<A-k>", "<C-E><C-E>")
 
