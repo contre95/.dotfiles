@@ -89,7 +89,21 @@
                 ];
               }
             ];
-            definedAliases = [ ",d" ];
+            definedAliases = [ "d" ];
+          };
+          "google-maps" = {
+            urls = [
+              {
+                template = "https://www.google.com/maps/search/";
+                params = [
+                  {
+                    name = "q";
+                    value = "{searchTerms}";
+                  }
+                ];
+              }
+            ];
+            definedAliases = [ "gm" ];
           };
           "google" = {
             urls = [
@@ -103,7 +117,7 @@
                 ];
               }
             ];
-            definedAliases = [ ",g" ];
+            definedAliases = [ "g" ];
           };
           "Home Manager Options" = {
             urls = [
