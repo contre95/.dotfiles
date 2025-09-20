@@ -41,6 +41,6 @@ case $var in
 esac
 
 if [[ $choice ]]; then
-  ghostty -e "nvim $choice -c 'set autochdir'"
+  ghostty -e nvim "$choice" -c 'set autochdir'
 
 fi

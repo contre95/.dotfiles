@@ -95,11 +95,9 @@
     };
 
   environment.systemPackages = with pkgs; [
-    audit
-    lutris
     mangohud
     motion
-    nv-codec-headers-12
+    # nv-codec-headers-12
     vulkan-loader
     vulkan-tools
     wineWowPackages.waylandFull

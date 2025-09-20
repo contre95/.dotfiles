@@ -15,12 +15,11 @@
     then
       {
         environment.systemPackages = with pkgs; [
-          file
           gamemode
           goverlay
           mangohud
           protontricks
-          r2modman
+          # r2modman
         ];
         programs.steam = {
           enable = true;
@@ -29,7 +28,7 @@
           localNetworkGameTransfers.openFirewall = true;
           gamescopeSession.enable = true;
           extraCompatPackages = with pkgs; [
-            # proton-ge-bin
+            proton-ge-bin
           ];
         };
       }
