@@ -1,8 +1,19 @@
-{ lib, unstable, pkgs, hostname, ... }:
+{
+  lib,
+  unstable,
+  pkgs,
+  hostname,
+  ...
+}:
 
 {
   config =
-    if lib.elem hostname [ "desktop" "tablet"] then
+    if
+      lib.elem hostname [
+        "desktop"
+        "tablet"
+      ]
+    then
       {
         environment.systemPackages = [
           # unstable.lmstudio
@@ -14,14 +25,14 @@
           ];
         };
         services.ollama = {
-           host = "0.0.0.0";
-           # models = "/home/heavy-assets/models";
-           enable = true;
-           package = if lib.elem hostname [ "desktop"] then unstable.ollama-cuda else unstable.ollama-rocm;
-           acceleration = "rocm";
-           # loadModels = [
-           # ];
-         };
+          host = "0.0.0.0";
+          # models = "/home/heavy-assets/models";
+          enable = true;
+          package = if lib.elem hostname [ "desktop" ] then unstable.ollama-cuda else unstable.ollama-rocm;
+          acceleration = "rocm";
+          # loadModels = [
+          # ];
+        };
         #
         #   services.open-webui = {
         #     enable = true;

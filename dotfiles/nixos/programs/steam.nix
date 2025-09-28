@@ -29,6 +29,9 @@
           gamescopeSession.enable = true;
           extraCompatPackages = with pkgs; [
             proton-ge-bin
+            fcitx5
+            fcitx5-gtk
+            fcitx5-configtool
           ];
         };
       }
