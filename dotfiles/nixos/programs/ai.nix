@@ -14,14 +14,14 @@
           ];
         };
         services.ollama = {
-          host = "0.0.0.0";
-          # models = "/home/heavy-assets/models";
-          enable = true;
-          package = pkgs.ollama-cuda;
-          acceleration = "rocm";
-          loadModels = [
-          ];
-        };
+           host = "0.0.0.0";
+           # models = "/home/heavy-assets/models";
+           enable = true;
+           package = if lib.elem hostname [ "desktop"] then unstable.ollama-cuda else unstable.ollama-rocm;
+           acceleration = "rocm";
+           # loadModels = [
+           # ];
+         };
         #
         #   services.open-webui = {
         #     enable = true;
