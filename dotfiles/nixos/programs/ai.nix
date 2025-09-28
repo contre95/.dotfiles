@@ -17,7 +17,7 @@
           host = "0.0.0.0";
           # models = "/home/heavy-assets/models";
           enable = true;
-          package = pkgs.ollama-cuda;
+          package = unstable.ollama-cuda;
           acceleration = "rocm";
           loadModels = [
           ];
