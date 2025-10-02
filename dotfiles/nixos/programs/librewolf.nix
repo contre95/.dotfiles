@@ -77,6 +77,20 @@
           "amazondotcom-es".metaData.hidden = true;
           "bing".metaData.hidden = true;
           "ebay".metaData.hidden = true;
+          "startpage" = {
+            urls = [
+              {
+                template = "https://www.startpage.com/sp/search";
+                params = [
+                  {
+                    name = "query";
+                    value = "{searchTerms}";
+                  }
+                ];
+              }
+            ];
+            definedAliases = [ "sp" ];
+          };
           "ddg" = {
             urls = [
               {
@@ -208,7 +222,7 @@
             definedAliases = [ "gh" ];
           };
         };
-        default = "ddg";
+        default = "sp";
       };
       id = 0;
       containersForce = true;
