@@ -8,6 +8,11 @@
       key = "E27E9BED3E07CE8F";
     };
     extraConfig = {
+      url = {
+        "git@github.com:" = {
+          insteadOf = "https://github.com/";
+        };
+      };
       color.ui = true;
       core.editor = "nvim";
       blame.date = "relative";

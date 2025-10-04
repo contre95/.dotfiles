@@ -27,6 +27,7 @@ let
     rsync
     unrar
     unzip
+    imgcat
     convmv
     ffmpeg
     mpg123

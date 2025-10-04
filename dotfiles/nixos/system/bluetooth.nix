@@ -1,6 +1,5 @@
 {
   pkgs,
-  lib,
   hostname,
   ...
 }:
@@ -8,20 +7,11 @@
   environment.systemPackages = with pkgs; [
     # blueman
     bluez
-    bluez5-experimental
+    bluez-alsa
+    bluez-tools
   ];
   hardware.bluetooth.enable = true;
-  hardware.bluetooth.powerOnBoot =
-    if
-      lib.elem hostname [
-        "desktop"
-        "notebook"
-        "tablet"
-      ]
-    then
-      true
-    else
-      false;
+  hardware.bluetooth.powerOnBoot = hostname != "server";
   hardware.bluetooth.settings = {
     General = {
       # # make Xbox Series X controller work
@@ -30,10 +20,10 @@
       # JustWorksRepairing = "always";
       # Privacy = "device";
       # Enable = "Source,Sink,Media,Socket";
-      Enable = "Sink,Media,Socket"; # Don't enable Source since I don't want bluetooth mic to be use
+      # Enable = "Sink,Media,Socket"; # Don't enable Source since I don't want bluetooth mic to be use
       AutoEnable = true;
       ControllerMode = "dual";
-      Experimental = true;
+      Experimental = false;
     };
   };
 }
