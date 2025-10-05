@@ -7,7 +7,7 @@
     MOZ_DBUS_REMOTE = 1;
   };
   programs.librewolf = {
-    package = pkgs.librewolf;
+    package = unstable.librewolf;
     enable = true;
     policies = {
       ExtensionSettings = {
