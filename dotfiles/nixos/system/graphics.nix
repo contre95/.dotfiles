@@ -75,7 +75,7 @@
     enable = true;
     package = unstable.hyprland;
     portalPackage = unstable.xdg-desktop-portal-hyprland;
-    withUWSM = true;
+    withUWSM = false;
     xwayland.enable = true;
   };
 

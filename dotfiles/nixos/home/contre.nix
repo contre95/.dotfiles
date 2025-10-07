@@ -20,6 +20,7 @@ let
     tmux
     tree
     wget
+    flac
     zbar
     gimp3
     iotop
@@ -27,7 +28,6 @@ let
     rsync
     unrar
     unzip
-    imgcat
     convmv
     ffmpeg
     mpg123
