@@ -136,7 +136,7 @@ in
             pkgs.lingot
             pkgs.spotify
             pkgs.koreader
-            unstable.telegram-desktop
+            pkgs.telegram-desktop
           ]
         else if "${hostname}" == "server" then
           commonPkgs
