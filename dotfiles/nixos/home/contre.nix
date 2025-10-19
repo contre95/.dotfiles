@@ -21,6 +21,7 @@ let
     tree
     wget
     flac
+    id3v2
     zbar
     gimp3
     iotop
