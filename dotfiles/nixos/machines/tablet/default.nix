@@ -60,12 +60,12 @@
   services.power-profiles-daemon.enable = true;
   services.supergfxd.enable = true;
   services.asusd = {
+    package = unstable.asusctl;
     enable = true;
     enableUserService = false;
     fanCurvesConfig.source = ./fanCurvesConfig.text;
     asusdConfig.source = ./asusdConfig.text;
   };
-  # services.power-profiles-daemon.enable = true;
   services.tlp.enable = false;
 
   boot = {
