@@ -83,6 +83,7 @@
     # pkgs.nodePackages.mcp-hub
     pkgs.nodePackages.typescript-language-server
     nodejs_20
+    bun
     # unstable.nodejs-slim
     # js-debug-adapter
 

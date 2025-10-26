@@ -19,6 +19,7 @@ let
     stow
     tmux
     tree
+    file
     wget
     flac
     id3v2

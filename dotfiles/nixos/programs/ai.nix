@@ -28,8 +28,13 @@
           host = "0.0.0.0";
           # models = "/home/heavy-assets/models";
           enable = true;
+<<<<<<< HEAD
           package = if lib.elem hostname [ "desktop" ] then pkgs.ollama-cuda else pkgs.ollama-rocm;
           acceleration = "rocm";
+=======
+          package = if lib.elem hostname [ "desktop" ] then unstable.ollama-cuda else pkgs.ollama;
+          # acceleration = "rocm";
+>>>>>>> 2f77121011c1547ee6b60f602eedf91b76c52f04
           # loadModels = [
           # ];
         };
