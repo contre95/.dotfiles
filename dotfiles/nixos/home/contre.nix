@@ -33,6 +33,7 @@ let
     ffmpeg
     mpg123
     polkit
+    yt-dlp
     smassh
     swappy
     tessen
