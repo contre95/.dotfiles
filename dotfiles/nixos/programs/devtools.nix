@@ -22,7 +22,7 @@
     nixfmt-rfc-style
     statix
 
-    # terraform
+    terraform
     # unstable.terraform
     unstable.terraform-ls
     unstable.tflint
